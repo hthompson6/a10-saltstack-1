@@ -12,4 +12,19 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-def create()
+ret = {
+    'name': 'a10_server',
+    'changes': {},
+    'result': False,
+    'comment': ''
+    }
+
+def create():
+    return ret
+
+def update():
+    return ret
+
+def delete(server_name):
+    result = client.slb.server.delete(server_name) 
+    return ret
