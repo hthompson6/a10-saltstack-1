@@ -12,6 +12,13 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import salt.config
+
+from acos_client import client
+
+__opts__ = salt.config.minion_config('/etc/salt/minion')
+__grains__ = salt.loader.grains(__opts__)
+
 ret = {
     'name': 'a10_server',
     'changes': {},
@@ -19,7 +26,24 @@ ret = {
     'comment': ''
     }
 
-def create():
+def _get_client():
+    host = __grains__['host']
+    username = __grains__['username']
+    password = __grains__['password']
+    port = __grains__['port']
+    protocol = __grains__['protocol']
+    version = __grains__['version']
+    return client.Client(host, version, username, password, port, protocol)
+
+def create(host, name, status):
+    try:
+        client = _get_client()
+        import pdb; pdb.set_trace()
+        changes = client.slb.server.create(name, host, status)
+        ret['result'] = True
+        ret['changes'] = changes
+    except Exception as e:
+        pass
     return ret
 
 def update():
