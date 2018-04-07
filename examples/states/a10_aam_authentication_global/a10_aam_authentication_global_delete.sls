@@ -1,0 +1,2 @@
+a10_aam_authentication_global_ex:
+  a10_aam_authentication_global.delete:

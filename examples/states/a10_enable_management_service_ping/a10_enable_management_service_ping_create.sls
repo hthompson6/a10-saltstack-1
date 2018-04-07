@@ -1,0 +1,2 @@
+a10_enable_management_service_ping_ex:
+  a10_enable_management_service_ping.create:

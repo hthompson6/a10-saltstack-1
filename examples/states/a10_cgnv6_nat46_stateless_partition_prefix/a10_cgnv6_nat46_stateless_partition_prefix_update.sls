@@ -1,0 +1,2 @@
+a10_cgnv6_nat46_stateless_partition_prefix_ex:
+  a10_cgnv6_nat46_stateless_partition_prefix.update:

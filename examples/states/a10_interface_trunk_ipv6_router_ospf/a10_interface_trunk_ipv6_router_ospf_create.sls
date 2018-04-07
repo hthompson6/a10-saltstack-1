@@ -1,0 +1,2 @@
+a10_interface_trunk_ipv6_router_ospf_ex:
+  a10_interface_trunk_ipv6_router_ospf.create:

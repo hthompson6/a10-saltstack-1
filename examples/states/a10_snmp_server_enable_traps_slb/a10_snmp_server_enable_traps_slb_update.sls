@@ -1,0 +1,2 @@
+a10_snmp_server_enable_traps_slb_ex:
+  a10_snmp_server_enable_traps_slb.update:
