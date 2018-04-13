@@ -22,8 +22,8 @@ import socket
 import sys
 import time
 
-from a10_ansible import errors as ae
-from a10_ansible import responses as acos_responses
+from a10_saltstack import errors as ae
+from a10_saltstack import responses as acos_responses
 
 if sys.version_info >= (3, 0):
     import http.client as http_client
@@ -44,7 +44,7 @@ broken_replies = {
 class HttpClient(object):
     HEADERS = {
         "Content-type": "application/json",
-        "User-Agent": "a10-ansible"
+        "User-Agent": "a10-saltstack"
     }
 
     def __init__(self, host, port=None, protocol="https", timeout=None,

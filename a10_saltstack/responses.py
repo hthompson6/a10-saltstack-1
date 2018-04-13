@@ -14,7 +14,7 @@
 
 import re
 
-from a10_ansible import errors as ae
+from a10_saltstack import errors as ae
 
 RESPONSE_CODES = {
     33619969: {
