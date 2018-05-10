@@ -1,0 +1,2 @@
+a10_health_monitor_method_kerberos_kdc_ex:
+  a10_health_monitor_method_kerberos_kdc.delete:

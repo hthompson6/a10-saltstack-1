@@ -1,0 +1,3 @@
+a10_aam_authentication_relay_form_based_instance_request_uri_ex:
+  a10_aam_authentication_relay_form_based_instance_request_uri.create:
+    - match_type: equals
