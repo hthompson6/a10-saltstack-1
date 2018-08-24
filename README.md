@@ -11,7 +11,8 @@ a10-saltstack is distributed as a Python package. It can be installed from the G
 
 ### Github Installation
 ~~~
-git clone https://github.com/a10networks/a10-saltstack a10-saltstack
+git clone https://github.com/a10networks/a10-saltstack
+cd a10-saltstack
 pip install -e a10-saltstack/
 ~~~
 
