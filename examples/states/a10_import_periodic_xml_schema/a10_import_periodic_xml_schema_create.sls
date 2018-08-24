@@ -1,2 +1,0 @@
-a10_import_periodic_xml_schema_ex:
-  a10_import_periodic_xml_schema.create:

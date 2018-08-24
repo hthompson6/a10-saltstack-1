@@ -1,2 +1,0 @@
-a10_system_hardware_forward_ex:
-  a10_system_hardware_forward.delete:

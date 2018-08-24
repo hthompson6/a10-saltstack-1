@@ -1,2 +1,0 @@
-a10_netflow_monitor_source_address_ex:
-  a10_netflow_monitor_source_address.create:

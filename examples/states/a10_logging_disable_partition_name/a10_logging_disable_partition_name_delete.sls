@@ -1,2 +1,0 @@
-a10_logging_disable_partition_name_ex:
-  a10_logging_disable_partition_name.delete:

@@ -1,2 +1,0 @@
-a10_vrrp_a_interface_ethernet_ex:
-  a10_vrrp_a_interface_ethernet.update:

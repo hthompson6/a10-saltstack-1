@@ -1,2 +1,0 @@
-a10_acos_events_active_template_ex:
-  a10_acos_events_active_template.delete:

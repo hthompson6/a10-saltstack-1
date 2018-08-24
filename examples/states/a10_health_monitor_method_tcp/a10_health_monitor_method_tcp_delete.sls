@@ -1,2 +1,0 @@
-a10_health_monitor_method_tcp_ex:
-  a10_health_monitor_method_tcp.delete:

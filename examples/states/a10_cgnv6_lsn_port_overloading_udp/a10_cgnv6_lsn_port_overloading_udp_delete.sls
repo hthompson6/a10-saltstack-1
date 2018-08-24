@@ -1,2 +1,0 @@
-a10_cgnv6_lsn_port_overloading_udp_ex:
-  a10_cgnv6_lsn_port_overloading_udp.delete:

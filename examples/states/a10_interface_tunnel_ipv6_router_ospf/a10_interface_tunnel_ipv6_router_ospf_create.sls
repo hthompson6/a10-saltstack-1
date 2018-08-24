@@ -1,2 +1,0 @@
-a10_interface_tunnel_ipv6_router_ospf_ex:
-  a10_interface_tunnel_ipv6_router_ospf.create:

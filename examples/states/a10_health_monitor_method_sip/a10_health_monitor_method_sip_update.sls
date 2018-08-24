@@ -1,2 +1,0 @@
-a10_health_monitor_method_sip_ex:
-  a10_health_monitor_method_sip.update:

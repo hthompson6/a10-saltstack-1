@@ -1,2 +1,0 @@
-a10_slb_transparent_acl_template_ex:
-  a10_slb_transparent_acl_template.delete:

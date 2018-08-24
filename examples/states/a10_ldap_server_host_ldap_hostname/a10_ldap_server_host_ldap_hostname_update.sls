@@ -1,2 +1,0 @@
-a10_ldap_server_host_ldap_hostname_ex:
-  a10_ldap_server_host_ldap_hostname.update:

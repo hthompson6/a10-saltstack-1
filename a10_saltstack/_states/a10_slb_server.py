@@ -118,7 +118,7 @@ def build_json(title, **kwargs):
 
 def validate(**params):
     # Ensure that params contains all the keys.
-    requires_one_of = sorted(['host','fqdn_host'])
+    requires_one_of = sorted(['host','fqdn_host','server_ipv6_addr'])
     present_keys = sorted([x for x in requires_one_of if params.get(x)])
     
     errors = []

@@ -1,2 +1,0 @@
-a10_cgnv6_fixed_nat_alg_sip_ex:
-  a10_cgnv6_fixed_nat_alg_sip.delete:

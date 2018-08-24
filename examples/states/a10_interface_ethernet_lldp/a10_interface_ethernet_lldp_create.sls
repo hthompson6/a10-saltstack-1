@@ -1,2 +1,0 @@
-a10_interface_ethernet_lldp_ex:
-  a10_interface_ethernet_lldp.create:

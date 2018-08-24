@@ -1,2 +1,0 @@
-a10_aam_authentication_portal_logon_ex:
-  a10_aam_authentication_portal_logon.update:

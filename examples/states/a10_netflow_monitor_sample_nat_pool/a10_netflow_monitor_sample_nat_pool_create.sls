@@ -1,2 +1,0 @@
-a10_netflow_monitor_sample_nat_pool_ex:
-  a10_netflow_monitor_sample_nat_pool.create:
