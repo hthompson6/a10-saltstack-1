@@ -1,2 +1,0 @@
-a10_netflow_monitor_destination_ex:
-  a10_netflow_monitor_destination.create:

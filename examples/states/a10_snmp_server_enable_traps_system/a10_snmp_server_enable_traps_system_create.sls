@@ -1,2 +1,0 @@
-a10_snmp_server_enable_traps_system_ex:
-  a10_snmp_server_enable_traps_system.create:

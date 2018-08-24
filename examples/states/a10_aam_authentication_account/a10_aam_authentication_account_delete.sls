@@ -1,2 +1,0 @@
-a10_aam_authentication_account_ex:
-  a10_aam_authentication_account.delete:

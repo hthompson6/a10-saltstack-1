@@ -1,2 +1,0 @@
-a10_techreport_priority_partition_ex:
-  a10_techreport_priority_partition.update:

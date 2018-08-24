@@ -1,2 +1,0 @@
-a10_enable_management_service_snmp_ex:
-  a10_enable_management_service_snmp.update:

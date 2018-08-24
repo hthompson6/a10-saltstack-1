@@ -1,2 +1,0 @@
-a10_netflow_monitor_sample_ethernet_ex:
-  a10_netflow_monitor_sample_ethernet.create:

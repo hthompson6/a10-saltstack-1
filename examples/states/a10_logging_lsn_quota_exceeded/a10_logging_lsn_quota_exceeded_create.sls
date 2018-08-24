@@ -1,2 +1,0 @@
-a10_logging_lsn_quota_exceeded_ex:
-  a10_logging_lsn_quota_exceeded.create:

@@ -1,2 +1,0 @@
-a10_interface_ethernet_ipv6_ex:
-  a10_interface_ethernet_ipv6.create:

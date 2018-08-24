@@ -1,2 +1,0 @@
-a10_visibility_anomaly_detection_ex:
-  a10_visibility_anomaly_detection.delete:

@@ -1,2 +1,0 @@
-a10_router_ipv6_ospf_redistribute_ex:
-  a10_router_ipv6_ospf_redistribute.delete:

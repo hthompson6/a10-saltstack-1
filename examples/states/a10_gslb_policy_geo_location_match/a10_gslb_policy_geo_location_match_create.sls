@@ -1,2 +1,0 @@
-a10_gslb_policy_geo_location_match_ex:
-  a10_gslb_policy_geo_location_match.create:

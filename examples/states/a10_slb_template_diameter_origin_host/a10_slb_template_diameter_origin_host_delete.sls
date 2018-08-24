@@ -1,2 +1,0 @@
-a10_slb_template_diameter_origin_host_ex:
-  a10_slb_template_diameter_origin_host.delete:

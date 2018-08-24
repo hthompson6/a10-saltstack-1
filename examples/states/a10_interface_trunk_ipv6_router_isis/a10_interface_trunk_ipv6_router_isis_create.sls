@@ -1,2 +1,0 @@
-a10_interface_trunk_ipv6_router_isis_ex:
-  a10_interface_trunk_ipv6_router_isis.create:

@@ -1,2 +1,0 @@
-a10_router_bgp_neighbor_ipv6_neighbor_ex:
-  a10_router_bgp_neighbor_ipv6_neighbor.update:

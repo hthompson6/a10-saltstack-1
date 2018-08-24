@@ -1,2 +1,0 @@
-a10_import_periodic_dnssec_dnskey_ex:
-  a10_import_periodic_dnssec_dnskey.create:

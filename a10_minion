@@ -1,9 +1,0 @@
-grains:
-  roles:
-    - acos
-  username: pillar['username']
-  password: pillar['password']
-  host: 10.48.5.222
-  port: 443
-  protocol: https
-  version: 3.0

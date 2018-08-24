@@ -1,2 +1,0 @@
-a10_aam_authentication_server_ldap_ex:
-  a10_aam_authentication_server_ldap.update:

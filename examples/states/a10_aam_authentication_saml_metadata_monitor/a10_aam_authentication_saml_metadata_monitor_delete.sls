@@ -1,2 +1,0 @@
-a10_aam_authentication_saml_metadata_monitor_ex:
-  a10_aam_authentication_saml_metadata_monitor.delete:

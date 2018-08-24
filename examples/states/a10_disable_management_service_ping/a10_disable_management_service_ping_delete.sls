@@ -1,2 +1,0 @@
-a10_disable_management_service_ping_ex:
-  a10_disable_management_service_ping.delete:

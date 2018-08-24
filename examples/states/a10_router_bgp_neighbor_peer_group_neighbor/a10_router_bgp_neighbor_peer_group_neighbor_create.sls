@@ -1,2 +1,0 @@
-a10_router_bgp_neighbor_peer_group_neighbor_ex:
-  a10_router_bgp_neighbor_peer_group_neighbor.create:

@@ -1,2 +1,0 @@
-a10_interface_ve_ip_ospf_ospf_global_ex:
-  a10_interface_ve_ip_ospf_ospf_global.delete:

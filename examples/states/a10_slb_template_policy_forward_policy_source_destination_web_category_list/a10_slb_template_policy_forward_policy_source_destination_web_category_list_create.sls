@@ -1,2 +1,0 @@
-a10_slb_template_policy_forward_policy_source_destination_web_category_list_ex:
-  a10_slb_template_policy_forward_policy_source_destination_web_category_list.create:

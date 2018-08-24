@@ -1,2 +1,0 @@
-a10_interface_loopback_isis_ex:
-  a10_interface_loopback_isis.update:
