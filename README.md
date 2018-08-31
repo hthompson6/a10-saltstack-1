@@ -10,7 +10,7 @@ a10-salstack is a set of Saltstack modules and example playbooks for interacting
 a10-saltstack is distributed as a Python package. It can be installed from the Github repository. It is assumed that saltstack is already installed and configured.
 
 ### Github Installation
-```
+```console
 $ git clone https://github.com/a10networks/a10-saltstack
 $ mdkir /srv/salt/a10
 $ ln -s a10-saltstack/a10_saltstack/_states /srv/salt/a10/_states
