@@ -15,7 +15,7 @@ $ git clone https://github.com/a10networks/a10-saltstack
 $ mkdir /srv/salt/a10
 $ mkdir /srv/salt/a10/states
 $ ln -s a10-saltstack/a10_saltstack/_states /srv/salt/a10/_states
-$ cp a10-saltstack/a10_saltstack/examples/states/*  /srv/salt/a10/states
+$ cp a10-saltstack/examples/states/*  /srv/salt/a10/states
 ```
 
 ## Examples
