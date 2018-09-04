@@ -12,10 +12,8 @@ a10-saltstack is distributed as a Python package. It can be installed from the G
 ### Github Installation
 ```console
 $ git clone https://github.com/a10networks/a10-saltstack
-$ sudo mkdir /srv/salt/a10
-$ sudo mkdir /srv/salt/a10/states
+$ sudo mkdir /srv/salt /srv/salt/a10
 $ ln -s a10-saltstack/a10_saltstack/_states /srv/salt/a10/_states
-$ sudo cp a10-saltstack/examples/states/*  /srv/salt/a10/states
 ```
 
 ## Examples
