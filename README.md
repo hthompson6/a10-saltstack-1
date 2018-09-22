@@ -1,5 +1,5 @@
 # a10_saltstack
-Repository of for saltstack modules
+Repository for saltstack modules
 
 This code is now being generated using the SDK generator at https://github.com/a10networks/sdkgenerator
 
