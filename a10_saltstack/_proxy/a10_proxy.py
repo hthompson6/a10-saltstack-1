@@ -53,6 +53,30 @@ def __virtual__():
     return __virtualname__ 
 
 
+def _validate(**params):
+    # Ensure that params contains all the keys.
+    requires_one_of = sorted([])
+    present_keys = sorted([x for x in requires_one_of if params.get(x)])
+
+    errors = []
+    marg = []
+
+    if not len(requires_one_of):
+        return REQUIRED_VALID
+
+    if len(present_keys) == 0:
+        rc,msg = REQUIRED_NOT_SET
+        marg = requires_one_of
+    elif requires_one_of == present_keys:
+        rc,msg = REQUIRED_MUTEX
+        marg = present_keys
+    else:
+        rc,msg = REQUIRED_VALID
+
+    if not rc:
+        errors.append(msg.format(", ".join(marg))
+
+
 def proxytype():
     '''
     Returns the name of this proxy
@@ -61,6 +85,16 @@ def proxytype():
 
 
 def init(opts):
+    valid = True
+
+    valid, validation_errors = _validate(**opts)
+    map(run_errors.append, validation_errors)
+
+    if not valid:
+        err_msg = "Validation failure\n".join(run_errors)
+        ret['commment'] = err_msg
+        return ret 
+
     http_cli = axapi_http.HttpClient(opts['host'], opts['port'], opts['protocol'])
     ax_session = session.Session(http_cli, opts['username'], opts['password'])  
 

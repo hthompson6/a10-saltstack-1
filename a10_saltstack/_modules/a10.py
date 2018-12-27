@@ -56,30 +56,6 @@ def _build_dict_from_param(param):
     return rv
 
 
-def _validate(**params):
-    # Ensure that params contains all the keys.
-    requires_one_of = sorted([])
-    present_keys = sorted([x for x in requires_one_of if params.get(x)])
-    
-    errors = []
-    marg = []
-    
-    if not len(requires_one_of):
-        return REQUIRED_VALID
-
-    if len(present_keys) == 0:
-        rc,msg = REQUIRED_NOT_SET
-        marg = requires_one_of
-    elif requires_one_of == present_keys:
-        rc,msg = REQUIRED_MUTEX
-        marg = present_keys
-    else:
-        rc,msg = REQUIRED_VALID
-    
-    if not rc:
-        errors.append(msg.format(", ".join(marg)))
-
-
 def _build_json(title, **kwargs):
     rv = {}
 
@@ -97,7 +73,7 @@ def _build_json(title, **kwargs):
             else:
                 rv[rx] = kwargs[x]
 
-    return build_envelope(title, rv)
+    return _build_envelope(title, rv)
 
 
 def create(obj_type, **kwargs):
