@@ -163,8 +163,3 @@ class HttpClient(object):
 
     def delete(self, api_url, params={}, headers=None, **kwargs):
         return self.request("DELETE", api_url, params, headers, **kwargs)
-
-def client_factory(host, port, protocol, username, password):
-    http_cli = http_factory(host, port, protocol)
-    session = session_factory(http_cli, username, password)
-    return A10Client(session)

@@ -32,7 +32,7 @@ try:
 except ImportError:
     HAS_ACOS_CLIENT = False
 
-__proxyenabled__ = ['a10_proxy']
+__proxyenabled__ = ['a10']
 
 
 GRAINS_CACHE = {}
@@ -40,7 +40,7 @@ DETAILS = {}
 
 LOG = logging.getLogger(__file__)
 
-session = None
+ax_session = None
 
 
 def __virtual__():
@@ -84,7 +84,7 @@ def initialized():
     return True 
 
 def get_session():
-    return session
+    return ax_session
 
 
 def ping():
