@@ -92,8 +92,6 @@ def init(opts):
 
     if not valid:
         err_msg = "Validation failure\n".join(run_errors)
-        ret['commment'] = err_msg
-        return ret 
 
     http_cli = axapi_http.HttpClient(opts['host'], opts['port'], opts['protocol'])
     ax_session = session.Session(http_cli, opts['username'], opts['password'])  
@@ -116,6 +114,7 @@ def initialized():
     our init() function has been called
     '''
     return True 
+
 
 def get_session():
     return ax_session

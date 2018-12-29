@@ -7,7 +7,7 @@ __virtualname__ = 'a10'
 __proxyenabled__ = ['a10']
 
 try:
-    from a10_saltstack import client
+    from a10_saltstack import client as a10_client
     HAS_A10 = True
 except ImportError:
     HAS_A10 = False
@@ -27,7 +27,7 @@ def __virtual__():
 
 
 def _get_client(host, port, protocol, username, password):
-    return A10Client(__proxy__['a10.get_session'])
+    return a10_client.A10Client(__proxy__['a10.get_session'])
 
 
 def _build_envelope(title, data):
@@ -79,7 +79,7 @@ def _build_json(title, **kwargs):
 def create(obj_type, **kwargs):
     payload = build_json(obj_type, **kwargs)
     try:
-        client = get_client(**kwargs)
+        client = _get_client(**kwargs)
         post_result = client.post(new_url(), payload)
         ret["changes"].update(**post_result)
         ret["result"] = True
@@ -96,7 +96,7 @@ def create(obj_type, **kwargs):
 def update(obj_type, **kwargs):
     payload = build_json(obj_type, **kwargs)
     try:
-        client = get_client(**kwargs)
+        client = _get_client(**kwargs)
         post_result = client.put(existing_url(**kwargs), payload)
         ret["changes"].update(**post_result)
         ret["result"] = True
@@ -110,7 +110,7 @@ def update(obj_type, **kwargs):
 
 def delete(**kwargs):
     try:
-        client = get_client(**kwargs)
+        client = _get_client(**kwargs)
         client.delete(existing_url(**kwargs))
         ret["result"] = True
     except a10_ex.NotFound:
