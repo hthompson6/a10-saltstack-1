@@ -27,13 +27,13 @@ from __future__ import absolute_import
 import logging
 
 try:
-    import acos_client
-    HAS_ACOS_CLIENT = True
+    import a10_saltstack 
+    HAS_A10 = True
 except ImportError:
-    HAS_ACOS_CLIENT = False
+    HAS_A10 = False
 
 __proxyenabled__ = ['a10']
-
+__virtualname__ = 'a10'
 
 GRAINS_CACHE = {}
 DETAILS = {}
@@ -47,10 +47,17 @@ def __virtual__():
     '''
     Only return if all the modules are available
     '''
-    if not HAS_ACOS_CLIENT:
+    if not HAS_A10:
         return False, 'Missing dependency: The a10 proxy minion requires the acos-client Python module.'
 
     return __virtualname__ 
+
+
+def proxytype():
+    '''
+    Returns the name of this proxy
+    '''
+    return 'a10'
 
 
 def _validate(**params):
@@ -74,14 +81,7 @@ def _validate(**params):
         rc,msg = REQUIRED_VALID
 
     if not rc:
-        errors.append(msg.format(", ".join(marg))
-
-
-def proxytype():
-    '''
-    Returns the name of this proxy
-    '''
-    return 'a10'
+        errors.append(msg.format(", ".join(marg)))
 
 
 def init(opts):
@@ -94,43 +94,15 @@ def init(opts):
         err_msg = "Validation failure\n".join(run_errors)
 
     http_cli = axapi_http.HttpClient(opts['host'], opts['port'], opts['protocol'])
-    ax_session = session.Session(http_cli, opts['username'], opts['password'])  
-
-
-def alive(opts):
-    '''
-    This function returns a flag with the connection state.
-    It is very useful when the proxy minion establishes the communication
-    via a channel that requires a more elaborated keep-alive mechanism, e.g.
-    NETCONF over SSH.
-    '''
-    return True 
-
-
-def initialized():
-    '''
-    Since grains are loaded in many different places and some of those
-    places occur before the proxy can be initialized, return whether
-    our init() function has been called
-    '''
-    return True 
+    ax_session = session.Session(http_cli, opts['username'], opts['password'])
 
 
 def get_session():
     return ax_session
 
 
-def ping():
-    '''
-    Is the REST server up?
-    '''
-    LOG.debug('a10 proxy ping called')
-    return True 
-
-
 def shutdown(opts):
     '''
     For this proxy shutdown is a no-op
     '''
-    session.close()
     LOG.debug('a10 proxy shutdown() called...')

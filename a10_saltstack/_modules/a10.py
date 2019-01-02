@@ -3,7 +3,6 @@ from __future__ import absolute_import, print_function, unicode_literals
 import logging
 
 __virtualname__ = 'a10'
-
 __proxyenabled__ = ['a10']
 
 try:
@@ -121,3 +120,7 @@ def delete(**kwargs):
     except Exception as gex:
         raise gex
     return ret
+
+
+def test():
+    return True 
