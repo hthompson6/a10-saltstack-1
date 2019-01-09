@@ -28,12 +28,18 @@ import logging
 
 try:
     import a10_saltstack 
+    from a10_saltstack import axapi_http
+    from a10_saltstack import session
     HAS_A10 = True
 except ImportError:
     HAS_A10 = False
 
-__proxyenabled__ = ['a10']
-__virtualname__ = 'a10'
+REQUIRED_NOT_SET = (False, "One of ({}) must be set.")
+REQUIRED_MUTEX = (False, "Only one of ({}) can be set.")
+REQUIRED_VALID = (True, "")
+
+__proxyenabled__ = ['t_proc']
+__virtualname__ = 't_proc'
 
 GRAINS_CACHE = {}
 DETAILS = {}
@@ -57,7 +63,7 @@ def proxytype():
     '''
     Returns the name of this proxy
     '''
-    return 'a10'
+    return 't_proc'
 
 
 def _validate(**params):
@@ -83,18 +89,21 @@ def _validate(**params):
     if not rc:
         errors.append(msg.format(", ".join(marg)))
 
+    return rc,errors
 
 def init(opts):
     valid = True
 
+    run_errors = []
+    proxyinfo = opts['proxy']
     valid, validation_errors = _validate(**opts)
     map(run_errors.append, validation_errors)
 
     if not valid:
         err_msg = "Validation failure\n".join(run_errors)
 
-    http_cli = axapi_http.HttpClient(opts['host'], opts['port'], opts['protocol'])
-    ax_session = session.Session(http_cli, opts['username'], opts['password'])
+    http_cli = axapi_http.HttpClient(proxyinfo['host'], proxyinfo['port'], proxyinfo['protocol'])
+    ax_session = session.Session(http_cli, proxyinfo['username'], proxyinfo['password'])
 
 
 def get_session():
