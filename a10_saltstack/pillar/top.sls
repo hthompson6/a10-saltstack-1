@@ -1,3 +1,3 @@
 base:
-  't_proc':
-    - t_proc
+  'a10':
+    - a10 
