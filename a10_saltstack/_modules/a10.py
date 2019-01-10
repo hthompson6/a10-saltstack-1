@@ -1,6 +1,5 @@
 # Import Python libraries
 from __future__ import absolute_import, print_function, unicode_literals
-import logging
 
 __virtualname__ = 'a10'
 __proxyenabled__ = ['a10']
@@ -14,6 +13,9 @@ try:
 except ImportError:
     HAS_A10 = False
 
+import logging
+
+LOG = logging.getLogger(__file__)
 
 def __virtual__():
     '''
@@ -28,8 +30,8 @@ def __virtual__():
                        'proxy could not be loaded.')
 
 
-def _get_client(host, port, protocol, username, password):
-    return a10_client.A10Client(__proxy__['a10.get_session'])
+def _get_client(**kwargs):
+    return a10_client.A10Client(__proxy__['a10.get_session']())
 
 
 def _build_envelope(title, data):
@@ -79,28 +81,21 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
-def create(obj_type, avail_props, **kwargs):
+def create(obj_type, url, avail_props, **kwargs):
+    avail_props = ["acl_id","acl_name","arp_disable","description","disable_vip_adv","enable_disable_action","ethernet","extended_stats","ip_address","ipv6_acl","ipv6_address","migrate_vip","name","netmask","port_list","redistribute_route_map","redistribution_flagged","stats_data_action","template_logging","template_policy","template_scaleout","template_virtual_server","use_if_ip","user_tag","uuid","vrid",]
+    payload = _build_json(obj_type, avail_props, **kwargs)
+    client = _get_client(**kwargs)
+    LOG.debug("================PAYLOAD BELOW===========")
+    LOG.debug(payload)
+    post_result = client.post(url, payload)
+    return post_result
+
+
+def update(obj_type, url, avail_props, **kwargs):
     payload = _build_json(obj_type, avail_props, **kwargs)
     try:
         client = _get_client(**kwargs)
-        post_result = client.post(new_url(), payload)
-        ret["changes"].update(**post_result)
-        ret["result"] = True
-    except a10_ex.Exists:
-        ret["result"] = False
-    except a10_ex.ACOSException as ex:
-        ret["comment"] = ex.msg
-        return ret
-    except Exception as gex:
-        raise gex
-    return ret
-
-
-def update(obj_type, avail_props, **kwargs):
-    payload = _build_json(obj_type, avail_props, **kwargs)
-    try:
-        client = _get_client(**kwargs)
-        post_result = client.put(existing_url(**kwargs), payload)
+        post_result = client.put(url, payload)
         ret["changes"].update(**post_result)
         ret["result"] = True
     except a10_ex.ACOSException as ex:
@@ -111,10 +106,10 @@ def update(obj_type, avail_props, **kwargs):
     return ret
 
 
-def delete(**kwargs):
+def delete(url, **kwargs):
     try:
         client = _get_client(**kwargs)
-        client.delete(existing_url(**kwargs))
+        client.delete(url)
         ret["result"] = True
     except a10_ex.NotFound:
         ret["result"] = False

@@ -46,8 +46,6 @@ DETAILS = {}
 
 LOG = logging.getLogger(__file__)
 
-ax_session = None
-
 
 def __virtual__():
     '''
@@ -91,6 +89,7 @@ def _validate(**params):
 
     return rc,errors
 
+
 def init(opts):
     valid = True
 
@@ -103,11 +102,11 @@ def init(opts):
         err_msg = "Validation failure\n".join(run_errors)
 
     http_cli = axapi_http.HttpClient(proxyinfo['host'], proxyinfo['port'], proxyinfo['protocol'])
-    ax_session = session.Session(http_cli, proxyinfo['username'], proxyinfo['password'])
+    DETAILS['ax_session'] = session.Session(http_cli, proxyinfo['username'], proxyinfo['password'])
 
 
 def get_session():
-    return ax_session
+    return DETAILS['ax_session']
 
 
 def shutdown(opts):
