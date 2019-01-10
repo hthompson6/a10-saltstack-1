@@ -7,7 +7,6 @@ import salt
 import salt.config
 
 from a10_saltstack import errors as a10_ex
-from a10_saltstack.axapi_http import client_factory
 from a10_saltstack.kwbl import KW_IN, KW_OUT, translate_blacklist as translateBlacklist
 
 REQUIRED_NOT_SET = (False, "One of ({}) must be set.")
@@ -17,15 +16,6 @@ REQUIRED_VALID = (True, "")
 
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["acl_id","acl_name","arp_disable","description","disable_vip_adv","enable_disable_action","ethernet","extended_stats","ip_address","ipv6_acl","ipv6_address","migrate_vip","name","netmask","port_list","redistribute_route_map","redistribution_flagged","stats_data_action","template_logging","template_policy","template_scaleout","template_virtual_server","use_if_ip","user_tag","uuid","vrid",]
-
-
-ret = dict(
-    name="a10_slb_virtual_server",
-    changes={},
-    original_message="",
-    result=False,
-    comment=""
-)
 
 
 def new_url():
@@ -49,6 +39,14 @@ def existing_url(**kwargs):
 
 
 def create(**kwargs):
+    ret = dict(
+        name="a10_slb_virtual_server",
+        changes={},
+        original_message="",
+        result=False,
+        comment=""
+    )
+
     try:
         ret = __salt__['a10.create']("virtual-server",
                                      new_url(),
@@ -66,6 +64,14 @@ def create(**kwargs):
 
 
 def delete(**kwargs):
+    ret = dict(
+        name="a10_slb_virtual_server",
+        changes={},
+        original_message="",
+        result=False,
+        comment=""
+    )
+
     try:
         ret = __salt__['a10.delete'](existing_url(**kwargs),
                                      **kwargs)
@@ -81,7 +87,14 @@ def delete(**kwargs):
 
 
 def update(**kwargs):
-    payload = build_json("virtual-server", **kwargs)
+    ret = dict(
+        name="a10_slb_virtual_server",
+        changes={},
+        original_message="",
+        result=False,
+        comment=""
+    )
+
     try:
         ret = __salt__['a10.update']("virtual-server",
                                       existing_url(**kwargs),

@@ -5,9 +5,11 @@ import logging
 __virtualname__ = 'a10'
 __proxyenabled__ = ['a10']
 
+
 try:
     from a10_saltstack import client as a10_client
     from a10_saltstack.kwbl import KW_IN, KW_OUT, translate_blacklist as translateBlacklist
+    from a10_saltstack import errors as a10_ex
     HAS_A10 = True
 except ImportError:
     HAS_A10 = False
@@ -35,6 +37,7 @@ def _build_envelope(title, data):
         title: data
     }
 
+
 def _to_axapi(key):
     return translateBlacklist(key, KW_OUT).replace("_", "-")
 
@@ -56,10 +59,10 @@ def _build_dict_from_param(param):
     return rv
 
 
-def _build_json(title, AVAILABLE_PROPERTIES, **kwargs):
+def _build_json(title, avail_props, **kwargs):
     rv = {}
 
-    for x in AVAILABLE_PROPERTIES:
+    for x in avail_props:
         v = kwargs.get(x)
         if v:
             rx = _to_axapi(x)
@@ -76,8 +79,8 @@ def _build_json(title, AVAILABLE_PROPERTIES, **kwargs):
     return _build_envelope(title, rv)
 
 
-def create(obj_type, **kwargs):
-    payload = build_json(obj_type, **kwargs)
+def create(obj_type, avail_props, **kwargs):
+    payload = _build_json(obj_type, avail_props, **kwargs)
     try:
         client = _get_client(**kwargs)
         post_result = client.post(new_url(), payload)
@@ -93,8 +96,8 @@ def create(obj_type, **kwargs):
     return ret
 
 
-def update(obj_type, **kwargs):
-    payload = build_json(obj_type, **kwargs)
+def update(obj_type, avail_props, **kwargs):
+    payload = _build_json(obj_type, avail_props, **kwargs)
     try:
         client = _get_client(**kwargs)
         post_result = client.put(existing_url(**kwargs), payload)
@@ -121,7 +124,3 @@ def delete(**kwargs):
     except Exception as gex:
         raise gex
     return ret
-
-
-def test():
-    return True 
