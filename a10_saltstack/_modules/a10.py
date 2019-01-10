@@ -7,6 +7,7 @@ __proxyenabled__ = ['a10']
 
 try:
     from a10_saltstack import client as a10_client
+    from a10_saltstack.kwbl import KW_IN, KW_OUT, translate_blacklist as translateBlacklist
     HAS_A10 = True
 except ImportError:
     HAS_A10 = False
@@ -55,7 +56,7 @@ def _build_dict_from_param(param):
     return rv
 
 
-def _build_json(title, **kwargs):
+def _build_json(title, AVAILABLE_PROPERTIES, **kwargs):
     rv = {}
 
     for x in AVAILABLE_PROPERTIES:

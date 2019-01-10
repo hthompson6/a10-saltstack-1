@@ -38,8 +38,8 @@ REQUIRED_NOT_SET = (False, "One of ({}) must be set.")
 REQUIRED_MUTEX = (False, "Only one of ({}) can be set.")
 REQUIRED_VALID = (True, "")
 
-__proxyenabled__ = ['t_proc']
-__virtualname__ = 't_proc'
+__proxyenabled__ = ['a10']
+__virtualname__ = 'a10'
 
 GRAINS_CACHE = {}
 DETAILS = {}
@@ -63,7 +63,7 @@ def proxytype():
     '''
     Returns the name of this proxy
     '''
-    return 't_proc'
+    return 'a10'
 
 
 def _validate(**params):
