@@ -48,8 +48,9 @@ def create(**kwargs):
     )
 
     try:
-        ret = __salt__['a10.create']("virtual-server",
+        post_result = __salt__['a10.create']("virtual-server",
                                      new_url(),
+                                     AVAILABLE_PROPERTIES,
                                      **kwargs)
         ret["changes"].update(**post_result)
         ret["result"] = True
