@@ -1,4 +1,4 @@
-# Copyright 2014,  Doug Wiegley,  A10 Networks.
+# Copyright 2018,  A10 Networks.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -13,7 +13,6 @@
 #    under the License.
 
 
-# TODO(mdurrant) - Organize these imports
 import errno
 import json
 import logging
@@ -164,102 +163,3 @@ class HttpClient(object):
 
     def delete(self, api_url, params={}, headers=None, **kwargs):
         return self.request("DELETE", api_url, params, headers, **kwargs)
-
-
-class Session(object):
-
-    def __init__(self, http, username, password):
-        self.http = http
-        self.username = username
-        self.password = password
-        self.session_id = None
-
-    @property
-    def id(self):
-        if self.session_id is None:
-            self.authenticate(self.username, self.password)
-        return self.session_id
-
-    def get_auth_header(self):
-        return {
-            "Authorization": "A10 {0}".format(self.id)
-        }
-
-    def authenticate(self, username, password):
-        url = "/axapi/v3/auth"
-        payload = {
-            'credentials': {
-                "username": username,
-                "password": password
-            }
-        }
-
-        if self.session_id is not None:
-            self.close()
-
-        r = self.http.post(url, payload)
-        if "authresponse" in r:
-            self.session_id = str(r['authresponse']['signature'])
-        else:
-            self.session_id = None
-
-        return r
-
-    def close(self):
-        # try:
-        #     self.client.partition.active()
-        # except Exception:
-        #     pass
-        if self.session_id is None:
-            return
-
-        try:
-            h = {'Authorization': "A10 %s" % self.session_id}
-            r = self.http.post('/axapi/v3/logoff', headers=h)
-        finally:
-            self.session_id = None
-
-        return r
-
-class A10Client(object):
-    def __init__(self, session):
-        self.session = session
-
-    def _request(self, method, url, params, **kwargs):
-
-        try:
-            return self.session.http.request(method, url, params,
-                                            self.session.get_auth_header(), **kwargs)
-        except (ae.InvalidSessionID) as e:
-                # try:
-                #     p = self.client.current_partition
-                #     self.client.session.close()
-                #     self.client.partition.active(p)
-                # except Exception:
-                #     pass
-                # return self._request(method, action, params, retry_count+1,
-                #                      **kwargs)
-            raise e
-
-    def get(self, url, params={}, **kwargs):
-        return self._request('GET', url, params, **kwargs)
-
-    def post(self, url, params={}, **kwargs):
-        return self._request('POST', url, params, **kwargs)
-
-    def put(self, url, params={}, **kwargs):
-        return self._request('PUT', url, params, **kwargs)
-
-    def delete(self, url, params={}, **kwargs):
-        return self._request('DELETE', url, params, **kwargs)
-
-def http_factory(host, port, protocol):
-    return HttpClient(host, port, protocol)
-
-def session_factory(http, username, password):
-    return Session(http, username, password)
-
-def client_factory(host, port, protocol, username, password):
-    http_cli = http_factory(host, port, protocol)
-    session = session_factory(http_cli, username, password)
-    return A10Client(session)
