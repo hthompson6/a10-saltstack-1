@@ -1,3 +1,3 @@
 base:
   '*':
-    - a10_states
+    - <name of statefile> 

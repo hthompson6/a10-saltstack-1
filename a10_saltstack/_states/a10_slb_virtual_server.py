@@ -7,7 +7,7 @@ import salt
 import salt.config
 
 from a10_saltstack import errors as a10_ex
-from a10_saltstack.kwbl import KW_IN, KW_OUT, translate_blacklist as translateBlacklist
+from a10_saltstack.kwbl import KW_OUT
 
 REQUIRED_NOT_SET = (False, "One of ({}) must be set.")
 REQUIRED_MUTEX = (False, "Only one of ({}) can be set.")
@@ -26,7 +26,6 @@ def new_url():
     f_dict["name"] = ""
 
     return url_base.format(**f_dict)
-
 
 def existing_url(**kwargs):
     """Return the URL for an existing resource"""
@@ -49,42 +48,19 @@ def create(**kwargs):
 
     try:
         post_result = __salt__['a10.create']("virtual-server",
-                                     new_url(),
-                                     AVAILABLE_PROPERTIES,
-                                     **kwargs)
+                               new_url(),
+                               AVAILABLE_PROPERTIES,
+                               **kwargs) 
         ret["changes"].update(**post_result)
         ret["result"] = True
     except a10_ex.Exists:
         ret["result"] = False
     except a10_ex.ACOSException as ex:
         ret["comment"] = ex.msg
+        return ret
     except Exception as gex:
         raise gex
-    finally:
-        return ret
-
-
-def delete(**kwargs):
-    ret = dict(
-        name="a10_slb_virtual_server",
-        changes={},
-        original_message="",
-        result=False,
-        comment=""
-    )
-
-    try:
-        ret = __salt__['a10.delete'](existing_url(**kwargs),
-                                     **kwargs)
-        ret["result"] = True
-    except a10_ex.NotFound:
-        ret["result"] = False
-    except a10_ex.ACOSException as ex:
-        ret["comment"] = ex.msg
-    except Exception as gex:
-        raise gex
-    finally:
-        return ret
+    return ret
 
 
 def update(**kwargs):
@@ -97,9 +73,10 @@ def update(**kwargs):
     )
 
     try:
-        ret = __salt__['a10.update']("virtual-server",
-                                      existing_url(**kwargs),
-                                      **kwargs)
+        post_result = __salt__['a10.update']("virtual-server",
+                               existing_url(**kwargs),     
+                               AVAILABLE_PROPERTIES,
+                               **kwargs)
         ret["changes"].update(**post_result)
         ret["result"] = True
     except a10_ex.ACOSException as ex:
@@ -107,5 +84,29 @@ def update(**kwargs):
         return ret
     except Exception as gex:
         raise gex
-    finally:
+    return ret
+
+
+def delete(**kwargs):
+    ret = dict(
+        name="a10_slb_virtual_server",
+        changes={},
+        original_message="",
+        result=False,
+        comment=""
+    )
+
+    try:
+        post_result = __salt__['a10.delete']("virtual-server",
+                               existing_url(**kwargs),      
+                               **kwargs)
+        client.delete(existing_url(**kwargs))
+        ret["result"] = True
+    except a10_ex.NotFound:
+        ret["result"] = False
+    except a10_ex.ACOSException as ex:
+        ret["comment"] = ex.msg
         return ret
+    except Exception as gex:
+        raise gex
+    return ret

@@ -82,40 +82,19 @@ def _build_json(title, avail_props, **kwargs):
 
 
 def create(obj_type, url, avail_props, **kwargs):
-    avail_props = ["acl_id","acl_name","arp_disable","description","disable_vip_adv","enable_disable_action","ethernet","extended_stats","ip_address","ipv6_acl","ipv6_address","migrate_vip","name","netmask","port_list","redistribute_route_map","redistribution_flagged","stats_data_action","template_logging","template_policy","template_scaleout","template_virtual_server","use_if_ip","user_tag","uuid","vrid",]
     payload = _build_json(obj_type, avail_props, **kwargs)
     client = _get_client(**kwargs)
-    LOG.debug("================PAYLOAD BELOW===========")
-    LOG.debug(payload)
     post_result = client.post(url, payload)
     return post_result
 
 
 def update(obj_type, url, avail_props, **kwargs):
     payload = _build_json(obj_type, avail_props, **kwargs)
-    try:
-        client = _get_client(**kwargs)
-        post_result = client.put(url, payload)
-        ret["changes"].update(**post_result)
-        ret["result"] = True
-    except a10_ex.ACOSException as ex:
-        ret["comment"] = ex.msg
-        return ret
-    except Exception as gex:
-        raise gex
-    return ret
+    client = _get_client(**kwargs)
+    post_result = client.put(url, payload)
+    return post_result 
 
 
 def delete(url, **kwargs):
-    try:
-        client = _get_client(**kwargs)
-        client.delete(url)
-        ret["result"] = True
-    except a10_ex.NotFound:
-        ret["result"] = False
-    except a10_ex.ACOSException as ex:
-        ret["comment"] = ex.msg
-        return ret
-    except Exception as gex:
-        raise gex
-    return ret
+    client = _get_client(**kwargs)
+    client.delete(url)
