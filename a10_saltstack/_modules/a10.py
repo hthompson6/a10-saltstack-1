@@ -18,11 +18,6 @@ import logging
 LOG = logging.getLogger(__file__)
 
 def __virtual__():
-    '''
-    We need the Junos adapter libraries for this
-    module to work.  We also need a proxymodule entry in __opts__
-    in the opts dictionary
-    '''
     if HAS_A10 and 'proxy' in __opts__:
         return __virtualname__
     else:
