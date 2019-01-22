@@ -7,8 +7,9 @@ __proxyenabled__ = ['a10']
 
 try:
     from a10_saltstack import client as a10_client
-    from a10_saltstack.kwbl import KW_IN, KW_OUT, translate_blacklist as translateBlacklist
+    from a10_saltstack.kwbl import KW_OUT, translate_blacklist as translateBlacklist
     from a10_saltstack import errors as a10_ex
+    from a10_saltstack import helper as a10_helper
     HAS_A10 = True
 except ImportError:
     HAS_A10 = False
@@ -76,20 +77,51 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
-def create(obj_type, url, avail_props, **kwargs):
-    payload = _build_json(obj_type, avail_props, **kwargs)
-    client = _get_client(**kwargs)
-    post_result = client.post(url, payload)
+def create(obj_type, **kwargs):
+    url = a10_helper.get_url('create', **kwargs)
+    avail_props = a10_helper.get_props(**kwargs)
+    post_result = {}
+    try:
+        payload = _build_json(obj_type, avail_props, **kwargs)
+        client = _get_client(**kwargs)
+        post_result['post_resp'] = client.post(url, payload)
+        post_result['result'] = True
+    except a10_ex.Exists:
+        post_result['result'] = False
+    except a10_ex.ACOSException as ex:
+        post_result['msg'] = ex.msg
+    except Exception as gex:
+        raise gex
     return post_result
 
 
-def update(obj_type, url, avail_props, **kwargs):
-    payload = _build_json(obj_type, avail_props, **kwargs)
-    client = _get_client(**kwargs)
-    post_result = client.put(url, payload)
-    return post_result 
+def update(obj_type, **kwargs):
+    url = a10_helper.get_url('update', **kwargs)
+    avail_props = a10_helper.get_props(**kwargs)
+    post_result = {}
+    try:
+        payload = _build_json(obj_type, avail_props, **kwargs)
+        client = _get_client(**kwargs)
+        post_result = client.put(url, payload)
+    except a10_ex.Exists:
+        post_result['result'] = False
+    except a10_ex.ACOSException as ex:
+        post_result['msg'] = ex.msg
+    except Exception as gex:
+        raise gex
+    return post_result
 
 
-def delete(url, **kwargs):
-    client = _get_client(**kwargs)
-    client.delete(url)
+def delete(**kwargs):
+    url = a10_helper.get_url('delete', **kwargs)
+    post_result = {}
+    try:
+        client = _get_client(**kwargs)
+        client.delete(url)
+    except a10_ex.Exists:
+        post_result['result'] = False
+    except a10_ex.ACOSException as ex:
+        post_result['msg'] = ex.msg
+    except Exception as gex:
+        raise gex
+    return post_result
