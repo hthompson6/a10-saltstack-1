@@ -14,23 +14,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["acl_id","acl_name","arp_disable","description","disable_vip_adv","enable_disable_action","ethernet","extended_stats","ip_address","ipv6_acl","ipv6_address","migrate_vip","name","netmask","port_list","redistribute_route_map","redistribution_flagged","stats_data_action","template_logging","template_policy","template_scaleout","template_virtual_server","use_if_ip","user_tag","uuid","vrid",]
+AVAILABLE_PROPERTIES = ["access_list","action","broadcast_rate_limit","duplexity","flow_control","ip","ipv6","lldp","secondary_ip","speed","uuid",]
 
 
 def new_url():
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/slb/virtual-server/{name}"
+    url_base = "/axapi/v3/interface/management"
     f_dict = {}
-    f_dict["name"] = ""
 
     return url_base.format(**f_dict)
 
 def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/slb/virtual-server/{name}"
+    url_base = "/axapi/v3/interface/management"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

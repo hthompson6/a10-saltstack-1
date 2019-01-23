@@ -14,23 +14,23 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["acl_id","acl_name","arp_disable","description","disable_vip_adv","enable_disable_action","ethernet","extended_stats","ip_address","ipv6_acl","ipv6_address","migrate_vip","name","netmask","port_list","redistribute_route_map","redistribution_flagged","stats_data_action","template_logging","template_policy","template_scaleout","template_virtual_server","use_if_ip","user_tag","uuid","vrid",]
+AVAILABLE_PROPERTIES = ["access_list","action","bfd","ddos","do_auto_recovery","icmp_rate_limit","icmpv6_rate_limit","ifnum","ip","ipv6","isis","l3_vlan_fwd_disable","lw_4o6","map","mtu","name","nptv6","ports_threshold","timer","trap_source","user_tag","uuid",]
 
 
 def new_url():
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/slb/virtual-server/{name}"
+    url_base = "/axapi/v3/interface/trunk/{ifnum}"
     f_dict = {}
-    f_dict["name"] = ""
+    f_dict["ifnum"] = ""
 
     return url_base.format(**f_dict)
 
 def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/slb/virtual-server/{name}"
+    url_base = "/axapi/v3/interface/trunk/{ifnum}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["ifnum"] = kwargs["ifnum"]
 
     return url_base.format(**f_dict)
