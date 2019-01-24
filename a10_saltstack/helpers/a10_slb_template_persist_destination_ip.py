@@ -16,7 +16,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dont_honor_conn_rules","hash_persist","match_type","name","netmask","netmask6","scan_all_members","server","service_group","timeout","user_tag","uuid",]
 
-MODULE_NAME = "destination_ip"
+MODULE_NAME = "destination-ip"
 
 
 def new_url():

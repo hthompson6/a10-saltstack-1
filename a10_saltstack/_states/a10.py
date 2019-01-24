@@ -13,9 +13,6 @@
 # limitations under the License.
 
 
-import logging
-LOG = logging.getLogger(__file__)
-
 
 def _ret_ops(a10_obj, post_result):
     ret = dict(
@@ -37,8 +34,6 @@ def _ret_ops(a10_obj, post_result):
 def create(**kwargs):
     a10_obj = kwargs['a10_obj']
     del kwargs['a10_obj']
-    LOG.debug("=============KWARGS HERE===================")
-    LOG.debug(dict(**kwargs))
     post_result = __salt__['a10.create'](a10_obj, **kwargs) 
     return _ret_ops(a10_obj, post_result)  
 
