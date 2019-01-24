@@ -31,8 +31,6 @@ __proxyenabled__ = ['a10']
 
 
 def __virtual__():
-    LOG.debug("======================DEBUG HERE====================")
-    LOG.debug(HAS_A10)
     if HAS_A10 and 'proxy' in __opts__:
         return __virtualname__
     return (False, 'The a10 module could not be loaded: '
@@ -91,7 +89,7 @@ def _build_json(title, avail_props, **kwargs):
 
 
 def create(obj_type, **kwargs):
-    url = a10_helper.get_url('create', **kwargs)
+    url = a10_helper.get_url(obj_type, 'create', **kwargs)
     avail_props = a10_helper.get_props(**kwargs)
     post_result = {}
     try:
@@ -109,7 +107,7 @@ def create(obj_type, **kwargs):
 
 
 def update(obj_type, **kwargs):
-    url = a10_helper.get_url('update', **kwargs)
+    url = a10_helper.get_url(obj_type, 'update', **kwargs)
     avail_props = a10_helper.get_props(**kwargs)
     post_result = {}
     try:
@@ -125,8 +123,8 @@ def update(obj_type, **kwargs):
     return post_result
 
 
-def delete(**kwargs):
-    url = a10_helper.get_url('delete', **kwargs)
+def delete(obj_type, **kwargs):
+    url = a10_helper.get_url(obj_type, 'delete', **kwargs)
     post_result = {}
     try:
         client = _get_client(**kwargs)
