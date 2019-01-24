@@ -16,6 +16,8 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["access_list","action","broadcast_rate_limit","duplexity","flow_control","ip","ipv6","lldp","secondary_ip","speed","uuid",]
 
+MODULE_NAME = "management"
+
 
 def new_url():
     """Return the URL for creating a resource"""
@@ -24,6 +26,7 @@ def new_url():
     f_dict = {}
 
     return url_base.format(**f_dict)
+
 
 def existing_url(**kwargs):
     """Return the URL for an existing resource"""

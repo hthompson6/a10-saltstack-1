@@ -16,6 +16,8 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cookie_name","domain","dont_honor_conn_rules","encrypt_level","encrypted","expire","httponly","insert_always","match_type","name","pass_phrase","pass_thru","path","scan_all_members","secure","server","server_service_group","service_group","user_tag","uuid",]
 
+MODULE_NAME = "cookie"
+
 
 def new_url():
     """Return the URL for creating a resource"""
@@ -25,6 +27,7 @@ def new_url():
     f_dict["name"] = ""
 
     return url_base.format(**f_dict)
+
 
 def existing_url(**kwargs):
     """Return the URL for an existing resource"""

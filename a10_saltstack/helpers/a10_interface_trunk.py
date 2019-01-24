@@ -16,6 +16,8 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["access_list","action","bfd","ddos","do_auto_recovery","icmp_rate_limit","icmpv6_rate_limit","ifnum","ip","ipv6","isis","l3_vlan_fwd_disable","lw_4o6","map","mtu","name","nptv6","ports_threshold","timer","trap_source","user_tag","uuid",]
 
+MODULE_NAME = "trunk"
+
 
 def new_url():
     """Return the URL for creating a resource"""
@@ -25,6 +27,7 @@ def new_url():
     f_dict["ifnum"] = ""
 
     return url_base.format(**f_dict)
+
 
 def existing_url(**kwargs):
     """Return the URL for an existing resource"""

@@ -88,9 +88,10 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
-def create(obj_type, **kwargs):
-    url = a10_helper.get_url(obj_type, 'create', **kwargs)
-    avail_props = a10_helper.get_props(obj_type, **kwargs)
+def create(a10_obj, **kwargs):
+    url = a10_helper.get_url(a10_obj, 'create', **kwargs)
+    avail_props = a10_helper.get_props(a10_obj, **kwargs)
+    obj_type = a10_helper.get_obj_type(a10_obj)
     post_result = {}
     try:
         payload = _build_json(obj_type, avail_props, **kwargs)
@@ -106,9 +107,10 @@ def create(obj_type, **kwargs):
     return post_result
 
 
-def update(obj_type, **kwargs):
-    url = a10_helper.get_url(obj_type, 'update', **kwargs)
-    avail_props = a10_helper.get_props(obj_type, **kwargs)
+def update(a10_obj, **kwargs):
+    url = a10_helper.get_url(a10_obj, 'update', **kwargs)
+    avail_props = a10_helper.get_props(a10_obj, **kwargs)
+    obj_type = a10_helper.get_obj_type(a10_obj)
     post_result = {}
     try:
         payload = _build_json(obj_type, avail_props, **kwargs)
@@ -123,8 +125,8 @@ def update(obj_type, **kwargs):
     return post_result
 
 
-def delete(obj_type, **kwargs):
-    url = a10_helper.get_url(obj_type, 'delete', **kwargs)
+def delete(a10_obj, **kwargs):
+    url = a10_helper.get_url(a10_obj, 'delete', **kwargs)
     post_result = {}
     try:
         client = _get_client(**kwargs)

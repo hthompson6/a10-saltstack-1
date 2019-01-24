@@ -16,6 +16,8 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ifnum","ip","ipv6","isis","name","snmp_server","user_tag","uuid",]
 
+MODULE_NAME = "loopback"
+
 
 def new_url():
     """Return the URL for creating a resource"""
@@ -25,6 +27,7 @@ def new_url():
     f_dict["ifnum"] = ""
 
     return url_base.format(**f_dict)
+
 
 def existing_url(**kwargs):
     """Return the URL for an existing resource"""
