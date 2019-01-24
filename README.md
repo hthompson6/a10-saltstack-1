@@ -13,9 +13,9 @@ a10-saltstack is distributed as a Python package. It can be installed from the G
 ```console
 $ git clone https://github.com/a10networks/a10-saltstack
 $ mkdir /srv/salt
-$ ln -s a10-saltstack/a10_saltstack/_states /srv/salt/_states
-$ ln -s a10-saltstack/a10_saltstack/_proxy /srv/salt/_proxy
-$ ln -s a10-saltstack/a10_saltstack/_modules /srv/salt/_modules
+$ ln -s ~/a10-saltstack/a10_saltstack/_states /srv/salt/_states
+$ ln -s ~/a10-saltstack/a10_saltstack/_proxy /srv/salt/_proxy
+$ ln -s ~/a10-saltstack/a10_saltstack/_modules /srv/salt/_modules
 ```
 
 ## Example State Files
@@ -39,20 +39,20 @@ Please see (https://github.com/a10networks/a10-saltstack/tree/master/examples/st
 4. On the master, create the salt directory:  
 `sudo mkdir /srv/salt` 
 
-5. Copy the pillar dir over to the srv directory:  
-`sudo cp -r ~/a10-saltstack/a10_saltstack/pillar /srv`
+5. Link the pillar dir to the srv directory:  
+`sudo ln -s ~/a10-saltstack/a10_saltstack/pillar /srv/pillar`
 
-6. Copy the _proxy dir to the salt directory:  
-`sudo cp -r ~/a10-saltstack/a10_saltstack/_proxy /srv/salt`
+6. Link the _proxy dir to the salt directory:  
+`sudo ln -s ~/a10-saltstack/a10_saltstack/_proxy /srv/salt/_proxy`
 
-7. Copy the _modules dir to the salt directory:  
-`sudo cp -r ~/a10-saltstack/a10_saltstack/_modules /srv/salt`
+7. Link the _modules dir to the salt directory:  
+`sudo ln -s ~/a10-saltstack/a10_saltstack/_modules /srv/salt/_modules` 
 
-8. Copy the _states dir to the salt directory:  
-`sudo cp -r ~/a10-saltstack/a10_saltstack/_states /srv/salt`
+8. Link the _states dir to the salt directory:  
+`sudo ln -s ~/a10-saltstack/a10_saltstack/_states /srv/salt/_states`
 
-9. Copy the state file dir to the salt directory:  
-`sudo cp -r ~/a10-saltstack/examples/states /srv/salt`
+9. Link the state file dir to the salt directory:  
+`sudo ln -s ~/a10-saltstack/examples/states /srv/salt/states`
 
 10. Ensure that the master is running:  
 `sudo service salt-master restart`

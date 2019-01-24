@@ -1,28 +1,40 @@
-# Import Python libraries
-from __future__ import absolute_import, print_function, unicode_literals
-
-__virtualname__ = 'a10'
-__proxyenabled__ = ['a10']
+# Copyright 2019 A10 Networks
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 
 try:
     from a10_saltstack import client as a10_client
-    from a10_saltstack.kwbl import KW_IN, KW_OUT, translate_blacklist as translateBlacklist
+    from a10_saltstack.kwbl import KW_OUT, translate_blacklist as translateBlacklist
     from a10_saltstack import errors as a10_ex
+    from a10_saltstack.helpers import helper as a10_helper
     HAS_A10 = True
 except ImportError:
     HAS_A10 = False
 
 import logging
-
 LOG = logging.getLogger(__file__)
+
+
+__virtualname__ = 'a10'
+__proxyenabled__ = ['a10']
+
 
 def __virtual__():
     if HAS_A10 and 'proxy' in __opts__:
         return __virtualname__
-    else:
-        return (False, 'The a10 module could not be loaded: '
-                       'proxy could not be loaded.')
+    return (False, 'The a10 module could not be loaded: '
+                   'proxy could not be loaded.')
 
 
 def _get_client(**kwargs):
@@ -76,20 +88,53 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
-def create(obj_type, url, avail_props, **kwargs):
-    payload = _build_json(obj_type, avail_props, **kwargs)
-    client = _get_client(**kwargs)
-    post_result = client.post(url, payload)
+def create(a10_obj, **kwargs):
+    url = a10_helper.get_url(a10_obj, 'create', **kwargs)
+    avail_props = a10_helper.get_props(a10_obj, **kwargs)
+    obj_type = a10_helper.get_obj_type(a10_obj)
+    post_result = {}
+    try:
+        payload = _build_json(obj_type, avail_props, **kwargs)
+        client = _get_client(**kwargs)
+        post_result['post_resp'] = client.post(url, payload)
+        post_result['result'] = True
+    except a10_ex.Exists:
+        post_result['result'] = False
+    except a10_ex.ACOSException as ex:
+        post_result['comment'] = ex.msg
+    except Exception as gex:
+        raise gex
     return post_result
 
 
-def update(obj_type, url, avail_props, **kwargs):
-    payload = _build_json(obj_type, avail_props, **kwargs)
-    client = _get_client(**kwargs)
-    post_result = client.put(url, payload)
-    return post_result 
+def update(a10_obj, **kwargs):
+    url = a10_helper.get_url(a10_obj, 'update', **kwargs)
+    avail_props = a10_helper.get_props(a10_obj, **kwargs)
+    obj_type = a10_helper.get_obj_type(a10_obj)
+    post_result = {}
+    try:
+        payload = _build_json(obj_type, avail_props, **kwargs)
+        client = _get_client(**kwargs)
+        post_result = client.put(url, payload)
+    except a10_ex.Exists:
+        post_result['result'] = False
+    except a10_ex.ACOSException as ex:
+        post_result['comment'] = ex.msg
+    except Exception as gex:
+        raise gex
+    return post_result
 
 
-def delete(url, **kwargs):
-    client = _get_client(**kwargs)
-    client.delete(url)
+def delete(a10_obj, **kwargs):
+    url = a10_helper.get_url(a10_obj, 'delete', **kwargs)
+    post_result = {}
+    try:
+        client = _get_client(**kwargs)
+        client.delete(url)
+    except a10_ex.Exists:
+        post_result['result'] = False
+    except a10_ex.ACOSException as ex:
+        post_result['comment'] = ex.msg
+    except Exception as gex:
+        raise gex
+    return post_result
