@@ -17,7 +17,9 @@ def get_url(oper, **kwargs):
     else:
         return obj_module.new_url()
 
-def get_props(**kwawrgs):
+def get_props(**kwargs):
     a10_obj = kwargs['a10_obj']
-    obj_module = getattr(a10_saltstack, 'a10_' + str(a10_obj).replace('-', '_'))
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.a10_' + str(a10_obj).replace('-', '_'))
+ 
     return obj_module.AVAILABLE_PROPERTIES
