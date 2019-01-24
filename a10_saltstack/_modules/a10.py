@@ -12,29 +12,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-__virtualname__ = 'a10'
-__proxyenabled__ = ['a10']
-
 
 try:
     from a10_saltstack import client as a10_client
     from a10_saltstack.kwbl import KW_OUT, translate_blacklist as translateBlacklist
     from a10_saltstack import errors as a10_ex
-    from a10_saltstack import helper as a10_helper
+    from a10_saltstack.helpers import helper as a10_helper
     HAS_A10 = True
 except ImportError:
     HAS_A10 = False
 
 import logging
-
 LOG = logging.getLogger(__file__)
 
+
+__virtualname__ = 'a10'
+__proxyenabled__ = ['a10']
+
+
 def __virtual__():
+    LOG.debug("======================DEBUG HERE====================")
+    LOG.debug(HAS_A10)
     if HAS_A10 and 'proxy' in __opts__:
         return __virtualname__
-    else:
-        return (False, 'The a10 module could not be loaded: '
-                       'proxy could not be loaded.')
+    return (False, 'The a10 module could not be loaded: '
+                   'proxy could not be loaded.')
 
 
 def _get_client(**kwargs):
@@ -100,7 +102,7 @@ def create(obj_type, **kwargs):
     except a10_ex.Exists:
         post_result['result'] = False
     except a10_ex.ACOSException as ex:
-        post_result['msg'] = ex.msg
+        post_result['comment'] = ex.msg
     except Exception as gex:
         raise gex
     return post_result
@@ -117,7 +119,7 @@ def update(obj_type, **kwargs):
     except a10_ex.Exists:
         post_result['result'] = False
     except a10_ex.ACOSException as ex:
-        post_result['msg'] = ex.msg
+        post_result['comment'] = ex.msg
     except Exception as gex:
         raise gex
     return post_result
@@ -132,7 +134,7 @@ def delete(**kwargs):
     except a10_ex.Exists:
         post_result['result'] = False
     except a10_ex.ACOSException as ex:
-        post_result['msg'] = ex.msg
+        post_result['comment'] = ex.msg
     except Exception as gex:
         raise gex
     return post_result
