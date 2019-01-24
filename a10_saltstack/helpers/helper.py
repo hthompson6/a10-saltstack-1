@@ -15,7 +15,7 @@ def get_url(oper, **kwargs):
     if oper != 'create':
         return obj_module.existing_url(**kwargs)
     else:
-        return obj_module.new_url(**kwargs)
+        return obj_module.new_url()
 
 def get_props(**kwawrgs):
     a10_obj = kwargs['a10_obj']
