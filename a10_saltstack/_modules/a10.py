@@ -90,7 +90,7 @@ def _build_json(title, avail_props, **kwargs):
 
 def create(obj_type, **kwargs):
     url = a10_helper.get_url(obj_type, 'create', **kwargs)
-    avail_props = a10_helper.get_props(**kwargs)
+    avail_props = a10_helper.get_props(obj_type, **kwargs)
     post_result = {}
     try:
         payload = _build_json(obj_type, avail_props, **kwargs)
@@ -108,7 +108,7 @@ def create(obj_type, **kwargs):
 
 def update(obj_type, **kwargs):
     url = a10_helper.get_url(obj_type, 'update', **kwargs)
-    avail_props = a10_helper.get_props(**kwargs)
+    avail_props = a10_helper.get_props(obj_type, **kwargs)
     post_result = {}
     try:
         payload = _build_json(obj_type, avail_props, **kwargs)
