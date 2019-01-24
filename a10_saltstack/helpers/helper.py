@@ -1,4 +1,5 @@
 import a10_saltstack
+import importlib
 
 oper_enum = ['create', 'update', 'delete']
 
@@ -8,7 +9,8 @@ def get_url(oper, **kwargs):
 
     a10_obj = kwargs['a10_obj']
     del kwargs['a10_obj']
-    obj_module = __import__('a10_saltstack.helpers.a10_' + str(a10_obj).replace('-', '_'))
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.a10_' + str(a10_obj).replace('-', '_'))
 
     if oper != 'create':
         return obj_module.existing_url(**kwargs)
