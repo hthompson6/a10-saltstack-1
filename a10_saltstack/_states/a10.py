@@ -15,7 +15,7 @@
 
 def _ret_ops(a10_obj, post_result):
     ret = dict(
-        name=kwargs['a10_obj'],
+        name=a10_obj,
         changes={},
         original_message="",
         result=False,
