@@ -32,17 +32,20 @@ def _ret_ops(a10_obj, post_result):
 
 def create(**kwargs):
     a10_obj = kwargs['a10_obj']
+    del kwargs['a10_obj']
     post_result = __salt__['a10.create'](a10_obj, **kwargs) 
     return _ret_ops(a10_obj, post_result)  
 
  
 def update(**kwargs):
     a10_obj = kwargs['a10_obj']
+    del kwargs['a10_obj']
     post_result = __salt__['a10.update'](a10_obj, **kwargs)
     return _ret_ops(a10_obj, post_result) 
 
 
 def delete(**kwargs):
     a10_obj = kwargs['a10_obj']
+    del kwargs['a10_obj']
     post_result = __salt__['a10.delete'](a10_obj, **kwargs)
     return _ret_ops(a10_obj, post_result) 
