@@ -116,7 +116,7 @@ def update(a10_obj, **kwargs):
         payload = _build_json(obj_type, avail_props, **kwargs)
         client = _get_client(**kwargs)
         post_result = client.put(url, payload)
-    except a10_ex.Exists:
+    except a10_ex.NotFound:
         post_result['result'] = False
     except a10_ex.ACOSException as ex:
         post_result['comment'] = ex.msg
@@ -131,7 +131,7 @@ def delete(a10_obj, **kwargs):
     try:
         client = _get_client(**kwargs)
         client.delete(url)
-    except a10_ex.Exists:
+    except a10_ex.NotFound:
         post_result['result'] = False
     except a10_ex.ACOSException as ex:
         post_result['comment'] = ex.msg
