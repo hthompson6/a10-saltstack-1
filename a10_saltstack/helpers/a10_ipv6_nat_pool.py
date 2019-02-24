@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["end_address","gateway","ip_rr","netmask","pool_name","sampling_enable","scaleout_device_id","start_address","uuid","vrid",]
 
-MODULE_NAME = pool
+MODULE_NAME = 'pool'
 
 def new_url(module):
     """Return the URL for creating a resource"""

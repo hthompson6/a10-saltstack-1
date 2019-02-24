@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dd","detail","hello","ls_ack","ls_request","ls_update","recv","send","uuid",]
 
-MODULE_NAME = packet
+MODULE_NAME = 'packet'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["enable","privilege","size","uuid",]
 
-MODULE_NAME = audit
+MODULE_NAME = 'audit'
 
 def new_url(module):
     """Return the URL for creating a resource"""

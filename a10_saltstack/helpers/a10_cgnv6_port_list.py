@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","port_config","user_tag","uuid",]
 
-MODULE_NAME = port-list
+MODULE_NAME = 'port-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

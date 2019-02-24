@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["bfd","cost_cfg","dead_interval_cfg","disable","hello_interval_cfg","mtu_ignore_cfg","neighbor_cfg","network_list","priority_cfg","retransmit_interval_cfg","transmit_delay_cfg","uuid",]
 
-MODULE_NAME = ospf
+MODULE_NAME = 'ospf'
 
 def new_url(module):
     """Return the URL for creating a resource"""

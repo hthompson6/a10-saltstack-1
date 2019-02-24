@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["default_gateway","ipv4_address","ipv4_netmask",]
 
-MODULE_NAME = ip
+MODULE_NAME = 'ip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

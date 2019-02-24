@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["force_delete_timeout","force_delete_timeout_100ms","half_close_idle_timeout","half_open_idle_timeout","port_cfg","tcp_idle_timeout","uuid",]
 
-MODULE_NAME = tcp
+MODULE_NAME = 'tcp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

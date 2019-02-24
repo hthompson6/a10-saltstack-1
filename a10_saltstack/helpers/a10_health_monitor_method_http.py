@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["http","http_encrypted","http_expect","http_host","http_kerberos_auth","http_kerberos_kdc","http_kerberos_realm","http_maintenance_code","http_password","http_password_string","http_port","http_postdata","http_postfile","http_response_code","http_text","http_url","http_username","post_path","post_type","response_code_regex","text_regex","url_path","url_type","uuid",]
 
-MODULE_NAME = http
+MODULE_NAME = 'http'
 
 def new_url(module):
     """Return the URL for creating a resource"""

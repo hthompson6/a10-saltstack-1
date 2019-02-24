@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["min","mss_clamp_type","mss_subtract","mss_value","uuid",]
 
-MODULE_NAME = mss-clamp
+MODULE_NAME = 'mss-clamp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

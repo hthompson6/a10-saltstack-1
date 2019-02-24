@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["mss","nop","sack_type","time_stamp_enable","uuid","wscale",]
 
-MODULE_NAME = options
+MODULE_NAME = 'options'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cpu_usage","disable","packets_per_second","uuid",]
 
-MODULE_NAME = cpu-load-sharing
+MODULE_NAME = 'cpu-load-sharing'
 
 def new_url(module):
     """Return the URL for creating a resource"""

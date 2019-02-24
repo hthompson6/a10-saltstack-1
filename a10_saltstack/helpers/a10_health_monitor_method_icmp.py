@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["icmp","ip","ipv6","transparent","uuid",]
 
-MODULE_NAME = icmp
+MODULE_NAME = 'icmp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

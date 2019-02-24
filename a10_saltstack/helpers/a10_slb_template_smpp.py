@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["client_enquire_link","name","password","server_enquire_link","server_enquire_link_val","server_selection_per_request","user","user_tag","uuid",]
 
-MODULE_NAME = smpp
+MODULE_NAME = 'smpp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

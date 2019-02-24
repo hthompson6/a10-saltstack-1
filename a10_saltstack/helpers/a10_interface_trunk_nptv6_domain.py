@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["bind_type","domain_name","uuid",]
 
-MODULE_NAME = domain
+MODULE_NAME = 'domain'
 
 def new_url(module):
     """Return the URL for creating a resource"""

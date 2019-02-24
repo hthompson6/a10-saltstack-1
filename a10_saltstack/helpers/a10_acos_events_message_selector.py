@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","rule_list","user_tag","uuid",]
 
-MODULE_NAME = message-selector
+MODULE_NAME = 'message-selector'
 
 def new_url(module):
     """Return the URL for creating a resource"""

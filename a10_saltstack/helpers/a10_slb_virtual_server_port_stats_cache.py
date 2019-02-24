@@ -17,15 +17,15 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","stats",]
 
-MODULE_NAME = port
+MODULE_NAME = 'port'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/slb/virtual-server/{virtual_server_name}/port/{port_port_number}+{{port_number}_protocol}/stats?cache=true"
+    url_base = "/axapi/v3/slb/virtual-server/{virtual_server_name}/port/{port_number}+{protocol}/stats?cache=true"
     f_dict = {}
-    f_dict["port_number_protocol"] = module.params["port_number_protocol"]
-    f_dict["port_port_number"] = module.params["port_port_number"]
+    f_dict["protocol"] = module.params["protocol"]
+    f_dict["port_number"] = module.params["port_number"]
     f_dict["virtual_server_name"] = module.params["virtual_server_name"]
 
     return url_base.format(**f_dict)
@@ -34,10 +34,10 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/slb/virtual-server/{virtual_server_name}/port/{port_port_number}+{{port_number}_protocol}/stats?cache=true"
+    url_base = "/axapi/v3/slb/virtual-server/{virtual_server_name}/port/{port_number}+{protocol}/stats?cache=true"
     f_dict = {}
-    f_dict["port_number_protocol"] = module.params["port_number_protocol"]
-    f_dict["port_port_number"] = module.params["port_port_number"]
+    f_dict["protocol"] = module.params["protocol"]
+    f_dict["port_number"] = module.params["port_number"]
     f_dict["virtual_server_name"] = module.params["virtual_server_name"]
 
     return url_base.format(**f_dict)

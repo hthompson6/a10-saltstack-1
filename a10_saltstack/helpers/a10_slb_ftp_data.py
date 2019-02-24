@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["sampling_enable","uuid",]
 
-MODULE_NAME = ftp-data
+MODULE_NAME = 'ftp-data'
 
 def new_url(module):
     """Return the URL for creating a resource"""

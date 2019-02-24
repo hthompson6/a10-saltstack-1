@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["auto_detect","enable_list","limit","ping_site","status_interval","use_mgmt_port","uuid",]
 
-MODULE_NAME = protocol
+MODULE_NAME = 'protocol'
 
 def new_url(module):
     """Return the URL for creating a resource"""

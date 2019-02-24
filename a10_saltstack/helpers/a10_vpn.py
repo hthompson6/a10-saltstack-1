@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["asymmetric_flow_support","error","fragment_after_encap","ike_gateway_list","ike_sa_timeout","ike_stats_global","ipsec_error_dump","ipsec_list","jumbo_fragment","nat_traversal_flow_affinity","revocation_list","sampling_enable","stateful_mode","tcp_mss_adjust_disable","uuid",]
 
-MODULE_NAME = vpn
+MODULE_NAME = 'vpn'
 
 def new_url(module):
     """Return the URL for creating a resource"""

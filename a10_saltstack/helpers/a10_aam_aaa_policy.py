@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["aaa_rule_list","name","sampling_enable","user_tag","uuid",]
 
-MODULE_NAME = aaa-policy
+MODULE_NAME = 'aaa-policy'
 
 def new_url(module):
     """Return the URL for creating a resource"""

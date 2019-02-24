@@ -17,15 +17,15 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["device_group","device_id_list","user_tag","uuid",]
 
-MODULE_NAME = device-group
+MODULE_NAME = 'device-group'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/scaleout/cluster/{cluster_cluster_id}/device-groups/device-group/{device-group}"
+    url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/device-groups/device-group/{device-group}"
     f_dict = {}
     f_dict["device-group"] = ""
-    f_dict["cluster_cluster_id"] = module.params["cluster_cluster_id"]
+    f_dict["cluster_id"] = module.params["cluster_id"]
 
     return url_base.format(**f_dict)
 
@@ -33,9 +33,9 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/scaleout/cluster/{cluster_cluster_id}/device-groups/device-group/{device-group}"
+    url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/device-groups/device-group/{device-group}"
     f_dict = {}
     f_dict["device-group"] = module.params["device-group"]
-    f_dict["cluster_cluster_id"] = module.params["cluster_cluster_id"]
+    f_dict["cluster_id"] = module.params["cluster_id"]
 
     return url_base.format(**f_dict)

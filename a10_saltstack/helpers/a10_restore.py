@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["remote_file","use_mgmt_port",]
 
-MODULE_NAME = restore
+MODULE_NAME = 'restore'
 
 def new_url(module):
     """Return the URL for creating a resource"""

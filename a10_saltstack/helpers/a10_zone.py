@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["interface","local_zone_cfg","name","user_tag","uuid","vlan",]
 
-MODULE_NAME = zone
+MODULE_NAME = 'zone'
 
 def new_url(module):
     """Return the URL for creating a resource"""

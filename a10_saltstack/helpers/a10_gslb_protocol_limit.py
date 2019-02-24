@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ardt_query","ardt_response","ardt_session","conn_response","message","response","uuid",]
 
-MODULE_NAME = limit
+MODULE_NAME = 'limit'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["background","fail_msg_cfg","title_cfg","uuid",]
 
-MODULE_NAME = logon-fail
+MODULE_NAME = 'logon-fail'
 
 def new_url(module):
     """Return the URL for creating a resource"""

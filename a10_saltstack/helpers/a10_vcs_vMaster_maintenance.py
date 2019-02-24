@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["vMaster_maintenance",]
 
-MODULE_NAME = vMaster-maintenance
+MODULE_NAME = 'vMaster-maintenance'
 
 def new_url(module):
     """Return the URL for creating a resource"""

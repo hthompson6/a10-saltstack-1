@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","uuid",]
 
-MODULE_NAME = fan-speed
+MODULE_NAME = 'fan-speed'
 
 def new_url(module):
     """Return the URL for creating a resource"""

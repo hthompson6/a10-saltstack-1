@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","match","sequence","set","tag","user_tag","uuid",]
 
-MODULE_NAME = route-map
+MODULE_NAME = 'route-map'
 
 def new_url(module):
     """Return the URL for creating a resource"""

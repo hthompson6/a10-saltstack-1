@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["interface","redistribute","uuid",]
 
-MODULE_NAME = nsm
+MODULE_NAME = 'nsm'
 
 def new_url(module):
     """Return the URL for creating a resource"""

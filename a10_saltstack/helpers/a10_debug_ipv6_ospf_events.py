@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["abr","asbr","os","router","uuid","vlink",]
 
-MODULE_NAME = events
+MODULE_NAME = 'events'
 
 def new_url(module):
     """Return the URL for creating a resource"""

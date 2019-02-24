@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","dst_file","file","size",]
 
-MODULE_NAME = techsupport
+MODULE_NAME = 'techsupport'
 
 def new_url(module):
     """Return the URL for creating a resource"""

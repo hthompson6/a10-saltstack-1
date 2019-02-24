@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["enable_jumbo","uuid",]
 
-MODULE_NAME = system-jumbo-global
+MODULE_NAME = 'system-jumbo-global'
 
 def new_url(module):
     """Return the URL for creating a resource"""

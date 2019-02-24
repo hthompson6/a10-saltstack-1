@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["next_hop","next_hop_v6","tunnel","uuid",]
 
-MODULE_NAME = bind-tunnel
+MODULE_NAME = 'bind-tunnel'
 
 def new_url(module):
     """Return the URL for creating a resource"""

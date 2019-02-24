@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["compound","rpn_string","uuid",]
 
-MODULE_NAME = compound
+MODULE_NAME = 'compound'
 
 def new_url(module):
     """Return the URL for creating a resource"""

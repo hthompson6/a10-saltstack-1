@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["enable","uuid",]
 
-MODULE_NAME = multi-config
+MODULE_NAME = 'multi-config'
 
 def new_url(module):
     """Return the URL for creating a resource"""

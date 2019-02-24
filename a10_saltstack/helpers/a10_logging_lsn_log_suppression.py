@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["count","time","uuid",]
 
-MODULE_NAME = log-suppression
+MODULE_NAME = 'log-suppression'
 
 def new_url(module):
     """Return the URL for creating a resource"""

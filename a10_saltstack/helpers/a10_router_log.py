@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["file","log_buffer","uuid",]
 
-MODULE_NAME = log
+MODULE_NAME = 'log'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["creat_cfg","delete_cfg",]
 
-MODULE_NAME = store
+MODULE_NAME = 'store'
 
 def new_url(module):
     """Return the URL for creating a resource"""

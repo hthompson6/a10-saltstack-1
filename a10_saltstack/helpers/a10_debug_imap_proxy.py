@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["uuid",]
 
-MODULE_NAME = imap-proxy
+MODULE_NAME = 'imap-proxy'
 
 def new_url(module):
     """Return the URL for creating a resource"""

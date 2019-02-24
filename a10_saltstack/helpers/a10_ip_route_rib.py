@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ip_dest_addr","ip_mask","ip_nexthop_ipv4","ip_nexthop_lif","ip_nexthop_partition","ip_nexthop_tunnel","uuid",]
 
-MODULE_NAME = rib
+MODULE_NAME = 'rib'
 
 def new_url(module):
     """Return the URL for creating a resource"""

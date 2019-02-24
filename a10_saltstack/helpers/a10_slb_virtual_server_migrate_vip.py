@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cancel_migration","finish_migration","target_data_cpu","target_floating_ipv4","target_floating_ipv6",]
 
-MODULE_NAME = migrate-vip
+MODULE_NAME = 'migrate-vip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["icmp_timeout","ignore_tcp_msl","service_timeout_list","tcp_timeout","udp_timeout","uuid",]
 
-MODULE_NAME = translation
+MODULE_NAME = 'translation'
 
 def new_url(module):
     """Return the URL for creating a resource"""

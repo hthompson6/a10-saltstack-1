@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["uuid","vlan_list",]
 
-MODULE_NAME = vlan
+MODULE_NAME = 'vlan'
 
 def new_url(module):
     """Return the URL for creating a resource"""

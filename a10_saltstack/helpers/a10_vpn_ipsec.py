@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["anti_replay_window","bind_tunnel","dh_group","enc_cfg","ike_gateway","lifebytes","lifetime","mode","name","proto","sampling_enable","sequence_number_disable","traffic_selector","up","user_tag","uuid",]
 
-MODULE_NAME = ipsec
+MODULE_NAME = 'ipsec'
 
 def new_url(module):
     """Return the URL for creating a resource"""

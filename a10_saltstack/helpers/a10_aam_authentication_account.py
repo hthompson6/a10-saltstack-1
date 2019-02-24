@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["kerberos_spn_list","sampling_enable","uuid",]
 
-MODULE_NAME = account
+MODULE_NAME = 'account'
 
 def new_url(module):
     """Return the URL for creating a resource"""

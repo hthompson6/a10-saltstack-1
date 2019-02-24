@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["delay","proceed_on_error","uuid",]
 
-MODULE_NAME = common
+MODULE_NAME = 'common'
 
 def new_url(module):
     """Return the URL for creating a resource"""

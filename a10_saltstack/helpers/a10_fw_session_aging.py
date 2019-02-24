@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["icmp_idle_timeout","ip_idle_timeout","name","tcp","udp","user_tag","uuid",]
 
-MODULE_NAME = session-aging
+MODULE_NAME = 'session-aging'
 
 def new_url(module):
     """Return the URL for creating a resource"""

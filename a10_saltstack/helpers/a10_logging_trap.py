@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["trap_levelname","uuid",]
 
-MODULE_NAME = trap
+MODULE_NAME = 'trap'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["default_port_disable","sampling_enable","uuid",]
 
-MODULE_NAME = rtsp
+MODULE_NAME = 'rtsp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

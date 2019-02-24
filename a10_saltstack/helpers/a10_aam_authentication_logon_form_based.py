@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["account_lock","challenge_variable","cp_page_cfg","duration","logon_page_cfg","name","new_pin_variable","next_token_variable","notify_cp_page_cfg","portal","retry","user_tag","uuid",]
 
-MODULE_NAME = form-based
+MODULE_NAME = 'form-based'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["allow_third_party_from_lan","allow_third_party_from_wan","announce","check_client_nonce","disable_map_filter","map","maximum","minimum","name","pcp_server_port","peer","source_ip","source_ipv6","user_tag","uuid",]
 
-MODULE_NAME = pcp
+MODULE_NAME = 'pcp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

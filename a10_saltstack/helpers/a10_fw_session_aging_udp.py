@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["port_cfg","udp_idle_timeout","uuid",]
 
-MODULE_NAME = udp
+MODULE_NAME = 'udp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

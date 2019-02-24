@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ethernet","ipv4_end_address","ipv4_start_address","ipv6_end_address","ipv6_start_address","nat_pool","src_dst","trunk","uuid","ve","virtual_server",]
 
-MODULE_NAME = ip
+MODULE_NAME = 'ip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

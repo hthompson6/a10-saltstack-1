@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["attribute_list","attribute_rule","extended_filter","forward_policy_authorize_only","name","server","service_group","user_tag","uuid",]
 
-MODULE_NAME = policy
+MODULE_NAME = 'policy'
 
 def new_url(module):
     """Return the URL for creating a resource"""

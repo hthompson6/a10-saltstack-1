@@ -17,17 +17,17 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["port","priority","sampling_enable","srv_name","ttl","uuid","weight",]
 
-MODULE_NAME = dns-srv-record
+MODULE_NAME = 'dns-srv-record'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_service_port}+{{service_port}_service_name}/dns-srv-record/{srv-name}+{port}"
+    url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-srv-record/{srv-name}+{port}"
     f_dict = {}
     f_dict["srv-name"] = ""
     f_dict["port"] = ""
-    f_dict["service_port_service_name"] = module.params["service_port_service_name"]
-    f_dict["service_service_port"] = module.params["service_service_port"]
+    f_dict["service-name"] = module.params["service-name"]
+    f_dict["service_port"] = module.params["service_port"]
     f_dict["zone_name"] = module.params["zone_name"]
 
     return url_base.format(**f_dict)
@@ -36,12 +36,12 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_service_port}+{{service_port}_service_name}/dns-srv-record/{srv-name}+{port}"
+    url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-srv-record/{srv-name}+{port}"
     f_dict = {}
     f_dict["srv-name"] = module.params["srv-name"]
     f_dict["port"] = module.params["port"]
-    f_dict["service_port_service_name"] = module.params["service_port_service_name"]
-    f_dict["service_service_port"] = module.params["service_service_port"]
+    f_dict["service-name"] = module.params["service-name"]
+    f_dict["service_port"] = module.params["service_port"]
     f_dict["zone_name"] = module.params["zone_name"]
 
     return url_base.format(**f_dict)

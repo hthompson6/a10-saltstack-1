@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ospfIfAuthFailure","ospfIfConfigError","ospfIfRxBadPacket","ospfIfStateChange","ospfLsdbApproachingOverflow","ospfLsdbOverflow","ospfMaxAgeLsa","ospfNbrStateChange","ospfOriginateLsa","ospfTxRetransmit","ospfVirtIfAuthFailure","ospfVirtIfConfigError","ospfVirtIfRxBadPacket","ospfVirtIfStateChange","ospfVirtIfTxRetransmit","ospfVirtNbrStateChange","uuid",]
 
-MODULE_NAME = ospf
+MODULE_NAME = 'ospf'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["sampling_enable",]
 
-MODULE_NAME = health-gateway
+MODULE_NAME = 'health-gateway'
 
 def new_url(module):
     """Return the URL for creating a resource"""

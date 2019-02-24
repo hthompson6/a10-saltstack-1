@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["geo_locn_multiple_addresses","geo_locn_obj_name","user_tag","uuid",]
 
-MODULE_NAME = geo-location
+MODULE_NAME = 'geo-location'
 
 def new_url(module):
     """Return the URL for creating a resource"""

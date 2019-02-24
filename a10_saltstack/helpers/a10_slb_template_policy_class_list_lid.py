@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action_value","bw_per","bw_rate_limit","conn_limit","conn_per","conn_rate_limit","direct_action","direct_action_interval","direct_action_value","direct_fail","direct_logging_drp_rst","direct_pbslb_interval","direct_pbslb_logging","direct_service_group","dns64","interval","lidnum","lockout","log","over_limit_action","request_limit","request_per","request_rate_limit","response_code_rate_limit","user_tag","uuid",]
 
-MODULE_NAME = lid
+MODULE_NAME = 'lid'
 
 def new_url(module):
     """Return the URL for creating a resource"""

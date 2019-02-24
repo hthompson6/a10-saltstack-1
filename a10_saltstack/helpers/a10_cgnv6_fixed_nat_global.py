@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["create_port_mapping_file","port_mapping_files_count","sampling_enable","uuid",]
 
-MODULE_NAME = global
+MODULE_NAME = 'global'
 
 def new_url(module):
     """Return the URL for creating a resource"""

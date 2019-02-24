@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["buff","cpu_threshold","max_packets_per_reassembly","max_reassembly_sessions","sampling_enable","timeout","uuid",]
 
-MODULE_NAME = frag
+MODULE_NAME = 'frag'
 
 def new_url(module):
     """Return the URL for creating a resource"""

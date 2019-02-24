@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["change_password","logo_cfg","logon","logon_fail","name","notify_change_password","user_tag","uuid",]
 
-MODULE_NAME = portal
+MODULE_NAME = 'portal'
 
 def new_url(module):
     """Return the URL for creating a resource"""

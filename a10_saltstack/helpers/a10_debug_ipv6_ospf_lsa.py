@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["flooding","gererate","install","maxage","refresh","uuid",]
 
-MODULE_NAME = lsa
+MODULE_NAME = 'lsa'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,16 +17,16 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["address_type","ethernet","nat_pool","src_dst","trunk","uuid","value","ve","virtual_server",]
 
-MODULE_NAME = mac
+MODULE_NAME = 'mac'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/sys-ut/event/{event_event_number}/action/{action_direction}/l2/mac/{src-dst}"
+    url_base = "/axapi/v3/sys-ut/event/{event_number}/action/{action_direction}/l2/mac/{src-dst}"
     f_dict = {}
     f_dict["src-dst"] = ""
     f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["event_event_number"] = module.params["event_event_number"]
+    f_dict["event_number"] = module.params["event_number"]
 
     return url_base.format(**f_dict)
 
@@ -34,10 +34,10 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/sys-ut/event/{event_event_number}/action/{action_direction}/l2/mac/{src-dst}"
+    url_base = "/axapi/v3/sys-ut/event/{event_number}/action/{action_direction}/l2/mac/{src-dst}"
     f_dict = {}
     f_dict["src-dst"] = module.params["src-dst"]
     f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["event_event_number"] = module.params["event_event_number"]
+    f_dict["event_number"] = module.params["event_number"]
 
     return url_base.format(**f_dict)

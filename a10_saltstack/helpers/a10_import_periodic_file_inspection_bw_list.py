@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["period","use_mgmt_port","uuid",]
 
-MODULE_NAME = file-inspection-bw-list
+MODULE_NAME = 'file-inspection-bw-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

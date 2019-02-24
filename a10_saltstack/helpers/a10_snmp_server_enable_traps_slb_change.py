@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","connection_resource_event","resource_usage_warning","server","server_port","ssl_cert_change","ssl_cert_expire","uuid","vip","vip_port",]
 
-MODULE_NAME = slb-change
+MODULE_NAME = 'slb-change'
 
 def new_url(module):
     """Return the URL for creating a resource"""

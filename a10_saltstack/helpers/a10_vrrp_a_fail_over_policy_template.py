@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["bgp","gateway","interface","name","route","trunk_cfg","user_tag","uuid","vlan_cfg",]
 
-MODULE_NAME = fail-over-policy-template
+MODULE_NAME = 'fail-over-policy-template'
 
 def new_url(module):
     """Return the URL for creating a resource"""

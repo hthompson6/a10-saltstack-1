@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["destination_ip_address_list","encap","host_list","id","source_ip_address","user_tag","uuid",]
 
-MODULE_NAME = vtep
+MODULE_NAME = 'vtep'
 
 def new_url(module):
     """Return the URL for creating a resource"""

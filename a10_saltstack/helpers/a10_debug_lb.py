@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","cfg","clb","flow","fwlb","llb","slb","uuid",]
 
-MODULE_NAME = lb
+MODULE_NAME = 'lb'
 
 def new_url(module):
     """Return the URL for creating a resource"""

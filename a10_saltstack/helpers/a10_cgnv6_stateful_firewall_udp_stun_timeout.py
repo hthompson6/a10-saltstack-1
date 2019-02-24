@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["port","port_end","stun_timeout_val_port_range","uuid",]
 
-MODULE_NAME = stun-timeout
+MODULE_NAME = 'stun-timeout'
 
 def new_url(module):
     """Return the URL for creating a resource"""

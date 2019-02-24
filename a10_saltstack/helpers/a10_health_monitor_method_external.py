@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ext_arguments","ext_port","ext_preference","ext_program","external","uuid",]
 
-MODULE_NAME = external
+MODULE_NAME = 'external'
 
 def new_url(module):
     """Return the URL for creating a resource"""

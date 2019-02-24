@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["debug_level","uuid",]
 
-MODULE_NAME = generic-proxy
+MODULE_NAME = 'generic-proxy'
 
 def new_url(module):
     """Return the URL for creating a resource"""

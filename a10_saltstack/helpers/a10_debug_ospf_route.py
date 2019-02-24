@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ase","ia","install","spf","uuid",]
 
-MODULE_NAME = route
+MODULE_NAME = 'route'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["app","application","name","remark","rule_list","rules_by_zone","sampling_enable","session_statistic","tag","track_app_rule_list","user_tag","uuid",]
 
-MODULE_NAME = rule-set
+MODULE_NAME = 'rule-set'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["icmp","inside","ip_checksum_error","l4_checksum_error","tcp","user_quota_prefix_length","uuid",]
 
-MODULE_NAME = global
+MODULE_NAME = 'global'
 
 def new_url(module):
     """Return the URL for creating a resource"""

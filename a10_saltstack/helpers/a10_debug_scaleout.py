@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["config","event","packet","uuid",]
 
-MODULE_NAME = scaleout
+MODULE_NAME = 'scaleout'
 
 def new_url(module):
     """Return the URL for creating a resource"""

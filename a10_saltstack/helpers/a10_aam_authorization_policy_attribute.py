@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["A10_AX_AUTH_URI","a10_dynamic_defined","attr_int","attr_int_val","attr_ip","attr_ipv4","attr_num","attr_str","attr_str_val","attr_type","attribute_name","custom_attr_str","custom_attr_type","integer_type","ip_type","string_type","uuid",]
 
-MODULE_NAME = attribute
+MODULE_NAME = 'attribute'
 
 def new_url(module):
     """Return the URL for creating a resource"""

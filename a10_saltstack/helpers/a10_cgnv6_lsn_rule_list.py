@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["default","domain_ip","domain_list_name_list","domain_name_list","http_match_domain_name","ip_list","name","user_tag","uuid",]
 
-MODULE_NAME = lsn-rule-list
+MODULE_NAME = 'lsn-rule-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

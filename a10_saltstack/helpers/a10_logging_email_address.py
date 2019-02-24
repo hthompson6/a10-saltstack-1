@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["email_list","uuid",]
 
-MODULE_NAME = email-address
+MODULE_NAME = 'email-address'
 
 def new_url(module):
     """Return the URL for creating a resource"""

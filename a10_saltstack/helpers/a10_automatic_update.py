@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["check_now","checknow","config_list","info","proxy_server","reset","revert","use_mgmt_port","uuid",]
 
-MODULE_NAME = automatic-update
+MODULE_NAME = 'automatic-update'
 
 def new_url(module):
     """Return the URL for creating a resource"""

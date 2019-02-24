@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ipv4_nat_addr","port_range_list","user_tag",]
 
-MODULE_NAME = nat-address
+MODULE_NAME = 'nat-address'
 
 def new_url(module):
     """Return the URL for creating a resource"""

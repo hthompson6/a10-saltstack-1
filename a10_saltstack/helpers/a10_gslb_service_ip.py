@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","external_ip","health_check","health_check_disable","health_check_protocol_disable","ip_address","ipv6","ipv6_address","node_name","port_list","sampling_enable","user_tag","uuid",]
 
-MODULE_NAME = service-ip
+MODULE_NAME = 'service-ip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

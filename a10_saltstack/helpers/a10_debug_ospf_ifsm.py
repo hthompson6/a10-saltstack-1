@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["events","status","timers","uuid",]
 
-MODULE_NAME = ifsm
+MODULE_NAME = 'ifsm'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["l3_inline_mode","uuid",]
 
-MODULE_NAME = l3-inline-mode-flag
+MODULE_NAME = 'l3-inline-mode-flag'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","bypass_ip_cfg","failure_action","name","request_header_forward_list","service_group","source_ip","tcp_proxy","timeout","ntype","user_tag","uuid",]
 
-MODULE_NAME = external-service
+MODULE_NAME = 'external-service'
 
 def new_url(module):
     """Return the URL for creating a resource"""

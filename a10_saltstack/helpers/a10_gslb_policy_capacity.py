@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["capacity_enable","capacity_fail_break","threshold","uuid",]
 
-MODULE_NAME = capacity
+MODULE_NAME = 'capacity'
 
 def new_url(module):
     """Return the URL for creating a resource"""

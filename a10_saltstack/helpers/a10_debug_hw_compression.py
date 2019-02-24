@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["level","uuid",]
 
-MODULE_NAME = hw-compression
+MODULE_NAME = 'hw-compression'
 
 def new_url(module):
     """Return the URL for creating a resource"""

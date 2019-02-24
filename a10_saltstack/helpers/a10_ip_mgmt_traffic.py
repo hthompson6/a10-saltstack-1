@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["source_interface","traffic_type","uuid",]
 
-MODULE_NAME = mgmt-traffic
+MODULE_NAME = 'mgmt-traffic'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["status","uuid",]
 
-MODULE_NAME = clear-session-filter
+MODULE_NAME = 'clear-session-filter'
 
 def new_url(module):
     """Return the URL for creating a resource"""

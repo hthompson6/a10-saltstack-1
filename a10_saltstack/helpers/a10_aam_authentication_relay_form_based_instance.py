@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","request_uri_list","sampling_enable","uuid",]
 
-MODULE_NAME = instance
+MODULE_NAME = 'instance'
 
 def new_url(module):
     """Return the URL for creating a resource"""

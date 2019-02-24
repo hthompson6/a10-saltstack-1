@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["host","interval","monitor","uuid",]
 
-MODULE_NAME = tacacs-server
+MODULE_NAME = 'tacacs-server'
 
 def new_url(module):
     """Return the URL for creating a resource"""

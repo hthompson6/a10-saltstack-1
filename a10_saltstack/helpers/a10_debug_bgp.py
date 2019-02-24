@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","bfd","dampening","events","filters","fsm","nin","keepalives","nht","nsm","out","updates","uuid",]
 
-MODULE_NAME = bgp
+MODULE_NAME = 'bgp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

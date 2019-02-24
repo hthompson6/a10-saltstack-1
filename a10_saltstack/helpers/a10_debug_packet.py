@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","arp","count","detail","ethernet","icmp","icmpv6","interface","ip","ipv4ad","ipv6","ipv6ad","l3_protocol","l4_protocol","neighbor","port_range","tcp","udp","uuid",]
 
-MODULE_NAME = packet
+MODULE_NAME = 'packet'
 
 def new_url(module):
     """Return the URL for creating a resource"""

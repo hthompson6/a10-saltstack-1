@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["alive_if_active","del_session_on_server_down","disable","down","force_delete_timeout","force_delete_timeout_100ms","half_close_idle_timeout","half_open_idle_timeout","idle_timeout","initial_window_size","insert_client_ip","lan_fast_ack","logging","name","qos","reset_fwd","reset_rev","user_tag","uuid",]
 
-MODULE_NAME = tcp
+MODULE_NAME = 'tcp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["account","accounting_server","accounting_service_group","auth_sess_mode","cookie_domain","cookie_domain_group","cookie_max_age","forward_logout_disable","local_logging","log","logon","logout_idle_timeout","logout_url","max_session_time","modify_content_security_policy","name","redirect_hostname","relay","saml_idp","saml_sp","server","service_group","ntype","user_tag","uuid",]
 
-MODULE_NAME = template
+MODULE_NAME = 'template'
 
 def new_url(module):
     """Return the URL for creating a resource"""

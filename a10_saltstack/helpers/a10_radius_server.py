@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["default_privilege_read_write","host","uuid",]
 
-MODULE_NAME = radius-server
+MODULE_NAME = 'radius-server'
 
 def new_url(module):
     """Return the URL for creating a resource"""

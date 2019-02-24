@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["age","disable_clear_session","idle_timeout","immediate","name","qos","re_select_if_server_down","short","stateless_conn_timeout","user_tag","uuid",]
 
-MODULE_NAME = udp
+MODULE_NAME = 'udp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

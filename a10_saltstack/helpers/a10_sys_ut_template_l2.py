@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ethertype","mac_list","protocol","uuid","value","vlan",]
 
-MODULE_NAME = l2
+MODULE_NAME = 'l2'
 
 def new_url(module):
     """Return the URL for creating a resource"""

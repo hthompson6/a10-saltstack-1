@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["bw_list_id","bw_list_name","class_list","forward_policy","full_domain_tree","interval","name","over_limit","over_limit_lockup","over_limit_logging","over_limit_reset","overlap","sampling_enable","share","timeout","use_destination_ip","user_tag","uuid",]
 
-MODULE_NAME = policy
+MODULE_NAME = 'policy'
 
 def new_url(module):
     """Return the URL for creating a resource"""

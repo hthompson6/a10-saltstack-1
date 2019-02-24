@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["encrypted","oid_list","passwd","remote","user","user_tag","uuid",]
 
-MODULE_NAME = user
+MODULE_NAME = 'user'
 
 def new_url(module):
     """Return the URL for creating a resource"""

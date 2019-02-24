@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ip_cfg","ipv6_cfg","service_group","uuid",]
 
-MODULE_NAME = destination
+MODULE_NAME = 'destination'
 
 def new_url(module):
     """Return the URL for creating a resource"""

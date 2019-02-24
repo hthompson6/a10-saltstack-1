@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["alg_type","asc_key","encrypted","hex_encrypted","hex_key","key","key_type","uuid",]
 
-MODULE_NAME = auth-key
+MODULE_NAME = 'auth-key'
 
 def new_url(module):
     """Return the URL for creating a resource"""

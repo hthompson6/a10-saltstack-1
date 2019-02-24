@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["maxPktNum","rl_type","uuid",]
 
-MODULE_NAME = rate-limit
+MODULE_NAME = 'rate-limit'
 
 def new_url(module):
     """Return the URL for creating a resource"""

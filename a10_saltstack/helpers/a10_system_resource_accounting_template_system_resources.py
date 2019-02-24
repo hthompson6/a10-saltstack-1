@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["bw_limit_cfg","concurrent_session_limit_cfg","fwcps_limit_cfg","l4_session_limit_cfg","l4cps_limit_cfg","l7cps_limit_cfg","natcps_limit_cfg","ssl_throughput_limit_cfg","sslcps_limit_cfg","threshold","uuid",]
 
-MODULE_NAME = system-resources
+MODULE_NAME = 'system-resources'
 
 def new_url(module):
     """Return the URL for creating a resource"""

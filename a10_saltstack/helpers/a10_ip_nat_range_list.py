@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["global_netmaskv4","global_start_ipv4_addr","global_start_ipv6_addr","local_netmaskv4","local_start_ipv4_addr","local_start_ipv6_addr","name","uuid","v4_acl_id","v4_acl_name","v4_count","v4_vrid","v6_acl_name","v6_count","v6_vrid",]
 
-MODULE_NAME = range-list
+MODULE_NAME = 'range-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

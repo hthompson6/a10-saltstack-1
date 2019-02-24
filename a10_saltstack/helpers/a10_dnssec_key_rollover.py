@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dnssec_key_type","ds_ready_in_parent_zone","ksk_start","zone_name","zsk_start",]
 
-MODULE_NAME = key-rollover
+MODULE_NAME = 'key-rollover'
 
 def new_url(module):
     """Return the URL for creating a resource"""

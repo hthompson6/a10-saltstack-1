@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dump","export",]
 
-MODULE_NAME = cmcov
+MODULE_NAME = 'cmcov'
 
 def new_url(module):
     """Return the URL for creating a resource"""

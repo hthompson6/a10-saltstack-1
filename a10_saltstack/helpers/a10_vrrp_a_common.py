@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","arp_retry","dead_timer","device_id","disable_default_vrid","forward_l4_packet_on_standby","get_ready_time","hello_interval","hostid_append_to_vrid","inline_mode_cfg","preemption_delay","restart_time","set_id","track_event_delay","uuid",]
 
-MODULE_NAME = common
+MODULE_NAME = 'common'
 
 def new_url(module):
     """Return the URL for creating a resource"""

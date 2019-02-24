@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["host_ipv6","port","tcp","use_mgmt_port","uuid",]
 
-MODULE_NAME = ipv6addr
+MODULE_NAME = 'ipv6addr'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["icmp_lockup","icmp_lockup_period","icmp_normal_rate_limit","uuid",]
 
-MODULE_NAME = icmp-rate-limit
+MODULE_NAME = 'icmp-rate-limit'
 
 def new_url(module):
     """Return the URL for creating a resource"""

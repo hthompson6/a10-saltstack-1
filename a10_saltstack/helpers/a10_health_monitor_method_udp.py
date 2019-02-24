@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["force_up_with_single_healthcheck","udp","udp_port","uuid",]
 
-MODULE_NAME = udp
+MODULE_NAME = 'udp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

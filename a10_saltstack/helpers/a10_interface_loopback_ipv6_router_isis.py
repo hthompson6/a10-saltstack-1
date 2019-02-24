@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["tag","uuid",]
 
-MODULE_NAME = isis
+MODULE_NAME = 'isis'
 
 def new_url(module):
     """Return the URL for creating a resource"""

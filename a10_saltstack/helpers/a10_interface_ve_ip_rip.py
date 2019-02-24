@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["authentication","receive_cfg","receive_packet","send_cfg","send_packet","split_horizon_cfg","uuid",]
 
-MODULE_NAME = rip
+MODULE_NAME = 'rip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

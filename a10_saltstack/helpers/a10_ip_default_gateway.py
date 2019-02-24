@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["gateway_ip","uuid",]
 
-MODULE_NAME = default-gateway
+MODULE_NAME = 'default-gateway'
 
 def new_url(module):
     """Return the URL for creating a resource"""

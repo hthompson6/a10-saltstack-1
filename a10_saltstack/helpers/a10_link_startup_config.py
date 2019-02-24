@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all_partitions","default","file_name","primary","secondary",]
 
-MODULE_NAME = startup-config
+MODULE_NAME = 'startup-config'
 
 def new_url(module):
     """Return the URL for creating a resource"""

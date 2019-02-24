@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","bypass_ip_cfg","fail_close","include_protocol_in_uri","logging","min_payload_size","name","preview","server_ssl","service_group","service_url","source_ip","tcp_proxy","user_tag","uuid",]
 
-MODULE_NAME = respmod-icap
+MODULE_NAME = 'respmod-icap'
 
 def new_url(module):
     """Return the URL for creating a resource"""

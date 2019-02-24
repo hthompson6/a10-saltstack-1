@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["acl_v4_list","acl_v6_list","uuid",]
 
-MODULE_NAME = ping
+MODULE_NAME = 'ping'
 
 def new_url(module):
     """Return the URL for creating a resource"""

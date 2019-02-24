@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["enable_def_vlan_l2_forwarding","l3_vlan_fwd_disable","uuid",]
 
-MODULE_NAME = vlan-global
+MODULE_NAME = 'vlan-global'
 
 def new_url(module):
     """Return the URL for creating a resource"""

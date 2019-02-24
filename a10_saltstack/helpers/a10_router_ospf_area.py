@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["area_ipv4","area_num","auth_cfg","default_cost","filter_lists","nssa_cfg","range_list","shortcut","stub_cfg","uuid","virtual_link_list",]
 
-MODULE_NAME = area
+MODULE_NAME = 'area'
 
 def new_url(module):
     """Return the URL for creating a resource"""

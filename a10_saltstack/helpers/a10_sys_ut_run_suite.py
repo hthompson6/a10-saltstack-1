@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = []
 
-MODULE_NAME = run-suite
+MODULE_NAME = 'run-suite'
 
 def new_url(module):
     """Return the URL for creating a resource"""

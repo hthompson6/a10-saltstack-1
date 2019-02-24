@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["encrypted","kerberos_account","kerberos_kdc","kerberos_kdc_service_group","kerberos_realm","name","password","port","sampling_enable","secret_string","timeout","uuid",]
 
-MODULE_NAME = instance
+MODULE_NAME = 'instance'
 
 def new_url(module):
     """Return the URL for creating a resource"""

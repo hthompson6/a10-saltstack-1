@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["timezone_index_cfg",]
 
-MODULE_NAME = timezone
+MODULE_NAME = 'timezone'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,15 +17,15 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ack_seq_number","checksum","dest_port","dest_port_value","flags","nat_pool","options","seq_number","src_port","urgent","uuid","window",]
 
-MODULE_NAME = tcp
+MODULE_NAME = 'tcp'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_case_number}/action/{action_direction}/tcp"
+    url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_number}/action/{action_direction}/tcp"
     f_dict = {}
     f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["case_case_number"] = module.params["case_case_number"]
+    f_dict["case_number"] = module.params["case_number"]
     f_dict["name"] = module.params["name"]
     f_dict["state_name"] = module.params["state_name"]
 
@@ -35,10 +35,10 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_case_number}/action/{action_direction}/tcp"
+    url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_number}/action/{action_direction}/tcp"
     f_dict = {}
     f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["case_case_number"] = module.params["case_case_number"]
+    f_dict["case_number"] = module.params["case_number"]
     f_dict["name"] = module.params["name"]
     f_dict["state_name"] = module.params["state_name"]
 

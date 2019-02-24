@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ipv4_netmask","name","rule_ipv4_prefix","rule_ipv6_prefix","user_tag","uuid",]
 
-MODULE_NAME = prefix-rule
+MODULE_NAME = 'prefix-rule'
 
 def new_url(module):
     """Return the URL for creating a resource"""

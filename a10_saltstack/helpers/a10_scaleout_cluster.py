@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cluster_devices","cluster_id","device_groups","follow_vcs","local_device","service_config","uuid",]
 
-MODULE_NAME = cluster
+MODULE_NAME = 'cluster'
 
 def new_url(module):
     """Return the URL for creating a resource"""

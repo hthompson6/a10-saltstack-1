@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dns_server","name","user_tag","uuid",]
 
-MODULE_NAME = dynamic-service
+MODULE_NAME = 'dynamic-service'
 
 def new_url(module):
     """Return the URL for creating a resource"""

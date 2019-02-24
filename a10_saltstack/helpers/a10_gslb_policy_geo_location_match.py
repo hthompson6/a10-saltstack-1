@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["geo_type_overlap","match_first","overlap","uuid",]
 
-MODULE_NAME = geo-location-match
+MODULE_NAME = 'geo-location-match'
 
 def new_url(module):
     """Return the URL for creating a resource"""

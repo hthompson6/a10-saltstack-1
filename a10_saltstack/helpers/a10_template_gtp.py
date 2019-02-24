@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["gtp_filter_list","gtp_v2","log","mandatory_ie_filtering","maximum_message_length","name","protocol_anomaly_filtering","tunnel_timeout","user_tag","uuid",]
 
-MODULE_NAME = gtp
+MODULE_NAME = 'gtp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

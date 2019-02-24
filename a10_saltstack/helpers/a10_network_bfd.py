@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["echo","enable","interval_cfg","uuid",]
 
-MODULE_NAME = bfd
+MODULE_NAME = 'bfd'
 
 def new_url(module):
     """Return the URL for creating a resource"""

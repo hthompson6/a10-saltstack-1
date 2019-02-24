@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","date","day","expedite","file_handle","month","period","stats_data","week",]
 
-MODULE_NAME = log-backup
+MODULE_NAME = 'log-backup'
 
 def new_url(module):
     """Return the URL for creating a resource"""

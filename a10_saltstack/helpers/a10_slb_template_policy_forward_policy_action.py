@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action1","drop_message","drop_redirect_url","fake_sg","fall_back","fall_back_snat","forward_snat","http_status_code","log","name","real_sg","sampling_enable","user_tag","uuid",]
 
-MODULE_NAME = action
+MODULE_NAME = 'action'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["access_list","acl_id","class_list","inside","outside","uuid",]
 
-MODULE_NAME = stateful-firewall
+MODULE_NAME = 'stateful-firewall'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["always","metric","metric_type","originate","route_map","uuid",]
 
-MODULE_NAME = default-information
+MODULE_NAME = 'default-information'
 
 def new_url(module):
     """Return the URL for creating a resource"""

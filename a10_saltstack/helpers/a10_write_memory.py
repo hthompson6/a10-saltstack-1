@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cf","destination","partition","profile","specified_partition",]
 
-MODULE_NAME = memory
+MODULE_NAME = 'memory'
 
 def new_url(module):
     """Return the URL for creating a resource"""

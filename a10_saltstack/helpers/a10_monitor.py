@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["buffer_drop","buffer_usage","conn_type0","conn_type1","conn_type2","conn_type3","conn_type4","ctrl_cpu","data_cpu","disk","memory","smp_type0","smp_type1","smp_type2","smp_type3","smp_type4","uuid","warn_temp",]
 
-MODULE_NAME = monitor
+MODULE_NAME = 'monitor'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["anomaly_detection","granularity","monitor_list","monitored_entity","reporting","uuid",]
 
-MODULE_NAME = visibility
+MODULE_NAME = 'visibility'
 
 def new_url(module):
     """Return the URL for creating a resource"""

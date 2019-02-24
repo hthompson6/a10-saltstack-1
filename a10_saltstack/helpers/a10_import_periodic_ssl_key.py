@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["period","remote_file","ssl_key","use_mgmt_port","uuid",]
 
-MODULE_NAME = ssl-key
+MODULE_NAME = 'ssl-key'
 
 def new_url(module):
     """Return the URL for creating a resource"""

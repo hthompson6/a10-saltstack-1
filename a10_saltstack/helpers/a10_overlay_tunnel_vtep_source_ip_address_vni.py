@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["gateway","lif","partition","segment","uuid",]
 
-MODULE_NAME = vni
+MODULE_NAME = 'vni'
 
 def new_url(module):
     """Return the URL for creating a resource"""

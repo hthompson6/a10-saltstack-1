@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["status","uuid",]
 
-MODULE_NAME = tcp-rst-close-immediate
+MODULE_NAME = 'tcp-rst-close-immediate'
 
 def new_url(module):
     """Return the URL for creating a resource"""

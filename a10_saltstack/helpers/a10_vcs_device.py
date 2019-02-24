@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["affinity_vrrp_a_vrid","device","enable","ethernet_cfg","management","priority","trunk_cfg","unicast_port","user_tag","uuid","ve_cfg",]
 
-MODULE_NAME = device
+MODULE_NAME = 'device'
 
 def new_url(module):
     """Return the URL for creating a resource"""

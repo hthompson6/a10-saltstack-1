@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["disable","interval","priority_partition_list","uuid",]
 
-MODULE_NAME = techreport
+MODULE_NAME = 'techreport'
 
 def new_url(module):
     """Return the URL for creating a resource"""

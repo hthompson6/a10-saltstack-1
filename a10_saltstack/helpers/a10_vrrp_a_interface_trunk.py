@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["both","no_heartbeat","router_interface","server_interface","trunk_val","user_tag","uuid","vlan",]
 
-MODULE_NAME = trunk
+MODULE_NAME = 'trunk'
 
 def new_url(module):
     """Return the URL for creating a resource"""

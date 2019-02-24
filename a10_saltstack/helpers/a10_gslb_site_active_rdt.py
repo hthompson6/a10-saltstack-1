@@ -17,14 +17,14 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["aging_time","bind_geoloc","ignore_count","limit","mask","overlap","range_factor","smooth_factor","uuid",]
 
-MODULE_NAME = active-rdt
+MODULE_NAME = 'active-rdt'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/gslb/site/{site_site_name}/active-rdt"
+    url_base = "/axapi/v3/gslb/site/{site_name}/active-rdt"
     f_dict = {}
-    f_dict["site_site_name"] = module.params["site_site_name"]
+    f_dict["site_name"] = module.params["site_name"]
 
     return url_base.format(**f_dict)
 
@@ -32,8 +32,8 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/gslb/site/{site_site_name}/active-rdt"
+    url_base = "/axapi/v3/gslb/site/{site_name}/active-rdt"
     f_dict = {}
-    f_dict["site_site_name"] = module.params["site_site_name"]
+    f_dict["site_name"] = module.params["site_name"]
 
     return url_base.format(**f_dict)

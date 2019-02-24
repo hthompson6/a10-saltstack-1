@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["test","uuid","value",]
 
-MODULE_NAME = locale
+MODULE_NAME = 'locale'
 
 def new_url(module):
     """Return the URL for creating a resource"""

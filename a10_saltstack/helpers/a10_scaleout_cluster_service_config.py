@@ -17,14 +17,14 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["template_list","uuid",]
 
-MODULE_NAME = service-config
+MODULE_NAME = 'service-config'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/scaleout/cluster/{cluster_cluster_id}/service-config"
+    url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/service-config"
     f_dict = {}
-    f_dict["cluster_cluster_id"] = module.params["cluster_cluster_id"]
+    f_dict["cluster_id"] = module.params["cluster_id"]
 
     return url_base.format(**f_dict)
 
@@ -32,8 +32,8 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/scaleout/cluster/{cluster_cluster_id}/service-config"
+    url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/service-config"
     f_dict = {}
-    f_dict["cluster_cluster_id"] = module.params["cluster_cluster_id"]
+    f_dict["cluster_id"] = module.params["cluster_id"]
 
     return url_base.format(**f_dict)

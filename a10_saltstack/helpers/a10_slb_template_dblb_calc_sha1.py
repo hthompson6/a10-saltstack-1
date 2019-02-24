@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["sha1_value",]
 
-MODULE_NAME = calc-sha1
+MODULE_NAME = 'calc-sha1'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["at","cancel","day_of_month","day_of_month_2","nin","month","month_2","reason","reason_2","reason_3","time",]
 
-MODULE_NAME = shutdown
+MODULE_NAME = 'shutdown'
 
 def new_url(module):
     """Return the URL for creating a resource"""

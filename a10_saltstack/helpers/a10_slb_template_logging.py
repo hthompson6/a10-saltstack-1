@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["auto","format","keep_end","keep_start","local_logging","mask","name","pcre_mask","pool","service_group","tcp_proxy","user_tag","uuid",]
 
-MODULE_NAME = logging
+MODULE_NAME = 'logging'
 
 def new_url(module):
     """Return the URL for creating a resource"""

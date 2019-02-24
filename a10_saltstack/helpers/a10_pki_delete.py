@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ca","cert_name","crl","csr","private_key",]
 
-MODULE_NAME = delete
+MODULE_NAME = 'delete'
 
 def new_url(module):
     """Return the URL for creating a resource"""

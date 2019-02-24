@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ip_v4_addr","ip_v6_addr","uuid",]
 
-MODULE_NAME = secondary
+MODULE_NAME = 'secondary'
 
 def new_url(module):
     """Return the URL for creating a resource"""

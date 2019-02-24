@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["msl","name","pool","uuid",]
 
-MODULE_NAME = acl-name-list
+MODULE_NAME = 'acl-name-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dont_honor_conn_rules","name","timeout","user_tag","uuid",]
 
-MODULE_NAME = ssl-sid
+MODULE_NAME = 'ssl-sid'
 
 def new_url(module):
     """Return the URL for creating a resource"""

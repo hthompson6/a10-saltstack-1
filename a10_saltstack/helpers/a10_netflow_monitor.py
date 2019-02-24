@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["destination","disable","disable_log_by_destination","flow_timeout","name","protocol","record","resend_template","sample","sampling_enable","source_address","source_ip_use_mgmt","user_tag","uuid",]
 
-MODULE_NAME = monitor
+MODULE_NAME = 'monitor'
 
 def new_url(module):
     """Return the URL for creating a resource"""

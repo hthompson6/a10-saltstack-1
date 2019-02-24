@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["core_level","uuid",]
 
-MODULE_NAME = enable-core
+MODULE_NAME = 'enable-core'
 
 def new_url(module):
     """Return the URL for creating a resource"""

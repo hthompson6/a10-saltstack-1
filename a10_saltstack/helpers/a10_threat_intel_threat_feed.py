@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["domain","enable","encrypted","log_level","port","proxy_auth_type","proxy_host","proxy_password","proxy_port","proxy_username","rtu_update_disable","secret_string","server","server_timeout","ntype","update_interval","use_mgmt_port","user_tag","uuid",]
 
-MODULE_NAME = threat-feed
+MODULE_NAME = 'threat-feed'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["insert_client_ip","logging","name","tag_switching","user_tag","uuid",]
 
-MODULE_NAME = fix
+MODULE_NAME = 'fix'
 
 def new_url(module):
     """Return the URL for creating a resource"""

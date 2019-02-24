@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["rules_list","standard","uuid",]
 
-MODULE_NAME = standard
+MODULE_NAME = 'standard'
 
 def new_url(module):
     """Return the URL for creating a resource"""

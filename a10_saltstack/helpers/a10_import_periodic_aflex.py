@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["aflex","period","remote_file","use_mgmt_port","uuid",]
 
-MODULE_NAME = aflex
+MODULE_NAME = 'aflex'
 
 def new_url(module):
     """Return the URL for creating a resource"""

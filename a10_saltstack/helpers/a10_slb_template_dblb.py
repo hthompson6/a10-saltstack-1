@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["calc_sha1","class_list","name","server_version","user_tag","uuid",]
 
-MODULE_NAME = dblb
+MODULE_NAME = 'dblb'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["restart_learning_on_anomaly","sensitivity","uuid",]
 
-MODULE_NAME = anomaly-detection
+MODULE_NAME = 'anomaly-detection'
 
 def new_url(module):
     """Return the URL for creating a resource"""

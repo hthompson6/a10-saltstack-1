@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["access_list","action","bfd","ddos","icmp_rate_limit","icmpv6_rate_limit","ifnum","ip","ipv6","isis","l3_vlan_fwd_disable","lw_4o6","map","mtu","name","nptv6","sampling_enable","trap_source","user_tag","uuid",]
 
-MODULE_NAME = ve
+MODULE_NAME = 've'
 
 def new_url(module):
     """Return the URL for creating a resource"""

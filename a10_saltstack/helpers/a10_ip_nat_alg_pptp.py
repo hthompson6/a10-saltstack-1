@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["pptp","sampling_enable","uuid",]
 
-MODULE_NAME = pptp
+MODULE_NAME = 'pptp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

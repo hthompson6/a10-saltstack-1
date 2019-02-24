@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ipv4_addr","ipv6_addr","uuid",]
 
-MODULE_NAME = health-check-gateway
+MODULE_NAME = 'health-check-gateway'
 
 def new_url(module):
     """Return the URL for creating a resource"""

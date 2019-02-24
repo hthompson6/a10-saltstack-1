@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cipher_cfg","name","user_tag","uuid",]
 
-MODULE_NAME = cipher
+MODULE_NAME = 'cipher'
 
 def new_url(module):
     """Return the URL for creating a resource"""

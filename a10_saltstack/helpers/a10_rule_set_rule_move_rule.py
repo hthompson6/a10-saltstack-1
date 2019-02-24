@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["location","target_rule",]
 
-MODULE_NAME = move-rule
+MODULE_NAME = 'move-rule'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["auto_map_learn","auto_map_primary","auto_map_smart","config_anywhere","config_merge","config_save","data_interface","dns_discover","enable","learn","mgmt_interface","name","primary_list","priority","standalone","suffix","user_tag","uuid",]
 
-MODULE_NAME = group
+MODULE_NAME = 'group'
 
 def new_url(module):
     """Return the URL for creating a resource"""

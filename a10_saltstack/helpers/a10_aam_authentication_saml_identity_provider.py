@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["metadata","name","reload_interval","reload_metadata","user_tag","uuid",]
 
-MODULE_NAME = identity-provider
+MODULE_NAME = 'identity-provider'
 
 def new_url(module):
     """Return the URL for creating a resource"""

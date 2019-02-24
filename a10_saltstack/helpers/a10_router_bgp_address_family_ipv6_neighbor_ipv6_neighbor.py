@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["activate","allowas_in","allowas_in_count","default_originate","distribute_lists","inbound","maximum_prefix","maximum_prefix_thres","neighbor_filter_lists","neighbor_ipv6","neighbor_prefix_lists","neighbor_route_map_lists","next_hop_self","peer_group_name","prefix_list_direction","remove_private_as","route_map","send_community_val","unsuppress_map","uuid","weight",]
 
-MODULE_NAME = ipv6-neighbor
+MODULE_NAME = 'ipv6-neighbor'
 
 def new_url(module):
     """Return the URL for creating a resource"""

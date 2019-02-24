@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dn","encrypted","enroll","interval","key_length","log_level","max_polltime","method","minute","name","password","renew_before","renew_before_type","renew_before_value","renew_every","renew_every_type","renew_every_value","secret_string","subject_alternate_name","url","user_tag","uuid",]
 
-MODULE_NAME = scep-cert
+MODULE_NAME = 'scep-cert'
 
 def new_url(module):
     """Return the URL for creating a resource"""

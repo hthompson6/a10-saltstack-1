@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dhcp","static",]
 
-MODULE_NAME = ipsrc
+MODULE_NAME = 'ipsrc'
 
 def new_url(module):
     """Return the URL for creating a resource"""

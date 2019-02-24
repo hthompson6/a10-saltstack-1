@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cf_cfg","hd_cfg",]
 
-MODULE_NAME = bootimage
+MODULE_NAME = 'bootimage'
 
 def new_url(module):
     """Return the URL for creating a resource"""

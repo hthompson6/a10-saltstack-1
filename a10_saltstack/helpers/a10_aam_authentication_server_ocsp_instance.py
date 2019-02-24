@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["health_check","health_check_disable","health_check_string","name","port_health_check","port_health_check_disable","responder_ca","responder_cert","sampling_enable","url","uuid",]
 
-MODULE_NAME = instance
+MODULE_NAME = 'instance'
 
 def new_url(module):
     """Return the URL for creating a resource"""

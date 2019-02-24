@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["trunk_port_threshold","uuid",]
 
-MODULE_NAME = network
+MODULE_NAME = 'network'
 
 def new_url(module):
     """Return the URL for creating a resource"""

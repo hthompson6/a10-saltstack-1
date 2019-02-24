@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["adfs_ws_federation","artifact_resolution_service","assertion_consuming_service","certificate","entity_id","metadata_export_service","name","require_assertion_signed","saml_request_signed","sampling_enable","service_url","signature_algorithm","single_logout_service","soap_tls_certificate_validate","user_tag","uuid",]
 
-MODULE_NAME = service-provider
+MODULE_NAME = 'service-provider'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["bad_downloads_action","bad_uploads_action","downloads_bad_log","downloads_external_inspect","downloads_external_suspect_log","downloads_good_log","downloads_suspect_log","good_downloads_action","good_uploads_action","inspect","name","suspect_downloads_action","suspect_uploads_action","uploads_bad_log","uploads_external_inspect","uploads_external_suspect_log","uploads_good_log","uploads_suspect_log","user_tag","uuid",]
 
-MODULE_NAME = template
+MODULE_NAME = 'template'
 
 def new_url(module):
     """Return the URL for creating a resource"""

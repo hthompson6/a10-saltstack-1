@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","linkdown","linkup","uuid",]
 
-MODULE_NAME = snmp
+MODULE_NAME = 'snmp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

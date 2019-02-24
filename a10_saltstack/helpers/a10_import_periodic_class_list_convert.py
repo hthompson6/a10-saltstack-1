@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["class_list_convert","class_list_type","period","remote_file","use_mgmt_port","uuid",]
 
-MODULE_NAME = class-list-convert
+MODULE_NAME = 'class-list-convert'
 
 def new_url(module):
     """Return the URL for creating a resource"""

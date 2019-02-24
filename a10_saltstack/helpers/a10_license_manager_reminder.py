@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["reminder_value","uuid",]
 
-MODULE_NAME = reminder
+MODULE_NAME = 'reminder'
 
 def new_url(module):
     """Return the URL for creating a resource"""

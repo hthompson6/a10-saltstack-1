@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["levelname","uuid",]
 
-MODULE_NAME = single-priority
+MODULE_NAME = 'single-priority'
 
 def new_url(module):
     """Return the URL for creating a resource"""

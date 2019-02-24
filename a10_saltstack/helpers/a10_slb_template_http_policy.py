@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cookie_name","geo_location_match","http_policy_match","name","user_tag","uuid",]
 
-MODULE_NAME = http-policy
+MODULE_NAME = 'http-policy'
 
 def new_url(module):
     """Return the URL for creating a resource"""

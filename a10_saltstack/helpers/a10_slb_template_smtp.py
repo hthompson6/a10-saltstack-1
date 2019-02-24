@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["client_domain_switching","client_starttls_type","command_disable","name","server_domain","server_starttls_type","service_ready_msg","user_tag","uuid",]
 
-MODULE_NAME = smtp
+MODULE_NAME = 'smtp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

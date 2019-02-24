@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["sampling_enable","status","uuid",]
 
-MODULE_NAME = tcp-window-check
+MODULE_NAME = 'tcp-window-check'
 
 def new_url(module):
     """Return the URL for creating a resource"""

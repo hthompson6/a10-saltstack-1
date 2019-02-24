@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["destination","match_any","match_authorize_policy","match_class_list","name","priority","sampling_enable","user_tag","uuid",]
 
-MODULE_NAME = source
+MODULE_NAME = 'source'
 
 def new_url(module):
     """Return the URL for creating a resource"""

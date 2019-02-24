@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["fqdn_name","host","member_priority","member_state","member_stats_data_disable","member_template","name","port","sampling_enable","server_ipv6_addr","user_tag","uuid",]
 
-MODULE_NAME = member
+MODULE_NAME = 'member'
 
 def new_url(module):
     """Return the URL for creating a resource"""

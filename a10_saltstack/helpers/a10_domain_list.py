@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["domain_name_list","name","user_tag","uuid",]
 
-MODULE_NAME = domain-list
+MODULE_NAME = 'domain-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

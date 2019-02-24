@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["nat_quota_exceeded","nat_resource_exhausted","sampling_enable","uuid",]
 
-MODULE_NAME = logging
+MODULE_NAME = 'logging'
 
 def new_url(module):
     """Return the URL for creating a resource"""

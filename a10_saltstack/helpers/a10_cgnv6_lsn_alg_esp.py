@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["esp_value","sampling_enable","uuid",]
 
-MODULE_NAME = esp
+MODULE_NAME = 'esp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

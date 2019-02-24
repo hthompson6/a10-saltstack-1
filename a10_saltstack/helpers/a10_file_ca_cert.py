@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","certificate_type","dst_file","file","file_handle","pfx_password","size",]
 
-MODULE_NAME = ca-cert
+MODULE_NAME = 'ca-cert'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["sampling_enable",]
 
-MODULE_NAME = performance
+MODULE_NAME = 'performance'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["mode","uuid",]
 
-MODULE_NAME = trunk-hw-hash
+MODULE_NAME = 'trunk-hw-hash'
 
 def new_url(module):
     """Return the URL for creating a resource"""

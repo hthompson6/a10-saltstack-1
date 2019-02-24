@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["secret_encrypted","tacplus","tacplus_encrypted","tacplus_password","tacplus_password_string","tacplus_port","tacplus_secret","tacplus_secret_string","tacplus_type","tacplus_username","uuid",]
 
-MODULE_NAME = tacplus
+MODULE_NAME = 'tacplus'
 
 def new_url(module):
     """Return the URL for creating a resource"""

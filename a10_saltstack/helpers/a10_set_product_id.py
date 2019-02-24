@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["id",]
 
-MODULE_NAME = set-product-id
+MODULE_NAME = 'set-product-id'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","all_partitions","vrid",]
 
-MODULE_NAME = force-self-standby
+MODULE_NAME = 'force-self-standby'
 
 def new_url(module):
     """Return the URL for creating a resource"""

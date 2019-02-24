@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all_categories","botnets","dos_attacks","mobile_threats","name","phishing","proxy","reputation","sampling_enable","scanners","spam_sources","tor_proxy","ntype","user_tag","uuid","web_attacks","windows_exploits",]
 
-MODULE_NAME = threat-list
+MODULE_NAME = 'threat-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

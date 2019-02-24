@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["address","all_partitions","auto_authentication","partition_name","private_key","pwd","pwd_enc","shared","ntype","usr",]
 
-MODULE_NAME = sync
+MODULE_NAME = 'sync'
 
 def new_url(module):
     """Return the URL for creating a resource"""

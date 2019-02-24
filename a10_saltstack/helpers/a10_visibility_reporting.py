@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["notification_template_list","reporting_db","sampling_enable","session_logging","uuid",]
 
-MODULE_NAME = reporting
+MODULE_NAME = 'reporting'
 
 def new_url(module):
     """Return the URL for creating a resource"""

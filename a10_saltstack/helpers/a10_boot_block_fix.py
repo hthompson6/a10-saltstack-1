@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["cf","hd",]
 
-MODULE_NAME = boot-block-fix
+MODULE_NAME = 'boot-block-fix'
 
 def new_url(module):
     """Return the URL for creating a resource"""

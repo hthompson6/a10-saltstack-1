@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","l1","l2","l3","l4","uuid",]
 
-MODULE_NAME = ignore-validation
+MODULE_NAME = 'ignore-validation'
 
 def new_url(module):
     """Return the URL for creating a resource"""

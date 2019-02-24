@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["auto_switch",]
 
-MODULE_NAME = reset
+MODULE_NAME = 'reset'
 
 def new_url(module):
     """Return the URL for creating a resource"""

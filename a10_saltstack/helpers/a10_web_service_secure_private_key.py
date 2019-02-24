@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["file_url","load","use_mgmt_port",]
 
-MODULE_NAME = private-key
+MODULE_NAME = 'private-key'
 
 def new_url(module):
     """Return the URL for creating a resource"""

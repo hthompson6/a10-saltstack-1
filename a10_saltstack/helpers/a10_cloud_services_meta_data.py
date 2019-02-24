@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","prevent_admin_passwd","prevent_admin_ssh_key","prevent_autofill","prevent_blob","prevent_cloud_service","prevent_license","prevent_user_ops","prevent_webservice","provider","uuid",]
 
-MODULE_NAME = meta-data
+MODULE_NAME = 'meta-data'
 
 def new_url(module):
     """Return the URL for creating a resource"""

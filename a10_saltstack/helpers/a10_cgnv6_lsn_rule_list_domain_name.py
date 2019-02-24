@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name_domain","rule_cfg","sampling_enable","user_tag","uuid",]
 
-MODULE_NAME = domain-name
+MODULE_NAME = 'domain-name'
 
 def new_url(module):
     """Return the URL for creating a resource"""

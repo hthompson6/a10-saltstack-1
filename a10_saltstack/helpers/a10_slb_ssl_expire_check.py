@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["before","exception","expire_address1","interval_days","ssl_expire_email_address","uuid",]
 
-MODULE_NAME = ssl-expire-check
+MODULE_NAME = 'ssl-expire-check'
 
 def new_url(module):
     """Return the URL for creating a resource"""

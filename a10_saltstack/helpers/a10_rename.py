@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["instance_name","new_instance_name","object",]
 
-MODULE_NAME = rename
+MODULE_NAME = 'rename'
 
 def new_url(module):
     """Return the URL for creating a resource"""

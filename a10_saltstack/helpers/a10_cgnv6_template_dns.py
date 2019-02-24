@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["class_list","default_policy","disable_dns_template","dns64","drop","forward","max_cache_size","name","period","user_tag","uuid",]
 
-MODULE_NAME = dns
+MODULE_NAME = 'dns'
 
 def new_url(module):
     """Return the URL for creating a resource"""

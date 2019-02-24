@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["port_end","port_start","tunnel_endpoint_address",]
 
-MODULE_NAME = port-range
+MODULE_NAME = 'port-range'
 
 def new_url(module):
     """Return the URL for creating a resource"""

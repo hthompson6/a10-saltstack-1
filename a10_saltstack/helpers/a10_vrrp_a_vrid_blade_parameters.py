@@ -17,14 +17,14 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["fail_over_policy_template","priority","tracking_options","uuid",]
 
-MODULE_NAME = blade-parameters
+MODULE_NAME = 'blade-parameters'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/vrrp-a/vrid/{vrid_vrid_val}/blade-parameters"
+    url_base = "/axapi/v3/vrrp-a/vrid/{vrid_val}/blade-parameters"
     f_dict = {}
-    f_dict["vrid_vrid_val"] = module.params["vrid_vrid_val"]
+    f_dict["vrid_val"] = module.params["vrid_val"]
 
     return url_base.format(**f_dict)
 
@@ -32,8 +32,8 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/vrrp-a/vrid/{vrid_vrid_val}/blade-parameters"
+    url_base = "/axapi/v3/vrrp-a/vrid/{vrid_val}/blade-parameters"
     f_dict = {}
-    f_dict["vrid_vrid_val"] = module.params["vrid_vrid_val"]
+    f_dict["vrid_val"] = module.params["vrid_val"]
 
     return url_base.format(**f_dict)

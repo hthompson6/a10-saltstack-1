@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["backdoor","comm_value","description","network_ipv6","route_map","uuid",]
 
-MODULE_NAME = ipv6-network
+MODULE_NAME = 'ipv6-network'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["acs_continuous_fail_threshold","acs_missing_period","acs_missing_threshold","status","uuid",]
 
-MODULE_NAME = metadata-monitor
+MODULE_NAME = 'metadata-monitor'
 
 def new_url(module):
     """Return the URL for creating a resource"""

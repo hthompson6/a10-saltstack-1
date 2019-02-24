@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","override_nat_aging","session_aging","uuid",]
 
-MODULE_NAME = active-rule-set
+MODULE_NAME = 'active-rule-set'
 
 def new_url(module):
     """Return the URL for creating a resource"""

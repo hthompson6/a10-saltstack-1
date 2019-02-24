@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["Device","file_url","image","local","reboot_after_upgrade","source_ip_address","staggered_upgrade_mode","use_mgmt_port",]
 
-MODULE_NAME = hd
+MODULE_NAME = 'hd'
 
 def new_url(module):
     """Return the URL for creating a resource"""

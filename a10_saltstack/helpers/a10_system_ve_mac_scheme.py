@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["uuid","ve_mac_scheme_val",]
 
-MODULE_NAME = ve-mac-scheme
+MODULE_NAME = 've-mac-scheme'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["auth_method","dh_group","dpd","enc_cfg","ike_version","key","key_passphrase","key_passphrase_encrypted","lifetime","local_address","local_cert","local_id","mode","name","nat_traversal","preshare_key_encrypted","preshare_key_value","remote_address","remote_ca_cert","remote_id","sampling_enable","user_tag","uuid","vrid",]
 
-MODULE_NAME = ike-gateway
+MODULE_NAME = 'ike-gateway'
 
 def new_url(module):
     """Return the URL for creating a resource"""

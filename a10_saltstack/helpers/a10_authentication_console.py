@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["type_cfg","uuid",]
 
-MODULE_NAME = console
+MODULE_NAME = 'console'
 
 def new_url(module):
     """Return the URL for creating a resource"""

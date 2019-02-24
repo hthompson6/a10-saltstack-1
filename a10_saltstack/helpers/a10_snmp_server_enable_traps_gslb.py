@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","group","service_ip","site","uuid","zone",]
 
-MODULE_NAME = gslb
+MODULE_NAME = 'gslb'
 
 def new_url(module):
     """Return the URL for creating a resource"""

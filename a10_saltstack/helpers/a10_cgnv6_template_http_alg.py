@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["encrypted","header_name_client_ip","header_name_msisdn","include_tunnel_ip","method","name","radius_sg","request_insert_client_ip","request_insert_msisdn","retry","retry_svr_num","secret_string","timeout","user_tag","uuid",]
 
-MODULE_NAME = http-alg
+MODULE_NAME = 'http-alg'
 
 def new_url(module):
     """Return the URL for creating a resource"""

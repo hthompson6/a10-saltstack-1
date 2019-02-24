@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["description","rules","svc_name","user_tag","uuid",]
 
-MODULE_NAME = service
+MODULE_NAME = 'service'
 
 def new_url(module):
     """Return the URL for creating a resource"""

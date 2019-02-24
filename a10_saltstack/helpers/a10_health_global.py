@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["check_rate","disable_auto_adjust","external_rate","interval","multi_process","per","retry","timeout","up_retry","uuid",]
 
-MODULE_NAME = global
+MODULE_NAME = 'global'
 
 def new_url(module):
     """Return the URL for creating a resource"""

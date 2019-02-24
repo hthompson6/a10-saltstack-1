@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["expect_response_code","register","sip","sip_port","sip_tcp","uuid",]
 
-MODULE_NAME = sip
+MODULE_NAME = 'sip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

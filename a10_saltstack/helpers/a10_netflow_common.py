@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["max_packet_queue_time","reset_time_on_flow_record","uuid",]
 
-MODULE_NAME = common
+MODULE_NAME = 'common'
 
 def new_url(module):
     """Return the URL for creating a resource"""

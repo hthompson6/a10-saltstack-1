@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","tunnel_address_list","user_tag",]
 
-MODULE_NAME = binding-table
+MODULE_NAME = 'binding-table'
 
 def new_url(module):
     """Return the URL for creating a resource"""

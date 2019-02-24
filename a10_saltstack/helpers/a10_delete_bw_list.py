@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["file_name",]
 
-MODULE_NAME = bw-list
+MODULE_NAME = 'bw-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["authentication_cfg","authentication_key","bfd_cfg","cost","database_filter_cfg","dead_interval","disable","hello_interval","message_digest_cfg","mtu","mtu_ignore","priority","retransmit_interval","transmit_delay","uuid",]
 
-MODULE_NAME = ospf-global
+MODULE_NAME = 'ospf-global'
 
 def new_url(module):
     """Return the URL for creating a resource"""

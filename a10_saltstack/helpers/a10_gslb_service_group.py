@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dependency_site","disable","disable_site_list","member","persistent_aging_time","persistent_ipv6_mask","persistent_mask","persistent_site","service_group_name","user_tag","uuid",]
 
-MODULE_NAME = service-group
+MODULE_NAME = 'service-group'
 
 def new_url(module):
     """Return the URL for creating a resource"""

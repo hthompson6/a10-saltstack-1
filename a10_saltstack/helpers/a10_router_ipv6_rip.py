@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["aggregate_address_cfg","cisco_metric_behavior","default_information","default_metric","distribute_list","offset_list","passive_interface_list","recv_buffer_size","redistribute","ripng_neighbor","route_cfg","route_map","timers","uuid",]
 
-MODULE_NAME = rip
+MODULE_NAME = 'rip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

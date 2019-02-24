@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action",]
 
-MODULE_NAME = privileged
+MODULE_NAME = 'privileged'
 
 def new_url(module):
     """Return the URL for creating a resource"""

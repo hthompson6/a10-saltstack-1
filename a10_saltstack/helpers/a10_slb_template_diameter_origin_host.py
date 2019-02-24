@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["origin_host_name","uuid",]
 
-MODULE_NAME = origin-host
+MODULE_NAME = 'origin-host'
 
 def new_url(module):
     """Return the URL for creating a resource"""

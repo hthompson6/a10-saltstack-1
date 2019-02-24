@@ -17,15 +17,15 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["as_path","community","extcommunity","group","interface","ip","ipv6","local_preference","metric","origin","route_type","tag","uuid",]
 
-MODULE_NAME = match
+MODULE_NAME = 'match'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/route-map/{route_map_tag}+{{tag}_action}+{{action}_sequence}/match"
+    url_base = "/axapi/v3/route-map/{route_map_tag}+{action}+{sequence}/match"
     f_dict = {}
-    f_dict["action_sequence"] = module.params["action_sequence"]
-    f_dict["tag_action"] = module.params["tag_action"]
+    f_dict["sequence"] = module.params["sequence"]
+    f_dict["action"] = module.params["action"]
     f_dict["route_map_tag"] = module.params["route_map_tag"]
 
     return url_base.format(**f_dict)
@@ -34,10 +34,10 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/route-map/{route_map_tag}+{{tag}_action}+{{action}_sequence}/match"
+    url_base = "/axapi/v3/route-map/{route_map_tag}+{action}+{sequence}/match"
     f_dict = {}
-    f_dict["action_sequence"] = module.params["action_sequence"]
-    f_dict["tag_action"] = module.params["tag_action"]
+    f_dict["sequence"] = module.params["sequence"]
+    f_dict["action"] = module.params["action"]
     f_dict["route_map_tag"] = module.params["route_map_tag"]
 
     return url_base.format(**f_dict)

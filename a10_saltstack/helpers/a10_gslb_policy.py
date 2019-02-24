@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["active_rdt","active_servers_enable","active_servers_fail_break","admin_ip_enable","admin_ip_top_only","admin_preference","alias_admin_preference","amount_first","auto_map","bw_cost_enable","bw_cost_fail_break","capacity","connection_load","dns","edns","geo_location_list","geo_location_match","geographic","health_check","health_check_preference_enable","health_preference_top","ip_list","least_response","metric_fail_break","metric_force_check","metric_order","metric_type","name","num_session_enable","num_session_tolerance","ordered_ip_top_only","round_robin","user_tag","uuid","weighted_alias","weighted_ip_enable","weighted_ip_total_hits","weighted_site_enable","weighted_site_total_hits",]
 
-MODULE_NAME = policy
+MODULE_NAME = 'policy'
 
 def new_url(module):
     """Return the URL for creating a resource"""

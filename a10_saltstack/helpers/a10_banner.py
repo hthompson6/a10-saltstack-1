@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["exec_banner_cfg","login_banner_cfg","uuid",]
 
-MODULE_NAME = banner
+MODULE_NAME = 'banner'
 
 def new_url(module):
     """Return the URL for creating a resource"""

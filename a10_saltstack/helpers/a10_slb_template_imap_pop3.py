@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["logindisabled","name","starttls","user_tag","uuid",]
 
-MODULE_NAME = imap-pop3
+MODULE_NAME = 'imap-pop3'
 
 def new_url(module):
     """Return the URL for creating a resource"""

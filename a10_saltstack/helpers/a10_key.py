@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["key_chain_flag","key_chain_name","key_list","user_tag","uuid",]
 
-MODULE_NAME = key
+MODULE_NAME = 'key'
 
 def new_url(module):
     """Return the URL for creating a resource"""

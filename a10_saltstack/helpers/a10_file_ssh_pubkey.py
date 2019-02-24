@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["file_handle","user",]
 
-MODULE_NAME = ssh-pubkey
+MODULE_NAME = 'ssh-pubkey'
 
 def new_url(module):
     """Return the URL for creating a resource"""

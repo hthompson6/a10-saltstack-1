@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ea_length","port_start","prefix_rule_list","rule_ipv4_address_port_settings","share_ratio","uuid",]
 
-MODULE_NAME = basic-mapping-rule
+MODULE_NAME = 'basic-mapping-rule'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["icmpv6_lockup","icmpv6_lockup_period","icmpv6_normal_rate_limit","uuid",]
 
-MODULE_NAME = icmpv6-rate-limit
+MODULE_NAME = 'icmpv6-rate-limit'
 
 def new_url(module):
     """Return the URL for creating a resource"""

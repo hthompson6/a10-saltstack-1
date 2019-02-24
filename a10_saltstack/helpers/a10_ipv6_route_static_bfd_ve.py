@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["nexthop_ipv6_ll","uuid","ve_num",]
 
-MODULE_NAME = ve
+MODULE_NAME = 've'
 
 def new_url(module):
     """Return the URL for creating a resource"""

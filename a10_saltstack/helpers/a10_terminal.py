@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["auto_size","editing","gslb_cfg","history_cfg","idle_timeout","length","prompt_cfg","uuid","width",]
 
-MODULE_NAME = terminal
+MODULE_NAME = 'terminal'
 
 def new_url(module):
     """Return the URL for creating a resource"""

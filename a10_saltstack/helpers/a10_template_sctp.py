@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["checksum_check","log","name","permit_payload_protocol","sctp_half_open_idle_timeout","sctp_idle_timeout","user_tag","uuid",]
 
-MODULE_NAME = sctp
+MODULE_NAME = 'sctp'
 
 def new_url(module):
     """Return the URL for creating a resource"""

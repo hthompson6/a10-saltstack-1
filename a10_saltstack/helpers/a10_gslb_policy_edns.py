@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["client_subnet_geographic","uuid",]
 
-MODULE_NAME = edns
+MODULE_NAME = 'edns'
 
 def new_url(module):
     """Return the URL for creating a resource"""

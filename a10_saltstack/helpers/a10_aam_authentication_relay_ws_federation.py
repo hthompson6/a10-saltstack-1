@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["application_server","authentication_uri","name","sampling_enable","user_tag","uuid",]
 
-MODULE_NAME = ws-federation
+MODULE_NAME = 'ws-federation'
 
 def new_url(module):
     """Return the URL for creating a resource"""

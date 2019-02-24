@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","availability_zone","host","log_rate","metrics_export_interval","password_encrypted","port","provider","region","secret_value","thunder_mgmt_ip","use_mgmt_port","user_name","uuid",]
 
-MODULE_NAME = profile
+MODULE_NAME = 'profile'
 
 def new_url(module):
     """Return the URL for creating a resource"""

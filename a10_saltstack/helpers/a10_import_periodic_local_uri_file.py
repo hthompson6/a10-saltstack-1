@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["local_uri_file","period","remote_file","use_mgmt_port","uuid",]
 
-MODULE_NAME = local-uri-file
+MODULE_NAME = 'local-uri-file'
 
 def new_url(module):
     """Return the URL for creating a resource"""

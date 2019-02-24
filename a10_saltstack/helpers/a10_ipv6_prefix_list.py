@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","rules","uuid",]
 
-MODULE_NAME = prefix-list
+MODULE_NAME = 'prefix-list'
 
 def new_url(module):
     """Return the URL for creating a resource"""

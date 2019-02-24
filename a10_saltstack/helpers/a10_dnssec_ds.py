@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ds_delete","zone_name",]
 
-MODULE_NAME = ds
+MODULE_NAME = 'ds'
 
 def new_url(module):
     """Return the URL for creating a resource"""

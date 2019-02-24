@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","active_timeout","sampling_enable","template","uuid",]
 
-MODULE_NAME = collector
+MODULE_NAME = 'collector'
 
 def new_url(module):
     """Return the URL for creating a resource"""

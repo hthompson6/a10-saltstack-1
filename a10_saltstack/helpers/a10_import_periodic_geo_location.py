@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["geo_location","period","remote_file","use_mgmt_port","uuid",]
 
-MODULE_NAME = geo-location
+MODULE_NAME = 'geo-location'
 
 def new_url(module):
     """Return the URL for creating a resource"""

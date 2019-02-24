@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["conn_rate_limit","drop_on_nat_pool_mismatch","ds_lite","extended_user_quota","lid_number","lsn_rule_list","name","override","respond_to_user_mac","source_nat_pool","user_quota","user_quota_prefix_length","user_tag","uuid",]
 
-MODULE_NAME = lsn-lid
+MODULE_NAME = 'lsn-lid'
 
 def new_url(module):
     """Return the URL for creating a resource"""

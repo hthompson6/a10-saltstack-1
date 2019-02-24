@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["gateway_mac","ip_dscp_preserve","nvgre_disable_flow_id","nvgre_key_mode_lower24","tcp_mss_adjust_disable","uuid","vxlan_dest_port",]
 
-MODULE_NAME = options
+MODULE_NAME = 'options'
 
 def new_url(module):
     """Return the URL for creating a resource"""

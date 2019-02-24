@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["bcast","ipmcast","mcast","unknown_ucast","uuid",]
 
-MODULE_NAME = per-vlan-limit
+MODULE_NAME = 'per-vlan-limit'
 
 def new_url(module):
     """Return the URL for creating a resource"""

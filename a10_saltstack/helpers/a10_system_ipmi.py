@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ip","ipsrc","reset","tool","user",]
 
-MODULE_NAME = ipmi
+MODULE_NAME = 'ipmi'
 
 def new_url(module):
     """Return the URL for creating a resource"""

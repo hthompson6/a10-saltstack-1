@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["default_privilege","name","partition_only","rule_list","user_tag","uuid",]
 
-MODULE_NAME = role
+MODULE_NAME = 'role'
 
 def new_url(module):
     """Return the URL for creating a resource"""

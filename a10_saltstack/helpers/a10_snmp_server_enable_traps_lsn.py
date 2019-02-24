@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["all","fixed_nat_port_mapping_file_change","max_ipport_threshold","max_port_threshold","per_ip_port_usage_threshold","total_port_usage_threshold","traffic_exceeded","uuid",]
 
-MODULE_NAME = lsn
+MODULE_NAME = 'lsn'
 
 def new_url(module):
     """Return the URL for creating a resource"""

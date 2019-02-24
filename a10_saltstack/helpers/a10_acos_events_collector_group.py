@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["format","health_check","log_server_list","name","protocol","rate","sampling_enable","secs","user_tag","uuid",]
 
-MODULE_NAME = collector-group
+MODULE_NAME = 'collector-group'
 
 def new_url(module):
     """Return the URL for creating a resource"""

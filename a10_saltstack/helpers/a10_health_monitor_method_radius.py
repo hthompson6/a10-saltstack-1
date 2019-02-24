@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["radius","radius_encrypted","radius_expect","radius_password","radius_password_string","radius_port","radius_response_code","radius_secret","radius_username","uuid",]
 
-MODULE_NAME = radius
+MODULE_NAME = 'radius'
 
 def new_url(module):
     """Return the URL for creating a resource"""

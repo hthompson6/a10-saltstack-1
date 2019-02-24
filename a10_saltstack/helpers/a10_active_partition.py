@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["curr_part_name","shared",]
 
-MODULE_NAME = active-partition
+MODULE_NAME = 'active-partition'
 
 def new_url(module):
     """Return the URL for creating a resource"""

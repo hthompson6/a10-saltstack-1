@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["enable_disable_action","ethernet","ip_address","ipv6_address","name","netmask","policy","port_list","template_policy","use_if_ip","user_tag","uuid","vrid",]
 
-MODULE_NAME = dns64-virtualserver
+MODULE_NAME = 'dns64-virtualserver'
 
 def new_url(module):
     """Return the URL for creating a resource"""

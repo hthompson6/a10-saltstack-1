@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["fallback","forced","uuid",]
 
-MODULE_NAME = single-board-mode
+MODULE_NAME = 'single-board-mode'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["sampling_enable","uuid",]
 
-MODULE_NAME = hardware-forward
+MODULE_NAME = 'hardware-forward'
 
 def new_url(module):
     """Return the URL for creating a resource"""

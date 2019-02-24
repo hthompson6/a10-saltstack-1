@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["host_ipv4_address","host_ipv6_address","host_name","http_port","http_protocol","local_host","use_mgmt_port","uuid",]
 
-MODULE_NAME = elastic-search
+MODULE_NAME = 'elastic-search'
 
 def new_url(module):
     """Return the URL for creating a resource"""

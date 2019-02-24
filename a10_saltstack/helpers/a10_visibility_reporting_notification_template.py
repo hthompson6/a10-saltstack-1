@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["action","authentication","host_name","ipv4_address","ipv6_address","name","port","protocol","relative_uri","use_mgmt_port","user_tag","uuid",]
 
-MODULE_NAME = notification-template
+MODULE_NAME = 'notification-template'
 
 def new_url(module):
     """Return the URL for creating a resource"""

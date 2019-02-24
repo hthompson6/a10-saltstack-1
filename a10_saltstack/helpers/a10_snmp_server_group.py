@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["groupname","read","uuid","v3",]
 
-MODULE_NAME = group
+MODULE_NAME = 'group'
 
 def new_url(module):
     """Return the URL for creating a resource"""

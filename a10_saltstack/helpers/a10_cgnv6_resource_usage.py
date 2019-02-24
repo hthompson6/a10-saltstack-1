@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["fixed_nat_inside_user_count","fixed_nat_ip_addr_count","lsn_nat_addr_count","radius_table_size","stateless_entries","uuid",]
 
-MODULE_NAME = resource-usage
+MODULE_NAME = 'resource-usage'
 
 def new_url(module):
     """Return the URL for creating a resource"""

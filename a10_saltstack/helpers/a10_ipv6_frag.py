@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["frag_timeout","sampling_enable","uuid",]
 
-MODULE_NAME = frag
+MODULE_NAME = 'frag'
 
 def new_url(module):
     """Return the URL for creating a resource"""

@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["basic_mapping_rule","default_mapping_rule","description","health_check_gateway","mtu","name","sampling_enable","tcp","user_tag","uuid",]
 
-MODULE_NAME = domain
+MODULE_NAME = 'domain'
 
 def new_url(module):
     """Return the URL for creating a resource"""

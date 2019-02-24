@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["account","encrypted","name","password","realm","secret_string","service_principal_name","user_tag","uuid",]
 
-MODULE_NAME = kerberos-spn
+MODULE_NAME = 'kerberos-spn'
 
 def new_url(module):
     """Return the URL for creating a resource"""

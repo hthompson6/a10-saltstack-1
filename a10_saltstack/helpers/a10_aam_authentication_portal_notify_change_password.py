@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["background","cfm_pwd_cfg","change_text","change_url","confirm_password_var","continue_text","continue_url","new_password_var","new_pwd_cfg","old_password_var","old_pwd_cfg","username_cfg","username_var","uuid",]
 
-MODULE_NAME = notify-change-password
+MODULE_NAME = 'notify-change-password'
 
 def new_url(module):
     """Return the URL for creating a resource"""

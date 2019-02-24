@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["ethernet_cfg","user_tag","uuid","vrid_val",]
 
-MODULE_NAME = vrid
+MODULE_NAME = 'vrid'
 
 def new_url(module):
     """Return the URL for creating a resource"""

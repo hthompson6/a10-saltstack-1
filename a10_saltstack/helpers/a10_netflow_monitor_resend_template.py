@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["records","timeout","uuid",]
 
-MODULE_NAME = resend-template
+MODULE_NAME = 'resend-template'
 
 def new_url(module):
     """Return the URL for creating a resource"""

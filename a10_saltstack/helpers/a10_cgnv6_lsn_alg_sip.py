@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["rtp_stun_timeout","sampling_enable","sip_value","uuid",]
 
-MODULE_NAME = sip
+MODULE_NAME = 'sip'
 
 def new_url(module):
     """Return the URL for creating a resource"""

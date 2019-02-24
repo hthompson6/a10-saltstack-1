@@ -17,14 +17,14 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["allowable_ip_range","allowable_ipv6_range","mgmt_floating_ip_address","uuid","vlan","vrid",]
 
-MODULE_NAME = shared-vlan
+MODULE_NAME = 'shared-vlan'
 
 def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
-    url_base = "/axapi/v3/partition/{partition_partition_name}/shared-vlan"
+    url_base = "/axapi/v3/partition/{partition_name}/shared-vlan"
     f_dict = {}
-    f_dict["partition_partition_name"] = module.params["partition_partition_name"]
+    f_dict["partition_name"] = module.params["partition_name"]
 
     return url_base.format(**f_dict)
 
@@ -32,8 +32,8 @@ def new_url(module):
 def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
-    url_base = "/axapi/v3/partition/{partition_partition_name}/shared-vlan"
+    url_base = "/axapi/v3/partition/{partition_name}/shared-vlan"
     f_dict = {}
-    f_dict["partition_partition_name"] = module.params["partition_partition_name"]
+    f_dict["partition_name"] = module.params["partition_name"]
 
     return url_base.format(**f_dict)
