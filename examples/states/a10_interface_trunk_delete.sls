@@ -1,3 +1,5 @@
 a10_interface_trunk_ex:
-  a10_interface_trunk.delete:
+  a10:
+    - delete
+    - a10_obj: interface_trunk
     - ifnum: 1

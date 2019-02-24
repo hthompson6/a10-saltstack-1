@@ -1,3 +1,5 @@
 a10_interface_trunk_ex:
-  a10_interface_trunk.create:
+  a10:
+    - create
+    - a10_obj: interface_trunk
     - ifnum: 1
