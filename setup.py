@@ -2,7 +2,7 @@
 from setuptools import setup
 setup(name='a10_saltstack',
       version='0.0.1',
-      description='SaltStack support for A10 AXAPI',
+      description='Helper methods for A10 Saltstack modules',
       url='http://github.com/a10networks/a10-saltstack',
       author='A10 Networks',
       author_email='hthompson@a10networks.com',
