@@ -13,13 +13,13 @@
 # limitations under the License.
 
 
+
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["dont_honor_conn_rules","name","timeout","user_tag","uuid",]
 
-MODULE_NAME = "ssl-sid"
+MODULE_NAME = 'ssl-sid'
 
-
-def new_url():
+def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/template/persist/ssl-sid/{name}"
@@ -29,11 +29,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/persist/ssl-sid/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = module.params["name"]
 
     return url_base.format(**f_dict)

@@ -13,13 +13,13 @@
 # limitations under the License.
 
 
+
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["disable_after_down","dsr_l2_strict","interval","method","name","override_ipv4","override_ipv6","override_port","passive","passive_interval","retry","sample_threshold","ssl_ciphers","status_code","strict_retry_on_server_err_resp","threshold","timeout","up_retry","user_tag","uuid",]
 
-MODULE_NAME = "monitor"
+MODULE_NAME = 'monitor'
 
-
-def new_url():
+def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/health/monitor/{name}"
@@ -29,11 +29,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/health/monitor/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = module.params["name"]
 
     return url_base.format(**f_dict)

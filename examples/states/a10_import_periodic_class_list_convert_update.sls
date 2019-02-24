@@ -1,0 +1,2 @@
+a10_import_periodic_class_list_convert_ex:
+  a10_import_periodic_class_list_convert.update:

@@ -13,13 +13,13 @@
 # limitations under the License.
 
 
+
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["name","sampling_enable","shared_vlan","tagged_eth_list","tagged_trunk_list","traffic_distribution_mode","untagged_eth_list","untagged_lif","untagged_trunk_list","user_tag","uuid","ve","vlan_num",]
 
-MODULE_NAME = "vlan"
+MODULE_NAME = 'vlan'
 
-
-def new_url():
+def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/network/vlan/{vlan-num}"
@@ -29,11 +29,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/network/vlan/{vlan-num}"
     f_dict = {}
-    f_dict["vlan-num"] = kwargs["vlan-num"]
+    f_dict["vlan-num"] = module.params["vlan-num"]
 
     return url_base.format(**f_dict)

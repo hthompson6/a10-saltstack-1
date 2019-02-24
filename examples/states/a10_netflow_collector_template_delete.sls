@@ -1,0 +1,2 @@
+a10_netflow_collector_template_ex:
+  a10_netflow_collector_template.delete:

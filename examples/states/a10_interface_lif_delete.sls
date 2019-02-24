@@ -1,5 +1,3 @@
 a10_interface_lif_ex:
-  a10:
-    - delete
-    - a10_obj: interface_lif
+  a10_interface_lif.delete:
     - ifnum: 1

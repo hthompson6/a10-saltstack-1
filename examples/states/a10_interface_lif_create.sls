@@ -1,5 +1,3 @@
 a10_interface_lif_ex:
-  a10:
-    - create
-    - a10_obj: interface_lif
+  a10_interface_lif.create:
     - ifnum: 1

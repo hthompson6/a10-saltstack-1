@@ -1,0 +1,2 @@
+a10_router_bgp_address_family_ipv6_ex:
+  a10_router_bgp_address_family_ipv6.delete:

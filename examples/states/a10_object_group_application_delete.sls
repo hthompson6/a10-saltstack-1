@@ -1,0 +1,2 @@
+a10_object_group_application_ex:
+  a10_object_group_application.delete:

@@ -1,0 +1,2 @@
+a10_system_view_memory_view_ex:
+  a10_system_view_memory_view.create:
