@@ -1,0 +1,2 @@
+a10_router_ipv6_rip_redistribute_ex:
+  a10_router_ipv6_rip_redistribute.create:

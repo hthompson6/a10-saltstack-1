@@ -1,0 +1,2 @@
+a10_health_monitor_method_radius_ex:
+  a10_health_monitor_method_radius.update:

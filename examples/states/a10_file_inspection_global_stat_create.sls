@@ -1,0 +1,2 @@
+a10_file_inspection_global_stat_ex:
+  a10_file_inspection_global_stat.create:

@@ -1,5 +1,3 @@
 a10_interface_tunnel_ex:
-  a10:
-    - delete
-    - a10_obj: interface_tunnel
+  a10_interface_tunnel.delete:
     - ifnum: 1

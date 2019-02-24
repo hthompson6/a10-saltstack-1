@@ -1,0 +1,2 @@
+a10_scaleout_cluster_local_device_ex:
+  a10_scaleout_cluster_local_device.create:

@@ -1,0 +1,2 @@
+a10_interface_ethernet_ip_rip_ex:
+  a10_interface_ethernet_ip_rip.delete:

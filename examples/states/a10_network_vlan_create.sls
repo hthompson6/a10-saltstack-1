@@ -1,5 +1,3 @@
 a10_network_vlan_ex:
-  a10:
-    - create
-    - a10_obj: network_vlan
+  a10_network_vlan.create:
     - vlan_num: 2

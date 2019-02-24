@@ -13,13 +13,13 @@
 # limitations under the License.
 
 
+
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["access_list","action","bfd","ifnum","ip","isis","mtu","sampling_enable","user_tag","uuid",]
 
-MODULE_NAME = "lif"
+MODULE_NAME = lif
 
-
-def new_url():
+def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/lif/{ifnum}"
@@ -29,11 +29,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/lif/{ifnum}"
     f_dict = {}
-    f_dict["ifnum"] = kwargs["ifnum"]
+    f_dict["ifnum"] = module.params["ifnum"]
 
     return url_base.format(**f_dict)

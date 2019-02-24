@@ -13,13 +13,13 @@
 # limitations under the License.
 
 
+
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = ["sampling_enable",]
 
-MODULE_NAME = "a10loopb"
+MODULE_NAME = a10loopb
 
-
-def new_url():
+def new_url(module):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/a10loopb/{sampling-enable}"
@@ -29,11 +29,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url(module):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/a10loopb/{sampling-enable}"
     f_dict = {}
-    f_dict["sampling-enable"] = kwargs["sampling-enable"]
+    f_dict["sampling-enable"] = module.params["sampling-enable"]
 
     return url_base.format(**f_dict)

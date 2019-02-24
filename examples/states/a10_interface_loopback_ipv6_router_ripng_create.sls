@@ -1,0 +1,2 @@
+a10_interface_loopback_ipv6_router_ripng_ex:
+  a10_interface_loopback_ipv6_router_ripng.create:
