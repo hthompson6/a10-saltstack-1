@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/nat/translation/service-timeout/{service-type}+{port}"
     f_dict = {}
-    f_dict["service-type"] = kwargs["service-type"]
+    f_dict["service-type"] = kwargs["service_type"]
     f_dict["port"] = kwargs["port"]
 
     return url_base.format(**f_dict)

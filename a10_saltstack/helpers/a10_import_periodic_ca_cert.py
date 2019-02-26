@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/ca-cert/{ca-cert}"
     f_dict = {}
-    f_dict["ca-cert"] = kwargs["ca-cert"]
+    f_dict["ca-cert"] = kwargs["ca_cert"]
 
     return url_base.format(**f_dict)

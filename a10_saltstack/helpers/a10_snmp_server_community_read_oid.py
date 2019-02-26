@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/community/read/{read_user}/oid/{oid-val}"
     f_dict = {}
-    f_dict["oid-val"] = kwargs["oid-val"]
+    f_dict["oid-val"] = kwargs["oid_val"]
     f_dict["read_user"] = kwargs["read_user"]
 
     return url_base.format(**f_dict)

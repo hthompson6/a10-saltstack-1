@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/rba/user/{user_name}/partition/{partition-name}"
     f_dict = {}
-    f_dict["partition-name"] = kwargs["partition-name"]
+    f_dict["partition-name"] = kwargs["partition_name"]
     f_dict["user_name"] = kwargs["user_name"]
 
     return url_base.format(**f_dict)

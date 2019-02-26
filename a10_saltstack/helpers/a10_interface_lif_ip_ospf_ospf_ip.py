@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/interface/lif/{lif_ifnum}/ip/ospf/ospf-ip/{ip-addr}"
     f_dict = {}
-    f_dict["ip-addr"] = kwargs["ip-addr"]
+    f_dict["ip-addr"] = kwargs["ip_addr"]
     f_dict["lif_ifnum"] = kwargs["lif_ifnum"]
 
     return url_base.format(**f_dict)

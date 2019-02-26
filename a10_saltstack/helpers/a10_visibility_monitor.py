@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/visibility/monitor/{primary-monitor}"
     f_dict = {}
-    f_dict["primary-monitor"] = kwargs["primary-monitor"]
+    f_dict["primary-monitor"] = kwargs["primary_monitor"]
 
     return url_base.format(**f_dict)

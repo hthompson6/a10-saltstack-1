@@ -36,8 +36,8 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/interface/trunk/{trunk_ifnum}/nptv6/domain/{domain-name}+{bind-type}"
     f_dict = {}
-    f_dict["domain-name"] = kwargs["domain-name"]
-    f_dict["bind-type"] = kwargs["bind-type"]
+    f_dict["domain-name"] = kwargs["domain_name"]
+    f_dict["bind-type"] = kwargs["bind_type"]
     f_dict["trunk_ifnum"] = kwargs["trunk_ifnum"]
 
     return url_base.format(**f_dict)

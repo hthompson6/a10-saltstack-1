@@ -36,7 +36,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/relay/form-based/instance/{instance_name}/request-uri/{match-type}+{uri}"
     f_dict = {}
-    f_dict["match-type"] = kwargs["match-type"]
+    f_dict["match-type"] = kwargs["match_type"]
     f_dict["uri"] = kwargs["uri"]
     f_dict["instance_name"] = kwargs["instance_name"]
 

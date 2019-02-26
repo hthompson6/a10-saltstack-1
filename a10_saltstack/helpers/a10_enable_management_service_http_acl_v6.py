@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/enable-management/service/http/acl-v6/{acl-name}"
     f_dict = {}
-    f_dict["acl-name"] = kwargs["acl-name"]
+    f_dict["acl-name"] = kwargs["acl_name"]
 
     return url_base.format(**f_dict)

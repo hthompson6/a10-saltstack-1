@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/host/ipv4-host/{ipv4-addr}+{version}"
     f_dict = {}
-    f_dict["ipv4-addr"] = kwargs["ipv4-addr"]
+    f_dict["ipv4-addr"] = kwargs["ipv4_addr"]
     f_dict["version"] = kwargs["version"]
 
     return url_base.format(**f_dict)

@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/address-family/ipv6/neighbor/ipv4-neighbor/{neighbor-ipv4}"
     f_dict = {}
-    f_dict["neighbor-ipv4"] = kwargs["neighbor-ipv4"]
+    f_dict["neighbor-ipv4"] = kwargs["neighbor_ipv4"]
     f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)

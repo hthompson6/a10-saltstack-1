@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/netflow/monitor/{monitor_name}/sample/ve/{ve-num}"
     f_dict = {}
-    f_dict["ve-num"] = kwargs["ve-num"]
+    f_dict["ve-num"] = kwargs["ve_num"]
     f_dict["monitor_name"] = kwargs["monitor_name"]
 
     return url_base.format(**f_dict)

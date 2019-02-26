@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/vrid/{vrid_val}/blade-parameters/tracking-options/gateway/ipv4-gateway/{ip-address}"
     f_dict = {}
-    f_dict["ip-address"] = kwargs["ip-address"]
+    f_dict["ip-address"] = kwargs["ip_address"]
     f_dict["vrid_val"] = kwargs["vrid_val"]
 
     return url_base.format(**f_dict)

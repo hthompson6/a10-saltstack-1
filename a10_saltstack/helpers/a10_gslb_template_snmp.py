@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/template/snmp/{snmp-name}"
     f_dict = {}
-    f_dict["snmp-name"] = kwargs["snmp-name"]
+    f_dict["snmp-name"] = kwargs["snmp_name"]
 
     return url_base.format(**f_dict)

@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ldap-server/host/ipv4/{ipv4-addr}"
     f_dict = {}
-    f_dict["ipv4-addr"] = kwargs["ipv4-addr"]
+    f_dict["ipv4-addr"] = kwargs["ipv4_addr"]
 
     return url_base.format(**f_dict)
