@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/license-manager/reminder/{reminder-value}"
     f_dict = {}
-    f_dict["reminder-value"] = kwargs["reminder-value"]
+    f_dict["reminder-value"] = kwargs["reminder_value"]
 
     return url_base.format(**f_dict)

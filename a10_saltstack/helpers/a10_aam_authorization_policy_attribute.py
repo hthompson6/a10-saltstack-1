@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authorization/policy/{policy_name}/attribute/{attr-num}"
     f_dict = {}
-    f_dict["attr-num"] = kwargs["attr-num"]
+    f_dict["attr-num"] = kwargs["attr_num"]
     f_dict["policy_name"] = kwargs["policy_name"]
 
     return url_base.format(**f_dict)

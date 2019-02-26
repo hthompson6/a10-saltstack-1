@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/logging/host/ipv4addr/{host-ipv4}"
     f_dict = {}
-    f_dict["host-ipv4"] = kwargs["host-ipv4"]
+    f_dict["host-ipv4"] = kwargs["host_ipv4"]
 
     return url_base.format(**f_dict)

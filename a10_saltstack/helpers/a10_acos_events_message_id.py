@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/acos-events/message-id/{log-msg}"
     f_dict = {}
-    f_dict["log-msg"] = kwargs["log-msg"]
+    f_dict["log-msg"] = kwargs["log_msg"]
 
     return url_base.format(**f_dict)

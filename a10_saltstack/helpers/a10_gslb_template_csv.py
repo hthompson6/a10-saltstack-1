@@ -34,6 +34,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/template/csv/{csv-name}"
     f_dict = {}
-    f_dict["csv-name"] = kwargs["csv-name"]
+    f_dict["csv-name"] = kwargs["csv_name"]
 
     return url_base.format(**f_dict)

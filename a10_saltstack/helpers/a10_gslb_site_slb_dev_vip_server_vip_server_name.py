@@ -36,7 +36,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/site/{site_name}/slb-dev/{slb_dev_device_name}/vip-server/vip-server-name/{vip-name}"
     f_dict = {}
-    f_dict["vip-name"] = kwargs["vip-name"]
+    f_dict["vip-name"] = kwargs["vip_name"]
     f_dict["slb_dev_device_name"] = kwargs["slb_dev_device_name"]
     f_dict["site_name"] = kwargs["site_name"]
 

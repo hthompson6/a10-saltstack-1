@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn/stun-timeout/udp/{port-start}+{port-end}"
     f_dict = {}
-    f_dict["port-start"] = kwargs["port-start"]
-    f_dict["port-end"] = kwargs["port-end"]
+    f_dict["port-start"] = kwargs["port_start"]
+    f_dict["port-end"] = kwargs["port_end"]
 
     return url_base.format(**f_dict)

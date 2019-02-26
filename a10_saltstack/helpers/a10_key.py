@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/key/{key-chain-flag}+{key-chain-name}"
     f_dict = {}
-    f_dict["key-chain-flag"] = kwargs["key-chain-flag"]
-    f_dict["key-chain-name"] = kwargs["key-chain-name"]
+    f_dict["key-chain-flag"] = kwargs["key_chain_flag"]
+    f_dict["key-chain-name"] = kwargs["key_chain_name"]
 
     return url_base.format(**f_dict)

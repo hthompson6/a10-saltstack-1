@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/network/lacp-passthrough/{peer-from}+{peer-to}"
     f_dict = {}
-    f_dict["peer-from"] = kwargs["peer-from"]
-    f_dict["peer-to"] = kwargs["peer-to"]
+    f_dict["peer-from"] = kwargs["peer_from"]
+    f_dict["peer-to"] = kwargs["peer_to"]
 
     return url_base.format(**f_dict)

@@ -36,6 +36,6 @@ def existing_url(**kwargs):
     url_base = "/axapi/v3/cgnv6/stateful-firewall/stun-timeout/{port}+{port-end}"
     f_dict = {}
     f_dict["port"] = kwargs["port"]
-    f_dict["port-end"] = kwargs["port-end"]
+    f_dict["port-end"] = kwargs["port_end"]
 
     return url_base.format(**f_dict)

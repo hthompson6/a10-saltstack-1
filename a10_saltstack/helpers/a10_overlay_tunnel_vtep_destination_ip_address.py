@@ -35,7 +35,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/overlay-tunnel/vtep/{vtep_id}/destination-ip-address/{ip-address}"
     f_dict = {}
-    f_dict["ip-address"] = kwargs["ip-address"]
+    f_dict["ip-address"] = kwargs["ip_address"]
     f_dict["vtep_id"] = kwargs["vtep_id"]
 
     return url_base.format(**f_dict)
