@@ -1,2 +1,3 @@
 a10_web_service_ex:
-  a10_web_service.delete:
+  a10.delete:
+    - a10_obj: web_service 

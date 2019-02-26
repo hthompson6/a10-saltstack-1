@@ -1,2 +1,3 @@
 a10_debug_imap_proxy_ex:
-  a10_debug_imap_proxy.delete:
+  a10.delete:
+    - a10_obj: debug_imap_proxy 

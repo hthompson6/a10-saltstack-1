@@ -1,2 +1,3 @@
 a10_debug_vtep_error_ex:
-  a10_debug_vtep_error.create:
+  a10.create:
+    - a10_obj: debug_vtep_error

@@ -1,3 +1,4 @@
 a10_interface_ve_ex:
-  a10_interface_ve.update:
+  a10.update:
+    - a10_obj: interface_ve
     - ifnum: 1

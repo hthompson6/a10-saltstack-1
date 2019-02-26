@@ -1,3 +1,4 @@
 a10_aam_authentication_relay_ws_federation_ex:
-  a10_aam_authentication_relay_ws_federation.update:
+  a10.update:
+    - a10_obj: aam_authentication_relay_ws_federation
     - name: my_ws-federation

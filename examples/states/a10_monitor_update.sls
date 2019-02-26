@@ -1,2 +1,3 @@
 a10_monitor_ex:
-  a10_monitor.update:
+  a10.update:
+    - a10_obj: monitor

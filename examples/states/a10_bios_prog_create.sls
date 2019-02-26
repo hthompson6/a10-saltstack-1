@@ -1,2 +1,3 @@
 a10_bios_prog_ex:
-  a10_bios_prog.create:
+  a10.create:
+    - a10_obj: bios_prog

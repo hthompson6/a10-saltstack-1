@@ -1,2 +1,3 @@
 a10_admin_ex:
-  a10_admin.update:
+  a10.update:
+    - a10_obj: admin

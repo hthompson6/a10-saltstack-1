@@ -1,2 +1,3 @@
 a10_interface_ve_ipv6_router_isis_ex:
-  a10_interface_ve_ipv6_router_isis.create:
+  a10.create:
+    - a10_obj: interface_ve_ipv6_router_isis

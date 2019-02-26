@@ -1,3 +1,4 @@
 a10_access_list_standard_ex:
-  a10_access_list_standard.update:
+  a10.update:
+    - a10_obj: access_list_standard
     - std: 1

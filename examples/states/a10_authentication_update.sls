@@ -1,2 +1,3 @@
 a10_authentication_ex:
-  a10_authentication.update:
+  a10.update:
+    - a10_obj: authentication

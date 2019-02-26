@@ -1,2 +1,3 @@
 a10_router_bgp_address_family_ipv6_redistribute_ex:
-  a10_router_bgp_address_family_ipv6_redistribute.update:
+  a10.update:
+    - a10_obj: router_bgp_address_family_ipv6_redistribute

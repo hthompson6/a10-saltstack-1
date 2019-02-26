@@ -1,2 +1,3 @@
 a10_glm_ex:
-  a10_glm.create:
+  a10.create:
+    - a10_obj: glm

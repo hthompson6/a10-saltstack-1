@@ -1,2 +1,3 @@
 a10_partition_group_ex:
-  a10_partition_group.update:
+  a10.update:
+    - a10_obj: partition_group

@@ -1,2 +1,3 @@
 a10_hostname_ex:
-  a10_hostname.create:
+  a10.create:
+    - a10_obj: hostname

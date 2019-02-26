@@ -1,2 +1,3 @@
 a10_slb_l4_ex:
-  a10_slb_l4.delete:
+  a10.delete:
+    - a10_obj: slb_l4 

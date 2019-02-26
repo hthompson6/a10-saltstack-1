@@ -1,2 +1,3 @@
 a10_shutdown_ex:
-  a10_shutdown.update:
+  a10.update:
+    - a10_obj: shutdown

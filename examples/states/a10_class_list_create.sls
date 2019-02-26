@@ -1,3 +1,4 @@
 a10_class_list_ex:
-  a10_class_list.create:
+  a10.create:
+    - a10_obj: class_list
     - name: my_class-list

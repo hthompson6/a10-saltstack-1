@@ -1,2 +1,3 @@
 a10_fail_safe_ex:
-  a10_fail_safe.create:
+  a10.create:
+    - a10_obj: fail_safe

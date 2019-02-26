@@ -1,3 +1,4 @@
 a10_gslb_zone_ex:
-  a10_gslb_zone.create:
+  a10.create:
+    - a10_obj: gslb_zone
     - name: my_zone

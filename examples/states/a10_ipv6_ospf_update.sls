@@ -1,2 +1,3 @@
 a10_ipv6_ospf_ex:
-  a10_ipv6_ospf.update:
+  a10.update:
+    - a10_obj: ipv6_ospf

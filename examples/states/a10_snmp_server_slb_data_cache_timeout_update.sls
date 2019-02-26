@@ -1,2 +1,3 @@
 a10_snmp_server_slb_data_cache_timeout_ex:
-  a10_snmp_server_slb_data_cache_timeout.update:
+  a10.update:
+    - a10_obj: snmp_server_slb_data_cache_timeout

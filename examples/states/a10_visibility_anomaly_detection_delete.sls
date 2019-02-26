@@ -1,2 +1,3 @@
 a10_visibility_anomaly_detection_ex:
-  a10_visibility_anomaly_detection.delete:
+  a10.delete:
+    - a10_obj: visibility_anomaly_detection 

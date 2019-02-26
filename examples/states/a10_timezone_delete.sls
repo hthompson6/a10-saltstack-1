@@ -1,2 +1,3 @@
 a10_timezone_ex:
-  a10_timezone.delete:
+  a10.delete:
+    - a10_obj: timezone 

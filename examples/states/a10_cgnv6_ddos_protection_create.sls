@@ -1,2 +1,3 @@
 a10_cgnv6_ddos_protection_ex:
-  a10_cgnv6_ddos_protection.create:
+  a10.create:
+    - a10_obj: cgnv6_ddos_protection

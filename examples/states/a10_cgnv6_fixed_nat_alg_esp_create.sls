@@ -1,2 +1,3 @@
 a10_cgnv6_fixed_nat_alg_esp_ex:
-  a10_cgnv6_fixed_nat_alg_esp.create:
+  a10.create:
+    - a10_obj: cgnv6_fixed_nat_alg_esp

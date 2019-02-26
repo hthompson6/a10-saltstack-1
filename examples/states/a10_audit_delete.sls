@@ -1,2 +1,3 @@
 a10_audit_ex:
-  a10_audit.delete:
+  a10.delete:
+    - a10_obj: audit 

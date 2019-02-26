@@ -1,2 +1,3 @@
 a10_sys_ut_template_l1_ex:
-  a10_sys_ut_template_l1.update:
+  a10.update:
+    - a10_obj: sys_ut_template_l1

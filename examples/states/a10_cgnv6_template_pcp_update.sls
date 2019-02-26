@@ -1,3 +1,4 @@
 a10_cgnv6_template_pcp_ex:
-  a10_cgnv6_template_pcp.update:
+  a10.update:
+    - a10_obj: cgnv6_template_pcp
     - name: my_pcp

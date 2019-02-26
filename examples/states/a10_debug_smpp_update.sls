@@ -1,2 +1,3 @@
 a10_debug_smpp_ex:
-  a10_debug_smpp.update:
+  a10.update:
+    - a10_obj: debug_smpp

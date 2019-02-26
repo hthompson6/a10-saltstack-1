@@ -1,2 +1,3 @@
 a10_rule_set_tag_ex:
-  a10_rule_set_tag.delete:
+  a10.delete:
+    - a10_obj: rule_set_tag 

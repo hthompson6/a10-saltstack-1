@@ -1,3 +1,4 @@
 a10_slb_template_persist_destination_ip_ex:
-  a10_slb_template_persist_destination_ip.update:
+  a10.update:
+    - a10_obj: slb_template_persist_destination_ip
     - name: my_destination-ip

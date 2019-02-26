@@ -1,2 +1,3 @@
 a10_interface_management_ex:
-  a10_interface_management.update:
+  a10.update:
+    - a10_obj: interface_management

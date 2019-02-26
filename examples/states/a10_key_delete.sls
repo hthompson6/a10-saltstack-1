@@ -1,2 +1,3 @@
 a10_key_ex:
-  a10_key.delete:
+  a10.delete:
+    - a10_obj: key 

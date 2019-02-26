@@ -1,3 +1,4 @@
 a10_logging_single_priority_ex:
-  a10_logging_single_priority.update:
+  a10.update:
+    - a10_obj: logging_single_priority
     - levelname: emergency

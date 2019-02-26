@@ -1,2 +1,3 @@
 a10_delete_threat_intel_ex:
-  a10_delete_threat_intel.delete:
+  a10.delete:
+    - a10_obj: delete_threat_intel 

@@ -1,2 +1,3 @@
 a10_accounting_ex:
-  a10_accounting.delete:
+  a10.delete:
+    - a10_obj: accounting 

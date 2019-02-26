@@ -1,2 +1,3 @@
 a10_reboot_ex:
-  a10_reboot.delete:
+  a10.delete:
+    - a10_obj: reboot 

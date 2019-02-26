@@ -1,2 +1,3 @@
 a10_debug_h323_ex:
-  a10_debug_h323.delete:
+  a10.delete:
+    - a10_obj: debug_h323 

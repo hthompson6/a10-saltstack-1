@@ -1,2 +1,3 @@
 a10_debug_fix_ex:
-  a10_debug_fix.create:
+  a10.create:
+    - a10_obj: debug_fix

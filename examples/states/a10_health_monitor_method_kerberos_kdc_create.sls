@@ -1,2 +1,3 @@
 a10_health_monitor_method_kerberos_kdc_ex:
-  a10_health_monitor_method_kerberos_kdc.create:
+  a10.create:
+    - a10_obj: health_monitor_method_kerberos_kdc

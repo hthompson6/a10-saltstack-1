@@ -1,2 +1,3 @@
 a10_axdebug_ex:
-  a10_axdebug.update:
+  a10.update:
+    - a10_obj: axdebug

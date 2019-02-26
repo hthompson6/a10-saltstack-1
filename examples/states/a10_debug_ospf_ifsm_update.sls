@@ -1,2 +1,3 @@
 a10_debug_ospf_ifsm_ex:
-  a10_debug_ospf_ifsm.update:
+  a10.update:
+    - a10_obj: debug_ospf_ifsm

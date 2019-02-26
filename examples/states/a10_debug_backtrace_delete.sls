@@ -1,2 +1,3 @@
 a10_debug_backtrace_ex:
-  a10_debug_backtrace.delete:
+  a10.delete:
+    - a10_obj: debug_backtrace 

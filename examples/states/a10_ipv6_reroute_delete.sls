@@ -1,2 +1,3 @@
 a10_ipv6_reroute_ex:
-  a10_ipv6_reroute.delete:
+  a10.delete:
+    - a10_obj: ipv6_reroute 

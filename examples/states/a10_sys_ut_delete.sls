@@ -1,2 +1,3 @@
 a10_sys_ut_ex:
-  a10_sys_ut.delete:
+  a10.delete:
+    - a10_obj: sys_ut 

@@ -1,2 +1,3 @@
 a10_import_periodic_class_list_ex:
-  a10_import_periodic_class_list.update:
+  a10.update:
+    - a10_obj: import_periodic_class_list

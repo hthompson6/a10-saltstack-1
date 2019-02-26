@@ -1,2 +1,3 @@
 a10_ipv6_nat_pool_group_ex:
-  a10_ipv6_nat_pool_group.delete:
+  a10.delete:
+    - a10_obj: ipv6_nat_pool_group 

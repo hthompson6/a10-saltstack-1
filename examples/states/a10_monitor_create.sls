@@ -1,2 +1,3 @@
 a10_monitor_ex:
-  a10_monitor.create:
+  a10.create:
+    - a10_obj: monitor

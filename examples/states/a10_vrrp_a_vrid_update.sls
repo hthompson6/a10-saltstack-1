@@ -1,2 +1,3 @@
 a10_vrrp_a_vrid_ex:
-  a10_vrrp_a_vrid.update:
+  a10.update:
+    - a10_obj: vrrp_a_vrid

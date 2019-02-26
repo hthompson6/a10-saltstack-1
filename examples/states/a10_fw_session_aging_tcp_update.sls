@@ -1,2 +1,3 @@
 a10_fw_session_aging_tcp_ex:
-  a10_fw_session_aging_tcp.update:
+  a10.update:
+    - a10_obj: fw_session_aging_tcp

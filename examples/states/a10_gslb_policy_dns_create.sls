@@ -1,2 +1,3 @@
 a10_gslb_policy_dns_ex:
-  a10_gslb_policy_dns.create:
+  a10.create:
+    - a10_obj: gslb_policy_dns

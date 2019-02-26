@@ -1,2 +1,3 @@
 a10_health_monitor_method_udp_ex:
-  a10_health_monitor_method_udp.create:
+  a10.create:
+    - a10_obj: health_monitor_method_udp

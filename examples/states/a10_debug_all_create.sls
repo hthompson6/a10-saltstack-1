@@ -1,2 +1,3 @@
 a10_debug_all_ex:
-  a10_debug_all.create:
+  a10.create:
+    - a10_obj: debug_all

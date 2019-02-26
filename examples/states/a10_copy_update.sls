@@ -1,2 +1,3 @@
 a10_copy_ex:
-  a10_copy.update:
+  a10.update:
+    - a10_obj: copy

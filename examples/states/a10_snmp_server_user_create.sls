@@ -1,2 +1,3 @@
 a10_snmp_server_user_ex:
-  a10_snmp_server_user.create:
+  a10.create:
+    - a10_obj: snmp_server_user

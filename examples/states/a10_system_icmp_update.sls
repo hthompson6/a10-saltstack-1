@@ -1,2 +1,3 @@
 a10_system_icmp_ex:
-  a10_system_icmp.update:
+  a10.update:
+    - a10_obj: system_icmp

@@ -1,2 +1,3 @@
 a10_techreport_ex:
-  a10_techreport.create:
+  a10.create:
+    - a10_obj: techreport

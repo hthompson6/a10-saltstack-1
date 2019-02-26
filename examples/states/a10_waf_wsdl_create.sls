@@ -1,2 +1,3 @@
 a10_waf_wsdl_ex:
-  a10_waf_wsdl.create:
+  a10.create:
+    - a10_obj: waf_wsdl

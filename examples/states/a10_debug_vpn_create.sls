@@ -1,2 +1,3 @@
 a10_debug_vpn_ex:
-  a10_debug_vpn.create:
+  a10.create:
+    - a10_obj: debug_vpn

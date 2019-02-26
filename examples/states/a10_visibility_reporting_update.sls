@@ -1,2 +1,3 @@
 a10_visibility_reporting_ex:
-  a10_visibility_reporting.update:
+  a10.update:
+    - a10_obj: visibility_reporting

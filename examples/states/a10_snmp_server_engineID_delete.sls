@@ -1,2 +1,3 @@
 a10_snmp_server_engineID_ex:
-  a10_snmp_server_engineID.delete:
+  a10.delete:
+    - a10_obj: snmp_server_engineID 

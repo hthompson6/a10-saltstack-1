@@ -1,2 +1,3 @@
 a10_snmp_server_enable_traps_slb_change_ex:
-  a10_snmp_server_enable_traps_slb_change.create:
+  a10.create:
+    - a10_obj: snmp_server_enable_traps_slb_change

@@ -1,2 +1,3 @@
 a10_debug_cpu_ex:
-  a10_debug_cpu.delete:
+  a10.delete:
+    - a10_obj: debug_cpu 

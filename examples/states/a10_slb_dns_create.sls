@@ -1,2 +1,3 @@
 a10_slb_dns_ex:
-  a10_slb_dns.create:
+  a10.create:
+    - a10_obj: slb_dns

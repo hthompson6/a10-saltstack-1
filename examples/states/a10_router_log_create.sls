@@ -1,2 +1,3 @@
 a10_router_log_ex:
-  a10_router_log.create:
+  a10.create:
+    - a10_obj: router_log

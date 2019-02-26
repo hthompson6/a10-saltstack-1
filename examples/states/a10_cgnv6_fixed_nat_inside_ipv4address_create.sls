@@ -1,4 +1,5 @@
 a10_cgnv6_fixed_nat_inside_ipv4address_ex:
-  a10_cgnv6_fixed_nat_inside_ipv4address.create:
+  a10.create:
+    - a10_obj: cgnv6_fixed_nat_inside_ipv4address
     - inside_start_address: 10.0.0.1
     - inside_end_address: 10.0.0.1

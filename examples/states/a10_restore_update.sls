@@ -1,2 +1,3 @@
 a10_restore_ex:
-  a10_restore.update:
+  a10.update:
+    - a10_obj: restore

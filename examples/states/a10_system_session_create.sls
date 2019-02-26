@@ -1,2 +1,3 @@
 a10_system_session_ex:
-  a10_system_session.create:
+  a10.create:
+    - a10_obj: system_session

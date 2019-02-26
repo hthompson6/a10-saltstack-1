@@ -1,2 +1,3 @@
 a10_slb_smpp_ex:
-  a10_slb_smpp.create:
+  a10.create:
+    - a10_obj: slb_smpp

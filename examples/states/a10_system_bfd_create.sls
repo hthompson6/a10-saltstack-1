@@ -1,2 +1,3 @@
 a10_system_bfd_ex:
-  a10_system_bfd.create:
+  a10.create:
+    - a10_obj: system_bfd

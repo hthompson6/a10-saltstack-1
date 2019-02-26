@@ -1,2 +1,3 @@
 a10_authorization_ex:
-  a10_authorization.delete:
+  a10.delete:
+    - a10_obj: authorization 

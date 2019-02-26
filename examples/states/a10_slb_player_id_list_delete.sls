@@ -1,2 +1,3 @@
 a10_slb_player_id_list_ex:
-  a10_slb_player_id_list.delete:
+  a10.delete:
+    - a10_obj: slb_player_id_list 

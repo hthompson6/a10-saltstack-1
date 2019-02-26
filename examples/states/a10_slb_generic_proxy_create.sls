@@ -1,2 +1,3 @@
 a10_slb_generic_proxy_ex:
-  a10_slb_generic_proxy.create:
+  a10.create:
+    - a10_obj: slb_generic_proxy

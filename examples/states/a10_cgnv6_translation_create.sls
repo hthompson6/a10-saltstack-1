@@ -1,2 +1,3 @@
 a10_cgnv6_translation_ex:
-  a10_cgnv6_translation.create:
+  a10.create:
+    - a10_obj: cgnv6_translation

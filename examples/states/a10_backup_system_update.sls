@@ -1,2 +1,3 @@
 a10_backup_system_ex:
-  a10_backup_system.update:
+  a10.update:
+    - a10_obj: backup_system

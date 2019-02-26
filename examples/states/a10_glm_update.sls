@@ -1,2 +1,3 @@
 a10_glm_ex:
-  a10_glm.update:
+  a10.update:
+    - a10_obj: glm

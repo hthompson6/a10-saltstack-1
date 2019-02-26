@@ -1,2 +1,3 @@
 a10_debug_bgp_ex:
-  a10_debug_bgp.create:
+  a10.create:
+    - a10_obj: debug_bgp

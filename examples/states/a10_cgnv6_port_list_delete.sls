@@ -1,3 +1,4 @@
 a10_cgnv6_port_list_ex:
-  a10_cgnv6_port_list.delete:
+  a10.delete:
+    - a10_obj: cgnv6_port_list 
     - name: my_port-list

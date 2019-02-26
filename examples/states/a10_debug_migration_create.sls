@@ -1,2 +1,3 @@
 a10_debug_migration_ex:
-  a10_debug_migration.create:
+  a10.create:
+    - a10_obj: debug_migration

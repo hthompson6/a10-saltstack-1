@@ -1,2 +1,3 @@
 a10_health_global_ex:
-  a10_health_global.delete:
+  a10.delete:
+    - a10_obj: health_global 

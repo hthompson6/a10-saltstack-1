@@ -1,2 +1,3 @@
 a10_cgnv6_nat64_alg_mgcp_ex:
-  a10_cgnv6_nat64_alg_mgcp.create:
+  a10.create:
+    - a10_obj: cgnv6_nat64_alg_mgcp

@@ -1,2 +1,3 @@
 a10_admin_ssh_pubkey_ex:
-  a10_admin_ssh_pubkey.update:
+  a10.update:
+    - a10_obj: admin_ssh_pubkey

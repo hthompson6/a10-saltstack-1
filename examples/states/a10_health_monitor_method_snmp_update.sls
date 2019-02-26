@@ -1,2 +1,3 @@
 a10_health_monitor_method_snmp_ex:
-  a10_health_monitor_method_snmp.update:
+  a10.update:
+    - a10_obj: health_monitor_method_snmp

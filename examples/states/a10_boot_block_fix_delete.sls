@@ -1,2 +1,3 @@
 a10_boot_block_fix_ex:
-  a10_boot_block_fix.delete:
+  a10.delete:
+    - a10_obj: boot_block_fix 

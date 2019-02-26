@@ -1,2 +1,3 @@
 a10_debug_aflow_ex:
-  a10_debug_aflow.delete:
+  a10.delete:
+    - a10_obj: debug_aflow 

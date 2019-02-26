@@ -1,2 +1,3 @@
 a10_automatic_update_proxy_server_ex:
-  a10_automatic_update_proxy_server.update:
+  a10.update:
+    - a10_obj: automatic_update_proxy_server

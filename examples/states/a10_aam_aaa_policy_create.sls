@@ -1,3 +1,4 @@
 a10_aam_aaa_policy_ex:
-  a10_aam_aaa_policy.create:
+  a10.create:
+    - a10_obj: aam_aaa_policy
     - name: my_aaa-policy

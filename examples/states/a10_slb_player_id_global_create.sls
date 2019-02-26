@@ -1,2 +1,3 @@
 a10_slb_player_id_global_ex:
-  a10_slb_player_id_global.create:
+  a10.create:
+    - a10_obj: slb_player_id_global

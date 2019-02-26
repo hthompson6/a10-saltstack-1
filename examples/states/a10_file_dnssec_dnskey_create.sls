@@ -1,2 +1,3 @@
 a10_file_dnssec_dnskey_ex:
-  a10_file_dnssec_dnskey.create:
+  a10.create:
+    - a10_obj: file_dnssec_dnskey

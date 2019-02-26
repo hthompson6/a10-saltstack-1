@@ -1,2 +1,3 @@
 a10_clock_set_ex:
-  a10_clock_set.create:
+  a10.create:
+    - a10_obj: clock_set

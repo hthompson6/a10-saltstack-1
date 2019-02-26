@@ -1,2 +1,3 @@
 a10_authorization_ex:
-  a10_authorization.create:
+  a10.create:
+    - a10_obj: authorization

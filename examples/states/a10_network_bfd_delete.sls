@@ -1,2 +1,3 @@
 a10_network_bfd_ex:
-  a10_network_bfd.delete:
+  a10.delete:
+    - a10_obj: network_bfd 

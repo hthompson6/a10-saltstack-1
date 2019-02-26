@@ -1,2 +1,3 @@
 a10_router_rip_offset_list_ex:
-  a10_router_rip_offset_list.update:
+  a10.update:
+    - a10_obj: router_rip_offset_list

@@ -1,2 +1,3 @@
 a10_system_del_port_ex:
-  a10_system_del_port.delete:
+  a10.delete:
+    - a10_obj: system_del_port 

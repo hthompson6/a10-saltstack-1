@@ -1,2 +1,3 @@
 a10_system_delete_cpu_core_ex:
-  a10_system_delete_cpu_core.update:
+  a10.update:
+    - a10_obj: system_delete_cpu_core

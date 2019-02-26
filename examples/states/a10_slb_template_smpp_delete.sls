@@ -1,3 +1,4 @@
 a10_slb_template_smpp_ex:
-  a10_slb_template_smpp.delete:
+  a10.delete:
+    - a10_obj: slb_template_smpp 
     - name: my_smpp

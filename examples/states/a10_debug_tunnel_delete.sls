@@ -1,2 +1,3 @@
 a10_debug_tunnel_ex:
-  a10_debug_tunnel.delete:
+  a10.delete:
+    - a10_obj: debug_tunnel 

@@ -1,3 +1,4 @@
 a10_waf_template_ex:
-  a10_waf_template.delete:
+  a10.delete:
+    - a10_obj: waf_template 
     - name: my_template

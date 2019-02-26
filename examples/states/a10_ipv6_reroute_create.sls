@@ -1,2 +1,3 @@
 a10_ipv6_reroute_ex:
-  a10_ipv6_reroute.create:
+  a10.create:
+    - a10_obj: ipv6_reroute

@@ -1,2 +1,3 @@
 a10_cgnv6_http_alg_ex:
-  a10_cgnv6_http_alg.delete:
+  a10.delete:
+    - a10_obj: cgnv6_http_alg 

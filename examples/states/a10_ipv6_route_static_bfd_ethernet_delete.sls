@@ -1,2 +1,3 @@
 a10_ipv6_route_static_bfd_ethernet_ex:
-  a10_ipv6_route_static_bfd_ethernet.delete:
+  a10.delete:
+    - a10_obj: ipv6_route_static_bfd_ethernet 

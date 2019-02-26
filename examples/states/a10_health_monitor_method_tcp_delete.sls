@@ -1,2 +1,3 @@
 a10_health_monitor_method_tcp_ex:
-  a10_health_monitor_method_tcp.delete:
+  a10.delete:
+    - a10_obj: health_monitor_method_tcp 

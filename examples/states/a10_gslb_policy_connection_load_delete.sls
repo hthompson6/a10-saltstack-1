@@ -1,2 +1,3 @@
 a10_gslb_policy_connection_load_ex:
-  a10_gslb_policy_connection_load.delete:
+  a10.delete:
+    - a10_obj: gslb_policy_connection_load 

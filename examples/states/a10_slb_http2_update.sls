@@ -1,2 +1,3 @@
 a10_slb_http2_ex:
-  a10_slb_http2.update:
+  a10.update:
+    - a10_obj: slb_http2

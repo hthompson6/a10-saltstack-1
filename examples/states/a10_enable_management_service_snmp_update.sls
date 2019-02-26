@@ -1,2 +1,3 @@
 a10_enable_management_service_snmp_ex:
-  a10_enable_management_service_snmp.update:
+  a10.update:
+    - a10_obj: enable_management_service_snmp

@@ -1,3 +1,4 @@
 a10_cgnv6_template_logging_ex:
-  a10_cgnv6_template_logging.create:
+  a10.create:
+    - a10_obj: cgnv6_template_logging
     - name: my_logging

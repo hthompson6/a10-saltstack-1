@@ -1,2 +1,3 @@
 a10_debug_ha_ex:
-  a10_debug_ha.create:
+  a10.create:
+    - a10_obj: debug_ha

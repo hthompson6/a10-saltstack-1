@@ -1,2 +1,3 @@
 a10_active_partition_ex:
-  a10_active_partition.create:
+  a10.create:
+    - a10_obj: active_partition

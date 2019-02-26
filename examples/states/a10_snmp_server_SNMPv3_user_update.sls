@@ -1,2 +1,3 @@
 a10_snmp_server_SNMPv3_user_ex:
-  a10_snmp_server_SNMPv3_user.update:
+  a10.update:
+    - a10_obj: snmp_server_SNMPv3_user

@@ -1,2 +1,3 @@
 a10_zone_local_zone_cfg_ex:
-  a10_zone_local_zone_cfg.create:
+  a10.create:
+    - a10_obj: zone_local_zone_cfg

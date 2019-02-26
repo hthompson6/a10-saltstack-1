@@ -1,3 +1,4 @@
 a10_debug_cache_ex:
-  a10_debug_cache.create:
+  a10.create:
+    - a10_obj: debug_cache
     - level: 1

@@ -1,3 +1,4 @@
 a10_cgnv6_server_port_ex:
-  a10_cgnv6_server_port.update:
+  a10.update:
+    - a10_obj: cgnv6_server_port
     - protocol: tcp

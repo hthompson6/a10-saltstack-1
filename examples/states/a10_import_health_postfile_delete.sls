@@ -1,2 +1,3 @@
 a10_import_health_postfile_ex:
-  a10_import_health_postfile.delete:
+  a10.delete:
+    - a10_obj: import_health_postfile 

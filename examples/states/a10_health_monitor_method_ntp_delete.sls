@@ -1,2 +1,3 @@
 a10_health_monitor_method_ntp_ex:
-  a10_health_monitor_method_ntp.delete:
+  a10.delete:
+    - a10_obj: health_monitor_method_ntp 

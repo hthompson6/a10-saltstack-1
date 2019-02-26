@@ -1,2 +1,3 @@
 a10_interface_ethernet_ip_ex:
-  a10_interface_ethernet_ip.delete:
+  a10.delete:
+    - a10_obj: interface_ethernet_ip 

@@ -1,2 +1,3 @@
 a10_enable_core_ex:
-  a10_enable_core.delete:
+  a10.delete:
+    - a10_obj: enable_core 

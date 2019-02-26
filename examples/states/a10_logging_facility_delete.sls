@@ -1,2 +1,3 @@
 a10_logging_facility_ex:
-  a10_logging_facility.delete:
+  a10.delete:
+    - a10_obj: logging_facility 

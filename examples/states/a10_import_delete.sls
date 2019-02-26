@@ -1,2 +1,3 @@
 a10_import_ex:
-  a10_import.delete:
+  a10.delete:
+    - a10_obj: import 

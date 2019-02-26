@@ -1,3 +1,4 @@
 a10_rba_group_ex:
-  a10_rba_group.create:
+  a10.create:
+    - a10_obj: rba_group
     - name: my_group

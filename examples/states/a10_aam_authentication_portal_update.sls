@@ -1,3 +1,4 @@
 a10_aam_authentication_portal_ex:
-  a10_aam_authentication_portal.update:
+  a10.update:
+    - a10_obj: aam_authentication_portal
     - name: default-portal

@@ -1,2 +1,3 @@
 a10_chassis_info_ex:
-  a10_chassis_info.update:
+  a10.update:
+    - a10_obj: chassis_info

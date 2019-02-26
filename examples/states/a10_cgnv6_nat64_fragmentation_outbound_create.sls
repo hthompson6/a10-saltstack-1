@@ -1,2 +1,3 @@
 a10_cgnv6_nat64_fragmentation_outbound_ex:
-  a10_cgnv6_nat64_fragmentation_outbound.create:
+  a10.create:
+    - a10_obj: cgnv6_nat64_fragmentation_outbound

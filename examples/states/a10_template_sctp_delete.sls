@@ -1,3 +1,4 @@
 a10_template_sctp_ex:
-  a10_template_sctp.delete:
+  a10.delete:
+    - a10_obj: template_sctp 
     - name: my_sctp

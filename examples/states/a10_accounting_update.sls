@@ -1,2 +1,3 @@
 a10_accounting_ex:
-  a10_accounting.update:
+  a10.update:
+    - a10_obj: accounting

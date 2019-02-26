@@ -1,2 +1,3 @@
 a10_zone_vlan_ex:
-  a10_zone_vlan.create:
+  a10.create:
+    - a10_obj: zone_vlan

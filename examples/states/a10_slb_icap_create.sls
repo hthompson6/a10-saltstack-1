@@ -1,2 +1,3 @@
 a10_slb_icap_ex:
-  a10_slb_icap.create:
+  a10.create:
+    - a10_obj: slb_icap

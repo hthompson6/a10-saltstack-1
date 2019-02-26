@@ -1,2 +1,3 @@
 a10_debug_system_ex:
-  a10_debug_system.delete:
+  a10.delete:
+    - a10_obj: debug_system 

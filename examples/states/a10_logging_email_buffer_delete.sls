@@ -1,2 +1,3 @@
 a10_logging_email_buffer_ex:
-  a10_logging_email_buffer.delete:
+  a10.delete:
+    - a10_obj: logging_email_buffer 

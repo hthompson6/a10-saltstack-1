@@ -1,3 +1,4 @@
 a10_template_sctp_ex:
-  a10_template_sctp.create:
+  a10.create:
+    - a10_obj: template_sctp
     - name: my_sctp

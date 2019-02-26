@@ -1,2 +1,3 @@
 a10_hostname_ex:
-  a10_hostname.update:
+  a10.update:
+    - a10_obj: hostname

@@ -1,2 +1,3 @@
 a10_debug_auth_ex:
-  a10_debug_auth.update:
+  a10.update:
+    - a10_obj: debug_auth

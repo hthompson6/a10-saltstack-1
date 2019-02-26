@@ -1,2 +1,3 @@
 a10_disable_management_service_ssh_ex:
-  a10_disable_management_service_ssh.create:
+  a10.create:
+    - a10_obj: disable_management_service_ssh

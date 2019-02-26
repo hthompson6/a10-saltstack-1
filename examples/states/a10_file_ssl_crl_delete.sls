@@ -1,2 +1,3 @@
 a10_file_ssl_crl_ex:
-  a10_file_ssl_crl.delete:
+  a10.delete:
+    - a10_obj: file_ssl_crl 

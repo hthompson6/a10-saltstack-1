@@ -1,2 +1,3 @@
 a10_router_bgp_address_family_ipv6_redistribute_ex:
-  a10_router_bgp_address_family_ipv6_redistribute.create:
+  a10.create:
+    - a10_obj: router_bgp_address_family_ipv6_redistribute

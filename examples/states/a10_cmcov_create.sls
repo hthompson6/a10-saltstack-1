@@ -1,2 +1,3 @@
 a10_cmcov_ex:
-  a10_cmcov.create:
+  a10.create:
+    - a10_obj: cmcov

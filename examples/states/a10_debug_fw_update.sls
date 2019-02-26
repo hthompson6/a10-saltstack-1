@@ -1,2 +1,3 @@
 a10_debug_fw_ex:
-  a10_debug_fw.update:
+  a10.update:
+    - a10_obj: debug_fw

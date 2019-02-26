@@ -1,2 +1,3 @@
 a10_ipv6_icmpv6_ex:
-  a10_ipv6_icmpv6.delete:
+  a10.delete:
+    - a10_obj: ipv6_icmpv6 
