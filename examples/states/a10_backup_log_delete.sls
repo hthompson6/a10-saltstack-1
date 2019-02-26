@@ -1,2 +1,3 @@
 a10_backup_log_ex:
-  a10_backup_log.delete:
+  a10.delete:
+    - a10_obj: backup_log 

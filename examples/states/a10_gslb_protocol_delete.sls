@@ -1,2 +1,3 @@
 a10_gslb_protocol_ex:
-  a10_gslb_protocol.delete:
+  a10.delete:
+    - a10_obj: gslb_protocol 

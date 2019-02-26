@@ -1,2 +1,3 @@
 a10_bgp_ex:
-  a10_bgp.delete:
+  a10.delete:
+    - a10_obj: bgp 

@@ -1,2 +1,3 @@
 a10_slb_template_dblb_calc_sha1_ex:
-  a10_slb_template_dblb_calc_sha1.create:
+  a10.create:
+    - a10_obj: slb_template_dblb_calc_sha1

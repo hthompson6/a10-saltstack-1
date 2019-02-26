@@ -1,2 +1,3 @@
 a10_web_service_secure_regenerate_ex:
-  a10_web_service_secure_regenerate.create:
+  a10.create:
+    - a10_obj: web_service_secure_regenerate

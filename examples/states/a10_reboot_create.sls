@@ -1,2 +1,3 @@
 a10_reboot_ex:
-  a10_reboot.create:
+  a10.create:
+    - a10_obj: reboot

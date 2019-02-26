@@ -1,3 +1,4 @@
 a10_visibility_monitor_ex:
-  a10_visibility_monitor.delete:
+  a10.delete:
+    - a10_obj: visibility_monitor 
     - primary_monitor: traffic

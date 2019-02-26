@@ -1,2 +1,3 @@
 a10_chassis_infra_ex:
-  a10_chassis_infra.create:
+  a10.create:
+    - a10_obj: chassis_infra

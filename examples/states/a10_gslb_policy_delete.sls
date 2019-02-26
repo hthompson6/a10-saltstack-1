@@ -1,3 +1,4 @@
 a10_gslb_policy_ex:
-  a10_gslb_policy.delete:
+  a10.delete:
+    - a10_obj: gslb_policy 
     - name: my_policy

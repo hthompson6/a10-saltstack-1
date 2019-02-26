@@ -1,2 +1,3 @@
 a10_partition_shared_vlan_ex:
-  a10_partition_shared_vlan.delete:
+  a10.delete:
+    - a10_obj: partition_shared_vlan 

@@ -1,2 +1,3 @@
 a10_ip_reroute_ex:
-  a10_ip_reroute.create:
+  a10.create:
+    - a10_obj: ip_reroute

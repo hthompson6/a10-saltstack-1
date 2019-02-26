@@ -1,2 +1,3 @@
 a10_cgnv6_lw_4o6_global_ex:
-  a10_cgnv6_lw_4o6_global.delete:
+  a10.delete:
+    - a10_obj: cgnv6_lw_4o6_global 

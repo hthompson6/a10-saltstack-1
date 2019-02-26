@@ -1,2 +1,3 @@
 a10_import_periodic_class_list_convert_ex:
-  a10_import_periodic_class_list_convert.delete:
+  a10.delete:
+    - a10_obj: import_periodic_class_list_convert 

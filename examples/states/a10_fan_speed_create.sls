@@ -1,2 +1,3 @@
 a10_fan_speed_ex:
-  a10_fan_speed.create:
+  a10.create:
+    - a10_obj: fan_speed

@@ -1,2 +1,3 @@
 a10_enable_password_ex:
-  a10_enable_password.create:
+  a10.create:
+    - a10_obj: enable_password

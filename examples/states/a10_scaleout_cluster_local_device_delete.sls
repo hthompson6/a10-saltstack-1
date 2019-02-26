@@ -1,2 +1,3 @@
 a10_scaleout_cluster_local_device_ex:
-  a10_scaleout_cluster_local_device.delete:
+  a10.delete:
+    - a10_obj: scaleout_cluster_local_device 

@@ -1,2 +1,3 @@
 a10_sflow_source_address_ex:
-  a10_sflow_source_address.update:
+  a10.update:
+    - a10_obj: sflow_source_address

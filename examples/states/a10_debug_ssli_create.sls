@@ -1,2 +1,3 @@
 a10_debug_ssli_ex:
-  a10_debug_ssli.create:
+  a10.create:
+    - a10_obj: debug_ssli

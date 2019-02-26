@@ -1,3 +1,4 @@
 a10_zone_ex:
-  a10_zone.delete:
+  a10.delete:
+    - a10_obj: zone 
     - name: my_zone

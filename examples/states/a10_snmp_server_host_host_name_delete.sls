@@ -1,3 +1,4 @@
 a10_snmp_server_host_host_name_ex:
-  a10_snmp_server_host_host_name.delete:
+  a10.delete:
+    - a10_obj: snmp_server_host_host_name 
     - version: v1

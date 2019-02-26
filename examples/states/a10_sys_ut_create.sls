@@ -1,2 +1,3 @@
 a10_sys_ut_ex:
-  a10_sys_ut.create:
+  a10.create:
+    - a10_obj: sys_ut

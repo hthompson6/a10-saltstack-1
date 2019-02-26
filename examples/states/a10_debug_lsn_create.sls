@@ -1,2 +1,3 @@
 a10_debug_lsn_ex:
-  a10_debug_lsn.create:
+  a10.create:
+    - a10_obj: debug_lsn

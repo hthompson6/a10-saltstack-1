@@ -1,2 +1,3 @@
 a10_delete_geo_location_ex:
-  a10_delete_geo_location.create:
+  a10.create:
+    - a10_obj: delete_geo_location

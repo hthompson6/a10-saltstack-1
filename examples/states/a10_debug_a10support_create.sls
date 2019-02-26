@@ -1,2 +1,3 @@
 a10_debug_a10support_ex:
-  a10_debug_a10support.create:
+  a10.create:
+    - a10_obj: debug_a10support

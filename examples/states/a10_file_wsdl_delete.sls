@@ -1,2 +1,3 @@
 a10_file_wsdl_ex:
-  a10_file_wsdl.delete:
+  a10.delete:
+    - a10_obj: file_wsdl 

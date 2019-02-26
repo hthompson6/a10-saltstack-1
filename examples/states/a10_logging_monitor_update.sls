@@ -1,2 +1,3 @@
 a10_logging_monitor_ex:
-  a10_logging_monitor.update:
+  a10.update:
+    - a10_obj: logging_monitor

@@ -1,2 +1,3 @@
 a10_fw_app_ex:
-  a10_fw_app.create:
+  a10.create:
+    - a10_obj: fw_app

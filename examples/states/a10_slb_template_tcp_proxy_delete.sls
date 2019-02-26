@@ -1,3 +1,4 @@
 a10_slb_template_tcp_proxy_ex:
-  a10_slb_template_tcp_proxy.delete:
+  a10.delete:
+    - a10_obj: slb_template_tcp_proxy 
     - name: my_tcp-proxy

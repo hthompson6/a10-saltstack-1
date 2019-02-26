@@ -1,2 +1,3 @@
 a10_terminal_ex:
-  a10_terminal.create:
+  a10.create:
+    - a10_obj: terminal

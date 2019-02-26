@@ -1,2 +1,3 @@
 a10_export_ex:
-  a10_export.update:
+  a10.update:
+    - a10_obj: export

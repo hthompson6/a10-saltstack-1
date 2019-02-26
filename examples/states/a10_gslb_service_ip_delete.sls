@@ -1,2 +1,3 @@
 a10_gslb_service_ip_ex:
-  a10_gslb_service_ip.delete:
+  a10.delete:
+    - a10_obj: gslb_service_ip 

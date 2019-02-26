@@ -1,2 +1,3 @@
 a10_ipv6_route_rib_ex:
-  a10_ipv6_route_rib.create:
+  a10.create:
+    - a10_obj: ipv6_route_rib

@@ -1,2 +1,3 @@
 a10_debug_layer2_ex:
-  a10_debug_layer2.delete:
+  a10.delete:
+    - a10_obj: debug_layer2 

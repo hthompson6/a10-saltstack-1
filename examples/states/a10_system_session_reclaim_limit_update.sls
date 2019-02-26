@@ -1,2 +1,3 @@
 a10_system_session_reclaim_limit_ex:
-  a10_system_session_reclaim_limit.update:
+  a10.update:
+    - a10_obj: system_session_reclaim_limit

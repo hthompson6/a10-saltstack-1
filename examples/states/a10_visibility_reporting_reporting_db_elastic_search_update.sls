@@ -1,2 +1,3 @@
 a10_visibility_reporting_reporting_db_elastic_search_ex:
-  a10_visibility_reporting_reporting_db_elastic_search.update:
+  a10.update:
+    - a10_obj: visibility_reporting_reporting_db_elastic_search

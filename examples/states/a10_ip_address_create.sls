@@ -1,2 +1,3 @@
 a10_ip_address_ex:
-  a10_ip_address.create:
+  a10.create:
+    - a10_obj: ip_address

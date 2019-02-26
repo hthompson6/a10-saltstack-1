@@ -1,2 +1,3 @@
 a10_slb_mysql_ex:
-  a10_slb_mysql.update:
+  a10.update:
+    - a10_obj: slb_mysql

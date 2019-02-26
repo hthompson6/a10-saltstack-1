@@ -1,2 +1,3 @@
 a10_axdebug_capture_ex:
-  a10_axdebug_capture.create:
+  a10.create:
+    - a10_obj: axdebug_capture

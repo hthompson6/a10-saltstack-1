@@ -1,2 +1,3 @@
 a10_debug_imish_profile_ex:
-  a10_debug_imish_profile.create:
+  a10.create:
+    - a10_obj: debug_imish_profile

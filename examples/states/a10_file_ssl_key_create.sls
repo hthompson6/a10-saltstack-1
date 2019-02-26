@@ -1,2 +1,3 @@
 a10_file_ssl_key_ex:
-  a10_file_ssl_key.create:
+  a10.create:
+    - a10_obj: file_ssl_key

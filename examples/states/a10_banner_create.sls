@@ -1,2 +1,3 @@
 a10_banner_ex:
-  a10_banner.create:
+  a10.create:
+    - a10_obj: banner

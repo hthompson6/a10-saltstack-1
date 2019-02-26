@@ -1,2 +1,3 @@
 a10_key_ex:
-  a10_key.create:
+  a10.create:
+    - a10_obj: key

@@ -1,2 +1,3 @@
 a10_sflow_polling_ex:
-  a10_sflow_polling.create:
+  a10.create:
+    - a10_obj: sflow_polling

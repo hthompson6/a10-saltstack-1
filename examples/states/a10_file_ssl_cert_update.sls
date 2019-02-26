@@ -1,2 +1,3 @@
 a10_file_ssl_cert_ex:
-  a10_file_ssl_cert.update:
+  a10.update:
+    - a10_obj: file_ssl_cert

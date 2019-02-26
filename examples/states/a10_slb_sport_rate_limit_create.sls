@@ -1,2 +1,3 @@
 a10_slb_sport_rate_limit_ex:
-  a10_slb_sport_rate_limit.create:
+  a10.create:
+    - a10_obj: slb_sport_rate_limit

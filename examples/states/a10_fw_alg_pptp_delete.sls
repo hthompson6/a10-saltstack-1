@@ -1,2 +1,3 @@
 a10_fw_alg_pptp_ex:
-  a10_fw_alg_pptp.delete:
+  a10.delete:
+    - a10_obj: fw_alg_pptp 

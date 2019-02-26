@@ -1,2 +1,3 @@
 a10_interface_trunk_bfd_ex:
-  a10_interface_trunk_bfd.delete:
+  a10.delete:
+    - a10_obj: interface_trunk_bfd 

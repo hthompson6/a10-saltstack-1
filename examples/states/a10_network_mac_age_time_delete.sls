@@ -1,2 +1,3 @@
 a10_network_mac_age_time_ex:
-  a10_network_mac_age_time.delete:
+  a10.delete:
+    - a10_obj: network_mac_age_time 

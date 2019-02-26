@@ -1,2 +1,3 @@
 a10_debug_generic_proxy_ex:
-  a10_debug_generic_proxy.create:
+  a10.create:
+    - a10_obj: debug_generic_proxy

@@ -1,2 +1,3 @@
 a10_slb_pop3_proxy_ex:
-  a10_slb_pop3_proxy.delete:
+  a10.delete:
+    - a10_obj: slb_pop3_proxy 

@@ -1,2 +1,3 @@
 a10_sflow_global_ex:
-  a10_sflow_global.create:
+  a10.create:
+    - a10_obj: sflow_global

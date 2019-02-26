@@ -1,2 +1,3 @@
 a10_cgnv6_resource_usage_ex:
-  a10_cgnv6_resource_usage.create:
+  a10.create:
+    - a10_obj: cgnv6_resource_usage

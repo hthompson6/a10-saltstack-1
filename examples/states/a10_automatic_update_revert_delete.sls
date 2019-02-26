@@ -1,2 +1,3 @@
 a10_automatic_update_revert_ex:
-  a10_automatic_update_revert.delete:
+  a10.delete:
+    - a10_obj: automatic_update_revert 

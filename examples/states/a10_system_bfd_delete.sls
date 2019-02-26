@@ -1,2 +1,3 @@
 a10_system_bfd_ex:
-  a10_system_bfd.delete:
+  a10.delete:
+    - a10_obj: system_bfd 

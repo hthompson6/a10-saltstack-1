@@ -1,2 +1,3 @@
 a10_import_periodic_thales_kmdata_ex:
-  a10_import_periodic_thales_kmdata.create:
+  a10.create:
+    - a10_obj: import_periodic_thales_kmdata

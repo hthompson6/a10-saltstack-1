@@ -1,3 +1,4 @@
 a10_slb_template_virtual_port_ex:
-  a10_slb_template_virtual_port.delete:
+  a10.delete:
+    - a10_obj: slb_template_virtual_port 
     - name: my_virtual-port

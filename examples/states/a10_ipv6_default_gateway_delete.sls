@@ -1,2 +1,3 @@
 a10_ipv6_default_gateway_ex:
-  a10_ipv6_default_gateway.delete:
+  a10.delete:
+    - a10_obj: ipv6_default_gateway 

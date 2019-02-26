@@ -1,2 +1,3 @@
 a10_dnssec_ex:
-  a10_dnssec.delete:
+  a10.delete:
+    - a10_obj: dnssec 

@@ -1,2 +1,3 @@
 a10_so_counters_ex:
-  a10_so_counters.update:
+  a10.update:
+    - a10_obj: so_counters

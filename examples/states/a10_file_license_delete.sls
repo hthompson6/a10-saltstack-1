@@ -1,2 +1,3 @@
 a10_file_license_ex:
-  a10_file_license.delete:
+  a10.delete:
+    - a10_obj: file_license 

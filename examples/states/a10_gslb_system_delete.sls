@@ -1,2 +1,3 @@
 a10_gslb_system_ex:
-  a10_gslb_system.delete:
+  a10.delete:
+    - a10_obj: gslb_system 

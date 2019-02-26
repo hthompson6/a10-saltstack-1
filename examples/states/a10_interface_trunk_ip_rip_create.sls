@@ -1,2 +1,3 @@
 a10_interface_trunk_ip_rip_ex:
-  a10_interface_trunk_ip_rip.create:
+  a10.create:
+    - a10_obj: interface_trunk_ip_rip

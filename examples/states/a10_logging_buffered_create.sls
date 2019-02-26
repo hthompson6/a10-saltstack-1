@@ -1,2 +1,3 @@
 a10_logging_buffered_ex:
-  a10_logging_buffered.create:
+  a10.create:
+    - a10_obj: logging_buffered

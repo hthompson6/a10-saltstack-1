@@ -1,2 +1,3 @@
 a10_vcs_device_ex:
-  a10_vcs_device.create:
+  a10.create:
+    - a10_obj: vcs_device

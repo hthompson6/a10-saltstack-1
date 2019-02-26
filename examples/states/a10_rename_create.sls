@@ -1,2 +1,3 @@
 a10_rename_ex:
-  a10_rename.create:
+  a10.create:
+    - a10_obj: rename

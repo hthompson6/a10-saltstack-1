@@ -1,2 +1,3 @@
 a10_configure_sync_ex:
-  a10_configure_sync.delete:
+  a10.delete:
+    - a10_obj: configure_sync 

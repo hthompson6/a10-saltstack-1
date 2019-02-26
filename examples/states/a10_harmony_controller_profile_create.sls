@@ -1,2 +1,3 @@
 a10_harmony_controller_profile_ex:
-  a10_harmony_controller_profile.create:
+  a10.create:
+    - a10_obj: harmony_controller_profile

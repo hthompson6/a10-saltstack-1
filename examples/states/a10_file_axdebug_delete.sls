@@ -1,2 +1,3 @@
 a10_file_axdebug_ex:
-  a10_file_axdebug.delete:
+  a10.delete:
+    - a10_obj: file_axdebug 

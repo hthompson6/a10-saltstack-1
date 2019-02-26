@@ -1,2 +1,3 @@
 a10_fan_speed_ex:
-  a10_fan_speed.delete:
+  a10.delete:
+    - a10_obj: fan_speed 

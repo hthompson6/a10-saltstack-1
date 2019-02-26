@@ -1,2 +1,3 @@
 a10_cgnv6_nat64_fragmentation_inbound_ex:
-  a10_cgnv6_nat64_fragmentation_inbound.delete:
+  a10.delete:
+    - a10_obj: cgnv6_nat64_fragmentation_inbound 

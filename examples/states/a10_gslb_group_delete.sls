@@ -1,3 +1,4 @@
 a10_gslb_group_ex:
-  a10_gslb_group.delete:
+  a10.delete:
+    - a10_obj: gslb_group 
     - name: my_group

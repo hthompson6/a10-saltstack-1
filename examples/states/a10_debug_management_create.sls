@@ -1,2 +1,3 @@
 a10_debug_management_ex:
-  a10_debug_management.create:
+  a10.create:
+    - a10_obj: debug_management

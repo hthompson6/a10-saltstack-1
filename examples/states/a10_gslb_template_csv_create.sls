@@ -1,2 +1,3 @@
 a10_gslb_template_csv_ex:
-  a10_gslb_template_csv.create:
+  a10.create:
+    - a10_obj: gslb_template_csv

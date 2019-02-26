@@ -1,2 +1,3 @@
 a10_scaleout_cluster_service_config_ex:
-  a10_scaleout_cluster_service_config.delete:
+  a10.delete:
+    - a10_obj: scaleout_cluster_service_config 

@@ -1,2 +1,3 @@
 a10_aam_authentication_server_ldap_ex:
-  a10_aam_authentication_server_ldap.update:
+  a10.update:
+    - a10_obj: aam_authentication_server_ldap

@@ -1,2 +1,3 @@
 a10_automatic_update_info_ex:
-  a10_automatic_update_info.create:
+  a10.create:
+    - a10_obj: automatic_update_info

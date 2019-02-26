@@ -1,2 +1,3 @@
 a10_file_techsupport_ex:
-  a10_file_techsupport.delete:
+  a10.delete:
+    - a10_obj: file_techsupport 

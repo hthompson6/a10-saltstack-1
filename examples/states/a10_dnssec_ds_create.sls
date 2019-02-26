@@ -1,2 +1,3 @@
 a10_dnssec_ds_ex:
-  a10_dnssec_ds.create:
+  a10.create:
+    - a10_obj: dnssec_ds

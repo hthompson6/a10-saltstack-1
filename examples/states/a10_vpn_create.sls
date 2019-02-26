@@ -1,2 +1,3 @@
 a10_vpn_ex:
-  a10_vpn.create:
+  a10.create:
+    - a10_obj: vpn

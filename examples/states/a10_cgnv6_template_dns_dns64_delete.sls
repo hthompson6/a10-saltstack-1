@@ -1,2 +1,3 @@
 a10_cgnv6_template_dns_dns64_ex:
-  a10_cgnv6_template_dns_dns64.delete:
+  a10.delete:
+    - a10_obj: cgnv6_template_dns_dns64 

@@ -1,3 +1,4 @@
 a10_slb_template_dns_ex:
-  a10_slb_template_dns.delete:
+  a10.delete:
+    - a10_obj: slb_template_dns 
     - name: my_dns

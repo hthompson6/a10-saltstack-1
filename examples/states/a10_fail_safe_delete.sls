@@ -1,2 +1,3 @@
 a10_fail_safe_ex:
-  a10_fail_safe.delete:
+  a10.delete:
+    - a10_obj: fail_safe 

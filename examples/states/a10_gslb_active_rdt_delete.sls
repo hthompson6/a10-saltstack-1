@@ -1,2 +1,3 @@
 a10_gslb_active_rdt_ex:
-  a10_gslb_active_rdt.delete:
+  a10.delete:
+    - a10_obj: gslb_active_rdt 

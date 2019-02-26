@@ -1,2 +1,3 @@
 a10_logging_buffered_ex:
-  a10_logging_buffered.delete:
+  a10.delete:
+    - a10_obj: logging_buffered 

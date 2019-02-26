@@ -1,2 +1,3 @@
 a10_fw_global_ex:
-  a10_fw_global.create:
+  a10.create:
+    - a10_obj: fw_global

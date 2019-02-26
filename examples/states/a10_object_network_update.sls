@@ -1,2 +1,3 @@
 a10_object_network_ex:
-  a10_object_network.update:
+  a10.update:
+    - a10_obj: object_network

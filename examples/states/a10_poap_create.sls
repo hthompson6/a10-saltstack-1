@@ -1,2 +1,3 @@
 a10_poap_ex:
-  a10_poap.create:
+  a10.create:
+    - a10_obj: poap

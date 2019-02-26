@@ -1,2 +1,3 @@
 a10_debug_sess_ex:
-  a10_debug_sess.update:
+  a10.update:
+    - a10_obj: debug_sess

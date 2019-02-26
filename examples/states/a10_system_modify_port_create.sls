@@ -1,2 +1,3 @@
 a10_system_modify_port_ex:
-  a10_system_modify_port.create:
+  a10.create:
+    - a10_obj: system_modify_port

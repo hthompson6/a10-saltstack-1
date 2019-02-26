@@ -1,2 +1,3 @@
 a10_debug_tcp_ex:
-  a10_debug_tcp.create:
+  a10.create:
+    - a10_obj: debug_tcp

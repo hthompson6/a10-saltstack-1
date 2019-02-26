@@ -1,3 +1,4 @@
 a10_slb_template_smtp_ex:
-  a10_slb_template_smtp.delete:
+  a10.delete:
+    - a10_obj: slb_template_smtp 
     - name: my_smtp

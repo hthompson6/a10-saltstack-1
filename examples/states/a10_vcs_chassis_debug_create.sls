@@ -1,2 +1,3 @@
 a10_vcs_chassis_debug_ex:
-  a10_vcs_chassis_debug.create:
+  a10.create:
+    - a10_obj: vcs_chassis_debug

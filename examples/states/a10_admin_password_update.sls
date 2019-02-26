@@ -1,2 +1,3 @@
 a10_admin_password_ex:
-  a10_admin_password.update:
+  a10.update:
+    - a10_obj: admin_password

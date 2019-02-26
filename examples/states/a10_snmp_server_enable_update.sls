@@ -1,2 +1,3 @@
 a10_snmp_server_enable_ex:
-  a10_snmp_server_enable.update:
+  a10.update:
+    - a10_obj: snmp_server_enable

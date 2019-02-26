@@ -1,2 +1,3 @@
 a10_router_isis_ex:
-  a10_router_isis.create:
+  a10.create:
+    - a10_obj: router_isis

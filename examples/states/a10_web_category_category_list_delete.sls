@@ -1,3 +1,4 @@
 a10_web_category_category_list_ex:
-  a10_web_category_category_list.delete:
+  a10.delete:
+    - a10_obj: web_category_category_list 
     - name: my_category-list

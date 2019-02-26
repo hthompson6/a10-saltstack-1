@@ -1,2 +1,3 @@
 a10_debug_mlb_ex:
-  a10_debug_mlb.create:
+  a10.create:
+    - a10_obj: debug_mlb

@@ -1,2 +1,3 @@
 a10_debug_ospf_ex:
-  a10_debug_ospf.delete:
+  a10.delete:
+    - a10_obj: debug_ospf 

@@ -1,2 +1,3 @@
 a10_sflow_setting_ex:
-  a10_sflow_setting.create:
+  a10.create:
+    - a10_obj: sflow_setting

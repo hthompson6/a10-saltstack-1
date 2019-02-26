@@ -1,2 +1,3 @@
 a10_router_rip_redistribute_ex:
-  a10_router_rip_redistribute.create:
+  a10.create:
+    - a10_obj: router_rip_redistribute

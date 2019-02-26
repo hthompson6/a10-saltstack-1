@@ -1,2 +1,3 @@
 a10_cgnv6_stateful_firewall_alg_ftp_ex:
-  a10_cgnv6_stateful_firewall_alg_ftp.delete:
+  a10.delete:
+    - a10_obj: cgnv6_stateful_firewall_alg_ftp 

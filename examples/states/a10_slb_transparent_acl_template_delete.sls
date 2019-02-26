@@ -1,2 +1,3 @@
 a10_slb_transparent_acl_template_ex:
-  a10_slb_transparent_acl_template.delete:
+  a10.delete:
+    - a10_obj: slb_transparent_acl_template 

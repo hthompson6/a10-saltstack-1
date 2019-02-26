@@ -1,3 +1,4 @@
 a10_threat_intel_threat_feed_ex:
-  a10_threat_intel_threat_feed.update:
+  a10.update:
+    - a10_obj: threat_intel_threat_feed
     - type: webroot

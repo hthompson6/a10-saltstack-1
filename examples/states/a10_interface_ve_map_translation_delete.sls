@@ -1,2 +1,3 @@
 a10_interface_ve_map_translation_ex:
-  a10_interface_ve_map_translation.delete:
+  a10.delete:
+    - a10_obj: interface_ve_map_translation 

@@ -1,2 +1,3 @@
 a10_license_manager_overage_ex:
-  a10_license_manager_overage.create:
+  a10.create:
+    - a10_obj: license_manager_overage

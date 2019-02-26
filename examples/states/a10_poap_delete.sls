@@ -1,2 +1,3 @@
 a10_poap_ex:
-  a10_poap.delete:
+  a10.delete:
+    - a10_obj: poap 

@@ -1,2 +1,3 @@
 a10_web_service_secure_certificate_ex:
-  a10_web_service_secure_certificate.delete:
+  a10.delete:
+    - a10_obj: web_service_secure_certificate 

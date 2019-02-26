@@ -1,2 +1,3 @@
 a10_health_monitor_method_https_ex:
-  a10_health_monitor_method_https.update:
+  a10.update:
+    - a10_obj: health_monitor_method_https

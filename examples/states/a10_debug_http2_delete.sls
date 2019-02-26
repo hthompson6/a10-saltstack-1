@@ -1,2 +1,3 @@
 a10_debug_http2_ex:
-  a10_debug_http2.delete:
+  a10.delete:
+    - a10_obj: debug_http2 

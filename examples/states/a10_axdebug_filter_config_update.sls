@@ -1,3 +1,4 @@
 a10_axdebug_filter_config_ex:
-  a10_axdebug_filter_config.update:
+  a10.update:
+    - a10_obj: axdebug_filter_config
     - number: 1

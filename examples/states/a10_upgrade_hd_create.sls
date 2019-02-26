@@ -1,2 +1,3 @@
 a10_upgrade_hd_ex:
-  a10_upgrade_hd.create:
+  a10.create:
+    - a10_obj: upgrade_hd

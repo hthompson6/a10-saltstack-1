@@ -1,2 +1,3 @@
 a10_sys_ut_run_test_ex:
-  a10_sys_ut_run_test.create:
+  a10.create:
+    - a10_obj: sys_ut_run_test

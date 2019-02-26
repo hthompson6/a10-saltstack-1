@@ -1,2 +1,3 @@
 a10_gslb_protocol_limit_ex:
-  a10_gslb_protocol_limit.update:
+  a10.update:
+    - a10_obj: gslb_protocol_limit

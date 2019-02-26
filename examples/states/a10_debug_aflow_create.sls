@@ -1,2 +1,3 @@
 a10_debug_aflow_ex:
-  a10_debug_aflow.create:
+  a10.create:
+    - a10_obj: debug_aflow

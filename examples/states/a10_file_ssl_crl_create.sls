@@ -1,2 +1,3 @@
 a10_file_ssl_crl_ex:
-  a10_file_ssl_crl.create:
+  a10.create:
+    - a10_obj: file_ssl_crl

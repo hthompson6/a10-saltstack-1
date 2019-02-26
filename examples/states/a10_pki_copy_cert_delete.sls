@@ -1,2 +1,3 @@
 a10_pki_copy_cert_ex:
-  a10_pki_copy_cert.delete:
+  a10.delete:
+    - a10_obj: pki_copy_cert 

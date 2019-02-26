@@ -1,2 +1,3 @@
 a10_ipv6_address_ex:
-  a10_ipv6_address.create:
+  a10.create:
+    - a10_obj: ipv6_address

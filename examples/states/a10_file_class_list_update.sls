@@ -1,2 +1,3 @@
 a10_file_class_list_ex:
-  a10_file_class_list.update:
+  a10.update:
+    - a10_obj: file_class_list

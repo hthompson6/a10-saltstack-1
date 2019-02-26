@@ -1,2 +1,3 @@
 a10_import_periodic_auth_portal_ex:
-  a10_import_periodic_auth_portal.delete:
+  a10.delete:
+    - a10_obj: import_periodic_auth_portal 

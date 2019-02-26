@@ -1,2 +1,3 @@
 a10_ip_dns_secondary_ex:
-  a10_ip_dns_secondary.create:
+  a10.create:
+    - a10_obj: ip_dns_secondary

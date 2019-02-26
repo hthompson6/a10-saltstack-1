@@ -1,2 +1,3 @@
 a10_rba_ex:
-  a10_rba.create:
+  a10.create:
+    - a10_obj: rba

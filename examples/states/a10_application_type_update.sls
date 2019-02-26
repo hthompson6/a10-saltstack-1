@@ -1,2 +1,3 @@
 a10_application_type_ex:
-  a10_application_type.update:
+  a10.update:
+    - a10_obj: application_type

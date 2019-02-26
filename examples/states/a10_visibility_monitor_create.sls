@@ -1,3 +1,4 @@
 a10_visibility_monitor_ex:
-  a10_visibility_monitor.create:
+  a10.create:
+    - a10_obj: visibility_monitor
     - primary_monitor: traffic

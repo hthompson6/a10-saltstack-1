@@ -1,2 +1,3 @@
 a10_file_policy_ex:
-  a10_file_policy.create:
+  a10.create:
+    - a10_obj: file_policy

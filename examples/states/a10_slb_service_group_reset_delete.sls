@@ -1,2 +1,3 @@
 a10_slb_service_group_reset_ex:
-  a10_slb_service_group_reset.delete:
+  a10.delete:
+    - a10_obj: slb_service_group_reset 

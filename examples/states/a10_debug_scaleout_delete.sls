@@ -1,2 +1,3 @@
 a10_debug_scaleout_ex:
-  a10_debug_scaleout.delete:
+  a10.delete:
+    - a10_obj: debug_scaleout 

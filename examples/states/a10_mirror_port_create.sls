@@ -1,3 +1,4 @@
 a10_mirror_port_ex:
-  a10_mirror_port.create:
+  a10.create:
+    - a10_obj: mirror_port
     - mirror_index: 1

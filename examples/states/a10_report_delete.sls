@@ -1,2 +1,3 @@
 a10_report_ex:
-  a10_report.delete:
+  a10.delete:
+    - a10_obj: report 

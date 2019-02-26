@@ -1,2 +1,3 @@
 a10_smtp_ex:
-  a10_smtp.create:
+  a10.create:
+    - a10_obj: smtp

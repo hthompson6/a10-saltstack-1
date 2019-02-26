@@ -1,2 +1,3 @@
 a10_active_partition_ex:
-  a10_active_partition.update:
+  a10.update:
+    - a10_obj: active_partition

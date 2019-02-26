@@ -1,2 +1,3 @@
 a10_gslb_template_snmp_ex:
-  a10_gslb_template_snmp.delete:
+  a10.delete:
+    - a10_obj: gslb_template_snmp 

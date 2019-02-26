@@ -1,3 +1,4 @@
 a10_sys_ut_event_action_ex:
-  a10_sys_ut_event_action.create:
+  a10.create:
+    - a10_obj: sys_ut_event_action
     - direction: send

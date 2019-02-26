@@ -1,2 +1,3 @@
 a10_cmcov_ex:
-  a10_cmcov.delete:
+  a10.delete:
+    - a10_obj: cmcov 

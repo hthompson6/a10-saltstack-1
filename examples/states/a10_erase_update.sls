@@ -1,2 +1,3 @@
 a10_erase_ex:
-  a10_erase.update:
+  a10.update:
+    - a10_obj: erase

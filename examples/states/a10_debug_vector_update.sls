@@ -1,2 +1,3 @@
 a10_debug_vector_ex:
-  a10_debug_vector.update:
+  a10.update:
+    - a10_obj: debug_vector

@@ -1,2 +1,3 @@
 a10_logging_console_ex:
-  a10_logging_console.update:
+  a10.update:
+    - a10_obj: logging_console

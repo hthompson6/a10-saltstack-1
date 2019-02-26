@@ -1,2 +1,3 @@
 a10_snmp_server_management_index_ex:
-  a10_snmp_server_management_index.delete:
+  a10.delete:
+    - a10_obj: snmp_server_management_index 

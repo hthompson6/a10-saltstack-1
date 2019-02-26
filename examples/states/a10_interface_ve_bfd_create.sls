@@ -1,2 +1,3 @@
 a10_interface_ve_bfd_ex:
-  a10_interface_ve_bfd.create:
+  a10.create:
+    - a10_obj: interface_ve_bfd

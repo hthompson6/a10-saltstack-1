@@ -1,3 +1,4 @@
 a10_glid_ex:
-  a10_glid.update:
+  a10.update:
+    - a10_obj: glid
     - num: 1

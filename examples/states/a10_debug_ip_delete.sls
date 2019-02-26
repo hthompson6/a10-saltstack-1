@@ -1,2 +1,3 @@
 a10_debug_ip_ex:
-  a10_debug_ip.delete:
+  a10.delete:
+    - a10_obj: debug_ip 

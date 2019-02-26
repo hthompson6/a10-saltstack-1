@@ -1,2 +1,3 @@
 a10_slb_common_ex:
-  a10_slb_common.create:
+  a10.create:
+    - a10_obj: slb_common

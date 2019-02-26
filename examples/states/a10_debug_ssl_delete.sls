@@ -1,2 +1,3 @@
 a10_debug_ssl_ex:
-  a10_debug_ssl.delete:
+  a10.delete:
+    - a10_obj: debug_ssl 

@@ -1,3 +1,4 @@
 a10_rba_role_ex:
-  a10_rba_role.create:
+  a10.create:
+    - a10_obj: rba_role
     - name: my_role

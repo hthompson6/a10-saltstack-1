@@ -1,2 +1,3 @@
 a10_debug_h323_ex:
-  a10_debug_h323.update:
+  a10.update:
+    - a10_obj: debug_h323

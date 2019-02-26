@@ -1,2 +1,3 @@
 a10_sys_ut_ex:
-  a10_sys_ut.update:
+  a10.update:
+    - a10_obj: sys_ut

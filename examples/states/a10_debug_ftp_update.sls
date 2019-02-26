@@ -1,2 +1,3 @@
 a10_debug_ftp_ex:
-  a10_debug_ftp.update:
+  a10.update:
+    - a10_obj: debug_ftp

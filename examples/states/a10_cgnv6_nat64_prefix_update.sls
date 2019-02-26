@@ -1,2 +1,3 @@
 a10_cgnv6_nat64_prefix_ex:
-  a10_cgnv6_nat64_prefix.update:
+  a10.update:
+    - a10_obj: cgnv6_nat64_prefix

@@ -1,2 +1,3 @@
 a10_slb_perf_ex:
-  a10_slb_perf.delete:
+  a10.delete:
+    - a10_obj: slb_perf 

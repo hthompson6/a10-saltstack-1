@@ -1,2 +1,3 @@
 a10_rba_ex:
-  a10_rba.delete:
+  a10.delete:
+    - a10_obj: rba 

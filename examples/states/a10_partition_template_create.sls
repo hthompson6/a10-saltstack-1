@@ -1,2 +1,3 @@
 a10_partition_template_ex:
-  a10_partition_template.create:
+  a10.create:
+    - a10_obj: partition_template

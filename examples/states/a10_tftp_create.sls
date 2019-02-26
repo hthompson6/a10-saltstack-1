@@ -1,2 +1,3 @@
 a10_tftp_ex:
-  a10_tftp.create:
+  a10.create:
+    - a10_obj: tftp

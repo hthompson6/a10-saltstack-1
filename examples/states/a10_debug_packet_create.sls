@@ -1,2 +1,3 @@
 a10_debug_packet_ex:
-  a10_debug_packet.create:
+  a10.create:
+    - a10_obj: debug_packet

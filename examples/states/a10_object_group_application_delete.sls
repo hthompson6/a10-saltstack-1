@@ -1,2 +1,3 @@
 a10_object_group_application_ex:
-  a10_object_group_application.delete:
+  a10.delete:
+    - a10_obj: object_group_application 

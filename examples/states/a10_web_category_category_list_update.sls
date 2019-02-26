@@ -1,3 +1,4 @@
 a10_web_category_category_list_ex:
-  a10_web_category_category_list.update:
+  a10.update:
+    - a10_obj: web_category_category_list
     - name: my_category-list

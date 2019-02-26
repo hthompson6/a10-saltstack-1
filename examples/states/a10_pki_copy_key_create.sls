@@ -1,2 +1,3 @@
 a10_pki_copy_key_ex:
-  a10_pki_copy_key.create:
+  a10.create:
+    - a10_obj: pki_copy_key

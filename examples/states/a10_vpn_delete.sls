@@ -1,2 +1,3 @@
 a10_vpn_ex:
-  a10_vpn.delete:
+  a10.delete:
+    - a10_obj: vpn 

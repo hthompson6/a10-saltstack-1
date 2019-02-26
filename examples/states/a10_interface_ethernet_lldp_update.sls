@@ -1,2 +1,3 @@
 a10_interface_ethernet_lldp_ex:
-  a10_interface_ethernet_lldp.update:
+  a10.update:
+    - a10_obj: interface_ethernet_lldp

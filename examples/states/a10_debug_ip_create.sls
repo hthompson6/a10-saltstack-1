@@ -1,2 +1,3 @@
 a10_debug_ip_ex:
-  a10_debug_ip.create:
+  a10.create:
+    - a10_obj: debug_ip
