@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["answer_only_disable","auth_data","cache","change_query"
 
 MODULE_NAME = 'dns64'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/template/dns/{dns_name}/dns64"
     f_dict = {}
-    f_dict["dns_name"] = module.params["dns_name"]
+    f_dict["dns_name"] = kwargs["dns_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/template/dns/{dns_name}/dns64"
     f_dict = {}
-    f_dict["dns_name"] = module.params["dns_name"]
+    f_dict["dns_name"] = kwargs["dns_name"]
 
     return url_base.format(**f_dict)

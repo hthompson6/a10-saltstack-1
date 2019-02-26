@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["checksum","dest_port","dest_port_value","length","nat_p
 
 MODULE_NAME = 'udp'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/sys-ut/event/{event_number}/action/{action_direction}/udp"
     f_dict = {}
-    f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["event_number"] = module.params["event_number"]
+    f_dict["action_direction"] = kwargs["action_direction"]
+    f_dict["event_number"] = kwargs["event_number"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/event/{event_number}/action/{action_direction}/udp"
     f_dict = {}
-    f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["event_number"] = module.params["event_number"]
+    f_dict["action_direction"] = kwargs["action_direction"]
+    f_dict["event_number"] = kwargs["event_number"]
 
     return url_base.format(**f_dict)

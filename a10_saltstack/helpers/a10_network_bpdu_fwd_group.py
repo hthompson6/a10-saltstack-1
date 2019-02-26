@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["bpdu_fwd_group_number","ethernet_list","user_tag","uuid
 
 MODULE_NAME = 'bpdu-fwd-group'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/network/bpdu-fwd-group/{bpdu-fwd-group-number}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/network/bpdu-fwd-group/{bpdu-fwd-group-number}"
     f_dict = {}
-    f_dict["bpdu-fwd-group-number"] = module.params["bpdu-fwd-group-number"]
+    f_dict["bpdu-fwd-group-number"] = kwargs["bpdu-fwd-group-number"]
 
     return url_base.format(**f_dict)

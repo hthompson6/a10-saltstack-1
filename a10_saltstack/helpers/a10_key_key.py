@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["key_number","key_string","user_tag","uuid",]
 
 MODULE_NAME = 'key'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/key/{key_chain_flag}+{key-chain-name}/key/{key-number}"
     f_dict = {}
     f_dict["key-number"] = ""
-    f_dict["key-chain-name"] = module.params["key-chain-name"]
-    f_dict["key_chain_flag"] = module.params["key_chain_flag"]
+    f_dict["key-chain-name"] = kwargs["key-chain-name"]
+    f_dict["key_chain_flag"] = kwargs["key_chain_flag"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/key/{key_chain_flag}+{key-chain-name}/key/{key-number}"
     f_dict = {}
-    f_dict["key-number"] = module.params["key-number"]
-    f_dict["key-chain-name"] = module.params["key-chain-name"]
-    f_dict["key_chain_flag"] = module.params["key_chain_flag"]
+    f_dict["key-number"] = kwargs["key-number"]
+    f_dict["key-chain-name"] = kwargs["key-chain-name"]
+    f_dict["key_chain_flag"] = kwargs["key_chain_flag"]
 
     return url_base.format(**f_dict)

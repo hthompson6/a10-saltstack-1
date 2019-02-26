@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["authentication_cfg","authentication_key","bfd_cfg","cos
 
 MODULE_NAME = 'ospf-global'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/lif/{lif_ifnum}/ip/ospf/ospf-global"
     f_dict = {}
-    f_dict["lif_ifnum"] = module.params["lif_ifnum"]
+    f_dict["lif_ifnum"] = kwargs["lif_ifnum"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/lif/{lif_ifnum}/ip/ospf/ospf-global"
     f_dict = {}
-    f_dict["lif_ifnum"] = module.params["lif_ifnum"]
+    f_dict["lif_ifnum"] = kwargs["lif_ifnum"]
 
     return url_base.format(**f_dict)

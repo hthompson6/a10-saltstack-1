@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["disable","enable","enable_disable_action","nat_address"
 
 MODULE_NAME = 'static'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ip/nat/inside/source/static/{src-address}+{nat-address}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ip/nat/inside/source/static/{src-address}+{nat-address}"
     f_dict = {}
-    f_dict["src-address"] = module.params["src-address"]
-    f_dict["nat-address"] = module.params["nat-address"]
+    f_dict["src-address"] = kwargs["src-address"]
+    f_dict["nat-address"] = kwargs["nat-address"]
 
     return url_base.format(**f_dict)

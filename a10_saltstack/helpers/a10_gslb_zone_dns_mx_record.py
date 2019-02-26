@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["mx_name","priority","sampling_enable","ttl","uuid",]
 
 MODULE_NAME = 'dns-mx-record'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/zone/{zone_name}/dns-mx-record/{mx-name}"
     f_dict = {}
     f_dict["mx-name"] = ""
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{zone_name}/dns-mx-record/{mx-name}"
     f_dict = {}
-    f_dict["mx-name"] = module.params["mx-name"]
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["mx-name"] = kwargs["mx-name"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)

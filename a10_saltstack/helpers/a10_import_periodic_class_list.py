@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["class_list","period","remote_file","use_mgmt_port","use
 
 MODULE_NAME = 'class-list'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/import-periodic/class-list/{class-list}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/class-list/{class-list}"
     f_dict = {}
-    f_dict["class-list"] = module.params["class-list"]
+    f_dict["class-list"] = kwargs["class-list"]
 
     return url_base.format(**f_dict)

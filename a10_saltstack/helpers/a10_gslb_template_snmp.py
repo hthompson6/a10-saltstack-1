@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["auth_key","auth_proto","community","context_engine_id",
 
 MODULE_NAME = 'snmp'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/template/snmp/{snmp-name}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/template/snmp/{snmp-name}"
     f_dict = {}
-    f_dict["snmp-name"] = module.params["snmp-name"]
+    f_dict["snmp-name"] = kwargs["snmp-name"]
 
     return url_base.format(**f_dict)

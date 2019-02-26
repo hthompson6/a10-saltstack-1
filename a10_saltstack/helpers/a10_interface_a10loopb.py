@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["sampling_enable",]
 
 MODULE_NAME = 'a10loopb'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/a10loopb/{sampling-enable}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/a10loopb/{sampling-enable}"
     f_dict = {}
-    f_dict["sampling-enable"] = module.params["sampling-enable"]
+    f_dict["sampling-enable"] = kwargs["sampling-enable"]
 
     return url_base.format(**f_dict)

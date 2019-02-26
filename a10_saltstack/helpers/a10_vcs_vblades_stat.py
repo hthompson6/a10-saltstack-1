@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["sampling_enable","uuid","vblade_id",]
 
 MODULE_NAME = 'stat'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/vcs-vblades/stat/{vblade-id}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/vcs-vblades/stat/{vblade-id}"
     f_dict = {}
-    f_dict["vblade-id"] = module.params["vblade-id"]
+    f_dict["vblade-id"] = kwargs["vblade-id"]
 
     return url_base.format(**f_dict)

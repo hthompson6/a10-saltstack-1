@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["port_cfg","udp_idle_timeout","uuid",]
 
 MODULE_NAME = 'udp'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/fw/session-aging/{session_aging_name}/udp"
     f_dict = {}
-    f_dict["session_aging_name"] = module.params["session_aging_name"]
+    f_dict["session_aging_name"] = kwargs["session_aging_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/fw/session-aging/{session_aging_name}/udp"
     f_dict = {}
-    f_dict["session_aging_name"] = module.params["session_aging_name"]
+    f_dict["session_aging_name"] = kwargs["session_aging_name"]
 
     return url_base.format(**f_dict)

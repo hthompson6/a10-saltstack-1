@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["access_list","action","authentication_template","author
 
 MODULE_NAME = 'aaa-rule'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/aam/aaa-policy/{aaa_policy_name}/aaa-rule/{index}"
     f_dict = {}
     f_dict["index"] = ""
-    f_dict["aaa_policy_name"] = module.params["aaa_policy_name"]
+    f_dict["aaa_policy_name"] = kwargs["aaa_policy_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/aam/aaa-policy/{aaa_policy_name}/aaa-rule/{index}"
     f_dict = {}
-    f_dict["index"] = module.params["index"]
-    f_dict["aaa_policy_name"] = module.params["aaa_policy_name"]
+    f_dict["index"] = kwargs["index"]
+    f_dict["aaa_policy_name"] = kwargs["aaa_policy_name"]
 
     return url_base.format(**f_dict)

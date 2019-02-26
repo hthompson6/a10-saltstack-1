@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["local_ip","nexthop_ip","uuid",]
 
 MODULE_NAME = 'bfd'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ip/route/static/bfd/{local-ip}+{nexthop-ip}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ip/route/static/bfd/{local-ip}+{nexthop-ip}"
     f_dict = {}
-    f_dict["local-ip"] = module.params["local-ip"]
-    f_dict["nexthop-ip"] = module.params["nexthop-ip"]
+    f_dict["local-ip"] = kwargs["local-ip"]
+    f_dict["nexthop-ip"] = kwargs["nexthop-ip"]
 
     return url_base.format(**f_dict)

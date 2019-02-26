@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["backdoor","comm_value","description","network_ipv6","ro
 
 MODULE_NAME = 'ipv6-network'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/address-family/ipv6/network/ipv6-network/{network-ipv6}"
     f_dict = {}
     f_dict["network-ipv6"] = ""
-    f_dict["bgp_as_number"] = module.params["bgp_as_number"]
+    f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/address-family/ipv6/network/ipv6-network/{network-ipv6}"
     f_dict = {}
-    f_dict["network-ipv6"] = module.params["network-ipv6"]
-    f_dict["bgp_as_number"] = module.params["bgp_as_number"]
+    f_dict["network-ipv6"] = kwargs["network-ipv6"]
+    f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)

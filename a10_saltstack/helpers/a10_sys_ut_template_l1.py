@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["auto","drop","eth_list","length","trunk_list","uuid","v
 
 MODULE_NAME = 'l1'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/sys-ut/template/{template_name}/l1"
     f_dict = {}
-    f_dict["template_name"] = module.params["template_name"]
+    f_dict["template_name"] = kwargs["template_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/template/{template_name}/l1"
     f_dict = {}
-    f_dict["template_name"] = module.params["template_name"]
+    f_dict["template_name"] = kwargs["template_name"]
 
     return url_base.format(**f_dict)

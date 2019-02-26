@@ -19,27 +19,27 @@ AVAILABLE_PROPERTIES = ["delay","direction","drop","l1","l2","l3","tcp","templat
 
 MODULE_NAME = 'action'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_number}/action/{direction}"
     f_dict = {}
     f_dict["direction"] = ""
-    f_dict["case_number"] = module.params["case_number"]
-    f_dict["name"] = module.params["name"]
-    f_dict["state_name"] = module.params["state_name"]
+    f_dict["case_number"] = kwargs["case_number"]
+    f_dict["name"] = kwargs["name"]
+    f_dict["state_name"] = kwargs["state_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_number}/action/{direction}"
     f_dict = {}
-    f_dict["direction"] = module.params["direction"]
-    f_dict["case_number"] = module.params["case_number"]
-    f_dict["name"] = module.params["name"]
-    f_dict["state_name"] = module.params["state_name"]
+    f_dict["direction"] = kwargs["direction"]
+    f_dict["case_number"] = kwargs["case_number"]
+    f_dict["name"] = kwargs["name"]
+    f_dict["state_name"] = kwargs["state_name"]
 
     return url_base.format(**f_dict)

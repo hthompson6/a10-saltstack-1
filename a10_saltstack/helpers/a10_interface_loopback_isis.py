@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["authentication","bfd_cfg","circuit_type","csnp_interval
 
 MODULE_NAME = 'isis'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/loopback/{loopback_ifnum}/isis"
     f_dict = {}
-    f_dict["loopback_ifnum"] = module.params["loopback_ifnum"]
+    f_dict["loopback_ifnum"] = kwargs["loopback_ifnum"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/loopback/{loopback_ifnum}/isis"
     f_dict = {}
-    f_dict["loopback_ifnum"] = module.params["loopback_ifnum"]
+    f_dict["loopback_ifnum"] = kwargs["loopback_ifnum"]
 
     return url_base.format(**f_dict)

@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["ipv4_addr","rule_cfg","sampling_enable","user_tag","uui
 
 MODULE_NAME = 'ip'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/lsn-rule-list/{lsn_rule_list_name}/ip/{ipv4-addr}"
     f_dict = {}
     f_dict["ipv4-addr"] = ""
-    f_dict["lsn_rule_list_name"] = module.params["lsn_rule_list_name"]
+    f_dict["lsn_rule_list_name"] = kwargs["lsn_rule_list_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn-rule-list/{lsn_rule_list_name}/ip/{ipv4-addr}"
     f_dict = {}
-    f_dict["ipv4-addr"] = module.params["ipv4-addr"]
-    f_dict["lsn_rule_list_name"] = module.params["lsn_rule_list_name"]
+    f_dict["ipv4-addr"] = kwargs["ipv4-addr"]
+    f_dict["lsn_rule_list_name"] = kwargs["lsn_rule_list_name"]
 
     return url_base.format(**f_dict)

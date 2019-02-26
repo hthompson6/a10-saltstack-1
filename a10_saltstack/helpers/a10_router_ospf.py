@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["area_list","auto_cost_reference_bandwidth","bfd_all_int
 
 MODULE_NAME = 'ospf'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/ospf/{process-id}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/ospf/{process-id}"
     f_dict = {}
-    f_dict["process-id"] = module.params["process-id"]
+    f_dict["process-id"] = kwargs["process-id"]
 
     return url_base.format(**f_dict)

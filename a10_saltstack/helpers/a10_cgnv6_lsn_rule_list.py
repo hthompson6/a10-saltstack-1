@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["default","domain_ip","domain_list_name_list","domain_na
 
 MODULE_NAME = 'lsn-rule-list'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/lsn-rule-list/{name}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn-rule-list/{name}"
     f_dict = {}
-    f_dict["name"] = module.params["name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

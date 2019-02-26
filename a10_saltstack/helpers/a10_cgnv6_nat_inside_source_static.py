@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["nat_address","partition","src_address","uuid","vrid",]
 
 MODULE_NAME = 'static'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/nat/inside/source/static/{src-address}+{partition}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/nat/inside/source/static/{src-address}+{partition}"
     f_dict = {}
-    f_dict["src-address"] = module.params["src-address"]
-    f_dict["partition"] = module.params["partition"]
+    f_dict["src-address"] = kwargs["src-address"]
+    f_dict["partition"] = kwargs["partition"]
 
     return url_base.format(**f_dict)

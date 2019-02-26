@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["address_list","ipv6_address_list","uuid","withdraw_rout
 
 MODULE_NAME = 'health-check-gateway'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/map/translation/domain/{domain_name}/health-check-gateway"
     f_dict = {}
-    f_dict["domain_name"] = module.params["domain_name"]
+    f_dict["domain_name"] = kwargs["domain_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/map/translation/domain/{domain_name}/health-check-gateway"
     f_dict = {}
-    f_dict["domain_name"] = module.params["domain_name"]
+    f_dict["domain_name"] = kwargs["domain_name"]
 
     return url_base.format(**f_dict)

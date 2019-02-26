@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["csv_name","delim_char","delim_num","ipv6_enable","multi
 
 MODULE_NAME = 'csv'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/template/csv/{csv-name}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/template/csv/{csv-name}"
     f_dict = {}
-    f_dict["csv-name"] = module.params["csv-name"]
+    f_dict["csv-name"] = kwargs["csv-name"]
 
     return url_base.format(**f_dict)

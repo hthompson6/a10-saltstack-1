@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["partition","user_tag","uuid","vrid_lead_str",]
 
 MODULE_NAME = 'vrid-lead'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/vrrp-a/vrid-lead/{vrid-lead-str}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/vrid-lead/{vrid-lead-str}"
     f_dict = {}
-    f_dict["vrid-lead-str"] = module.params["vrid-lead-str"]
+    f_dict["vrid-lead-str"] = kwargs["vrid-lead-str"]
 
     return url_base.format(**f_dict)

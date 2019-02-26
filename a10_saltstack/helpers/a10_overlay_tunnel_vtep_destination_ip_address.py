@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["encap","ip_address","user_tag","uuid","vni_list",]
 
 MODULE_NAME = 'destination-ip-address'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/overlay-tunnel/vtep/{vtep_id}/destination-ip-address/{ip-address}"
     f_dict = {}
     f_dict["ip-address"] = ""
-    f_dict["vtep_id"] = module.params["vtep_id"]
+    f_dict["vtep_id"] = kwargs["vtep_id"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/overlay-tunnel/vtep/{vtep_id}/destination-ip-address/{ip-address}"
     f_dict = {}
-    f_dict["ip-address"] = module.params["ip-address"]
-    f_dict["vtep_id"] = module.params["vtep_id"]
+    f_dict["ip-address"] = kwargs["ip-address"]
+    f_dict["vtep_id"] = kwargs["vtep_id"]
 
     return url_base.format(**f_dict)

@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["sampling_enable",]
 
 MODULE_NAME = 'track-app-rule-list'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/rule-set/{rule_set_name}/track-app-rule-list"
     f_dict = {}
-    f_dict["rule_set_name"] = module.params["rule_set_name"]
+    f_dict["rule_set_name"] = kwargs["rule_set_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/rule-set/{rule_set_name}/track-app-rule-list"
     f_dict = {}
-    f_dict["rule_set_name"] = module.params["rule_set_name"]
+    f_dict["rule_set_name"] = kwargs["rule_set_name"]
 
     return url_base.format(**f_dict)

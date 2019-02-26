@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["ipv6_address","ipv6_nexthop_ipv6","ipv6_nexthop_tunnel"
 
 MODULE_NAME = 'rib'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ipv6/route/rib/{ipv6-address}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/route/rib/{ipv6-address}"
     f_dict = {}
-    f_dict["ipv6-address"] = module.params["ipv6-address"]
+    f_dict["ipv6-address"] = kwargs["ipv6-address"]
 
     return url_base.format(**f_dict)

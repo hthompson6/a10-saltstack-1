@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["mail_from","rcpt_to","smtp","smtp_domain","smtp_port","
 
 MODULE_NAME = 'smtp'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/health/monitor/{monitor_name}/method/smtp"
     f_dict = {}
-    f_dict["monitor_name"] = module.params["monitor_name"]
+    f_dict["monitor_name"] = kwargs["monitor_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/health/monitor/{monitor_name}/method/smtp"
     f_dict = {}
-    f_dict["monitor_name"] = module.params["monitor_name"]
+    f_dict["monitor_name"] = kwargs["monitor_name"]
 
     return url_base.format(**f_dict)

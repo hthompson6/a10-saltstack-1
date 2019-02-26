@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["fail_over_policy_template","priority","tracking_options
 
 MODULE_NAME = 'blade-parameters'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/vrrp-a/vrid/{vrid_val}/blade-parameters"
     f_dict = {}
-    f_dict["vrid_val"] = module.params["vrid_val"]
+    f_dict["vrid_val"] = kwargs["vrid_val"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/vrid/{vrid_val}/blade-parameters"
     f_dict = {}
-    f_dict["vrid_val"] = module.params["vrid_val"]
+    f_dict["vrid_val"] = kwargs["vrid_val"]
 
     return url_base.format(**f_dict)

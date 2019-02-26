@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["action","index","message_id","message_id_scope","severi
 
 MODULE_NAME = 'rule'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/acos-events/message-selector/{message_selector_name}/rule/{index}"
     f_dict = {}
     f_dict["index"] = ""
-    f_dict["message_selector_name"] = module.params["message_selector_name"]
+    f_dict["message_selector_name"] = kwargs["message_selector_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/acos-events/message-selector/{message_selector_name}/rule/{index}"
     f_dict = {}
-    f_dict["index"] = module.params["index"]
-    f_dict["message_selector_name"] = module.params["message_selector_name"]
+    f_dict["index"] = kwargs["index"]
+    f_dict["message_selector_name"] = kwargs["message_selector_name"]
 
     return url_base.format(**f_dict)

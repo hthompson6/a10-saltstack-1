@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["peer_from","peer_to","uuid",]
 
 MODULE_NAME = 'lacp-passthrough'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/network/lacp-passthrough/{peer-from}+{peer-to}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/network/lacp-passthrough/{peer-from}+{peer-to}"
     f_dict = {}
-    f_dict["peer-from"] = module.params["peer-from"]
-    f_dict["peer-to"] = module.params["peer-to"]
+    f_dict["peer-from"] = kwargs["peer-from"]
+    f_dict["peer-to"] = kwargs["peer-to"]
 
     return url_base.format(**f_dict)

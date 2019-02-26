@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["destination_vtep","ip_addr","overlay_mac_addr","uuid","
 
 MODULE_NAME = 'host'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/overlay-tunnel/vtep/{vtep_id}/host/{ip-addr}+{overlay-mac-addr}+{vni}+{destination-vtep}"
@@ -28,20 +28,20 @@ def new_url(module):
     f_dict["overlay-mac-addr"] = ""
     f_dict["vni"] = ""
     f_dict["destination-vtep"] = ""
-    f_dict["vtep_id"] = module.params["vtep_id"]
+    f_dict["vtep_id"] = kwargs["vtep_id"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/overlay-tunnel/vtep/{vtep_id}/host/{ip-addr}+{overlay-mac-addr}+{vni}+{destination-vtep}"
     f_dict = {}
-    f_dict["ip-addr"] = module.params["ip-addr"]
-    f_dict["overlay-mac-addr"] = module.params["overlay-mac-addr"]
-    f_dict["vni"] = module.params["vni"]
-    f_dict["destination-vtep"] = module.params["destination-vtep"]
-    f_dict["vtep_id"] = module.params["vtep_id"]
+    f_dict["ip-addr"] = kwargs["ip-addr"]
+    f_dict["overlay-mac-addr"] = kwargs["overlay-mac-addr"]
+    f_dict["vni"] = kwargs["vni"]
+    f_dict["destination-vtep"] = kwargs["destination-vtep"]
+    f_dict["vtep_id"] = kwargs["vtep_id"]
 
     return url_base.format(**f_dict)

@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["oid_list","remote","user","user_tag","uuid",]
 
 MODULE_NAME = 'read'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/snmp-server/community/read/{user}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/community/read/{user}"
     f_dict = {}
-    f_dict["user"] = module.params["user"]
+    f_dict["user"] = kwargs["user"]
 
     return url_base.format(**f_dict)

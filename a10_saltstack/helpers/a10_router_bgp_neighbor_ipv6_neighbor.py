@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["acos_application_only","activate","advertisement_interv
 
 MODULE_NAME = 'ipv6-neighbor'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/neighbor/ipv6-neighbor/{neighbor-ipv6}"
     f_dict = {}
     f_dict["neighbor-ipv6"] = ""
-    f_dict["bgp_as_number"] = module.params["bgp_as_number"]
+    f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/neighbor/ipv6-neighbor/{neighbor-ipv6}"
     f_dict = {}
-    f_dict["neighbor-ipv6"] = module.params["neighbor-ipv6"]
-    f_dict["bgp_as_number"] = module.params["bgp_as_number"]
+    f_dict["neighbor-ipv6"] = kwargs["neighbor-ipv6"]
+    f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)

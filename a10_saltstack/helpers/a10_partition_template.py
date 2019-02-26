@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["resource_accounting","uuid",]
 
 MODULE_NAME = 'template'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/partition/{partition_name}/template"
     f_dict = {}
-    f_dict["partition_name"] = module.params["partition_name"]
+    f_dict["partition_name"] = kwargs["partition_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/partition/{partition_name}/template"
     f_dict = {}
-    f_dict["partition_name"] = module.params["partition_name"]
+    f_dict["partition_name"] = kwargs["partition_name"]
 
     return url_base.format(**f_dict)
