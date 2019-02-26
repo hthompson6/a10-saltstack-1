@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["ethernet","ipv4_address","ipv6_address","nat_pool","src
 
 MODULE_NAME = 'ip'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/sys-ut/event/{event_number}/action/{action_direction}/l3/ip/{src-dst}"
     f_dict = {}
     f_dict["src-dst"] = ""
-    f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["event_number"] = module.params["event_number"]
+    f_dict["action_direction"] = kwargs["action_direction"]
+    f_dict["event_number"] = kwargs["event_number"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/event/{event_number}/action/{action_direction}/l3/ip/{src-dst}"
     f_dict = {}
-    f_dict["src-dst"] = module.params["src-dst"]
-    f_dict["action_direction"] = module.params["action_direction"]
-    f_dict["event_number"] = module.params["event_number"]
+    f_dict["src-dst"] = kwargs["src-dst"]
+    f_dict["action_direction"] = kwargs["action_direction"]
+    f_dict["event_number"] = kwargs["event_number"]
 
     return url_base.format(**f_dict)

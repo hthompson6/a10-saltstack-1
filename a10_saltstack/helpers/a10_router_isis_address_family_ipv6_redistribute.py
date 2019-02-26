@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["isis","redist_list","uuid","vip_list",]
 
 MODULE_NAME = 'redistribute'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/isis/{isis_tag}/address-family/ipv6/redistribute"
     f_dict = {}
-    f_dict["isis_tag"] = module.params["isis_tag"]
+    f_dict["isis_tag"] = kwargs["isis_tag"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/isis/{isis_tag}/address-family/ipv6/redistribute"
     f_dict = {}
-    f_dict["isis_tag"] = module.params["isis_tag"]
+    f_dict["isis_tag"] = kwargs["isis_tag"]
 
     return url_base.format(**f_dict)

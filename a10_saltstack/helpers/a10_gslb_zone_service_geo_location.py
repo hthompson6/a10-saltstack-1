@@ -19,27 +19,27 @@ AVAILABLE_PROPERTIES = ["action","action_type","alias","forward_type","geo_name"
 
 MODULE_NAME = 'geo-location'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/geo-location/{geo-name}"
     f_dict = {}
     f_dict["geo-name"] = ""
-    f_dict["service-name"] = module.params["service-name"]
-    f_dict["service_port"] = module.params["service_port"]
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["service-name"] = kwargs["service-name"]
+    f_dict["service_port"] = kwargs["service_port"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/geo-location/{geo-name}"
     f_dict = {}
-    f_dict["geo-name"] = module.params["geo-name"]
-    f_dict["service-name"] = module.params["service-name"]
-    f_dict["service_port"] = module.params["service_port"]
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["geo-name"] = kwargs["geo-name"]
+    f_dict["service-name"] = kwargs["service-name"]
+    f_dict["service_port"] = kwargs["service_port"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)

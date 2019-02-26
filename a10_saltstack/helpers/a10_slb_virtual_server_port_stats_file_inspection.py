@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["stats",]
 
 MODULE_NAME = 'port'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/virtual-server/{virtual_server_name}/port/{port_number}+{protocol}/stats?file-inspection=true"
     f_dict = {}
-    f_dict["protocol"] = module.params["protocol"]
-    f_dict["port_number"] = module.params["port_number"]
-    f_dict["virtual_server_name"] = module.params["virtual_server_name"]
+    f_dict["protocol"] = kwargs["protocol"]
+    f_dict["port_number"] = kwargs["port_number"]
+    f_dict["virtual_server_name"] = kwargs["virtual_server_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/virtual-server/{virtual_server_name}/port/{port_number}+{protocol}/stats?file-inspection=true"
     f_dict = {}
-    f_dict["protocol"] = module.params["protocol"]
-    f_dict["port_number"] = module.params["port_number"]
-    f_dict["virtual_server_name"] = module.params["virtual_server_name"]
+    f_dict["protocol"] = kwargs["protocol"]
+    f_dict["port_number"] = kwargs["port_number"]
+    f_dict["virtual_server_name"] = kwargs["virtual_server_name"]
 
     return url_base.format(**f_dict)

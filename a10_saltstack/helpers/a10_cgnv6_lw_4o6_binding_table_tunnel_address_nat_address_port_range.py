@@ -19,29 +19,29 @@ AVAILABLE_PROPERTIES = ["port_end","port_start","tunnel_endpoint_address",]
 
 MODULE_NAME = 'port-range'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/lw-4o6/binding-table/{binding_table_name}/tunnel-address/{tunnel_address_ipv6_tunnel_addr}/nat-address/{nat_address_ipv4_nat_addr}/port-range/{port-start}+{port-end}"
     f_dict = {}
     f_dict["port-start"] = ""
     f_dict["port-end"] = ""
-    f_dict["nat_address_ipv4_nat_addr"] = module.params["nat_address_ipv4_nat_addr"]
-    f_dict["tunnel_address_ipv6_tunnel_addr"] = module.params["tunnel_address_ipv6_tunnel_addr"]
-    f_dict["binding_table_name"] = module.params["binding_table_name"]
+    f_dict["nat_address_ipv4_nat_addr"] = kwargs["nat_address_ipv4_nat_addr"]
+    f_dict["tunnel_address_ipv6_tunnel_addr"] = kwargs["tunnel_address_ipv6_tunnel_addr"]
+    f_dict["binding_table_name"] = kwargs["binding_table_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lw-4o6/binding-table/{binding_table_name}/tunnel-address/{tunnel_address_ipv6_tunnel_addr}/nat-address/{nat_address_ipv4_nat_addr}/port-range/{port-start}+{port-end}"
     f_dict = {}
-    f_dict["port-start"] = module.params["port-start"]
-    f_dict["port-end"] = module.params["port-end"]
-    f_dict["nat_address_ipv4_nat_addr"] = module.params["nat_address_ipv4_nat_addr"]
-    f_dict["tunnel_address_ipv6_tunnel_addr"] = module.params["tunnel_address_ipv6_tunnel_addr"]
-    f_dict["binding_table_name"] = module.params["binding_table_name"]
+    f_dict["port-start"] = kwargs["port-start"]
+    f_dict["port-end"] = kwargs["port-end"]
+    f_dict["nat_address_ipv4_nat_addr"] = kwargs["nat_address_ipv4_nat_addr"]
+    f_dict["tunnel_address_ipv6_tunnel_addr"] = kwargs["tunnel_address_ipv6_tunnel_addr"]
+    f_dict["binding_table_name"] = kwargs["binding_table_name"]
 
     return url_base.format(**f_dict)

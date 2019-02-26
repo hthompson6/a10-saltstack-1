@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["bridge_vlan_group_number","forward_traffic","name","use
 
 MODULE_NAME = 'bridge-vlan-group'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/network/bridge-vlan-group/{bridge-vlan-group-number}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/network/bridge-vlan-group/{bridge-vlan-group-number}"
     f_dict = {}
-    f_dict["bridge-vlan-group-number"] = module.params["bridge-vlan-group-number"]
+    f_dict["bridge-vlan-group-number"] = kwargs["bridge-vlan-group-number"]
 
     return url_base.format(**f_dict)

@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["action","auto","pool","port_number","precedence","proto
 
 MODULE_NAME = 'port'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/dns64-virtualserver/{dns64_virtualserver_name}/port/{port-number}+{protocol}"
     f_dict = {}
     f_dict["port-number"] = ""
     f_dict["protocol"] = ""
-    f_dict["dns64_virtualserver_name"] = module.params["dns64_virtualserver_name"]
+    f_dict["dns64_virtualserver_name"] = kwargs["dns64_virtualserver_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/dns64-virtualserver/{dns64_virtualserver_name}/port/{port-number}+{protocol}"
     f_dict = {}
-    f_dict["port-number"] = module.params["port-number"]
-    f_dict["protocol"] = module.params["protocol"]
-    f_dict["dns64_virtualserver_name"] = module.params["dns64_virtualserver_name"]
+    f_dict["port-number"] = kwargs["port-number"]
+    f_dict["protocol"] = kwargs["protocol"]
+    f_dict["dns64_virtualserver_name"] = kwargs["dns64_virtualserver_name"]
 
     return url_base.format(**f_dict)

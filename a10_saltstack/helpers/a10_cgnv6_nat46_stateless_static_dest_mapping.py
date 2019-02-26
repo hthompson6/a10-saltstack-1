@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["count","shared","to_shared","uuid","v4_address","v6_add
 
 MODULE_NAME = 'static-dest-mapping'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/nat46-stateless/static-dest-mapping/{v4-address}+{v6-address}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/nat46-stateless/static-dest-mapping/{v4-address}+{v6-address}"
     f_dict = {}
-    f_dict["v4-address"] = module.params["v4-address"]
-    f_dict["v6-address"] = module.params["v6-address"]
+    f_dict["v4-address"] = kwargs["v4-address"]
+    f_dict["v6-address"] = kwargs["v6-address"]
 
     return url_base.format(**f_dict)

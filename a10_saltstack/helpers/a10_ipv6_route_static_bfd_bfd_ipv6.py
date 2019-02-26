@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["local_ipv6","nexthop_ipv6","uuid",]
 
 MODULE_NAME = 'bfd-ipv6'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ipv6/route/static/bfd/bfd-ipv6/{local-ipv6}+{nexthop-ipv6}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/route/static/bfd/bfd-ipv6/{local-ipv6}+{nexthop-ipv6}"
     f_dict = {}
-    f_dict["local-ipv6"] = module.params["local-ipv6"]
-    f_dict["nexthop-ipv6"] = module.params["nexthop-ipv6"]
+    f_dict["local-ipv6"] = kwargs["local-ipv6"]
+    f_dict["nexthop-ipv6"] = kwargs["nexthop-ipv6"]
 
     return url_base.format(**f_dict)

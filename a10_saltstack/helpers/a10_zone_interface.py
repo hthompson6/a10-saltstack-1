@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["ethernet_list","lif_list","trunk_list","tunnel_list","u
 
 MODULE_NAME = 'interface'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/zone/{zone_name}/interface"
     f_dict = {}
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/zone/{zone_name}/interface"
     f_dict = {}
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)

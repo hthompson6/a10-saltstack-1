@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["conn_rate_limit","drop_on_nat_pool_mismatch","ds_lite",
 
 MODULE_NAME = 'lsn-lid'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/lsn-lid/{lid-number}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn-lid/{lid-number}"
     f_dict = {}
-    f_dict["lid-number"] = module.params["lid-number"]
+    f_dict["lid-number"] = kwargs["lid-number"]
 
     return url_base.format(**f_dict)

@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["inside","inside_addr","inside_end_port","inside_start_p
 
 MODULE_NAME = 'port-reservation'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/ds-lite/port-reservation/{inside}+{tunnel-dest-address}+{inside-addr}+{inside-start-port}+{inside-end-port}+{nat}+{nat-start-port}+{nat-end-port}"
@@ -36,18 +36,18 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/ds-lite/port-reservation/{inside}+{tunnel-dest-address}+{inside-addr}+{inside-start-port}+{inside-end-port}+{nat}+{nat-start-port}+{nat-end-port}"
     f_dict = {}
-    f_dict["inside"] = module.params["inside"]
-    f_dict["tunnel-dest-address"] = module.params["tunnel-dest-address"]
-    f_dict["inside-addr"] = module.params["inside-addr"]
-    f_dict["inside-start-port"] = module.params["inside-start-port"]
-    f_dict["inside-end-port"] = module.params["inside-end-port"]
-    f_dict["nat"] = module.params["nat"]
-    f_dict["nat-start-port"] = module.params["nat-start-port"]
-    f_dict["nat-end-port"] = module.params["nat-end-port"]
+    f_dict["inside"] = kwargs["inside"]
+    f_dict["tunnel-dest-address"] = kwargs["tunnel-dest-address"]
+    f_dict["inside-addr"] = kwargs["inside-addr"]
+    f_dict["inside-start-port"] = kwargs["inside-start-port"]
+    f_dict["inside-end-port"] = kwargs["inside-end-port"]
+    f_dict["nat"] = kwargs["nat"]
+    f_dict["nat-start-port"] = kwargs["nat-start-port"]
+    f_dict["nat-end-port"] = kwargs["nat-end-port"]
 
     return url_base.format(**f_dict)

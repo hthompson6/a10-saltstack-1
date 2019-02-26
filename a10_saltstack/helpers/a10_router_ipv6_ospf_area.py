@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["area_ipv4","area_num","default_cost","no_summary","rang
 
 MODULE_NAME = 'area'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/ipv6/ospf/{ospf_process_id}/area/{area-ipv4}+{area-num}"
     f_dict = {}
     f_dict["area-ipv4"] = ""
     f_dict["area-num"] = ""
-    f_dict["ospf_process_id"] = module.params["ospf_process_id"]
+    f_dict["ospf_process_id"] = kwargs["ospf_process_id"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/ipv6/ospf/{ospf_process_id}/area/{area-ipv4}+{area-num}"
     f_dict = {}
-    f_dict["area-ipv4"] = module.params["area-ipv4"]
-    f_dict["area-num"] = module.params["area-num"]
-    f_dict["ospf_process_id"] = module.params["ospf_process_id"]
+    f_dict["area-ipv4"] = kwargs["area-ipv4"]
+    f_dict["area-num"] = kwargs["area-num"]
+    f_dict["ospf_process_id"] = kwargs["ospf_process_id"]
 
     return url_base.format(**f_dict)

@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["action","device_id","ip","user_tag","uuid",]
 
 MODULE_NAME = 'device-id'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/cluster-devices/device-id/{device-id}"
     f_dict = {}
     f_dict["device-id"] = ""
-    f_dict["cluster_id"] = module.params["cluster_id"]
+    f_dict["cluster_id"] = kwargs["cluster_id"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/cluster-devices/device-id/{device-id}"
     f_dict = {}
-    f_dict["device-id"] = module.params["device-id"]
-    f_dict["cluster_id"] = module.params["cluster_id"]
+    f_dict["device-id"] = kwargs["device-id"]
+    f_dict["cluster_id"] = kwargs["cluster_id"]
 
     return url_base.format(**f_dict)

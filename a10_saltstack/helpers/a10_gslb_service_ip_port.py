@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["action","follow_port_protocol","health_check","health_c
 
 MODULE_NAME = 'port'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/service-ip/{service_ip_node_name}/port/{port-num}+{port-proto}"
     f_dict = {}
     f_dict["port-num"] = ""
     f_dict["port-proto"] = ""
-    f_dict["service_ip_node_name"] = module.params["service_ip_node_name"]
+    f_dict["service_ip_node_name"] = kwargs["service_ip_node_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/service-ip/{service_ip_node_name}/port/{port-num}+{port-proto}"
     f_dict = {}
-    f_dict["port-num"] = module.params["port-num"]
-    f_dict["port-proto"] = module.params["port-proto"]
-    f_dict["service_ip_node_name"] = module.params["service_ip_node_name"]
+    f_dict["port-num"] = kwargs["port-num"]
+    f_dict["port-proto"] = kwargs["port-proto"]
+    f_dict["service_ip_node_name"] = kwargs["service_ip_node_name"]
 
     return url_base.format(**f_dict)

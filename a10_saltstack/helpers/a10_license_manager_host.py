@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["host_ipv4","host_ipv6","port","uuid",]
 
 MODULE_NAME = 'host'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/license-manager/host/{host-ipv4}+{host-ipv6}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/license-manager/host/{host-ipv4}+{host-ipv6}"
     f_dict = {}
-    f_dict["host-ipv4"] = module.params["host-ipv4"]
-    f_dict["host-ipv6"] = module.params["host-ipv6"]
+    f_dict["host-ipv4"] = kwargs["host-ipv4"]
+    f_dict["host-ipv6"] = kwargs["host-ipv6"]
 
     return url_base.format(**f_dict)

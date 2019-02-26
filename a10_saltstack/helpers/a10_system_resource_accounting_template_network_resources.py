@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["ipv4_acl_line_cfg","ipv6_acl_line_cfg","object_group_cf
 
 MODULE_NAME = 'network-resources'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/system/resource-accounting/template/{template_name}/network-resources"
     f_dict = {}
-    f_dict["template_name"] = module.params["template_name"]
+    f_dict["template_name"] = kwargs["template_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/system/resource-accounting/template/{template_name}/network-resources"
     f_dict = {}
-    f_dict["template_name"] = module.params["template_name"]
+    f_dict["template_name"] = kwargs["template_name"]
 
     return url_base.format(**f_dict)

@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["background","cfm_pwd_cfg","change_text","change_url","c
 
 MODULE_NAME = 'notify-change-password'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/aam/authentication/portal/{portal_name}/notify-change-password"
     f_dict = {}
-    f_dict["portal_name"] = module.params["portal_name"]
+    f_dict["portal_name"] = kwargs["portal_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/portal/{portal_name}/notify-change-password"
     f_dict = {}
-    f_dict["portal_name"] = module.params["portal_name"]
+    f_dict["portal_name"] = kwargs["portal_name"]
 
     return url_base.format(**f_dict)

@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["dest_rule_list","dynamic_pool_size","inside_end_address
 
 MODULE_NAME = 'ipv6address'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/fixed-nat/inside/ipv6address/{inside-start-address}+{inside-end-address}+{inside-netmask}+{partition}"
@@ -32,14 +32,14 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/fixed-nat/inside/ipv6address/{inside-start-address}+{inside-end-address}+{inside-netmask}+{partition}"
     f_dict = {}
-    f_dict["inside-start-address"] = module.params["inside-start-address"]
-    f_dict["inside-end-address"] = module.params["inside-end-address"]
-    f_dict["inside-netmask"] = module.params["inside-netmask"]
-    f_dict["partition"] = module.params["partition"]
+    f_dict["inside-start-address"] = kwargs["inside-start-address"]
+    f_dict["inside-end-address"] = kwargs["inside-end-address"]
+    f_dict["inside-netmask"] = kwargs["inside-netmask"]
+    f_dict["partition"] = kwargs["partition"]
 
     return url_base.format(**f_dict)

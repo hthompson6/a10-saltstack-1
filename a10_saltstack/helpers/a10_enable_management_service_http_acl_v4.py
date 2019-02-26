@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["acl_id","all_data_intf","eth_cfg","management","tunnel_
 
 MODULE_NAME = 'acl-v4'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/enable-management/service/http/acl-v4/{acl-id}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/enable-management/service/http/acl-v4/{acl-id}"
     f_dict = {}
-    f_dict["acl-id"] = module.params["acl-id"]
+    f_dict["acl-id"] = kwargs["acl-id"]
 
     return url_base.format(**f_dict)

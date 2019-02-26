@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["ip_dest_addr","ip_mask","ip_nexthop_ipv4","ip_nexthop_l
 
 MODULE_NAME = 'rib'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ip/route/rib/{ip-dest-addr}+{ip-mask}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ip/route/rib/{ip-dest-addr}+{ip-mask}"
     f_dict = {}
-    f_dict["ip-dest-addr"] = module.params["ip-dest-addr"]
-    f_dict["ip-mask"] = module.params["ip-mask"]
+    f_dict["ip-dest-addr"] = kwargs["ip-dest-addr"]
+    f_dict["ip-mask"] = kwargs["ip-mask"]
 
     return url_base.format(**f_dict)

@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["geo_locn_multiple_addresses","geo_locn_obj_name","user_
 
 MODULE_NAME = 'geo-location'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/geo-location/{geo-locn-obj-name}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/geo-location/{geo-locn-obj-name}"
     f_dict = {}
-    f_dict["geo-locn-obj-name"] = module.params["geo-locn-obj-name"]
+    f_dict["geo-locn-obj-name"] = kwargs["geo-locn-obj-name"]
 
     return url_base.format(**f_dict)

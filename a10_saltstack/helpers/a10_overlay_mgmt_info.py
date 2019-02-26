@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["appstring","plugin_name","uuid",]
 
 MODULE_NAME = 'overlay-mgmt-info'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/overlay-mgmt-info/{plugin_name}+{appstring}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/overlay-mgmt-info/{plugin_name}+{appstring}"
     f_dict = {}
-    f_dict["plugin_name"] = module.params["plugin_name"]
-    f_dict["appstring"] = module.params["appstring"]
+    f_dict["plugin_name"] = kwargs["plugin_name"]
+    f_dict["appstring"] = kwargs["appstring"]
 
     return url_base.format(**f_dict)

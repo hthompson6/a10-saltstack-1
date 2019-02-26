@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["hostname","udp_port","user","uuid","v1_v2c_comm","versi
 
 MODULE_NAME = 'host-name'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/snmp-server/host/host-name/{hostname}+{version}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/host/host-name/{hostname}+{version}"
     f_dict = {}
-    f_dict["hostname"] = module.params["hostname"]
-    f_dict["version"] = module.params["version"]
+    f_dict["hostname"] = kwargs["hostname"]
+    f_dict["version"] = kwargs["version"]
 
     return url_base.format(**f_dict)

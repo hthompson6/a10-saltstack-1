@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["end_address","gateway","ip_rr","netmask","pool_name","s
 
 MODULE_NAME = 'pool'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ipv6/nat/pool/{pool-name}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/nat/pool/{pool-name}"
     f_dict = {}
-    f_dict["pool-name"] = module.params["pool-name"]
+    f_dict["pool-name"] = kwargs["pool-name"]
 
     return url_base.format(**f_dict)

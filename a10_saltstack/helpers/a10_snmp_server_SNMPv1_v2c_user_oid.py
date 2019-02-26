@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["oid_val","remote","user_tag","uuid",]
 
 MODULE_NAME = 'oid'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/snmp-server/SNMPv1-v2c/user/{user_user}/oid/{oid-val}"
     f_dict = {}
     f_dict["oid-val"] = ""
-    f_dict["user_user"] = module.params["user_user"]
+    f_dict["user_user"] = kwargs["user_user"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/SNMPv1-v2c/user/{user_user}/oid/{oid-val}"
     f_dict = {}
-    f_dict["oid-val"] = module.params["oid-val"]
-    f_dict["user_user"] = module.params["user_user"]
+    f_dict["oid-val"] = kwargs["oid-val"]
+    f_dict["user_user"] = kwargs["user_user"]
 
     return url_base.format(**f_dict)

@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["eth_num","nexthop_ipv6_ll","uuid",]
 
 MODULE_NAME = 'ethernet'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ipv6/route/static/bfd/ethernet/{eth-num}+{nexthop-ipv6-ll}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/route/static/bfd/ethernet/{eth-num}+{nexthop-ipv6-ll}"
     f_dict = {}
-    f_dict["eth-num"] = module.params["eth-num"]
-    f_dict["nexthop-ipv6-ll"] = module.params["nexthop-ipv6-ll"]
+    f_dict["eth-num"] = kwargs["eth-num"]
+    f_dict["nexthop-ipv6-ll"] = kwargs["nexthop-ipv6-ll"]
 
     return url_base.format(**f_dict)

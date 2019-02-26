@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["pool_name","uuid",]
 
 MODULE_NAME = 'member'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/one-to-one/pool-group/{pool_group_pool_group_name}/member/{pool-name}"
     f_dict = {}
     f_dict["pool-name"] = ""
-    f_dict["pool_group_pool_group_name"] = module.params["pool_group_pool_group_name"]
+    f_dict["pool_group_pool_group_name"] = kwargs["pool_group_pool_group_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/one-to-one/pool-group/{pool_group_pool_group_name}/member/{pool-name}"
     f_dict = {}
-    f_dict["pool-name"] = module.params["pool-name"]
-    f_dict["pool_group_pool_group_name"] = module.params["pool_group_pool_group_name"]
+    f_dict["pool-name"] = kwargs["pool-name"]
+    f_dict["pool_group_pool_group_name"] = kwargs["pool_group_pool_group_name"]
 
     return url_base.format(**f_dict)

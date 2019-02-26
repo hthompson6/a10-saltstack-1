@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["gslb_device_cfg","gslb_geo_location_cfg","gslb_ip_list_
 
 MODULE_NAME = 'app-resources'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/system/resource-accounting/template/{template_name}/app-resources"
     f_dict = {}
-    f_dict["template_name"] = module.params["template_name"]
+    f_dict["template_name"] = kwargs["template_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/system/resource-accounting/template/{template_name}/app-resources"
     f_dict = {}
-    f_dict["template_name"] = module.params["template_name"]
+    f_dict["template_name"] = kwargs["template_name"]
 
     return url_base.format(**f_dict)

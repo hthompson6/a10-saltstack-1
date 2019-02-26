@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["sampling_enable","uuid","vip_name",]
 
 MODULE_NAME = 'vip-server-name'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/site/{site_name}/slb-dev/{slb_dev_device_name}/vip-server/vip-server-name/{vip-name}"
     f_dict = {}
     f_dict["vip-name"] = ""
-    f_dict["slb_dev_device_name"] = module.params["slb_dev_device_name"]
-    f_dict["site_name"] = module.params["site_name"]
+    f_dict["slb_dev_device_name"] = kwargs["slb_dev_device_name"]
+    f_dict["site_name"] = kwargs["site_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/site/{site_name}/slb-dev/{slb_dev_device_name}/vip-server/vip-server-name/{vip-name}"
     f_dict = {}
-    f_dict["vip-name"] = module.params["vip-name"]
-    f_dict["slb_dev_device_name"] = module.params["slb_dev_device_name"]
-    f_dict["site_name"] = module.params["site_name"]
+    f_dict["vip-name"] = kwargs["vip-name"]
+    f_dict["slb_dev_device_name"] = kwargs["slb_dev_device_name"]
+    f_dict["site_name"] = kwargs["site_name"]
 
     return url_base.format(**f_dict)

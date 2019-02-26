@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["hostname","secret","uuid",]
 
 MODULE_NAME = 'name'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/radius-server/host/name/{hostname}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/radius-server/host/name/{hostname}"
     f_dict = {}
-    f_dict["hostname"] = module.params["hostname"]
+    f_dict["hostname"] = kwargs["hostname"]
 
     return url_base.format(**f_dict)

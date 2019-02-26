@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["auth_password","auth_password_string","auth_username","
 
 MODULE_NAME = 'authentication'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/visibility/reporting/notification-template/{notification_template_name}/authentication"
     f_dict = {}
-    f_dict["notification_template_name"] = module.params["notification_template_name"]
+    f_dict["notification_template_name"] = kwargs["notification_template_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/visibility/reporting/notification-template/{notification_template_name}/authentication"
     f_dict = {}
-    f_dict["notification_template_name"] = module.params["notification_template_name"]
+    f_dict["notification_template_name"] = kwargs["notification_template_name"]
 
     return url_base.format(**f_dict)

@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["fqdn_name","host","member_priority","member_state","mem
 
 MODULE_NAME = 'member'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/service-group/{service_group_name}/member/{name}+{port}"
     f_dict = {}
     f_dict["name"] = ""
     f_dict["port"] = ""
-    f_dict["service_group_name"] = module.params["service_group_name"]
+    f_dict["service_group_name"] = kwargs["service_group_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/service-group/{service_group_name}/member/{name}+{port}"
     f_dict = {}
-    f_dict["name"] = module.params["name"]
-    f_dict["port"] = module.params["port"]
-    f_dict["service_group_name"] = module.params["service_group_name"]
+    f_dict["name"] = kwargs["name"]
+    f_dict["port"] = kwargs["port"]
+    f_dict["service_group_name"] = kwargs["service_group_name"]
 
     return url_base.format(**f_dict)

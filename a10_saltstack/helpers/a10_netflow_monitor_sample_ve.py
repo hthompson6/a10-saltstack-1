@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["uuid","ve_num",]
 
 MODULE_NAME = 've'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/netflow/monitor/{monitor_name}/sample/ve/{ve-num}"
     f_dict = {}
     f_dict["ve-num"] = ""
-    f_dict["monitor_name"] = module.params["monitor_name"]
+    f_dict["monitor_name"] = kwargs["monitor_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/netflow/monitor/{monitor_name}/sample/ve/{ve-num}"
     f_dict = {}
-    f_dict["ve-num"] = module.params["ve-num"]
-    f_dict["monitor_name"] = module.params["monitor_name"]
+    f_dict["ve-num"] = kwargs["ve-num"]
+    f_dict["monitor_name"] = kwargs["monitor_name"]
 
     return url_base.format(**f_dict)

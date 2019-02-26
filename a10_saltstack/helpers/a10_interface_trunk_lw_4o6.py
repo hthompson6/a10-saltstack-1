@@ -19,21 +19,21 @@ AVAILABLE_PROPERTIES = ["inside","outside","uuid",]
 
 MODULE_NAME = 'lw-4o6'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/trunk/{trunk_ifnum}/lw-4o6"
     f_dict = {}
-    f_dict["trunk_ifnum"] = module.params["trunk_ifnum"]
+    f_dict["trunk_ifnum"] = kwargs["trunk_ifnum"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/trunk/{trunk_ifnum}/lw-4o6"
     f_dict = {}
-    f_dict["trunk_ifnum"] = module.params["trunk_ifnum"]
+    f_dict["trunk_ifnum"] = kwargs["trunk_ifnum"]
 
     return url_base.format(**f_dict)

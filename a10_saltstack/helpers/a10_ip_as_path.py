@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["access_list","action","uuid","value",]
 
 MODULE_NAME = 'as-path'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ip/as-path/{access-list}+{action}+{value}"
@@ -31,13 +31,13 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ip/as-path/{access-list}+{action}+{value}"
     f_dict = {}
-    f_dict["access-list"] = module.params["access-list"]
-    f_dict["action"] = module.params["action"]
-    f_dict["value"] = module.params["value"]
+    f_dict["access-list"] = kwargs["access-list"]
+    f_dict["action"] = kwargs["action"]
+    f_dict["value"] = kwargs["value"]
 
     return url_base.format(**f_dict)

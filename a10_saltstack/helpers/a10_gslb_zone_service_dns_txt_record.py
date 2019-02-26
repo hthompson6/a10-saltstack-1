@@ -19,27 +19,27 @@ AVAILABLE_PROPERTIES = ["record_name","sampling_enable","ttl","txt_data","uuid",
 
 MODULE_NAME = 'dns-txt-record'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-txt-record/{record-name}"
     f_dict = {}
     f_dict["record-name"] = ""
-    f_dict["service-name"] = module.params["service-name"]
-    f_dict["service_port"] = module.params["service_port"]
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["service-name"] = kwargs["service-name"]
+    f_dict["service_port"] = kwargs["service_port"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-txt-record/{record-name}"
     f_dict = {}
-    f_dict["record-name"] = module.params["record-name"]
-    f_dict["service-name"] = module.params["service-name"]
-    f_dict["service_port"] = module.params["service_port"]
-    f_dict["zone_name"] = module.params["zone_name"]
+    f_dict["record-name"] = kwargs["record-name"]
+    f_dict["service-name"] = kwargs["service-name"]
+    f_dict["service_port"] = kwargs["service_port"]
+    f_dict["zone_name"] = kwargs["zone_name"]
 
     return url_base.format(**f_dict)

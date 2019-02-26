@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["dependency_site","disable","disable_site_list","member"
 
 MODULE_NAME = 'service-group'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/service-group/{service-group-name}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/service-group/{service-group-name}"
     f_dict = {}
-    f_dict["service-group-name"] = module.params["service-group-name"]
+    f_dict["service-group-name"] = kwargs["service-group-name"]
 
     return url_base.format(**f_dict)

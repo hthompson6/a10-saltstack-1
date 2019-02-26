@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["host_ipv4","port","tcp","use_mgmt_port","uuid",]
 
 MODULE_NAME = 'ipv4addr'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/logging/host/ipv4addr/{host-ipv4}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/logging/host/ipv4addr/{host-ipv4}"
     f_dict = {}
-    f_dict["host-ipv4"] = module.params["host-ipv4"]
+    f_dict["host-ipv4"] = kwargs["host-ipv4"]
 
     return url_base.format(**f_dict)

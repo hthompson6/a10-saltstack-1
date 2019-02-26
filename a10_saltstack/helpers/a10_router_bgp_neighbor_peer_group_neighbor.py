@@ -19,23 +19,23 @@ AVAILABLE_PROPERTIES = ["activate","advertisement_interval","allowas_in","allowa
 
 MODULE_NAME = 'peer-group-neighbor'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/neighbor/peer-group-neighbor/{peer-group}"
     f_dict = {}
     f_dict["peer-group"] = ""
-    f_dict["bgp_as_number"] = module.params["bgp_as_number"]
+    f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/neighbor/peer-group-neighbor/{peer-group}"
     f_dict = {}
-    f_dict["peer-group"] = module.params["peer-group"]
-    f_dict["bgp_as_number"] = module.params["bgp_as_number"]
+    f_dict["peer-group"] = kwargs["peer-group"]
+    f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)

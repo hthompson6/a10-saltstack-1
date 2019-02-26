@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["mask","oid","ntype","uuid","viewname",]
 
 MODULE_NAME = 'view'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/snmp-server/view/{viewname}+{oid}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/view/{viewname}+{oid}"
     f_dict = {}
-    f_dict["viewname"] = module.params["viewname"]
-    f_dict["oid"] = module.params["oid"]
+    f_dict["viewname"] = kwargs["viewname"]
+    f_dict["oid"] = kwargs["oid"]
 
     return url_base.format(**f_dict)

@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["ipv6_addr","udp_port","user","uuid","v1_v2c_comm","vers
 
 MODULE_NAME = 'ipv6-host'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/snmp-server/host/ipv6-host/{ipv6-addr}+{version}"
@@ -30,12 +30,12 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/host/ipv6-host/{ipv6-addr}+{version}"
     f_dict = {}
-    f_dict["ipv6-addr"] = module.params["ipv6-addr"]
-    f_dict["version"] = module.params["version"]
+    f_dict["ipv6-addr"] = kwargs["ipv6-addr"]
+    f_dict["version"] = kwargs["version"]
 
     return url_base.format(**f_dict)

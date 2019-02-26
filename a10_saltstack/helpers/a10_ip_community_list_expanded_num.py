@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["ext_list_num","rules_list","uuid",]
 
 MODULE_NAME = 'expanded-num'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/ip/community-list/expanded-num/{ext-list-num}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/ip/community-list/expanded-num/{ext-list-num}"
     f_dict = {}
-    f_dict["ext-list-num"] = module.params["ext-list-num"]
+    f_dict["ext-list-num"] = kwargs["ext-list-num"]
 
     return url_base.format(**f_dict)

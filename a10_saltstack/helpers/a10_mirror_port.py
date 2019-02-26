@@ -19,7 +19,7 @@ AVAILABLE_PROPERTIES = ["ethernet","mirror_dir","mirror_index","uuid",]
 
 MODULE_NAME = 'mirror-port'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/mirror-port/{mirror-index}"
@@ -29,11 +29,11 @@ def new_url(module):
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/mirror-port/{mirror-index}"
     f_dict = {}
-    f_dict["mirror-index"] = module.params["mirror-index"]
+    f_dict["mirror-index"] = kwargs["mirror-index"]
 
     return url_base.format(**f_dict)

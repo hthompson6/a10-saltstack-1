@@ -19,25 +19,25 @@ AVAILABLE_PROPERTIES = ["aggregator","as_path","atomic_aggregate","comm_list","c
 
 MODULE_NAME = 'set'
 
-def new_url(module):
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/route-map/{route_map_tag}+{action}+{sequence}/set"
     f_dict = {}
-    f_dict["sequence"] = module.params["sequence"]
-    f_dict["action"] = module.params["action"]
-    f_dict["route_map_tag"] = module.params["route_map_tag"]
+    f_dict["sequence"] = kwargs["sequence"]
+    f_dict["action"] = kwargs["action"]
+    f_dict["route_map_tag"] = kwargs["route_map_tag"]
 
     return url_base.format(**f_dict)
 
 
-def existing_url(module):
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/route-map/{route_map_tag}+{action}+{sequence}/set"
     f_dict = {}
-    f_dict["sequence"] = module.params["sequence"]
-    f_dict["action"] = module.params["action"]
-    f_dict["route_map_tag"] = module.params["route_map_tag"]
+    f_dict["sequence"] = kwargs["sequence"]
+    f_dict["action"] = kwargs["action"]
+    f_dict["route_map_tag"] = kwargs["route_map_tag"]
 
     return url_base.format(**f_dict)
