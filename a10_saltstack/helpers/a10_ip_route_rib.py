@@ -42,7 +42,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/route/rib/{ip-dest-addr}+{ip-mask}"
     f_dict = {}
-    f_dict["ip-dest-addr"] = kwargs["ip_dest_addr"]
-    f_dict["ip-mask"] = kwargs["ip_mask"]
+    f_dict["ip-dest-addr"] = kwargs["ip-dest-addr"]
+    f_dict["ip-mask"] = kwargs["ip-mask"]
 
     return url_base.format(**f_dict)

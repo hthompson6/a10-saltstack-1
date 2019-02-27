@@ -39,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/ssl-key/{ssl-key}"
     f_dict = {}
-    f_dict["ssl-key"] = kwargs["ssl_key"]
+    f_dict["ssl-key"] = kwargs["ssl-key"]
 
     return url_base.format(**f_dict)

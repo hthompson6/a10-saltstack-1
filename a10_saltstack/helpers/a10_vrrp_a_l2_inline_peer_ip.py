@@ -36,6 +36,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/l2-inline-peer-ip/{ip-address}"
     f_dict = {}
-    f_dict["ip-address"] = kwargs["ip_address"]
+    f_dict["ip-address"] = kwargs["ip-address"]
 
     return url_base.format(**f_dict)

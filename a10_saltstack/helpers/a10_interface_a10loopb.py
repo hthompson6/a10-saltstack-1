@@ -35,6 +35,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/interface/a10loopb/{sampling-enable}"
     f_dict = {}
-    f_dict["sampling-enable"] = kwargs["sampling_enable"]
+    f_dict["sampling-enable"] = kwargs["sampling-enable"]
 
     return url_base.format(**f_dict)

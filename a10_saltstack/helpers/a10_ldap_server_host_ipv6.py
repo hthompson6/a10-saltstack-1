@@ -43,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ldap-server/host/ipv6/{ipv6-addr}"
     f_dict = {}
-    f_dict["ipv6-addr"] = kwargs["ipv6_addr"]
+    f_dict["ipv6-addr"] = kwargs["ipv6-addr"]
 
     return url_base.format(**f_dict)

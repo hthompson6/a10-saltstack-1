@@ -39,7 +39,7 @@ def new_url(**kwargs):
     f_dict["naptr-target"] = ""
     f_dict["service-proto"] = ""
     f_dict["flag"] = ""
-    f_dict["service-name"] = kwargs["service_name"]
+    f_dict["service-name"] = kwargs["service-name"]
     f_dict["service_port"] = kwargs["service_port"]
     f_dict["zone_name"] = kwargs["zone_name"]
 
@@ -51,8 +51,8 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-naptr-record/{naptr-target}+{service-proto}+{flag}"
     f_dict = {}
-    f_dict["naptr-target"] = kwargs["naptr_target"]
-    f_dict["service-proto"] = kwargs["service_proto"]
+    f_dict["naptr-target"] = kwargs["naptr-target"]
+    f_dict["service-proto"] = kwargs["service-proto"]
     f_dict["flag"] = kwargs["flag"]
     f_dict["service-name"] = kwargs["service-name"]
     f_dict["service_port"] = kwargs["service_port"]

@@ -48,8 +48,8 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/router/ospf/{ospf_process_id}/area/{area-ipv4}+{area-num}"
     f_dict = {}
-    f_dict["area-ipv4"] = kwargs["area_ipv4"]
-    f_dict["area-num"] = kwargs["area_num"]
+    f_dict["area-ipv4"] = kwargs["area-ipv4"]
+    f_dict["area-num"] = kwargs["area-num"]
     f_dict["ospf_process_id"] = kwargs["ospf_process_id"]
 
     return url_base.format(**f_dict)

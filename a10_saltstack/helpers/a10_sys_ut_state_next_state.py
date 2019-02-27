@@ -40,7 +40,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10_name"]
+    f_dict["name"] = kwargs["a10-name"]
     f_dict["state_name"] = kwargs["state_name"]
 
     return url_base.format(**f_dict)

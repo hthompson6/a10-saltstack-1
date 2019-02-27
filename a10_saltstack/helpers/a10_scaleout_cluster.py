@@ -41,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/scaleout/cluster/{cluster-id}"
     f_dict = {}
-    f_dict["cluster-id"] = kwargs["cluster_id"]
+    f_dict["cluster-id"] = kwargs["cluster-id"]
 
     return url_base.format(**f_dict)

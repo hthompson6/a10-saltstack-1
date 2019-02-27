@@ -38,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/mirror-port/{mirror-index}"
     f_dict = {}
-    f_dict["mirror-index"] = kwargs["mirror_index"]
+    f_dict["mirror-index"] = kwargs["mirror-index"]
 
     return url_base.format(**f_dict)

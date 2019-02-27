@@ -44,6 +44,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/object/network/{net-name}"
     f_dict = {}
-    f_dict["net-name"] = kwargs["net_name"]
+    f_dict["net-name"] = kwargs["net-name"]
 
     return url_base.format(**f_dict)

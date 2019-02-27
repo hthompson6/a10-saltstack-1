@@ -39,7 +39,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lw-4o6/binding-table/{binding_table_name}/tunnel-address/{ipv6-tunnel-addr}"
     f_dict = {}
-    f_dict["ipv6-tunnel-addr"] = kwargs["ipv6_tunnel_addr"]
+    f_dict["ipv6-tunnel-addr"] = kwargs["ipv6-tunnel-addr"]
     f_dict["binding_table_name"] = kwargs["binding_table_name"]
 
     return url_base.format(**f_dict)

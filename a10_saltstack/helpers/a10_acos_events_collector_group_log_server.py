@@ -40,7 +40,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/acos-events/collector-group/{collector_group_name}/log-server/{name}+{port}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10_name"]
+    f_dict["name"] = kwargs["a10-name"]
     f_dict["port"] = kwargs["port"]
     f_dict["collector_group_name"] = kwargs["collector_group_name"]
 

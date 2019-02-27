@@ -38,7 +38,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/route/static/bfd/ve/{ve-num}+{nexthop-ipv6-ll}"
     f_dict = {}
-    f_dict["ve-num"] = kwargs["ve_num"]
-    f_dict["nexthop-ipv6-ll"] = kwargs["nexthop_ipv6_ll"]
+    f_dict["ve-num"] = kwargs["ve-num"]
+    f_dict["nexthop-ipv6-ll"] = kwargs["nexthop-ipv6-ll"]
 
     return url_base.format(**f_dict)

@@ -77,7 +77,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/rule-set/{rule_set_name}/rule/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10_name"]
+    f_dict["name"] = kwargs["a10-name"]
     f_dict["rule_set_name"] = kwargs["rule_set_name"]
 
     return url_base.format(**f_dict)

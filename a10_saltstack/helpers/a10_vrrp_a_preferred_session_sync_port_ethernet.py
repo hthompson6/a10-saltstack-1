@@ -37,6 +37,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/preferred-session-sync-port/ethernet/{pre-eth}"
     f_dict = {}
-    f_dict["pre-eth"] = kwargs["pre_eth"]
+    f_dict["pre-eth"] = kwargs["pre-eth"]
 
     return url_base.format(**f_dict)

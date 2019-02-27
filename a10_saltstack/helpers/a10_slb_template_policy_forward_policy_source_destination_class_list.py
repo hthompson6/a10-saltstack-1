@@ -44,7 +44,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/policy/{policy_name}/forward-policy/source/{name}/destination/class-list/{dest-class-list}"
     f_dict = {}
-    f_dict["dest-class-list"] = kwargs["dest_class_list"]
+    f_dict["dest-class-list"] = kwargs["dest-class-list"]
     f_dict["name"] = kwargs["name"]
     f_dict["policy_name"] = kwargs["policy_name"]
 

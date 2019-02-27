@@ -53,6 +53,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/hsm/template/{template-name}"
     f_dict = {}
-    f_dict["template-name"] = kwargs["template_name"]
+    f_dict["template-name"] = kwargs["template-name"]
 
     return url_base.format(**f_dict)

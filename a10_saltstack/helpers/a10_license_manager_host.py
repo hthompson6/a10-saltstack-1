@@ -39,7 +39,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/license-manager/host/{host-ipv4}+{host-ipv6}"
     f_dict = {}
-    f_dict["host-ipv4"] = kwargs["host_ipv4"]
-    f_dict["host-ipv6"] = kwargs["host_ipv6"]
+    f_dict["host-ipv4"] = kwargs["host-ipv4"]
+    f_dict["host-ipv6"] = kwargs["host-ipv6"]
 
     return url_base.format(**f_dict)

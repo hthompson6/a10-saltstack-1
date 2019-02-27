@@ -38,7 +38,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn/health-check-gateway/{ipv4-addr}+{ipv6-addr}"
     f_dict = {}
-    f_dict["ipv4-addr"] = kwargs["ipv4_addr"]
-    f_dict["ipv6-addr"] = kwargs["ipv6_addr"]
+    f_dict["ipv4-addr"] = kwargs["ipv4-addr"]
+    f_dict["ipv6-addr"] = kwargs["ipv6-addr"]
 
     return url_base.format(**f_dict)

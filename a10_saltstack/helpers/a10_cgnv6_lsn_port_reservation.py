@@ -47,10 +47,10 @@ def existing_url(**kwargs):
     url_base = "/axapi/v3/cgnv6/lsn/port-reservation/{inside}+{inside-port-start}+{inside-port-end}+{nat}+{nat-port-start}+{nat-port-end}"
     f_dict = {}
     f_dict["inside"] = kwargs["inside"]
-    f_dict["inside-port-start"] = kwargs["inside_port_start"]
-    f_dict["inside-port-end"] = kwargs["inside_port_end"]
+    f_dict["inside-port-start"] = kwargs["inside-port-start"]
+    f_dict["inside-port-end"] = kwargs["inside-port-end"]
     f_dict["nat"] = kwargs["nat"]
-    f_dict["nat-port-start"] = kwargs["nat_port_start"]
-    f_dict["nat-port-end"] = kwargs["nat_port_end"]
+    f_dict["nat-port-start"] = kwargs["nat-port-start"]
+    f_dict["nat-port-end"] = kwargs["nat-port-end"]
 
     return url_base.format(**f_dict)

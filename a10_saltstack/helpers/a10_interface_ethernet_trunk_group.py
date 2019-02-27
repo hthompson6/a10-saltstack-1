@@ -45,7 +45,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/interface/ethernet/{ethernet_ifnum}/trunk-group/{trunk-number}"
     f_dict = {}
-    f_dict["trunk-number"] = kwargs["trunk_number"]
+    f_dict["trunk-number"] = kwargs["trunk-number"]
     f_dict["ethernet_ifnum"] = kwargs["ethernet_ifnum"]
 
     return url_base.format(**f_dict)

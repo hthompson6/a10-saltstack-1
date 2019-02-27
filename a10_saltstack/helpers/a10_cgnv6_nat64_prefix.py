@@ -38,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/nat64/prefix/{prefix-val}"
     f_dict = {}
-    f_dict["prefix-val"] = kwargs["prefix_val"]
+    f_dict["prefix-val"] = kwargs["prefix-val"]
 
     return url_base.format(**f_dict)

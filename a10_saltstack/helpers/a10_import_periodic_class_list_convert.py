@@ -40,6 +40,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/class-list-convert/{class-list-convert}"
     f_dict = {}
-    f_dict["class-list-convert"] = kwargs["class_list_convert"]
+    f_dict["class-list-convert"] = kwargs["class-list-convert"]
 
     return url_base.format(**f_dict)

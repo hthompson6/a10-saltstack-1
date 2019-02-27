@@ -51,7 +51,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/interface/loopback/{loopback_ifnum}/ip/ospf/ospf-ip/{ip-addr}"
     f_dict = {}
-    f_dict["ip-addr"] = kwargs["ip_addr"]
+    f_dict["ip-addr"] = kwargs["ip-addr"]
     f_dict["loopback_ifnum"] = kwargs["loopback_ifnum"]
 
     return url_base.format(**f_dict)

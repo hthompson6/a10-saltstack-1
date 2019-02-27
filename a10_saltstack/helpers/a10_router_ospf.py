@@ -60,6 +60,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/router/ospf/{process-id}"
     f_dict = {}
-    f_dict["process-id"] = kwargs["process_id"]
+    f_dict["process-id"] = kwargs["process-id"]
 
     return url_base.format(**f_dict)

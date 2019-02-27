@@ -41,7 +41,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/network/arp/static/{ip-addr}+{vlan}"
     f_dict = {}
-    f_dict["ip-addr"] = kwargs["ip_addr"]
+    f_dict["ip-addr"] = kwargs["ip-addr"]
     f_dict["vlan"] = kwargs["vlan"]
 
     return url_base.format(**f_dict)

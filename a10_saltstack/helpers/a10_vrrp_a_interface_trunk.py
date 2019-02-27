@@ -42,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/interface/trunk/{trunk-val}"
     f_dict = {}
-    f_dict["trunk-val"] = kwargs["trunk_val"]
+    f_dict["trunk-val"] = kwargs["trunk-val"]
 
     return url_base.format(**f_dict)

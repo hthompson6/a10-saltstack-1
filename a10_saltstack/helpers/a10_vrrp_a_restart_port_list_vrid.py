@@ -38,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/restart-port-list/vrid/{vrid-val}"
     f_dict = {}
-    f_dict["vrid-val"] = kwargs["vrid_val"]
+    f_dict["vrid-val"] = kwargs["vrid-val"]
 
     return url_base.format(**f_dict)
