@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["blksize","uuid",]
+AVAILABLE_PROPERTIES = [    "blksize",
+    "uuid",
+]
 
-MODULE_NAME = 'tftp'
+MODULE_NAME = "tftp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

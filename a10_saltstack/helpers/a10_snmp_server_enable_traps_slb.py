@@ -15,9 +15,38 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","application_buffer_limit","bw_rate_limit_exceed","bw_rate_limit_resume","gateway_down","gateway_up","server_conn_limit","server_conn_resume","server_disabled","server_down","server_selection_failure","server_up","service_conn_limit","service_conn_resume","service_down","service_group_down","service_group_member_down","service_group_member_up","service_group_up","service_up","uuid","vip_connlimit","vip_connratelimit","vip_down","vip_port_connlimit","vip_port_connratelimit","vip_port_down","vip_port_up","vip_up",]
+AVAILABLE_PROPERTIES = [    "all",
+    "application_buffer_limit",
+    "bw_rate_limit_exceed",
+    "bw_rate_limit_resume",
+    "gateway_down",
+    "gateway_up",
+    "server_conn_limit",
+    "server_conn_resume",
+    "server_disabled",
+    "server_down",
+    "server_selection_failure",
+    "server_up",
+    "service_conn_limit",
+    "service_conn_resume",
+    "service_down",
+    "service_group_down",
+    "service_group_member_down",
+    "service_group_member_up",
+    "service_group_up",
+    "service_up",
+    "uuid",
+    "vip_connlimit",
+    "vip_connratelimit",
+    "vip_down",
+    "vip_port_connlimit",
+    "vip_port_connratelimit",
+    "vip_port_down",
+    "vip_port_up",
+    "vip_up",
+]
 
-MODULE_NAME = 'slb'
+MODULE_NAME = "slb"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

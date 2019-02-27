@@ -1,3 +1,2 @@
-a10_slb_sip_ex:
+slb_sip:
   a10.update:
-    - a10_obj: slb_sip

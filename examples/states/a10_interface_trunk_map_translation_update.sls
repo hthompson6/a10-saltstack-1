@@ -1,3 +1,2 @@
-a10_interface_trunk_map_translation_ex:
+interface_trunk_map_translation:
   a10.update:
-    - a10_obj: interface_trunk_map_translation

@@ -1,3 +1,2 @@
-a10_cgnv6_global_ex:
+cgnv6_global:
   a10.create:
-    - a10_obj: cgnv6_global

@@ -1,3 +1,2 @@
-a10_waf_global_ex:
+waf_global:
   a10.update:
-    - a10_obj: waf_global

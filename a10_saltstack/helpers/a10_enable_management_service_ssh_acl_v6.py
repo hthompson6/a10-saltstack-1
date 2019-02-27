@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["acl_name","all_data_intf","eth_cfg","management","tunnel_cfg","user_tag","uuid","ve_cfg",]
+AVAILABLE_PROPERTIES = [    "acl_name",
+    "all_data_intf",
+    "eth_cfg",
+    "management",
+    "tunnel_cfg",
+    "user_tag",
+    "uuid",
+    "ve_cfg",
+]
 
-MODULE_NAME = 'acl-v6'
+MODULE_NAME = "acl-v6"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/enable-management/service/ssh/acl-v6/{acl-name}"
     f_dict = {}
-    f_dict["acl-name"] = kwargs["acl_name"]
+    f_dict["acl-name"] = kwargs["acl-name"]
 
     return url_base.format(**f_dict)

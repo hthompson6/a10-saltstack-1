@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["geo_locn_multiple_addresses","geo_locn_obj_name","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "geo_locn_multiple_addresses",
+    "geo_locn_obj_name",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'geo-location'
+MODULE_NAME = "geo-location"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/geo-location/{geo-locn-obj-name}"
     f_dict = {}
-    f_dict["geo-locn-obj-name"] = kwargs["geo_locn_obj_name"]
+    f_dict["geo-locn-obj-name"] = kwargs["geo-locn-obj-name"]
 
     return url_base.format(**f_dict)

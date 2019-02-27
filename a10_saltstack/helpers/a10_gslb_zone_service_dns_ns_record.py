@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ns_name","sampling_enable","ttl","uuid",]
+AVAILABLE_PROPERTIES = [    "ns_name",
+    "sampling_enable",
+    "ttl",
+    "uuid",
+    "service_name",
+    "service_port",
+    "zone_name",
+]
 
-MODULE_NAME = 'dns-ns-record'
+MODULE_NAME = "dns-ns-record"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -25,7 +32,7 @@ def new_url(**kwargs):
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-ns-record/{ns-name}"
     f_dict = {}
     f_dict["ns-name"] = ""
-    f_dict["service-name"] = kwargs["service_name"]
+    f_dict["service-name"] = kwargs["service-name"]
     f_dict["service_port"] = kwargs["service_port"]
     f_dict["zone_name"] = kwargs["zone_name"]
 
@@ -37,7 +44,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-ns-record/{ns-name}"
     f_dict = {}
-    f_dict["ns-name"] = kwargs["ns_name"]
+    f_dict["ns-name"] = kwargs["ns-name"]
     f_dict["service-name"] = kwargs["service-name"]
     f_dict["service_port"] = kwargs["service_port"]
     f_dict["zone_name"] = kwargs["zone_name"]

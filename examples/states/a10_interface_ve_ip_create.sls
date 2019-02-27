@@ -1,3 +1,2 @@
-a10_interface_ve_ip_ex:
+interface_ve_ip:
   a10.create:
-    - a10_obj: interface_ve_ip

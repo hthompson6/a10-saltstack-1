@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["console","enable_cfg","login_cfg","mode_cfg","multiple_auth_reject","type_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "console",
+    "enable_cfg",
+    "login_cfg",
+    "mode_cfg",
+    "multiple_auth_reject",
+    "type_cfg",
+    "uuid",
+]
 
-MODULE_NAME = 'authentication'
+MODULE_NAME = "authentication"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

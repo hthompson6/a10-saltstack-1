@@ -1,3 +1,2 @@
-a10_debug_vtep_event_ex:
+debug_vtep_event:
   a10.update:
-    - a10_obj: debug_vtep_event

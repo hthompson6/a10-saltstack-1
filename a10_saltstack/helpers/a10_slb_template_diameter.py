@@ -15,9 +15,31 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["avp_code","avp_list","avp_string","customize_cea","dwr_time","dwr_up_retry","forward_to_latest_server","forward_unknown_session_id","idle_timeout","load_balance_on_session_id","message_code_list","multiple_origin_host","name","origin_host","origin_realm","product_name","service_group_name","session_age","terminate_on_cca_t","user_tag","uuid","vendor_id",]
+AVAILABLE_PROPERTIES = [    "avp_code",
+    "avp_list",
+    "avp_string",
+    "customize_cea",
+    "dwr_time",
+    "dwr_up_retry",
+    "forward_to_latest_server",
+    "forward_unknown_session_id",
+    "idle_timeout",
+    "load_balance_on_session_id",
+    "message_code_list",
+    "multiple_origin_host",
+    "a10_name",
+    "origin_host",
+    "origin_realm",
+    "product_name",
+    "service_group_name",
+    "session_age",
+    "terminate_on_cca_t",
+    "user_tag",
+    "uuid",
+    "vendor_id",
+]
 
-MODULE_NAME = 'diameter'
+MODULE_NAME = "diameter"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +56,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/diameter/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

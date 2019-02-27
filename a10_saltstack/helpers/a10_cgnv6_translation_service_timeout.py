@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["fast","port","port_end","service_type","timeout_val","uuid",]
+AVAILABLE_PROPERTIES = [    "fast",
+    "port",
+    "port_end",
+    "service_type",
+    "timeout_val",
+    "uuid",
+]
 
-MODULE_NAME = 'service-timeout'
+MODULE_NAME = "service-timeout"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +41,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/translation/service-timeout/{service-type}+{port}"
     f_dict = {}
-    f_dict["service-type"] = kwargs["service_type"]
+    f_dict["service-type"] = kwargs["service-type"]
     f_dict["port"] = kwargs["port"]
 
     return url_base.format(**f_dict)

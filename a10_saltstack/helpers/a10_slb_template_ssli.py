@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["name","ntype","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "a10_name",
+    "ntype",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'ssli'
+MODULE_NAME = "ssli"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/ssli/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

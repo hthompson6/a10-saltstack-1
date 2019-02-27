@@ -1,3 +1,2 @@
-a10_slb_passthrough_ex:
+slb_passthrough:
   a10.delete:
-    - a10_obj: slb_passthrough 

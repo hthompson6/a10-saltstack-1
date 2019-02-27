@@ -1,4 +1,3 @@
-a10_cgnv6_service_group_ex:
+cgnv6_service_group:
   a10.create:
-    - a10_obj: cgnv6_service_group
-    - name: my_service-group
+    - a10_name: my_service-group

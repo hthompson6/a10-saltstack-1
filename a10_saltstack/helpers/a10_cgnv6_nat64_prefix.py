@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["class_list","prefix_val","uuid","vrid",]
+AVAILABLE_PROPERTIES = [    "class_list",
+    "prefix_val",
+    "uuid",
+    "vrid",
+]
 
-MODULE_NAME = 'prefix'
+MODULE_NAME = "prefix"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/nat64/prefix/{prefix-val}"
     f_dict = {}
-    f_dict["prefix-val"] = kwargs["prefix_val"]
+    f_dict["prefix-val"] = kwargs["prefix-val"]
 
     return url_base.format(**f_dict)

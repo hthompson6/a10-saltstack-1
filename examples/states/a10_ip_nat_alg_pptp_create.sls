@@ -1,3 +1,2 @@
-a10_ip_nat_alg_pptp_ex:
+ip_nat_alg_pptp:
   a10.create:
-    - a10_obj: ip_nat_alg_pptp

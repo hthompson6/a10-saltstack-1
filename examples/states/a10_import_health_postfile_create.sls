@@ -1,3 +1,2 @@
-a10_import_health_postfile_ex:
+import_health_postfile:
   a10.create:
-    - a10_obj: import_health_postfile

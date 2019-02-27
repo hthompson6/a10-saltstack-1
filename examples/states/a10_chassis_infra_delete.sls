@@ -1,3 +1,2 @@
-a10_chassis_infra_ex:
+chassis_infra:
   a10.delete:
-    - a10_obj: chassis_infra 

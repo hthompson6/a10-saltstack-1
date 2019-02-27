@@ -1,3 +1,2 @@
-a10_reboot_ex:
+reboot:
   a10.update:
-    - a10_obj: reboot

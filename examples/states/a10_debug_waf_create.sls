@@ -1,3 +1,2 @@
-a10_debug_waf_ex:
+debug_waf:
   a10.create:
-    - a10_obj: debug_waf

@@ -15,9 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["destination","match_any","match_authorize_policy","match_class_list","name","priority","sampling_enable","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "destination",
+    "match_any",
+    "match_authorize_policy",
+    "match_class_list",
+    "a10_name",
+    "priority",
+    "sampling_enable",
+    "user_tag",
+    "uuid",
+    "policy_name",
+]
 
-MODULE_NAME = 'source'
+MODULE_NAME = "source"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +45,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/policy/{policy_name}/forward-policy/source/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
     f_dict["policy_name"] = kwargs["policy_name"]
 
     return url_base.format(**f_dict)

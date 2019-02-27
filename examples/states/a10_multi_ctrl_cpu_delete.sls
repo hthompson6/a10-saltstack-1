@@ -1,3 +1,2 @@
-a10_multi_ctrl_cpu_ex:
+multi_ctrl_cpu:
   a10.delete:
-    - a10_obj: multi_ctrl_cpu 

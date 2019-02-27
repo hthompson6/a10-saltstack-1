@@ -1,3 +1,2 @@
-a10_debug_l4_ex:
+debug_l4:
   a10.update:
-    - a10_obj: debug_l4

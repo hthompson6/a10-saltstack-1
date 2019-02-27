@@ -1,3 +1,2 @@
-a10_shutdown_ex:
+shutdown:
   a10.create:
-    - a10_obj: shutdown

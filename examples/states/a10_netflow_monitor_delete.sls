@@ -1,4 +1,3 @@
-a10_netflow_monitor_ex:
+netflow_monitor:
   a10.delete:
-    - a10_obj: netflow_monitor 
-    - name: my_monitor
+    - a10_name: my_monitor

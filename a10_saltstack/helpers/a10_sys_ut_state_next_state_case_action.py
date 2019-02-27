@@ -15,9 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["delay","direction","drop","l1","l2","l3","tcp","template","udp","uuid",]
+AVAILABLE_PROPERTIES = [    "delay",
+    "direction",
+    "drop",
+    "l1",
+    "l2",
+    "l3",
+    "tcp",
+    "template",
+    "udp",
+    "uuid",
+    "case_number",
+    "name",
+    "state_name",
+]
 
-MODULE_NAME = 'action'
+MODULE_NAME = "action"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

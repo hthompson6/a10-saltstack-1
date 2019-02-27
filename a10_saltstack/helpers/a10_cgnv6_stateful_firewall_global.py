@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["respond_to_user_mac","sampling_enable","stateful_firewall_value","uuid",]
+AVAILABLE_PROPERTIES = [    "respond_to_user_mac",
+    "sampling_enable",
+    "stateful_firewall_value",
+    "uuid",
+]
 
-MODULE_NAME = 'global'
+MODULE_NAME = "global"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

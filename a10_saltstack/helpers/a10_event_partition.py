@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["email","logging","user_tag","uuid","vnp_events",]
+AVAILABLE_PROPERTIES = [    "email",
+    "logging",
+    "user_tag",
+    "uuid",
+    "vnp_events",
+]
 
-MODULE_NAME = 'partition'
+MODULE_NAME = "partition"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/event/partition/{vnp-events}"
     f_dict = {}
-    f_dict["vnp-events"] = kwargs["vnp_events"]
+    f_dict["vnp-events"] = kwargs["vnp-events"]
 
     return url_base.format(**f_dict)

@@ -1,3 +1,2 @@
-a10_sshd_ex:
+sshd:
   a10.delete:
-    - a10_obj: sshd 

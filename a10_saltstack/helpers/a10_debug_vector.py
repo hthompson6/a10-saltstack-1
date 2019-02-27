@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["error","packet","trace","uuid",]
+AVAILABLE_PROPERTIES = [    "error",
+    "packet",
+    "trace",
+    "uuid",
+]
 
-MODULE_NAME = 'vector'
+MODULE_NAME = "vector"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

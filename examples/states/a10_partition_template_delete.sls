@@ -1,3 +1,2 @@
-a10_partition_template_ex:
+partition_template:
   a10.delete:
-    - a10_obj: partition_template 

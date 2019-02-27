@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethernet","ipv6_addr","mac","trunk","tunnel","uuid","vlan",]
+AVAILABLE_PROPERTIES = [    "ethernet",
+    "ipv6_addr",
+    "mac",
+    "trunk",
+    "tunnel",
+    "uuid",
+    "vlan",
+]
 
-MODULE_NAME = 'static'
+MODULE_NAME = "static"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +42,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/neighbor/static/{ipv6-addr}+{vlan}"
     f_dict = {}
-    f_dict["ipv6-addr"] = kwargs["ipv6_addr"]
+    f_dict["ipv6-addr"] = kwargs["ipv6-addr"]
     f_dict["vlan"] = kwargs["vlan"]
 
     return url_base.format(**f_dict)

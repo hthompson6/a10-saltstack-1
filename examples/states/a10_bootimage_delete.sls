@@ -1,3 +1,2 @@
-a10_bootimage_ex:
+bootimage:
   a10.delete:
-    - a10_obj: bootimage 

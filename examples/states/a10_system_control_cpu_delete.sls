@@ -1,3 +1,2 @@
-a10_system_control_cpu_ex:
+system_control_cpu:
   a10.delete:
-    - a10_obj: system_control_cpu 

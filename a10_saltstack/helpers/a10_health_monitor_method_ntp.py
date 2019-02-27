@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ntp","ntp_port","uuid",]
+AVAILABLE_PROPERTIES = [    "ntp",
+    "ntp_port",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'ntp'
+MODULE_NAME = "ntp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

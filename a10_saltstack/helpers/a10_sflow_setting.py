@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["counter_polling_interval","local_collection","max_header","packet_sampling_rate","source_ip_use_mgmt","uuid",]
+AVAILABLE_PROPERTIES = [    "counter_polling_interval",
+    "local_collection",
+    "max_header",
+    "packet_sampling_rate",
+    "source_ip_use_mgmt",
+    "uuid",
+]
 
-MODULE_NAME = 'setting'
+MODULE_NAME = "setting"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

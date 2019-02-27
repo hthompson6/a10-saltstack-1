@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["crypto_core","crypto_mem","fpga_decrypt","packet_round_robin","uuid",]
+AVAILABLE_PROPERTIES = [    "crypto_core",
+    "crypto_mem",
+    "fpga_decrypt",
+    "packet_round_robin",
+    "uuid",
+]
 
-MODULE_NAME = 'ipsec'
+MODULE_NAME = "ipsec"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

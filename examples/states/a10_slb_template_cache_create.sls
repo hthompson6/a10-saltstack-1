@@ -1,4 +1,3 @@
-a10_slb_template_cache_ex:
+slb_template_cache:
   a10.create:
-    - a10_obj: slb_template_cache
-    - name: my_cache
+    - a10_name: my_cache

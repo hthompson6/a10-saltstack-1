@@ -1,3 +1,2 @@
-a10_import_periodic_policy_ex:
+import_periodic_policy:
   a10.delete:
-    - a10_obj: import_periodic_policy 

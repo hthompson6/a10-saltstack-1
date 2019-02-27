@@ -15,9 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["access_list_cfg","address_list","inside","ipv6_enable","ospf","outside","rip","router","router_adver","stateful_firewall","ttl_ignore","uuid",]
+AVAILABLE_PROPERTIES = [    "access_list_cfg",
+    "address_list",
+    "inside",
+    "ipv6_enable",
+    "ospf",
+    "outside",
+    "rip",
+    "router",
+    "router_adver",
+    "stateful_firewall",
+    "ttl_ignore",
+    "uuid",
+    "ethernet_ifnum",
+]
 
-MODULE_NAME = 'ipv6'
+MODULE_NAME = "ipv6"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

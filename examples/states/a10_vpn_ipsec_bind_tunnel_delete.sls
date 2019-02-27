@@ -1,3 +1,2 @@
-a10_vpn_ipsec_bind_tunnel_ex:
+vpn_ipsec_bind_tunnel:
   a10.delete:
-    - a10_obj: vpn_ipsec_bind_tunnel 

@@ -1,3 +1,2 @@
-a10_logging_trap_ex:
+logging_trap:
   a10.create:
-    - a10_obj: logging_trap

@@ -1,4 +1,3 @@
-a10_slb_template_dblb_ex:
+slb_template_dblb:
   a10.delete:
-    - a10_obj: slb_template_dblb 
-    - name: my_dblb
+    - a10_name: my_dblb

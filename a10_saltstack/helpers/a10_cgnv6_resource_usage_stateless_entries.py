@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["l4_session_count","uuid",]
+AVAILABLE_PROPERTIES = [    "l4_session_count",
+    "uuid",
+]
 
-MODULE_NAME = 'stateless-entries'
+MODULE_NAME = "stateless-entries"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

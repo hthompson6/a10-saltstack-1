@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["aflex","uuid",]
+AVAILABLE_PROPERTIES = [    "aflex",
+    "uuid",
+]
 
-MODULE_NAME = 'running-config'
+MODULE_NAME = "running-config"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

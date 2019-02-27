@@ -1,3 +1,2 @@
-a10_ipv6_ospf_ex:
+ipv6_ospf:
   a10.delete:
-    - a10_obj: ipv6_ospf 

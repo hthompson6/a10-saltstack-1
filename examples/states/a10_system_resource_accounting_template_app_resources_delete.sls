@@ -1,3 +1,2 @@
-a10_system_resource_accounting_template_app_resources_ex:
+system_resource_accounting_template_app_resources:
   a10.delete:
-    - a10_obj: system_resource_accounting_template_app_resources 

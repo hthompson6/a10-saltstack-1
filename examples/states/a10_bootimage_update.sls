@@ -1,3 +1,2 @@
-a10_bootimage_ex:
+bootimage:
   a10.update:
-    - a10_obj: bootimage

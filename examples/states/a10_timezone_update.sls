@@ -1,3 +1,2 @@
-a10_timezone_ex:
+timezone:
   a10.update:
-    - a10_obj: timezone

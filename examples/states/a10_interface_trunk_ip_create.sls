@@ -1,3 +1,2 @@
-a10_interface_trunk_ip_ex:
+interface_trunk_ip:
   a10.create:
-    - a10_obj: interface_trunk_ip

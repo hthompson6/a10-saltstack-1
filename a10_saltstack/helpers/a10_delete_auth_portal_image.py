@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["image_name",]
+AVAILABLE_PROPERTIES = [    "image_name",
+]
 
-MODULE_NAME = 'auth-portal-image'
+MODULE_NAME = "auth-portal-image"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

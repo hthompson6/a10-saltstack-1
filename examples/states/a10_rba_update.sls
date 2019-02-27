@@ -1,3 +1,2 @@
-a10_rba_ex:
+rba:
   a10.update:
-    - a10_obj: rba

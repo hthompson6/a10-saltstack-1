@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["local_uri_file","period","remote_file","use_mgmt_port","uuid",]
+AVAILABLE_PROPERTIES = [    "local_uri_file",
+    "period",
+    "remote_file",
+    "use_mgmt_port",
+    "uuid",
+]
 
-MODULE_NAME = 'local-uri-file'
+MODULE_NAME = "local-uri-file"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/local-uri-file/{local-uri-file}"
     f_dict = {}
-    f_dict["local-uri-file"] = kwargs["local_uri_file"]
+    f_dict["local-uri-file"] = kwargs["local-uri-file"]
 
     return url_base.format(**f_dict)

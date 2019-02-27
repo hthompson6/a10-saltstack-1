@@ -1,3 +1,2 @@
-a10_file_policy_ex:
+file_policy:
   a10.delete:
-    - a10_obj: file_policy 

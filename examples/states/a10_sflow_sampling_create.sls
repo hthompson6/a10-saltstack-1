@@ -1,3 +1,2 @@
-a10_sflow_sampling_ex:
+sflow_sampling:
   a10.create:
-    - a10_obj: sflow_sampling

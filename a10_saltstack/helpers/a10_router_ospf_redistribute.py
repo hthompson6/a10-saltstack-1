@@ -15,9 +15,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ip_nat","ip_nat_floating_list","metric_ip_nat","metric_type_ip_nat","ospf_list","redist_list","route_map_ip_nat","tag_ip_nat","uuid","vip_floating_list","vip_list",]
+AVAILABLE_PROPERTIES = [    "ip_nat",
+    "ip_nat_floating_list",
+    "metric_ip_nat",
+    "metric_type_ip_nat",
+    "ospf_list",
+    "redist_list",
+    "route_map_ip_nat",
+    "tag_ip_nat",
+    "uuid",
+    "vip_floating_list",
+    "vip_list",
+    "ospf_process_id",
+]
 
-MODULE_NAME = 'redistribute'
+MODULE_NAME = "redistribute"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

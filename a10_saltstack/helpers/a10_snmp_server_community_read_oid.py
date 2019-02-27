@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["oid_val","remote","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "oid_val",
+    "remote",
+    "user_tag",
+    "uuid",
+    "read_user",
+]
 
-MODULE_NAME = 'oid'
+MODULE_NAME = "oid"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +40,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/snmp-server/community/read/{read_user}/oid/{oid-val}"
     f_dict = {}
-    f_dict["oid-val"] = kwargs["oid_val"]
+    f_dict["oid-val"] = kwargs["oid-val"]
     f_dict["read_user"] = kwargs["read_user"]
 
     return url_base.format(**f_dict)

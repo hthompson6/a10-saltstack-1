@@ -1,3 +1,2 @@
-a10_gslb_system_ex:
+gslb_system:
   a10.create:
-    - a10_obj: gslb_system

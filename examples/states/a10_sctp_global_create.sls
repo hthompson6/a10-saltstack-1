@@ -1,3 +1,2 @@
-a10_sctp_global_ex:
+sctp_global:
   a10.create:
-    - a10_obj: sctp_global

@@ -1,3 +1,2 @@
-a10_environment_ex:
+environment:
   a10.update:
-    - a10_obj: environment

@@ -1,4 +1,3 @@
-a10_cgnv6_nat_range_list_ex:
+cgnv6_nat_range_list:
   a10.create:
-    - a10_obj: cgnv6_nat_range_list
-    - name: my_range-list
+    - a10_name: my_range-list

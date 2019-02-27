@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["icmp_timeout","service_timeout_list","tcp_timeout","udp_timeout","uuid",]
+AVAILABLE_PROPERTIES = [    "icmp_timeout",
+    "service_timeout_list",
+    "tcp_timeout",
+    "udp_timeout",
+    "uuid",
+]
 
-MODULE_NAME = 'translation'
+MODULE_NAME = "translation"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

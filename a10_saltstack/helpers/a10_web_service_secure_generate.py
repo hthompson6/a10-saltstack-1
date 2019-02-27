@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["country","domain_name","state",]
+AVAILABLE_PROPERTIES = [    "country",
+    "domain_name",
+    "state",
+]
 
-MODULE_NAME = 'generate'
+MODULE_NAME = "generate"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

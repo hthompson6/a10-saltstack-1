@@ -1,3 +1,2 @@
-a10_backup_system_ex:
+backup_system:
   a10.delete:
-    - a10_obj: backup_system 

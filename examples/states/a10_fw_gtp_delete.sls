@@ -1,3 +1,2 @@
-a10_fw_gtp_ex:
+fw_gtp:
   a10.delete:
-    - a10_obj: fw_gtp 

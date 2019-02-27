@@ -1,3 +1,2 @@
-a10_slb_proxy_ex:
+slb_proxy:
   a10.create:
-    - a10_obj: slb_proxy

@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["backdoor","comm_value","description","network_ipv4_cidr","route_map","uuid",]
+AVAILABLE_PROPERTIES = [    "backdoor",
+    "comm_value",
+    "description",
+    "network_ipv4_cidr",
+    "route_map",
+    "uuid",
+    "bgp_as_number",
+]
 
-MODULE_NAME = 'ip-cidr'
+MODULE_NAME = "ip-cidr"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +42,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/network/ip-cidr/{network-ipv4-cidr}"
     f_dict = {}
-    f_dict["network-ipv4-cidr"] = kwargs["network_ipv4_cidr"]
+    f_dict["network-ipv4-cidr"] = kwargs["network-ipv4-cidr"]
     f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)

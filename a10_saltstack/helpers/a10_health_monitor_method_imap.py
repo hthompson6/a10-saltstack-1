@@ -15,9 +15,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["imap","imap_cram_md5","imap_encrypted","imap_login","imap_password","imap_password_string","imap_plain","imap_port","imap_username","pwd_auth","uuid",]
+AVAILABLE_PROPERTIES = [    "imap",
+    "imap_cram_md5",
+    "imap_encrypted",
+    "imap_login",
+    "imap_password",
+    "imap_password_string",
+    "imap_plain",
+    "imap_port",
+    "imap_username",
+    "pwd_auth",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'imap'
+MODULE_NAME = "imap"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

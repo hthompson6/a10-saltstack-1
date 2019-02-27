@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["uuid","vlan",]
+AVAILABLE_PROPERTIES = [    "uuid",
+    "vlan",
+]
 
-MODULE_NAME = 'ospf-inline'
+MODULE_NAME = "ospf-inline"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

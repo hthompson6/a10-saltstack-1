@@ -1,3 +1,2 @@
-a10_debug_sctp_ex:
+debug_sctp:
   a10.delete:
-    - a10_obj: debug_sctp 

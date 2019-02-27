@@ -15,9 +15,25 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["anti_replay_window","bind_tunnel","dh_group","enc_cfg","ike_gateway","lifebytes","lifetime","mode","name","proto","sampling_enable","sequence_number_disable","traffic_selector","up","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "anti_replay_window",
+    "bind_tunnel",
+    "dh_group",
+    "enc_cfg",
+    "ike_gateway",
+    "lifebytes",
+    "lifetime",
+    "mode",
+    "a10_name",
+    "proto",
+    "sampling_enable",
+    "sequence_number_disable",
+    "traffic_selector",
+    "up",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'ipsec'
+MODULE_NAME = "ipsec"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +50,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vpn/ipsec/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

@@ -1,3 +1,2 @@
-a10_ip_frag_ex:
+ip_frag:
   a10.create:
-    - a10_obj: ip_frag

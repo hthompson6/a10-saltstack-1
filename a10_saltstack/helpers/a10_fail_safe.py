@@ -15,9 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["disable_failsafe","fpga_buff_recovery_threshold","hw_error_monitor","hw_error_recovery_timeout","kill","log","session_mem_recovery_threshold","sw_error_monitor_enable","sw_error_recovery_timeout","total_memory_size_check","uuid",]
+AVAILABLE_PROPERTIES = [    "disable_failsafe",
+    "fpga_buff_recovery_threshold",
+    "hw_error_monitor",
+    "hw_error_recovery_timeout",
+    "kill",
+    "log",
+    "session_mem_recovery_threshold",
+    "sw_error_monitor_enable",
+    "sw_error_recovery_timeout",
+    "total_memory_size_check",
+    "uuid",
+]
 
-MODULE_NAME = 'fail-safe'
+MODULE_NAME = "fail-safe"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

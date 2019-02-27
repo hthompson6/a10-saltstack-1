@@ -1,3 +1,2 @@
-a10_ipv6_route_static_bfd_bfd_ipv6_ex:
+ipv6_route_static_bfd_bfd_ipv6:
   a10.create:
-    - a10_obj: ipv6_route_static_bfd_bfd_ipv6

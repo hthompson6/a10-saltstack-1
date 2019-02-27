@@ -1,3 +1,2 @@
-a10_restore_ex:
+restore:
   a10.delete:
-    - a10_obj: restore 

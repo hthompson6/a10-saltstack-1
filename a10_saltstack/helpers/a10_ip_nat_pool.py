@@ -15,9 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["end_address","ethernet","gateway","ip_rr","netmask","pool_name","scaleout_device_id","start_address","use_if_ip","uuid","vrid",]
+AVAILABLE_PROPERTIES = [    "end_address",
+    "ethernet",
+    "gateway",
+    "ip_rr",
+    "netmask",
+    "pool_name",
+    "scaleout_device_id",
+    "start_address",
+    "use_if_ip",
+    "uuid",
+    "vrid",
+]
 
-MODULE_NAME = 'pool'
+MODULE_NAME = "pool"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +45,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/nat/pool/{pool-name}"
     f_dict = {}
-    f_dict["pool-name"] = kwargs["pool_name"]
+    f_dict["pool-name"] = kwargs["pool-name"]
 
     return url_base.format(**f_dict)

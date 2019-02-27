@@ -1,3 +1,2 @@
-a10_sshd_ex:
+sshd:
   a10.update:
-    - a10_obj: sshd

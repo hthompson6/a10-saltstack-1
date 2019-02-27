@@ -1,3 +1,2 @@
-a10_system_memory_ex:
+system_memory:
   a10.update:
-    - a10_obj: system_memory

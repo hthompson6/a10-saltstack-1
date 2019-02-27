@@ -1,3 +1,2 @@
-a10_ssh_login_grace_time_ex:
+ssh_login_grace_time:
   a10.create:
-    - a10_obj: ssh_login_grace_time

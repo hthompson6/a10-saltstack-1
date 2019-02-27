@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["domain","name","sampling_enable","user_tag","uuid","version",]
+AVAILABLE_PROPERTIES = [    "domain",
+    "a10_name",
+    "sampling_enable",
+    "user_tag",
+    "uuid",
+    "version",
+]
 
-MODULE_NAME = 'ntlm'
+MODULE_NAME = "ntlm"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +40,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/relay/ntlm/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

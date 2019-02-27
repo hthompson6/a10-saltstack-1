@@ -1,4 +1,3 @@
-a10_slb_template_sip_ex:
+slb_template_sip:
   a10.create:
-    - a10_obj: slb_template_sip
-    - name: my_sip
+    - a10_name: my_sip

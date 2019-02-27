@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action_list","filtering","local_logging","no_client_conn_reuse","source_list","uuid",]
+AVAILABLE_PROPERTIES = [    "action_list",
+    "filtering",
+    "local_logging",
+    "no_client_conn_reuse",
+    "source_list",
+    "uuid",
+    "policy_name",
+]
 
-MODULE_NAME = 'forward-policy'
+MODULE_NAME = "forward-policy"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

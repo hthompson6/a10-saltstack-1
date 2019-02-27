@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["destination_vtep","ip_addr","overlay_mac_addr","uuid","vni",]
+AVAILABLE_PROPERTIES = [    "destination_vtep",
+    "ip_addr",
+    "overlay_mac_addr",
+    "uuid",
+    "vni",
+    "vtep_id",
+]
 
-MODULE_NAME = 'host'
+MODULE_NAME = "host"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -38,10 +44,10 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/overlay-tunnel/vtep/{vtep_id}/host/{ip-addr}+{overlay-mac-addr}+{vni}+{destination-vtep}"
     f_dict = {}
-    f_dict["ip-addr"] = kwargs["ip_addr"]
-    f_dict["overlay-mac-addr"] = kwargs["overlay_mac_addr"]
+    f_dict["ip-addr"] = kwargs["ip-addr"]
+    f_dict["overlay-mac-addr"] = kwargs["overlay-mac-addr"]
     f_dict["vni"] = kwargs["vni"]
-    f_dict["destination-vtep"] = kwargs["destination_vtep"]
+    f_dict["destination-vtep"] = kwargs["destination-vtep"]
     f_dict["vtep_id"] = kwargs["vtep_id"]
 
     return url_base.format(**f_dict)

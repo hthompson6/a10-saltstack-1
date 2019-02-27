@@ -15,9 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["address_type","ethernet","nat_pool","src_dst","trunk","uuid","value","ve","virtual_server",]
+AVAILABLE_PROPERTIES = [    "address_type",
+    "ethernet",
+    "nat_pool",
+    "src_dst",
+    "trunk",
+    "uuid",
+    "value",
+    "ve",
+    "virtual_server",
+    "action_direction",
+    "event_number",
+]
 
-MODULE_NAME = 'mac'
+MODULE_NAME = "mac"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -36,7 +47,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/event/{event_number}/action/{action_direction}/l2/mac/{src-dst}"
     f_dict = {}
-    f_dict["src-dst"] = kwargs["src_dst"]
+    f_dict["src-dst"] = kwargs["src-dst"]
     f_dict["action_direction"] = kwargs["action_direction"]
     f_dict["event_number"] = kwargs["event_number"]
 

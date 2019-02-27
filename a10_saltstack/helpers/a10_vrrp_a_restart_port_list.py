@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethernet_cfg","uuid","vrid_list",]
+AVAILABLE_PROPERTIES = [    "ethernet_cfg",
+    "uuid",
+    "vrid_list",
+]
 
-MODULE_NAME = 'restart-port-list'
+MODULE_NAME = "restart-port-list"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

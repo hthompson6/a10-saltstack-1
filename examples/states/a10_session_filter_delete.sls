@@ -1,4 +1,3 @@
-a10_session_filter_ex:
+session_filter:
   a10.delete:
-    - a10_obj: session_filter 
-    - name: my_session-filter
+    - a10_name: my_session-filter

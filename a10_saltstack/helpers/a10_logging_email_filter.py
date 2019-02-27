@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["expression","filter_id","trigger","uuid",]
+AVAILABLE_PROPERTIES = [    "expression",
+    "filter_id",
+    "trigger",
+    "uuid",
+]
 
-MODULE_NAME = 'filter'
+MODULE_NAME = "filter"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/logging/email/filter/{filter-id}"
     f_dict = {}
-    f_dict["filter-id"] = kwargs["filter_id"]
+    f_dict["filter-id"] = kwargs["filter-id"]
 
     return url_base.format(**f_dict)

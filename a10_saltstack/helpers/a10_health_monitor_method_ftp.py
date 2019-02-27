@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ftp","ftp_encrypted","ftp_password","ftp_password_string","ftp_port","ftp_username","uuid",]
+AVAILABLE_PROPERTIES = [    "ftp",
+    "ftp_encrypted",
+    "ftp_password",
+    "ftp_password_string",
+    "ftp_port",
+    "ftp_username",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'ftp'
+MODULE_NAME = "ftp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

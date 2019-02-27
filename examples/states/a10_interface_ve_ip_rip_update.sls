@@ -1,3 +1,2 @@
-a10_interface_ve_ip_rip_ex:
+interface_ve_ip_rip:
   a10.update:
-    - a10_obj: interface_ve_ip_rip

@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","cli","detail","event","ha","packet","sync","timer","uuid",]
+AVAILABLE_PROPERTIES = [    "all",
+    "cli",
+    "detail",
+    "event",
+    "ha",
+    "packet",
+    "sync",
+    "timer",
+    "uuid",
+]
 
-MODULE_NAME = 'lacp'
+MODULE_NAME = "lacp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

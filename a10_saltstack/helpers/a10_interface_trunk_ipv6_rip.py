@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["split_horizon_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "split_horizon_cfg",
+    "uuid",
+    "trunk_ifnum",
+]
 
-MODULE_NAME = 'rip'
+MODULE_NAME = "rip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

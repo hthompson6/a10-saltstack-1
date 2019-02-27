@@ -1,4 +1,3 @@
-a10_slb_template_server_ex:
+slb_template_server:
   a10.delete:
-    - a10_obj: slb_template_server 
-    - name: my_server
+    - a10_name: my_server

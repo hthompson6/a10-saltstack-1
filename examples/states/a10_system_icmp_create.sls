@@ -1,3 +1,2 @@
-a10_system_icmp_ex:
+system_icmp:
   a10.create:
-    - a10_obj: system_icmp

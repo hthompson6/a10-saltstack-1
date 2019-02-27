@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ipv6_address","priority_cost","uuid",]
+AVAILABLE_PROPERTIES = [    "ipv6_address",
+    "priority_cost",
+    "uuid",
+    "vrid_val",
+]
 
-MODULE_NAME = 'ipv6-gateway'
+MODULE_NAME = "ipv6-gateway"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +39,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/vrid/{vrid_val}/blade-parameters/tracking-options/gateway/ipv6-gateway/{ipv6-address}"
     f_dict = {}
-    f_dict["ipv6-address"] = kwargs["ipv6_address"]
+    f_dict["ipv6-address"] = kwargs["ipv6-address"]
     f_dict["vrid_val"] = kwargs["vrid_val"]
 
     return url_base.format(**f_dict)

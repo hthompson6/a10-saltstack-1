@@ -1,3 +1,2 @@
-a10_logging_host_ipv4addr_ex:
+logging_host_ipv4addr:
   a10.update:
-    - a10_obj: logging_host_ipv4addr

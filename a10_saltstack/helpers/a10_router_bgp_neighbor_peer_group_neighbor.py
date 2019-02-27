@@ -15,9 +15,60 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["activate","advertisement_interval","allowas_in","allowas_in_count","as_origination_interval","collide_established","connect","default_originate","description","disallow_infinite_holdtime","distribute_lists","dont_capability_negotiate","dynamic","ebgp_multihop","ebgp_multihop_hop_count","enforce_multihop","ethernet","inbound","lif","loopback","maximum_prefix","maximum_prefix_thres","neighbor_filter_lists","neighbor_prefix_lists","neighbor_route_map_lists","next_hop_self","override_capability","pass_encrypted","pass_value","passive","peer_group","peer_group_key","peer_group_remote_as","prefix_list_direction","remove_private_as","route_map","route_refresh","send_community_val","shutdown","strict_capability_match","timers_holdtime","timers_keepalive","trunk","tunnel","unsuppress_map","update_source_ip","update_source_ipv6","uuid","ve","weight",]
+AVAILABLE_PROPERTIES = [    "activate",
+    "advertisement_interval",
+    "allowas_in",
+    "allowas_in_count",
+    "as_origination_interval",
+    "collide_established",
+    "connect",
+    "default_originate",
+    "description",
+    "disallow_infinite_holdtime",
+    "distribute_lists",
+    "dont_capability_negotiate",
+    "dynamic",
+    "ebgp_multihop",
+    "ebgp_multihop_hop_count",
+    "enforce_multihop",
+    "ethernet",
+    "inbound",
+    "lif",
+    "loopback",
+    "maximum_prefix",
+    "maximum_prefix_thres",
+    "neighbor_filter_lists",
+    "neighbor_prefix_lists",
+    "neighbor_route_map_lists",
+    "next_hop_self",
+    "override_capability",
+    "pass_encrypted",
+    "pass_value",
+    "passive",
+    "peer_group",
+    "peer_group_key",
+    "peer_group_remote_as",
+    "prefix_list_direction",
+    "remove_private_as",
+    "route_map",
+    "route_refresh",
+    "send_community_val",
+    "shutdown",
+    "strict_capability_match",
+    "timers_holdtime",
+    "timers_keepalive",
+    "trunk",
+    "tunnel",
+    "unsuppress_map",
+    "update_source_ip",
+    "update_source_ipv6",
+    "uuid",
+    "ve",
+    "weight",
+    "bgp_as_number",
+]
 
-MODULE_NAME = 'peer-group-neighbor'
+MODULE_NAME = "peer-group-neighbor"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +86,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/neighbor/peer-group-neighbor/{peer-group}"
     f_dict = {}
-    f_dict["peer-group"] = kwargs["peer_group"]
+    f_dict["peer-group"] = kwargs["peer-group"]
     f_dict["bgp_as_number"] = kwargs["bgp_as_number"]
 
     return url_base.format(**f_dict)

@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["aging_time","uuid",]
+AVAILABLE_PROPERTIES = [    "aging_time",
+    "uuid",
+]
 
-MODULE_NAME = 'mac-age-time'
+MODULE_NAME = "mac-age-time"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

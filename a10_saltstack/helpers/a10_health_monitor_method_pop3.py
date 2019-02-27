@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["pop3","pop3_encrypted","pop3_password","pop3_password_string","pop3_port","pop3_username","uuid",]
+AVAILABLE_PROPERTIES = [    "pop3",
+    "pop3_encrypted",
+    "pop3_password",
+    "pop3_password_string",
+    "pop3_port",
+    "pop3_username",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'pop3'
+MODULE_NAME = "pop3"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

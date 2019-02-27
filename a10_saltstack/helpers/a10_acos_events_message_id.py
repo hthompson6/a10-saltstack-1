@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["log_msg","property","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "log_msg",
+    "property",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'message-id'
+MODULE_NAME = "message-id"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/acos-events/message-id/{log-msg}"
     f_dict = {}
-    f_dict["log-msg"] = kwargs["log_msg"]
+    f_dict["log-msg"] = kwargs["log-msg"]
 
     return url_base.format(**f_dict)

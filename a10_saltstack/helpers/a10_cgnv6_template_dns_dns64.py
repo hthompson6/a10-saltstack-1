@@ -15,9 +15,29 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["answer_only_disable","auth_data","cache","change_query","compress_disable","deep_check_rr_disable","drop_cname_disable","enable","ignore_rcode3_disable","max_qr_length","parallel_query","passive_query_disable","retry","single_response_disable","timeout","trans_ptr","trans_ptr_query","ttl","uuid",]
+AVAILABLE_PROPERTIES = [    "answer_only_disable",
+    "auth_data",
+    "cache",
+    "change_query",
+    "compress_disable",
+    "deep_check_rr_disable",
+    "drop_cname_disable",
+    "enable",
+    "ignore_rcode3_disable",
+    "max_qr_length",
+    "parallel_query",
+    "passive_query_disable",
+    "retry",
+    "single_response_disable",
+    "timeout",
+    "trans_ptr",
+    "trans_ptr_query",
+    "ttl",
+    "uuid",
+    "dns_name",
+]
 
-MODULE_NAME = 'dns64'
+MODULE_NAME = "dns64"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

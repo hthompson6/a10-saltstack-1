@@ -1,3 +1,2 @@
-a10_bgp_ex:
+bgp:
   a10.update:
-    - a10_obj: bgp

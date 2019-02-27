@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["force_up_with_single_healthcheck","udp","udp_port","uuid",]
+AVAILABLE_PROPERTIES = [    "force_up_with_single_healthcheck",
+    "udp",
+    "udp_port",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'udp'
+MODULE_NAME = "udp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

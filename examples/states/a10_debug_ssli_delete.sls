@@ -1,3 +1,2 @@
-a10_debug_ssli_ex:
+debug_ssli:
   a10.delete:
-    - a10_obj: debug_ssli 

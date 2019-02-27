@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["period","remote_file","use_mgmt_port","uuid","xml_schema",]
+AVAILABLE_PROPERTIES = [    "period",
+    "remote_file",
+    "use_mgmt_port",
+    "uuid",
+    "xml_schema",
+]
 
-MODULE_NAME = 'xml-schema'
+MODULE_NAME = "xml-schema"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/xml-schema/{xml-schema}"
     f_dict = {}
-    f_dict["xml-schema"] = kwargs["xml_schema"]
+    f_dict["xml-schema"] = kwargs["xml-schema"]
 
     return url_base.format(**f_dict)

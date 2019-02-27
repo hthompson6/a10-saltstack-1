@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["extd","rules","uuid",]
+AVAILABLE_PROPERTIES = [    "extd",
+    "rules",
+    "uuid",
+]
 
-MODULE_NAME = 'extended'
+MODULE_NAME = "extended"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

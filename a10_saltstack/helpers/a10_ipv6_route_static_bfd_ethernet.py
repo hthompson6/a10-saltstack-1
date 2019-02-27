@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["eth_num","nexthop_ipv6_ll","uuid",]
+AVAILABLE_PROPERTIES = [    "eth_num",
+    "nexthop_ipv6_ll",
+    "uuid",
+]
 
-MODULE_NAME = 'ethernet'
+MODULE_NAME = "ethernet"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +38,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/route/static/bfd/ethernet/{eth-num}+{nexthop-ipv6-ll}"
     f_dict = {}
-    f_dict["eth-num"] = kwargs["eth_num"]
-    f_dict["nexthop-ipv6-ll"] = kwargs["nexthop_ipv6_ll"]
+    f_dict["eth-num"] = kwargs["eth-num"]
+    f_dict["nexthop-ipv6-ll"] = kwargs["nexthop-ipv6-ll"]
 
     return url_base.format(**f_dict)

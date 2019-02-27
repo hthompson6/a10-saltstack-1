@@ -1,4 +1,3 @@
-a10_sys_ut_event_action_l2_mac_ex:
+sys_ut_event_action_l2_mac:
   a10.delete:
-    - a10_obj: sys_ut_event_action_l2_mac 
     - src_dst: dest

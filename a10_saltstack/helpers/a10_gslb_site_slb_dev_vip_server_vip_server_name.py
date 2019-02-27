@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["sampling_enable","uuid","vip_name",]
+AVAILABLE_PROPERTIES = [    "sampling_enable",
+    "uuid",
+    "vip_name",
+    "slb_dev_device_name",
+    "site_name",
+]
 
-MODULE_NAME = 'vip-server-name'
+MODULE_NAME = "vip-server-name"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -36,7 +41,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/site/{site_name}/slb-dev/{slb_dev_device_name}/vip-server/vip-server-name/{vip-name}"
     f_dict = {}
-    f_dict["vip-name"] = kwargs["vip_name"]
+    f_dict["vip-name"] = kwargs["vip-name"]
     f_dict["slb_dev_device_name"] = kwargs["slb_dev_device_name"]
     f_dict["site_name"] = kwargs["site_name"]
 

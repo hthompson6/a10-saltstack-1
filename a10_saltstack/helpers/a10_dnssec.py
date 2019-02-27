@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dnskey","ds","key_rollover","sign_zone_now","standalone","template_list","uuid",]
+AVAILABLE_PROPERTIES = [    "dnskey",
+    "ds",
+    "key_rollover",
+    "sign_zone_now",
+    "standalone",
+    "template_list",
+    "uuid",
+]
 
-MODULE_NAME = 'dnssec'
+MODULE_NAME = "dnssec"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

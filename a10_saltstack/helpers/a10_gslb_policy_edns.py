@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["client_subnet_geographic","uuid",]
+AVAILABLE_PROPERTIES = [    "client_subnet_geographic",
+    "uuid",
+    "policy_name",
+]
 
-MODULE_NAME = 'edns'
+MODULE_NAME = "edns"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,2 @@
-a10_dnssec_ex:
+dnssec:
   a10.update:
-    - a10_obj: dnssec

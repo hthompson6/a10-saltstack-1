@@ -15,9 +15,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethernet","ipv4_end_address","ipv4_start_address","ipv6_end_address","ipv6_start_address","nat_pool","src_dst","trunk","uuid","ve","virtual_server",]
+AVAILABLE_PROPERTIES = [    "ethernet",
+    "ipv4_end_address",
+    "ipv4_start_address",
+    "ipv6_end_address",
+    "ipv6_start_address",
+    "nat_pool",
+    "src_dst",
+    "trunk",
+    "uuid",
+    "ve",
+    "virtual_server",
+    "template_name",
+]
 
-MODULE_NAME = 'ip'
+MODULE_NAME = "ip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +47,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/template/{template_name}/l3/ip/{src-dst}"
     f_dict = {}
-    f_dict["src-dst"] = kwargs["src_dst"]
+    f_dict["src-dst"] = kwargs["src-dst"]
     f_dict["template_name"] = kwargs["template_name"]
 
     return url_base.format(**f_dict)

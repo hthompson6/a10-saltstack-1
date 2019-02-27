@@ -15,9 +15,28 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["auth_key","auth_proto","community","context_engine_id","context_name","host","interface","interval","oid","port","priv_key","priv_proto","security_engine_id","security_level","snmp_name","user_tag","username","uuid","version",]
+AVAILABLE_PROPERTIES = [    "auth_key",
+    "auth_proto",
+    "community",
+    "context_engine_id",
+    "context_name",
+    "host",
+    "interface",
+    "interval",
+    "oid",
+    "port",
+    "priv_key",
+    "priv_proto",
+    "security_engine_id",
+    "security_level",
+    "snmp_name",
+    "user_tag",
+    "username",
+    "uuid",
+    "version",
+]
 
-MODULE_NAME = 'snmp'
+MODULE_NAME = "snmp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +53,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/template/snmp/{snmp-name}"
     f_dict = {}
-    f_dict["snmp-name"] = kwargs["snmp_name"]
+    f_dict["snmp-name"] = kwargs["snmp-name"]
 
     return url_base.format(**f_dict)

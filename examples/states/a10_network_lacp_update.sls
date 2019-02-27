@@ -1,3 +1,2 @@
-a10_network_lacp_ex:
+network_lacp:
   a10.update:
-    - a10_obj: network_lacp

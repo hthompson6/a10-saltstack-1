@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["hashing_type","uuid",]
+AVAILABLE_PROPERTIES = [    "hashing_type",
+    "uuid",
+]
 
-MODULE_NAME = 'ecmp'
+MODULE_NAME = "ecmp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

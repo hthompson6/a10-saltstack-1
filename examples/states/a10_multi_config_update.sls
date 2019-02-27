@@ -1,3 +1,2 @@
-a10_multi_config_ex:
+multi_config:
   a10.update:
-    - a10_obj: multi_config

@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["fast","idle_timeout_val_port_range","port","port_end","uuid",]
+AVAILABLE_PROPERTIES = [    "fast",
+    "idle_timeout_val_port_range",
+    "port",
+    "port_end",
+    "uuid",
+]
 
-MODULE_NAME = 'idle-timeout'
+MODULE_NAME = "idle-timeout"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -36,6 +41,6 @@ def existing_url(**kwargs):
     url_base = "/axapi/v3/cgnv6/stateful-firewall/udp/idle-timeout/{port}+{port-end}"
     f_dict = {}
     f_dict["port"] = kwargs["port"]
-    f_dict["port-end"] = kwargs["port_end"]
+    f_dict["port-end"] = kwargs["port-end"]
 
     return url_base.format(**f_dict)

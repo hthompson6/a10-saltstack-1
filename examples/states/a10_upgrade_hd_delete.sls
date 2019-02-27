@@ -1,3 +1,2 @@
-a10_upgrade_hd_ex:
+upgrade_hd:
   a10.delete:
-    - a10_obj: upgrade_hd 

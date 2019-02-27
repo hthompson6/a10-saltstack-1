@@ -1,3 +1,2 @@
-a10_debug_http2_ex:
+debug_http2:
   a10.create:
-    - a10_obj: debug_http2

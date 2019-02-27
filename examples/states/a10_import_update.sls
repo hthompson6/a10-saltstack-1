@@ -1,3 +1,2 @@
-a10_import_ex:
+import:
   a10.update:
-    - a10_obj: import

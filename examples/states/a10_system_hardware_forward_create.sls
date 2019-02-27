@@ -1,3 +1,2 @@
-a10_system_hardware_forward_ex:
+system_hardware_forward:
   a10.create:
-    - a10_obj: system_hardware_forward

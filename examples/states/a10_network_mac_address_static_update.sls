@@ -1,4 +1,3 @@
-a10_network_mac_address_static_ex:
+network_mac_address_static:
   a10.update:
-    - a10_obj: network_mac_address_static
     - vlan: 2

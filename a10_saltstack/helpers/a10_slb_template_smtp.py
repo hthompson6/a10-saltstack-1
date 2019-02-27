@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["client_domain_switching","client_starttls_type","command_disable","name","server_domain","server_starttls_type","service_ready_msg","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "client_domain_switching",
+    "client_starttls_type",
+    "command_disable",
+    "a10_name",
+    "server_domain",
+    "server_starttls_type",
+    "service_ready_msg",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'smtp'
+MODULE_NAME = "smtp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/smtp/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

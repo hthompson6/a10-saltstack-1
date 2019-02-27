@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["acl_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "acl_cfg",
+    "uuid",
+]
 
-MODULE_NAME = 'offset-list'
+MODULE_NAME = "offset-list"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

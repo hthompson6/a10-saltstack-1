@@ -1,3 +1,2 @@
-a10_cgnv6_dns64_ex:
+cgnv6_dns64:
   a10.update:
-    - a10_obj: cgnv6_dns64

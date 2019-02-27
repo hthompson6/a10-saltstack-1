@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["status","uuid",]
+AVAILABLE_PROPERTIES = [    "status",
+    "uuid",
+]
 
-MODULE_NAME = 'urpf'
+MODULE_NAME = "urpf"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,2 @@
-a10_device_context_ex:
+device_context:
   a10.update:
-    - a10_obj: device_context

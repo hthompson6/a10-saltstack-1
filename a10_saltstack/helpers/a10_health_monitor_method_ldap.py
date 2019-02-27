@@ -15,9 +15,23 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["AcceptNotFound","AcceptResRef","BaseDN","ldap","ldap_binddn","ldap_encrypted","ldap_password","ldap_password_string","ldap_port","ldap_query","ldap_run_search","ldap_security","uuid",]
+AVAILABLE_PROPERTIES = [    "AcceptNotFound",
+    "AcceptResRef",
+    "BaseDN",
+    "ldap",
+    "ldap_binddn",
+    "ldap_encrypted",
+    "ldap_password",
+    "ldap_password_string",
+    "ldap_port",
+    "ldap_query",
+    "ldap_run_search",
+    "ldap_security",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'ldap'
+MODULE_NAME = "ldap"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

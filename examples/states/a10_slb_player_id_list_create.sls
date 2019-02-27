@@ -1,3 +1,2 @@
-a10_slb_player_id_list_ex:
+slb_player_id_list:
   a10.create:
-    - a10_obj: slb_player_id_list

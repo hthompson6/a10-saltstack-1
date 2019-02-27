@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","device","dst_file","file","file_handle",]
+AVAILABLE_PROPERTIES = [    "action",
+    "device",
+    "dst_file",
+    "file",
+    "file_handle",
+]
 
-MODULE_NAME = 'glm-cert'
+MODULE_NAME = "glm-cert"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

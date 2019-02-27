@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["uuid",]
+AVAILABLE_PROPERTIES = [    "uuid",
+]
 
-MODULE_NAME = 'imish-profile'
+MODULE_NAME = "imish-profile"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

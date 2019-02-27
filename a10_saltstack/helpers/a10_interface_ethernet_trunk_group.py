@@ -15,9 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["admin_key","mode","port_priority","timeout","trunk_number","ntype","udld_timeout_cfg","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "admin_key",
+    "mode",
+    "port_priority",
+    "timeout",
+    "trunk_number",
+    "ntype",
+    "udld_timeout_cfg",
+    "user_tag",
+    "uuid",
+    "ethernet_ifnum",
+]
 
-MODULE_NAME = 'trunk-group'
+MODULE_NAME = "trunk-group"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +45,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/interface/ethernet/{ethernet_ifnum}/trunk-group/{trunk-number}"
     f_dict = {}
-    f_dict["trunk-number"] = kwargs["trunk_number"]
+    f_dict["trunk-number"] = kwargs["trunk-number"]
     f_dict["ethernet_ifnum"] = kwargs["ethernet_ifnum"]
 
     return url_base.format(**f_dict)

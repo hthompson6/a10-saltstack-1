@@ -1,3 +1,2 @@
-a10_router_ospf_ex:
+router_ospf:
   a10.update:
-    - a10_obj: router_ospf

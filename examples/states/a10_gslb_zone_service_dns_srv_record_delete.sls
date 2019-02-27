@@ -1,3 +1,2 @@
-a10_gslb_zone_service_dns_srv_record_ex:
+gslb_zone_service_dns_srv_record:
   a10.delete:
-    - a10_obj: gslb_zone_service_dns_srv_record 

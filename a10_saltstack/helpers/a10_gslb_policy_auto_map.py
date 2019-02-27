@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","module_disable","module_type","ttl","uuid",]
+AVAILABLE_PROPERTIES = [    "all",
+    "module_disable",
+    "module_type",
+    "ttl",
+    "uuid",
+    "policy_name",
+]
 
-MODULE_NAME = 'auto-map'
+MODULE_NAME = "auto-map"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

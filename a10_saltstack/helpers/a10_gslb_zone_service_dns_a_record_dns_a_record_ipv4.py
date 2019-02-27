@@ -15,9 +15,23 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["admin_ip","as_backup","as_replace","disable","dns_a_record_ip","no_resp","sampling_enable","static","ttl","uuid","weight",]
+AVAILABLE_PROPERTIES = [    "admin_ip",
+    "as_backup",
+    "as_replace",
+    "disable",
+    "dns_a_record_ip",
+    "no_resp",
+    "sampling_enable",
+    "static",
+    "ttl",
+    "uuid",
+    "weight",
+    "service_name",
+    "service_port",
+    "zone_name",
+]
 
-MODULE_NAME = 'dns-a-record-ipv4'
+MODULE_NAME = "dns-a-record-ipv4"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -25,7 +39,7 @@ def new_url(**kwargs):
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-a-record/dns-a-record-ipv4/{dns-a-record-ip}"
     f_dict = {}
     f_dict["dns-a-record-ip"] = ""
-    f_dict["service-name"] = kwargs["service_name"]
+    f_dict["service-name"] = kwargs["service-name"]
     f_dict["service_port"] = kwargs["service_port"]
     f_dict["zone_name"] = kwargs["zone_name"]
 
@@ -37,7 +51,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-a-record/dns-a-record-ipv4/{dns-a-record-ip}"
     f_dict = {}
-    f_dict["dns-a-record-ip"] = kwargs["dns_a_record_ip"]
+    f_dict["dns-a-record-ip"] = kwargs["dns-a-record-ip"]
     f_dict["service-name"] = kwargs["service-name"]
     f_dict["service_port"] = kwargs["service_port"]
     f_dict["zone_name"] = kwargs["zone_name"]

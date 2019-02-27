@@ -1,4 +1,3 @@
-a10_class_list_ex:
+class_list:
   a10.update:
-    - a10_obj: class_list
-    - name: my_class-list
+    - a10_name: my_class-list

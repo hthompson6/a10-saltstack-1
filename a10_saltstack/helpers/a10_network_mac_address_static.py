@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dest","mac","port","uuid","vlan",]
+AVAILABLE_PROPERTIES = [    "dest",
+    "mac",
+    "port",
+    "uuid",
+    "vlan",
+]
 
-MODULE_NAME = 'static'
+MODULE_NAME = "static"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

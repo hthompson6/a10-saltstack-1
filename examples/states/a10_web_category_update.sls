@@ -1,3 +1,2 @@
-a10_web_category_ex:
+web_category:
   a10.update:
-    - a10_obj: web_category

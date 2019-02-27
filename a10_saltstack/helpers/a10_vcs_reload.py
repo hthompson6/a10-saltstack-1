@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["disable_merge",]
+AVAILABLE_PROPERTIES = [    "disable_merge",
+]
 
-MODULE_NAME = 'reload'
+MODULE_NAME = "reload"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

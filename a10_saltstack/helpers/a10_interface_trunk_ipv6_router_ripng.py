@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["rip","uuid",]
+AVAILABLE_PROPERTIES = [    "rip",
+    "uuid",
+    "trunk_ifnum",
+]
 
-MODULE_NAME = 'ripng'
+MODULE_NAME = "ripng"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

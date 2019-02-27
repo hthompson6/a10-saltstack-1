@@ -1,4 +1,3 @@
-a10_ntp_auth_key_ex:
+ntp_auth_key:
   a10.create:
-    - a10_obj: ntp_auth_key
     - key: 1

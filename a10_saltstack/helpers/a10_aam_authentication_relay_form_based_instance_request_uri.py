@@ -15,9 +15,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action_uri","cookie","domain_variable","match_type","max_packet_collect_size","other_variables","password_variable","uri","user_tag","user_variable","uuid",]
+AVAILABLE_PROPERTIES = [    "action_uri",
+    "cookie",
+    "domain_variable",
+    "match_type",
+    "max_packet_collect_size",
+    "other_variables",
+    "password_variable",
+    "uri",
+    "user_tag",
+    "user_variable",
+    "uuid",
+    "instance_name",
+]
 
-MODULE_NAME = 'request-uri'
+MODULE_NAME = "request-uri"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -36,7 +48,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/relay/form-based/instance/{instance_name}/request-uri/{match-type}+{uri}"
     f_dict = {}
-    f_dict["match-type"] = kwargs["match_type"]
+    f_dict["match-type"] = kwargs["match-type"]
     f_dict["uri"] = kwargs["uri"]
     f_dict["instance_name"] = kwargs["instance_name"]
 

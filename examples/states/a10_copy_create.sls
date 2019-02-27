@@ -1,3 +1,2 @@
-a10_copy_ex:
+copy:
   a10.create:
-    - a10_obj: copy

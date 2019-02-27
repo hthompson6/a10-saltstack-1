@@ -1,3 +1,2 @@
-a10_chassis_info_ex:
+chassis_info:
   a10.create:
-    - a10_obj: chassis_info

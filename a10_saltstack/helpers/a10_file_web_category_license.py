@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","device","file","file_handle","size","use_mgmt_port",]
+AVAILABLE_PROPERTIES = [    "action",
+    "device",
+    "file",
+    "file_handle",
+    "size",
+    "use_mgmt_port",
+]
 
-MODULE_NAME = 'web-category-license'
+MODULE_NAME = "web-category-license"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

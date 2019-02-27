@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["daily","day_time","feature_name","schedule","uuid","week_day","week_time","weekly",]
+AVAILABLE_PROPERTIES = [    "daily",
+    "day_time",
+    "feature_name",
+    "schedule",
+    "uuid",
+    "week_day",
+    "week_time",
+    "weekly",
+]
 
-MODULE_NAME = 'config'
+MODULE_NAME = "config"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/automatic-update/config/{feature-name}"
     f_dict = {}
-    f_dict["feature-name"] = kwargs["feature_name"]
+    f_dict["feature-name"] = kwargs["feature-name"]
 
     return url_base.format(**f_dict)

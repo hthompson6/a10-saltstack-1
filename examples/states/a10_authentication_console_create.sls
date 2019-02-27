@@ -1,3 +1,2 @@
-a10_authentication_console_ex:
+authentication_console:
   a10.create:
-    - a10_obj: authentication_console

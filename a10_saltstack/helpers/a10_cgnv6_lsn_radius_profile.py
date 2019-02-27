@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["lid_profile_index","radius","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "lid_profile_index",
+    "radius",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'lsn-radius-profile'
+MODULE_NAME = "lsn-radius-profile"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn-radius-profile/{lid-profile-index}"
     f_dict = {}
-    f_dict["lid-profile-index"] = kwargs["lid_profile_index"]
+    f_dict["lid-profile-index"] = kwargs["lid-profile-index"]
 
     return url_base.format(**f_dict)

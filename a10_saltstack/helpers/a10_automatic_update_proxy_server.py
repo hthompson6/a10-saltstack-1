@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["auth_type","domain","encrypted","https_port","password","proxy_host","secret_string","username","uuid",]
+AVAILABLE_PROPERTIES = [    "auth_type",
+    "domain",
+    "encrypted",
+    "https_port",
+    "password",
+    "proxy_host",
+    "secret_string",
+    "username",
+    "uuid",
+]
 
-MODULE_NAME = 'proxy-server'
+MODULE_NAME = "proxy-server"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

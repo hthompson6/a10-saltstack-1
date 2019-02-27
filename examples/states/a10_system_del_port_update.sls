@@ -1,3 +1,2 @@
-a10_system_del_port_ex:
+system_del_port:
   a10.update:
-    - a10_obj: system_del_port

@@ -1,3 +1,2 @@
-a10_slb_server_port_stats_port_diameter_ex:
+slb_server_port_stats_port_diameter:
   a10.create:
-    - a10_obj: slb_server_port_stats_port_diameter

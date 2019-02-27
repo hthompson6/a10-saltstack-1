@@ -1,3 +1,2 @@
-a10_tacacs_server_ex:
+tacacs_server:
   a10.create:
-    - a10_obj: tacacs_server

@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["default_privilege","name","partition_only","rule_list","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "default_privilege",
+    "a10_name",
+    "partition_only",
+    "rule_list",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'role'
+MODULE_NAME = "role"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +40,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/rba/role/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

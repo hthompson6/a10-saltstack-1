@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["uuid","ve_num",]
+AVAILABLE_PROPERTIES = [    "uuid",
+    "ve_num",
+    "monitor_name",
+]
 
-MODULE_NAME = 've'
+MODULE_NAME = "ve"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +38,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/netflow/monitor/{monitor_name}/sample/ve/{ve-num}"
     f_dict = {}
-    f_dict["ve-num"] = kwargs["ve_num"]
+    f_dict["ve-num"] = kwargs["ve-num"]
     f_dict["monitor_name"] = kwargs["monitor_name"]
 
     return url_base.format(**f_dict)

@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["icmp","others","tcp_list","udp_list","uuid",]
+AVAILABLE_PROPERTIES = [    "icmp",
+    "others",
+    "tcp_list",
+    "udp_list",
+    "uuid",
+    "logging_name",
+]
 
-MODULE_NAME = 'disable-log-by-destination'
+MODULE_NAME = "disable-log-by-destination"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

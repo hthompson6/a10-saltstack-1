@@ -1,3 +1,2 @@
-a10_network_lacp_passthrough_ex:
+network_lacp_passthrough:
   a10.create:
-    - a10_obj: network_lacp_passthrough

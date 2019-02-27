@@ -1,3 +1,2 @@
-a10_interface_ethernet_ip_ex:
+interface_ethernet_ip:
   a10.create:
-    - a10_obj: interface_ethernet_ip

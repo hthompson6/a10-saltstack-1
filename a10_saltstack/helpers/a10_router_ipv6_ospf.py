@@ -15,9 +15,26 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["abr_type_option","area_list","auto_cost_reference_bandwidth","bfd_all_interfaces","default_information","default_metric","distribute_internal_list","ha_standby_extra_cost","log_adjacency_changes","max_concurrent_dd","passive_interface","process_id","redistribute","router_id","timers","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "abr_type_option",
+    "area_list",
+    "auto_cost_reference_bandwidth",
+    "bfd_all_interfaces",
+    "default_information",
+    "default_metric",
+    "distribute_internal_list",
+    "ha_standby_extra_cost",
+    "log_adjacency_changes",
+    "max_concurrent_dd",
+    "passive_interface",
+    "process_id",
+    "redistribute",
+    "router_id",
+    "timers",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'ospf'
+MODULE_NAME = "ospf"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +51,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/router/ipv6/ospf/{process-id}"
     f_dict = {}
-    f_dict["process-id"] = kwargs["process_id"]
+    f_dict["process-id"] = kwargs["process-id"]
 
     return url_base.format(**f_dict)

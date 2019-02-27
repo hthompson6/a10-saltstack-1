@@ -15,9 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","external_ip","health_check","health_check_disable","health_check_protocol_disable","ip_address","ipv6","ipv6_address","node_name","port_list","sampling_enable","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "action",
+    "external_ip",
+    "health_check",
+    "health_check_disable",
+    "health_check_protocol_disable",
+    "ip_address",
+    "ipv6",
+    "ipv6_address",
+    "node_name",
+    "port_list",
+    "sampling_enable",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'service-ip'
+MODULE_NAME = "service-ip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +47,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/service-ip/{node-name}"
     f_dict = {}
-    f_dict["node-name"] = kwargs["node_name"]
+    f_dict["node-name"] = kwargs["node-name"]
 
     return url_base.format(**f_dict)

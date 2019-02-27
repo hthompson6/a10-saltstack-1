@@ -1,3 +1,2 @@
-a10_object_group_service_ex:
+object_group_service:
   a10.create:
-    - a10_obj: object_group_service

@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ipv6_addr","secret","uuid",]
+AVAILABLE_PROPERTIES = [    "ipv6_addr",
+    "secret",
+    "uuid",
+]
 
-MODULE_NAME = 'ipv6'
+MODULE_NAME = "ipv6"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +37,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/tacacs-server/host/ipv6/{ipv6-addr}"
     f_dict = {}
-    f_dict["ipv6-addr"] = kwargs["ipv6_addr"]
+    f_dict["ipv6-addr"] = kwargs["ipv6-addr"]
 
     return url_base.format(**f_dict)

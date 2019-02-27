@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["encrypted_in_module","password_in_module","uuid",]
+AVAILABLE_PROPERTIES = [    "encrypted_in_module",
+    "password_in_module",
+    "uuid",
+    "admin_user",
+]
 
-MODULE_NAME = 'password'
+MODULE_NAME = "password"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

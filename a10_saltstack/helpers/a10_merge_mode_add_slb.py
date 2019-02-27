@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["member","server_port","uuid","virtual_server_port",]
+AVAILABLE_PROPERTIES = [    "member",
+    "server_port",
+    "uuid",
+    "virtual_server_port",
+]
 
-MODULE_NAME = 'slb'
+MODULE_NAME = "slb"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

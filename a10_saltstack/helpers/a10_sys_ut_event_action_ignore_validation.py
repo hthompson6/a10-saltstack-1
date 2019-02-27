@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","l1","l2","l3","l4","uuid",]
+AVAILABLE_PROPERTIES = [    "all",
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "uuid",
+    "action_direction",
+    "event_number",
+]
 
-MODULE_NAME = 'ignore-validation'
+MODULE_NAME = "ignore-validation"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

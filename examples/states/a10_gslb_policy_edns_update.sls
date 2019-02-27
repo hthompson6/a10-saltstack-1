@@ -1,3 +1,2 @@
-a10_gslb_policy_edns_ex:
+gslb_policy_edns:
   a10.update:
-    - a10_obj: gslb_policy_edns

@@ -15,9 +15,25 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["authentication","authentication_key","cost","database_filter","dead_interval","hello_interval","ip_addr","message_digest_cfg","mtu_ignore","out","priority","retransmit_interval","transmit_delay","uuid","value",]
+AVAILABLE_PROPERTIES = [    "authentication",
+    "authentication_key",
+    "cost",
+    "database_filter",
+    "dead_interval",
+    "hello_interval",
+    "ip_addr",
+    "message_digest_cfg",
+    "mtu_ignore",
+    "out",
+    "priority",
+    "retransmit_interval",
+    "transmit_delay",
+    "uuid",
+    "value",
+    "tunnel_ifnum",
+]
 
-MODULE_NAME = 'ospf-ip'
+MODULE_NAME = "ospf-ip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +51,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/interface/tunnel/{tunnel_ifnum}/ip/ospf/ospf-ip/{ip-addr}"
     f_dict = {}
-    f_dict["ip-addr"] = kwargs["ip_addr"]
+    f_dict["ip-addr"] = kwargs["ip-addr"]
     f_dict["tunnel_ifnum"] = kwargs["tunnel_ifnum"]
 
     return url_base.format(**f_dict)

@@ -1,3 +1,2 @@
-a10_tftp_ex:
+tftp:
   a10.delete:
-    - a10_obj: tftp 

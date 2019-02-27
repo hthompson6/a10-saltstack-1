@@ -15,9 +15,35 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["admin_dn","admin_secret","auth_type","base","bind_with_dn","ca_cert","default_domain","derive_bind_dn","dn_attribute","encrypted","health_check","health_check_disable","health_check_string","host","ldaps_conn_reuse_idle_timeout","name","port","port_hm","port_hm_disable","prompt_pw_change_before_exp","protocol","pwdmaxage","sampling_enable","secret_string","timeout","uuid",]
+AVAILABLE_PROPERTIES = [    "admin_dn",
+    "admin_secret",
+    "auth_type",
+    "base",
+    "bind_with_dn",
+    "ca_cert",
+    "default_domain",
+    "derive_bind_dn",
+    "dn_attribute",
+    "encrypted",
+    "health_check",
+    "health_check_disable",
+    "health_check_string",
+    "host",
+    "ldaps_conn_reuse_idle_timeout",
+    "a10_name",
+    "port",
+    "port_hm",
+    "port_hm_disable",
+    "prompt_pw_change_before_exp",
+    "protocol",
+    "pwdmaxage",
+    "sampling_enable",
+    "secret_string",
+    "timeout",
+    "uuid",
+]
 
-MODULE_NAME = 'instance'
+MODULE_NAME = "instance"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +60,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/server/ldap/instance/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

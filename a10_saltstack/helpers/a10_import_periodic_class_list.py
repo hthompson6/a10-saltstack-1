@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["class_list","period","remote_file","use_mgmt_port","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "class_list",
+    "period",
+    "remote_file",
+    "use_mgmt_port",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'class-list'
+MODULE_NAME = "class-list"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +40,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/class-list/{class-list}"
     f_dict = {}
-    f_dict["class-list"] = kwargs["class_list"]
+    f_dict["class-list"] = kwargs["class-list"]
 
     return url_base.format(**f_dict)

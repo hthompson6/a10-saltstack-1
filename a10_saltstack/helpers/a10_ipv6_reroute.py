@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["suppress_protocols","uuid",]
+AVAILABLE_PROPERTIES = [    "suppress_protocols",
+    "uuid",
+]
 
-MODULE_NAME = 'reroute'
+MODULE_NAME = "reroute"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

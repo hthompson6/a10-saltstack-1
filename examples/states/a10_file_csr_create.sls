@@ -1,3 +1,2 @@
-a10_file_csr_ex:
+file_csr:
   a10.create:
-    - a10_obj: file_csr

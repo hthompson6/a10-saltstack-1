@@ -15,9 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["age","disable_clear_session","idle_timeout","immediate","name","qos","re_select_if_server_down","short","stateless_conn_timeout","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "age",
+    "disable_clear_session",
+    "idle_timeout",
+    "immediate",
+    "a10_name",
+    "qos",
+    "re_select_if_server_down",
+    "short",
+    "stateless_conn_timeout",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'udp'
+MODULE_NAME = "udp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +45,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/udp/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

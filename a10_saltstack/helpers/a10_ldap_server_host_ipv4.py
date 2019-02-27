@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["base","cn_value","dn_value","domain","domain_cfg","group","ipv4_addr","port_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "base",
+    "cn_value",
+    "dn_value",
+    "domain",
+    "domain_cfg",
+    "group",
+    "ipv4_addr",
+    "port_cfg",
+    "uuid",
+]
 
-MODULE_NAME = 'ipv4'
+MODULE_NAME = "ipv4"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ldap-server/host/ipv4/{ipv4-addr}"
     f_dict = {}
-    f_dict["ipv4-addr"] = kwargs["ipv4_addr"]
+    f_dict["ipv4-addr"] = kwargs["ipv4-addr"]
 
     return url_base.format(**f_dict)

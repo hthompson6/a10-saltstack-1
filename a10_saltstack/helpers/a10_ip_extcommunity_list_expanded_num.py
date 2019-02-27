@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ext_list_num","rules_list","uuid",]
+AVAILABLE_PROPERTIES = [    "ext_list_num",
+    "rules_list",
+    "uuid",
+]
 
-MODULE_NAME = 'expanded-num'
+MODULE_NAME = "expanded-num"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +37,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/extcommunity-list/expanded-num/{ext-list-num}"
     f_dict = {}
-    f_dict["ext-list-num"] = kwargs["ext_list_num"]
+    f_dict["ext-list-num"] = kwargs["ext-list-num"]
 
     return url_base.format(**f_dict)

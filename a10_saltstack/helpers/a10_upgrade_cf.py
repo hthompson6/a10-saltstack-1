@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["Device","file_url","image","local","reboot_after_upgrade","staggered_upgrade_mode","use_mgmt_port",]
+AVAILABLE_PROPERTIES = [    "Device",
+    "file_url",
+    "image",
+    "local",
+    "reboot_after_upgrade",
+    "staggered_upgrade_mode",
+    "use_mgmt_port",
+]
 
-MODULE_NAME = 'cf'
+MODULE_NAME = "cf"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

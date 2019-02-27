@@ -1,3 +1,2 @@
-a10_vrrp_a_force_self_standby_ex:
+vrrp_a_force_self_standby:
   a10.delete:
-    - a10_obj: vrrp_a_force_self_standby 

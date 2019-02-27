@@ -1,3 +1,2 @@
-a10_debug_aflex_ex:
+debug_aflex:
   a10.create:
-    - a10_obj: debug_aflex

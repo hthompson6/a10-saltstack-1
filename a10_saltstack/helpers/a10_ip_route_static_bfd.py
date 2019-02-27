@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["local_ip","nexthop_ip","uuid",]
+AVAILABLE_PROPERTIES = [    "local_ip",
+    "nexthop_ip",
+    "uuid",
+]
 
-MODULE_NAME = 'bfd'
+MODULE_NAME = "bfd"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +38,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/route/static/bfd/{local-ip}+{nexthop-ip}"
     f_dict = {}
-    f_dict["local-ip"] = kwargs["local_ip"]
-    f_dict["nexthop-ip"] = kwargs["nexthop_ip"]
+    f_dict["local-ip"] = kwargs["local-ip"]
+    f_dict["nexthop-ip"] = kwargs["nexthop-ip"]
 
     return url_base.format(**f_dict)

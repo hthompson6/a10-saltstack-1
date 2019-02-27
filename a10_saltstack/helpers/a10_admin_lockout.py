@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["duration","enable","reset_time","threshold","uuid",]
+AVAILABLE_PROPERTIES = [    "duration",
+    "enable",
+    "reset_time",
+    "threshold",
+    "uuid",
+]
 
-MODULE_NAME = 'admin-lockout'
+MODULE_NAME = "admin-lockout"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

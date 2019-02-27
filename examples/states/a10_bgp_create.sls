@@ -1,3 +1,2 @@
-a10_bgp_ex:
+bgp:
   a10.create:
-    - a10_obj: bgp

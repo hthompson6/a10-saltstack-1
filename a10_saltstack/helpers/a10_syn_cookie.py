@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["enable","off_threshold","on_threshold","uuid",]
+AVAILABLE_PROPERTIES = [    "enable",
+    "off_threshold",
+    "on_threshold",
+    "uuid",
+]
 
-MODULE_NAME = 'syn-cookie'
+MODULE_NAME = "syn-cookie"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

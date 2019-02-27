@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["csv_name","delim_char","delim_num","ipv6_enable","multiple_fields","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "csv_name",
+    "delim_char",
+    "delim_num",
+    "ipv6_enable",
+    "multiple_fields",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'csv'
+MODULE_NAME = "csv"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/template/csv/{csv-name}"
     f_dict = {}
-    f_dict["csv-name"] = kwargs["csv_name"]
+    f_dict["csv-name"] = kwargs["csv-name"]
 
     return url_base.format(**f_dict)

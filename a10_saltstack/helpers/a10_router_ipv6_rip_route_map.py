@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["map_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "map_cfg",
+    "uuid",
+]
 
-MODULE_NAME = 'route-map'
+MODULE_NAME = "route-map"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

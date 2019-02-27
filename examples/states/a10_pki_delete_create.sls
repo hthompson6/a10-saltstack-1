@@ -1,3 +1,2 @@
-a10_pki_delete_ex:
+pki_delete:
   a10.create:
-    - a10_obj: pki_delete

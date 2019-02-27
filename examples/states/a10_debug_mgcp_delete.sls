@@ -1,3 +1,2 @@
-a10_debug_mgcp_ex:
+debug_mgcp:
   a10.delete:
-    - a10_obj: debug_mgcp 

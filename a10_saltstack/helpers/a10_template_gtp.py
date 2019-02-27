@@ -15,9 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["gtp_filter_list","gtp_v2","log","mandatory_ie_filtering","maximum_message_length","name","protocol_anomaly_filtering","tunnel_timeout","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "gtp_filter_list",
+    "gtp_v2",
+    "log",
+    "mandatory_ie_filtering",
+    "maximum_message_length",
+    "a10_name",
+    "protocol_anomaly_filtering",
+    "tunnel_timeout",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'gtp'
+MODULE_NAME = "gtp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +44,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/template/gtp/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

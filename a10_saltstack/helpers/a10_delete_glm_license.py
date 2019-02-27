@@ -17,7 +17,7 @@
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = []
 
-MODULE_NAME = 'glm-license'
+MODULE_NAME = "glm-license"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

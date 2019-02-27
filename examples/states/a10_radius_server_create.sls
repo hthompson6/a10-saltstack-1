@@ -1,3 +1,2 @@
-a10_radius_server_ex:
+radius_server:
   a10.create:
-    - a10_obj: radius_server

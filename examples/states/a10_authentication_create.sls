@@ -1,3 +1,2 @@
-a10_authentication_ex:
+authentication:
   a10.create:
-    - a10_obj: authentication

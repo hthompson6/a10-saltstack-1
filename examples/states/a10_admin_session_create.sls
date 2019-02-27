@@ -1,3 +1,2 @@
-a10_admin_session_ex:
+admin_session:
   a10.create:
-    - a10_obj: admin_session

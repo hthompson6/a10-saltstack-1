@@ -15,9 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","at","cancel","day_of_month","day_of_month_2","device","nin","month","month_2","reason","reason_2","reason_3","time",]
+AVAILABLE_PROPERTIES = [    "all",
+    "at",
+    "cancel",
+    "day_of_month",
+    "day_of_month_2",
+    "device",
+    "nin",
+    "month",
+    "month_2",
+    "reason",
+    "reason_2",
+    "reason_3",
+    "time",
+]
 
-MODULE_NAME = 'reboot'
+MODULE_NAME = "reboot"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

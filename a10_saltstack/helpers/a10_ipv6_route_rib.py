@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ipv6_address","ipv6_nexthop_ipv6","ipv6_nexthop_tunnel","uuid",]
+AVAILABLE_PROPERTIES = [    "ipv6_address",
+    "ipv6_nexthop_ipv6",
+    "ipv6_nexthop_tunnel",
+    "uuid",
+]
 
-MODULE_NAME = 'rib'
+MODULE_NAME = "rib"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ipv6/route/rib/{ipv6-address}"
     f_dict = {}
-    f_dict["ipv6-address"] = kwargs["ipv6_address"]
+    f_dict["ipv6-address"] = kwargs["ipv6-address"]
 
     return url_base.format(**f_dict)

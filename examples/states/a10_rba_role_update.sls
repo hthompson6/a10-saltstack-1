@@ -1,4 +1,3 @@
-a10_rba_role_ex:
+rba_role:
   a10.update:
-    - a10_obj: rba_role
-    - name: my_role
+    - a10_name: my_role

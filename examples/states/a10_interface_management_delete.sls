@@ -1,3 +1,2 @@
-a10_interface_management_ex:
+interface_management:
   a10.delete:
-    - a10_obj: interface_management 

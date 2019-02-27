@@ -15,9 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dest_profile","dest_remote_file","dest_use_mgmt_port","profile","remote_file","running_config","startup_config","to_profile","to_running_config","to_startup_config","use_mgmt_port",]
+AVAILABLE_PROPERTIES = [    "dest_profile",
+    "dest_remote_file",
+    "dest_use_mgmt_port",
+    "profile",
+    "remote_file",
+    "running_config",
+    "startup_config",
+    "to_profile",
+    "to_running_config",
+    "to_startup_config",
+    "use_mgmt_port",
+]
 
-MODULE_NAME = 'copy'
+MODULE_NAME = "copy"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["management","uuid",]
+AVAILABLE_PROPERTIES = [    "management",
+    "uuid",
+]
 
-MODULE_NAME = 'snmp'
+MODULE_NAME = "snmp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

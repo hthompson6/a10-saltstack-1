@@ -1,3 +1,2 @@
-a10_debug_fix_ex:
+debug_fix:
   a10.delete:
-    - a10_obj: debug_fix 

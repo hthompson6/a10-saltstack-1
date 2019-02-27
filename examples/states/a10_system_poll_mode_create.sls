@@ -1,3 +1,2 @@
-a10_system_poll_mode_ex:
+system_poll_mode:
   a10.create:
-    - a10_obj: system_poll_mode

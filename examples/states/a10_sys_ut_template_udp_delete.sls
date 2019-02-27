@@ -1,3 +1,2 @@
-a10_sys_ut_template_udp_ex:
+sys_ut_template_udp:
   a10.delete:
-    - a10_obj: sys_ut_template_udp 

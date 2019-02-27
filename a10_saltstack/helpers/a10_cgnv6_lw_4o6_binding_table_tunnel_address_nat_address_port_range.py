@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["port_end","port_start","tunnel_endpoint_address",]
+AVAILABLE_PROPERTIES = [    "port_end",
+    "port_start",
+    "tunnel_endpoint_address",
+    "nat_address_ipv4_nat_addr",
+    "tunnel_address_ipv6_tunnel_addr",
+    "binding_table_name",
+]
 
-MODULE_NAME = 'port-range'
+MODULE_NAME = "port-range"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -38,8 +44,8 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lw-4o6/binding-table/{binding_table_name}/tunnel-address/{tunnel_address_ipv6_tunnel_addr}/nat-address/{nat_address_ipv4_nat_addr}/port-range/{port-start}+{port-end}"
     f_dict = {}
-    f_dict["port-start"] = kwargs["port_start"]
-    f_dict["port-end"] = kwargs["port_end"]
+    f_dict["port-start"] = kwargs["port-start"]
+    f_dict["port-end"] = kwargs["port-end"]
     f_dict["nat_address_ipv4_nat_addr"] = kwargs["nat_address_ipv4_nat_addr"]
     f_dict["tunnel_address_ipv6_tunnel_addr"] = kwargs["tunnel_address_ipv6_tunnel_addr"]
     f_dict["binding_table_name"] = kwargs["binding_table_name"]

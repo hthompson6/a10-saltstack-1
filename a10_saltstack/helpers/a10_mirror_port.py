@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethernet","mirror_dir","mirror_index","uuid",]
+AVAILABLE_PROPERTIES = [    "ethernet",
+    "mirror_dir",
+    "mirror_index",
+    "uuid",
+]
 
-MODULE_NAME = 'mirror-port'
+MODULE_NAME = "mirror-port"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/mirror-port/{mirror-index}"
     f_dict = {}
-    f_dict["mirror-index"] = kwargs["mirror_index"]
+    f_dict["mirror-index"] = kwargs["mirror-index"]
 
     return url_base.format(**f_dict)

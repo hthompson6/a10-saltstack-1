@@ -1,3 +1,2 @@
-a10_router_ospf_ex:
+router_ospf:
   a10.create:
-    - a10_obj: router_ospf

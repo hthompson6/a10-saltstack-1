@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ipv4_addr","ipv6_addr","uuid",]
+AVAILABLE_PROPERTIES = [    "ipv4_addr",
+    "ipv6_addr",
+    "uuid",
+]
 
-MODULE_NAME = 'health-check-gateway'
+MODULE_NAME = "health-check-gateway"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +38,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn/health-check-gateway/{ipv4-addr}+{ipv6-addr}"
     f_dict = {}
-    f_dict["ipv4-addr"] = kwargs["ipv4_addr"]
-    f_dict["ipv6-addr"] = kwargs["ipv6_addr"]
+    f_dict["ipv4-addr"] = kwargs["ipv4-addr"]
+    f_dict["ipv6-addr"] = kwargs["ipv6-addr"]
 
     return url_base.format(**f_dict)

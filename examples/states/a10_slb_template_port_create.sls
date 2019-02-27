@@ -1,4 +1,3 @@
-a10_slb_template_port_ex:
+slb_template_port:
   a10.create:
-    - a10_obj: slb_template_port
-    - name: my_port
+    - a10_name: my_port

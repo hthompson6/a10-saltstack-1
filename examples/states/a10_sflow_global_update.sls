@@ -1,3 +1,2 @@
-a10_sflow_global_ex:
+sflow_global:
   a10.update:
-    - a10_obj: sflow_global

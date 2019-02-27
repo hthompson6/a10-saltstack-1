@@ -15,9 +15,25 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["accounting_interim_update","accounting_on","accounting_start","accounting_stop","attribute","attribute_name","custom_attribute_name","disable_reply","encrypted","listen_port","remote","sampling_enable","secret","secret_string","uuid","vrid",]
+AVAILABLE_PROPERTIES = [    "accounting_interim_update",
+    "accounting_on",
+    "accounting_start",
+    "accounting_stop",
+    "attribute",
+    "attribute_name",
+    "custom_attribute_name",
+    "disable_reply",
+    "encrypted",
+    "listen_port",
+    "remote",
+    "sampling_enable",
+    "secret",
+    "secret_string",
+    "uuid",
+    "vrid",
+]
 
-MODULE_NAME = 'server'
+MODULE_NAME = "server"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

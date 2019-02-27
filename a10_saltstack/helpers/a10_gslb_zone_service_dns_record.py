@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["data","ntype","uuid",]
+AVAILABLE_PROPERTIES = [    "data",
+    "ntype",
+    "uuid",
+    "service_name",
+    "service_port",
+    "zone_name",
+]
 
-MODULE_NAME = 'dns-record'
+MODULE_NAME = "dns-record"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -25,7 +31,7 @@ def new_url(**kwargs):
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/dns-record/{type}"
     f_dict = {}
     f_dict["type"] = ""
-    f_dict["service-name"] = kwargs["service_name"]
+    f_dict["service-name"] = kwargs["service-name"]
     f_dict["service_port"] = kwargs["service_port"]
     f_dict["zone_name"] = kwargs["zone_name"]
 

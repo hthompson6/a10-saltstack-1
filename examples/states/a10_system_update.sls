@@ -1,3 +1,2 @@
-a10_system_ex:
+system:
   a10.update:
-    - a10_obj: system

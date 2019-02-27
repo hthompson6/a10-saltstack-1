@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["period","remote_file","ssl_cert","use_mgmt_port","uuid",]
+AVAILABLE_PROPERTIES = [    "period",
+    "remote_file",
+    "ssl_cert",
+    "use_mgmt_port",
+    "uuid",
+]
 
-MODULE_NAME = 'ssl-cert'
+MODULE_NAME = "ssl-cert"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/ssl-cert/{ssl-cert}"
     f_dict = {}
-    f_dict["ssl-cert"] = kwargs["ssl_cert"]
+    f_dict["ssl-cert"] = kwargs["ssl-cert"]
 
     return url_base.format(**f_dict)

@@ -1,3 +1,2 @@
-a10_rule_set_application_ex:
+rule_set_application:
   a10.create:
-    - a10_obj: rule_set_application

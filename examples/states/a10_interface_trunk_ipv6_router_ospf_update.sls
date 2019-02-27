@@ -1,3 +1,2 @@
-a10_interface_trunk_ipv6_router_ospf_ex:
+interface_trunk_ipv6_router_ospf:
   a10.update:
-    - a10_obj: interface_trunk_ipv6_router_ospf

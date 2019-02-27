@@ -1,3 +1,2 @@
-a10_export_store_ex:
+export_store:
   a10.update:
-    - a10_obj: export_store

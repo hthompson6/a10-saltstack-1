@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["expect_response_code","register","sip","sip_port","sip_tcp","uuid",]
+AVAILABLE_PROPERTIES = [    "expect_response_code",
+    "register",
+    "sip",
+    "sip_port",
+    "sip_tcp",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'sip'
+MODULE_NAME = "sip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

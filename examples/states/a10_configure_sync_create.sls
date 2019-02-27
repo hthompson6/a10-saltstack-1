@@ -1,3 +1,2 @@
-a10_configure_sync_ex:
+configure_sync:
   a10.create:
-    - a10_obj: configure_sync

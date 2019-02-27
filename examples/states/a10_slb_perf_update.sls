@@ -1,3 +1,2 @@
-a10_slb_perf_ex:
+slb_perf:
   a10.update:
-    - a10_obj: slb_perf

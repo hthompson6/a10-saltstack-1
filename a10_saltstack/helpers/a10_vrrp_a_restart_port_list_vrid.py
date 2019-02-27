@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethernet_cfg","user_tag","uuid","vrid_val",]
+AVAILABLE_PROPERTIES = [    "ethernet_cfg",
+    "user_tag",
+    "uuid",
+    "vrid_val",
+]
 
-MODULE_NAME = 'vrid'
+MODULE_NAME = "vrid"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/restart-port-list/vrid/{vrid-val}"
     f_dict = {}
-    f_dict["vrid-val"] = kwargs["vrid_val"]
+    f_dict["vrid-val"] = kwargs["vrid-val"]
 
     return url_base.format(**f_dict)

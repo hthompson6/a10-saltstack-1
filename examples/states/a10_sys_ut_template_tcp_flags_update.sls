@@ -1,3 +1,2 @@
-a10_sys_ut_template_tcp_flags_ex:
+sys_ut_template_tcp_flags:
   a10.update:
-    - a10_obj: sys_ut_template_tcp_flags

@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["overwrite","period","remote_file","thales_kmdata","use_mgmt_port","uuid",]
+AVAILABLE_PROPERTIES = [    "overwrite",
+    "period",
+    "remote_file",
+    "thales_kmdata",
+    "use_mgmt_port",
+    "uuid",
+]
 
-MODULE_NAME = 'thales-kmdata'
+MODULE_NAME = "thales-kmdata"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +40,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/thales-kmdata/{thales-kmdata}"
     f_dict = {}
-    f_dict["thales-kmdata"] = kwargs["thales_kmdata"]
+    f_dict["thales-kmdata"] = kwargs["thales-kmdata"]
 
     return url_base.format(**f_dict)

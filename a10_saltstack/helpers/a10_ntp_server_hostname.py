@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","host_servername","key","prefer","uuid",]
+AVAILABLE_PROPERTIES = [    "action",
+    "host_servername",
+    "key",
+    "prefer",
+    "uuid",
+]
 
-MODULE_NAME = 'hostname'
+MODULE_NAME = "hostname"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ntp/server/hostname/{host-servername}"
     f_dict = {}
-    f_dict["host-servername"] = kwargs["host_servername"]
+    f_dict["host-servername"] = kwargs["host-servername"]
 
     return url_base.format(**f_dict)

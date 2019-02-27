@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["name","per_protocol","rotate","size","uuid",]
+AVAILABLE_PROPERTIES = [    "a10_name",
+    "per_protocol",
+    "rotate",
+    "size",
+    "uuid",
+]
 
-MODULE_NAME = 'file'
+MODULE_NAME = "file"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

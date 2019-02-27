@@ -1,4 +1,3 @@
-a10_ip_access_list_ex:
+ip_access_list:
   a10.create:
-    - a10_obj: ip_access_list
-    - name: my_access-list
+    - a10_name: my_access-list

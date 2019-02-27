@@ -1,3 +1,2 @@
-a10_router_rip_ex:
+router_rip:
   a10.delete:
-    - a10_obj: router_rip 

@@ -1,3 +1,2 @@
-a10_vrrp_a_vrid_ex:
+vrrp_a_vrid:
   a10.delete:
-    - a10_obj: vrrp_a_vrid 

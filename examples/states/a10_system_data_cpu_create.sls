@@ -1,3 +1,2 @@
-a10_system_data_cpu_ex:
+system_data_cpu:
   a10.create:
-    - a10_obj: system_data_cpu

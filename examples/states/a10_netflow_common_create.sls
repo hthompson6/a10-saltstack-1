@@ -1,3 +1,2 @@
-a10_netflow_common_ex:
+netflow_common:
   a10.create:
-    - a10_obj: netflow_common

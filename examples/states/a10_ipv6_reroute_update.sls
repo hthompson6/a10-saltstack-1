@@ -1,3 +1,2 @@
-a10_ipv6_reroute_ex:
+ipv6_reroute:
   a10.update:
-    - a10_obj: ipv6_reroute

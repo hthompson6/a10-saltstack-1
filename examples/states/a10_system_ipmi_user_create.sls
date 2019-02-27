@@ -1,3 +1,2 @@
-a10_system_ipmi_user_ex:
+system_ipmi_user:
   a10.create:
-    - a10_obj: system_ipmi_user

@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dnssec_dnskey","period","remote_file","use_mgmt_port","uuid",]
+AVAILABLE_PROPERTIES = [    "dnssec_dnskey",
+    "period",
+    "remote_file",
+    "use_mgmt_port",
+    "uuid",
+]
 
-MODULE_NAME = 'dnssec-dnskey'
+MODULE_NAME = "dnssec-dnskey"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/import-periodic/dnssec-dnskey/{dnssec-dnskey}"
     f_dict = {}
-    f_dict["dnssec-dnskey"] = kwargs["dnssec_dnskey"]
+    f_dict["dnssec-dnskey"] = kwargs["dnssec-dnskey"]
 
     return url_base.format(**f_dict)

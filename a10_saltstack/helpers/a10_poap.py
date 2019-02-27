@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action",]
+AVAILABLE_PROPERTIES = [    "action",
+]
 
-MODULE_NAME = 'poap'
+MODULE_NAME = "poap"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

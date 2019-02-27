@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["disable","enable","enable_disable_action","nat_address","src_address","uuid","vrid",]
+AVAILABLE_PROPERTIES = [    "disable",
+    "enable",
+    "enable_disable_action",
+    "nat_address",
+    "src_address",
+    "uuid",
+    "vrid",
+]
 
-MODULE_NAME = 'static'
+MODULE_NAME = "static"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -35,7 +42,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/nat/inside/source/static/{src-address}+{nat-address}"
     f_dict = {}
-    f_dict["src-address"] = kwargs["src_address"]
-    f_dict["nat-address"] = kwargs["nat_address"]
+    f_dict["src-address"] = kwargs["src-address"]
+    f_dict["nat-address"] = kwargs["nat-address"]
 
     return url_base.format(**f_dict)

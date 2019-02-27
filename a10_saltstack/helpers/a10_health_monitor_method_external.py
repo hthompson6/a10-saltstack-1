@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ext_arguments","ext_port","ext_preference","ext_program","external","uuid",]
+AVAILABLE_PROPERTIES = [    "ext_arguments",
+    "ext_port",
+    "ext_preference",
+    "ext_program",
+    "external",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'external'
+MODULE_NAME = "external"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

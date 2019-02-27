@@ -1,3 +1,2 @@
-a10_slb_resource_usage_ex:
+slb_resource_usage:
   a10.update:
-    - a10_obj: slb_resource_usage

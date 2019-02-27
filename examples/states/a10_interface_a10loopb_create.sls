@@ -1,3 +1,2 @@
-a10_interface_a10loopb_ex:
+interface_a10loopb:
   a10.create:
-    - a10_obj: interface_a10loopb

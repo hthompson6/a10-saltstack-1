@@ -1,4 +1,3 @@
-a10_slb_template_server_ssl_ex:
+slb_template_server_ssl:
   a10.create:
-    - a10_obj: slb_template_server_ssl
-    - name: my_server-ssl
+    - a10_name: my_server-ssl

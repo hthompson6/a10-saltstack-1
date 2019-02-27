@@ -15,9 +15,36 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["aflow","allow_syn_otherflags","allow_vip_to_rport_mapping","conn_limit","conn_limit_no_logging","conn_limit_reset","conn_rate_limit","conn_rate_limit_no_logging","conn_rate_limit_reset","drop_unknown_conn","dscp","ignore_tcp_msl","log_options","name","non_syn_initiation","pkt_rate_interval","pkt_rate_limit_reset","pkt_rate_type","rate","rate_interval","reset_l7_on_failover","reset_unknown_conn","snat_msl","snat_port_preserve","user_tag","uuid","when_rr_enable",]
+AVAILABLE_PROPERTIES = [    "aflow",
+    "allow_syn_otherflags",
+    "allow_vip_to_rport_mapping",
+    "conn_limit",
+    "conn_limit_no_logging",
+    "conn_limit_reset",
+    "conn_rate_limit",
+    "conn_rate_limit_no_logging",
+    "conn_rate_limit_reset",
+    "drop_unknown_conn",
+    "dscp",
+    "ignore_tcp_msl",
+    "log_options",
+    "a10_name",
+    "non_syn_initiation",
+    "pkt_rate_interval",
+    "pkt_rate_limit_reset",
+    "pkt_rate_type",
+    "rate",
+    "rate_interval",
+    "reset_l7_on_failover",
+    "reset_unknown_conn",
+    "snat_msl",
+    "snat_port_preserve",
+    "user_tag",
+    "uuid",
+    "when_rr_enable",
+]
 
-MODULE_NAME = 'virtual-port'
+MODULE_NAME = "virtual-port"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +61,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/virtual-port/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

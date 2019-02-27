@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","remote_file","use_mgmt_port",]
+AVAILABLE_PROPERTIES = [    "all",
+    "remote_file",
+    "use_mgmt_port",
+]
 
-MODULE_NAME = 'export'
+MODULE_NAME = "export"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

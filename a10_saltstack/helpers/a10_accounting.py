@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["commands","debug","nexec","stop_only","tacplus","uuid",]
+AVAILABLE_PROPERTIES = [    "commands",
+    "debug",
+    "nexec",
+    "stop_only",
+    "tacplus",
+    "uuid",
+]
 
-MODULE_NAME = 'accounting'
+MODULE_NAME = "accounting"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

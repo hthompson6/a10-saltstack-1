@@ -15,9 +15,24 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["allow_third_party_from_lan","allow_third_party_from_wan","announce","check_client_nonce","disable_map_filter","map","maximum","minimum","name","pcp_server_port","peer","source_ip","source_ipv6","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "allow_third_party_from_lan",
+    "allow_third_party_from_wan",
+    "announce",
+    "check_client_nonce",
+    "disable_map_filter",
+    "map",
+    "maximum",
+    "minimum",
+    "a10_name",
+    "pcp_server_port",
+    "peer",
+    "source_ip",
+    "source_ipv6",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'pcp'
+MODULE_NAME = "pcp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +49,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/template/pcp/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10-name"]
 
     return url_base.format(**f_dict)

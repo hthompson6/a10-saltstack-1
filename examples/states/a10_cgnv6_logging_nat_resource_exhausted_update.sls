@@ -1,3 +1,2 @@
-a10_cgnv6_logging_nat_resource_exhausted_ex:
+cgnv6_logging_nat_resource_exhausted:
   a10.update:
-    - a10_obj: cgnv6_logging_nat_resource_exhausted

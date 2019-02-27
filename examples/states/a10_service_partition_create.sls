@@ -1,3 +1,2 @@
-a10_service_partition_ex:
+service_partition:
   a10.create:
-    - a10_obj: service_partition

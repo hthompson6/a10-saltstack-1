@@ -15,9 +15,24 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["address_family","aggregate_address_list","as_number","auto_summary","bgp","distance_list","maximum_paths_value","neighbor","network","originate","redistribute","synchronization","timers","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "address_family",
+    "aggregate_address_list",
+    "as_number",
+    "auto_summary",
+    "bgp",
+    "distance_list",
+    "maximum_paths_value",
+    "neighbor",
+    "network",
+    "originate",
+    "redistribute",
+    "synchronization",
+    "timers",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'bgp'
+MODULE_NAME = "bgp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +49,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{as-number}"
     f_dict = {}
-    f_dict["as-number"] = kwargs["as_number"]
+    f_dict["as-number"] = kwargs["as-number"]
 
     return url_base.format(**f_dict)

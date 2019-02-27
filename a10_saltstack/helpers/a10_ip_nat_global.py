@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["reset_idle_tcp_conn","uuid",]
+AVAILABLE_PROPERTIES = [    "reset_idle_tcp_conn",
+    "uuid",
+]
 
-MODULE_NAME = 'nat-global'
+MODULE_NAME = "nat-global"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

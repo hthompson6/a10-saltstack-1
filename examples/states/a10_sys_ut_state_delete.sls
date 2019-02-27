@@ -1,4 +1,3 @@
-a10_sys_ut_state_ex:
+sys_ut_state:
   a10.delete:
-    - a10_obj: sys_ut_state 
-    - name: my_state
+    - a10_name: my_state

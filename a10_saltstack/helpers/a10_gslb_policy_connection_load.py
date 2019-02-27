@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["connection_load_enable","connection_load_fail_break","connection_load_interval","connection_load_limit","connection_load_samples","limit","uuid",]
+AVAILABLE_PROPERTIES = [    "connection_load_enable",
+    "connection_load_fail_break",
+    "connection_load_interval",
+    "connection_load_limit",
+    "connection_load_samples",
+    "limit",
+    "uuid",
+    "policy_name",
+]
 
-MODULE_NAME = 'connection-load'
+MODULE_NAME = "connection-load"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

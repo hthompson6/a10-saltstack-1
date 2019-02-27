@@ -1,4 +1,3 @@
-a10_slb_template_tcp_proxy_ex:
+slb_template_tcp_proxy:
   a10.create:
-    - a10_obj: slb_template_tcp_proxy
-    - name: my_tcp-proxy
+    - a10_name: my_tcp-proxy

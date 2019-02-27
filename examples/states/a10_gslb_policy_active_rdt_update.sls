@@ -1,3 +1,2 @@
-a10_gslb_policy_active_rdt_ex:
+gslb_policy_active_rdt:
   a10.update:
-    - a10_obj: gslb_policy_active_rdt

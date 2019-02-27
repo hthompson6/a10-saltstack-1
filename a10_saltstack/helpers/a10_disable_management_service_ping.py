@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all_data_intf","eth_cfg","management","tunnel_cfg","uuid","ve_cfg",]
+AVAILABLE_PROPERTIES = [    "all_data_intf",
+    "eth_cfg",
+    "management",
+    "tunnel_cfg",
+    "uuid",
+    "ve_cfg",
+]
 
-MODULE_NAME = 'ping'
+MODULE_NAME = "ping"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

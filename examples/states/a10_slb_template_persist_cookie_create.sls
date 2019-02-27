@@ -1,5 +1,4 @@
-a10_slb_template_persist_cookie_ex:
+slb_template_persist_cookie:
   a10.create:
-    - a10_obj: slb_template_persist_cookie
     - cookie_name: thecookie
-    - name: sg-cookie-persist
+    - a10_name: sg-cookie-persist

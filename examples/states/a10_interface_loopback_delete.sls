@@ -1,4 +1,3 @@
-a10_interface_loopback_ex:
+interface_loopback:
   a10.delete:
-    - a10_obj: interface_loopback 
     - ifnum: 1

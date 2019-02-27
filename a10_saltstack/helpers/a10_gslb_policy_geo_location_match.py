@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["geo_type_overlap","match_first","overlap","uuid",]
+AVAILABLE_PROPERTIES = [    "geo_type_overlap",
+    "match_first",
+    "overlap",
+    "uuid",
+    "policy_name",
+]
 
-MODULE_NAME = 'geo-location-match'
+MODULE_NAME = "geo-location-match"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

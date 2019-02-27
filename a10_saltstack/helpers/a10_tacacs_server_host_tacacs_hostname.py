@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["hostname","secret","uuid",]
+AVAILABLE_PROPERTIES = [    "hostname",
+    "secret",
+    "uuid",
+]
 
-MODULE_NAME = 'tacacs-hostname'
+MODULE_NAME = "tacacs-hostname"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

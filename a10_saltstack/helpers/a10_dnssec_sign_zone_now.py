@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["zone_name",]
+AVAILABLE_PROPERTIES = [    "zone_name",
+]
 
-MODULE_NAME = 'sign-zone-now'
+MODULE_NAME = "sign-zone-now"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

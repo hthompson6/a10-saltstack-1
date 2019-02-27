@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["checksum","dest_port","dest_port_value","length","nat_pool","src_port_range","uuid",]
+AVAILABLE_PROPERTIES = [    "checksum",
+    "dest_port",
+    "dest_port_value",
+    "length",
+    "nat_pool",
+    "src_port_range",
+    "uuid",
+    "template_name",
+]
 
-MODULE_NAME = 'udp'
+MODULE_NAME = "udp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

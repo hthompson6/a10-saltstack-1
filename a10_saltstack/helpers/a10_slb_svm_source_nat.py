@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["pool","uuid",]
+AVAILABLE_PROPERTIES = [    "pool",
+    "uuid",
+]
 
-MODULE_NAME = 'svm-source-nat'
+MODULE_NAME = "svm-source-nat"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

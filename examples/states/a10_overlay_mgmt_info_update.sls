@@ -1,3 +1,2 @@
-a10_overlay_mgmt_info_ex:
+overlay_mgmt_info:
   a10.update:
-    - a10_obj: overlay_mgmt_info

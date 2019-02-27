@@ -1,3 +1,2 @@
-a10_netflow_collector_ex:
+netflow_collector:
   a10.create:
-    - a10_obj: netflow_collector

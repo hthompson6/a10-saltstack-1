@@ -1,4 +1,3 @@
-a10_ipv6_access_list_ex:
+ipv6_access_list:
   a10.update:
-    - a10_obj: ipv6_access_list
-    - name: my_access-list
+    - a10_name: my_access-list

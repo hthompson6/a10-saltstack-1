@@ -1,4 +1,3 @@
-a10_acos_events_message_selector_ex:
+acos_events_message_selector:
   a10.delete:
-    - a10_obj: acos_events_message_selector 
-    - name: my_message-selector
+    - a10_name: my_message-selector
