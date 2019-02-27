@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["clear_cfg","id","link_disable_cfg","link_down_cfg","link_enable_cfg","link_up_cfg","monitor_relation","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "clear_cfg",
+    "id",
+    "link_disable_cfg",
+    "link_down_cfg",
+    "link_enable_cfg",
+    "link_up_cfg",
+    "monitor_relation",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'monitor'
+MODULE_NAME = "monitor"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

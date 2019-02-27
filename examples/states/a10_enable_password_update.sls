@@ -1,3 +1,3 @@
-a10_enable_password_ex:
+enable_password:
   a10.update:
     - a10_obj: enable_password

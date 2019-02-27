@@ -1,3 +1,3 @@
-a10_authentication_ex:
+authentication:
   a10.delete:
     - a10_obj: authentication 

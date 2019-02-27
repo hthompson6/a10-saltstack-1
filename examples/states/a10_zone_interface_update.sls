@@ -1,3 +1,3 @@
-a10_zone_interface_ex:
+zone_interface:
   a10.update:
     - a10_obj: zone_interface

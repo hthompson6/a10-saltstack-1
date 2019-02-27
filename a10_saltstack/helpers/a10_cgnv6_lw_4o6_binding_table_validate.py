@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["binding_name",]
+AVAILABLE_PROPERTIES = [    "binding_name",
+]
 
-MODULE_NAME = 'binding-table-validate'
+MODULE_NAME = "binding-table-validate"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

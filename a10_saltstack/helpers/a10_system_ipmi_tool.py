@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["cmd",]
+AVAILABLE_PROPERTIES = [    "cmd",
+]
 
-MODULE_NAME = 'tool'
+MODULE_NAME = "tool"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

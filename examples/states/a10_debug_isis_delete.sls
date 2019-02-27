@@ -1,3 +1,3 @@
-a10_debug_isis_ex:
+debug_isis:
   a10.delete:
     - a10_obj: debug_isis 

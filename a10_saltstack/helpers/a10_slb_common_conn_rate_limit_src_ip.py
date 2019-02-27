@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["exceed_action","limit","limit_period","lock_out","log","protocol","shared","uuid",]
+AVAILABLE_PROPERTIES = [    "exceed_action",
+    "limit",
+    "limit_period",
+    "lock_out",
+    "log",
+    "protocol",
+    "shared",
+    "uuid",
+]
 
-MODULE_NAME = 'src-ip'
+MODULE_NAME = "src-ip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

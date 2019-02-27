@@ -1,3 +1,3 @@
-a10_key_ex:
+key:
   a10.update:
     - a10_obj: key

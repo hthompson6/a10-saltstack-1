@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["disable","enable",]
+AVAILABLE_PROPERTIES = [    "disable",
+    "enable",
+]
 
-MODULE_NAME = 'cpu-hyper-thread'
+MODULE_NAME = "cpu-hyper-thread"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

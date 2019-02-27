@@ -1,3 +1,3 @@
-a10_system_session_ex:
+system_session:
   a10.update:
     - a10_obj: system_session

@@ -1,4 +1,4 @@
-a10_slb_template_cipher_ex:
+slb_template_cipher:
   a10.create:
     - a10_obj: slb_template_cipher
-    - name: my_cipher
+    - a10_name: my_cipher

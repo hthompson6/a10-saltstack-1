@@ -1,3 +1,3 @@
-a10_axdebug_ex:
+axdebug:
   a10.create:
     - a10_obj: axdebug

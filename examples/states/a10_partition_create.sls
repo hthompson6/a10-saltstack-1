@@ -1,3 +1,3 @@
-a10_partition_ex:
+partition:
   a10.create:
     - a10_obj: partition

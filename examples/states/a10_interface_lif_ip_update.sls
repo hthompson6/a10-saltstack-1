@@ -1,3 +1,3 @@
-a10_interface_lif_ip_ex:
+interface_lif_ip:
   a10.update:
     - a10_obj: interface_lif_ip

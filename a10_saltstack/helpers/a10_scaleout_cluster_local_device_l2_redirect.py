@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethernet_vlan","redirect_eth","redirect_trunk","trunk_vlan","uuid",]
+AVAILABLE_PROPERTIES = [    "ethernet_vlan",
+    "redirect_eth",
+    "redirect_trunk",
+    "trunk_vlan",
+    "uuid",
+    "cluster_id",
+]
 
-MODULE_NAME = 'l2-redirect'
+MODULE_NAME = "l2-redirect"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

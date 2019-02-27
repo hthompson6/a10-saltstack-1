@@ -1,3 +1,3 @@
-a10_backup_log_ex:
+backup_log:
   a10.create:
     - a10_obj: backup_log

@@ -1,3 +1,3 @@
-a10_system_ipmi_ex:
+system_ipmi:
   a10.delete:
     - a10_obj: system_ipmi 

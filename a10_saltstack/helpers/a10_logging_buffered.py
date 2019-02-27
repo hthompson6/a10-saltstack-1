@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["buffersize","levelname","partition_buffersize","uuid",]
+AVAILABLE_PROPERTIES = [    "buffersize",
+    "levelname",
+    "partition_buffersize",
+    "uuid",
+]
 
-MODULE_NAME = 'buffered'
+MODULE_NAME = "buffered"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

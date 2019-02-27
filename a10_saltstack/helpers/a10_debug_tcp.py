@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["level","stack","uuid",]
+AVAILABLE_PROPERTIES = [    "level",
+    "stack",
+    "uuid",
+]
 
-MODULE_NAME = 'tcp'
+MODULE_NAME = "tcp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

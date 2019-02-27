@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","count","df_set","uuid",]
+AVAILABLE_PROPERTIES = [    "action",
+    "count",
+    "df_set",
+    "uuid",
+]
 
-MODULE_NAME = 'outbound'
+MODULE_NAME = "outbound"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

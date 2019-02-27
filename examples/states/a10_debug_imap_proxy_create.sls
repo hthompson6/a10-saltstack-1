@@ -1,3 +1,3 @@
-a10_debug_imap_proxy_ex:
+debug_imap_proxy:
   a10.create:
     - a10_obj: debug_imap_proxy

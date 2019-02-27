@@ -1,3 +1,3 @@
-a10_pki_copy_cert_ex:
+pki_copy_cert:
   a10.create:
     - a10_obj: pki_copy_cert

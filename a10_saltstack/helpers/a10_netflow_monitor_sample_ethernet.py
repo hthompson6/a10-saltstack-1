@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ifindex","uuid",]
+AVAILABLE_PROPERTIES = [    "ifindex",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'ethernet'
+MODULE_NAME = "ethernet"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

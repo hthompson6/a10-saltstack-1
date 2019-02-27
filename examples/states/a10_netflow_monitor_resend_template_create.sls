@@ -1,3 +1,3 @@
-a10_netflow_monitor_resend_template_ex:
+netflow_monitor_resend_template:
   a10.create:
     - a10_obj: netflow_monitor_resend_template

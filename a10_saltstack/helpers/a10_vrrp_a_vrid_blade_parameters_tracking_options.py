@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["bgp","gateway","interface","route","trunk_cfg","uuid","vlan_cfg",]
+AVAILABLE_PROPERTIES = [    "bgp",
+    "gateway",
+    "interface",
+    "route",
+    "trunk_cfg",
+    "uuid",
+    "vlan_cfg",
+    "vrid_val",
+]
 
-MODULE_NAME = 'tracking-options'
+MODULE_NAME = "tracking-options"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

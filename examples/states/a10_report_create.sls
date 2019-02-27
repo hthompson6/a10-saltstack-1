@@ -1,3 +1,3 @@
-a10_report_ex:
+report:
   a10.create:
     - a10_obj: report

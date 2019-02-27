@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["appstring","plugin_name","uuid",]
+AVAILABLE_PROPERTIES = [    "appstring",
+    "plugin_name",
+    "uuid",
+]
 
-MODULE_NAME = 'overlay-mgmt-info'
+MODULE_NAME = "overlay-mgmt-info"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

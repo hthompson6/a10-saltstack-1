@@ -1,3 +1,3 @@
-a10_fw_vrid_ex:
+fw_vrid:
   a10.update:
     - a10_obj: fw_vrid

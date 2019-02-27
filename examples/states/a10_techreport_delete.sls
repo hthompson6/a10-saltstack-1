@@ -1,3 +1,3 @@
-a10_techreport_ex:
+techreport:
   a10.delete:
     - a10_obj: techreport 

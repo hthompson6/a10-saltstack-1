@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["acl_id","all_data_intf","eth_cfg","management","tunnel_cfg","user_tag","uuid","ve_cfg",]
+AVAILABLE_PROPERTIES = [    "acl_id",
+    "all_data_intf",
+    "eth_cfg",
+    "management",
+    "tunnel_cfg",
+    "user_tag",
+    "uuid",
+    "ve_cfg",
+]
 
-MODULE_NAME = 'acl-v4'
+MODULE_NAME = "acl-v4"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

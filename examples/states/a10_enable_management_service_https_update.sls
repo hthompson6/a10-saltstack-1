@@ -1,3 +1,3 @@
-a10_enable_management_service_https_ex:
+enable_management_service_https:
   a10.update:
     - a10_obj: enable_management_service_https

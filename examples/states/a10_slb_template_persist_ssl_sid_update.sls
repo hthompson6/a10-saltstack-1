@@ -1,4 +1,4 @@
-a10_slb_template_persist_ssl_sid_ex:
+slb_template_persist_ssl_sid:
   a10.update:
     - a10_obj: slb_template_persist_ssl_sid
-    - name: my_ssl-sid
+    - a10_name: my_ssl-sid

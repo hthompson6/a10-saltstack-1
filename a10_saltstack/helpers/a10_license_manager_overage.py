@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["bytes","days","gb","hours","kb","mb","minutes","seconds","uuid",]
+AVAILABLE_PROPERTIES = [    "bytes",
+    "days",
+    "gb",
+    "hours",
+    "kb",
+    "mb",
+    "minutes",
+    "seconds",
+    "uuid",
+]
 
-MODULE_NAME = 'overage'
+MODULE_NAME = "overage"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

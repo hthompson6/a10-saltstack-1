@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","dst_file","file","file_handle","size","verify_xml_signature",]
+AVAILABLE_PROPERTIES = [    "action",
+    "dst_file",
+    "file",
+    "file_handle",
+    "size",
+    "verify_xml_signature",
+]
 
-MODULE_NAME = 'auth-saml-idp'
+MODULE_NAME = "auth-saml-idp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

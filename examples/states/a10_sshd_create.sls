@@ -1,3 +1,3 @@
-a10_sshd_ex:
+sshd:
   a10.create:
     - a10_obj: sshd

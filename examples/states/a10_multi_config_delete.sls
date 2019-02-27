@@ -1,3 +1,3 @@
-a10_multi_config_ex:
+multi_config:
   a10.delete:
     - a10_obj: multi_config 

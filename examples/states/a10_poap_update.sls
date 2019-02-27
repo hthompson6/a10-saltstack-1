@@ -1,3 +1,3 @@
-a10_poap_ex:
+poap:
   a10.update:
     - a10_obj: poap

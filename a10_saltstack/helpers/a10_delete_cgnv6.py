@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["filename","fixed_nat","lw_4o6_binding_table_validation_log","lw_filename",]
+AVAILABLE_PROPERTIES = [    "filename",
+    "fixed_nat",
+    "lw_4o6_binding_table_validation_log",
+    "lw_filename",
+]
 
-MODULE_NAME = 'cgnv6'
+MODULE_NAME = "cgnv6"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

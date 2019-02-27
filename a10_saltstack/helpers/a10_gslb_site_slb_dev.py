@@ -15,9 +15,26 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["admin_preference","auto_detect","auto_map","client_ip","device_name","gateway_ip_addr","health_check_action","ip_address","max_client","proto_aging_fast","proto_aging_time","proto_compatible","rdt_value","user_tag","uuid","vip_server",]
+AVAILABLE_PROPERTIES = [    "admin_preference",
+    "auto_detect",
+    "auto_map",
+    "client_ip",
+    "device_name",
+    "gateway_ip_addr",
+    "health_check_action",
+    "ip_address",
+    "max_client",
+    "proto_aging_fast",
+    "proto_aging_time",
+    "proto_compatible",
+    "rdt_value",
+    "user_tag",
+    "uuid",
+    "vip_server",
+    "site_name",
+]
 
-MODULE_NAME = 'slb-dev'
+MODULE_NAME = "slb-dev"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,3 @@
-a10_cgnv6_sixrd_fragmentation_inbound_ex:
+cgnv6_sixrd_fragmentation_inbound:
   a10.create:
     - a10_obj: cgnv6_sixrd_fragmentation_inbound

@@ -1,4 +1,4 @@
-a10_vpn_revocation_ex:
+vpn_revocation:
   a10.delete:
     - a10_obj: vpn_revocation 
-    - name: my_revocation
+    - a10_name: my_revocation

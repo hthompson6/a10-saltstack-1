@@ -1,3 +1,3 @@
-a10_debug_local_log_ex:
+debug_local_log:
   a10.create:
     - a10_obj: debug_local_log

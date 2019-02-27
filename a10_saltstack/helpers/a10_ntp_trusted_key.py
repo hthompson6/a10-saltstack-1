@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["key","uuid",]
+AVAILABLE_PROPERTIES = [    "key",
+    "uuid",
+]
 
-MODULE_NAME = 'trusted-key'
+MODULE_NAME = "trusted-key"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

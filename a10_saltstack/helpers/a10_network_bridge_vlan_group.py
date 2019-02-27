@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["bridge_vlan_group_number","forward_traffic","name","user_tag","uuid","ve","vlan_list",]
+AVAILABLE_PROPERTIES = [    "bridge_vlan_group_number",
+    "forward_traffic",
+    "a10_name",
+    "user_tag",
+    "uuid",
+    "ve",
+    "vlan_list",
+]
 
-MODULE_NAME = 'bridge-vlan-group'
+MODULE_NAME = "bridge-vlan-group"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

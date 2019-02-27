@@ -1,3 +1,3 @@
-a10_system_mgmt_port_ex:
+system_mgmt_port:
   a10.delete:
     - a10_obj: system_mgmt_port 

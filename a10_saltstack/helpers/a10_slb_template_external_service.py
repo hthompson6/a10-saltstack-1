@@ -15,9 +15,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","bypass_ip_cfg","failure_action","name","request_header_forward_list","service_group","source_ip","tcp_proxy","timeout","ntype","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "action",
+    "bypass_ip_cfg",
+    "failure_action",
+    "a10_name",
+    "request_header_forward_list",
+    "service_group",
+    "source_ip",
+    "tcp_proxy",
+    "timeout",
+    "ntype",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'external-service'
+MODULE_NAME = "external-service"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +46,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/external-service/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

@@ -1,3 +1,3 @@
-a10_ip_tcp_ex:
+ip_tcp:
   a10.delete:
     - a10_obj: ip_tcp 

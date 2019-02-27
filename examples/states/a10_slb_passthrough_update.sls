@@ -1,3 +1,3 @@
-a10_slb_passthrough_ex:
+slb_passthrough:
   a10.update:
     - a10_obj: slb_passthrough

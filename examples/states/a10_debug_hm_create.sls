@@ -1,4 +1,4 @@
-a10_debug_hm_ex:
+debug_hm:
   a10.create:
     - a10_obj: debug_hm
     - level: 1

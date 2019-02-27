@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dump","export",]
+AVAILABLE_PROPERTIES = [    "dump",
+    "export",
+]
 
-MODULE_NAME = 'cmcov'
+MODULE_NAME = "cmcov"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

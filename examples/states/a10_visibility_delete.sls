@@ -1,3 +1,3 @@
-a10_visibility_ex:
+visibility:
   a10.delete:
     - a10_obj: visibility 

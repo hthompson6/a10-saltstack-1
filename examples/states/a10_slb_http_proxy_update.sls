@@ -1,3 +1,3 @@
-a10_slb_http_proxy_ex:
+slb_http_proxy:
   a10.update:
     - a10_obj: slb_http_proxy

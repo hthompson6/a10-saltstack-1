@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["rtp_stun_timeout","uuid",]
+AVAILABLE_PROPERTIES = [    "rtp_stun_timeout",
+    "uuid",
+]
 
-MODULE_NAME = 'rtp'
+MODULE_NAME = "rtp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

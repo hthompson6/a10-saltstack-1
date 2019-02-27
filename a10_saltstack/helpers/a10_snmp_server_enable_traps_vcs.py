@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["state_change","uuid",]
+AVAILABLE_PROPERTIES = [    "state_change",
+    "uuid",
+]
 
-MODULE_NAME = 'vcs'
+MODULE_NAME = "vcs"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

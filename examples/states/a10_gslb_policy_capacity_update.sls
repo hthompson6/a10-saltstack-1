@@ -1,3 +1,3 @@
-a10_gslb_policy_capacity_ex:
+gslb_policy_capacity:
   a10.update:
     - a10_obj: gslb_policy_capacity

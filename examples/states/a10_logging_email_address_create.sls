@@ -1,3 +1,3 @@
-a10_logging_email_address_ex:
+logging_email_address:
   a10.create:
     - a10_obj: logging_email_address

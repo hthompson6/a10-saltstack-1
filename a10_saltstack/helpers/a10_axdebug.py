@@ -15,9 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["apply_config","capture","count","delete_file_list","exit","filter_config","incoming_list","length","maxfile","outgoing_list","save_config","sess_filter_dis","timeout",]
+AVAILABLE_PROPERTIES = [    "apply_config",
+    "capture",
+    "count",
+    "delete_file_list",
+    "exit",
+    "filter_config",
+    "incoming_list",
+    "length",
+    "maxfile",
+    "outgoing_list",
+    "save_config",
+    "sess_filter_dis",
+    "timeout",
+]
 
-MODULE_NAME = 'axdebug'
+MODULE_NAME = "axdebug"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

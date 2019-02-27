@@ -1,3 +1,3 @@
-a10_debug_web_category_ex:
+debug_web_category:
   a10.update:
     - a10_obj: debug_web_category

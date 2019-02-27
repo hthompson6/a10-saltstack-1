@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["encap","ip_address","user_tag","uuid","vni_list",]
+AVAILABLE_PROPERTIES = [    "encap",
+    "ip_address",
+    "user_tag",
+    "uuid",
+    "vni_list",
+    "vtep_id",
+]
 
-MODULE_NAME = 'destination-ip-address'
+MODULE_NAME = "destination-ip-address"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

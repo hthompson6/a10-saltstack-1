@@ -1,3 +1,3 @@
-a10_tftp_ex:
+tftp:
   a10.update:
     - a10_obj: tftp

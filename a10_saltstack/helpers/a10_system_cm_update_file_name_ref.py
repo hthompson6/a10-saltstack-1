@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dest_name","id","source_name",]
+AVAILABLE_PROPERTIES = [    "dest_name",
+    "id",
+    "source_name",
+]
 
-MODULE_NAME = 'cm-update-file-name-ref'
+MODULE_NAME = "cm-update-file-name-ref"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

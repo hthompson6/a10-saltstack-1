@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["log_msg","property","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "log_msg",
+    "property",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'message-id'
+MODULE_NAME = "message-id"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

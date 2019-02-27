@@ -1,3 +1,3 @@
-a10_fw_urpf_ex:
+fw_urpf:
   a10.update:
     - a10_obj: fw_urpf

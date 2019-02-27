@@ -1,3 +1,3 @@
-a10_ip_community_list_expanded_ex:
+ip_community_list_expanded:
   a10.create:
     - a10_obj: ip_community_list_expanded

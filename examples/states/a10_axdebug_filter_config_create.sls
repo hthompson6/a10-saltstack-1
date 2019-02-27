@@ -1,4 +1,4 @@
-a10_axdebug_filter_config_ex:
+axdebug_filter_config:
   a10.create:
     - a10_obj: axdebug_filter_config
     - number: 1

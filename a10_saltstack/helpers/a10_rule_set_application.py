@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["sampling_enable",]
+AVAILABLE_PROPERTIES = [    "sampling_enable",
+    "rule_set_name",
+]
 
-MODULE_NAME = 'application'
+MODULE_NAME = "application"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

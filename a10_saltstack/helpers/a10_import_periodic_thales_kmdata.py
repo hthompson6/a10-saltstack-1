@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["overwrite","period","remote_file","thales_kmdata","use_mgmt_port","uuid",]
+AVAILABLE_PROPERTIES = [    "overwrite",
+    "period",
+    "remote_file",
+    "thales_kmdata",
+    "use_mgmt_port",
+    "uuid",
+]
 
-MODULE_NAME = 'thales-kmdata'
+MODULE_NAME = "thales-kmdata"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

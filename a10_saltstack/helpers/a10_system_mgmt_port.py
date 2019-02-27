@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["mac_address","pci_address","port_index",]
+AVAILABLE_PROPERTIES = [    "mac_address",
+    "pci_address",
+    "port_index",
+]
 
-MODULE_NAME = 'mgmt-port'
+MODULE_NAME = "mgmt-port"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

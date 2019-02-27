@@ -1,3 +1,3 @@
-a10_techreport_ex:
+techreport:
   a10.update:
     - a10_obj: techreport

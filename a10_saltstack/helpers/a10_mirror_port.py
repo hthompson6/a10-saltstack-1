@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethernet","mirror_dir","mirror_index","uuid",]
+AVAILABLE_PROPERTIES = [    "ethernet",
+    "mirror_dir",
+    "mirror_index",
+    "uuid",
+]
 
-MODULE_NAME = 'mirror-port'
+MODULE_NAME = "mirror-port"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

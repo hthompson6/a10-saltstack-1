@@ -1,3 +1,3 @@
-a10_syn_cookie_ex:
+syn_cookie:
   a10.update:
     - a10_obj: syn_cookie

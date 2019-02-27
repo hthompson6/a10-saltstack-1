@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["delete","file_url","nimport","list","use_mgmt_port",]
+AVAILABLE_PROPERTIES = [    "delete",
+    "file_url",
+    "nimport",
+    "list",
+    "use_mgmt_port",
+    "admin_user",
+]
 
-MODULE_NAME = 'ssh-pubkey'
+MODULE_NAME = "ssh-pubkey"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

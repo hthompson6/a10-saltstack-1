@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["gateway","lif","partition","segment","uuid",]
+AVAILABLE_PROPERTIES = [    "gateway",
+    "lif",
+    "partition",
+    "segment",
+    "uuid",
+    "vtep_id",
+]
 
-MODULE_NAME = 'vni'
+MODULE_NAME = "vni"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

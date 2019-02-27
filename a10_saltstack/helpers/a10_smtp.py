@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["mailfrom","needauthentication","port","smtp_server","smtp_server_v6","username_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "mailfrom",
+    "needauthentication",
+    "port",
+    "smtp_server",
+    "smtp_server_v6",
+    "username_cfg",
+    "uuid",
+]
 
-MODULE_NAME = 'smtp'
+MODULE_NAME = "smtp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

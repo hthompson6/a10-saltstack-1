@@ -1,3 +1,3 @@
-a10_pki_delete_ex:
+pki_delete:
   a10.update:
     - a10_obj: pki_delete

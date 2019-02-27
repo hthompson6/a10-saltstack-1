@@ -1,3 +1,3 @@
-a10_system_ipsec_ex:
+system_ipsec:
   a10.delete:
     - a10_obj: system_ipsec 

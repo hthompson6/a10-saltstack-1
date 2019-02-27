@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["enable_cfg","notification_cfg","tx_dot1_cfg","tx_tlvs_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "enable_cfg",
+    "notification_cfg",
+    "tx_dot1_cfg",
+    "tx_tlvs_cfg",
+    "uuid",
+    "ethernet_ifnum",
+]
 
-MODULE_NAME = 'lldp'
+MODULE_NAME = "lldp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["enable","uuid",]
+AVAILABLE_PROPERTIES = [    "enable",
+    "uuid",
+]
 
-MODULE_NAME = 'system-4x10g-mode'
+MODULE_NAME = "system-4x10g-mode"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

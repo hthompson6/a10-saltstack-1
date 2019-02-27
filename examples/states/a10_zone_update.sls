@@ -1,4 +1,4 @@
-a10_zone_ex:
+zone:
   a10.update:
     - a10_obj: zone
-    - name: my_zone
+    - a10_name: my_zone

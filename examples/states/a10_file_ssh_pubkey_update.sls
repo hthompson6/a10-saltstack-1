@@ -1,3 +1,3 @@
-a10_file_ssh_pubkey_ex:
+file_ssh_pubkey:
   a10.update:
     - a10_obj: file_ssh_pubkey

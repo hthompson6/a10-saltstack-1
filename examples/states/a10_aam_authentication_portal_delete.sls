@@ -1,4 +1,4 @@
-a10_aam_authentication_portal_ex:
+aam_authentication_portal:
   a10.delete:
     - a10_obj: aam_authentication_portal 
-    - name: default-portal
+    - a10_name: default-portal

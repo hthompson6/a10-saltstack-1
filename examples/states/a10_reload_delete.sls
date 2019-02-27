@@ -1,3 +1,3 @@
-a10_reload_ex:
+reload:
   a10.delete:
     - a10_obj: reload 

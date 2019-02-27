@@ -1,3 +1,3 @@
-a10_gslb_geo_location_ex:
+gslb_geo_location:
   a10.create:
     - a10_obj: gslb_geo_location

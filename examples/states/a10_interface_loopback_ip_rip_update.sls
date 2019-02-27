@@ -1,3 +1,3 @@
-a10_interface_loopback_ip_rip_ex:
+interface_loopback_ip_rip:
   a10.update:
     - a10_obj: interface_loopback_ip_rip

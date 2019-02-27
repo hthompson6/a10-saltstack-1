@@ -1,4 +1,4 @@
-a10_radius_server_host_ipv4_ex:
+radius_server_host_ipv4:
   a10.delete:
     - a10_obj: radius_server_host_ipv4 
     - ipv4_addr: 10.0.0.1

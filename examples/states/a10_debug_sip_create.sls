@@ -1,3 +1,3 @@
-a10_debug_sip_ex:
+debug_sip:
   a10.create:
     - a10_obj: debug_sip

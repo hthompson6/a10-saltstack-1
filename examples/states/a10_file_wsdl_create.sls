@@ -1,3 +1,3 @@
-a10_file_wsdl_ex:
+file_wsdl:
   a10.create:
     - a10_obj: file_wsdl

@@ -1,3 +1,3 @@
-a10_automatic_update_ex:
+automatic_update:
   a10.create:
     - a10_obj: automatic_update

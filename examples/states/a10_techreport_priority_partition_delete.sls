@@ -1,3 +1,3 @@
-a10_techreport_priority_partition_ex:
+techreport_priority_partition:
   a10.delete:
     - a10_obj: techreport_priority_partition 

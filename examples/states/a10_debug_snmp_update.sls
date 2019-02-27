@@ -1,3 +1,3 @@
-a10_debug_snmp_ex:
+debug_snmp:
   a10.update:
     - a10_obj: debug_snmp

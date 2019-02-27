@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["anycast","ipv6_address","link_local","uuid",]
+AVAILABLE_PROPERTIES = [    "anycast",
+    "ipv6_address",
+    "link_local",
+    "uuid",
+]
 
-MODULE_NAME = 'address'
+MODULE_NAME = "address"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

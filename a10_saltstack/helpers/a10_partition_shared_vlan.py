@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["allowable_ip_range","allowable_ipv6_range","mgmt_floating_ip_address","uuid","vlan","vrid",]
+AVAILABLE_PROPERTIES = [    "allowable_ip_range",
+    "allowable_ipv6_range",
+    "mgmt_floating_ip_address",
+    "uuid",
+    "vlan",
+    "vrid",
+    "partition_name",
+]
 
-MODULE_NAME = 'shared-vlan'
+MODULE_NAME = "shared-vlan"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

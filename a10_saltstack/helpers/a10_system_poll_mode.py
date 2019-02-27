@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["enable","virtio",]
+AVAILABLE_PROPERTIES = [    "enable",
+    "virtio",
+]
 
-MODULE_NAME = 'system-poll-mode'
+MODULE_NAME = "system-poll-mode"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

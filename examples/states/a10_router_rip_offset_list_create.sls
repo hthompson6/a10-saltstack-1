@@ -1,3 +1,3 @@
-a10_router_rip_offset_list_ex:
+router_rip_offset_list:
   a10.create:
     - a10_obj: router_rip_offset_list

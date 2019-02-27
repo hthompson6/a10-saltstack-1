@@ -1,3 +1,3 @@
-a10_write_memory_ex:
+write_memory:
   a10.update:
     - a10_obj: write_memory

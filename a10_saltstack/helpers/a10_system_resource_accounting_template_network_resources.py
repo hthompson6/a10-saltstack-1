@@ -15,9 +15,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ipv4_acl_line_cfg","ipv6_acl_line_cfg","object_group_cfg","object_group_clause_cfg","static_arp_cfg","static_ipv4_route_cfg","static_ipv6_route_cfg","static_mac_cfg","static_neighbor_cfg","threshold","uuid",]
+AVAILABLE_PROPERTIES = [    "ipv4_acl_line_cfg",
+    "ipv6_acl_line_cfg",
+    "object_group_cfg",
+    "object_group_clause_cfg",
+    "static_arp_cfg",
+    "static_ipv4_route_cfg",
+    "static_ipv6_route_cfg",
+    "static_mac_cfg",
+    "static_neighbor_cfg",
+    "threshold",
+    "uuid",
+    "template_name",
+]
 
-MODULE_NAME = 'network-resources'
+MODULE_NAME = "network-resources"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

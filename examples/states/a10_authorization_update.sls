@@ -1,3 +1,3 @@
-a10_authorization_ex:
+authorization:
   a10.update:
     - a10_obj: authorization

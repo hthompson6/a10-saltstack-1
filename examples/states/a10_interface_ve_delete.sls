@@ -1,4 +1,4 @@
-a10_interface_ve_ex:
+interface_ve:
   a10.delete:
     - a10_obj: interface_ve 
     - ifnum: 1

@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["timeout","uuid",]
+AVAILABLE_PROPERTIES = [    "timeout",
+    "uuid",
+]
 
-MODULE_NAME = 'arp-timeout'
+MODULE_NAME = "arp-timeout"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,3 @@
-a10_automatic_update_proxy_server_ex:
+automatic_update_proxy_server:
   a10.delete:
     - a10_obj: automatic_update_proxy_server 

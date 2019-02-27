@@ -15,9 +15,25 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["authentication","authentication_key","cost","database_filter","dead_interval","hello_interval","ip_addr","message_digest_cfg","mtu_ignore","out","priority","retransmit_interval","transmit_delay","uuid","value",]
+AVAILABLE_PROPERTIES = [    "authentication",
+    "authentication_key",
+    "cost",
+    "database_filter",
+    "dead_interval",
+    "hello_interval",
+    "ip_addr",
+    "message_digest_cfg",
+    "mtu_ignore",
+    "out",
+    "priority",
+    "retransmit_interval",
+    "transmit_delay",
+    "uuid",
+    "value",
+    "tunnel_ifnum",
+]
 
-MODULE_NAME = 'ospf-ip'
+MODULE_NAME = "ospf-ip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

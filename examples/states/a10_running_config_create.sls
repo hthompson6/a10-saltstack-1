@@ -1,3 +1,3 @@
-a10_running_config_ex:
+running_config:
   a10.create:
     - a10_obj: running_config

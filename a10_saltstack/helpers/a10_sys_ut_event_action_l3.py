@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["checksum","ip_list","protocol","ttl","ntype","uuid","value",]
+AVAILABLE_PROPERTIES = [    "checksum",
+    "ip_list",
+    "protocol",
+    "ttl",
+    "ntype",
+    "uuid",
+    "value",
+    "action_direction",
+    "event_number",
+]
 
-MODULE_NAME = 'l3'
+MODULE_NAME = "l3"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

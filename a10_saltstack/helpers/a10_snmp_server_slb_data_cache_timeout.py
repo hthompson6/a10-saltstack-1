@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["slblimit","uuid",]
+AVAILABLE_PROPERTIES = [    "slblimit",
+    "uuid",
+]
 
-MODULE_NAME = 'slb-data-cache-timeout'
+MODULE_NAME = "slb-data-cache-timeout"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

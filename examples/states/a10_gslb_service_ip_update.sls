@@ -1,3 +1,3 @@
-a10_gslb_service_ip_ex:
+gslb_service_ip:
   a10.update:
     - a10_obj: gslb_service_ip

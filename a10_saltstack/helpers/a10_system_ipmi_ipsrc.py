@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dhcp","static",]
+AVAILABLE_PROPERTIES = [    "dhcp",
+    "static",
+]
 
-MODULE_NAME = 'ipsrc'
+MODULE_NAME = "ipsrc"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,3 @@
-a10_health_monitor_method_sip_ex:
+health_monitor_method_sip:
   a10.delete:
     - a10_obj: health_monitor_method_sip 

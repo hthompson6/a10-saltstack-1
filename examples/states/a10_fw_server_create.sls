@@ -1,4 +1,4 @@
-a10_fw_server_ex:
+fw_server:
   a10.create:
     - a10_obj: fw_server
-    - name: my_server
+    - a10_name: my_server

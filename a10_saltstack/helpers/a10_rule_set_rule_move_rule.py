@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["location","target_rule",]
+AVAILABLE_PROPERTIES = [    "location",
+    "target_rule",
+    "name",
+    "rule_set_name",
+]
 
-MODULE_NAME = 'move-rule'
+MODULE_NAME = "move-rule"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

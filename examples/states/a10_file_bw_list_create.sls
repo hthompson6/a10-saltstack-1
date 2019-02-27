@@ -1,3 +1,3 @@
-a10_file_bw_list_ex:
+file_bw_list:
   a10.create:
     - a10_obj: file_bw_list

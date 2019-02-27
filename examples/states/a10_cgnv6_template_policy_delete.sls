@@ -1,4 +1,4 @@
-a10_cgnv6_template_policy_ex:
+cgnv6_template_policy:
   a10.delete:
     - a10_obj: cgnv6_template_policy 
-    - name: my_policy
+    - a10_name: my_policy

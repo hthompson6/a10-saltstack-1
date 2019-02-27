@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["base","cn_value","dn_value","domain","domain_cfg","group","hostname","port_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "base",
+    "cn_value",
+    "dn_value",
+    "domain",
+    "domain_cfg",
+    "group",
+    "hostname",
+    "port_cfg",
+    "uuid",
+]
 
-MODULE_NAME = 'ldap-hostname'
+MODULE_NAME = "ldap-hostname"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

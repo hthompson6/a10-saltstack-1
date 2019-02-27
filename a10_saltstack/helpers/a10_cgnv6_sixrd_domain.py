@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["br_ipv4_address","ce_ipv4_netmask","ce_ipv4_network","ipv6_prefix","mtu","name","sampling_enable","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "br_ipv4_address",
+    "ce_ipv4_netmask",
+    "ce_ipv4_network",
+    "ipv6_prefix",
+    "mtu",
+    "a10_name",
+    "sampling_enable",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'domain'
+MODULE_NAME = "domain"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/sixrd/domain/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

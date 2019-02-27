@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["domain","icmp","interval","port","retry","sleep","timeout","track","uuid",]
+AVAILABLE_PROPERTIES = [    "domain",
+    "icmp",
+    "interval",
+    "port",
+    "retry",
+    "sleep",
+    "timeout",
+    "track",
+    "uuid",
+]
 
-MODULE_NAME = 'active-rdt'
+MODULE_NAME = "active-rdt"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

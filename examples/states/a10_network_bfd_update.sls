@@ -1,3 +1,3 @@
-a10_network_bfd_ex:
+network_bfd:
   a10.update:
     - a10_obj: network_bfd

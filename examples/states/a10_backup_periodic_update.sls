@@ -1,3 +1,3 @@
-a10_backup_periodic_ex:
+backup_periodic:
   a10.update:
     - a10_obj: backup_periodic

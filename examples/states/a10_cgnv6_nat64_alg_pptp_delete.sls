@@ -1,3 +1,3 @@
-a10_cgnv6_nat64_alg_pptp_ex:
+cgnv6_nat64_alg_pptp:
   a10.delete:
     - a10_obj: cgnv6_nat64_alg_pptp 

@@ -1,4 +1,4 @@
-a10_sflow_collector_ip_ex:
+sflow_collector_ip:
   a10.update:
     - a10_obj: sflow_collector_ip
     - port: 1

@@ -1,3 +1,3 @@
-a10_sflow_polling_ex:
+sflow_polling:
   a10.update:
     - a10_obj: sflow_polling

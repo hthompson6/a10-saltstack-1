@@ -1,3 +1,3 @@
-a10_delete_partition_ex:
+delete_partition:
   a10.delete:
     - a10_obj: delete_partition 

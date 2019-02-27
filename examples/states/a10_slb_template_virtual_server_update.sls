@@ -1,4 +1,4 @@
-a10_slb_template_virtual_server_ex:
+slb_template_virtual_server:
   a10.update:
     - a10_obj: slb_template_virtual_server
-    - name: my_virtual-server
+    - a10_name: my_virtual-server

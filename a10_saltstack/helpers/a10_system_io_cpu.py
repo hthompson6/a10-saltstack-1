@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["max_cores",]
+AVAILABLE_PROPERTIES = [    "max_cores",
+]
 
-MODULE_NAME = 'io-cpu'
+MODULE_NAME = "io-cpu"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

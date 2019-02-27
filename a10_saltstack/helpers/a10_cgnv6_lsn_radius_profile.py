@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["lid_profile_index","radius","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "lid_profile_index",
+    "radius",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'lsn-radius-profile'
+MODULE_NAME = "lsn-radius-profile"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

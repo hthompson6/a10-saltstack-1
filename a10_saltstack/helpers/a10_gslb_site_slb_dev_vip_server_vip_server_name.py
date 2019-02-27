@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["sampling_enable","uuid","vip_name",]
+AVAILABLE_PROPERTIES = [    "sampling_enable",
+    "uuid",
+    "vip_name",
+    "slb_dev_device_name",
+    "site_name",
+]
 
-MODULE_NAME = 'vip-server-name'
+MODULE_NAME = "vip-server-name"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

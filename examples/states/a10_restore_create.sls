@@ -1,3 +1,3 @@
-a10_restore_ex:
+restore:
   a10.create:
     - a10_obj: restore

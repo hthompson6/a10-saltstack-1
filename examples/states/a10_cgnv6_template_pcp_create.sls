@@ -1,4 +1,4 @@
-a10_cgnv6_template_pcp_ex:
+cgnv6_template_pcp:
   a10.create:
     - a10_obj: cgnv6_template_pcp
-    - name: my_pcp
+    - a10_name: my_pcp

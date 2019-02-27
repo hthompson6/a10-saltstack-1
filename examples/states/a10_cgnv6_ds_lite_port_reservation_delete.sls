@@ -1,4 +1,4 @@
-a10_cgnv6_ds_lite_port_reservation_ex:
+cgnv6_ds_lite_port_reservation:
   a10.delete:
     - a10_obj: cgnv6_ds_lite_port_reservation 
     - nat_end_port: 1

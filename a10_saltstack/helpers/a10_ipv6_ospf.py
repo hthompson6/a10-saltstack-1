@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["display_route_single_line","uuid",]
+AVAILABLE_PROPERTIES = [    "display_route_single_line",
+    "uuid",
+]
 
-MODULE_NAME = 'ospf'
+MODULE_NAME = "ospf"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,4 +1,4 @@
-a10_slb_template_connection_reuse_ex:
+slb_template_connection_reuse:
   a10.update:
     - a10_obj: slb_template_connection_reuse
-    - name: my_connection-reuse
+    - a10_name: my_connection-reuse

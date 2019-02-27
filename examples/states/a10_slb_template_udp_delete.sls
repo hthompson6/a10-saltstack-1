@@ -1,4 +1,4 @@
-a10_slb_template_udp_ex:
+slb_template_udp:
   a10.delete:
     - a10_obj: slb_template_udp 
-    - name: my_udp
+    - a10_name: my_udp

@@ -1,3 +1,3 @@
-a10_fw_app_ex:
+fw_app:
   a10.update:
     - a10_obj: fw_app

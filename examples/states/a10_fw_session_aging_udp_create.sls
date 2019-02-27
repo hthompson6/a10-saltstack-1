@@ -1,3 +1,3 @@
-a10_fw_session_aging_udp_ex:
+fw_session_aging_udp:
   a10.create:
     - a10_obj: fw_session_aging_udp

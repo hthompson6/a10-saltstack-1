@@ -1,3 +1,3 @@
-a10_so_counters_ex:
+so_counters:
   a10.create:
     - a10_obj: so_counters

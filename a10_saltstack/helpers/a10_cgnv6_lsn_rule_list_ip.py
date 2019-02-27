@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ipv4_addr","rule_cfg","sampling_enable","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "ipv4_addr",
+    "rule_cfg",
+    "sampling_enable",
+    "user_tag",
+    "uuid",
+    "lsn_rule_list_name",
+]
 
-MODULE_NAME = 'ip'
+MODULE_NAME = "ip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

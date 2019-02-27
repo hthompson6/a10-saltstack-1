@@ -1,3 +1,3 @@
-a10_import_periodic_dnssec_dnskey_ex:
+import_periodic_dnssec_dnskey:
   a10.delete:
     - a10_obj: import_periodic_dnssec_dnskey 

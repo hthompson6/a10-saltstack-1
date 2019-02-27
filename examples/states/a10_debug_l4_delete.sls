@@ -1,3 +1,3 @@
-a10_debug_l4_ex:
+debug_l4:
   a10.delete:
     - a10_obj: debug_l4 

@@ -1,3 +1,3 @@
-a10_debug_rip_ex:
+debug_rip:
   a10.delete:
     - a10_obj: debug_rip 

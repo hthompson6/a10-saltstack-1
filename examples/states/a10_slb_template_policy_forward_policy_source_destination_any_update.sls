@@ -1,3 +1,3 @@
-a10_slb_template_policy_forward_policy_source_destination_any_ex:
+slb_template_policy_forward_policy_source_destination_any:
   a10.update:
     - a10_obj: slb_template_policy_forward_policy_source_destination_any

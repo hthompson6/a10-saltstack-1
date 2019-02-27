@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["count","shared","to_shared","uuid","v4_address","v6_address","vrid",]
+AVAILABLE_PROPERTIES = [    "count",
+    "shared",
+    "to_shared",
+    "uuid",
+    "v4_address",
+    "v6_address",
+    "vrid",
+]
 
-MODULE_NAME = 'static-dest-mapping'
+MODULE_NAME = "static-dest-mapping"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

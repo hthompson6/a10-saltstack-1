@@ -1,3 +1,3 @@
-a10_gslb_site_ex:
+gslb_site:
   a10.create:
     - a10_obj: gslb_site

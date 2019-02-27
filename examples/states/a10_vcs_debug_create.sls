@@ -1,3 +1,3 @@
-a10_vcs_debug_ex:
+vcs_debug:
   a10.create:
     - a10_obj: vcs_debug

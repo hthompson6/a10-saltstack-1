@@ -1,3 +1,3 @@
-a10_import_periodic_geo_location_ex:
+import_periodic_geo_location:
   a10.delete:
     - a10_obj: import_periodic_geo_location 

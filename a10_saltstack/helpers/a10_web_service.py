@@ -15,9 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["auto_redirt_disable","axapi_idle","axapi_session_limit","login_message","port","secure","secure_port","secure_server_disable","server_disable","uuid",]
+AVAILABLE_PROPERTIES = [    "auto_redirt_disable",
+    "axapi_idle",
+    "axapi_session_limit",
+    "login_message",
+    "port",
+    "secure",
+    "secure_port",
+    "secure_server_disable",
+    "server_disable",
+    "uuid",
+]
 
-MODULE_NAME = 'web-service'
+MODULE_NAME = "web-service"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

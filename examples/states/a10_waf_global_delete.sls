@@ -1,3 +1,3 @@
-a10_waf_global_ex:
+waf_global:
   a10.delete:
     - a10_obj: waf_global 

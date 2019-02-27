@@ -1,3 +1,3 @@
-a10_debug_rt_ex:
+debug_rt:
   a10.delete:
     - a10_obj: debug_rt 

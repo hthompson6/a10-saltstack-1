@@ -1,3 +1,3 @@
-a10_cgnv6_pcp_ex:
+cgnv6_pcp:
   a10.delete:
     - a10_obj: cgnv6_pcp 

@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["threshold_cfg","update_interval","uuid",]
+AVAILABLE_PROPERTIES = [    "threshold_cfg",
+    "update_interval",
+    "uuid",
+]
 
-MODULE_NAME = 'environment'
+MODULE_NAME = "environment"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,3 @@
-a10_debug_migration_ex:
+debug_migration:
   a10.update:
     - a10_obj: debug_migration

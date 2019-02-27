@@ -1,3 +1,3 @@
-a10_delete_cgnv6_ex:
+delete_cgnv6:
   a10.update:
     - a10_obj: delete_cgnv6

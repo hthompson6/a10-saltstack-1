@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["local_logging","max_buffer_size","max_file_size","uuid",]
+AVAILABLE_PROPERTIES = [    "local_logging",
+    "max_buffer_size",
+    "max_file_size",
+    "uuid",
+]
 
-MODULE_NAME = 'global'
+MODULE_NAME = "global"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["idle_timeout_val_port_range","port","port_end","uuid",]
+AVAILABLE_PROPERTIES = [    "idle_timeout_val_port_range",
+    "port",
+    "port_end",
+    "uuid",
+]
 
-MODULE_NAME = 'idle-timeout'
+MODULE_NAME = "idle-timeout"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["enable_port_batch_v1","uuid",]
+AVAILABLE_PROPERTIES = [    "enable_port_batch_v1",
+    "uuid",
+]
 
-MODULE_NAME = 'port-batch-v1'
+MODULE_NAME = "port-batch-v1"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

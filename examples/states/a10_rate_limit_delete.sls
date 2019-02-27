@@ -1,3 +1,3 @@
-a10_rate_limit_ex:
+rate_limit:
   a10.delete:
     - a10_obj: rate_limit 

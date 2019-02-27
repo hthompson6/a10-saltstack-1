@@ -1,3 +1,3 @@
-a10_export_ex:
+export:
   a10.delete:
     - a10_obj: export 

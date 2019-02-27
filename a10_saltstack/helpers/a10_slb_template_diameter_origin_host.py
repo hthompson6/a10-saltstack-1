@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["origin_host_name","uuid",]
+AVAILABLE_PROPERTIES = [    "origin_host_name",
+    "uuid",
+    "diameter_name",
+]
 
-MODULE_NAME = 'origin-host'
+MODULE_NAME = "origin-host"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

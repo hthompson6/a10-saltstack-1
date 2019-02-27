@@ -1,3 +1,3 @@
-a10_system_ipsec_fpga_decrypt_ex:
+system_ipsec_fpga_decrypt:
   a10.delete:
     - a10_obj: system_ipsec_fpga_decrypt 

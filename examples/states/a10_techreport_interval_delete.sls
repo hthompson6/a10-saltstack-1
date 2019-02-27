@@ -1,3 +1,3 @@
-a10_techreport_interval_ex:
+techreport_interval:
   a10.delete:
     - a10_obj: techreport_interval 

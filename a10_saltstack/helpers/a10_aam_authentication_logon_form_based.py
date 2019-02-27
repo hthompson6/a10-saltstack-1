@@ -15,9 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["account_lock","challenge_variable","cp_page_cfg","duration","logon_page_cfg","name","new_pin_variable","next_token_variable","notify_cp_page_cfg","portal","retry","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "account_lock",
+    "challenge_variable",
+    "cp_page_cfg",
+    "duration",
+    "logon_page_cfg",
+    "a10_name",
+    "new_pin_variable",
+    "next_token_variable",
+    "notify_cp_page_cfg",
+    "portal",
+    "retry",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'form-based'
+MODULE_NAME = "form-based"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +47,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/logon/form-based/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","dst_file","file","file_handle","size",]
+AVAILABLE_PROPERTIES = [    "action",
+    "dst_file",
+    "file",
+    "file_handle",
+    "size",
+]
 
-MODULE_NAME = 'xml-schema'
+MODULE_NAME = "xml-schema"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

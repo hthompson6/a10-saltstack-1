@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["name","tunnel_address_list","user_tag",]
+AVAILABLE_PROPERTIES = [    "a10_name",
+    "tunnel_address_list",
+    "user_tag",
+]
 
-MODULE_NAME = 'binding-table'
+MODULE_NAME = "binding-table"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +37,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lw-4o6/binding-table/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["csv_name","delim_char","delim_num","ipv6_enable","multiple_fields","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "csv_name",
+    "delim_char",
+    "delim_num",
+    "ipv6_enable",
+    "multiple_fields",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'csv'
+MODULE_NAME = "csv"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

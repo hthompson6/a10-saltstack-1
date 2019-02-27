@@ -1,3 +1,3 @@
-a10_debug_dumpthread_ex:
+debug_dumpthread:
   a10.create:
     - a10_obj: debug_dumpthread

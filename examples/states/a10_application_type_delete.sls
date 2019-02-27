@@ -1,3 +1,3 @@
-a10_application_type_ex:
+application_type:
   a10.delete:
     - a10_obj: application_type 

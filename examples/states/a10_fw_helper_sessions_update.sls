@@ -1,3 +1,3 @@
-a10_fw_helper_sessions_ex:
+fw_helper_sessions:
   a10.update:
     - a10_obj: fw_helper_sessions

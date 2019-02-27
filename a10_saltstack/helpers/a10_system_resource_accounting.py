@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["template_list",]
+AVAILABLE_PROPERTIES = [    "template_list",
+]
 
-MODULE_NAME = 'resource-accounting'
+MODULE_NAME = "resource-accounting"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

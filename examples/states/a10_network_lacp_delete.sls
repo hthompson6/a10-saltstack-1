@@ -1,3 +1,3 @@
-a10_network_lacp_ex:
+network_lacp:
   a10.delete:
     - a10_obj: network_lacp 

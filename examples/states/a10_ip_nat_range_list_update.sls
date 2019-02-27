@@ -1,4 +1,4 @@
-a10_ip_nat_range_list_ex:
+ip_nat_range_list:
   a10.update:
     - a10_obj: ip_nat_range_list
-    - name: my_range-list
+    - a10_name: my_range-list

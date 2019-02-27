@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["authentication","demand","echo","interval_cfg","uuid",]
+AVAILABLE_PROPERTIES = [    "authentication",
+    "demand",
+    "echo",
+    "interval_cfg",
+    "uuid",
+    "trunk_ifnum",
+]
 
-MODULE_NAME = 'bfd'
+MODULE_NAME = "bfd"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

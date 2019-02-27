@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["peer_from","peer_to","uuid",]
+AVAILABLE_PROPERTIES = [    "peer_from",
+    "peer_to",
+    "uuid",
+]
 
-MODULE_NAME = 'lacp-passthrough'
+MODULE_NAME = "lacp-passthrough"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

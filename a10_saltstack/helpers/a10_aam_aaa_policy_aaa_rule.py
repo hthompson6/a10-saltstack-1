@@ -15,9 +15,24 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["access_list","action","authentication_template","authorize_policy","domain_name","host","index","match_encoded_uri","port","sampling_enable","uri","user_agent","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "access_list",
+    "action",
+    "authentication_template",
+    "authorize_policy",
+    "domain_name",
+    "host",
+    "index",
+    "match_encoded_uri",
+    "port",
+    "sampling_enable",
+    "uri",
+    "user_agent",
+    "user_tag",
+    "uuid",
+    "aaa_policy_name",
+]
 
-MODULE_NAME = 'aaa-rule'
+MODULE_NAME = "aaa-rule"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

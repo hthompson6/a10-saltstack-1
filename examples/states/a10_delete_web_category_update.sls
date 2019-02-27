@@ -1,3 +1,3 @@
-a10_delete_web_category_ex:
+delete_web_category:
   a10.update:
     - a10_obj: delete_web_category

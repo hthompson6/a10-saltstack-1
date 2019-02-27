@@ -1,3 +1,3 @@
-a10_gslb_service_group_ex:
+gslb_service_group:
   a10.create:
     - a10_obj: gslb_service_group

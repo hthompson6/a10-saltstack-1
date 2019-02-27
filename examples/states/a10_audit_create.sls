@@ -1,3 +1,3 @@
-a10_audit_ex:
+audit:
   a10.create:
     - a10_obj: audit

@@ -1,3 +1,3 @@
-a10_debug_ospf_lsa_ex:
+debug_ospf_lsa:
   a10.update:
     - a10_obj: debug_ospf_lsa

@@ -1,4 +1,4 @@
-a10_cgnv6_nptv6_domain_ex:
+cgnv6_nptv6_domain:
   a10.create:
     - a10_obj: cgnv6_nptv6_domain
-    - name: my_domain
+    - a10_name: my_domain

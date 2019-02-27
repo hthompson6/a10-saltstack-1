@@ -1,3 +1,3 @@
-a10_router_lacp_ex:
+router_lacp:
   a10.create:
     - a10_obj: router_lacp

@@ -1,3 +1,3 @@
-a10_system_resource_usage_ex:
+system_resource_usage:
   a10.update:
     - a10_obj: system_resource_usage

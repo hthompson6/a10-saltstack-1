@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["msl","name","pool","uuid",]
+AVAILABLE_PROPERTIES = [    "msl",
+    "a10_name",
+    "pool",
+    "uuid",
+]
 
-MODULE_NAME = 'acl-name-list'
+MODULE_NAME = "acl-name-list"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +38,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/nat/inside/source/list/acl-name-list/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

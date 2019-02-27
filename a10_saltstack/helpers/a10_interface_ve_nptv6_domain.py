@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["bind_type","domain_name","uuid",]
+AVAILABLE_PROPERTIES = [    "bind_type",
+    "domain_name",
+    "uuid",
+    "ve_ifnum",
+]
 
-MODULE_NAME = 'domain'
+MODULE_NAME = "domain"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

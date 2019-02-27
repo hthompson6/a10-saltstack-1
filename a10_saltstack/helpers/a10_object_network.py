@@ -15,9 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["description","ip_range_end","ip_range_start","ipv6_range_end","ipv6_range_start","ipv6_subnet","net_name","subnet","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "description",
+    "ip_range_end",
+    "ip_range_start",
+    "ipv6_range_end",
+    "ipv6_range_start",
+    "ipv6_subnet",
+    "net_name",
+    "subnet",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'network'
+MODULE_NAME = "network"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

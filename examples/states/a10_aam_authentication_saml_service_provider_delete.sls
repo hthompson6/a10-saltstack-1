@@ -1,4 +1,4 @@
-a10_aam_authentication_saml_service_provider_ex:
+aam_authentication_saml_service_provider:
   a10.delete:
     - a10_obj: aam_authentication_saml_service_provider 
-    - name: my_service-provider
+    - a10_name: my_service-provider

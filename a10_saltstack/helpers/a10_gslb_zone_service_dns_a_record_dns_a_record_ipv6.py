@@ -15,9 +15,23 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["admin_ip","as_backup","as_replace","disable","dns_a_record_ipv6","no_resp","sampling_enable","static","ttl","uuid","weight",]
+AVAILABLE_PROPERTIES = [    "admin_ip",
+    "as_backup",
+    "as_replace",
+    "disable",
+    "dns_a_record_ipv6",
+    "no_resp",
+    "sampling_enable",
+    "static",
+    "ttl",
+    "uuid",
+    "weight",
+    "service_name",
+    "service_port",
+    "zone_name",
+]
 
-MODULE_NAME = 'dns-a-record-ipv6'
+MODULE_NAME = "dns-a-record-ipv6"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

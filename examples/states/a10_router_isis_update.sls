@@ -1,3 +1,3 @@
-a10_router_isis_ex:
+router_isis:
   a10.update:
     - a10_obj: router_isis

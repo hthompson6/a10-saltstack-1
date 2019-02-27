@@ -1,3 +1,3 @@
-a10_cgnv6_ecmp_ex:
+cgnv6_ecmp:
   a10.update:
     - a10_obj: cgnv6_ecmp

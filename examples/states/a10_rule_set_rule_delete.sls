@@ -1,4 +1,4 @@
-a10_rule_set_rule_ex:
+rule_set_rule:
   a10.delete:
     - a10_obj: rule_set_rule 
-    - name: my_rule
+    - a10_name: my_rule

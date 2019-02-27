@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["aaa_rule_list","name","sampling_enable","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "aaa_rule_list",
+    "a10_name",
+    "sampling_enable",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'aaa-policy'
+MODULE_NAME = "aaa-policy"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/aaa-policy/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

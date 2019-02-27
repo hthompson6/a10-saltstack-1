@@ -1,3 +1,3 @@
-a10_axdebug_capture_ex:
+axdebug_capture:
   a10.update:
     - a10_obj: axdebug_capture

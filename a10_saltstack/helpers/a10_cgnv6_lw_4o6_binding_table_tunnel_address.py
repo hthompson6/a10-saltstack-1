@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ipv6_tunnel_addr","nat_address_list","user_tag",]
+AVAILABLE_PROPERTIES = [    "ipv6_tunnel_addr",
+    "nat_address_list",
+    "user_tag",
+    "binding_table_name",
+]
 
-MODULE_NAME = 'tunnel-address'
+MODULE_NAME = "tunnel-address"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

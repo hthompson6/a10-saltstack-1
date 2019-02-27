@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","logging","sampling_enable","template","uuid",]
+AVAILABLE_PROPERTIES = [    "action",
+    "logging",
+    "sampling_enable",
+    "template",
+    "uuid",
+]
 
-MODULE_NAME = 'dns'
+MODULE_NAME = "dns"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["custom1","custom2","custom3","disable_pool_based","imei","imsi","ip_based","msisdn","uuid","with_radius_attribute",]
+AVAILABLE_PROPERTIES = [    "custom1",
+    "custom2",
+    "custom3",
+    "disable_pool_based",
+    "imei",
+    "imsi",
+    "ip_based",
+    "msisdn",
+    "uuid",
+    "with_radius_attribute",
+]
 
-MODULE_NAME = 'quota-exceeded'
+MODULE_NAME = "quota-exceeded"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

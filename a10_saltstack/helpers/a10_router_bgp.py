@@ -15,9 +15,24 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["address_family","aggregate_address_list","as_number","auto_summary","bgp","distance_list","maximum_paths_value","neighbor","network","originate","redistribute","synchronization","timers","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "address_family",
+    "aggregate_address_list",
+    "as_number",
+    "auto_summary",
+    "bgp",
+    "distance_list",
+    "maximum_paths_value",
+    "neighbor",
+    "network",
+    "originate",
+    "redistribute",
+    "synchronization",
+    "timers",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'bgp'
+MODULE_NAME = "bgp"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

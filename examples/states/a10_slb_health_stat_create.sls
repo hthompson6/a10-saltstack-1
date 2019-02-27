@@ -1,3 +1,3 @@
-a10_slb_health_stat_ex:
+slb_health_stat:
   a10.create:
     - a10_obj: slb_health_stat

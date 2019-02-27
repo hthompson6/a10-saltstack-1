@@ -1,3 +1,3 @@
-a10_admin_ex:
+admin:
   a10.create:
     - a10_obj: admin

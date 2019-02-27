@@ -1,4 +1,4 @@
-a10_interface_tunnel_ip_ospf_ospf_ip_ex:
+interface_tunnel_ip_ospf_ospf_ip:
   a10.delete:
     - a10_obj: interface_tunnel_ip_ospf_ospf_ip 
     - ip_addr: 10.0.0.1

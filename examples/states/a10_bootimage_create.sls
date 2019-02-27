@@ -1,3 +1,3 @@
-a10_bootimage_ex:
+bootimage:
   a10.create:
     - a10_obj: bootimage

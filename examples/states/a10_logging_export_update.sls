@@ -1,3 +1,3 @@
-a10_logging_export_ex:
+logging_export:
   a10.update:
     - a10_obj: logging_export

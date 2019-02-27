@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","description","dst_file","file","file_handle","size",]
+AVAILABLE_PROPERTIES = [    "action",
+    "description",
+    "dst_file",
+    "file",
+    "file_handle",
+    "size",
+]
 
-MODULE_NAME = 'health-external'
+MODULE_NAME = "health-external"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,25 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["as_path","community","extcommunity","group","interface","ip","ipv6","local_preference","metric","origin","route_type","tag","uuid",]
+AVAILABLE_PROPERTIES = [    "as_path",
+    "community",
+    "extcommunity",
+    "group",
+    "interface",
+    "ip",
+    "ipv6",
+    "local_preference",
+    "metric",
+    "origin",
+    "route_type",
+    "tag",
+    "uuid",
+    "sequence",
+    "action",
+    "route_map_tag",
+]
 
-MODULE_NAME = 'match'
+MODULE_NAME = "match"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["fail_over_policy_template","priority","tracking_options","uuid",]
+AVAILABLE_PROPERTIES = [    "fail_over_policy_template",
+    "priority",
+    "tracking_options",
+    "uuid",
+    "vrid_val",
+]
 
-MODULE_NAME = 'blade-parameters'
+MODULE_NAME = "blade-parameters"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

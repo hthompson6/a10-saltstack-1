@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ifnum","ip","ipv6","isis","name","snmp_server","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "ifnum",
+    "ip",
+    "ipv6",
+    "isis",
+    "a10_name",
+    "snmp_server",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'loopback'
+MODULE_NAME = "loopback"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

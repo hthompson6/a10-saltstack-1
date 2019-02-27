@@ -15,9 +15,23 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["destination","disable","disable_log_by_destination","flow_timeout","name","protocol","record","resend_template","sample","sampling_enable","source_address","source_ip_use_mgmt","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "destination",
+    "disable",
+    "disable_log_by_destination",
+    "flow_timeout",
+    "a10_name",
+    "protocol",
+    "record",
+    "resend_template",
+    "sample",
+    "sampling_enable",
+    "source_address",
+    "source_ip_use_mgmt",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'monitor'
+MODULE_NAME = "monitor"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +48,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/netflow/monitor/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

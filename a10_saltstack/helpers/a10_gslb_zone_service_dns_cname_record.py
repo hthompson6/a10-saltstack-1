@@ -15,9 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["admin_preference","alias_name","as_backup","sampling_enable","uuid","weight",]
+AVAILABLE_PROPERTIES = [    "admin_preference",
+    "alias_name",
+    "as_backup",
+    "sampling_enable",
+    "uuid",
+    "weight",
+    "service_name",
+    "service_port",
+    "zone_name",
+]
 
-MODULE_NAME = 'dns-cname-record'
+MODULE_NAME = "dns-cname-record"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

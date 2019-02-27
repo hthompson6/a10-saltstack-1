@@ -1,3 +1,3 @@
-a10_debug_lacp_ex:
+debug_lacp:
   a10.update:
     - a10_obj: debug_lacp

@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ethertype","mac_list","protocol","uuid","value","vlan",]
+AVAILABLE_PROPERTIES = [    "ethertype",
+    "mac_list",
+    "protocol",
+    "uuid",
+    "value",
+    "vlan",
+    "action_direction",
+    "event_number",
+]
 
-MODULE_NAME = 'l2'
+MODULE_NAME = "l2"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

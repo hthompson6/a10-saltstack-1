@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["sha1_value",]
+AVAILABLE_PROPERTIES = [    "sha1_value",
+    "dblb_name",
+]
 
-MODULE_NAME = 'calc-sha1'
+MODULE_NAME = "calc-sha1"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

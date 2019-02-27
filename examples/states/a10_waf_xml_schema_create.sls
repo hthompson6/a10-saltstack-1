@@ -1,3 +1,3 @@
-a10_waf_xml_schema_ex:
+waf_xml_schema:
   a10.create:
     - a10_obj: waf_xml_schema

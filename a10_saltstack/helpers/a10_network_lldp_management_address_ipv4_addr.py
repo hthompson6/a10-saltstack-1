@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["interface_ipv4","ipv4","uuid",]
+AVAILABLE_PROPERTIES = [    "interface_ipv4",
+    "ipv4",
+    "uuid",
+]
 
-MODULE_NAME = 'ipv4-addr'
+MODULE_NAME = "ipv4-addr"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -15,9 +15,28 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["encrypted","enroll_timeout","health_check_interval","hsm_dev","password","password_string","protection","protection_module","protection_ocs","protection_softcard_hash","rfs_ip","rfs_port","sec_world","softcard","softhsm_enum","template_name","user_tag","uuid","worker",]
+AVAILABLE_PROPERTIES = [    "encrypted",
+    "enroll_timeout",
+    "health_check_interval",
+    "hsm_dev",
+    "password",
+    "password_string",
+    "protection",
+    "protection_module",
+    "protection_ocs",
+    "protection_softcard_hash",
+    "rfs_ip",
+    "rfs_port",
+    "sec_world",
+    "softcard",
+    "softhsm_enum",
+    "template_name",
+    "user_tag",
+    "uuid",
+    "worker",
+]
 
-MODULE_NAME = 'template'
+MODULE_NAME = "template"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

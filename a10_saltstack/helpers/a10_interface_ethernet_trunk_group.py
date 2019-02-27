@@ -15,9 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["admin_key","mode","port_priority","timeout","trunk_number","ntype","udld_timeout_cfg","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "admin_key",
+    "mode",
+    "port_priority",
+    "timeout",
+    "trunk_number",
+    "ntype",
+    "udld_timeout_cfg",
+    "user_tag",
+    "uuid",
+    "ethernet_ifnum",
+]
 
-MODULE_NAME = 'trunk-group'
+MODULE_NAME = "trunk-group"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

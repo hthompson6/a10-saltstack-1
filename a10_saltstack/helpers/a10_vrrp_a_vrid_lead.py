@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["partition","user_tag","uuid","vrid_lead_str",]
+AVAILABLE_PROPERTIES = [    "partition",
+    "user_tag",
+    "uuid",
+    "vrid_lead_str",
+]
 
-MODULE_NAME = 'vrid-lead'
+MODULE_NAME = "vrid-lead"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

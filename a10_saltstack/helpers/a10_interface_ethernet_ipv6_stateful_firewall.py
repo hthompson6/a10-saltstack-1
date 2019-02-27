@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["access_list","acl_name","class_list","inside","outside","uuid",]
+AVAILABLE_PROPERTIES = [    "access_list",
+    "acl_name",
+    "class_list",
+    "inside",
+    "outside",
+    "uuid",
+    "ethernet_ifnum",
+]
 
-MODULE_NAME = 'stateful-firewall'
+MODULE_NAME = "stateful-firewall"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,3 @@
-a10_interface_ve_ipv6_rip_ex:
+interface_ve_ipv6_rip:
   a10.create:
     - a10_obj: interface_ve_ipv6_rip

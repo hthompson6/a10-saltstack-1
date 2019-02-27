@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["file_name",]
+AVAILABLE_PROPERTIES = [    "file_name",
+]
 
-MODULE_NAME = 'local-uri-file'
+MODULE_NAME = "local-uri-file"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,3 @@
-a10_banner_ex:
+banner:
   a10.delete:
     - a10_obj: banner 

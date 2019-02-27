@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["peer","uuid",]
+AVAILABLE_PROPERTIES = [    "peer",
+    "uuid",
+]
 
-MODULE_NAME = 'peer-group'
+MODULE_NAME = "peer-group"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

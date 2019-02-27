@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","force_non_zero_ipv4_id","icmp","inside","tcp","user_quota_prefix_length","uuid",]
+AVAILABLE_PROPERTIES = [    "all",
+    "force_non_zero_ipv4_id",
+    "icmp",
+    "inside",
+    "tcp",
+    "user_quota_prefix_length",
+    "uuid",
+]
 
-MODULE_NAME = 'global'
+MODULE_NAME = "global"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

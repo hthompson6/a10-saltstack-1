@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["df_bit_value","uuid",]
+AVAILABLE_PROPERTIES = [    "df_bit_value",
+    "uuid",
+]
 
-MODULE_NAME = 'df-bit-transparency'
+MODULE_NAME = "df-bit-transparency"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

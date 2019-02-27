@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["local_ipv6","nexthop_ipv6","uuid",]
+AVAILABLE_PROPERTIES = [    "local_ipv6",
+    "nexthop_ipv6",
+    "uuid",
+]
 
-MODULE_NAME = 'bfd-ipv6'
+MODULE_NAME = "bfd-ipv6"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

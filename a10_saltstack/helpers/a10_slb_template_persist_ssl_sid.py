@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dont_honor_conn_rules","name","timeout","user_tag","uuid",]
+AVAILABLE_PROPERTIES = [    "dont_honor_conn_rules",
+    "a10_name",
+    "timeout",
+    "user_tag",
+    "uuid",
+]
 
-MODULE_NAME = 'ssl-sid'
+MODULE_NAME = "ssl-sid"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +39,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/persist/ssl-sid/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

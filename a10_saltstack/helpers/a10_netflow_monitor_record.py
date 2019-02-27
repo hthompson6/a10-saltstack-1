@@ -15,9 +15,30 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["dslite","nat44","nat64","netflow_v5","netflow_v5_ext","port_batch_dslite","port_batch_nat44","port_batch_nat64","port_batch_v2_dslite","port_batch_v2_nat44","port_batch_v2_nat64","port_mapping_dslite","port_mapping_nat44","port_mapping_nat64","sesn_event_dslite","sesn_event_fw4","sesn_event_fw6","sesn_event_nat44","sesn_event_nat64","uuid",]
+AVAILABLE_PROPERTIES = [    "dslite",
+    "nat44",
+    "nat64",
+    "netflow_v5",
+    "netflow_v5_ext",
+    "port_batch_dslite",
+    "port_batch_nat44",
+    "port_batch_nat64",
+    "port_batch_v2_dslite",
+    "port_batch_v2_nat44",
+    "port_batch_v2_nat64",
+    "port_mapping_dslite",
+    "port_mapping_nat44",
+    "port_mapping_nat64",
+    "sesn_event_dslite",
+    "sesn_event_fw4",
+    "sesn_event_fw6",
+    "sesn_event_nat44",
+    "sesn_event_nat64",
+    "uuid",
+    "monitor_name",
+]
 
-MODULE_NAME = 'record'
+MODULE_NAME = "record"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

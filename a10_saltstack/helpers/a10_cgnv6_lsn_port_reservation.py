@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["inside","inside_port_end","inside_port_start","nat","nat_port_end","nat_port_start","uuid",]
+AVAILABLE_PROPERTIES = [    "inside",
+    "inside_port_end",
+    "inside_port_start",
+    "nat",
+    "nat_port_end",
+    "nat_port_start",
+    "uuid",
+]
 
-MODULE_NAME = 'port-reservation'
+MODULE_NAME = "port-reservation"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

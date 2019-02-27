@@ -1,3 +1,3 @@
-a10_hd_monitor_ex:
+hd_monitor:
   a10.update:
     - a10_obj: hd_monitor

@@ -1,3 +1,3 @@
-a10_import_ex:
+import:
   a10.create:
     - a10_obj: import

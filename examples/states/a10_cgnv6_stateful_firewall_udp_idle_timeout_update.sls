@@ -1,4 +1,4 @@
-a10_cgnv6_stateful_firewall_udp_idle_timeout_ex:
+cgnv6_stateful_firewall_udp_idle_timeout:
   a10.update:
     - a10_obj: cgnv6_stateful_firewall_udp_idle_timeout
     - port: 1

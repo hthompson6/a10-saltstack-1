@@ -1,4 +1,4 @@
-a10_slb_template_dns_ex:
+slb_template_dns:
   a10.create:
     - a10_obj: slb_template_dns
-    - name: my_dns
+    - a10_name: my_dns

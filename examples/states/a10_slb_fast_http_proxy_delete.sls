@@ -1,3 +1,3 @@
-a10_slb_fast_http_proxy_ex:
+slb_fast_http_proxy:
   a10.delete:
     - a10_obj: slb_fast_http_proxy 

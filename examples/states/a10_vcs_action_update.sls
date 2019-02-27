@@ -1,3 +1,3 @@
-a10_vcs_action_ex:
+vcs_action:
   a10.update:
     - a10_obj: vcs_action

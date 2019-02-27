@@ -15,9 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action_url","background","enable_passcode","fail_msg_cfg","passcode_cfg","passcode_var","password_cfg","password_var","submit_text","username_cfg","username_var","uuid",]
+AVAILABLE_PROPERTIES = [    "action_url",
+    "background",
+    "enable_passcode",
+    "fail_msg_cfg",
+    "passcode_cfg",
+    "passcode_var",
+    "password_cfg",
+    "password_var",
+    "submit_text",
+    "username_cfg",
+    "username_var",
+    "uuid",
+    "portal_name",
+]
 
-MODULE_NAME = 'logon'
+MODULE_NAME = "logon"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

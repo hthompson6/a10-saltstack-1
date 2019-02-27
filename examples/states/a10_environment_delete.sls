@@ -1,3 +1,3 @@
-a10_environment_ex:
+environment:
   a10.delete:
     - a10_obj: environment 

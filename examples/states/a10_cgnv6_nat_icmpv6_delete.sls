@@ -1,3 +1,3 @@
-a10_cgnv6_nat_icmpv6_ex:
+cgnv6_nat_icmpv6:
   a10.delete:
     - a10_obj: cgnv6_nat_icmpv6 

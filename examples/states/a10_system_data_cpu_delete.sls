@@ -1,3 +1,3 @@
-a10_system_data_cpu_ex:
+system_data_cpu:
   a10.delete:
     - a10_obj: system_data_cpu 

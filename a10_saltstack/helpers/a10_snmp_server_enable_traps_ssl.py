@@ -15,9 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["server_certificate_error","uuid",]
+AVAILABLE_PROPERTIES = [    "server_certificate_error",
+    "uuid",
+]
 
-MODULE_NAME = 'ssl'
+MODULE_NAME = "ssl"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

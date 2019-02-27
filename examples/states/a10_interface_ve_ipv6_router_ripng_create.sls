@@ -1,3 +1,3 @@
-a10_interface_ve_ipv6_router_ripng_ex:
+interface_ve_ipv6_router_ripng:
   a10.create:
     - a10_obj: interface_ve_ipv6_router_ripng

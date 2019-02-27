@@ -1,3 +1,3 @@
-a10_gslb_template_snmp_ex:
+gslb_template_snmp:
   a10.create:
     - a10_obj: gslb_template_snmp

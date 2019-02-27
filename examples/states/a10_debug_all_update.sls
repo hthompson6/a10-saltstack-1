@@ -1,3 +1,3 @@
-a10_debug_all_ex:
+debug_all:
   a10.update:
     - a10_obj: debug_all

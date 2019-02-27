@@ -1,3 +1,3 @@
-a10_icap_http_ex:
+icap_http:
   a10.update:
     - a10_obj: icap_http

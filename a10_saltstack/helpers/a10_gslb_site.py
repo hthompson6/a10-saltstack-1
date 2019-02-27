@@ -15,9 +15,26 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["active_rdt","auto_map","bw_cost","controller","disable","easy_rdt","ip_server_list","limit","multiple_geo_locations","sampling_enable","site_name","slb_dev_list","template","threshold","user_tag","uuid","weight",]
+AVAILABLE_PROPERTIES = [    "active_rdt",
+    "auto_map",
+    "bw_cost",
+    "controller",
+    "disable",
+    "easy_rdt",
+    "ip_server_list",
+    "limit",
+    "multiple_geo_locations",
+    "sampling_enable",
+    "site_name",
+    "slb_dev_list",
+    "template",
+    "threshold",
+    "user_tag",
+    "uuid",
+    "weight",
+]
 
-MODULE_NAME = 'site'
+MODULE_NAME = "site"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -1,3 +1,3 @@
-a10_health_external_privileged_ex:
+health_external_privileged:
   a10.delete:
     - a10_obj: health_external_privileged 

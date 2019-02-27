@@ -15,9 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["device","glm_cert","glm_license","overwrite","remote_file","use_mgmt_port","web_category_license",]
+AVAILABLE_PROPERTIES = [    "device",
+    "glm_cert",
+    "glm_license",
+    "overwrite",
+    "remote_file",
+    "use_mgmt_port",
+    "web_category_license",
+]
 
-MODULE_NAME = 'to-device'
+MODULE_NAME = "to-device"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

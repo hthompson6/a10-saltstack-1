@@ -15,9 +15,10 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["reboot_flag",]
+AVAILABLE_PROPERTIES = [    "reboot_flag",
+]
 
-MODULE_NAME = 'system-reset'
+MODULE_NAME = "system-reset"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

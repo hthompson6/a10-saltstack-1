@@ -1,3 +1,3 @@
-a10_fw_alg_tftp_ex:
+fw_alg_tftp:
   a10.update:
     - a10_obj: fw_alg_tftp

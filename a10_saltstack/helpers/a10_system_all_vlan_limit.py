@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["bcast","ipmcast","mcast","unknown_ucast","uuid",]
+AVAILABLE_PROPERTIES = [    "bcast",
+    "ipmcast",
+    "mcast",
+    "unknown_ucast",
+    "uuid",
+]
 
-MODULE_NAME = 'all-vlan-limit'
+MODULE_NAME = "all-vlan-limit"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

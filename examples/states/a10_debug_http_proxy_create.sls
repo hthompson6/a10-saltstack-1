@@ -1,3 +1,3 @@
-a10_debug_http_proxy_ex:
+debug_http_proxy:
   a10.create:
     - a10_obj: debug_http_proxy

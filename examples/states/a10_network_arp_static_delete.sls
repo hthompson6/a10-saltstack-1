@@ -1,4 +1,4 @@
-a10_network_arp_static_ex:
+network_arp_static:
   a10.delete:
     - a10_obj: network_arp_static 
     - vlan: 2

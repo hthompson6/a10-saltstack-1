@@ -1,3 +1,3 @@
-a10_slb_template_policy_forward_policy_source_destination_class_list_ex:
+slb_template_policy_forward_policy_source_destination_class_list:
   a10.create:
     - a10_obj: slb_template_policy_forward_policy_source_destination_class_list

@@ -15,9 +15,25 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["ACK","BYE","CANCEL","INFO","INVITE","MESSAGE","method","NOTIFY","OPTIONS","PRACK","PUBLISH","REFER","REGISTER","SUBSCRIBE","UPDATE","uuid",]
+AVAILABLE_PROPERTIES = [    "ACK",
+    "BYE",
+    "CANCEL",
+    "INFO",
+    "INVITE",
+    "MESSAGE",
+    "method",
+    "NOTIFY",
+    "OPTIONS",
+    "PRACK",
+    "PUBLISH",
+    "REFER",
+    "REGISTER",
+    "SUBSCRIBE",
+    "UPDATE",
+    "uuid",
+]
 
-MODULE_NAME = 'sip'
+MODULE_NAME = "sip"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

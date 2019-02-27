@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["action","dst_file","file","file_handle","size","skip_backup",]
+AVAILABLE_PROPERTIES = [    "action",
+    "dst_file",
+    "file",
+    "file_handle",
+    "size",
+    "skip_backup",
+]
 
-MODULE_NAME = 'aflex'
+MODULE_NAME = "aflex"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

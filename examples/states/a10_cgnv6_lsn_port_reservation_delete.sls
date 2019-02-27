@@ -1,4 +1,4 @@
-a10_cgnv6_lsn_port_reservation_ex:
+cgnv6_lsn_port_reservation:
   a10.delete:
     - a10_obj: cgnv6_lsn_port_reservation 
     - inside_port_start: 1

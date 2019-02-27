@@ -1,4 +1,4 @@
-a10_slb_template_reqmod_icap_ex:
+slb_template_reqmod_icap:
   a10.create:
     - a10_obj: slb_template_reqmod_icap
-    - name: my_reqmod-icap
+    - a10_name: my_reqmod-icap

@@ -15,9 +15,40 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["add","bw_rate_limit","bw_rate_limit_acct","bw_rate_limit_duration","bw_rate_limit_no_logging","bw_rate_limit_resume","conn_limit","conn_limit_no_logging","conn_rate_limit","conn_rate_limit_no_logging","dns_query_interval","dynamic_server_prefix","every","extended_stats","health_check","health_check_disable","initial_slow_start","log_selection_failure","max_dynamic_server","min_ttl_ratio","name","rate_interval","resume","slow_start","spoofing_cache","stats_data_action","till","times","user_tag","uuid","weight",]
+AVAILABLE_PROPERTIES = [    "add",
+    "bw_rate_limit",
+    "bw_rate_limit_acct",
+    "bw_rate_limit_duration",
+    "bw_rate_limit_no_logging",
+    "bw_rate_limit_resume",
+    "conn_limit",
+    "conn_limit_no_logging",
+    "conn_rate_limit",
+    "conn_rate_limit_no_logging",
+    "dns_query_interval",
+    "dynamic_server_prefix",
+    "every",
+    "extended_stats",
+    "health_check",
+    "health_check_disable",
+    "initial_slow_start",
+    "log_selection_failure",
+    "max_dynamic_server",
+    "min_ttl_ratio",
+    "a10_name",
+    "rate_interval",
+    "resume",
+    "slow_start",
+    "spoofing_cache",
+    "stats_data_action",
+    "till",
+    "times",
+    "user_tag",
+    "uuid",
+    "weight",
+]
 
-MODULE_NAME = 'server'
+MODULE_NAME = "server"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -34,6 +65,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/server/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["name"]
+    f_dict["name"] = kwargs["a10_name"]
 
     return url_base.format(**f_dict)

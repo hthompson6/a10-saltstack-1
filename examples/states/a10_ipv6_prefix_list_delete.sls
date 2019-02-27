@@ -1,4 +1,4 @@
-a10_ipv6_prefix_list_ex:
+ipv6_prefix_list:
   a10.delete:
     - a10_obj: ipv6_prefix_list 
-    - name: my_prefix-list
+    - a10_name: my_prefix-list

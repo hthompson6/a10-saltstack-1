@@ -15,9 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = ["all","clear","sid",]
+AVAILABLE_PROPERTIES = [    "all",
+    "clear",
+    "sid",
+]
 
-MODULE_NAME = 'admin-session'
+MODULE_NAME = "admin-session"
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
