@@ -1,6 +1,5 @@
 cgnv6_lsn_port_reservation:
   a10.update:
-    - a10_obj: cgnv6_lsn_port_reservation
     - inside_port_start: 1
     - nat_port_start: 1
     - inside_port_end: 1

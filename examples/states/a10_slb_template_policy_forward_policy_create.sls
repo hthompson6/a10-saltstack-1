@@ -1,3 +1,2 @@
 slb_template_policy_forward_policy:
   a10.create:
-    - a10_obj: slb_template_policy_forward_policy
