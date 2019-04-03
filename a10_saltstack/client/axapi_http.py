@@ -21,8 +21,8 @@ import socket
 import sys
 import time
 
-from a10_saltstack import errors as ae
-from a10_saltstack import responses as acos_responses
+from a10_saltstack.client import errors as ae
+from a10_saltstack.client import responses as acos_responses
 import http.client as http_client
 
 

@@ -37,6 +37,11 @@ def get_props(a10_obj, **kwargs):
  
     return obj_module.AVAILABLE_PROPERTIES
 
+def get_props(a10_obj, **kwargs):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.REF_PROPERTIES
 
 def get_obj_type(a10_obj):
     obj_module = importlib.import_module(
