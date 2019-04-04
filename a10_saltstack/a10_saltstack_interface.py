@@ -68,6 +68,7 @@ def _build_json(title, avail_props, **kwargs):
 def parse_obj(a10_obj, op_type, client, **kwargs):
     forest_gen = ForestGen()
     forest_gen.parse_tree(**kwargs)
+
     for tree in parser.tree_list:
         url = a10_helper.get_url(tree['a10_obj'], op_type, **kwargs)
         avail_props = a10_helper.get_props(tree['a10_obj'], **kwargs)
@@ -87,7 +88,7 @@ def parse_obj(a10_obj, op_type, client, **kwargs):
         if payload[obj_type].get('a10-name'):
             payload[obj_type]["name"] = payload[obj_type]["a10-name"]
             del payload[obj_type]["a10-name"]
-        client = _get_client()
+
         post_result['post_resp'] = client.post(url, payload)
         post_result['result'] = True
 

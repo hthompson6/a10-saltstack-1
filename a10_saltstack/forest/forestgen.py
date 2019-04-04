@@ -16,6 +16,8 @@
 from collections import OrderedDict
 import importlib
 
+from a10_saltstack.helpers import helper as a10_helper
+
 
 class ForestGen(object):
 
@@ -23,7 +25,7 @@ class ForestGen(object):
         self.obj_list = []
 
     def parse_tree(self, tree_obj):
-        self.dfs_search(dfs_transform(tree_obj))
+        self.dfs_cut(dfs_transform(tree_obj), 0)
         self.trim_excess()
         return self.obj_list
 
@@ -37,7 +39,7 @@ class ForestGen(object):
             if len(vals) == 1 and type(vals[0]) != dict:
                 del self.obj_list[x]
 
-    def dfs_cut(self, obj):
+    def dfs_cut(self, obj, parent_index):
         '''
         This iterates over the tree and extracts
         refrence objects out of it
@@ -47,16 +49,19 @@ class ForestGen(object):
     
         if len(vals) == 1 and type(vals[0]) != dict:
             return
-    
+
+        obj.update({'parent-index': parent_index})
         self.obj_list.append(obj)
         inx = len(self.obj_list)-1
+        ref_props = a10_helper.get_ref_props(obj, **kwargs)
+
         for k,v in obj.items():
-            if str(k)[-5:] == '-list':
+            if str(k) in ref_props:
                 del_list.append(k)
                 v.update({'refrence-object': k})
-                dfs_search(v)
+                dfs_cut(v, inx)
             elif type(v) == dict:
-                dfs_cut(v)
+                dfs_cut(v, inx)
     
         for i in del_list:
             del self.obj_list[inx][i]
