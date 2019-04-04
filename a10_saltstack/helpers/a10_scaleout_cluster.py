@@ -26,10 +26,10 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "cluster-devices",
-    "device-groups",
-    "local-device",
-    "service-config",
+    "cluster_devices",
+    "device_groups",
+    "local_device",
+    "service_config",
 ]
 
 MODULE_NAME = "cluster"

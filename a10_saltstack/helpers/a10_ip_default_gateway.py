@@ -21,7 +21,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "gateway-ip",
+    "gateway_ip",
 ]
 
 MODULE_NAME = "default-gateway"

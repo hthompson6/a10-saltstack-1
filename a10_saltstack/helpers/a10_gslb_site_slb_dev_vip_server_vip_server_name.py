@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "vip-name",
+    "vip_name",
 ]
 
 MODULE_NAME = "vip-server-name"

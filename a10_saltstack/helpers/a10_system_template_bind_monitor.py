@@ -21,7 +21,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "template-monitor",
+    "template_monitor",
 ]
 
 MODULE_NAME = "monitor"

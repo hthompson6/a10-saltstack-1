@@ -35,8 +35,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "bind-tunnel",
-    "ike-gateway",
+    "bind_tunnel",
+    "ike_gateway",
 ]
 
 MODULE_NAME = "ipsec"

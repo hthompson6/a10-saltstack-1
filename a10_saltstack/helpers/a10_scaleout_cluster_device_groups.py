@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "device-group-list",
+    "device_group_list",
 ]
 
 MODULE_NAME = "device-groups"

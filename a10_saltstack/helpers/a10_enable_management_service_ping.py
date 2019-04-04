@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "acl-v4-list",
-    "acl-v6-list",
+    "acl_v4_list",
+    "acl_v6_list",
 ]
 
 MODULE_NAME = "ping"

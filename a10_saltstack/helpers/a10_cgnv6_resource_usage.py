@@ -25,7 +25,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "stateless-entries",
+    "stateless_entries",
 ]
 
 MODULE_NAME = "resource-usage"

@@ -46,7 +46,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "direct-service-group",
+    "direct_service_group",
 ]
 
 MODULE_NAME = "lid"

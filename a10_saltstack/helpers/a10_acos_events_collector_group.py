@@ -29,8 +29,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check",
-    "log-server-list",
+    "health_check",
+    "log_server_list",
 ]
 
 MODULE_NAME = "collector-group"

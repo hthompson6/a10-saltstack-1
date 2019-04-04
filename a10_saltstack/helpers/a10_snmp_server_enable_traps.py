@@ -38,12 +38,12 @@ REF_PROPERTIES = [
     "network",
     "routing",
     "slb",
-    "slb-change",
+    "slb_change",
     "snmp",
     "ssl",
     "system",
     "vcs",
-    "vrrp-a",
+    "vrrp_a",
 ]
 
 MODULE_NAME = "traps"

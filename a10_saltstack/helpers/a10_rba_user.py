@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "partition-list",
+    "partition_list",
 ]
 
 MODULE_NAME = "user"

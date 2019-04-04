@@ -27,7 +27,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "acl-name",
+    "acl_name",
 ]
 
 MODULE_NAME = "acl-v6"

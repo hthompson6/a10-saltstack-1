@@ -30,7 +30,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "proxy-server",
+    "proxy_server",
     "send",
 ]
 

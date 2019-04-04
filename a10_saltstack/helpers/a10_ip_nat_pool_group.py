@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "member-list",
+    "member_list",
     "vrid",
 ]
 

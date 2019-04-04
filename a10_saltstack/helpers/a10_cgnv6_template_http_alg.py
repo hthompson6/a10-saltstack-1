@@ -34,7 +34,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "radius-sg",
+    "radius_sg",
 ]
 
 MODULE_NAME = "http-alg"

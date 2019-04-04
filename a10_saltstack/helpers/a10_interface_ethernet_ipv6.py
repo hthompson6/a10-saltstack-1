@@ -35,7 +35,7 @@ REF_PROPERTIES = [
     "ospf",
     "rip",
     "router",
-    "stateful-firewall",
+    "stateful_firewall",
 ]
 
 MODULE_NAME = "ipv6"

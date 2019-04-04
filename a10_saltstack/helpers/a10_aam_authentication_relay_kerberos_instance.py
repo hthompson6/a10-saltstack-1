@@ -31,7 +31,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "kerberos-kdc-service-group",
+    "kerberos_kdc_service_group",
 ]
 
 MODULE_NAME = "instance"

@@ -39,8 +39,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "downloads-external-inspect",
-    "uploads-external-inspect",
+    "downloads_external_inspect",
+    "uploads_external_inspect",
 ]
 
 MODULE_NAME = "template"

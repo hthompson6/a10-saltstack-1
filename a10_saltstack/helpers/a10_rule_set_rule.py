@@ -61,13 +61,13 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "dst-class-list",
-    "dst-threat-list",
-    "dst-zone",
-    "move-rule",
-    "src-class-list",
-    "src-threat-list",
-    "src-zone",
+    "dst_class_list",
+    "dst_threat_list",
+    "dst_zone",
+    "move_rule",
+    "src_class_list",
+    "src_threat_list",
+    "src_zone",
 ]
 
 MODULE_NAME = "rule"

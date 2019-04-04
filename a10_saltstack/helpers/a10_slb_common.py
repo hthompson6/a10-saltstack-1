@@ -80,7 +80,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "conn-rate-limit",
+    "conn_rate_limit",
 ]
 
 MODULE_NAME = "common"

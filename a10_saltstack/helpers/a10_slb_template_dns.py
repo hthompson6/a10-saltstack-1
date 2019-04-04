@@ -35,8 +35,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "class-list",
-    "dnssec-service-group",
+    "class_list",
+    "dnssec_service_group",
     "forward",
 ]
 

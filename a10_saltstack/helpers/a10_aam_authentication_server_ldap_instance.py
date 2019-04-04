@@ -45,8 +45,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check-string",
-    "port-hm",
+    "health_check_string",
+    "port_hm",
 ]
 
 MODULE_NAME = "instance"

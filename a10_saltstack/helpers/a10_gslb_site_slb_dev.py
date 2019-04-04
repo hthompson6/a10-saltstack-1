@@ -36,7 +36,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "vip-server",
+    "vip_server",
 ]
 
 MODULE_NAME = "slb-dev"

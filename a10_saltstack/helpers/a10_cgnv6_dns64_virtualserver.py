@@ -32,8 +32,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "port-list",
-    "template-policy",
+    "port_list",
+    "template_policy",
 ]
 
 MODULE_NAME = "dns64-virtualserver"

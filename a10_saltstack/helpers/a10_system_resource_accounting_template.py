@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "app-resources",
-    "network-resources",
-    "system-resources",
+    "app_resources",
+    "network_resources",
+    "system_resources",
 ]
 
 MODULE_NAME = "template"

@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "acl-id",
+    "acl_id",
     "pool",
 ]
 

@@ -61,8 +61,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check",
-    "source-nat",
+    "health_check",
+    "source_nat",
 ]
 
 MODULE_NAME = "port"

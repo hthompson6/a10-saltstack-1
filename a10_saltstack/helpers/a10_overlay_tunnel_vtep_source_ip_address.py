@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "vni-list",
+    "vni_list",
 ]
 
 MODULE_NAME = "source-ip-address"

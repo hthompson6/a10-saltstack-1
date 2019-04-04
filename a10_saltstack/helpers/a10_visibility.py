@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "anomaly-detection",
-    "monitor-list",
-    "monitored-entity",
+    "anomaly_detection",
+    "monitor_list",
+    "monitored_entity",
     "reporting",
 ]
 

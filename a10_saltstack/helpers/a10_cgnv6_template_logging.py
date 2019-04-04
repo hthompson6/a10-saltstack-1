@@ -43,8 +43,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "disable-log-by-destination",
-    "source-address",
+    "disable_log_by_destination",
+    "source_address",
 ]
 
 MODULE_NAME = "logging"

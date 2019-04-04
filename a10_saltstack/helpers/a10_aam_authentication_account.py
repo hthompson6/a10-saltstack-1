@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "kerberos-spn-list",
+    "kerberos_spn_list",
 ]
 
 MODULE_NAME = "account"

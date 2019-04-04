@@ -34,8 +34,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "category-list-list",
-    "proxy-server",
+    "category_list_list",
+    "proxy_server",
 ]
 
 MODULE_NAME = "web-category"

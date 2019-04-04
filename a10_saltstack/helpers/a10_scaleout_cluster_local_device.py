@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "l2-redirect",
+    "l2_redirect",
 ]
 
 MODULE_NAME = "local-device"

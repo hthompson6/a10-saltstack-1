@@ -28,11 +28,11 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "check-now",
+    "check_now",
     "checknow",
-    "config-list",
+    "config_list",
     "info",
-    "proxy-server",
+    "proxy_server",
     "reset",
     "revert",
 ]

@@ -34,8 +34,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "authentication-template",
-    "authorize-policy",
+    "authentication_template",
+    "authorize_policy",
 ]
 
 MODULE_NAME = "aaa-rule"

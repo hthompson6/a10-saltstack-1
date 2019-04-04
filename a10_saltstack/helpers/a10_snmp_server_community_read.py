@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "oid-list",
+    "oid_list",
 ]
 
 MODULE_NAME = "read"

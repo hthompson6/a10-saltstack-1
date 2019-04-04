@@ -45,12 +45,12 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "account",
-    "accounting-server",
-    "accounting-service-group",
+    "accounting_server",
+    "accounting_service_group",
     "logon",
     "relay",
     "server",
-    "service-group",
+    "service_group",
 ]
 
 MODULE_NAME = "template"

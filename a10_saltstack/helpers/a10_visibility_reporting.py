@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "notification-template-list",
-    "reporting-db",
+    "notification_template_list",
+    "reporting_db",
 ]
 
 MODULE_NAME = "reporting"

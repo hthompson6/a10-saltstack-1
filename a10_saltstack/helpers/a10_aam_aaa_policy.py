@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "aaa-rule-list",
+    "aaa_rule_list",
 ]
 
 MODULE_NAME = "aaa-policy"

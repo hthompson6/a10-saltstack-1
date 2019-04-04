@@ -29,7 +29,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "service-group",
+    "service_group",
 ]
 
 MODULE_NAME = "logging"

@@ -61,10 +61,10 @@ REF_PROPERTIES = [
     "ipv6",
     "isis",
     "lldp",
-    "lw-4o6",
+    "lw_4o6",
     "map",
     "nptv6",
-    "trunk-group-list",
+    "trunk_group_list",
 ]
 
 MODULE_NAME = "ethernet"

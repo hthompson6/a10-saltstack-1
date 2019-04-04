@@ -28,8 +28,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check",
-    "member-list",
+    "health_check",
+    "member_list",
 ]
 
 MODULE_NAME = "service-group"

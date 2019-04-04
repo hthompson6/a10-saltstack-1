@@ -28,10 +28,10 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "common",
-    "event-list",
-    "run-test",
-    "state-list",
-    "template-list",
+    "event_list",
+    "run_test",
+    "state_list",
+    "template_list",
 ]
 
 MODULE_NAME = "sys-ut"

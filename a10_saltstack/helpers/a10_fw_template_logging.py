@@ -32,8 +32,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "service-group",
-    "source-address",
+    "service_group",
+    "source_address",
 ]
 
 MODULE_NAME = "logging"

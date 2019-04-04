@@ -33,10 +33,10 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "distribute-list",
-    "offset-list",
+    "distribute_list",
+    "offset_list",
     "redistribute",
-    "route-map",
+    "route_map",
 ]
 
 MODULE_NAME = "rip"

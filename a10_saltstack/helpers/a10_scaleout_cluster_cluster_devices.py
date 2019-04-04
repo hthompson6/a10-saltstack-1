@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "device-id-list",
+    "device_id_list",
 ]
 
 MODULE_NAME = "cluster-devices"

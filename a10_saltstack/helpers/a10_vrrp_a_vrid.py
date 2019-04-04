@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "blade-parameters",
+    "blade_parameters",
 ]
 
 MODULE_NAME = "vrid"

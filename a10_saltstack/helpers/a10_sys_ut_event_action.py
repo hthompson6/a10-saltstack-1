@@ -31,7 +31,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "ignore-validation",
+    "ignore_validation",
     "l1",
     "l2",
     "l3",

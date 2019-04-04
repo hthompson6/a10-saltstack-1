@@ -31,7 +31,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check-string",
+    "health_check_string",
 ]
 
 MODULE_NAME = "instance"

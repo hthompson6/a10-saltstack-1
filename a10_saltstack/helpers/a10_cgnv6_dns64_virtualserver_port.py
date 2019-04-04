@@ -33,9 +33,9 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "pool",
-    "service-group",
-    "template-dns",
-    "template-policy",
+    "service_group",
+    "template_dns",
+    "template_policy",
 ]
 
 MODULE_NAME = "port"

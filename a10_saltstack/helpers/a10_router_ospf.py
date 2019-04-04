@@ -45,8 +45,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "area-list",
-    "default-information",
+    "area_list",
+    "default_information",
     "redistribute",
 ]
 

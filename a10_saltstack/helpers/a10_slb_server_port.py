@@ -42,9 +42,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check",
-    "template-port",
-    "template-server-ssl",
+    "health_check",
+    "template_port",
+    "template_server_ssl",
 ]
 
 MODULE_NAME = "port"

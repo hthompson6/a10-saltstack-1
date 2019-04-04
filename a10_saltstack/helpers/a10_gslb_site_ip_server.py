@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "ip-server-name",
+    "ip_server_name",
 ]
 
 MODULE_NAME = "ip-server"

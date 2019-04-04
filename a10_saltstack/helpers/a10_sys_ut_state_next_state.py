@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "case-list",
+    "case_list",
 ]
 
 MODULE_NAME = "next-state"

@@ -21,7 +21,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "ipv6-default-gateway",
+    "ipv6_default_gateway",
 ]
 
 MODULE_NAME = "default-gateway"

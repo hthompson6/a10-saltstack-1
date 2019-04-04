@@ -49,9 +49,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "acl-id",
-    "acl-name-value",
-    "service-group",
+    "acl_id",
+    "acl_name_value",
+    "service_group",
 ]
 
 MODULE_NAME = "sip"

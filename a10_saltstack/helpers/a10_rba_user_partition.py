@@ -25,7 +25,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "partition-name",
+    "partition_name",
 ]
 
 MODULE_NAME = "partition"

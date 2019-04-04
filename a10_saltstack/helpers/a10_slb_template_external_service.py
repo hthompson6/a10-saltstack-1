@@ -31,9 +31,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "service-group",
-    "source-ip",
-    "tcp-proxy",
+    "service_group",
+    "source_ip",
+    "tcp_proxy",
 ]
 
 MODULE_NAME = "external-service"

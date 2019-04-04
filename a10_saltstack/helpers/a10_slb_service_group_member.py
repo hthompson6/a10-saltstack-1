@@ -32,7 +32,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "member-template",
+    "member_template",
     "name",
     "port",
 ]

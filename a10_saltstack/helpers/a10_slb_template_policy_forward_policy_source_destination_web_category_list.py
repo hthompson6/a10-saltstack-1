@@ -27,7 +27,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "web-category-list",
+    "web_category_list",
 ]
 
 MODULE_NAME = "web-category-list"

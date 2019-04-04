@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "lid-list",
+    "lid_list",
 ]
 
 MODULE_NAME = "class-list"

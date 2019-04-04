@@ -35,10 +35,10 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "error",
-    "ike-gateway-list",
-    "ike-stats-global",
-    "ipsec-list",
-    "revocation-list",
+    "ike_gateway_list",
+    "ike_stats_global",
+    "ipsec_list",
+    "revocation_list",
 ]
 
 MODULE_NAME = "vpn"

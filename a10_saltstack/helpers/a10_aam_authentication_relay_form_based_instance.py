@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "request-uri-list",
+    "request_uri_list",
 ]
 
 MODULE_NAME = "instance"

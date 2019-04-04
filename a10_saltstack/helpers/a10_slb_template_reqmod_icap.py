@@ -36,10 +36,10 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "logging",
-    "server-ssl",
-    "service-group",
-    "source-ip",
-    "tcp-proxy",
+    "server_ssl",
+    "service_group",
+    "source_ip",
+    "tcp_proxy",
 ]
 
 MODULE_NAME = "reqmod-icap"

@@ -41,8 +41,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "origin-host",
-    "service-group-name",
+    "origin_host",
+    "service_group_name",
 ]
 
 MODULE_NAME = "diameter"

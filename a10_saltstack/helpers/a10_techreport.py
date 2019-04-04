@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "interval",
-    "priority-partition-list",
+    "priority_partition_list",
 ]
 
 MODULE_NAME = "techreport"

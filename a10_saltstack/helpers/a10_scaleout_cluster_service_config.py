@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "template-list",
+    "template_list",
 ]
 
 MODULE_NAME = "service-config"

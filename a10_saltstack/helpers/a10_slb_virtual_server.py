@@ -45,14 +45,14 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "acl-id",
-    "acl-name",
-    "ipv6-acl",
-    "migrate-vip",
-    "port-list",
-    "template-logging",
-    "template-policy",
-    "template-virtual-server",
+    "acl_id",
+    "acl_name",
+    "ipv6_acl",
+    "migrate_vip",
+    "port_list",
+    "template_logging",
+    "template_policy",
+    "template_virtual_server",
 ]
 
 MODULE_NAME = "virtual-server"

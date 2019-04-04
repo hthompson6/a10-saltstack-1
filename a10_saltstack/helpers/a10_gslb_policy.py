@@ -58,15 +58,15 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "active-rdt",
-    "auto-map",
+    "active_rdt",
+    "auto_map",
     "capacity",
-    "connection-load",
+    "connection_load",
     "dns",
     "edns",
-    "geo-location-list",
-    "geo-location-match",
-    "ip-list",
+    "geo_location_list",
+    "geo_location_match",
+    "ip_list",
 ]
 
 MODULE_NAME = "policy"

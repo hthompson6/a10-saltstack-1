@@ -31,7 +31,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check",
+    "health_check",
 ]
 
 MODULE_NAME = "port"

@@ -21,7 +21,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "template-policy",
+    "template_policy",
 ]
 
 MODULE_NAME = "template"

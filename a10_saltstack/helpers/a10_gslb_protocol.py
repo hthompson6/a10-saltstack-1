@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "enable-list",
+    "enable_list",
     "limit",
 ]
 

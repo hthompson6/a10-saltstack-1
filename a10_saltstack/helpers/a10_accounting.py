@@ -25,7 +25,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "exec",
+    "nexec",
 ]
 
 MODULE_NAME = "accounting"

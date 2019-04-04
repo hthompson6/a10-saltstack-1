@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "interface",
-    "local-zone-cfg",
+    "local_zone_cfg",
     "vlan",
 ]
 

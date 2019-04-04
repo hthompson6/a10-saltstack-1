@@ -27,7 +27,7 @@ AVAILABLE_PROPERTIES = [
 REF_PROPERTIES = [
     "certificate",
     "generate",
-    "private-key",
+    "private_key",
     "regenerate",
 ]
 

@@ -30,7 +30,7 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "destination",
-    "match-authorize-policy",
+    "match_authorize_policy",
 ]
 
 MODULE_NAME = "source"

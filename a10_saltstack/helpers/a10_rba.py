@@ -24,9 +24,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "group-list",
-    "role-list",
-    "user-list",
+    "group_list",
+    "role_list",
+    "user_list",
 ]
 
 MODULE_NAME = "rba"

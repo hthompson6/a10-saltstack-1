@@ -27,10 +27,10 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "change-password",
+    "change_password",
     "logon",
-    "logon-fail",
-    "notify-change-password",
+    "logon_fail",
+    "notify_change_password",
 ]
 
 MODULE_NAME = "portal"

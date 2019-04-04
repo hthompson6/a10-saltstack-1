@@ -34,11 +34,11 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "destination",
-    "disable-log-by-destination",
+    "disable_log_by_destination",
     "record",
-    "resend-template",
+    "resend_template",
     "sample",
-    "source-address",
+    "source_address",
 ]
 
 MODULE_NAME = "monitor"

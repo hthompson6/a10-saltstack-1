@@ -28,9 +28,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "attribute-list",
+    "attribute_list",
     "server",
-    "service-group",
+    "service_group",
 ]
 
 MODULE_NAME = "policy"

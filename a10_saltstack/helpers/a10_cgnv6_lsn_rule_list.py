@@ -29,10 +29,10 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "default",
-    "domain-ip",
-    "domain-list-name-list",
-    "domain-name-list",
-    "ip-list",
+    "domain_ip",
+    "domain_list_name_list",
+    "domain_name_list",
+    "ip_list",
 ]
 
 MODULE_NAME = "lsn-rule-list"

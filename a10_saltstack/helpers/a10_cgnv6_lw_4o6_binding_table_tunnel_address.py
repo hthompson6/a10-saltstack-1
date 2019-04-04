@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "nat-address-list",
+    "nat_address_list",
 ]
 
 MODULE_NAME = "tunnel-address"

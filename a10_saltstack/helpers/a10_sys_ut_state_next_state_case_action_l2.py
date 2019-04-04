@@ -29,7 +29,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "mac-list",
+    "mac_list",
 ]
 
 MODULE_NAME = "l2"

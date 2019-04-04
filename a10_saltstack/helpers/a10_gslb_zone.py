@@ -32,9 +32,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "dns-mx-record-list",
-    "dns-ns-record-list",
-    "service-list",
+    "dns_mx_record_list",
+    "dns_ns_record_list",
+    "service_list",
 ]
 
 MODULE_NAME = "zone"

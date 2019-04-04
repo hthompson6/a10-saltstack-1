@@ -33,10 +33,10 @@ AVAILABLE_PROPERTIES = [
 REF_PROPERTIES = [
     "app",
     "application",
-    "rule-list",
-    "rules-by-zone",
+    "rule_list",
+    "rules_by_zone",
     "tag",
-    "track-app-rule-list",
+    "track_app_rule_list",
 ]
 
 MODULE_NAME = "rule-set"

@@ -46,7 +46,7 @@ REF_PROPERTIES = [
     "ip",
     "ipv6",
     "isis",
-    "lw-4o6",
+    "lw_4o6",
     "map",
     "nptv6",
 ]

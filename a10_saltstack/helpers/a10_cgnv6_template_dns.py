@@ -30,7 +30,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "class-list",
+    "class_list",
     "dns64",
 ]
 

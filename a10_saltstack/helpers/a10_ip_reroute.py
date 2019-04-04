@@ -21,7 +21,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "suppress-protocols",
+    "suppress_protocols",
 ]
 
 MODULE_NAME = "reroute"

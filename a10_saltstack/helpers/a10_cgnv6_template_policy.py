@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "class-list",
+    "class_list",
 ]
 
 MODULE_NAME = "policy"

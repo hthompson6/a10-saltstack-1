@@ -141,15 +141,15 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "auth-sg",
-    "authen-name",
-    "exception-class-list",
-    "fp-cert-fetch-natpool-name",
-    "non-ssl-bypass-service-group",
-    "ocspst-sg",
-    "ocspst-srvr",
-    "sslv2-bypass-service-group",
-    "template-cipher",
+    "auth_sg",
+    "authen_name",
+    "exception_class_list",
+    "fp_cert_fetch_natpool_name",
+    "non_ssl_bypass_service_group",
+    "ocspst_sg",
+    "ocspst_srvr",
+    "sslv2_bypass_service_group",
+    "template_cipher",
 ]
 
 MODULE_NAME = "client-ssl"

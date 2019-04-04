@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "name",
-    "session-aging",
+    "session_aging",
 ]
 
 MODULE_NAME = "active-rule-set"

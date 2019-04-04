@@ -33,7 +33,7 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "capture",
-    "filter-config",
+    "filter_config",
 ]
 
 MODULE_NAME = "axdebug"

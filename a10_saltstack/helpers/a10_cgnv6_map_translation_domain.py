@@ -29,9 +29,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "basic-mapping-rule",
-    "default-mapping-rule",
-    "health-check-gateway",
+    "basic_mapping_rule",
+    "default_mapping_rule",
+    "health_check_gateway",
 ]
 
 MODULE_NAME = "domain"

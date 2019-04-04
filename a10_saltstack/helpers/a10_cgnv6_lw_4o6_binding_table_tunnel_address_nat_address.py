@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "port-range-list",
+    "port_range_list",
 ]
 
 MODULE_NAME = "nat-address"

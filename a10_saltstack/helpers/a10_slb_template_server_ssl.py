@@ -48,7 +48,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "cipher-template",
+    "cipher_template",
 ]
 
 MODULE_NAME = "server-ssl"

@@ -69,12 +69,12 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check",
-    "member-list",
+    "health_check",
+    "member_list",
     "reset",
-    "template-policy",
-    "template-port",
-    "template-server",
+    "template_policy",
+    "template_port",
+    "template_server",
 ]
 
 MODULE_NAME = "service-group"

@@ -32,8 +32,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "health-check",
-    "port-list",
+    "health_check",
+    "port_list",
 ]
 
 MODULE_NAME = "service-ip"

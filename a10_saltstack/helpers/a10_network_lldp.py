@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "management-address",
+    "management_address",
 ]
 
 MODULE_NAME = "lldp"

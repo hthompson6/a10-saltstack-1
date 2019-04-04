@@ -32,7 +32,7 @@ AVAILABLE_PROPERTIES = [
 REF_PROPERTIES = [
     "ethernet",
     "ve",
-    "virtual-server",
+    "virtual_server",
 ]
 
 MODULE_NAME = "ip"

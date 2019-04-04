@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "fail-over-policy-template",
-    "tracking-options",
+    "fail_over_policy_template",
+    "tracking_options",
 ]
 
 MODULE_NAME = "blade-parameters"

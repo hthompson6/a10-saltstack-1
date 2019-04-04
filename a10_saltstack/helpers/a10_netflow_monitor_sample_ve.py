@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "ve-num",
+    "ve_num",
 ]
 
 MODULE_NAME = "ve"

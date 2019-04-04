@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "instance-list",
+    "instance_list",
 ]
 
 MODULE_NAME = "radius"

@@ -26,8 +26,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "action-list",
-    "source-list",
+    "action_list",
+    "source_list",
 ]
 
 MODULE_NAME = "forward-policy"

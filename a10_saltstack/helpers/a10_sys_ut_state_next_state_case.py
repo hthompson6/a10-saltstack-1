@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "action-list",
+    "action_list",
 ]
 
 MODULE_NAME = "case"

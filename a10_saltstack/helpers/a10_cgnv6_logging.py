@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "nat-quota-exceeded",
-    "nat-resource-exhausted",
+    "nat_quota_exceeded",
+    "nat_resource_exhausted",
 ]
 
 MODULE_NAME = "logging"

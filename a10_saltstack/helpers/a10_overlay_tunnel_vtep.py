@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "destination-ip-address-list",
-    "host-list",
-    "source-ip-address",
+    "destination_ip_address_list",
+    "host_list",
+    "source_ip_address",
 ]
 
 MODULE_NAME = "vtep"

@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "tunnel-address-list",
+    "tunnel_address_list",
 ]
 
 MODULE_NAME = "binding-table"

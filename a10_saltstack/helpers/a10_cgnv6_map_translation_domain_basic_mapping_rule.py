@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "prefix-rule-list",
+    "prefix_rule_list",
 ]
 
 MODULE_NAME = "basic-mapping-rule"

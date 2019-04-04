@@ -25,7 +25,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "calc-sha1",
+    "calc_sha1",
 ]
 
 MODULE_NAME = "dblb"

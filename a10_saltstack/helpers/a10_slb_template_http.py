@@ -73,7 +73,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "bypass-sg",
+    "bypass_sg",
 ]
 
 MODULE_NAME = "http"

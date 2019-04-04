@@ -29,7 +29,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "gtp-filter-list",
+    "gtp_filter_list",
 ]
 
 MODULE_NAME = "gtp"

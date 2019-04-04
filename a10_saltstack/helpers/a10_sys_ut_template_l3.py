@@ -27,7 +27,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "ip-list",
+    "ip_list",
 ]
 
 MODULE_NAME = "l3"

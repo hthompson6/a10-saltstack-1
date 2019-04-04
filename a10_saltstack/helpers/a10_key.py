@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "key-list",
+    "key_list",
 ]
 
 MODULE_NAME = "key"

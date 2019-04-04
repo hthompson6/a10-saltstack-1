@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "service-timeout-list",
+    "service_timeout_list",
 ]
 
 MODULE_NAME = "translation"

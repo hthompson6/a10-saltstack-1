@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "list-name",
+    "list_name",
     "pool",
 ]
 

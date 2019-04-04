@@ -34,7 +34,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "address-family",
+    "address_family",
     "neighbor",
     "network",
     "redistribute",

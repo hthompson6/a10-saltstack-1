@@ -41,16 +41,16 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "dns-a-record",
-    "dns-cname-record-list",
-    "dns-mx-record-list",
-    "dns-naptr-record-list",
-    "dns-ns-record-list",
-    "dns-ptr-record-list",
-    "dns-record-list",
-    "dns-srv-record-list",
-    "dns-txt-record-list",
-    "geo-location-list",
+    "dns_a_record",
+    "dns_cname_record_list",
+    "dns_mx_record_list",
+    "dns_naptr_record_list",
+    "dns_ns_record_list",
+    "dns_ptr_record_list",
+    "dns_record_list",
+    "dns_srv_record_list",
+    "dns_txt_record_list",
+    "geo_location_list",
 ]
 
 MODULE_NAME = "service"

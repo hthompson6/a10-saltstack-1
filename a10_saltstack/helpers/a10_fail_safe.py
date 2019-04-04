@@ -30,7 +30,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "disable-failsafe",
+    "disable_failsafe",
 ]
 
 MODULE_NAME = "fail-safe"

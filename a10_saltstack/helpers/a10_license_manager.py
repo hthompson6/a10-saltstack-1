@@ -31,9 +31,9 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "connect",
-    "host-list",
+    "host_list",
     "overage",
-    "reminder-list",
+    "reminder_list",
 ]
 
 MODULE_NAME = "license-manager"

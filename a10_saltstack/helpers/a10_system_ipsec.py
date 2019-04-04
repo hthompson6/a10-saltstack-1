@@ -24,7 +24,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "fpga-decrypt",
+    "fpga_decrypt",
 ]
 
 MODULE_NAME = "ipsec"

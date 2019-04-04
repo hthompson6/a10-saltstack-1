@@ -23,7 +23,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "next-state-list",
+    "next_state_list",
 ]
 
 MODULE_NAME = "state"

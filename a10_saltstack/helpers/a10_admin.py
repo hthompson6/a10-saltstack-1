@@ -37,7 +37,7 @@ AVAILABLE_PROPERTIES = [
 REF_PROPERTIES = [
     "access",
     "password",
-    "ssh-pubkey",
+    "ssh_pubkey",
 ]
 
 MODULE_NAME = "admin"

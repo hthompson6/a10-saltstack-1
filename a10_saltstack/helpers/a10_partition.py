@@ -26,7 +26,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "shared-vlan",
+    "shared_vlan",
     "template",
 ]
 

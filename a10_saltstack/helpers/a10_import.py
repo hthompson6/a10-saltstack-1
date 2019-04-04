@@ -61,11 +61,11 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "auth-saml-idp",
-    "health-external",
-    "health-postfile",
+    "auth_saml_idp",
+    "health_external",
+    "health_postfile",
     "store",
-    "to-device",
+    "to_device",
 ]
 
 MODULE_NAME = "import"

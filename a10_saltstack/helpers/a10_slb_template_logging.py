@@ -33,7 +33,7 @@ AVAILABLE_PROPERTIES = [
 
 REF_PROPERTIES = [
     "pool",
-    "service-group",
+    "service_group",
 ]
 
 MODULE_NAME = "logging"

@@ -22,7 +22,7 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "vrid-list",
+    "vrid_list",
 ]
 
 MODULE_NAME = "restart-port-list"

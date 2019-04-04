@@ -28,9 +28,9 @@ AVAILABLE_PROPERTIES = [
 REF_PROPERTIES = [
     "dnskey",
     "ds",
-    "key-rollover",
-    "sign-zone-now",
-    "template-list",
+    "key_rollover",
+    "sign_zone_now",
+    "template_list",
 ]
 
 MODULE_NAME = "dnssec"

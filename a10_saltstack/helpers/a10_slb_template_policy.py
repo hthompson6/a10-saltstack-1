@@ -37,8 +37,8 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "class-list",
-    "forward-policy",
+    "class_list",
+    "forward_policy",
 ]
 
 MODULE_NAME = "policy"

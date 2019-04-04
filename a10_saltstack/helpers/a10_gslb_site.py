@@ -36,10 +36,10 @@ AVAILABLE_PROPERTIES = [
 ]
 
 REF_PROPERTIES = [
-    "active-rdt",
-    "easy-rdt",
-    "ip-server-list",
-    "slb-dev-list",
+    "active_rdt",
+    "easy_rdt",
+    "ip_server_list",
+    "slb_dev_list",
 ]
 
 MODULE_NAME = "site"
