@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "adfs_ws_federation",
+AVAILABLE_PROPERTIES = [
+    "adfs_ws_federation",
     "artifact_resolution_service",
     "assertion_consuming_service",
     "certificate",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "adfs_ws_federation",
     "soap_tls_certificate_validate",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "service-provider"

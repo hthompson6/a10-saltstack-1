@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "map_cfg",
+AVAILABLE_PROPERTIES = [
+    "map_cfg",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "route-map"

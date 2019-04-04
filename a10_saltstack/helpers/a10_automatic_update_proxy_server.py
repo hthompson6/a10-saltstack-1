@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_type",
+AVAILABLE_PROPERTIES = [
+    "auth_type",
     "domain",
     "encrypted",
     "https_port",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "auth_type",
     "secret_string",
     "username",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "proxy-server"

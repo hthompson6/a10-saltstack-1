@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "app_list",
+AVAILABLE_PROPERTIES = [
+    "app_list",
     "app_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "application"

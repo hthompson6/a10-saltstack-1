@@ -15,13 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "client_ip_l3_dest",
+AVAILABLE_PROPERTIES = [
+    "client_ip_l3_dest",
     "client_ip_l7_header",
     "header_name",
     "lid_list",
     "a10_name",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
+    "lid-list",
 ]
 
 MODULE_NAME = "class-list"

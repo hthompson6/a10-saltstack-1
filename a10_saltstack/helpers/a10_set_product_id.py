@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "id",
+AVAILABLE_PROPERTIES = [
+    "id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "set-product-id"

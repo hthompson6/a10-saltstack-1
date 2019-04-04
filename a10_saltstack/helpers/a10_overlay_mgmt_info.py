@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "appstring",
+AVAILABLE_PROPERTIES = [
+    "appstring",
     "plugin_name",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "overlay-mgmt-info"

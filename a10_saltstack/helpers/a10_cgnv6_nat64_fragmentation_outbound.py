@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "frag_action",
+AVAILABLE_PROPERTIES = [
+    "frag_action",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "outbound"

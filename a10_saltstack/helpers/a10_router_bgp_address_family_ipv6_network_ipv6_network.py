@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "backdoor",
+AVAILABLE_PROPERTIES = [
+    "backdoor",
     "comm_value",
     "description",
     "network_ipv6",
     "route_map",
     "uuid",
     "bgp_as_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ipv6-network"

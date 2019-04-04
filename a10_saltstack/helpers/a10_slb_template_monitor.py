@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "clear_cfg",
+AVAILABLE_PROPERTIES = [
+    "clear_cfg",
     "id",
     "link_disable_cfg",
     "link_down_cfg",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "clear_cfg",
     "monitor_relation",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "monitor"

@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "active_mode_port",
+AVAILABLE_PROPERTIES = [
+    "active_mode_port",
     "active_mode_port_val",
     "any",
     "a10_name",
     "to",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ftp"

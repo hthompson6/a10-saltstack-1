@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "geo_type_overlap",
+AVAILABLE_PROPERTIES = [
+    "geo_type_overlap",
     "match_first",
     "overlap",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "geo-location-match"

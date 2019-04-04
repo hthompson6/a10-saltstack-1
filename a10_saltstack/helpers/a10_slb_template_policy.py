@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bw_list_id",
+AVAILABLE_PROPERTIES = [
+    "bw_list_id",
     "bw_list_name",
     "class_list",
     "forward_policy",
@@ -33,6 +34,11 @@ AVAILABLE_PROPERTIES = [    "bw_list_id",
     "use_destination_ip",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "class-list",
+    "forward-policy",
 ]
 
 MODULE_NAME = "policy"

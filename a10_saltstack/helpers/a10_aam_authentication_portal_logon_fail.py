@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "background",
+AVAILABLE_PROPERTIES = [
+    "background",
     "fail_msg_cfg",
     "title_cfg",
     "uuid",
     "portal_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "logon-fail"

@@ -15,13 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bridge_vlan_group_number",
+AVAILABLE_PROPERTIES = [
+    "bridge_vlan_group_number",
     "forward_traffic",
     "a10_name",
     "user_tag",
     "uuid",
     "ve",
     "vlan_list",
+]
+
+REF_PROPERTIES = [
+    "ve",
 ]
 
 MODULE_NAME = "bridge-vlan-group"

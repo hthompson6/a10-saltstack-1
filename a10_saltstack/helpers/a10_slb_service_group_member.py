@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "fqdn_name",
+AVAILABLE_PROPERTIES = [
+    "fqdn_name",
     "host",
     "member_priority",
     "member_state",
@@ -28,6 +29,12 @@ AVAILABLE_PROPERTIES = [    "fqdn_name",
     "user_tag",
     "uuid",
     "service_group_name",
+]
+
+REF_PROPERTIES = [
+    "member-template",
+    "name",
+    "port",
 ]
 
 MODULE_NAME = "member"

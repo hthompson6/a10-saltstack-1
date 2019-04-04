@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port_index",
+AVAILABLE_PROPERTIES = [
+    "port_index",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "del-port"

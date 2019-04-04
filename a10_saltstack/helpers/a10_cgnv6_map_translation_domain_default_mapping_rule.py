@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "rule_ipv6_prefix",
+AVAILABLE_PROPERTIES = [
+    "rule_ipv6_prefix",
     "uuid",
     "domain_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "default-mapping-rule"

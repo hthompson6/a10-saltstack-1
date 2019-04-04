@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bgp",
+AVAILABLE_PROPERTIES = [
+    "bgp",
     "gateway",
     "interface",
     "route",
@@ -23,6 +24,10 @@ AVAILABLE_PROPERTIES = [    "bgp",
     "uuid",
     "vlan_cfg",
     "vrid_val",
+]
+
+REF_PROPERTIES = [
+    "gateway",
 ]
 
 MODULE_NAME = "tracking-options"

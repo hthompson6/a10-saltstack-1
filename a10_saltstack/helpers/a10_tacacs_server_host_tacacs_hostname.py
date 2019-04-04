@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "hostname",
+AVAILABLE_PROPERTIES = [
+    "hostname",
     "secret",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "tacacs-hostname"

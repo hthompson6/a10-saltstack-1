@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aggregator",
+AVAILABLE_PROPERTIES = [
+    "aggregator",
     "as_path",
     "atomic_aggregate",
     "comm_list",
@@ -37,6 +38,9 @@ AVAILABLE_PROPERTIES = [    "aggregator",
     "sequence",
     "action",
     "route_map_tag",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "set"

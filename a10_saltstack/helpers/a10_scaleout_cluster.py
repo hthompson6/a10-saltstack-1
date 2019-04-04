@@ -15,13 +15,21 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cluster_devices",
+AVAILABLE_PROPERTIES = [
+    "cluster_devices",
     "cluster_id",
     "device_groups",
     "follow_vcs",
     "local_device",
     "service_config",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "cluster-devices",
+    "device-groups",
+    "local-device",
+    "service-config",
 ]
 
 MODULE_NAME = "cluster"

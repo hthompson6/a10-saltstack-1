@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "record_name",
+AVAILABLE_PROPERTIES = [
+    "record_name",
     "sampling_enable",
     "ttl",
     "txt_data",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "record_name",
     "service_name",
     "service_port",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns-txt-record"

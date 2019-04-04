@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "respond_to_ping",
+AVAILABLE_PROPERTIES = [
+    "respond_to_ping",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "icmpv6"

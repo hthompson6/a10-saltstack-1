@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ifindex",
+AVAILABLE_PROPERTIES = [
+    "ifindex",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
+    "ifindex",
 ]
 
 MODULE_NAME = "ethernet"

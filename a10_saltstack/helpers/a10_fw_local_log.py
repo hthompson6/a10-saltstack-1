@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "local_logging",
+AVAILABLE_PROPERTIES = [
+    "local_logging",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "local-log"

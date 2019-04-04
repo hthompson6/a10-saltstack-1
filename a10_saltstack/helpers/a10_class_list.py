@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ac_list",
+AVAILABLE_PROPERTIES = [
+    "ac_list",
     "dns",
     "file",
     "ipv4_list",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "ac_list",
     "ntype",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "class-list"

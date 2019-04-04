@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "arp",
     "count",
     "detail",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "tcp",
     "udp",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "packet"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable_disable_action",
+AVAILABLE_PROPERTIES = [
+    "enable_disable_action",
     "ethernet",
     "ip_address",
     "ipv6_address",
@@ -28,6 +29,11 @@ AVAILABLE_PROPERTIES = [    "enable_disable_action",
     "user_tag",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
+    "port-list",
+    "template-policy",
 ]
 
 MODULE_NAME = "dns64-virtualserver"

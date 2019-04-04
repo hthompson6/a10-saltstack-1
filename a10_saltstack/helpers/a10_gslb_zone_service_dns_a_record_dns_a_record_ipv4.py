@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_ip",
+AVAILABLE_PROPERTIES = [
+    "admin_ip",
     "as_backup",
     "as_replace",
     "disable",
@@ -29,6 +30,9 @@ AVAILABLE_PROPERTIES = [    "admin_ip",
     "service_name",
     "service_port",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns-a-record-ipv4"

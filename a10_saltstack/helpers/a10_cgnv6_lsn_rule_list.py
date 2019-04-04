@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "default",
+AVAILABLE_PROPERTIES = [
+    "default",
     "domain_ip",
     "domain_list_name_list",
     "domain_name_list",
@@ -24,6 +25,14 @@ AVAILABLE_PROPERTIES = [    "default",
     "a10_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "default",
+    "domain-ip",
+    "domain-list-name-list",
+    "domain-name-list",
+    "ip-list",
 ]
 
 MODULE_NAME = "lsn-rule-list"

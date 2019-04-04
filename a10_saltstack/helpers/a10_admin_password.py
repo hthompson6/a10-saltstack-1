@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted_in_module",
+AVAILABLE_PROPERTIES = [
+    "encrypted_in_module",
     "password_in_module",
     "uuid",
     "admin_user",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "password"

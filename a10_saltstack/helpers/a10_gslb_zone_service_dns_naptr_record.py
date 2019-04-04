@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "flag",
+AVAILABLE_PROPERTIES = [
+    "flag",
     "naptr_target",
     "order",
     "preference",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "flag",
     "service_name",
     "service_port",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns-naptr-record"

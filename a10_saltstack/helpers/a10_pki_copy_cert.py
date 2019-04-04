@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dest_cert",
+AVAILABLE_PROPERTIES = [
+    "dest_cert",
     "overwrite",
     "rotation",
     "src_cert",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "copy-cert"

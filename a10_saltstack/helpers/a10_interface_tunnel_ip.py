@@ -15,13 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address",
+AVAILABLE_PROPERTIES = [
+    "address",
     "generate_membership_query",
     "generate_membership_query_val",
     "max_resp_time",
     "ospf",
     "uuid",
     "tunnel_ifnum",
+]
+
+REF_PROPERTIES = [
+    "ospf",
 ]
 
 MODULE_NAME = "ip"

@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "device",
+AVAILABLE_PROPERTIES = [
+    "device",
     "glm_cert",
     "glm_license",
     "overwrite",
     "remote_file",
     "use_mgmt_port",
     "web_category_license",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "to-device"

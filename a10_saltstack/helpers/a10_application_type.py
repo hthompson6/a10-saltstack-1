@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ntype",
+AVAILABLE_PROPERTIES = [
+    "ntype",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "application-type"

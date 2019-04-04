@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all_partitions",
+AVAILABLE_PROPERTIES = [
+    "all_partitions",
     "preserve_accounts",
     "preserve_management",
     "reload",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "erase"

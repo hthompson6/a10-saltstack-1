@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "accept_reload_req",
+AVAILABLE_PROPERTIES = [
+    "accept_reload_req",
     "age",
     "default_policy_nocache",
     "disable_insert_age",
@@ -33,6 +34,10 @@ AVAILABLE_PROPERTIES = [    "accept_reload_req",
     "user_tag",
     "uuid",
     "verify_host",
+]
+
+REF_PROPERTIES = [
+    "logging",
 ]
 
 MODULE_NAME = "cache"

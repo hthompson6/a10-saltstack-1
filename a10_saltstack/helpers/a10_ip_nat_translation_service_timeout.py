@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port",
+AVAILABLE_PROPERTIES = [
+    "port",
     "service_type",
     "timeout_type",
     "timeout_val",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "service-timeout"

@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "client_addr",
+AVAILABLE_PROPERTIES = [
+    "client_addr",
     "level",
     "saml",
     "saml_sp",
     "username",
     "uuid",
     "virtual_server",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "auth"

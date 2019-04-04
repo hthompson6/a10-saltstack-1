@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "level",
+AVAILABLE_PROPERTIES = [
+    "level",
     "method_type",
     "pin_uid",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "hm"

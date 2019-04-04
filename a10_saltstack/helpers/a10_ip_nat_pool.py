@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "end_address",
+AVAILABLE_PROPERTIES = [
+    "end_address",
     "ethernet",
     "gateway",
     "ip_rr",
@@ -25,6 +26,10 @@ AVAILABLE_PROPERTIES = [    "end_address",
     "start_address",
     "use_if_ip",
     "uuid",
+    "vrid",
+]
+
+REF_PROPERTIES = [
     "vrid",
 ]
 

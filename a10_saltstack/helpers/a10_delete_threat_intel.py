@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "database",
+AVAILABLE_PROPERTIES = [
+    "database",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "threat-intel"

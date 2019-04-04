@@ -15,7 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "debug",
+AVAILABLE_PROPERTIES = [
+    "debug",
+]
+
+REF_PROPERTIES = [
+    "debug",
 ]
 
 MODULE_NAME = "report"

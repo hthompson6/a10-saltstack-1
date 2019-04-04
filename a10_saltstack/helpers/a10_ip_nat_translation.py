@@ -15,12 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "icmp_timeout",
+AVAILABLE_PROPERTIES = [
+    "icmp_timeout",
     "ignore_tcp_msl",
     "service_timeout_list",
     "tcp_timeout",
     "udp_timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "service-timeout-list",
 ]
 
 MODULE_NAME = "translation"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_password",
+AVAILABLE_PROPERTIES = [
+    "auth_password",
     "auth_password_string",
     "auth_username",
     "encrypted",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "auth_password",
     "relative_logoff_uri",
     "uuid",
     "notification_template_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "authentication"

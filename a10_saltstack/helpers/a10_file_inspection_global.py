@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "local_logging",
+AVAILABLE_PROPERTIES = [
+    "local_logging",
     "max_buffer_size",
     "max_file_size",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "global"

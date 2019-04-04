@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "password",
+AVAILABLE_PROPERTIES = [
+    "password",
     "remote_file",
     "store_name",
     "use_mgmt_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "system"

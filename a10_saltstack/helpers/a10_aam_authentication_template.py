@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "account",
+AVAILABLE_PROPERTIES = [
+    "account",
     "accounting_server",
     "accounting_service_group",
     "auth_sess_mode",
@@ -40,6 +41,16 @@ AVAILABLE_PROPERTIES = [    "account",
     "ntype",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "account",
+    "accounting-server",
+    "accounting-service-group",
+    "logon",
+    "relay",
+    "server",
+    "service-group",
 ]
 
 MODULE_NAME = "template"

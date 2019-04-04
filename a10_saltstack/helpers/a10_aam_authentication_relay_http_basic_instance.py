@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "domain",
+AVAILABLE_PROPERTIES = [
+    "domain",
     "domain_format",
     "a10_name",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "instance"

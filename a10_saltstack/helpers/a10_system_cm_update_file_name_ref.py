@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dest_name",
+AVAILABLE_PROPERTIES = [
+    "dest_name",
     "id",
     "source_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "cm-update-file-name-ref"

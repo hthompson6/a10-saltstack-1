@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "AcceptNotFound",
+AVAILABLE_PROPERTIES = [
+    "AcceptNotFound",
     "AcceptResRef",
     "BaseDN",
     "ldap",
@@ -29,6 +30,9 @@ AVAILABLE_PROPERTIES = [    "AcceptNotFound",
     "ldap_security",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ldap"

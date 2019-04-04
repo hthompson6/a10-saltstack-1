@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "account_lock",
+AVAILABLE_PROPERTIES = [
+    "account_lock",
     "auth_method",
     "duration",
     "a10_name",
     "retry",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "instance"

@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "buff",
+AVAILABLE_PROPERTIES = [
+    "buff",
     "cpu_threshold",
     "max_packets_per_reassembly",
     "max_reassembly_sessions",
     "sampling_enable",
     "timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "frag"

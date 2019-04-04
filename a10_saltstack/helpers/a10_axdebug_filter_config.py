@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "arp",
+AVAILABLE_PROPERTIES = [
+    "arp",
     "comp_hex",
     "dst",
     "exit",
@@ -54,6 +55,9 @@ AVAILABLE_PROPERTIES = [    "arp",
     "WORD",
     "WORD1",
     "WORD2",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "filter-config"

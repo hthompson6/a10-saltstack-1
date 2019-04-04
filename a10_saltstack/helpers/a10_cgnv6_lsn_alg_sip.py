@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "rtp_stun_timeout",
+AVAILABLE_PROPERTIES = [
+    "rtp_stun_timeout",
     "sampling_enable",
     "sip_value",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "sip"

@@ -15,10 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_list",
+AVAILABLE_PROPERTIES = [
+    "action_list",
     "event_number",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "action-list",
 ]
 
 MODULE_NAME = "event"

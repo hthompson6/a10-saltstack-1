@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "checksum",
+AVAILABLE_PROPERTIES = [
+    "checksum",
     "ip_list",
     "protocol",
     "ttl",
@@ -23,6 +24,10 @@ AVAILABLE_PROPERTIES = [    "checksum",
     "uuid",
     "value",
     "template_name",
+]
+
+REF_PROPERTIES = [
+    "ip-list",
 ]
 
 MODULE_NAME = "l3"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "http",
+AVAILABLE_PROPERTIES = [
+    "http",
     "http_encrypted",
     "http_expect",
     "http_host",
@@ -40,6 +41,9 @@ AVAILABLE_PROPERTIES = [    "http",
     "url_type",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "http"

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "origin_host_name",
+AVAILABLE_PROPERTIES = [
+    "origin_host_name",
     "uuid",
     "diameter_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "origin-host"

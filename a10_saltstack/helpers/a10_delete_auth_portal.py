@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "portal_name",
+AVAILABLE_PROPERTIES = [
+    "portal_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "auth-portal"

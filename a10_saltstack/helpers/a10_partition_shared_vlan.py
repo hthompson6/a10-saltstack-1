@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "allowable_ip_range",
+AVAILABLE_PROPERTIES = [
+    "allowable_ip_range",
     "allowable_ipv6_range",
     "mgmt_floating_ip_address",
     "uuid",
     "vlan",
     "vrid",
     "partition_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "shared-vlan"

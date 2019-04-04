@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv4",
+AVAILABLE_PROPERTIES = [
+    "ipv4",
     "sampling_enable",
     "uuid",
     "slb_dev_device_name",
     "site_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "vip-server-v4"

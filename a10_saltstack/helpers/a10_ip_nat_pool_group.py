@@ -15,10 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "member_list",
+AVAILABLE_PROPERTIES = [
+    "member_list",
     "pool_group_name",
     "user_tag",
     "uuid",
+    "vrid",
+]
+
+REF_PROPERTIES = [
+    "member-list",
     "vrid",
 ]
 

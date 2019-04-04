@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "service",
+AVAILABLE_PROPERTIES = [
+    "service",
     "traps",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "traps",
 ]
 
 MODULE_NAME = "enable"

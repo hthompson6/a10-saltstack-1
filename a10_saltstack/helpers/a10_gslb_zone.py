@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable",
+AVAILABLE_PROPERTIES = [
+    "disable",
     "dns_mx_record_list",
     "dns_ns_record_list",
     "dns_soa_record",
@@ -28,6 +29,12 @@ AVAILABLE_PROPERTIES = [    "disable",
     "use_server_ttl",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "dns-mx-record-list",
+    "dns-ns-record-list",
+    "service-list",
 ]
 
 MODULE_NAME = "zone"

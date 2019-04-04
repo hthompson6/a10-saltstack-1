@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "config_seq",
+AVAILABLE_PROPERTIES = [
+    "config_seq",
     "dead_interval",
     "failure_retry_count_value",
     "floating_ip_cfg",
@@ -28,6 +29,9 @@ AVAILABLE_PROPERTIES = [    "config_seq",
     "ssl_enable",
     "time_interval",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "vcs-para"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "fixed_nat_port_mapping_file_change",
     "max_ipport_threshold",
     "max_port_threshold",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "total_port_usage_threshold",
     "traffic_exceeded",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lsn"

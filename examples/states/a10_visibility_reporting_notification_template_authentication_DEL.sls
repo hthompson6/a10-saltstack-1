@@ -1,0 +1,2 @@
+visibility_reporting_notification_template_authentication:
+  a10.visibility:

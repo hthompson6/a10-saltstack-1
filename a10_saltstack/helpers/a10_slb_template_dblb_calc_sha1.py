@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sha1_value",
+AVAILABLE_PROPERTIES = [
+    "sha1_value",
     "dblb_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "calc-sha1"

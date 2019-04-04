@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
+AVAILABLE_PROPERTIES = [
+    "access_list",
     "action",
     "bfd",
     "ifnum",
@@ -25,6 +26,12 @@ AVAILABLE_PROPERTIES = [    "access_list",
     "sampling_enable",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "bfd",
+    "ip",
+    "isis",
 ]
 
 MODULE_NAME = "lif"

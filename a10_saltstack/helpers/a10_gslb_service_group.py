@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dependency_site",
+AVAILABLE_PROPERTIES = [
+    "dependency_site",
     "disable",
     "disable_site_list",
     "member",
@@ -26,6 +27,9 @@ AVAILABLE_PROPERTIES = [    "dependency_site",
     "service_group_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "service-group"

@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "insert_client_ip",
+AVAILABLE_PROPERTIES = [
+    "insert_client_ip",
     "logging",
     "a10_name",
     "tag_switching",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "fix"

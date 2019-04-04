@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "conn_rate_limit",
+AVAILABLE_PROPERTIES = [
+    "conn_rate_limit",
     "drop_on_nat_pool_mismatch",
     "ds_lite",
     "extended_user_quota",
@@ -29,6 +30,9 @@ AVAILABLE_PROPERTIES = [    "conn_rate_limit",
     "user_quota_prefix_length",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lsn-lid"

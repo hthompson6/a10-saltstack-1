@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication",
+AVAILABLE_PROPERTIES = [
+    "authentication",
     "receive_cfg",
     "receive_packet",
     "send_cfg",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "authentication",
     "split_horizon_cfg",
     "uuid",
     "ve_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rip"

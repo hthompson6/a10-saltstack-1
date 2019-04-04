@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "partition_name",
+AVAILABLE_PROPERTIES = [
+    "partition_name",
     "shared",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "partition-name",
 ]
 
 MODULE_NAME = "partition"

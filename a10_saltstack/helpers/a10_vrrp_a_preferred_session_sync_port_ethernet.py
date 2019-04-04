@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "pre_eth",
+AVAILABLE_PROPERTIES = [
+    "pre_eth",
     "pre_vlan",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ethernet"

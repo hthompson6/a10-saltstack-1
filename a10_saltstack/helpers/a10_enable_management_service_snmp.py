@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_v4_list",
+AVAILABLE_PROPERTIES = [
+    "acl_v4_list",
     "acl_v6_list",
     "all_data_intf",
     "eth_cfg",
@@ -23,6 +24,11 @@ AVAILABLE_PROPERTIES = [    "acl_v4_list",
     "tunnel_cfg",
     "uuid",
     "ve_cfg",
+]
+
+REF_PROPERTIES = [
+    "acl-v4-list",
+    "acl-v6-list",
 ]
 
 MODULE_NAME = "snmp"

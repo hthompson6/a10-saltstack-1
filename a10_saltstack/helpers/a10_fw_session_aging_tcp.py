@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "force_delete_timeout",
+AVAILABLE_PROPERTIES = [
+    "force_delete_timeout",
     "force_delete_timeout_100ms",
     "half_close_idle_timeout",
     "half_open_idle_timeout",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "force_delete_timeout",
     "tcp_idle_timeout",
     "uuid",
     "session_aging_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "tcp"

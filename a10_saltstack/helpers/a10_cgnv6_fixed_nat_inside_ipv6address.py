@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dest_rule_list",
+AVAILABLE_PROPERTIES = [
+    "dest_rule_list",
     "dynamic_pool_size",
     "inside_end_address",
     "inside_netmask",
@@ -33,6 +34,9 @@ AVAILABLE_PROPERTIES = [    "dest_rule_list",
     "usable_nat_ports",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ipv6address"

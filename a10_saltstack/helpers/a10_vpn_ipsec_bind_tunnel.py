@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "next_hop",
+AVAILABLE_PROPERTIES = [
+    "next_hop",
     "next_hop_v6",
     "tunnel",
     "uuid",
     "ipsec_name",
+]
+
+REF_PROPERTIES = [
+    "tunnel",
 ]
 
 MODULE_NAME = "bind-tunnel"

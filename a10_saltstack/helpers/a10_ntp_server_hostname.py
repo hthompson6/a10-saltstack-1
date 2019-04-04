@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "host_servername",
     "key",
     "prefer",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "key",
 ]
 
 MODULE_NAME = "hostname"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_protocol",
+AVAILABLE_PROPERTIES = [
+    "auth_protocol",
     "health_check",
     "health_check_disable",
     "health_check_string",
@@ -27,6 +28,10 @@ AVAILABLE_PROPERTIES = [    "auth_protocol",
     "support_apacheds_kdc",
     "timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "health-check-string",
 ]
 
 MODULE_NAME = "instance"

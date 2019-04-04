@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "activate",
+AVAILABLE_PROPERTIES = [
+    "activate",
     "allowas_in",
     "allowas_in_count",
     "default_originate",
@@ -37,6 +38,9 @@ AVAILABLE_PROPERTIES = [    "activate",
     "uuid",
     "weight",
     "bgp_as_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ipv6-neighbor"

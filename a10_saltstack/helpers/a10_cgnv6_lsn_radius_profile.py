@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "lid_profile_index",
+AVAILABLE_PROPERTIES = [
+    "lid_profile_index",
     "radius",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lsn-radius-profile"

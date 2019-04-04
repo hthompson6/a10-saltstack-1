@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "count",
+AVAILABLE_PROPERTIES = [
+    "count",
     "df_set",
     "frag_action",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "outbound"

@@ -15,10 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "msl",
+AVAILABLE_PROPERTIES = [
+    "msl",
     "a10_name",
     "pool",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "name",
+    "pool",
 ]
 
 MODULE_NAME = "acl-name-list"

@@ -15,7 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
+    "bfd",
+    "events",
+    "ifsm",
+    "lsa",
+    "nfsm",
+    "nsm",
+    "packet",
+    "route",
+]
+
+REF_PROPERTIES = [
+    "all",
     "bfd",
     "events",
     "ifsm",

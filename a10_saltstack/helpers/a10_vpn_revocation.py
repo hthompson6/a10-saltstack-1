@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ca",
+AVAILABLE_PROPERTIES = [
+    "ca",
     "crl",
     "a10_name",
     "ocsp",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "revocation"

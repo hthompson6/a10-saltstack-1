@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "destination",
+AVAILABLE_PROPERTIES = [
+    "destination",
     "disable",
     "disable_log_by_destination",
     "flow_timeout",
@@ -29,6 +30,15 @@ AVAILABLE_PROPERTIES = [    "destination",
     "source_ip_use_mgmt",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "destination",
+    "disable-log-by-destination",
+    "record",
+    "resend-template",
+    "sample",
+    "source-address",
 ]
 
 MODULE_NAME = "monitor"

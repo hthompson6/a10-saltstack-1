@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "accounting_interim_update",
+AVAILABLE_PROPERTIES = [
+    "accounting_interim_update",
     "accounting_on",
     "accounting_start",
     "accounting_stop",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "accounting_interim_update",
     "secret_string",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "server"

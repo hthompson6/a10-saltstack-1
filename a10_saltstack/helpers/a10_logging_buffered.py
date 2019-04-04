@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "buffersize",
+AVAILABLE_PROPERTIES = [
+    "buffersize",
     "levelname",
     "partition_buffersize",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "buffered"

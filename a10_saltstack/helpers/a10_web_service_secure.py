@@ -15,12 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "certificate",
+AVAILABLE_PROPERTIES = [
+    "certificate",
     "generate",
     "private_key",
     "regenerate",
     "restart",
     "wipe",
+]
+
+REF_PROPERTIES = [
+    "certificate",
+    "generate",
+    "private-key",
+    "regenerate",
 ]
 
 MODULE_NAME = "secure"

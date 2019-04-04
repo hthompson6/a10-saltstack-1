@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "crypto_core",
+AVAILABLE_PROPERTIES = [
+    "crypto_core",
     "crypto_mem",
     "fpga_decrypt",
     "packet_round_robin",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "fpga-decrypt",
 ]
 
 MODULE_NAME = "ipsec"

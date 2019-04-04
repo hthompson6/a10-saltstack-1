@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acos_application_only",
+AVAILABLE_PROPERTIES = [
+    "acos_application_only",
     "activate",
     "advertisement_interval",
     "allowas_in",
@@ -73,6 +74,9 @@ AVAILABLE_PROPERTIES = [    "acos_application_only",
     "ve",
     "weight",
     "bgp_as_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ipv4-neighbor"

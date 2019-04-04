@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "create",
+AVAILABLE_PROPERTIES = [
+    "create",
     "delete",
     "a10_name",
     "remote_file",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "store"

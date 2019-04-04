@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dnssec_ds",
+AVAILABLE_PROPERTIES = [
+    "dnssec_ds",
     "period",
     "remote_file",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dnssec-ds"

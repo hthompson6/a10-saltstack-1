@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ack",
+AVAILABLE_PROPERTIES = [
+    "ack",
     "cwr",
     "ece",
     "fin",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "ack",
     "urg",
     "uuid",
     "template_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "flags"

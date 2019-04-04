@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "audit_facility",
+AVAILABLE_PROPERTIES = [
+    "audit_facility",
     "host4",
     "host6",
     "port",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "auditlog"

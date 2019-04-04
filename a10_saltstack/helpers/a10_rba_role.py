@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "default_privilege",
+AVAILABLE_PROPERTIES = [
+    "default_privilege",
     "a10_name",
     "partition_only",
     "rule_list",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "role"

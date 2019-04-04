@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "metadata",
+AVAILABLE_PROPERTIES = [
+    "metadata",
     "a10_name",
     "reload_interval",
     "reload_metadata",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "identity-provider"

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "local_type",
+AVAILABLE_PROPERTIES = [
+    "local_type",
     "uuid",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "local-zone-cfg"

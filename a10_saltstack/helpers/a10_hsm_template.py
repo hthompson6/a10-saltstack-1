@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted",
+AVAILABLE_PROPERTIES = [
+    "encrypted",
     "enroll_timeout",
     "health_check_interval",
     "hsm_dev",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "encrypted",
     "user_tag",
     "uuid",
     "worker",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "template"

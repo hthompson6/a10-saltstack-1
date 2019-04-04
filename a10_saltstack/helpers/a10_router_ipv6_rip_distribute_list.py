@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_cfg",
+AVAILABLE_PROPERTIES = [
+    "acl_cfg",
     "prefix",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "prefix",
 ]
 
 MODULE_NAME = "distribute-list"

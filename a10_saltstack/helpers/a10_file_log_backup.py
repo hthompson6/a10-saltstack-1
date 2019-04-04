@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "date",
     "day",
     "expedite",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "period",
     "stats_data",
     "week",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "log-backup"

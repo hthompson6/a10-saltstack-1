@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto",
+AVAILABLE_PROPERTIES = [
+    "auto",
     "format",
     "keep_end",
     "keep_start",
@@ -28,6 +29,11 @@ AVAILABLE_PROPERTIES = [    "auto",
     "tcp_proxy",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "pool",
+    "service-group",
 ]
 
 MODULE_NAME = "logging"

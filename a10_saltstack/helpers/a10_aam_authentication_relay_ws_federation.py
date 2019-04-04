@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "application_server",
+AVAILABLE_PROPERTIES = [
+    "application_server",
     "authentication_uri",
     "a10_name",
     "sampling_enable",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ws-federation"

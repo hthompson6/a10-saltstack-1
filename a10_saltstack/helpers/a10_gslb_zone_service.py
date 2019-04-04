@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "disable",
     "dns_a_record",
     "dns_cname_record_list",
@@ -37,6 +38,19 @@ AVAILABLE_PROPERTIES = [    "action",
     "user_tag",
     "uuid",
     "zone_name",
+]
+
+REF_PROPERTIES = [
+    "dns-a-record",
+    "dns-cname-record-list",
+    "dns-mx-record-list",
+    "dns-naptr-record-list",
+    "dns-ns-record-list",
+    "dns-ptr-record-list",
+    "dns-record-list",
+    "dns-srv-record-list",
+    "dns-txt-record-list",
+    "geo-location-list",
 ]
 
 MODULE_NAME = "service"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bfd",
+AVAILABLE_PROPERTIES = [
+    "bfd",
     "cost_cfg",
     "dead_interval_cfg",
     "disable",
@@ -26,6 +27,9 @@ AVAILABLE_PROPERTIES = [    "bfd",
     "transmit_delay_cfg",
     "uuid",
     "loopback_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ospf"

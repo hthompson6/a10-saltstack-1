@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "health_check",
+AVAILABLE_PROPERTIES = [
+    "health_check",
     "health_check_disable",
     "lb_method",
     "member_list",
@@ -24,6 +25,11 @@ AVAILABLE_PROPERTIES = [    "health_check",
     "sampling_enable",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "health-check",
+    "member-list",
 ]
 
 MODULE_NAME = "service-group"

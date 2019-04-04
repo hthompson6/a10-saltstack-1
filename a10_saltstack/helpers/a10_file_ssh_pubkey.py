@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "file_handle",
+AVAILABLE_PROPERTIES = [
+    "file_handle",
     "user",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ssh-pubkey"

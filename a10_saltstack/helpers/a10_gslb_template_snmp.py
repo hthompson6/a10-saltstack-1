@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_key",
+AVAILABLE_PROPERTIES = [
+    "auth_key",
     "auth_proto",
     "community",
     "context_engine_id",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "auth_key",
     "username",
     "uuid",
     "version",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "snmp"

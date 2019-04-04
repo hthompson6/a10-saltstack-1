@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "answer_only_disable",
+AVAILABLE_PROPERTIES = [
+    "answer_only_disable",
     "auth_data",
     "cache",
     "change_query",
@@ -35,6 +36,9 @@ AVAILABLE_PROPERTIES = [    "answer_only_disable",
     "ttl",
     "uuid",
     "dns_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns64"

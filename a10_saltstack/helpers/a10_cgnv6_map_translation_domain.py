@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "basic_mapping_rule",
+AVAILABLE_PROPERTIES = [
+    "basic_mapping_rule",
     "default_mapping_rule",
     "description",
     "health_check_gateway",
@@ -25,6 +26,12 @@ AVAILABLE_PROPERTIES = [    "basic_mapping_rule",
     "tcp",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "basic-mapping-rule",
+    "default-mapping-rule",
+    "health-check-gateway",
 ]
 
 MODULE_NAME = "domain"

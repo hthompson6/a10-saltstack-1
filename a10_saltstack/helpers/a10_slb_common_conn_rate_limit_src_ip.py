@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "exceed_action",
+AVAILABLE_PROPERTIES = [
+    "exceed_action",
     "limit",
     "limit_period",
     "lock_out",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "exceed_action",
     "protocol",
     "shared",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "src-ip"

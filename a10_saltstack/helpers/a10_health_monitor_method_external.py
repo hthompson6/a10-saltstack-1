@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ext_arguments",
+AVAILABLE_PROPERTIES = [
+    "ext_arguments",
     "ext_port",
     "ext_preference",
     "ext_program",
     "external",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "external"

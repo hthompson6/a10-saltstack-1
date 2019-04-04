@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication_cfg",
+AVAILABLE_PROPERTIES = [
+    "authentication_cfg",
     "authentication_key",
     "bfd_cfg",
     "cost",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "authentication_cfg",
     "transmit_delay",
     "uuid",
     "loopback_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ospf-global"

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bgpBackwardTransNotification",
+AVAILABLE_PROPERTIES = [
+    "bgpBackwardTransNotification",
     "bgpEstablishedNotification",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "bgp"

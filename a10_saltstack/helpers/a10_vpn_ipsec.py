@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "anti_replay_window",
+AVAILABLE_PROPERTIES = [
+    "anti_replay_window",
     "bind_tunnel",
     "dh_group",
     "enc_cfg",
@@ -31,6 +32,11 @@ AVAILABLE_PROPERTIES = [    "anti_replay_window",
     "up",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "bind-tunnel",
+    "ike-gateway",
 ]
 
 MODULE_NAME = "ipsec"

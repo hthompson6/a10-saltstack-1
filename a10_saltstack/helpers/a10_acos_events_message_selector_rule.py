@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "index",
     "message_id",
     "message_id_scope",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "action",
     "user_tag",
     "uuid",
     "message_selector_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rule"

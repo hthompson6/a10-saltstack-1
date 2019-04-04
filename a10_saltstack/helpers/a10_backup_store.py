@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "creat_cfg",
+AVAILABLE_PROPERTIES = [
+    "creat_cfg",
     "delete_cfg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "store"

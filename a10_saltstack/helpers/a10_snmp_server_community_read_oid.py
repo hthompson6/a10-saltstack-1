@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "oid_val",
+AVAILABLE_PROPERTIES = [
+    "oid_val",
     "remote",
     "user_tag",
     "uuid",
     "read_user",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "oid"

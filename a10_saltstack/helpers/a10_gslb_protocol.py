@@ -15,13 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto_detect",
+AVAILABLE_PROPERTIES = [
+    "auto_detect",
     "enable_list",
     "limit",
     "ping_site",
     "status_interval",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "enable-list",
+    "limit",
 ]
 
 MODULE_NAME = "protocol"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "conn_limit",
+AVAILABLE_PROPERTIES = [
+    "conn_limit",
     "conn_limit_no_logging",
     "conn_limit_reset",
     "conn_rate_limit",
@@ -35,6 +36,9 @@ AVAILABLE_PROPERTIES = [    "conn_limit",
     "tcp_stack_tfo_cookie_time_limit",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "virtual-server"

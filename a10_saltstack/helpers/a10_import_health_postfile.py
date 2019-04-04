@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "overwrite",
+AVAILABLE_PROPERTIES = [
+    "overwrite",
     "password",
     "postfilename",
     "remote_file",
     "use_mgmt_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "health-postfile"

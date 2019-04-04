@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "use_l3",
+AVAILABLE_PROPERTIES = [
+    "use_l3",
     "use_l4",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "load-balance"

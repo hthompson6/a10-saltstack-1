@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "both",
+AVAILABLE_PROPERTIES = [
+    "both",
     "ethernet_val",
     "no_heartbeat",
     "router_interface",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "both",
     "user_tag",
     "uuid",
     "vlan",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ethernet"

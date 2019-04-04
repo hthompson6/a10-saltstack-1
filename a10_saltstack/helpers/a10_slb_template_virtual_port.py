@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aflow",
+AVAILABLE_PROPERTIES = [
+    "aflow",
     "allow_syn_otherflags",
     "allow_vip_to_rport_mapping",
     "conn_limit",
@@ -42,6 +43,9 @@ AVAILABLE_PROPERTIES = [    "aflow",
     "user_tag",
     "uuid",
     "when_rr_enable",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "virtual-port"

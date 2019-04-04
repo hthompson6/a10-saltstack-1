@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dslite",
+AVAILABLE_PROPERTIES = [
+    "dslite",
     "nat44",
     "nat64",
     "netflow_v5",
@@ -36,6 +37,9 @@ AVAILABLE_PROPERTIES = [    "dslite",
     "sesn_event_nat64",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "record"

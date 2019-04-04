@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "pool_name",
+AVAILABLE_PROPERTIES = [
+    "pool_name",
     "uuid",
     "pool_group_pool_group_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "member"

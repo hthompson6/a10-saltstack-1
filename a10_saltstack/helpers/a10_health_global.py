@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "check_rate",
+AVAILABLE_PROPERTIES = [
+    "check_rate",
     "disable_auto_adjust",
     "external_rate",
     "interval",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "check_rate",
     "timeout",
     "up_retry",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "global"

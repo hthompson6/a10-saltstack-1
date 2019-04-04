@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "icmp",
+AVAILABLE_PROPERTIES = [
+    "icmp",
     "others",
     "tcp_list",
     "udp_list",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "disable-log-by-destination"

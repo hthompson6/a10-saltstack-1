@@ -15,10 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "a10_name",
+AVAILABLE_PROPERTIES = [
+    "a10_name",
     "request_uri_list",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "request-uri-list",
 ]
 
 MODULE_NAME = "instance"

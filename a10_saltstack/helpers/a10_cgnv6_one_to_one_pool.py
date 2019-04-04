@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "end_address",
+AVAILABLE_PROPERTIES = [
+    "end_address",
     "group",
     "netmask",
     "partition",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "end_address",
     "start_address",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "pool"

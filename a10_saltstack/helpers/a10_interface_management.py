@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
+AVAILABLE_PROPERTIES = [
+    "access_list",
     "action",
     "broadcast_rate_limit",
     "duplexity",
@@ -26,6 +27,10 @@ AVAILABLE_PROPERTIES = [    "access_list",
     "secondary_ip",
     "speed",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "lldp",
 ]
 
 MODULE_NAME = "management"

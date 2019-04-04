@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "license_request",
+AVAILABLE_PROPERTIES = [
+    "license_request",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "send"

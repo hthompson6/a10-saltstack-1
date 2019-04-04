@@ -15,13 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ea_length",
+AVAILABLE_PROPERTIES = [
+    "ea_length",
     "port_start",
     "prefix_rule_list",
     "rule_ipv4_address_port_settings",
     "share_ratio",
     "uuid",
     "domain_name",
+]
+
+REF_PROPERTIES = [
+    "prefix-rule-list",
 ]
 
 MODULE_NAME = "basic-mapping-rule"

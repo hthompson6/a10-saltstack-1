@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "checksum",
+AVAILABLE_PROPERTIES = [
+    "checksum",
     "dest_port",
     "dest_port_value",
     "length",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "checksum",
     "uuid",
     "action_direction",
     "event_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "udp"

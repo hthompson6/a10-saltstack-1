@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_family",
+AVAILABLE_PROPERTIES = [
+    "address_family",
     "aggregate_address_list",
     "as_number",
     "auto_summary",
@@ -30,6 +31,13 @@ AVAILABLE_PROPERTIES = [    "address_family",
     "timers",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "address-family",
+    "neighbor",
+    "network",
+    "redistribute",
 ]
 
 MODULE_NAME = "bgp"

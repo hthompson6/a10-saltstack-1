@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "split_horizon_cfg",
+AVAILABLE_PROPERTIES = [
+    "split_horizon_cfg",
     "uuid",
     "loopback_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rip"

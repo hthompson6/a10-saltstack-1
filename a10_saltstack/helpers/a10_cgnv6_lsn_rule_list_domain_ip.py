@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sampling_enable",
+AVAILABLE_PROPERTIES = [
+    "sampling_enable",
     "lsn_rule_list_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "domain-ip"

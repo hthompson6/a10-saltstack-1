@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "icmp_lockup",
+AVAILABLE_PROPERTIES = [
+    "icmp_lockup",
     "icmp_lockup_period",
     "icmp_normal_rate_limit",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "icmp-rate-limit"

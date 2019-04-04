@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "instance_name",
+AVAILABLE_PROPERTIES = [
+    "instance_name",
     "new_instance_name",
     "object",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rename"

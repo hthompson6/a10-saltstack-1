@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_v4_addr",
+AVAILABLE_PROPERTIES = [
+    "ip_v4_addr",
     "ip_v6_addr",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "secondary"

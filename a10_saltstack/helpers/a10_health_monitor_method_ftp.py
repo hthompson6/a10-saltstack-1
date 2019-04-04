@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ftp",
+AVAILABLE_PROPERTIES = [
+    "ftp",
     "ftp_encrypted",
     "ftp_password",
     "ftp_password_string",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "ftp",
     "ftp_username",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ftp"

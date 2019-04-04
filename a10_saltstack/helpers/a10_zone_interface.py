@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet_list",
+AVAILABLE_PROPERTIES = [
+    "ethernet_list",
     "lif_list",
     "trunk_list",
     "tunnel_list",
     "uuid",
     "ve_list",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "interface"

@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "stats",
+AVAILABLE_PROPERTIES = [
+    "stats",
     "protocol",
     "port_number",
     "virtual_server_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "port"

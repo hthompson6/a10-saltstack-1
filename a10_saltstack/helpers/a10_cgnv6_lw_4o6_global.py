@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "hairpinning",
+AVAILABLE_PROPERTIES = [
+    "hairpinning",
     "icmp_inbound",
     "inside_src_access_list",
     "nat_prefix_list",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "hairpinning",
     "sampling_enable",
     "use_binding_table",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "global"

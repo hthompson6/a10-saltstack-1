@@ -15,8 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "template_policy",
+AVAILABLE_PROPERTIES = [
+    "template_policy",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "template-policy",
 ]
 
 MODULE_NAME = "template"

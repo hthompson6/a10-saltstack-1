@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "idle_timeout",
+AVAILABLE_PROPERTIES = [
+    "idle_timeout",
     "limit",
     "mode",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "helper-sessions"

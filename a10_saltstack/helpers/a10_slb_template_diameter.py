@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "avp_code",
+AVAILABLE_PROPERTIES = [
+    "avp_code",
     "avp_list",
     "avp_string",
     "customize_cea",
@@ -37,6 +38,11 @@ AVAILABLE_PROPERTIES = [    "avp_code",
     "user_tag",
     "uuid",
     "vendor_id",
+]
+
+REF_PROPERTIES = [
+    "origin-host",
+    "service-group-name",
 ]
 
 MODULE_NAME = "diameter"

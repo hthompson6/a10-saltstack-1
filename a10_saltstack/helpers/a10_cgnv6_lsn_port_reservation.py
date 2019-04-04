@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "inside",
+AVAILABLE_PROPERTIES = [
+    "inside",
     "inside_port_end",
     "inside_port_start",
     "nat",
     "nat_port_end",
     "nat_port_start",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "port-reservation"

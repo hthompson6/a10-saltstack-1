@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dns",
+AVAILABLE_PROPERTIES = [
+    "dns",
     "dns_domain",
     "dns_domain_expect",
     "dns_domain_port",
@@ -35,6 +36,9 @@ AVAILABLE_PROPERTIES = [    "dns",
     "dns_ipv6_tcp",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns"

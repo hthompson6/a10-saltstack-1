@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "activate",
+AVAILABLE_PROPERTIES = [
+    "activate",
     "advertisement_interval",
     "allowas_in",
     "allowas_in_count",
@@ -66,6 +67,9 @@ AVAILABLE_PROPERTIES = [    "activate",
     "ve",
     "weight",
     "bgp_as_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "peer-group-neighbor"

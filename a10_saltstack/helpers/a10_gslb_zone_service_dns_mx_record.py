@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mx_name",
+AVAILABLE_PROPERTIES = [
+    "mx_name",
     "priority",
     "sampling_enable",
     "ttl",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "mx_name",
     "service_name",
     "service_port",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns-mx-record"

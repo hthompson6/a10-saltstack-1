@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "bypass_ip_cfg",
     "failure_action",
     "a10_name",
@@ -27,6 +28,12 @@ AVAILABLE_PROPERTIES = [    "action",
     "ntype",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "service-group",
+    "source-ip",
+    "tcp-proxy",
 ]
 
 MODULE_NAME = "external-service"

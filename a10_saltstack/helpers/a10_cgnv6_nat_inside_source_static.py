@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "nat_address",
+AVAILABLE_PROPERTIES = [
+    "nat_address",
     "partition",
     "src_address",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "static"

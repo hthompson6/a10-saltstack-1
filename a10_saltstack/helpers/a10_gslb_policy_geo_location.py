@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_multiple_fields",
+AVAILABLE_PROPERTIES = [
+    "ip_multiple_fields",
     "ipv6_multiple_fields",
     "a10_name",
     "user_tag",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "geo-location"

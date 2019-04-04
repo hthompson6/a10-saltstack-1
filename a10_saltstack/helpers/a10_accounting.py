@@ -15,12 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "commands",
+AVAILABLE_PROPERTIES = [
+    "commands",
     "debug",
     "nexec",
     "stop_only",
     "tacplus",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "exec",
 ]
 
 MODULE_NAME = "accounting"

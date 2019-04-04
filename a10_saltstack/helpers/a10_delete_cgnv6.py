@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "filename",
+AVAILABLE_PROPERTIES = [
+    "filename",
     "fixed_nat",
     "lw_4o6_binding_table_validation_log",
     "lw_filename",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "cgnv6"

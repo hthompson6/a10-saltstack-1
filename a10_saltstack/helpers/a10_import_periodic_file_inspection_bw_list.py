@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "period",
+AVAILABLE_PROPERTIES = [
+    "period",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "file-inspection-bw-list"

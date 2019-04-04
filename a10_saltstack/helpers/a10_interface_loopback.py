@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ifnum",
+AVAILABLE_PROPERTIES = [
+    "ifnum",
     "ip",
     "ipv6",
     "isis",
@@ -23,6 +24,12 @@ AVAILABLE_PROPERTIES = [    "ifnum",
     "snmp_server",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "ip",
+    "ipv6",
+    "isis",
 ]
 
 MODULE_NAME = "loopback"

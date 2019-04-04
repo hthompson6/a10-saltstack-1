@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "file",
+AVAILABLE_PROPERTIES = [
+    "file",
     "log_buffer",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "file",
 ]
 
 MODULE_NAME = "log"

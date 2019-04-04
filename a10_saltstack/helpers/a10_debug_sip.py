@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ACK",
+AVAILABLE_PROPERTIES = [
+    "ACK",
     "BYE",
     "CANCEL",
     "INFO",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "ACK",
     "SUBSCRIBE",
     "UPDATE",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "sip"

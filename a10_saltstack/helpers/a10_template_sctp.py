@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "checksum_check",
+AVAILABLE_PROPERTIES = [
+    "checksum_check",
     "log",
     "a10_name",
     "permit_payload_protocol",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "checksum_check",
     "sctp_idle_timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "sctp"

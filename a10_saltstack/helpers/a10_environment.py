@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "threshold_cfg",
+AVAILABLE_PROPERTIES = [
+    "threshold_cfg",
     "update_interval",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "environment"

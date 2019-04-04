@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dhcp",
+AVAILABLE_PROPERTIES = [
+    "dhcp",
     "static",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ipsrc"

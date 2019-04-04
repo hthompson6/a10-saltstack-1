@@ -15,13 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "console",
+AVAILABLE_PROPERTIES = [
+    "console",
     "enable_cfg",
     "login_cfg",
     "mode_cfg",
     "multiple_auth_reject",
     "type_cfg",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "console",
 ]
 
 MODULE_NAME = "authentication"

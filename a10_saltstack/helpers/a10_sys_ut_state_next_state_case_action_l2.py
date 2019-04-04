@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethertype",
+AVAILABLE_PROPERTIES = [
+    "ethertype",
     "mac_list",
     "protocol",
     "uuid",
@@ -25,6 +26,10 @@ AVAILABLE_PROPERTIES = [    "ethertype",
     "case_number",
     "name",
     "state_name",
+]
+
+REF_PROPERTIES = [
+    "mac-list",
 ]
 
 MODULE_NAME = "l2"

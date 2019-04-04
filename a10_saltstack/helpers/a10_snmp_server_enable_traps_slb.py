@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "application_buffer_limit",
     "bw_rate_limit_exceed",
     "bw_rate_limit_resume",
@@ -44,6 +45,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "vip_port_down",
     "vip_port_up",
     "vip_up",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "slb"

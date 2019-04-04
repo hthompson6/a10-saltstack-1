@@ -15,10 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable",
+AVAILABLE_PROPERTIES = [
+    "disable",
     "interval",
     "priority_partition_list",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "interval",
+    "priority-partition-list",
 ]
 
 MODULE_NAME = "techreport"

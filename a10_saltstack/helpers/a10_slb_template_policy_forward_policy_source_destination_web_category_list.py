@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "priority",
     "sampling_enable",
     "ntype",
@@ -23,6 +24,10 @@ AVAILABLE_PROPERTIES = [    "action",
     "web_category_list",
     "name",
     "policy_name",
+]
+
+REF_PROPERTIES = [
+    "web-category-list",
 ]
 
 MODULE_NAME = "web-category-list"

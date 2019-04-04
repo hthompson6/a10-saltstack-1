@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "alive_if_active",
+AVAILABLE_PROPERTIES = [
+    "alive_if_active",
     "del_session_on_server_down",
     "disable",
     "down",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "alive_if_active",
     "reset_rev",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "tcp"

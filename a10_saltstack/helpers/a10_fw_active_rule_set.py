@@ -15,10 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "a10_name",
+AVAILABLE_PROPERTIES = [
+    "a10_name",
     "override_nat_aging",
     "session_aging",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "name",
+    "session-aging",
 ]
 
 MODULE_NAME = "active-rule-set"

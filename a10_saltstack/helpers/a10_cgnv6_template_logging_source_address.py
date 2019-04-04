@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip",
+AVAILABLE_PROPERTIES = [
+    "ip",
     "ipv6",
     "uuid",
     "logging_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "source-address"

@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "template_list",
+AVAILABLE_PROPERTIES = [
+    "template_list",
     "uuid",
     "cluster_id",
+]
+
+REF_PROPERTIES = [
+    "template-list",
 ]
 
 MODULE_NAME = "service-config"

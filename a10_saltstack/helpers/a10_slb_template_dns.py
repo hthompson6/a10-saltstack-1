@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "class_list",
+AVAILABLE_PROPERTIES = [
+    "class_list",
     "default_policy",
     "disable_dns_template",
     "dnssec_service_group",
@@ -31,6 +32,12 @@ AVAILABLE_PROPERTIES = [    "class_list",
     "redirect_to_tcp_port",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "class-list",
+    "dnssec-service-group",
+    "forward",
 ]
 
 MODULE_NAME = "dns"

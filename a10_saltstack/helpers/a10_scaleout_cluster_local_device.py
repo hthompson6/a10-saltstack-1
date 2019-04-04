@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "id",
+AVAILABLE_PROPERTIES = [
+    "id",
     "l2_redirect",
     "priority",
     "uuid",
     "cluster_id",
+]
+
+REF_PROPERTIES = [
+    "l2-redirect",
 ]
 
 MODULE_NAME = "local-device"

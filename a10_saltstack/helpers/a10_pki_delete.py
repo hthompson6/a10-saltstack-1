@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ca",
+AVAILABLE_PROPERTIES = [
+    "ca",
     "cert_name",
     "crl",
     "csr",
     "private_key",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "delete"

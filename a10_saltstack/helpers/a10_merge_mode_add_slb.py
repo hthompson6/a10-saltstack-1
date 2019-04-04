@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "member",
+AVAILABLE_PROPERTIES = [
+    "member",
     "server_port",
     "uuid",
     "virtual_server_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "slb"

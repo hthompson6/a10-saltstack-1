@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "algorithm",
+AVAILABLE_PROPERTIES = [
+    "algorithm",
     "combinations_limit",
     "dnskey_ttl_k",
     "dnskey_ttl_v",
@@ -29,6 +30,10 @@ AVAILABLE_PROPERTIES = [    "algorithm",
     "signature_validity_period_v",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "hsm",
 ]
 
 MODULE_NAME = "template"

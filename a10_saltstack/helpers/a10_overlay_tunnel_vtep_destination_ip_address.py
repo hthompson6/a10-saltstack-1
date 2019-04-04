@@ -15,12 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encap",
+AVAILABLE_PROPERTIES = [
+    "encap",
     "ip_address",
     "user_tag",
     "uuid",
     "vni_list",
     "vtep_id",
+]
+
+REF_PROPERTIES = [
+    "vni-list",
 ]
 
 MODULE_NAME = "destination-ip-address"

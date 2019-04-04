@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "domain",
+AVAILABLE_PROPERTIES = [
+    "domain",
     "a10_name",
     "sampling_enable",
     "user_tag",
     "uuid",
     "version",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ntlm"

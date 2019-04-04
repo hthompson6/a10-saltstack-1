@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "nexthop_ipv6_ll",
+AVAILABLE_PROPERTIES = [
+    "nexthop_ipv6_ll",
     "trunk_num",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "trunk"

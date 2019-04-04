@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "inside_prefix",
+AVAILABLE_PROPERTIES = [
+    "inside_prefix",
     "a10_name",
     "outside_prefix",
     "sampling_enable",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "domain"

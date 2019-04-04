@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "csv_name",
+AVAILABLE_PROPERTIES = [
+    "csv_name",
     "delim_char",
     "delim_num",
     "ipv6_enable",
     "multiple_fields",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "csv"

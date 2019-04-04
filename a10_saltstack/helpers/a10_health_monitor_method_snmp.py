@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "community",
+AVAILABLE_PROPERTIES = [
+    "community",
     "oid",
     "operation",
     "snmp",
     "snmp_port",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "snmp"

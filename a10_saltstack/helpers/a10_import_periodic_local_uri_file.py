@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "local_uri_file",
+AVAILABLE_PROPERTIES = [
+    "local_uri_file",
     "period",
     "remote_file",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "local-uri-file"

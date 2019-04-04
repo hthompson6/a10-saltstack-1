@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto",
+AVAILABLE_PROPERTIES = [
+    "auto",
     "eth_list",
     "length",
     "trunk_list",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "auto",
     "case_number",
     "name",
     "state_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "l1"

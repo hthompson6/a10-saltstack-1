@@ -15,9 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_v4_list",
+AVAILABLE_PROPERTIES = [
+    "acl_v4_list",
     "acl_v6_list",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "acl-v4-list",
+    "acl-v6-list",
 ]
 
 MODULE_NAME = "ping"

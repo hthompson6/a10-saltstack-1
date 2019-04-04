@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "alert_type",
+AVAILABLE_PROPERTIES = [
+    "alert_type",
     "ca_certs",
     "cert",
     "cipher_template",
@@ -44,6 +45,10 @@ AVAILABLE_PROPERTIES = [    "alert_type",
     "user_tag",
     "uuid",
     "version",
+]
+
+REF_PROPERTIES = [
+    "cipher-template",
 ]
 
 MODULE_NAME = "server-ssl"

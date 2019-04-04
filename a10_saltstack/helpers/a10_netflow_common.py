@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "max_packet_queue_time",
+AVAILABLE_PROPERTIES = [
+    "max_packet_queue_time",
     "reset_time_on_flow_record",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "common"

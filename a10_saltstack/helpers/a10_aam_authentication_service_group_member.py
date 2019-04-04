@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "member_priority",
+AVAILABLE_PROPERTIES = [
+    "member_priority",
     "member_state",
     "a10_name",
     "port",
@@ -23,6 +24,10 @@ AVAILABLE_PROPERTIES = [    "member_priority",
     "user_tag",
     "uuid",
     "service_group_name",
+]
+
+REF_PROPERTIES = [
+    "name",
 ]
 
 MODULE_NAME = "member"

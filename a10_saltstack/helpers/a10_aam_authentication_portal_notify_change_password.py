@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "background",
+AVAILABLE_PROPERTIES = [
+    "background",
     "cfm_pwd_cfg",
     "change_text",
     "change_url",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "background",
     "username_var",
     "uuid",
     "portal_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "notify-change-password"

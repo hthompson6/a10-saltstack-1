@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ext_list_num",
+AVAILABLE_PROPERTIES = [
+    "ext_list_num",
     "rules_list",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "expanded-num"

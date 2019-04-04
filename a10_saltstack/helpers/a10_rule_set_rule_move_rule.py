@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "location",
+AVAILABLE_PROPERTIES = [
+    "location",
     "target_rule",
     "name",
     "rule_set_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "move-rule"

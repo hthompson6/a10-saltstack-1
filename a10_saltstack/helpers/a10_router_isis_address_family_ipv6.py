@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "adjacency_check",
+AVAILABLE_PROPERTIES = [
+    "adjacency_check",
     "default_information",
     "distance",
     "multi_topology_cfg",
@@ -23,6 +24,10 @@ AVAILABLE_PROPERTIES = [    "adjacency_check",
     "summary_prefix_list",
     "uuid",
     "isis_tag",
+]
+
+REF_PROPERTIES = [
+    "redistribute",
 ]
 
 MODULE_NAME = "ipv6"

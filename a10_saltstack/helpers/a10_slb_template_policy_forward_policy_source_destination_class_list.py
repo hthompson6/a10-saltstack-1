@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "dest_class_list",
     "priority",
     "sampling_enable",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "action",
     "uuid",
     "name",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "class-list"

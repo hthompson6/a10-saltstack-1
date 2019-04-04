@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "keep_alive_conn",
+AVAILABLE_PROPERTIES = [
+    "keep_alive_conn",
     "limit_per_server",
     "a10_name",
     "num_conn_per_port",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "keep_alive_conn",
     "timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "connection-reuse"

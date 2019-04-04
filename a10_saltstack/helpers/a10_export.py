@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aflex",
+AVAILABLE_PROPERTIES = [
+    "aflex",
     "auth_portal",
     "auth_portal_image",
     "axdebug",
@@ -55,6 +56,10 @@ AVAILABLE_PROPERTIES = [    "aflex",
     "use_mgmt_port",
     "wsdl",
     "xml_schema",
+]
+
+REF_PROPERTIES = [
+    "store",
 ]
 
 MODULE_NAME = "export"

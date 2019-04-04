@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "format",
+AVAILABLE_PROPERTIES = [
+    "format",
     "health_check",
     "log_server_list",
     "a10_name",
@@ -25,6 +26,11 @@ AVAILABLE_PROPERTIES = [    "format",
     "secs",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "health-check",
+    "log-server-list",
 ]
 
 MODULE_NAME = "collector-group"

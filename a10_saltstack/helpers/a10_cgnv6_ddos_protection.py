@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "logging",
+AVAILABLE_PROPERTIES = [
+    "logging",
     "max_hw_entries",
     "packets_per_second",
     "sampling_enable",
     "toggle",
     "uuid",
     "zone",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ddos-protection"

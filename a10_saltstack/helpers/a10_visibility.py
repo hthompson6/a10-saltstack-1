@@ -15,12 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "anomaly_detection",
+AVAILABLE_PROPERTIES = [
+    "anomaly_detection",
     "granularity",
     "monitor_list",
     "monitored_entity",
     "reporting",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "anomaly-detection",
+    "monitor-list",
+    "monitored-entity",
+    "reporting",
 ]
 
 MODULE_NAME = "visibility"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "domain",
+AVAILABLE_PROPERTIES = [
+    "domain",
     "icmp",
     "interval",
     "port",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "domain",
     "timeout",
     "track",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "active-rdt"

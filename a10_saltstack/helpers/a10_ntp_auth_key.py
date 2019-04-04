@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "alg_type",
+AVAILABLE_PROPERTIES = [
+    "alg_type",
     "asc_key",
     "encrypted",
     "hex_encrypted",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "alg_type",
     "key",
     "key_type",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "auth-key"

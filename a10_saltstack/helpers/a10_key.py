@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "key_chain_flag",
+AVAILABLE_PROPERTIES = [
+    "key_chain_flag",
     "key_chain_name",
     "key_list",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "key-list",
 ]
 
 MODULE_NAME = "key"

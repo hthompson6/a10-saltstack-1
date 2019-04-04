@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bw_limit_cfg",
+AVAILABLE_PROPERTIES = [
+    "bw_limit_cfg",
     "concurrent_session_limit_cfg",
     "fwcps_limit_cfg",
     "l4_session_limit_cfg",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "bw_limit_cfg",
     "threshold",
     "uuid",
     "template_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "system-resources"

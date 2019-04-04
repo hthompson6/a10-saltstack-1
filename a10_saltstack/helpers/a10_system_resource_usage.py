@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aflex_table_entry_count",
+AVAILABLE_PROPERTIES = [
+    "aflex_table_entry_count",
     "auth_portal_html_file_size",
     "auth_portal_image_file_size",
     "class_list_ac_entry_count",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "aflex_table_entry_count",
     "nat_pool_addr_count",
     "ssl_context_memory",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "resource-usage"

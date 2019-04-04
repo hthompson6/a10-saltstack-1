@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ignore_validation",
+AVAILABLE_PROPERTIES = [
+    "ignore_validation",
     "l1",
     "l2",
     "l3",
@@ -24,6 +25,15 @@ AVAILABLE_PROPERTIES = [    "ignore_validation",
     "udp",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "ignore-validation",
+    "l1",
+    "l2",
+    "l3",
+    "tcp",
+    "udp",
 ]
 
 MODULE_NAME = "template"

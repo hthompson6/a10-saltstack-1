@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "abr_type_option",
+AVAILABLE_PROPERTIES = [
+    "abr_type_option",
     "area_list",
     "auto_cost_reference_bandwidth",
     "bfd_all_interfaces",
@@ -32,6 +33,12 @@ AVAILABLE_PROPERTIES = [    "abr_type_option",
     "timers",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "area-list",
+    "default-information",
+    "redistribute",
 ]
 
 MODULE_NAME = "ospf"

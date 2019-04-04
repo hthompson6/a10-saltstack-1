@@ -15,10 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "nat_quota_exceeded",
+AVAILABLE_PROPERTIES = [
+    "nat_quota_exceeded",
     "nat_resource_exhausted",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "nat-quota-exceeded",
+    "nat-resource-exhausted",
 ]
 
 MODULE_NAME = "logging"

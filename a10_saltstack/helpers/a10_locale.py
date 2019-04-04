@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "test",
+AVAILABLE_PROPERTIES = [
+    "test",
     "uuid",
     "value",
+]
+
+REF_PROPERTIES = [
+    "test",
 ]
 
 MODULE_NAME = "locale"

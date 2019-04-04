@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "destination",
+AVAILABLE_PROPERTIES = [
+    "destination",
     "match_any",
     "match_authorize_policy",
     "match_class_list",
@@ -25,6 +26,11 @@ AVAILABLE_PROPERTIES = [    "destination",
     "user_tag",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
+    "destination",
+    "match-authorize-policy",
 ]
 
 MODULE_NAME = "source"

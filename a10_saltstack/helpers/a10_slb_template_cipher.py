@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cipher_cfg",
+AVAILABLE_PROPERTIES = [
+    "cipher_cfg",
     "a10_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "cipher"

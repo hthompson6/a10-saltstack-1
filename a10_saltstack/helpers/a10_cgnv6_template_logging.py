@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "batched_logging_disable",
+AVAILABLE_PROPERTIES = [
+    "batched_logging_disable",
     "custom",
     "disable_log_by_destination",
     "facility",
@@ -39,6 +40,11 @@ AVAILABLE_PROPERTIES = [    "batched_logging_disable",
     "source_port",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "disable-log-by-destination",
+    "source-address",
 ]
 
 MODULE_NAME = "logging"

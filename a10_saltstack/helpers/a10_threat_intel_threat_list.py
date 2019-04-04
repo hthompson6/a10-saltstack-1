@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all_categories",
+AVAILABLE_PROPERTIES = [
+    "all_categories",
     "botnets",
     "dos_attacks",
     "mobile_threats",
@@ -32,6 +33,9 @@ AVAILABLE_PROPERTIES = [    "all_categories",
     "uuid",
     "web_attacks",
     "windows_exploits",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "threat-list"

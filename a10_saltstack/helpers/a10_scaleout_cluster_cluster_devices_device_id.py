@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "device_id",
     "ip",
     "user_tag",
     "uuid",
     "cluster_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "device-id"

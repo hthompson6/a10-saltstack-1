@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "follow_port_protocol",
     "health_check",
     "health_check_disable",
@@ -26,6 +27,10 @@ AVAILABLE_PROPERTIES = [    "action",
     "user_tag",
     "uuid",
     "server_name",
+]
+
+REF_PROPERTIES = [
+    "health-check",
 ]
 
 MODULE_NAME = "port"

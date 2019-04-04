@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access",
+AVAILABLE_PROPERTIES = [
+    "access",
     "access_list",
     "action",
     "passwd_string",
@@ -31,6 +32,12 @@ AVAILABLE_PROPERTIES = [    "access",
     "user",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "access",
+    "password",
+    "ssh-pubkey",
 ]
 
 MODULE_NAME = "admin"

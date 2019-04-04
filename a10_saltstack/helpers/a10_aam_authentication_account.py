@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "kerberos_spn_list",
+AVAILABLE_PROPERTIES = [
+    "kerberos_spn_list",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "kerberos-spn-list",
 ]
 
 MODULE_NAME = "account"

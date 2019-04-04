@@ -15,8 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "pool",
+AVAILABLE_PROPERTIES = [
+    "pool",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "pool",
 ]
 
 MODULE_NAME = "svm-source-nat"

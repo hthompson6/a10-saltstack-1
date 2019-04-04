@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "secret_encrypted",
+AVAILABLE_PROPERTIES = [
+    "secret_encrypted",
     "tacplus",
     "tacplus_encrypted",
     "tacplus_password",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "secret_encrypted",
     "tacplus_username",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "tacplus"

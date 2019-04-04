@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "network_synchronization",
+AVAILABLE_PROPERTIES = [
+    "network_synchronization",
     "uuid",
     "bgp_as_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "synchronization"

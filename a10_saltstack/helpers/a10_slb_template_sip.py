@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_id",
+AVAILABLE_PROPERTIES = [
+    "acl_id",
     "acl_name_value",
     "alg_dest_nat",
     "alg_source_nat",
@@ -45,6 +46,12 @@ AVAILABLE_PROPERTIES = [    "acl_id",
     "timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "acl-id",
+    "acl-name-value",
+    "service-group",
 ]
 
 MODULE_NAME = "sip"

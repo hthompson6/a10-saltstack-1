@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "delay",
+AVAILABLE_PROPERTIES = [
+    "delay",
     "direction",
     "drop",
     "l1",
@@ -28,6 +29,15 @@ AVAILABLE_PROPERTIES = [    "delay",
     "case_number",
     "name",
     "state_name",
+]
+
+REF_PROPERTIES = [
+    "l1",
+    "l2",
+    "l3",
+    "tcp",
+    "template",
+    "udp",
 ]
 
 MODULE_NAME = "action"

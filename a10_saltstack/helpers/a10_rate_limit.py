@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "maxPktNum",
+AVAILABLE_PROPERTIES = [
+    "maxPktNum",
     "rl_type",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rate-limit"

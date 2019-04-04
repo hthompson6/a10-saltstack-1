@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ftp_enable",
+AVAILABLE_PROPERTIES = [
+    "ftp_enable",
     "trans_eprt_to_port",
     "trans_epsv_to_pasv",
     "trans_lprt_to_port",
     "trans_lpsv_to_pasv",
     "uuid",
     "xlat_no_trans_pasv",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ftp"

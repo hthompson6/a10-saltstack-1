@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "debug_disable",
+AVAILABLE_PROPERTIES = [
+    "debug_disable",
     "debug_enable",
     "debug_status",
     "detailed",
     "sys_sync",
     "system_sync_verify",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "chassis-infra"

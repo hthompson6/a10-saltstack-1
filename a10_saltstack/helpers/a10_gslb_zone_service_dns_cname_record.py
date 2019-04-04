@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_preference",
+AVAILABLE_PROPERTIES = [
+    "admin_preference",
     "alias_name",
     "as_backup",
     "sampling_enable",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "admin_preference",
     "service_name",
     "service_port",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns-cname-record"

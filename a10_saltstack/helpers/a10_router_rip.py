@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cisco_metric_behavior",
+AVAILABLE_PROPERTIES = [
+    "cisco_metric_behavior",
     "default_information",
     "default_metric",
     "distance_list_cfg",
@@ -32,6 +33,12 @@ AVAILABLE_PROPERTIES = [    "cisco_metric_behavior",
     "timers",
     "uuid",
     "version",
+]
+
+REF_PROPERTIES = [
+    "distribute-list",
+    "offset-list",
+    "redistribute",
 ]
 
 MODULE_NAME = "rip"

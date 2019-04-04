@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ns_name",
+AVAILABLE_PROPERTIES = [
+    "ns_name",
     "sampling_enable",
     "ttl",
     "uuid",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns-ns-record"

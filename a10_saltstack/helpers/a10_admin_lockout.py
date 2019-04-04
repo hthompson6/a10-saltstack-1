@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "duration",
+AVAILABLE_PROPERTIES = [
+    "duration",
     "enable",
     "reset_time",
     "threshold",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "admin-lockout"

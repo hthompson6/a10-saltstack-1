@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "extended_asn_cap",
+AVAILABLE_PROPERTIES = [
+    "extended_asn_cap",
     "nexthop_trigger",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "bgp"

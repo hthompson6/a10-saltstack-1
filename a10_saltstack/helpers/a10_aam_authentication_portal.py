@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "change_password",
+AVAILABLE_PROPERTIES = [
+    "change_password",
     "logo_cfg",
     "logon",
     "logon_fail",
@@ -23,6 +24,13 @@ AVAILABLE_PROPERTIES = [    "change_password",
     "notify_change_password",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "change-password",
+    "logon",
+    "logon-fail",
+    "notify-change-password",
 ]
 
 MODULE_NAME = "portal"

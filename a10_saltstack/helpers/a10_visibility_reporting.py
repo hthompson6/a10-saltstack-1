@@ -15,11 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "notification_template_list",
+AVAILABLE_PROPERTIES = [
+    "notification_template_list",
     "reporting_db",
     "sampling_enable",
     "session_logging",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "notification-template-list",
+    "reporting-db",
 ]
 
 MODULE_NAME = "reporting"

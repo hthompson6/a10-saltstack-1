@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "after_disable",
+AVAILABLE_PROPERTIES = [
+    "after_disable",
     "auto_nat_no_ip_refresh",
     "buff_thresh",
     "buff_thresh_hw_buff",
@@ -76,6 +77,10 @@ AVAILABLE_PROPERTIES = [    "after_disable",
     "ttl_threshold",
     "use_mss_tab",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "conn-rate-limit",
 ]
 
 MODULE_NAME = "common"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "controller",
+AVAILABLE_PROPERTIES = [
+    "controller",
     "difference",
     "enable",
     "fail_break",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "controller",
     "tolerance",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "active-rdt"

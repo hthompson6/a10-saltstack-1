@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable_cfg",
+AVAILABLE_PROPERTIES = [
+    "enable_cfg",
     "notification_cfg",
     "tx_dot1_cfg",
     "tx_tlvs_cfg",
     "uuid",
     "ethernet_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lldp"

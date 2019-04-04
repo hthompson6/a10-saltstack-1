@@ -15,12 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet",
+AVAILABLE_PROPERTIES = [
+    "ethernet",
     "ipv6_addr",
     "mac",
     "trunk",
     "tunnel",
     "uuid",
+    "vlan",
+]
+
+REF_PROPERTIES = [
     "vlan",
 ]
 

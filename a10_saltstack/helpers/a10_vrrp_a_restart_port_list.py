@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet_cfg",
+AVAILABLE_PROPERTIES = [
+    "ethernet_cfg",
     "uuid",
     "vrid_list",
+]
+
+REF_PROPERTIES = [
+    "vrid-list",
 ]
 
 MODULE_NAME = "restart-port-list"

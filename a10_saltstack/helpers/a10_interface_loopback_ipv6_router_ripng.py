@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "rip",
+AVAILABLE_PROPERTIES = [
+    "rip",
     "uuid",
     "loopback_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ripng"

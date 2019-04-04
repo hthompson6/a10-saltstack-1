@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "client_domain_switching",
+AVAILABLE_PROPERTIES = [
+    "client_domain_switching",
     "client_starttls_type",
     "command_disable",
     "a10_name",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "client_domain_switching",
     "service_ready_msg",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "smtp"

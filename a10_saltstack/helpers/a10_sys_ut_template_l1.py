@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto",
+AVAILABLE_PROPERTIES = [
+    "auto",
     "drop",
     "eth_list",
     "length",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "auto",
     "uuid",
     "value",
     "template_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "l1"

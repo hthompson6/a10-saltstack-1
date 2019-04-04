@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "active_rdt",
+AVAILABLE_PROPERTIES = [
+    "active_rdt",
     "auto_map",
     "bw_cost",
     "controller",
@@ -32,6 +33,13 @@ AVAILABLE_PROPERTIES = [    "active_rdt",
     "user_tag",
     "uuid",
     "weight",
+]
+
+REF_PROPERTIES = [
+    "active-rdt",
+    "easy-rdt",
+    "ip-server-list",
+    "slb-dev-list",
 ]
 
 MODULE_NAME = "site"

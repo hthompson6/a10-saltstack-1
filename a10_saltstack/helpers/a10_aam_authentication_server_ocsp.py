@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "instance_list",
+AVAILABLE_PROPERTIES = [
+    "instance_list",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "instance-list",
 ]
 
 MODULE_NAME = "ocsp"

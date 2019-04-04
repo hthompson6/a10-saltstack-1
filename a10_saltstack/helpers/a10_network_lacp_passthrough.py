@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "peer_from",
+AVAILABLE_PROPERTIES = [
+    "peer_from",
     "peer_to",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lacp-passthrough"

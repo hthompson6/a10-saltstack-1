@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all_data_intf",
+AVAILABLE_PROPERTIES = [
+    "all_data_intf",
     "eth_cfg",
     "management",
     "tunnel_cfg",
     "uuid",
     "ve_cfg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ping"

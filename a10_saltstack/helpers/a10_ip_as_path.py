@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
+AVAILABLE_PROPERTIES = [
+    "access_list",
     "action",
     "uuid",
     "value",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "as-path"

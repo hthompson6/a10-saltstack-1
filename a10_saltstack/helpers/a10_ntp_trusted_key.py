@@ -15,8 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "key",
+AVAILABLE_PROPERTIES = [
+    "key",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "key",
 ]
 
 MODULE_NAME = "trusted-key"

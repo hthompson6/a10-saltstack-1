@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
+AVAILABLE_PROPERTIES = [
+    "access_list",
     "action",
     "auto_neg_enable",
     "bfd",
@@ -51,6 +52,19 @@ AVAILABLE_PROPERTIES = [    "access_list",
     "trunk_group_list",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "bfd",
+    "ddos",
+    "ip",
+    "ipv6",
+    "isis",
+    "lldp",
+    "lw-4o6",
+    "map",
+    "nptv6",
+    "trunk-group-list",
 ]
 
 MODULE_NAME = "ethernet"

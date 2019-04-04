@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_list",
+AVAILABLE_PROPERTIES = [
+    "address_list",
     "ipv6_address_list",
     "uuid",
     "withdraw_route",
     "domain_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "health-check-gateway"

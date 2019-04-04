@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "syn_timeout_val",
+AVAILABLE_PROPERTIES = [
+    "syn_timeout_val",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "syn-timeout"

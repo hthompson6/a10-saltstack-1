@@ -15,13 +15,22 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dnskey",
+AVAILABLE_PROPERTIES = [
+    "dnskey",
     "ds",
     "key_rollover",
     "sign_zone_now",
     "standalone",
     "template_list",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "dnskey",
+    "ds",
+    "key-rollover",
+    "sign-zone-now",
+    "template-list",
 ]
 
 MODULE_NAME = "dnssec"

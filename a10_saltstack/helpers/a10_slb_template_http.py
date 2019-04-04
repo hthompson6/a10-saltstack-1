@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "http_100_cont_wait_for_req_complete",
+AVAILABLE_PROPERTIES = [
+    "http_100_cont_wait_for_req_complete",
     "bypass_sg",
     "client_ip_hdr_replace",
     "client_port_hdr_replace",
@@ -69,6 +70,10 @@ AVAILABLE_PROPERTIES = [    "http_100_cont_wait_for_req_complete",
     "use_server_status",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "bypass-sg",
 ]
 
 MODULE_NAME = "http"

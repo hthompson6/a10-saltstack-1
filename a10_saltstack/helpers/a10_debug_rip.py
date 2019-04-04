@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "detail",
     "events",
     "nsm",
     "packet",
     "recv",
     "send",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rip"

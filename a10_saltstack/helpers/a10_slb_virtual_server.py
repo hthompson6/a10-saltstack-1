@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_id",
+AVAILABLE_PROPERTIES = [
+    "acl_id",
     "acl_name",
     "arp_disable",
     "description",
@@ -41,6 +42,17 @@ AVAILABLE_PROPERTIES = [    "acl_id",
     "user_tag",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
+    "acl-id",
+    "acl-name",
+    "ipv6-acl",
+    "migrate-vip",
+    "port-list",
+    "template-logging",
+    "template-policy",
+    "template-virtual-server",
 ]
 
 MODULE_NAME = "virtual-server"

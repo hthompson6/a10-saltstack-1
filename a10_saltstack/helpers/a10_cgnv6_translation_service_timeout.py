@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "fast",
+AVAILABLE_PROPERTIES = [
+    "fast",
     "port",
     "port_end",
     "service_type",
     "timeout_val",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "service-timeout"

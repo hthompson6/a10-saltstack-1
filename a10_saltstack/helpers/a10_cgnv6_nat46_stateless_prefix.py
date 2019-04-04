@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv6_prefix",
+AVAILABLE_PROPERTIES = [
+    "ipv6_prefix",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "prefix"

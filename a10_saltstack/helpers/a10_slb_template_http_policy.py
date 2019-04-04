@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cookie_name",
+AVAILABLE_PROPERTIES = [
+    "cookie_name",
     "geo_location_match",
     "http_policy_match",
     "a10_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "http-policy"

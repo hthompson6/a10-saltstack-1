@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "logging",
     "sampling_enable",
     "template",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "template",
 ]
 
 MODULE_NAME = "dns"

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "local_ip",
+AVAILABLE_PROPERTIES = [
+    "local_ip",
     "nexthop_ip",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "bfd"

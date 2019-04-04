@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "buffer_drop",
+AVAILABLE_PROPERTIES = [
+    "buffer_drop",
     "buffer_usage",
     "conn_type0",
     "conn_type1",
@@ -33,6 +34,9 @@ AVAILABLE_PROPERTIES = [    "buffer_drop",
     "smp_type4",
     "uuid",
     "warn_temp",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "monitor"

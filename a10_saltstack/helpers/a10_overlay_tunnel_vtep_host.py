@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "destination_vtep",
+AVAILABLE_PROPERTIES = [
+    "destination_vtep",
     "ip_addr",
     "overlay_mac_addr",
     "uuid",
     "vni",
     "vtep_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "host"

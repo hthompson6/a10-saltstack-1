@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "category_list_list",
+AVAILABLE_PROPERTIES = [
+    "category_list_list",
     "cloud_query_disable",
     "database_server",
     "db_update_time",
@@ -30,6 +31,11 @@ AVAILABLE_PROPERTIES = [    "category_list_list",
     "ssl_port",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "category-list-list",
+    "proxy-server",
 ]
 
 MODULE_NAME = "web-category"

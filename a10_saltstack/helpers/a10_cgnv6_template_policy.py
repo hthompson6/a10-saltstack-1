@@ -15,10 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "class_list",
+AVAILABLE_PROPERTIES = [
+    "class_list",
     "a10_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "class-list",
 ]
 
 MODULE_NAME = "policy"

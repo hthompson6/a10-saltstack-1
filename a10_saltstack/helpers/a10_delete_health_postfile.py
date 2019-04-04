@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "file_name",
+AVAILABLE_PROPERTIES = [
+    "file_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "health-postfile"

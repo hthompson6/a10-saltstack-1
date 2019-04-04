@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bad_content",
+AVAILABLE_PROPERTIES = [
+    "bad_content",
     "drop_all",
     "frag",
     "ip_option",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "bad_content",
     "tcp_syn_frag",
     "uuid",
     "zero_window",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "anomaly-drop"

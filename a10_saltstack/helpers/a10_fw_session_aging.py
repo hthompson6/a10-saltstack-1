@@ -15,13 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "icmp_idle_timeout",
+AVAILABLE_PROPERTIES = [
+    "icmp_idle_timeout",
     "ip_idle_timeout",
     "a10_name",
     "tcp",
     "udp",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "tcp",
+    "udp",
 ]
 
 MODULE_NAME = "session-aging"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "gslb_device_cfg",
+AVAILABLE_PROPERTIES = [
+    "gslb_device_cfg",
     "gslb_geo_location_cfg",
     "gslb_ip_list_cfg",
     "gslb_policy_cfg",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "gslb_device_cfg",
     "uuid",
     "virtual_server_cfg",
     "template_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "app-resources"

@@ -15,13 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_list",
+AVAILABLE_PROPERTIES = [
+    "action_list",
     "filtering",
     "local_logging",
     "no_client_conn_reuse",
     "source_list",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
+    "action-list",
+    "source-list",
 ]
 
 MODULE_NAME = "forward-policy"

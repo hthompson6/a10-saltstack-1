@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "always",
+AVAILABLE_PROPERTIES = [
+    "always",
     "metric",
     "metric_type",
     "originate",
     "route_map",
     "uuid",
     "ospf_process_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "default-information"

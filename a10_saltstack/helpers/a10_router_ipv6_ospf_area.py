@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "area_ipv4",
+AVAILABLE_PROPERTIES = [
+    "area_ipv4",
     "area_num",
     "default_cost",
     "no_summary",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "area_ipv4",
     "uuid",
     "virtual_link_list",
     "ospf_process_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "area"

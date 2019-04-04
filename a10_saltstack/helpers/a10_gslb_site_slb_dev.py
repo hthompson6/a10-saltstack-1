@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_preference",
+AVAILABLE_PROPERTIES = [
+    "admin_preference",
     "auto_detect",
     "auto_map",
     "client_ip",
@@ -32,6 +33,10 @@ AVAILABLE_PROPERTIES = [    "admin_preference",
     "uuid",
     "vip_server",
     "site_name",
+]
+
+REF_PROPERTIES = [
+    "vip-server",
 ]
 
 MODULE_NAME = "slb-dev"

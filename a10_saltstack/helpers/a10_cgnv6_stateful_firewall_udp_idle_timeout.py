@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "fast",
+AVAILABLE_PROPERTIES = [
+    "fast",
     "idle_timeout_val_port_range",
     "port",
     "port_end",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "idle-timeout"

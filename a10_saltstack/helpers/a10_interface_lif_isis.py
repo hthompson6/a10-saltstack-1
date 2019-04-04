@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication",
+AVAILABLE_PROPERTIES = [
+    "authentication",
     "bfd_cfg",
     "circuit_type",
     "csnp_interval_list",
@@ -33,6 +34,9 @@ AVAILABLE_PROPERTIES = [    "authentication",
     "uuid",
     "wide_metric_list",
     "lif_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "isis"

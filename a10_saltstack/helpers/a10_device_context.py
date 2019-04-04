@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "device_id",
+AVAILABLE_PROPERTIES = [
+    "device_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "device-context"

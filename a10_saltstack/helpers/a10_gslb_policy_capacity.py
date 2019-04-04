@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "capacity_enable",
+AVAILABLE_PROPERTIES = [
+    "capacity_enable",
     "capacity_fail_break",
     "threshold",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "capacity"

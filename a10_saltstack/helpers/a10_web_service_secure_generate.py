@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "country",
+AVAILABLE_PROPERTIES = [
+    "country",
     "domain_name",
     "state",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "generate"

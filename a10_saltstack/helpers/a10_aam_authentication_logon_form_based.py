@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "account_lock",
+AVAILABLE_PROPERTIES = [
+    "account_lock",
     "challenge_variable",
     "cp_page_cfg",
     "duration",
@@ -28,6 +29,9 @@ AVAILABLE_PROPERTIES = [    "account_lock",
     "retry",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "form-based"

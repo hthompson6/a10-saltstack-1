@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cf",
+AVAILABLE_PROPERTIES = [
+    "cf",
     "destination",
     "partition",
     "profile",
     "specified_partition",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "memory"

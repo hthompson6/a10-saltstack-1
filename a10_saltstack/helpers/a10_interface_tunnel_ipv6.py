@@ -15,12 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_cfg",
+AVAILABLE_PROPERTIES = [
+    "address_cfg",
     "ipv6_enable",
     "ospf",
     "router",
     "uuid",
     "tunnel_ifnum",
+]
+
+REF_PROPERTIES = [
+    "ospf",
+    "router",
 ]
 
 MODULE_NAME = "ipv6"

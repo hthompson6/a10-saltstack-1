@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable",
+AVAILABLE_PROPERTIES = [
+    "disable",
     "enable",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "cpu-hyper-thread"

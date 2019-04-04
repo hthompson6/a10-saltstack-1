@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "l1",
     "l2",
     "l3",
     "l4",
     "uuid",
     "template_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ignore-validation"

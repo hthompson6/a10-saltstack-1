@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "active_rdt",
+AVAILABLE_PROPERTIES = [
+    "active_rdt",
     "active_servers_enable",
     "active_servers_fail_break",
     "admin_ip_enable",
@@ -54,6 +55,18 @@ AVAILABLE_PROPERTIES = [    "active_rdt",
     "weighted_ip_total_hits",
     "weighted_site_enable",
     "weighted_site_total_hits",
+]
+
+REF_PROPERTIES = [
+    "active-rdt",
+    "auto-map",
+    "capacity",
+    "connection-load",
+    "dns",
+    "edns",
+    "geo-location-list",
+    "geo-location-match",
+    "ip-list",
 ]
 
 MODULE_NAME = "policy"

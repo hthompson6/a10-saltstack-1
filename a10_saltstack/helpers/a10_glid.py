@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_value",
+AVAILABLE_PROPERTIES = [
+    "action_value",
     "conn_limit",
     "conn_rate_limit",
     "conn_rate_limit_interval",
@@ -32,6 +33,9 @@ AVAILABLE_PROPERTIES = [    "action_value",
     "use_nat_pool",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "glid"

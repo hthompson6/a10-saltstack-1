@@ -15,13 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "application_type",
+AVAILABLE_PROPERTIES = [
+    "application_type",
     "id",
     "partition_name",
     "shared_vlan",
     "template",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "shared-vlan",
+    "template",
 ]
 
 MODULE_NAME = "partition"

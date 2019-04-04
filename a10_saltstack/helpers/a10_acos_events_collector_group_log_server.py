@@ -15,10 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "a10_name",
+AVAILABLE_PROPERTIES = [
+    "a10_name",
     "port",
     "uuid",
     "collector_group_name",
+]
+
+REF_PROPERTIES = [
+    "name",
+    "port",
 ]
 
 MODULE_NAME = "log-server"

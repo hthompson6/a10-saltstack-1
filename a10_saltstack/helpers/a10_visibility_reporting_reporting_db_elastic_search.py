@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "host_ipv4_address",
+AVAILABLE_PROPERTIES = [
+    "host_ipv4_address",
     "host_ipv6_address",
     "host_name",
     "http_port",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "host_ipv4_address",
     "local_host",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "elastic-search"

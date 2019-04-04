@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mask",
+AVAILABLE_PROPERTIES = [
+    "mask",
     "oid",
     "ntype",
     "uuid",
     "viewname",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "view"

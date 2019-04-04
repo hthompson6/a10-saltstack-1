@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "max_cores",
+AVAILABLE_PROPERTIES = [
+    "max_cores",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "io-cpu"

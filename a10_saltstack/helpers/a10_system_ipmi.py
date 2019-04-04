@@ -15,9 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip",
+AVAILABLE_PROPERTIES = [
+    "ip",
     "ipsrc",
     "reset",
+    "tool",
+    "user",
+]
+
+REF_PROPERTIES = [
+    "ip",
+    "ipsrc",
     "tool",
     "user",
 ]

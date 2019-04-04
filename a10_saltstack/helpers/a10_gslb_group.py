@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto_map_learn",
+AVAILABLE_PROPERTIES = [
+    "auto_map_learn",
     "auto_map_primary",
     "auto_map_smart",
     "config_anywhere",
@@ -33,6 +34,9 @@ AVAILABLE_PROPERTIES = [    "auto_map_learn",
     "suffix",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "group"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "add",
+AVAILABLE_PROPERTIES = [
+    "add",
     "administrator",
     "callback",
     "disable",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "add",
     "setname",
     "setpass",
     "user",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "user"

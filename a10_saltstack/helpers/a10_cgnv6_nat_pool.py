@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "end_address",
     "exclude_ip",
     "group",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "usable_nat_ports_start",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "pool"

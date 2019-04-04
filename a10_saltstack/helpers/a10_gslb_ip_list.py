@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "gslb_ip_list_addr_list",
+AVAILABLE_PROPERTIES = [
+    "gslb_ip_list_addr_list",
     "gslb_ip_list_filename",
     "gslb_ip_list_obj_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ip-list"

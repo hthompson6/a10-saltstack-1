@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "authentication",
     "host_name",
     "ipv4_address",
@@ -27,6 +28,10 @@ AVAILABLE_PROPERTIES = [    "action",
     "use_mgmt_port",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "authentication",
 ]
 
 MODULE_NAME = "notification-template"

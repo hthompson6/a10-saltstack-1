@@ -15,12 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "before",
+AVAILABLE_PROPERTIES = [
+    "before",
     "exception",
     "expire_address1",
     "interval_days",
     "ssl_expire_email_address",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "exception",
 ]
 
 MODULE_NAME = "ssl-expire-check"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "global_netmaskv4",
+AVAILABLE_PROPERTIES = [
+    "global_netmaskv4",
     "global_start_ipv4_addr",
     "global_start_ipv6_addr",
     "local_netmaskv4",
@@ -30,6 +31,11 @@ AVAILABLE_PROPERTIES = [    "global_netmaskv4",
     "v6_acl_name",
     "v6_count",
     "v6_vrid",
+]
+
+REF_PROPERTIES = [
+    "v4-vrid",
+    "v6-vrid",
 ]
 
 MODULE_NAME = "range-list"

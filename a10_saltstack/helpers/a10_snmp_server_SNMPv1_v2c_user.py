@@ -15,13 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted",
+AVAILABLE_PROPERTIES = [
+    "encrypted",
     "oid_list",
     "passwd",
     "remote",
     "user",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "oid-list",
 ]
 
 MODULE_NAME = "user"

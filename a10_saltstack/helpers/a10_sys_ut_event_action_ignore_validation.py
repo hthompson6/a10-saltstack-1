@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "l1",
     "l2",
     "l3",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "uuid",
     "action_direction",
     "event_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ignore-validation"

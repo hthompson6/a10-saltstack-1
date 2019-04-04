@@ -15,13 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "match",
     "sequence",
     "set",
     "tag",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "match",
+    "set",
 ]
 
 MODULE_NAME = "route-map"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ack_seq_number",
+AVAILABLE_PROPERTIES = [
+    "ack_seq_number",
     "checksum",
     "dest_port",
     "dest_port_value",
@@ -29,6 +30,11 @@ AVAILABLE_PROPERTIES = [    "ack_seq_number",
     "window",
     "action_direction",
     "event_number",
+]
+
+REF_PROPERTIES = [
+    "flags",
+    "options",
 ]
 
 MODULE_NAME = "tcp"

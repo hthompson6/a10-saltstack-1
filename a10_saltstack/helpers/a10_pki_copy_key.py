@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dest_key",
+AVAILABLE_PROPERTIES = [
+    "dest_key",
     "overwrite",
     "rotation",
     "src_key",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "copy-key"

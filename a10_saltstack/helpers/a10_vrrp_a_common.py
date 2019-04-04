@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "arp_retry",
     "dead_timer",
     "device_id",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "action",
     "set_id",
     "track_event_delay",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "common"

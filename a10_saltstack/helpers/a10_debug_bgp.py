@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "bfd",
     "dampening",
     "events",
@@ -28,6 +29,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "out",
     "updates",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "bgp"

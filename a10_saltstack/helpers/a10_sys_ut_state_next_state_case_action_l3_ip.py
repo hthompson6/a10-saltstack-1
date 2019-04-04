@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet",
+AVAILABLE_PROPERTIES = [
+    "ethernet",
     "ipv4_address",
     "ipv6_address",
     "nat_pool",
@@ -28,6 +29,12 @@ AVAILABLE_PROPERTIES = [    "ethernet",
     "case_number",
     "name",
     "state_name",
+]
+
+REF_PROPERTIES = [
+    "ethernet",
+    "ve",
+    "virtual-server",
 ]
 
 MODULE_NAME = "ip"

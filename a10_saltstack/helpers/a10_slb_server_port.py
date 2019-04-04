@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "alternate_port",
     "auth_cfg",
     "conn_limit",
@@ -38,6 +39,12 @@ AVAILABLE_PROPERTIES = [    "action",
     "uuid",
     "weight",
     "server_name",
+]
+
+REF_PROPERTIES = [
+    "health-check",
+    "template-port",
+    "template-server-ssl",
 ]
 
 MODULE_NAME = "port"

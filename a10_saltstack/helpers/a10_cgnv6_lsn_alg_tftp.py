@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sampling_enable",
+AVAILABLE_PROPERTIES = [
+    "sampling_enable",
     "tftp_value",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "tftp"

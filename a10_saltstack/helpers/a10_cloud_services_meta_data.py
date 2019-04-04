@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "prevent_admin_passwd",
     "prevent_admin_ssh_key",
     "prevent_autofill",
@@ -26,6 +27,9 @@ AVAILABLE_PROPERTIES = [    "action",
     "prevent_webservice",
     "provider",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "meta-data"

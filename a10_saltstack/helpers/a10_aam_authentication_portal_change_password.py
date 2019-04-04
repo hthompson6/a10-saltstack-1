@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_url",
+AVAILABLE_PROPERTIES = [
+    "action_url",
     "background",
     "cfm_pwd_cfg",
     "confirm_password_var",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "action_url",
     "username_var",
     "uuid",
     "portal_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "change-password"

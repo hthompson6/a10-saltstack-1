@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "check_now",
+AVAILABLE_PROPERTIES = [
+    "check_now",
     "checknow",
     "config_list",
     "info",
@@ -24,6 +25,16 @@ AVAILABLE_PROPERTIES = [    "check_now",
     "revert",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "check-now",
+    "checknow",
+    "config-list",
+    "info",
+    "proxy-server",
+    "reset",
+    "revert",
 ]
 
 MODULE_NAME = "automatic-update"

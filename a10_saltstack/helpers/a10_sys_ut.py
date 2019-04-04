@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "common",
     "event_list",
     "run_test",
@@ -23,6 +24,14 @@ AVAILABLE_PROPERTIES = [    "action",
     "template_list",
     "test_name",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "common",
+    "event-list",
+    "run-test",
+    "state-list",
+    "template-list",
 ]
 
 MODULE_NAME = "sys-ut"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "gtp_filter_list",
+AVAILABLE_PROPERTIES = [
+    "gtp_filter_list",
     "gtp_v2",
     "log",
     "mandatory_ie_filtering",
@@ -25,6 +26,10 @@ AVAILABLE_PROPERTIES = [    "gtp_filter_list",
     "tunnel_timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "gtp-filter-list",
 ]
 
 MODULE_NAME = "gtp"

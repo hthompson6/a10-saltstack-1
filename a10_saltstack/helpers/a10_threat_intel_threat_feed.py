@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "domain",
+AVAILABLE_PROPERTIES = [
+    "domain",
     "enable",
     "encrypted",
     "log_level",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "domain",
     "use_mgmt_port",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "threat-feed"

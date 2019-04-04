@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cpu_usage",
+AVAILABLE_PROPERTIES = [
+    "cpu_usage",
     "eth_list",
     "http_counter",
     "uuid",
     "ve_list",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "polling"

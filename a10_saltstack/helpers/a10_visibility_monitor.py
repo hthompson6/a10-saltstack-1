@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "class_list",
+AVAILABLE_PROPERTIES = [
+    "class_list",
     "index_sessions",
     "index_sessions_type",
     "primary_monitor",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "class_list",
     "traffic_key",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "monitor"

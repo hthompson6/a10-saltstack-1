@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "cfg",
     "clb",
     "flow",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "llb",
     "slb",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lb"

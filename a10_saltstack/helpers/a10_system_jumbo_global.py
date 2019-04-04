@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable_jumbo",
+AVAILABLE_PROPERTIES = [
+    "enable_jumbo",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "system-jumbo-global"

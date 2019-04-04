@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "nscan_limit",
+AVAILABLE_PROPERTIES = [
+    "nscan_limit",
     "scan_freq",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "session-reclaim-limit"

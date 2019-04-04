@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "external_ip",
     "health_check",
     "health_check_disable",
@@ -28,6 +29,11 @@ AVAILABLE_PROPERTIES = [    "action",
     "sampling_enable",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "health-check",
+    "port-list",
 ]
 
 MODULE_NAME = "service-ip"

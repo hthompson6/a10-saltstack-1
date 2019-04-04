@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "uuid",
+AVAILABLE_PROPERTIES = [
+    "uuid",
     "rule_set_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "app"

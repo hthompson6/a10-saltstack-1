@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_cfg",
+AVAILABLE_PROPERTIES = [
+    "ip_cfg",
     "ipv6_cfg",
     "service_group",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "destination"

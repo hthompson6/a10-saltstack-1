@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "anycast",
+AVAILABLE_PROPERTIES = [
+    "anycast",
     "ipv6_address",
     "link_local",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "address"

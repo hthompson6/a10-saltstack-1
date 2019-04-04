@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aggregate_address_list",
+AVAILABLE_PROPERTIES = [
+    "aggregate_address_list",
     "auto_summary",
     "bgp",
     "distance",
@@ -27,6 +28,12 @@ AVAILABLE_PROPERTIES = [    "aggregate_address_list",
     "synchronization",
     "uuid",
     "bgp_as_number",
+]
+
+REF_PROPERTIES = [
+    "neighbor",
+    "network",
+    "redistribute",
 ]
 
 MODULE_NAME = "ipv6"

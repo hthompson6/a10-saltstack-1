@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_list",
+AVAILABLE_PROPERTIES = [
+    "address_list",
     "allow_promiscuous_vip",
     "cache_spoofing_port",
     "dhcp",
@@ -29,6 +30,12 @@ AVAILABLE_PROPERTIES = [    "address_list",
     "router",
     "uuid",
     "lif_ifnum",
+]
+
+REF_PROPERTIES = [
+    "ospf",
+    "rip",
+    "router",
 ]
 
 MODULE_NAME = "ip"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "bypass_ip_cfg",
     "fail_close",
     "include_protocol_in_uri",
@@ -30,6 +31,14 @@ AVAILABLE_PROPERTIES = [    "action",
     "tcp_proxy",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "logging",
+    "server-ssl",
+    "service-group",
+    "source-ip",
+    "tcp-proxy",
 ]
 
 MODULE_NAME = "respmod-icap"

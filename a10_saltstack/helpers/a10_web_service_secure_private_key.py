@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "file_url",
+AVAILABLE_PROPERTIES = [
+    "file_url",
     "load",
     "use_mgmt_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "private-key"

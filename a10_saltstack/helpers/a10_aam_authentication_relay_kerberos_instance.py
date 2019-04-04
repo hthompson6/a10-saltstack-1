@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted",
+AVAILABLE_PROPERTIES = [
+    "encrypted",
     "kerberos_account",
     "kerberos_kdc",
     "kerberos_kdc_service_group",
@@ -27,6 +28,10 @@ AVAILABLE_PROPERTIES = [    "encrypted",
     "secret_string",
     "timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "kerberos-kdc-service-group",
 ]
 
 MODULE_NAME = "instance"

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "resource_accounting",
+AVAILABLE_PROPERTIES = [
+    "resource_accounting",
     "uuid",
     "partition_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "template"

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "severity_val",
+AVAILABLE_PROPERTIES = [
+    "severity_val",
     "uuid",
     "message_id_log_msg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "severity"

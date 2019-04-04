@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "isis",
+AVAILABLE_PROPERTIES = [
+    "isis",
     "redist_list",
     "uuid",
     "vip_list",
     "isis_tag",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "redistribute"

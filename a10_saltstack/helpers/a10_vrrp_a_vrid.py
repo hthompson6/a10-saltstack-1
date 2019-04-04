@@ -15,13 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "blade_parameters",
+AVAILABLE_PROPERTIES = [
+    "blade_parameters",
     "floating_ip",
     "follow",
     "preempt_mode",
     "user_tag",
     "uuid",
     "vrid_val",
+]
+
+REF_PROPERTIES = [
+    "blade-parameters",
 ]
 
 MODULE_NAME = "vrid"

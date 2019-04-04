@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list_cfg",
+AVAILABLE_PROPERTIES = [
+    "access_list_cfg",
     "address_list",
     "inside",
     "ipv6_enable",
@@ -28,6 +29,13 @@ AVAILABLE_PROPERTIES = [    "access_list_cfg",
     "ttl_ignore",
     "uuid",
     "ethernet_ifnum",
+]
+
+REF_PROPERTIES = [
+    "ospf",
+    "rip",
+    "router",
+    "stateful-firewall",
 ]
 
 MODULE_NAME = "ipv6"

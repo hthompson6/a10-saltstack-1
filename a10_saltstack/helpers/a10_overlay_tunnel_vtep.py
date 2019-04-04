@@ -15,13 +15,20 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "destination_ip_address_list",
+AVAILABLE_PROPERTIES = [
+    "destination_ip_address_list",
     "encap",
     "host_list",
     "id",
     "source_ip_address",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "destination-ip-address-list",
+    "host-list",
+    "source-ip-address",
 ]
 
 MODULE_NAME = "vtep"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_family",
+AVAILABLE_PROPERTIES = [
+    "address_family",
     "adjacency_check",
     "area_password_cfg",
     "authentication",
@@ -41,6 +42,11 @@ AVAILABLE_PROPERTIES = [    "address_family",
     "tag",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "address-family",
+    "redistribute",
 ]
 
 MODULE_NAME = "isis"

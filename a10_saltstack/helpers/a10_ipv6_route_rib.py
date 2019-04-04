@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv6_address",
+AVAILABLE_PROPERTIES = [
+    "ipv6_address",
     "ipv6_nexthop_ipv6",
     "ipv6_nexthop_tunnel",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rib"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "auto",
     "pool",
     "port_number",
@@ -28,6 +29,13 @@ AVAILABLE_PROPERTIES = [    "action",
     "user_tag",
     "uuid",
     "dns64_virtualserver_name",
+]
+
+REF_PROPERTIES = [
+    "pool",
+    "service-group",
+    "template-dns",
+    "template-policy",
 ]
 
 MODULE_NAME = "port"

@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "a10_name",
+AVAILABLE_PROPERTIES = [
+    "a10_name",
     "tunnel_address_list",
     "user_tag",
+]
+
+REF_PROPERTIES = [
+    "tunnel-address-list",
 ]
 
 MODULE_NAME = "binding-table"

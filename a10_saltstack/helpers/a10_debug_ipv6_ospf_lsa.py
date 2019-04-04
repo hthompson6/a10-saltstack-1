@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "flooding",
+AVAILABLE_PROPERTIES = [
+    "flooding",
     "gererate",
     "install",
     "maxage",
     "refresh",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lsa"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv4_acl_line_cfg",
+AVAILABLE_PROPERTIES = [
+    "ipv4_acl_line_cfg",
     "ipv6_acl_line_cfg",
     "object_group_cfg",
     "object_group_clause_cfg",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "ipv4_acl_line_cfg",
     "threshold",
     "uuid",
     "template_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "network-resources"

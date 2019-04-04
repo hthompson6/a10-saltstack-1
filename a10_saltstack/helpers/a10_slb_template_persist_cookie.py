@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cookie_name",
+AVAILABLE_PROPERTIES = [
+    "cookie_name",
     "domain",
     "dont_honor_conn_rules",
     "encrypt_level",
@@ -35,6 +36,9 @@ AVAILABLE_PROPERTIES = [    "cookie_name",
     "service_group",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "cookie"

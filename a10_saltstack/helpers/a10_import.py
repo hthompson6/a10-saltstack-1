@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aflex",
+AVAILABLE_PROPERTIES = [
+    "aflex",
     "auth_portal",
     "auth_portal_image",
     "auth_saml_idp",
@@ -57,6 +58,14 @@ AVAILABLE_PROPERTIES = [    "aflex",
     "web_category_license",
     "wsdl",
     "xml_schema",
+]
+
+REF_PROPERTIES = [
+    "auth-saml-idp",
+    "health-external",
+    "health-postfile",
+    "store",
+    "to-device",
 ]
 
 MODULE_NAME = "import"

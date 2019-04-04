@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bucket_count",
+AVAILABLE_PROPERTIES = [
+    "bucket_count",
     "device_group",
     "a10_name",
     "user_tag",
     "uuid",
     "cluster_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "template"

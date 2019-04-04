@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "partition",
+AVAILABLE_PROPERTIES = [
+    "partition",
     "user_tag",
     "uuid",
     "vrid_lead_str",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "vrid-lead"

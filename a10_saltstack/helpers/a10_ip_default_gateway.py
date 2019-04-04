@@ -15,8 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "gateway_ip",
+AVAILABLE_PROPERTIES = [
+    "gateway_ip",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "gateway-ip",
 ]
 
 MODULE_NAME = "default-gateway"

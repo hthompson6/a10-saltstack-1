@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "num_ctrl_cpus",
+AVAILABLE_PROPERTIES = [
+    "num_ctrl_cpus",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "multi-ctrl-cpu"

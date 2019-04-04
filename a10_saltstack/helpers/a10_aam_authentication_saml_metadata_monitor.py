@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acs_continuous_fail_threshold",
+AVAILABLE_PROPERTIES = [
+    "acs_continuous_fail_threshold",
     "acs_missing_period",
     "acs_missing_threshold",
     "status",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "metadata-monitor"

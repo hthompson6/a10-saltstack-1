@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "facility",
+AVAILABLE_PROPERTIES = [
+    "facility",
     "format",
     "include_http",
     "include_radius_attribute",
@@ -28,6 +29,11 @@ AVAILABLE_PROPERTIES = [    "facility",
     "source_address",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "service-group",
+    "source-address",
 ]
 
 MODULE_NAME = "logging"

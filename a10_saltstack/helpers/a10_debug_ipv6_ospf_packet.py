@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dd",
+AVAILABLE_PROPERTIES = [
+    "dd",
     "detail",
     "hello",
     "ls_ack",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "dd",
     "recv",
     "send",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "packet"

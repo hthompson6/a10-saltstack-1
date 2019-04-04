@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "br_ipv4_address",
+AVAILABLE_PROPERTIES = [
+    "br_ipv4_address",
     "ce_ipv4_netmask",
     "ce_ipv4_network",
     "ipv6_prefix",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "br_ipv4_address",
     "sampling_enable",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "domain"

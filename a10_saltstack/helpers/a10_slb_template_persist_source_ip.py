@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dont_honor_conn_rules",
+AVAILABLE_PROPERTIES = [
+    "dont_honor_conn_rules",
     "enforce_higher_priority",
     "hash_persist",
     "incl_dst_ip",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "dont_honor_conn_rules",
     "timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "source-ip"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_type",
+AVAILABLE_PROPERTIES = [
+    "address_type",
     "ethernet",
     "nat_pool",
     "src_dst",
@@ -26,6 +27,12 @@ AVAILABLE_PROPERTIES = [    "address_type",
     "virtual_server",
     "action_direction",
     "event_number",
+]
+
+REF_PROPERTIES = [
+    "ethernet",
+    "ve",
+    "virtual-server",
 ]
 
 MODULE_NAME = "mac"

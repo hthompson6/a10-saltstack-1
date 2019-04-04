@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "daemon",
+AVAILABLE_PROPERTIES = [
+    "daemon",
     "daemon_msg",
     "election",
     "election_pdu",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "daemon",
     "vblade_msg",
     "vmaster",
     "vmaster_msg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "debug"

@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sampling_enable",
+AVAILABLE_PROPERTIES = [
+    "sampling_enable",
     "rule_set_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "track-app-rule-list"

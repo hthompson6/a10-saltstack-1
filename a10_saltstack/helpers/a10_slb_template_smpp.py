@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "client_enquire_link",
+AVAILABLE_PROPERTIES = [
+    "client_enquire_link",
     "a10_name",
     "password",
     "server_enquire_link",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "client_enquire_link",
     "user",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "smpp"

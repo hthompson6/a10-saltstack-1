@@ -15,9 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "default_privilege_read_write",
+AVAILABLE_PROPERTIES = [
+    "default_privilege_read_write",
     "host",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "host",
 ]
 
 MODULE_NAME = "radius-server"

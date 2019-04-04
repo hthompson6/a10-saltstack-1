@@ -15,12 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable",
+AVAILABLE_PROPERTIES = [
+    "disable",
     "enable",
     "enable_disable_action",
     "nat_address",
     "src_address",
     "uuid",
+    "vrid",
+]
+
+REF_PROPERTIES = [
     "vrid",
 ]
 

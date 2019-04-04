@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bcast",
+AVAILABLE_PROPERTIES = [
+    "bcast",
     "ipmcast",
     "mcast",
     "unknown_ucast",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "per-vlan-limit"

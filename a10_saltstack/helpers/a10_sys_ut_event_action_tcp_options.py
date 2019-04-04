@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mss",
+AVAILABLE_PROPERTIES = [
+    "mss",
     "nop",
     "sack_type",
     "time_stamp_enable",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "mss",
     "wscale",
     "action_direction",
     "event_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "options"

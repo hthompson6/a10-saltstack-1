@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "connected",
+AVAILABLE_PROPERTIES = [
+    "connected",
     "ebgp",
     "ibgp",
     "isis",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "connected",
     "rip",
     "static",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "suppress-protocols"

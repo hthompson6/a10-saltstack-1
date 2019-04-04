@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "attempt_port_preservation",
+AVAILABLE_PROPERTIES = [
+    "attempt_port_preservation",
     "hairpinning",
     "half_close_timeout",
     "icmp",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "attempt_port_preservation",
     "port_batching",
     "syn_timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "global"

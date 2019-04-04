@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_val",
+AVAILABLE_PROPERTIES = [
+    "auth_val",
     "encpasswd",
     "group",
     "passwd",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "auth_val",
     "username",
     "uuid",
     "v3",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "user"

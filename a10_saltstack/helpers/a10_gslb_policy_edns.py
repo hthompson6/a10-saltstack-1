@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "client_subnet_geographic",
+AVAILABLE_PROPERTIES = [
+    "client_subnet_geographic",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "edns"

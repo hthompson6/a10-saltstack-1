@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mailfrom",
+AVAILABLE_PROPERTIES = [
+    "mailfrom",
     "needauthentication",
     "port",
     "smtp_server",
     "smtp_server_v6",
     "username_cfg",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "smtp"

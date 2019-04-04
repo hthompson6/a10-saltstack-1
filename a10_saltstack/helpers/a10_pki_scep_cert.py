@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dn",
+AVAILABLE_PROPERTIES = [
+    "dn",
     "encrypted",
     "enroll",
     "interval",
@@ -37,6 +38,9 @@ AVAILABLE_PROPERTIES = [    "dn",
     "url",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "scep-cert"

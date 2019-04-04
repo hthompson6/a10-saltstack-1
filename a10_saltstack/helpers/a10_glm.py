@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "allocate_bandwidth",
+AVAILABLE_PROPERTIES = [
+    "allocate_bandwidth",
     "appliance_name",
     "enable_requests",
     "enterprise",
@@ -26,6 +27,11 @@ AVAILABLE_PROPERTIES = [    "allocate_bandwidth",
     "token",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "proxy-server",
+    "send",
 ]
 
 MODULE_NAME = "glm"

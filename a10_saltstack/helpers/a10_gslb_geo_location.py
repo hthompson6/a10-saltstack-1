@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "geo_locn_multiple_addresses",
+AVAILABLE_PROPERTIES = [
+    "geo_locn_multiple_addresses",
     "geo_locn_obj_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "geo-location"

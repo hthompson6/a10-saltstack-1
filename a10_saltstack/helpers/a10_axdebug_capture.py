@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "brief",
+AVAILABLE_PROPERTIES = [
+    "brief",
     "current_slot",
     "detail",
     "incoming",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "brief",
     "outgoing",
     "port_num",
     "save",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "capture"

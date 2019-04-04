@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cert",
+AVAILABLE_PROPERTIES = [
+    "cert",
     "disable_sslv2hello",
     "https",
     "https_encrypted",
@@ -46,6 +47,9 @@ AVAILABLE_PROPERTIES = [    "cert",
     "uuid",
     "web_port",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "https"

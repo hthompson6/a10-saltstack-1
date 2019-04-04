@@ -15,11 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "fail_over_policy_template",
+AVAILABLE_PROPERTIES = [
+    "fail_over_policy_template",
     "priority",
     "tracking_options",
     "uuid",
     "vrid_val",
+]
+
+REF_PROPERTIES = [
+    "fail-over-policy-template",
+    "tracking-options",
 ]
 
 MODULE_NAME = "blade-parameters"

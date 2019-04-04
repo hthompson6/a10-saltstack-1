@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "control_cpu_high",
     "data_cpu_high",
     "fan",
@@ -33,6 +34,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "shutdown",
     "start",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "system"

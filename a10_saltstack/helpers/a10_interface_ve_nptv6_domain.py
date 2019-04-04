@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bind_type",
+AVAILABLE_PROPERTIES = [
+    "bind_type",
     "domain_name",
     "uuid",
     "ve_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "domain"

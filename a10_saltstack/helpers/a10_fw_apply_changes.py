@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "forced",
+AVAILABLE_PROPERTIES = [
+    "forced",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "apply-changes"

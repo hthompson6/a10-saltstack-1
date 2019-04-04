@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dnssec_key_type",
+AVAILABLE_PROPERTIES = [
+    "dnssec_key_type",
     "ds_ready_in_parent_zone",
     "ksk_start",
     "zone_name",
     "zsk_start",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "key-rollover"

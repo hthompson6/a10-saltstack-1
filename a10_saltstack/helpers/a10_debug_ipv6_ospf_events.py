@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "abr",
+AVAILABLE_PROPERTIES = [
+    "abr",
     "asbr",
     "os",
     "router",
     "uuid",
     "vlink",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "events"

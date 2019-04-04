@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_value",
+AVAILABLE_PROPERTIES = [
+    "action_value",
     "conn_limit",
     "conn_per",
     "conn_rate_limit",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "action_value",
     "user_tag",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "lid"

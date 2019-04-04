@@ -15,11 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "interface",
+AVAILABLE_PROPERTIES = [
+    "interface",
     "local_zone_cfg",
     "a10_name",
     "user_tag",
     "uuid",
+    "vlan",
+]
+
+REF_PROPERTIES = [
+    "interface",
+    "local-zone-cfg",
     "vlan",
 ]
 

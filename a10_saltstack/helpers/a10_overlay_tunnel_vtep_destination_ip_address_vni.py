@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "segment",
+AVAILABLE_PROPERTIES = [
+    "segment",
     "uuid",
     "destination_ip_address_ip_address",
     "vtep_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "vni"

@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "expect_response_code",
+AVAILABLE_PROPERTIES = [
+    "expect_response_code",
     "register",
     "sip",
     "sip_port",
     "sip_tcp",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "sip"

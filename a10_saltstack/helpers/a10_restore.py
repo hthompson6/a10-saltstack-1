@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "remote_file",
+AVAILABLE_PROPERTIES = [
+    "remote_file",
     "use_mgmt_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "restore"

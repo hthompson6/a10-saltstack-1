@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "device_group",
+AVAILABLE_PROPERTIES = [
+    "device_group",
     "device_id_list",
     "user_tag",
     "uuid",
     "cluster_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "device-group"

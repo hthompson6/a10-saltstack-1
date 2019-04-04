@@ -15,7 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "curr_part_name",
+AVAILABLE_PROPERTIES = [
+    "curr_part_name",
+]
+
+REF_PROPERTIES = [
+    "curr_part_name",
 ]
 
 MODULE_NAME = "active-service-partition"

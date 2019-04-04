@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "apply_config",
+AVAILABLE_PROPERTIES = [
+    "apply_config",
     "capture",
     "count",
     "delete_file_list",
@@ -28,6 +29,11 @@ AVAILABLE_PROPERTIES = [    "apply_config",
     "save_config",
     "sess_filter_dis",
     "timeout",
+]
+
+REF_PROPERTIES = [
+    "capture",
+    "filter-config",
 ]
 
 MODULE_NAME = "axdebug"

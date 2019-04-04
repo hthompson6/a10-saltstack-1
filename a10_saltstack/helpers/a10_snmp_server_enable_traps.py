@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "gslb",
     "lldp",
     "lsn",
@@ -29,6 +30,20 @@ AVAILABLE_PROPERTIES = [    "all",
     "uuid",
     "vcs",
     "vrrp_a",
+]
+
+REF_PROPERTIES = [
+    "gslb",
+    "lsn",
+    "network",
+    "routing",
+    "slb",
+    "slb-change",
+    "snmp",
+    "ssl",
+    "system",
+    "vcs",
+    "vrrp-a",
 ]
 
 MODULE_NAME = "traps"

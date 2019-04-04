@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dont_honor_conn_rules",
+AVAILABLE_PROPERTIES = [
+    "dont_honor_conn_rules",
     "a10_name",
     "timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ssl-sid"

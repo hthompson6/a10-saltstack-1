@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "backup_server_event_log",
+AVAILABLE_PROPERTIES = [
+    "backup_server_event_log",
     "conn_rate",
     "conn_rate_duration",
     "conn_rate_grace_period",
@@ -65,6 +66,15 @@ AVAILABLE_PROPERTIES = [    "backup_server_event_log",
     "traffic_replication_mirror_sa_repl",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "health-check",
+    "member-list",
+    "reset",
+    "template-policy",
+    "template-port",
+    "template-server",
 ]
 
 MODULE_NAME = "service-group"

@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet",
+AVAILABLE_PROPERTIES = [
+    "ethernet",
     "mirror_dir",
     "mirror_index",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "mirror-port"

@@ -15,10 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "host",
+AVAILABLE_PROPERTIES = [
+    "host",
     "interval",
     "monitor",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "host",
 ]
 
 MODULE_NAME = "tacacs-server"

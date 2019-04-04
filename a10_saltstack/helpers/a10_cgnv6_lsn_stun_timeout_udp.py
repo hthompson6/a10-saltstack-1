@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port_end",
+AVAILABLE_PROPERTIES = [
+    "port_end",
     "port_start",
     "timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "udp"

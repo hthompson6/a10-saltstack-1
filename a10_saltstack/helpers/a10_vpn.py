@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "asymmetric_flow_support",
+AVAILABLE_PROPERTIES = [
+    "asymmetric_flow_support",
     "error",
     "fragment_after_encap",
     "ike_gateway_list",
@@ -30,6 +31,14 @@ AVAILABLE_PROPERTIES = [    "asymmetric_flow_support",
     "stateful_mode",
     "tcp_mss_adjust_disable",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "error",
+    "ike-gateway-list",
+    "ike-stats-global",
+    "ipsec-list",
+    "revocation-list",
 ]
 
 MODULE_NAME = "vpn"

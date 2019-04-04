@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "inside",
+AVAILABLE_PROPERTIES = [
+    "inside",
     "outside",
     "uuid",
     "trunk_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "translation"

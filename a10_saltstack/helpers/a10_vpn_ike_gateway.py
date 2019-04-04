@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_method",
+AVAILABLE_PROPERTIES = [
+    "auth_method",
     "dh_group",
     "dpd",
     "enc_cfg",
@@ -39,6 +40,9 @@ AVAILABLE_PROPERTIES = [    "auth_method",
     "user_tag",
     "uuid",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ike-gateway"

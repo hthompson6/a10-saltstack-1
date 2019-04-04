@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "inside",
+AVAILABLE_PROPERTIES = [
+    "inside",
     "inside_addr",
     "inside_end_port",
     "inside_start_port",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "inside",
     "nat_start_port",
     "tunnel_dest_address",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "port-reservation"

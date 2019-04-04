@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "respond_to_user_mac",
+AVAILABLE_PROPERTIES = [
+    "respond_to_user_mac",
     "sampling_enable",
     "stateful_firewall_value",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "global"

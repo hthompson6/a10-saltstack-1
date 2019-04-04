@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "file_url",
+AVAILABLE_PROPERTIES = [
+    "file_url",
     "generate",
     "load",
     "regenerate",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "file_url",
     "size",
     "use_mgmt_port",
     "wipe",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "sshd"

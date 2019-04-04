@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aaa_rule_list",
+AVAILABLE_PROPERTIES = [
+    "aaa_rule_list",
     "a10_name",
     "sampling_enable",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "aaa-rule-list",
 ]
 
 MODULE_NAME = "aaa-policy"

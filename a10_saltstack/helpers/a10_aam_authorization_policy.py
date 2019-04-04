@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "attribute_list",
+AVAILABLE_PROPERTIES = [
+    "attribute_list",
     "attribute_rule",
     "extended_filter",
     "forward_policy_authorize_only",
@@ -24,6 +25,12 @@ AVAILABLE_PROPERTIES = [    "attribute_list",
     "service_group",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "attribute-list",
+    "server",
+    "service-group",
 ]
 
 MODULE_NAME = "policy"

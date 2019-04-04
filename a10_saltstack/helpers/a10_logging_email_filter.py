@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "expression",
+AVAILABLE_PROPERTIES = [
+    "expression",
     "filter_id",
     "trigger",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "filter"

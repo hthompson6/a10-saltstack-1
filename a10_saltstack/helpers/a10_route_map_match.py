@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "as_path",
+AVAILABLE_PROPERTIES = [
+    "as_path",
     "community",
     "extcommunity",
     "group",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "as_path",
     "sequence",
     "action",
     "route_map_tag",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "match"

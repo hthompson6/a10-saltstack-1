@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mail_from",
+AVAILABLE_PROPERTIES = [
+    "mail_from",
     "rcpt_to",
     "smtp",
     "smtp_domain",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "mail_from",
     "smtp_starttls",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "smtp"

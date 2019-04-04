@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dest_profile",
+AVAILABLE_PROPERTIES = [
+    "dest_profile",
     "dest_remote_file",
     "dest_use_mgmt_port",
     "profile",
@@ -26,6 +27,9 @@ AVAILABLE_PROPERTIES = [    "dest_profile",
     "to_running_config",
     "to_startup_config",
     "use_mgmt_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "copy"

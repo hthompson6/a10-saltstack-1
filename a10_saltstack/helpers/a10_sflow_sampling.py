@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "eth_list",
+AVAILABLE_PROPERTIES = [
+    "eth_list",
     "uuid",
     "ve_list",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "sampling"

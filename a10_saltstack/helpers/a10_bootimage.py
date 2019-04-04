@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cf_cfg",
+AVAILABLE_PROPERTIES = [
+    "cf_cfg",
     "hd_cfg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "bootimage"

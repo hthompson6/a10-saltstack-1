@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sampling_enable",
+AVAILABLE_PROPERTIES = [
+    "sampling_enable",
     "uuid",
     "vip_name",
     "slb_dev_device_name",
     "site_name",
+]
+
+REF_PROPERTIES = [
+    "vip-name",
 ]
 
 MODULE_NAME = "vip-server-name"

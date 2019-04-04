@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto_redirt_disable",
+AVAILABLE_PROPERTIES = [
+    "auto_redirt_disable",
     "axapi_idle",
     "axapi_session_limit",
     "login_message",
@@ -25,6 +26,10 @@ AVAILABLE_PROPERTIES = [    "auto_redirt_disable",
     "secure_server_disable",
     "server_disable",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "secure",
 ]
 
 MODULE_NAME = "web-service"

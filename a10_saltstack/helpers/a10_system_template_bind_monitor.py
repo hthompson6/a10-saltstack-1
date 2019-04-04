@@ -15,8 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "template_monitor",
+AVAILABLE_PROPERTIES = [
+    "template_monitor",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "template-monitor",
 ]
 
 MODULE_NAME = "monitor"

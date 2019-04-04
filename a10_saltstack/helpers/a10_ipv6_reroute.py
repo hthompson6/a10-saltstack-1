@@ -15,8 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "suppress_protocols",
+AVAILABLE_PROPERTIES = [
+    "suppress_protocols",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "suppress-protocols",
 ]
 
 MODULE_NAME = "reroute"

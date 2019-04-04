@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "accounting_exec_method",
+AVAILABLE_PROPERTIES = [
+    "accounting_exec_method",
     "accounting_exec_type",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "exec"

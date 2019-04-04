@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted",
+AVAILABLE_PROPERTIES = [
+    "encrypted",
     "header_name_client_ip",
     "header_name_msisdn",
     "include_tunnel_ip",
@@ -30,6 +31,10 @@ AVAILABLE_PROPERTIES = [    "encrypted",
     "timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "radius-sg",
 ]
 
 MODULE_NAME = "http-alg"

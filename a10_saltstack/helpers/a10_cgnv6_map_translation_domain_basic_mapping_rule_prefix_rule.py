@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv4_netmask",
+AVAILABLE_PROPERTIES = [
+    "ipv4_netmask",
     "a10_name",
     "rule_ipv4_prefix",
     "rule_ipv6_prefix",
     "user_tag",
     "uuid",
     "domain_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "prefix-rule"

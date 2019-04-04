@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "time_cfg",
+AVAILABLE_PROPERTIES = [
+    "time_cfg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "set"

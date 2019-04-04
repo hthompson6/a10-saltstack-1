@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
+AVAILABLE_PROPERTIES = [
+    "access_list",
     "acl_name",
     "class_list",
     "inside",
     "outside",
     "uuid",
     "trunk_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "stateful-firewall"

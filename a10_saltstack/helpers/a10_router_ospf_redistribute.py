@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_nat",
+AVAILABLE_PROPERTIES = [
+    "ip_nat",
     "ip_nat_floating_list",
     "metric_ip_nat",
     "metric_type_ip_nat",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "ip_nat",
     "vip_floating_list",
     "vip_list",
     "ospf_process_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "redistribute"

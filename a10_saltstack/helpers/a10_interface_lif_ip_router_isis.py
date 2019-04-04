@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "tag",
+AVAILABLE_PROPERTIES = [
+    "tag",
     "uuid",
     "lif_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "isis"

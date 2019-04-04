@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "health_check",
+AVAILABLE_PROPERTIES = [
+    "health_check",
     "health_check_disable",
     "health_check_string",
     "a10_name",
@@ -26,6 +27,11 @@ AVAILABLE_PROPERTIES = [    "health_check",
     "sampling_enable",
     "url",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "health-check-string",
+    "port-health-check",
 ]
 
 MODULE_NAME = "instance"

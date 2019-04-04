@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "allow_third_party_from_lan",
+AVAILABLE_PROPERTIES = [
+    "allow_third_party_from_lan",
     "allow_third_party_from_wan",
     "announce",
     "check_client_nonce",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "allow_third_party_from_lan",
     "source_ipv6",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "pcp"

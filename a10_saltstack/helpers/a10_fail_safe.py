@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable_failsafe",
+AVAILABLE_PROPERTIES = [
+    "disable_failsafe",
     "fpga_buff_recovery_threshold",
     "hw_error_monitor",
     "hw_error_recovery_timeout",
@@ -26,6 +27,10 @@ AVAILABLE_PROPERTIES = [    "disable_failsafe",
     "sw_error_recovery_timeout",
     "total_memory_size_check",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "disable-failsafe",
 ]
 
 MODULE_NAME = "fail-safe"

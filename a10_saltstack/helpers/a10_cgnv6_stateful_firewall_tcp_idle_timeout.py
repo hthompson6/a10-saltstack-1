@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "idle_timeout_val_port_range",
+AVAILABLE_PROPERTIES = [
+    "idle_timeout_val_port_range",
     "port",
     "port_end",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "idle-timeout"

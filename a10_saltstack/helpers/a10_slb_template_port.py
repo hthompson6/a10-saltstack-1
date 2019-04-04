@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "add",
+AVAILABLE_PROPERTIES = [
+    "add",
     "bw_rate_limit",
     "bw_rate_limit_duration",
     "bw_rate_limit_no_logging",
@@ -57,6 +58,11 @@ AVAILABLE_PROPERTIES = [    "add",
     "user_tag",
     "uuid",
     "weight",
+]
+
+REF_PROPERTIES = [
+    "health-check",
+    "source-nat",
 ]
 
 MODULE_NAME = "port"

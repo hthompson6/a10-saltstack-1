@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "df_bit_value",
+AVAILABLE_PROPERTIES = [
+    "df_bit_value",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "df-bit-transparency"

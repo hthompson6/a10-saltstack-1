@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "Device",
+AVAILABLE_PROPERTIES = [
+    "Device",
     "file_url",
     "image",
     "local",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "Device",
     "source_ip_address",
     "staggered_upgrade_mode",
     "use_mgmt_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "hd"

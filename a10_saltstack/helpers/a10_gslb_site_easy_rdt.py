@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aging_time",
+AVAILABLE_PROPERTIES = [
+    "aging_time",
     "bind_geoloc",
     "ignore_count",
     "limit",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "aging_time",
     "smooth_factor",
     "uuid",
     "site_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "easy-rdt"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "daily",
+AVAILABLE_PROPERTIES = [
+    "daily",
     "day_time",
     "feature_name",
     "schedule",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "daily",
     "week_day",
     "week_time",
     "weekly",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "config"

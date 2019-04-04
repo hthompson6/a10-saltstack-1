@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "allowed_http_methods",
+AVAILABLE_PROPERTIES = [
+    "allowed_http_methods",
     "bot_check",
     "bot_check_policy_file",
     "brute_force_challenge_limit",
@@ -133,6 +134,10 @@ AVAILABLE_PROPERTIES = [    "allowed_http_methods",
     "xml_xss_check",
     "xss_check",
     "xss_check_policy_file",
+]
+
+REF_PROPERTIES = [
+    "logging",
 ]
 
 MODULE_NAME = "template"

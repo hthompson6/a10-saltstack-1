@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "brief",
+AVAILABLE_PROPERTIES = [
+    "brief",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "chassis-info"

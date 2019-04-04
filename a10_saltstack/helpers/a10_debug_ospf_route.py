@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ase",
+AVAILABLE_PROPERTIES = [
+    "ase",
     "ia",
     "install",
     "spf",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "route"

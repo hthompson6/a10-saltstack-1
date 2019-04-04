@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_value",
+AVAILABLE_PROPERTIES = [
+    "action_value",
     "bw_per",
     "bw_rate_limit",
     "conn_limit",
@@ -42,6 +43,10 @@ AVAILABLE_PROPERTIES = [    "action_value",
     "user_tag",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
+    "direct-service-group",
 ]
 
 MODULE_NAME = "lid"

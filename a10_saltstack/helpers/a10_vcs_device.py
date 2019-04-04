@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "affinity_vrrp_a_vrid",
+AVAILABLE_PROPERTIES = [
+    "affinity_vrrp_a_vrid",
     "device",
     "enable",
     "ethernet_cfg",
@@ -26,6 +27,9 @@ AVAILABLE_PROPERTIES = [    "affinity_vrrp_a_vrid",
     "user_tag",
     "uuid",
     "ve_cfg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "device"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "imap",
+AVAILABLE_PROPERTIES = [
+    "imap",
     "imap_cram_md5",
     "imap_encrypted",
     "imap_login",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "imap",
     "pwd_auth",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "imap"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dns",
+AVAILABLE_PROPERTIES = [
+    "dns",
     "ftp",
     "icmp",
     "pptp",
@@ -23,6 +24,16 @@ AVAILABLE_PROPERTIES = [    "dns",
     "sip",
     "tftp",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "dns",
+    "ftp",
+    "icmp",
+    "pptp",
+    "rtsp",
+    "sip",
+    "tftp",
 ]
 
 MODULE_NAME = "alg"

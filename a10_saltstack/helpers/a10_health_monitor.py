@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable_after_down",
+AVAILABLE_PROPERTIES = [
+    "disable_after_down",
     "dsr_l2_strict",
     "interval",
     "method",
@@ -35,6 +36,10 @@ AVAILABLE_PROPERTIES = [    "disable_after_down",
     "up_retry",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "method",
 ]
 
 MODULE_NAME = "monitor"

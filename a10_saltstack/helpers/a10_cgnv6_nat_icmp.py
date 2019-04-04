@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "always_source_nat_errors",
+AVAILABLE_PROPERTIES = [
+    "always_source_nat_errors",
     "respond_to_ping",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "icmp"

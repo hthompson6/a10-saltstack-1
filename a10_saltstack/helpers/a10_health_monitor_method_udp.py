@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "force_up_with_single_healthcheck",
+AVAILABLE_PROPERTIES = [
+    "force_up_with_single_healthcheck",
     "udp",
     "udp_port",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "udp"

@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "restart_learning_on_anomaly",
+AVAILABLE_PROPERTIES = [
+    "restart_learning_on_anomaly",
     "sensitivity",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "anomaly-detection"

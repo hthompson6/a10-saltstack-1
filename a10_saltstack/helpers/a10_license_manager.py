@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bandwidth_base",
+AVAILABLE_PROPERTIES = [
+    "bandwidth_base",
     "bandwidth_unrestricted",
     "connect",
     "host_list",
@@ -26,6 +27,13 @@ AVAILABLE_PROPERTIES = [    "bandwidth_base",
     "sn",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "connect",
+    "host-list",
+    "overage",
+    "reminder-list",
 ]
 
 MODULE_NAME = "license-manager"

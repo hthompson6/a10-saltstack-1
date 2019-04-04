@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "description",
+AVAILABLE_PROPERTIES = [
+    "description",
     "externalfilename",
     "overwrite",
     "password",
     "remote_file",
     "use_mgmt_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "health-external"

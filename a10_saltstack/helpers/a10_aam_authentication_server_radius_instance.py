@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "accounting_port",
+AVAILABLE_PROPERTIES = [
+    "accounting_port",
     "acct_port_hm",
     "acct_port_hm_disable",
     "auth_type",
@@ -34,6 +35,12 @@ AVAILABLE_PROPERTIES = [    "accounting_port",
     "secret",
     "secret_string",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "acct-port-hm",
+    "health-check-string",
+    "port-hm",
 ]
 
 MODULE_NAME = "instance"

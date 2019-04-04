@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "gateway",
+AVAILABLE_PROPERTIES = [
+    "gateway",
     "lif",
     "partition",
     "segment",
     "uuid",
     "vtep_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "vni"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "app_list",
     "application_any",
     "cgnv6_fixed_nat_log",
@@ -57,6 +58,16 @@ AVAILABLE_PROPERTIES = [    "action",
     "user_tag",
     "uuid",
     "rule_set_name",
+]
+
+REF_PROPERTIES = [
+    "dst-class-list",
+    "dst-threat-list",
+    "dst-zone",
+    "move-rule",
+    "src-class-list",
+    "src-threat-list",
+    "src-zone",
 ]
 
 MODULE_NAME = "rule"

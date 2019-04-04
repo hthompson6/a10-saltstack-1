@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "connected_cfg",
+AVAILABLE_PROPERTIES = [
+    "connected_cfg",
     "floating_ip_cfg",
     "ip_nat_cfg",
     "ip_nat_list_cfg",
@@ -29,6 +30,9 @@ AVAILABLE_PROPERTIES = [    "connected_cfg",
     "uuid",
     "vip",
     "bgp_as_number",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "redistribute"

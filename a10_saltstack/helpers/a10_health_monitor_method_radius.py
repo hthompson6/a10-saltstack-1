@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "radius",
+AVAILABLE_PROPERTIES = [
+    "radius",
     "radius_encrypted",
     "radius_expect",
     "radius_password",
@@ -26,6 +27,9 @@ AVAILABLE_PROPERTIES = [    "radius",
     "radius_username",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "radius"

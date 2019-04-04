@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "age_interval",
+AVAILABLE_PROPERTIES = [
+    "age_interval",
     "geo_location_iana",
     "gslb_group",
     "gslb_load_file_list",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "age_interval",
     "ttl",
     "uuid",
     "wait",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "system"

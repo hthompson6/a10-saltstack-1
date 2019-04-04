@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bpdu_fwd_group_number",
+AVAILABLE_PROPERTIES = [
+    "bpdu_fwd_group_number",
     "ethernet_list",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "bpdu-fwd-group"

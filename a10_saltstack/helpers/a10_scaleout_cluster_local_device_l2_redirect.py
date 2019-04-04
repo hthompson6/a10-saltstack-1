@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet_vlan",
+AVAILABLE_PROPERTIES = [
+    "ethernet_vlan",
     "redirect_eth",
     "redirect_trunk",
     "trunk_vlan",
     "uuid",
     "cluster_id",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "l2-redirect"

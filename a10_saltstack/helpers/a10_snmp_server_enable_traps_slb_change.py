@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "connection_resource_event",
     "resource_usage_warning",
     "server",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "uuid",
     "vip",
     "vip_port",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "slb-change"

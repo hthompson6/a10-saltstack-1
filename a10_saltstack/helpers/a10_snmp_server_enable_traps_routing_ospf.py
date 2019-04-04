@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ospfIfAuthFailure",
+AVAILABLE_PROPERTIES = [
+    "ospfIfAuthFailure",
     "ospfIfConfigError",
     "ospfIfRxBadPacket",
     "ospfIfStateChange",
@@ -32,6 +33,9 @@ AVAILABLE_PROPERTIES = [    "ospfIfAuthFailure",
     "ospfVirtIfTxRetransmit",
     "ospfVirtNbrStateChange",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ospf"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_id_list",
+AVAILABLE_PROPERTIES = [
+    "acl_id_list",
     "acl_name_list",
     "action",
     "aflex_scripts",
@@ -113,6 +114,44 @@ AVAILABLE_PROPERTIES = [    "acl_id_list",
     "when_down",
     "when_down_protocol2",
     "virtual_server_name",
+]
+
+REF_PROPERTIES = [
+    "pool",
+    "service-group",
+    "template-cache",
+    "template-client-ssl",
+    "template-connection-reuse",
+    "template-dblb",
+    "template-diameter",
+    "template-dns",
+    "template-dynamic-service",
+    "template-external-service",
+    "template-file-inspection",
+    "template-fix",
+    "template-ftp",
+    "template-http",
+    "template-http-policy",
+    "template-imap-pop3",
+    "template-persist-cookie",
+    "template-persist-destination-ip",
+    "template-persist-source-ip",
+    "template-persist-ssl-sid",
+    "template-policy",
+    "template-reqmod-icap",
+    "template-respmod-icap",
+    "template-server-ssl",
+    "template-sip",
+    "template-smpp",
+    "template-smtp",
+    "template-ssli",
+    "template-tcp",
+    "template-tcp-proxy",
+    "template-tcp-proxy-client",
+    "template-tcp-proxy-server",
+    "template-udp",
+    "template-virtual-port",
+    "waf-template",
 ]
 
 MODULE_NAME = "port"

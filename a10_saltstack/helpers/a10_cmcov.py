@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dump",
+AVAILABLE_PROPERTIES = [
+    "dump",
     "export",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "cmcov"

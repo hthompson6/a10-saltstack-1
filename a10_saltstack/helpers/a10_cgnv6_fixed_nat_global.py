@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "create_port_mapping_file",
+AVAILABLE_PROPERTIES = [
+    "create_port_mapping_file",
     "port_mapping_files_count",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "global"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bytes",
+AVAILABLE_PROPERTIES = [
+    "bytes",
     "days",
     "gb",
     "hours",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "bytes",
     "minutes",
     "seconds",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "overage"

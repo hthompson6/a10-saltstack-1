@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "custom1",
+AVAILABLE_PROPERTIES = [
+    "custom1",
     "custom2",
     "custom3",
     "disable_pool_based",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "custom1",
     "msisdn",
     "uuid",
     "with_radius_attribute",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "quota-exceeded"

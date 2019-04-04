@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv4_addr",
+AVAILABLE_PROPERTIES = [
+    "ipv4_addr",
     "udp_port",
     "user",
     "uuid",
     "v1_v2c_comm",
     "version",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ipv4-host"

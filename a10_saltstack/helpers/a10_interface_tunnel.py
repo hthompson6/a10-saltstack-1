@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "ifnum",
     "ip",
     "ipv6",
@@ -25,6 +26,11 @@ AVAILABLE_PROPERTIES = [    "action",
     "speed",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "ip",
+    "ipv6",
 ]
 
 MODULE_NAME = "tunnel"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "alert_type",
+AVAILABLE_PROPERTIES = [
+    "alert_type",
     "auth_sg",
     "auth_sg_dn",
     "auth_sg_filter",
@@ -137,6 +138,18 @@ AVAILABLE_PROPERTIES = [    "alert_type",
     "verify_cert_fail_action",
     "version",
     "web_category",
+]
+
+REF_PROPERTIES = [
+    "auth-sg",
+    "authen-name",
+    "exception-class-list",
+    "fp-cert-fetch-natpool-name",
+    "non-ssl-bypass-service-group",
+    "ocspst-sg",
+    "ocspst-srvr",
+    "sslv2-bypass-service-group",
+    "template-cipher",
 ]
 
 MODULE_NAME = "client-ssl"

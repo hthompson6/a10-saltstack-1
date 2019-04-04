@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_id",
+AVAILABLE_PROPERTIES = [
+    "acl_id",
     "all_data_intf",
     "eth_cfg",
     "management",
@@ -23,6 +24,10 @@ AVAILABLE_PROPERTIES = [    "acl_id",
     "user_tag",
     "uuid",
     "ve_cfg",
+]
+
+REF_PROPERTIES = [
+    "acl-id",
 ]
 
 MODULE_NAME = "acl-v4"

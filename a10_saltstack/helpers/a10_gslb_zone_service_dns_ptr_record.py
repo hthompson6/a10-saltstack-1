@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ptr_name",
+AVAILABLE_PROPERTIES = [
+    "ptr_name",
     "sampling_enable",
     "ttl",
     "uuid",
     "service_name",
     "service_port",
     "zone_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "dns-ptr-record"

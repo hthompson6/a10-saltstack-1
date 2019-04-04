@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action1",
+AVAILABLE_PROPERTIES = [
+    "action1",
     "drop_message",
     "drop_redirect_url",
     "fake_sg",
@@ -30,6 +31,9 @@ AVAILABLE_PROPERTIES = [    "action1",
     "user_tag",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "action"

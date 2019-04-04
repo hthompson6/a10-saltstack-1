@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication",
+AVAILABLE_PROPERTIES = [
+    "authentication",
     "authentication_key",
     "cost",
     "database_filter",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "authentication",
     "uuid",
     "value",
     "ve_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ospf-ip"

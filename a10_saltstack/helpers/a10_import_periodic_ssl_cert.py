@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "period",
+AVAILABLE_PROPERTIES = [
+    "period",
     "remote_file",
     "ssl_cert",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ssl-cert"

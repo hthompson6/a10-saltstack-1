@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv4_config",
+AVAILABLE_PROPERTIES = [
+    "ipv4_config",
     "ipv6_config",
     "ipv6_prefix_config",
     "a10_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ip-list"

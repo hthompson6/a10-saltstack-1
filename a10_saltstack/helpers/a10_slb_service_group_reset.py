@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto_switch",
+AVAILABLE_PROPERTIES = [
+    "auto_switch",
     "service_group_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "reset"

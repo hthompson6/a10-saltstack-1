@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aggregate_address_cfg",
+AVAILABLE_PROPERTIES = [
+    "aggregate_address_cfg",
     "cisco_metric_behavior",
     "default_information",
     "default_metric",
@@ -29,6 +30,13 @@ AVAILABLE_PROPERTIES = [    "aggregate_address_cfg",
     "route_map",
     "timers",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "distribute-list",
+    "offset-list",
+    "redistribute",
+    "route-map",
 ]
 
 MODULE_NAME = "rip"

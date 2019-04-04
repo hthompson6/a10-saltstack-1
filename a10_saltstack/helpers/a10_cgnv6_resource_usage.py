@@ -15,12 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "fixed_nat_inside_user_count",
+AVAILABLE_PROPERTIES = [
+    "fixed_nat_inside_user_count",
     "fixed_nat_ip_addr_count",
     "lsn_nat_addr_count",
     "radius_table_size",
     "stateless_entries",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "stateless-entries",
 ]
 
 MODULE_NAME = "resource-usage"

@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "delete",
+AVAILABLE_PROPERTIES = [
+    "delete",
     "file_url",
     "nimport",
     "list",
     "use_mgmt_port",
     "admin_user",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ssh-pubkey"

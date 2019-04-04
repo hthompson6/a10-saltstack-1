@@ -15,10 +15,14 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all_slots",
+AVAILABLE_PROPERTIES = [
+    "all_slots",
     "cpuid",
     "filename",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "monitor"

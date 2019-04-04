@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "period",
+AVAILABLE_PROPERTIES = [
+    "period",
     "remote_file",
     "use_mgmt_port",
     "uuid",
     "wsdl",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "wsdl"

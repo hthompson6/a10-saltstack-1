@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cf",
+AVAILABLE_PROPERTIES = [
+    "cf",
     "hd",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "boot-block-fix"

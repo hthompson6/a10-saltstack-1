@@ -15,7 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "template_list",
+AVAILABLE_PROPERTIES = [
+    "template_list",
+]
+
+REF_PROPERTIES = [
+    "template-list",
 ]
 
 MODULE_NAME = "resource-accounting"

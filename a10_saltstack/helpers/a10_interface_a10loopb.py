@@ -15,7 +15,11 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sampling_enable",
+AVAILABLE_PROPERTIES = [
+    "sampling_enable",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "a10loopb"

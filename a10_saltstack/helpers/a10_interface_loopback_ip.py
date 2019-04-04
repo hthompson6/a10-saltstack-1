@@ -15,12 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_list",
+AVAILABLE_PROPERTIES = [
+    "address_list",
     "ospf",
     "rip",
     "router",
     "uuid",
     "loopback_ifnum",
+]
+
+REF_PROPERTIES = [
+    "ospf",
+    "rip",
+    "router",
 ]
 
 MODULE_NAME = "ip"

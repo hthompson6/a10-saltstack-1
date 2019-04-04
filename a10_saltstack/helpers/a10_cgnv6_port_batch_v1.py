@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable_port_batch_v1",
+AVAILABLE_PROPERTIES = [
+    "enable_port_batch_v1",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "port-batch-v1"

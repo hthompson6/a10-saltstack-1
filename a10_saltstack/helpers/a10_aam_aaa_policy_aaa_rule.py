@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
+AVAILABLE_PROPERTIES = [
+    "access_list",
     "action",
     "authentication_template",
     "authorize_policy",
@@ -30,6 +31,11 @@ AVAILABLE_PROPERTIES = [    "access_list",
     "user_tag",
     "uuid",
     "aaa_policy_name",
+]
+
+REF_PROPERTIES = [
+    "authentication-template",
+    "authorize-policy",
 ]
 
 MODULE_NAME = "aaa-rule"

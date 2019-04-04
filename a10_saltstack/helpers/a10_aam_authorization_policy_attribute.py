@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "A10_AX_AUTH_URI",
+AVAILABLE_PROPERTIES = [
+    "A10_AX_AUTH_URI",
     "a10_dynamic_defined",
     "attr_int",
     "attr_int_val",
@@ -33,6 +34,9 @@ AVAILABLE_PROPERTIES = [    "A10_AX_AUTH_URI",
     "string_type",
     "uuid",
     "policy_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "attribute"

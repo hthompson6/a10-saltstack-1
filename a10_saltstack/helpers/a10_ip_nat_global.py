@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "reset_idle_tcp_conn",
+AVAILABLE_PROPERTIES = [
+    "reset_idle_tcp_conn",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "nat-global"

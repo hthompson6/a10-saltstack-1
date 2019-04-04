@@ -15,13 +15,17 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "count",
+AVAILABLE_PROPERTIES = [
+    "count",
     "shared",
     "to_shared",
     "uuid",
     "v4_address",
     "v6_address",
     "vrid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "static-dest-mapping"

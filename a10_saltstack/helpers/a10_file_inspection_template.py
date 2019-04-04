@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bad_downloads_action",
+AVAILABLE_PROPERTIES = [
+    "bad_downloads_action",
     "bad_uploads_action",
     "downloads_bad_log",
     "downloads_external_inspect",
@@ -35,6 +36,11 @@ AVAILABLE_PROPERTIES = [    "bad_downloads_action",
     "uploads_suspect_log",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "downloads-external-inspect",
+    "uploads-external-inspect",
 ]
 
 MODULE_NAME = "template"

@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "send_icmpv6_on_error",
+AVAILABLE_PROPERTIES = [
+    "send_icmpv6_on_error",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "common"

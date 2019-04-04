@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_key",
+AVAILABLE_PROPERTIES = [
+    "admin_key",
     "mode",
     "port_priority",
     "timeout",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "admin_key",
     "user_tag",
     "uuid",
     "ethernet_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "trunk-group"

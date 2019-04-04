@@ -15,11 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv4_nat_addr",
+AVAILABLE_PROPERTIES = [
+    "ipv4_nat_addr",
     "port_range_list",
     "user_tag",
     "tunnel_address_ipv6_tunnel_addr",
     "binding_table_name",
+]
+
+REF_PROPERTIES = [
+    "port-range-list",
 ]
 
 MODULE_NAME = "nat-address"

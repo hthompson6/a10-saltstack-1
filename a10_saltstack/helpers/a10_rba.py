@@ -15,11 +15,18 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "group_list",
     "role_list",
     "user_list",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "group-list",
+    "role-list",
+    "user-list",
 ]
 
 MODULE_NAME = "rba"

@@ -15,12 +15,19 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "app_resources",
+AVAILABLE_PROPERTIES = [
+    "app_resources",
     "a10_name",
     "network_resources",
     "system_resources",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "app-resources",
+    "network-resources",
+    "system-resources",
 ]
 
 MODULE_NAME = "template"

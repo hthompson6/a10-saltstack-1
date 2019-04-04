@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
+AVAILABLE_PROPERTIES = [
+    "action",
     "device",
     "dst_file",
     "file",
     "file_handle",
     "size",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "license"

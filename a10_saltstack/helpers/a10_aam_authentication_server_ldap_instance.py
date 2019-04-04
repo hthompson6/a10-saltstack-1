@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_dn",
+AVAILABLE_PROPERTIES = [
+    "admin_dn",
     "admin_secret",
     "auth_type",
     "base",
@@ -41,6 +42,11 @@ AVAILABLE_PROPERTIES = [    "admin_dn",
     "secret_string",
     "timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "health-check-string",
+    "port-hm",
 ]
 
 MODULE_NAME = "instance"

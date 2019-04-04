@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "at",
     "cancel",
     "day_of_month",
@@ -28,6 +29,9 @@ AVAILABLE_PROPERTIES = [    "all",
     "reason_2",
     "reason_3",
     "time",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "reboot"

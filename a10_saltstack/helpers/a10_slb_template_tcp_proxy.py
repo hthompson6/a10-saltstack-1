@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ack_aggressiveness",
+AVAILABLE_PROPERTIES = [
+    "ack_aggressiveness",
     "alive_if_active",
     "backend_wscale",
     "del_session_on_server_down",
@@ -52,6 +53,9 @@ AVAILABLE_PROPERTIES = [    "ack_aggressiveness",
     "transmit_buffer",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "tcp-proxy"

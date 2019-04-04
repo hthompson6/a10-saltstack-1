@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "isisAdjacencyChange",
+AVAILABLE_PROPERTIES = [
+    "isisAdjacencyChange",
     "isisAreaMismatch",
     "isisAttemptToExceedMaxSequence",
     "isisAuthenticationFailure",
@@ -33,6 +34,9 @@ AVAILABLE_PROPERTIES = [    "isisAdjacencyChange",
     "isisSequenceNumberSkip",
     "isisVersionSkew",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "isis"

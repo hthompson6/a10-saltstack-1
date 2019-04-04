@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
+AVAILABLE_PROPERTIES = [
+    "all",
     "group",
     "service_ip",
     "site",
     "uuid",
     "zone",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "gslb"

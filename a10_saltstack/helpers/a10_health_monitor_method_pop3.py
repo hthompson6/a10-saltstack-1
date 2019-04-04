@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "pop3",
+AVAILABLE_PROPERTIES = [
+    "pop3",
     "pop3_encrypted",
     "pop3_password",
     "pop3_password_string",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "pop3",
     "pop3_username",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "pop3"

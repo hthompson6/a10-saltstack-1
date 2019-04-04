@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "a10_name",
+AVAILABLE_PROPERTIES = [
+    "a10_name",
     "sampling_enable",
     "shared_vlan",
     "tagged_eth_list",
@@ -28,6 +29,9 @@ AVAILABLE_PROPERTIES = [    "a10_name",
     "uuid",
     "ve",
     "vlan_num",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "vlan"

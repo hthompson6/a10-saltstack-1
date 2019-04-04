@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "age",
+AVAILABLE_PROPERTIES = [
+    "age",
     "disable_clear_session",
     "idle_timeout",
     "immediate",
@@ -26,6 +27,9 @@ AVAILABLE_PROPERTIES = [    "age",
     "stateless_conn_timeout",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "udp"

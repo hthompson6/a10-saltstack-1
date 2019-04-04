@@ -15,11 +15,15 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all_partitions",
+AVAILABLE_PROPERTIES = [
+    "all_partitions",
     "default",
     "file_name",
     "primary",
     "secondary",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "startup-config"

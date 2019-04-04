@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "day",
+AVAILABLE_PROPERTIES = [
+    "day",
     "fixed_nat",
     "hour",
     "log",
@@ -25,6 +26,9 @@ AVAILABLE_PROPERTIES = [    "day",
     "use_mgmt_port",
     "uuid",
     "week",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "backup-periodic"

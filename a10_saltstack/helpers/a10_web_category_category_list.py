@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "abortion",
+AVAILABLE_PROPERTIES = [
+    "abortion",
     "adult_and_pornography",
     "alcohol_and_tobacco",
     "auctions",
@@ -103,6 +104,9 @@ AVAILABLE_PROPERTIES = [    "abortion",
     "web_advertisements",
     "web_based_email",
     "web_hosting_sites",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "category-list"

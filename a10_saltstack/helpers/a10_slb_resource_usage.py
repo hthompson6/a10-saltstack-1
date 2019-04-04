@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "client_ssl_template_count",
+AVAILABLE_PROPERTIES = [
+    "client_ssl_template_count",
     "conn_reuse_template_count",
     "fast_tcp_template_count",
     "fast_udp_template_count",
@@ -34,6 +35,9 @@ AVAILABLE_PROPERTIES = [    "client_ssl_template_count",
     "uuid",
     "virtual_port_count",
     "virtual_server_count",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "resource-usage"

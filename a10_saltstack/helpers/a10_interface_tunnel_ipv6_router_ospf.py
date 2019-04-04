@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "area_list",
+AVAILABLE_PROPERTIES = [
+    "area_list",
     "uuid",
     "tunnel_ifnum",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "ospf"

@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "l3_inline_mode",
+AVAILABLE_PROPERTIES = [
+    "l3_inline_mode",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "l3-inline-mode-flag"

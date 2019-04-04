@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "local_ipv6",
+AVAILABLE_PROPERTIES = [
+    "local_ipv6",
     "nexthop_ipv6",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "bfd-ipv6"

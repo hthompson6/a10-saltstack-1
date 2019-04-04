@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "database",
+AVAILABLE_PROPERTIES = [
+    "database",
     "database_name",
     "db_column",
     "db_column_integer",
@@ -31,6 +32,9 @@ AVAILABLE_PROPERTIES = [    "database",
     "db_username",
     "uuid",
     "monitor_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "database"

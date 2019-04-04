@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "app",
+AVAILABLE_PROPERTIES = [
+    "app",
     "application",
     "a10_name",
     "remark",
@@ -27,6 +28,15 @@ AVAILABLE_PROPERTIES = [    "app",
     "track_app_rule_list",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
+    "app",
+    "application",
+    "rule-list",
+    "rules-by-zone",
+    "tag",
+    "track-app-rule-list",
 ]
 
 MODULE_NAME = "rule-set"

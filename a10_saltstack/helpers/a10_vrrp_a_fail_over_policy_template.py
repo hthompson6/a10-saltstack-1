@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bgp",
+AVAILABLE_PROPERTIES = [
+    "bgp",
     "gateway",
     "interface",
     "a10_name",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "bgp",
     "user_tag",
     "uuid",
     "vlan_cfg",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "fail-over-policy-template"

@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "overwrite",
+AVAILABLE_PROPERTIES = [
+    "overwrite",
     "period",
     "remote_file",
     "thales_secworld",
     "use_mgmt_port",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "thales-secworld"

@@ -15,8 +15,12 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "rtp_stun_timeout",
+AVAILABLE_PROPERTIES = [
+    "rtp_stun_timeout",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "rtp"

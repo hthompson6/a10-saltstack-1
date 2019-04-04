@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_uri",
+AVAILABLE_PROPERTIES = [
+    "action_uri",
     "cookie",
     "domain_variable",
     "match_type",
@@ -27,6 +28,9 @@ AVAILABLE_PROPERTIES = [    "action_uri",
     "user_variable",
     "uuid",
     "instance_name",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "request-uri"

@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto_size",
+AVAILABLE_PROPERTIES = [
+    "auto_size",
     "editing",
     "gslb_cfg",
     "history_cfg",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "auto_size",
     "prompt_cfg",
     "uuid",
     "width",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "terminal"

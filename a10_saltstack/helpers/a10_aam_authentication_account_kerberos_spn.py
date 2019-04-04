@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "account",
+AVAILABLE_PROPERTIES = [
+    "account",
     "encrypted",
     "a10_name",
     "password",
@@ -24,6 +25,9 @@ AVAILABLE_PROPERTIES = [    "account",
     "service_principal_name",
     "user_tag",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "kerberos-spn"

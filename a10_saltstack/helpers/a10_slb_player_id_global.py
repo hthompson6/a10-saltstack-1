@@ -15,7 +15,8 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "abs_max_expiration",
+AVAILABLE_PROPERTIES = [
+    "abs_max_expiration",
     "enable_64bit_player_id",
     "enforcement_timer",
     "force_passive",
@@ -23,6 +24,9 @@ AVAILABLE_PROPERTIES = [    "abs_max_expiration",
     "pkt_activity_expiration",
     "sampling_enable",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "player-id-global"

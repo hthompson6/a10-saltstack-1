@@ -15,12 +15,16 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "overwrite",
+AVAILABLE_PROPERTIES = [
+    "overwrite",
     "password",
     "remote_file",
     "saml_idp_name",
     "use_mgmt_port",
     "verify_xml_signature",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "auth-saml-idp"

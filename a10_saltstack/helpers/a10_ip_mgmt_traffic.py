@@ -15,9 +15,13 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "source_interface",
+AVAILABLE_PROPERTIES = [
+    "source_interface",
     "traffic_type",
     "uuid",
+]
+
+REF_PROPERTIES = [
 ]
 
 MODULE_NAME = "mgmt-traffic"
