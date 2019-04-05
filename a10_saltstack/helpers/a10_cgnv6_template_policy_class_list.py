@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "policy_name",
 ]
 
-REF_PROPERTIES = [
-    "lid_list",
-]
+REF_PROPERTIES = {
+    "lid_list": "/axapi/v3/cgnv6/template/policy/{name}/class-list/lid/{lidnum}",
+}
 
 MODULE_NAME = "class-list"
 

@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "timezone_index_cfg",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "timezone"
 

@@ -23,10 +23,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "notification_template_list",
-    "reporting_db",
-]
+REF_PROPERTIES = {
+    "notification_template_list": "/axapi/v3/visibility/reporting/notification-template/{name}",
+    "reporting_db": "/axapi/v3/visibility/reporting/reporting-db",
+}
 
 MODULE_NAME = "reporting"
 

@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "admin_user",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "password"
 

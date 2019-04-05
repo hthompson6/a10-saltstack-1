@@ -34,8 +34,8 @@ AVAILABLE_PROPERTIES = [
     "loopback_ifnum",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ospf-ip"
 

@@ -28,8 +28,8 @@ AVAILABLE_PROPERTIES = [
     "week",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "backup-periodic"
 

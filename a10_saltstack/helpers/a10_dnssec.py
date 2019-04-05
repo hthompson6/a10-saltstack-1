@@ -25,13 +25,13 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "dnskey",
-    "ds",
-    "key_rollover",
-    "sign_zone_now",
-    "template_list",
-]
+REF_PROPERTIES = {
+    "dnskey": "/axapi/v3/dnssec/dnskey",
+    "ds": "/axapi/v3/dnssec/ds",
+    "key_rollover": "/axapi/v3/dnssec/key-rollover",
+    "sign_zone_now": "/axapi/v3/dnssec/sign-zone-now",
+    "template_list": "/axapi/v3/dnssec/template/{dnssec-temp-name}",
+}
 
 MODULE_NAME = "dnssec"
 

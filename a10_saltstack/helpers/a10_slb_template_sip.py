@@ -48,11 +48,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "acl_id",
-    "acl_name_value",
-    "service_group",
-]
+REF_PROPERTIES = {
+    "acl_id": "/axapi/v3/access-list/standard",
+    "acl_name_value": "/axapi/v3/ip/access-list",
+    "service_group": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "sip"
 

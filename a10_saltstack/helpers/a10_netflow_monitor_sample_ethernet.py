@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "monitor_name",
 ]
 
-REF_PROPERTIES = [
-    "ifindex",
-]
+REF_PROPERTIES = {
+    "ifindex": "/axapi/v3/interface/ethernet",
+}
 
 MODULE_NAME = "ethernet"
 

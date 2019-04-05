@@ -136,9 +136,9 @@ AVAILABLE_PROPERTIES = [
     "xss_check_policy_file",
 ]
 
-REF_PROPERTIES = [
-    "logging",
-]
+REF_PROPERTIES = {
+    "logging": "/axapi/v3/slb/template/logging",
+}
 
 MODULE_NAME = "template"
 

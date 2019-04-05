@@ -38,17 +38,17 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "bfd",
-    "ddos",
-    "ifnum",
-    "ip",
-    "ipv6",
-    "isis",
-    "lw_4o6",
-    "map",
-    "nptv6",
-]
+REF_PROPERTIES = {
+    "bfd": "/axapi/v3/interface/ve/{ifnum}/bfd",
+    "ddos": "/axapi/v3/interface/ve/{ifnum}/ddos",
+    "ifnum": "/axapi/v3/network/vlan",
+    "ip": "/axapi/v3/interface/ve/{ifnum}/ip",
+    "ipv6": "/axapi/v3/interface/ve/{ifnum}/ipv6",
+    "isis": "/axapi/v3/interface/ve/{ifnum}/isis",
+    "lw_4o6": "/axapi/v3/interface/ve/{ifnum}/lw-4o6",
+    "map": "/axapi/v3/interface/ve/{ifnum}/map",
+    "nptv6": "/axapi/v3/interface/ve/{ifnum}/nptv6",
+}
 
 MODULE_NAME = "ve"
 

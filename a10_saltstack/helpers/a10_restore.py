@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "use_mgmt_port",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "restore"
 

@@ -31,11 +31,11 @@ AVAILABLE_PROPERTIES = [
     "service_group_name",
 ]
 
-REF_PROPERTIES = [
-    "member_template",
-    "name",
-    "port",
-]
+REF_PROPERTIES = {
+    "member_template": "/axapi/v3/slb/template/port",
+    "name": "/axapi/v3/slb/server",
+    "port": "/axapi/v3/slb/server/port",
+}
 
 MODULE_NAME = "member"
 

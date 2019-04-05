@@ -31,10 +31,10 @@ AVAILABLE_PROPERTIES = [
     "template_name",
 ]
 
-REF_PROPERTIES = [
-    "flags",
-    "options",
-]
+REF_PROPERTIES = {
+    "flags": "/axapi/v3/sys-ut/template/{name}/tcp/flags",
+    "options": "/axapi/v3/sys-ut/template/{name}/tcp/options",
+}
 
 MODULE_NAME = "tcp"
 

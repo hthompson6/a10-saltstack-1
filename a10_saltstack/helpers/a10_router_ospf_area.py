@@ -30,8 +30,8 @@ AVAILABLE_PROPERTIES = [
     "ospf_process_id",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "area"
 

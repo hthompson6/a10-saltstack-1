@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "template_name",
 ]
 
-REF_PROPERTIES = [
-    "ip_list",
-]
+REF_PROPERTIES = {
+    "ip_list": "/axapi/v3/sys-ut/template/{name}/l3/ip/{src-dst}",
+}
 
 MODULE_NAME = "l3"
 

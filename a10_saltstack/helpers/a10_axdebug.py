@@ -31,10 +31,10 @@ AVAILABLE_PROPERTIES = [
     "timeout",
 ]
 
-REF_PROPERTIES = [
-    "capture",
-    "filter_config",
-]
+REF_PROPERTIES = {
+    "capture": "/axapi/v3/axdebug/capture",
+    "filter_config": "/axapi/v3/axdebug/filter-config",
+}
 
 MODULE_NAME = "axdebug"
 

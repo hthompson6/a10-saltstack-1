@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "file_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "health-external"
 

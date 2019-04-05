@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "aaa_rule_list",
-]
+REF_PROPERTIES = {
+    "aaa_rule_list": "/axapi/v3/aam/aaa-policy/{name}/aaa-rule/{index}",
+}
 
 MODULE_NAME = "aaa-policy"
 

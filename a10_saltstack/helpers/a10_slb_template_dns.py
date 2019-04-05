@@ -34,11 +34,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "class_list",
-    "dnssec_service_group",
-    "forward",
-]
+REF_PROPERTIES = {
+    "class_list": "/axapi/v3/slb/template/dns/{name}/class-list",
+    "dnssec_service_group": "/axapi/v3/slb/service-group",
+    "forward": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "dns"
 

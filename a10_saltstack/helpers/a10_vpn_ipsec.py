@@ -34,10 +34,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "bind_tunnel",
-    "ike_gateway",
-]
+REF_PROPERTIES = {
+    "bind_tunnel": "/axapi/v3/vpn/ipsec/{name}/bind-tunnel",
+    "ike_gateway": "/axapi/v3/vpn/ike-gateway",
+}
 
 MODULE_NAME = "ipsec"
 

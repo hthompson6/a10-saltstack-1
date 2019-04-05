@@ -28,8 +28,8 @@ AVAILABLE_PROPERTIES = [
     "vip_port",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "slb-change"
 

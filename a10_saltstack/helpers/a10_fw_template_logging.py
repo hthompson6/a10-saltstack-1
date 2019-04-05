@@ -31,10 +31,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "service_group",
-    "source_address",
-]
+REF_PROPERTIES = {
+    "service_group": "/axapi/v3/fw/service-group",
+    "source_address": "/axapi/v3/fw/template/logging/{name}/source-address",
+}
 
 MODULE_NAME = "logging"
 

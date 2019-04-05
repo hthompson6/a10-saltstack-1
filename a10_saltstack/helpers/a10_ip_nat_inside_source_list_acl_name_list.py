@@ -22,10 +22,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "name",
-    "pool",
-]
+REF_PROPERTIES = {
+    "name": "/axapi/v3/ip/access-list",
+    "pool": "/axapi/v3/ip/nat/pool",
+}
 
 MODULE_NAME = "acl-name-list"
 

@@ -29,9 +29,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "disable_failsafe",
-]
+REF_PROPERTIES = {
+    "disable_failsafe": "/axapi/v3/fail-safe/disable-failsafe",
+}
 
 MODULE_NAME = "fail-safe"
 

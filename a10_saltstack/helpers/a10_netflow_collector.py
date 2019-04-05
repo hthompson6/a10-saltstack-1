@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "template",
-]
+REF_PROPERTIES = {
+    "template": "/axapi/v3/netflow/collector/template",
+}
 
 MODULE_NAME = "collector"
 

@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "domain_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "health-check-gateway"
 

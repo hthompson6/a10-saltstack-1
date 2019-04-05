@@ -24,9 +24,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "stateless_entries",
-]
+REF_PROPERTIES = {
+    "stateless_entries": "/axapi/v3/cgnv6/resource-usage/stateless-entries",
+}
 
 MODULE_NAME = "resource-usage"
 

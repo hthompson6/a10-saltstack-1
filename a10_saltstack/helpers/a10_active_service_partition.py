@@ -19,9 +19,9 @@ AVAILABLE_PROPERTIES = [
     "curr_part_name",
 ]
 
-REF_PROPERTIES = [
-    "curr_part_name",
-]
+REF_PROPERTIES = {
+    "curr_part_name": "/axapi/v3/service-partition",
+}
 
 MODULE_NAME = "active-service-partition"
 

@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "system_sync_verify",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "chassis-infra"
 

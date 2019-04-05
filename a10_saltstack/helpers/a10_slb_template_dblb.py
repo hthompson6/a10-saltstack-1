@@ -24,9 +24,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "calc_sha1",
-]
+REF_PROPERTIES = {
+    "calc_sha1": "/axapi/v3/slb/template/dblb/{name}/calc-sha1",
+}
 
 MODULE_NAME = "dblb"
 

@@ -34,10 +34,10 @@ AVAILABLE_PROPERTIES = [
     "state_name",
 ]
 
-REF_PROPERTIES = [
-    "flags",
-    "options",
-]
+REF_PROPERTIES = {
+    "flags": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/tcp/flags",
+    "options": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/tcp/options",
+}
 
 MODULE_NAME = "tcp"
 

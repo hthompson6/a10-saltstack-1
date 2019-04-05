@@ -140,17 +140,17 @@ AVAILABLE_PROPERTIES = [
     "web_category",
 ]
 
-REF_PROPERTIES = [
-    "auth_sg",
-    "authen_name",
-    "exception_class_list",
-    "fp_cert_fetch_natpool_name",
-    "non_ssl_bypass_service_group",
-    "ocspst_sg",
-    "ocspst_srvr",
-    "sslv2_bypass_service_group",
-    "template_cipher",
-]
+REF_PROPERTIES = {
+    "auth_sg": "/axapi/v3/aam/authentication/service-group",
+    "authen_name": "/axapi/v3/aam/authentication/server/ldap",
+    "exception_class_list": "/axapi/v3/class-list",
+    "fp_cert_fetch_natpool_name": "/axapi/v3/ip/nat/pool",
+    "non_ssl_bypass_service_group": "/axapi/v3/slb/service-group",
+    "ocspst_sg": "/axapi/v3/aam/authentication/service-group",
+    "ocspst_srvr": "/axapi/v3/aam/authentication/server/ocsp",
+    "sslv2_bypass_service_group": "/axapi/v3/slb/service-group",
+    "template_cipher": "/axapi/v3/slb/template/cipher",
+}
 
 MODULE_NAME = "client-ssl"
 

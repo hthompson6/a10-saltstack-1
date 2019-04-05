@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "state_name",
 ]
 
-REF_PROPERTIES = [
-    "action_list",
-]
+REF_PROPERTIES = {
+    "action_list": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}",
+}
 
 MODULE_NAME = "case"
 

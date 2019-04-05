@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "core_index",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "add-cpu-core"
 

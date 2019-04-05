@@ -23,11 +23,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "group_list",
-    "role_list",
-    "user_list",
-]
+REF_PROPERTIES = {
+    "group_list": "/axapi/v3/rba/group/{name}",
+    "role_list": "/axapi/v3/rba/role/{name}",
+    "user_list": "/axapi/v3/rba/user/{name}",
+}
 
 MODULE_NAME = "rba"
 

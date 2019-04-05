@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "web_category_license",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "to-device"
 

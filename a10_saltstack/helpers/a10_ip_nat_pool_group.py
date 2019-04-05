@@ -23,10 +23,10 @@ AVAILABLE_PROPERTIES = [
     "vrid",
 ]
 
-REF_PROPERTIES = [
-    "member_list",
-    "vrid",
-]
+REF_PROPERTIES = {
+    "member_list": "/axapi/v3/ip/nat/pool-group/{pool-group-name}/member/{pool-name}",
+    "vrid": "/axapi/v3/vrrp-a/vrid",
+}
 
 MODULE_NAME = "pool-group"
 

@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "vrid_val",
 ]
 
-REF_PROPERTIES = [
-    "gateway",
-]
+REF_PROPERTIES = {
+    "gateway": "/axapi/v3/vrrp-a/vrid/{vrid-val}/blade-parameters/tracking-options/gateway",
+}
 
 MODULE_NAME = "tracking-options"
 

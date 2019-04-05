@@ -33,8 +33,8 @@ AVAILABLE_PROPERTIES = [
     "zero_window",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "anomaly-drop"
 

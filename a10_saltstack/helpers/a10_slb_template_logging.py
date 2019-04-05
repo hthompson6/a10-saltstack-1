@@ -31,10 +31,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "pool",
-    "service_group",
-]
+REF_PROPERTIES = {
+    "pool": "/axapi/v3/ip/nat/pool",
+    "service_group": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "logging"
 

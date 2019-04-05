@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "virtual_server_port",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "slb"
 

@@ -57,8 +57,8 @@ AVAILABLE_PROPERTIES = [
     "WORD2",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "filter-config"
 

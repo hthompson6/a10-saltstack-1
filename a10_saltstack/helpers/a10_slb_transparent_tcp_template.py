@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "name",
-]
+REF_PROPERTIES = {
+    "name": "/axapi/v3/slb/template/tcp",
+}
 
 MODULE_NAME = "transparent-tcp-template"
 

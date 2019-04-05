@@ -22,10 +22,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "nat_quota_exceeded",
-    "nat_resource_exhausted",
-]
+REF_PROPERTIES = {
+    "nat_quota_exceeded": "/axapi/v3/cgnv6/logging/nat-quota-exceeded",
+    "nat_resource_exhausted": "/axapi/v3/cgnv6/logging/nat-resource-exhausted",
+}
 
 MODULE_NAME = "logging"
 

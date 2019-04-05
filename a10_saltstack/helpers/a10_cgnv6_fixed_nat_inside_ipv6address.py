@@ -36,8 +36,8 @@ AVAILABLE_PROPERTIES = [
     "vrid",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ipv6address"
 

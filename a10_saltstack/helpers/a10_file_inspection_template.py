@@ -38,10 +38,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "downloads_external_inspect",
-    "uploads_external_inspect",
-]
+REF_PROPERTIES = {
+    "downloads_external_inspect": "/axapi/v3/slb/template/respmod-icap",
+    "uploads_external_inspect": "/axapi/v3/slb/template/reqmod-icap",
+}
 
 MODULE_NAME = "template"
 

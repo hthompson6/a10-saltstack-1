@@ -33,10 +33,10 @@ AVAILABLE_PROPERTIES = [
     "aaa_policy_name",
 ]
 
-REF_PROPERTIES = [
-    "authentication_template",
-    "authorize_policy",
-]
+REF_PROPERTIES = {
+    "authentication_template": "/axapi/v3/aam/authentication/template",
+    "authorize_policy": "/axapi/v3/aam/authorization/policy",
+}
 
 MODULE_NAME = "aaa-rule"
 

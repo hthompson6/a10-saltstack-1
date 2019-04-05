@@ -27,8 +27,8 @@ AVAILABLE_PROPERTIES = [
     "vlan_cfg",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "fail-over-policy-template"
 

@@ -21,8 +21,8 @@ AVAILABLE_PROPERTIES = [
     "monitor_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "nat-pool"
 

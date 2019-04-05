@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "next_state_list",
-]
+REF_PROPERTIES = {
+    "next_state_list": "/axapi/v3/sys-ut/state/{name}/next-state/{name}",
+}
 
 MODULE_NAME = "state"
 

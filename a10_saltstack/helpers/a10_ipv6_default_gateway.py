@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "ipv6_default_gateway",
-]
+REF_PROPERTIES = {
+    "ipv6_default_gateway": "/axapi/v3/ipv6/address",
+}
 
 MODULE_NAME = "default-gateway"
 

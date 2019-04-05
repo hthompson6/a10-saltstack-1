@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "xlat_no_trans_pasv",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ftp"
 

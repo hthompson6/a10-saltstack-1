@@ -28,9 +28,9 @@ AVAILABLE_PROPERTIES = [
     "state_name",
 ]
 
-REF_PROPERTIES = [
-    "mac_list",
-]
+REF_PROPERTIES = {
+    "mac_list": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/l2/mac/{src-dst}",
+}
 
 MODULE_NAME = "l2"
 

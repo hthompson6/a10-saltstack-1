@@ -27,11 +27,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "attribute_list",
-    "server",
-    "service_group",
-]
+REF_PROPERTIES = {
+    "attribute_list": "/axapi/v3/aam/authorization/policy/{name}/attribute/{attr-num}",
+    "server": "/axapi/v3/aam/authentication/server/ldap/instance",
+    "service_group": "/axapi/v3/aam/authentication/service-group",
+}
 
 MODULE_NAME = "policy"
 

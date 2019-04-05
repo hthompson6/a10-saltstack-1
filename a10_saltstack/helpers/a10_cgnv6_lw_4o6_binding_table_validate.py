@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "binding_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "binding-table-validate"
 

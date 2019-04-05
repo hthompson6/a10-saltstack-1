@@ -21,8 +21,8 @@ AVAILABLE_PROPERTIES = [
     "ipv4_netmask",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ip"
 

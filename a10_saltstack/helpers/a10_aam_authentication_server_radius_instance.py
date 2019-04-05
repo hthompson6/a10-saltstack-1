@@ -37,11 +37,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "acct_port_hm",
-    "health_check_string",
-    "port_hm",
-]
+REF_PROPERTIES = {
+    "acct_port_hm": "/axapi/v3/health/monitor",
+    "health_check_string": "/axapi/v3/health/monitor",
+    "port_hm": "/axapi/v3/health/monitor",
+}
 
 MODULE_NAME = "instance"
 

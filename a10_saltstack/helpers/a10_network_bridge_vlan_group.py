@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "vlan_list",
 ]
 
-REF_PROPERTIES = [
-    "ve",
-]
+REF_PROPERTIES = {
+    "ve": "/axapi/v3/network/vlan",
+}
 
 MODULE_NAME = "bridge-vlan-group"
 

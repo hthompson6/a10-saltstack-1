@@ -35,9 +35,9 @@ AVAILABLE_PROPERTIES = [
     "site_name",
 ]
 
-REF_PROPERTIES = [
-    "vip_server",
-]
+REF_PROPERTIES = {
+    "vip_server": "/axapi/v3/gslb/site/{site-name}/slb-dev/{device-name}/vip-server",
+}
 
 MODULE_NAME = "slb-dev"
 

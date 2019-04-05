@@ -31,12 +31,12 @@ AVAILABLE_PROPERTIES = [
     "dns64_virtualserver_name",
 ]
 
-REF_PROPERTIES = [
-    "pool",
-    "service_group",
-    "template_dns",
-    "template_policy",
-]
+REF_PROPERTIES = {
+    "pool": "/axapi/v3/ip/nat/pool",
+    "service_group": "/axapi/v3/cgnv6/service-group",
+    "template_dns": "/axapi/v3/cgnv6/template/dns",
+    "template_policy": "/axapi/v3/cgnv6/template/policy",
+}
 
 MODULE_NAME = "port"
 

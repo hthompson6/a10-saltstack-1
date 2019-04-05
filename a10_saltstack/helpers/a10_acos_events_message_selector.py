@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "rule_list",
-]
+REF_PROPERTIES = {
+    "rule_list": "/axapi/v3/acos-events/message-selector/{name}/rule/{index}",
+}
 
 MODULE_NAME = "message-selector"
 

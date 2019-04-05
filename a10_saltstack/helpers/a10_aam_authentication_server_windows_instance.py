@@ -30,9 +30,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "health_check_string",
-]
+REF_PROPERTIES = {
+    "health_check_string": "/axapi/v3/health/monitor",
+}
 
 MODULE_NAME = "instance"
 

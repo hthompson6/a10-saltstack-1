@@ -27,14 +27,14 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "ignore_validation",
-    "l1",
-    "l2",
-    "l3",
-    "tcp",
-    "udp",
-]
+REF_PROPERTIES = {
+    "ignore_validation": "/axapi/v3/sys-ut/template/{name}/ignore-validation",
+    "l1": "/axapi/v3/sys-ut/template/{name}/l1",
+    "l2": "/axapi/v3/sys-ut/template/{name}/l2",
+    "l3": "/axapi/v3/sys-ut/template/{name}/l3",
+    "tcp": "/axapi/v3/sys-ut/template/{name}/tcp",
+    "udp": "/axapi/v3/sys-ut/template/{name}/udp",
+}
 
 MODULE_NAME = "template"
 

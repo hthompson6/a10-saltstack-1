@@ -28,9 +28,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "gtp_filter_list",
-]
+REF_PROPERTIES = {
+    "gtp_filter_list": "/axapi/v3/template/gtp-filter-list",
+}
 
 MODULE_NAME = "gtp"
 

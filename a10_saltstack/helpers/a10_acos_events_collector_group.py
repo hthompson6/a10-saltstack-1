@@ -28,10 +28,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-    "log_server_list",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "log_server_list": "/axapi/v3/acos-events/collector-group/{name}/log-server/{name}+{port}",
+}
 
 MODULE_NAME = "collector-group"
 

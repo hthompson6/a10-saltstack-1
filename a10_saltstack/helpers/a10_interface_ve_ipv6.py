@@ -32,13 +32,13 @@ AVAILABLE_PROPERTIES = [
     "ve_ifnum",
 ]
 
-REF_PROPERTIES = [
-    "ospf",
-    "rip",
-    "router",
-    "stateful_firewall",
-    "v6_acl_name",
-]
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/ve/{ifnum}/ipv6/ospf",
+    "rip": "/axapi/v3/interface/ve/{ifnum}/ipv6/rip",
+    "router": "/axapi/v3/interface/ve/{ifnum}/ipv6/router",
+    "stateful_firewall": "/axapi/v3/interface/ve/{ifnum}/ipv6/stateful-firewall",
+    "v6_acl_name": "/axapi/v3/ipv6/access-list",
+}
 
 MODULE_NAME = "ipv6"
 

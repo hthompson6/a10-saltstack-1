@@ -106,8 +106,8 @@ AVAILABLE_PROPERTIES = [
     "web_hosting_sites",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "category-list"
 

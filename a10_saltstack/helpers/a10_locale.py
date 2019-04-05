@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "value",
 ]
 
-REF_PROPERTIES = [
-    "test",
-]
+REF_PROPERTIES = {
+    "test": "/axapi/v3/locale/test",
+}
 
 MODULE_NAME = "locale"
 

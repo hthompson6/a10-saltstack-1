@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "delete_cfg",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "store"
 

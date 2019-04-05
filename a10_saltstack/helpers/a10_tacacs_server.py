@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "host",
-]
+REF_PROPERTIES = {
+    "host": "/axapi/v3/tacacs-server/host",
+}
 
 MODULE_NAME = "tacacs-server"
 

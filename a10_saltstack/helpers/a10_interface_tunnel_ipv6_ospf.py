@@ -31,8 +31,8 @@ AVAILABLE_PROPERTIES = [
     "tunnel_ifnum",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ospf"
 

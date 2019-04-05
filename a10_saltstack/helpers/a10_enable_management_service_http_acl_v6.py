@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "ve_cfg",
 ]
 
-REF_PROPERTIES = [
-    "acl_name",
-]
+REF_PROPERTIES = {
+    "acl_name": "/axapi/v3/ipv6/access-list",
+}
 
 MODULE_NAME = "acl-v6"
 

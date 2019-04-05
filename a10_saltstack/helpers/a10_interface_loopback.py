@@ -26,11 +26,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "ip",
-    "ipv6",
-    "isis",
-]
+REF_PROPERTIES = {
+    "ip": "/axapi/v3/interface/loopback/{ifnum}/ip",
+    "ipv6": "/axapi/v3/interface/loopback/{ifnum}/ipv6",
+    "isis": "/axapi/v3/interface/loopback/{ifnum}/isis",
+}
 
 MODULE_NAME = "loopback"
 

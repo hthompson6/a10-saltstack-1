@@ -31,11 +31,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "dns_mx_record_list",
-    "dns_ns_record_list",
-    "service_list",
-]
+REF_PROPERTIES = {
+    "dns_mx_record_list": "/axapi/v3/gslb/zone/{name}/dns-mx-record/{mx-name}",
+    "dns_ns_record_list": "/axapi/v3/gslb/zone/{name}/dns-ns-record/{ns-name}",
+    "service_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}",
+}
 
 MODULE_NAME = "zone"
 

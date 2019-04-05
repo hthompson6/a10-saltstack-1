@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "key_list",
-]
+REF_PROPERTIES = {
+    "key_list": "/axapi/v3/key/{key-chain-flag}+{key-chain-name}/key/{key-number}",
+}
 
 MODULE_NAME = "key"
 

@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "src_cert",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "copy-cert"
 

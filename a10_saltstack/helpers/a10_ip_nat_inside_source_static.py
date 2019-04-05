@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "vrid",
 ]
 
-REF_PROPERTIES = [
-    "vrid",
-]
+REF_PROPERTIES = {
+    "vrid": "/axapi/v3/vrrp-a/vrid",
+}
 
 MODULE_NAME = "static"
 

@@ -28,11 +28,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "basic_mapping_rule",
-    "default_mapping_rule",
-    "health_check_gateway",
-]
+REF_PROPERTIES = {
+    "basic_mapping_rule": "/axapi/v3/cgnv6/map/translation/domain/{name}/basic-mapping-rule",
+    "default_mapping_rule": "/axapi/v3/cgnv6/map/translation/domain/{name}/default-mapping-rule",
+    "health_check_gateway": "/axapi/v3/cgnv6/map/translation/domain/{name}/health-check-gateway",
+}
 
 MODULE_NAME = "domain"
 

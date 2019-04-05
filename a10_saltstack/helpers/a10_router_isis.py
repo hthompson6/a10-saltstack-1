@@ -44,10 +44,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "address_family",
-    "redistribute",
-]
+REF_PROPERTIES = {
+    "address_family": "/axapi/v3/router/isis/{tag}/address-family",
+    "redistribute": "/axapi/v3/router/isis/{tag}/redistribute",
+}
 
 MODULE_NAME = "isis"
 

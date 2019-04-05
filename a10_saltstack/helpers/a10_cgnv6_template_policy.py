@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "class_list",
-]
+REF_PROPERTIES = {
+    "class_list": "/axapi/v3/cgnv6/template/policy/{name}/class-list",
+}
 
 MODULE_NAME = "policy"
 

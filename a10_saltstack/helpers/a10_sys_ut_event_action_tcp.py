@@ -32,10 +32,10 @@ AVAILABLE_PROPERTIES = [
     "event_number",
 ]
 
-REF_PROPERTIES = [
-    "flags",
-    "options",
-]
+REF_PROPERTIES = {
+    "flags": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/tcp/flags",
+    "options": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/tcp/options",
+}
 
 MODULE_NAME = "tcp"
 

@@ -33,13 +33,13 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "error",
-    "ike_gateway_list",
-    "ike_stats_global",
-    "ipsec_list",
-    "revocation_list",
-]
+REF_PROPERTIES = {
+    "error": "/axapi/v3/vpn/error",
+    "ike_gateway_list": "/axapi/v3/vpn/ike-gateway/{name}",
+    "ike_stats_global": "/axapi/v3/vpn/ike-stats-global",
+    "ipsec_list": "/axapi/v3/vpn/ipsec/{name}",
+    "revocation_list": "/axapi/v3/vpn/revocation/{name}",
+}
 
 MODULE_NAME = "vpn"
 

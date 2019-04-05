@@ -25,12 +25,12 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "cluster_devices",
-    "device_groups",
-    "local_device",
-    "service_config",
-]
+REF_PROPERTIES = {
+    "cluster_devices": "/axapi/v3/scaleout/cluster/{cluster-id}/cluster-devices",
+    "device_groups": "/axapi/v3/scaleout/cluster/{cluster-id}/device-groups",
+    "local_device": "/axapi/v3/scaleout/cluster/{cluster-id}/local-device",
+    "service_config": "/axapi/v3/scaleout/cluster/{cluster-id}/service-config",
+}
 
 MODULE_NAME = "cluster"
 

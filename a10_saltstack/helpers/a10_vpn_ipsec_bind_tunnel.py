@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "ipsec_name",
 ]
 
-REF_PROPERTIES = [
-    "tunnel",
-]
+REF_PROPERTIES = {
+    "tunnel": "/axapi/v3/interface/tunnel",
+}
 
 MODULE_NAME = "bind-tunnel"
 

@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "property",
-]
+REF_PROPERTIES = {
+    "property": "/axapi/v3/acos-events/message-id/{log-msg}/property",
+}
 
 MODULE_NAME = "message-id"
 

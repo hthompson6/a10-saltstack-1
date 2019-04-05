@@ -40,10 +40,10 @@ AVAILABLE_PROPERTIES = [
     "vendor_id",
 ]
 
-REF_PROPERTIES = [
-    "origin_host",
-    "service_group_name",
-]
+REF_PROPERTIES = {
+    "origin_host": "/axapi/v3/slb/template/diameter/{name}/origin-host",
+    "service_group_name": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "diameter"
 

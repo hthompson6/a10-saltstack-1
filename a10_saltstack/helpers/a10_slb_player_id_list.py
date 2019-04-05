@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "player_record",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "player-id-list"
 

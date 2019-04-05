@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "request_uri_list",
-]
+REF_PROPERTIES = {
+    "request_uri_list": "/axapi/v3/aam/authentication/relay/form-based/instance/{name}/request-uri/{match-type}+{uri}",
+}
 
 MODULE_NAME = "instance"
 

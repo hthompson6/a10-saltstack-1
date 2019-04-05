@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "cluster_id",
 ]
 
-REF_PROPERTIES = [
-    "l2_redirect",
-]
+REF_PROPERTIES = {
+    "l2_redirect": "/axapi/v3/scaleout/cluster/{cluster-id}/local-device/l2-redirect",
+}
 
 MODULE_NAME = "local-device"
 

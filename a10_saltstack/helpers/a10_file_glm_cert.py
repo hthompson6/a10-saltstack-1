@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "file_handle",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "glm-cert"
 

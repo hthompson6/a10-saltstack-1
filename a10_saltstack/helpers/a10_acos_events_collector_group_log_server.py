@@ -22,10 +22,10 @@ AVAILABLE_PROPERTIES = [
     "collector_group_name",
 ]
 
-REF_PROPERTIES = [
-    "name",
-    "port",
-]
+REF_PROPERTIES = {
+    "name": "/axapi/v3/acos-events/log-server",
+    "port": "/axapi/v3/acos-events/log-server/port",
+}
 
 MODULE_NAME = "log-server"
 

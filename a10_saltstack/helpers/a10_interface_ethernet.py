@@ -54,18 +54,18 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "bfd",
-    "ddos",
-    "ip",
-    "ipv6",
-    "isis",
-    "lldp",
-    "lw_4o6",
-    "map",
-    "nptv6",
-    "trunk_group_list",
-]
+REF_PROPERTIES = {
+    "bfd": "/axapi/v3/interface/ethernet/{ifnum}/bfd",
+    "ddos": "/axapi/v3/interface/ethernet/{ifnum}/ddos",
+    "ip": "/axapi/v3/interface/ethernet/{ifnum}/ip",
+    "ipv6": "/axapi/v3/interface/ethernet/{ifnum}/ipv6",
+    "isis": "/axapi/v3/interface/ethernet/{ifnum}/isis",
+    "lldp": "/axapi/v3/interface/ethernet/{ifnum}/lldp",
+    "lw_4o6": "/axapi/v3/interface/ethernet/{ifnum}/lw-4o6",
+    "map": "/axapi/v3/interface/ethernet/{ifnum}/map",
+    "nptv6": "/axapi/v3/interface/ethernet/{ifnum}/nptv6",
+    "trunk_group_list": "/axapi/v3/interface/ethernet/{ifnum}/trunk-group/{trunk-number}",
+}
 
 MODULE_NAME = "ethernet"
 

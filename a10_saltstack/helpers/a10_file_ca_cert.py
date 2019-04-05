@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "size",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ca-cert"
 

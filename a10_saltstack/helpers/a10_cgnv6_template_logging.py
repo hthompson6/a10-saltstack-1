@@ -42,10 +42,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "disable_log_by_destination",
-    "source_address",
-]
+REF_PROPERTIES = {
+    "disable_log_by_destination": "/axapi/v3/cgnv6/template/logging/{name}/disable-log-by-destination",
+    "source_address": "/axapi/v3/cgnv6/template/logging/{name}/source-address",
+}
 
 MODULE_NAME = "logging"
 

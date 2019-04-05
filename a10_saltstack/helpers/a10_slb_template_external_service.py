@@ -30,11 +30,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "service_group",
-    "source_ip",
-    "tcp_proxy",
-]
+REF_PROPERTIES = {
+    "service_group": "/axapi/v3/slb/service-group",
+    "source_ip": "/axapi/v3/slb/template/persist/source-ip",
+    "tcp_proxy": "/axapi/v3/slb/template/tcp-proxy",
+}
 
 MODULE_NAME = "external-service"
 

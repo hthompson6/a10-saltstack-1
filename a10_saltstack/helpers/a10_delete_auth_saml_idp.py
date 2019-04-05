@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "saml_idp_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "auth-saml-idp"
 

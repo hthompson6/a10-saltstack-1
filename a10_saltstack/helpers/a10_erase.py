@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "reload",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "erase"
 

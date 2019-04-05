@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "vrid_val",
 ]
 
-REF_PROPERTIES = [
-    "blade_parameters",
-]
+REF_PROPERTIES = {
+    "blade_parameters": "/axapi/v3/vrrp-a/vrid/{vrid-val}/blade-parameters",
+}
 
 MODULE_NAME = "vrid"
 

@@ -33,9 +33,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "radius_sg",
-]
+REF_PROPERTIES = {
+    "radius_sg": "/axapi/v3/cgnv6/service-group",
+}
 
 MODULE_NAME = "http-alg"
 

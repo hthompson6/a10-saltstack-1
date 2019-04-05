@@ -72,9 +72,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "bypass_sg",
-]
+REF_PROPERTIES = {
+    "bypass_sg": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "http"
 

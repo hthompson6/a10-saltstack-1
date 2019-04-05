@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "binding_table_name",
 ]
 
-REF_PROPERTIES = [
-    "nat_address_list",
-]
+REF_PROPERTIES = {
+    "nat_address_list": "/axapi/v3/cgnv6/lw-4o6/binding-table/{name}/tunnel-address/{ipv6-tunnel-addr}/nat-address/{ipv4-nat-addr}",
+}
 
 MODULE_NAME = "tunnel-address"
 

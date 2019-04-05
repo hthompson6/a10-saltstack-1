@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "vMaster_maintenance",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "vMaster-maintenance"
 

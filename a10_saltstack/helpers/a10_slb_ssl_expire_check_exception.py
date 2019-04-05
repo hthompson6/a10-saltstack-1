@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "certificate_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "exception"
 

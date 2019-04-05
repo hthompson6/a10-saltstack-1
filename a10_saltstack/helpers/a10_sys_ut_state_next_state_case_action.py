@@ -31,14 +31,14 @@ AVAILABLE_PROPERTIES = [
     "state_name",
 ]
 
-REF_PROPERTIES = [
-    "l1",
-    "l2",
-    "l3",
-    "tcp",
-    "template",
-    "udp",
-]
+REF_PROPERTIES = {
+    "l1": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/l1",
+    "l2": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/l2",
+    "l3": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/l3",
+    "tcp": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/tcp",
+    "template": "/axapi/v3/sys-ut/template",
+    "udp": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/udp",
+}
 
 MODULE_NAME = "action"
 

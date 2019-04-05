@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "value",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "interval"
 

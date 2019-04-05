@@ -34,11 +34,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "access",
-    "password",
-    "ssh_pubkey",
-]
+REF_PROPERTIES = {
+    "access": "/axapi/v3/admin/{user}/access",
+    "password": "/axapi/v3/admin/{user}/password",
+    "ssh_pubkey": "/axapi/v3/admin/{user}/ssh-pubkey",
+}
 
 MODULE_NAME = "admin"
 

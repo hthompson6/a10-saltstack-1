@@ -33,12 +33,12 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "address_family",
-    "neighbor",
-    "network",
-    "redistribute",
-]
+REF_PROPERTIES = {
+    "address_family": "/axapi/v3/router/bgp/{as-number}/address-family",
+    "neighbor": "/axapi/v3/router/bgp/{as-number}/neighbor",
+    "network": "/axapi/v3/router/bgp/{as-number}/network",
+    "redistribute": "/axapi/v3/router/bgp/{as-number}/redistribute",
+}
 
 MODULE_NAME = "bgp"
 

@@ -30,9 +30,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "kerberos_kdc_service_group",
-]
+REF_PROPERTIES = {
+    "kerberos_kdc_service_group": "/axapi/v3/aam/authentication/service-group",
+}
 
 MODULE_NAME = "instance"
 

@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "action_list",
-]
+REF_PROPERTIES = {
+    "action_list": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}",
+}
 
 MODULE_NAME = "event"
 

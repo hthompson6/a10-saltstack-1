@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "hd_cfg",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "bootimage"
 

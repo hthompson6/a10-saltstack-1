@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "license_request",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "send"
 

@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "vrrp_a",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "traps"
 

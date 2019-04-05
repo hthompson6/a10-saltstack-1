@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "console",
-]
+REF_PROPERTIES = {
+    "console": "/axapi/v3/authentication/console",
+}
 
 MODULE_NAME = "authentication"
 

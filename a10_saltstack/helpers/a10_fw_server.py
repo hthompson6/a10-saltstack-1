@@ -29,10 +29,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-    "port_list",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "port_list": "/axapi/v3/fw/server/{name}/port/{port-number}+{protocol}",
+}
 
 MODULE_NAME = "server"
 

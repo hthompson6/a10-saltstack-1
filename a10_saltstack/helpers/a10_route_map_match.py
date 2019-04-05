@@ -34,8 +34,8 @@ AVAILABLE_PROPERTIES = [
     "route_map_tag",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "match"
 

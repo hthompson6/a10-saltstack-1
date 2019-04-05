@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "vmaster_take_over",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "vmaster-take-over"
 

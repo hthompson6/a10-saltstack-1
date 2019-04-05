@@ -60,10 +60,10 @@ AVAILABLE_PROPERTIES = [
     "weight",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-    "source_nat",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "source_nat": "/axapi/v3/ip/nat/pool",
+}
 
 MODULE_NAME = "port"
 

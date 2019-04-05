@@ -60,13 +60,13 @@ AVAILABLE_PROPERTIES = [
     "xml_schema",
 ]
 
-REF_PROPERTIES = [
-    "auth_saml_idp",
-    "health_external",
-    "health_postfile",
-    "store",
-    "to_device",
-]
+REF_PROPERTIES = {
+    "auth_saml_idp": "/axapi/v3/import/auth-saml-idp",
+    "health_external": "/axapi/v3/import/health-external",
+    "health_postfile": "/axapi/v3/import/health-postfile",
+    "store": "/axapi/v3/import/store",
+    "to_device": "/axapi/v3/import/to-device",
+}
 
 MODULE_NAME = "import"
 

@@ -24,11 +24,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "app_resources",
-    "network_resources",
-    "system_resources",
-]
+REF_PROPERTIES = {
+    "app_resources": "/axapi/v3/system/resource-accounting/template/{name}/app-resources",
+    "network_resources": "/axapi/v3/system/resource-accounting/template/{name}/network-resources",
+    "system_resources": "/axapi/v3/system/resource-accounting/template/{name}/system-resources",
+}
 
 MODULE_NAME = "template"
 

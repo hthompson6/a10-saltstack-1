@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "src_key",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "copy-key"
 

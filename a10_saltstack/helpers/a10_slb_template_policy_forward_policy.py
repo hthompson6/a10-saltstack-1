@@ -25,10 +25,10 @@ AVAILABLE_PROPERTIES = [
     "policy_name",
 ]
 
-REF_PROPERTIES = [
-    "action_list",
-    "source_list",
-]
+REF_PROPERTIES = {
+    "action_list": "/axapi/v3/slb/template/policy/{name}/forward-policy/action/{name}",
+    "source_list": "/axapi/v3/slb/template/policy/{name}/forward-policy/source/{name}",
+}
 
 MODULE_NAME = "forward-policy"
 

@@ -24,12 +24,12 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "anomaly_detection",
-    "monitor_list",
-    "monitored_entity",
-    "reporting",
-]
+REF_PROPERTIES = {
+    "anomaly_detection": "/axapi/v3/visibility/anomaly-detection",
+    "monitor_list": "/axapi/v3/visibility/monitor/{primary-monitor}",
+    "monitored_entity": "/axapi/v3/visibility/monitored-entity",
+    "reporting": "/axapi/v3/visibility/reporting",
+}
 
 MODULE_NAME = "visibility"
 

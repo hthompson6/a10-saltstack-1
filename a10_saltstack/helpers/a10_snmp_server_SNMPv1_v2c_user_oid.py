@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "user_user",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "oid"
 

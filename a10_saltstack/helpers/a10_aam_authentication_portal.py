@@ -26,12 +26,12 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "change_password",
-    "logon",
-    "logon_fail",
-    "notify_change_password",
-]
+REF_PROPERTIES = {
+    "change_password": "/axapi/v3/aam/authentication/portal/{name}/change-password",
+    "logon": "/axapi/v3/aam/authentication/portal/{name}/logon",
+    "logon_fail": "/axapi/v3/aam/authentication/portal/{name}/logon-fail",
+    "notify_change_password": "/axapi/v3/aam/authentication/portal/{name}/notify-change-password",
+}
 
 MODULE_NAME = "portal"
 

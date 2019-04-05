@@ -32,12 +32,12 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "distribute_list",
-    "offset_list",
-    "redistribute",
-    "route_map",
-]
+REF_PROPERTIES = {
+    "distribute_list": "/axapi/v3/router/ipv6/rip/distribute-list",
+    "offset_list": "/axapi/v3/router/ipv6/rip/offset-list",
+    "redistribute": "/axapi/v3/router/ipv6/rip/redistribute",
+    "route_map": "/axapi/v3/router/ipv6/rip/route-map",
+}
 
 MODULE_NAME = "rip"
 

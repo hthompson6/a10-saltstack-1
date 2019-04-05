@@ -21,10 +21,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "acl_v4_list",
-    "acl_v6_list",
-]
+REF_PROPERTIES = {
+    "acl_v4_list": "/axapi/v3/enable-management/service/ping/acl-v4/{acl-id}",
+    "acl_v6_list": "/axapi/v3/enable-management/service/ping/acl-v6/{acl-name}",
+}
 
 MODULE_NAME = "ping"
 

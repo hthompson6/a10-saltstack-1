@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "virtual_server",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "auth"
 

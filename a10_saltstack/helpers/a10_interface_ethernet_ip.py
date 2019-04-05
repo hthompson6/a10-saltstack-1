@@ -38,12 +38,12 @@ AVAILABLE_PROPERTIES = [
     "ethernet_ifnum",
 ]
 
-REF_PROPERTIES = [
-    "ospf",
-    "rip",
-    "router",
-    "stateful_firewall",
-]
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/ethernet/{ifnum}/ip/ospf",
+    "rip": "/axapi/v3/interface/ethernet/{ifnum}/ip/rip",
+    "router": "/axapi/v3/interface/ethernet/{ifnum}/ip/router",
+    "stateful_firewall": "/axapi/v3/interface/ethernet/{ifnum}/ip/stateful-firewall",
+}
 
 MODULE_NAME = "ip"
 

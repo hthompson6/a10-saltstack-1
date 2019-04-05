@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "vlan",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "layer2"
 

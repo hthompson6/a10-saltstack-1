@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "dns_name",
 ]
 
-REF_PROPERTIES = [
-    "lid_list",
-]
+REF_PROPERTIES = {
+    "lid_list": "/axapi/v3/slb/template/dns/{name}/class-list/lid/{lidnum}",
+}
 
 MODULE_NAME = "class-list"
 

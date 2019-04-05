@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "rule_set_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "app"
 

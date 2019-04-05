@@ -24,9 +24,9 @@ AVAILABLE_PROPERTIES = [
     "vlan",
 ]
 
-REF_PROPERTIES = [
-    "vlan",
-]
+REF_PROPERTIES = {
+    "vlan": "/axapi/v3/network/vlan",
+}
 
 MODULE_NAME = "static"
 

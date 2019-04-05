@@ -22,10 +22,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "interval",
-    "priority_partition_list",
-]
+REF_PROPERTIES = {
+    "interval": "/axapi/v3/techreport/interval",
+    "priority_partition_list": "/axapi/v3/techreport/priority-partition/{part-name}",
+}
 
 MODULE_NAME = "techreport"
 

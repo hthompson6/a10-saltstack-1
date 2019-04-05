@@ -58,9 +58,9 @@ AVAILABLE_PROPERTIES = [
     "xml_schema",
 ]
 
-REF_PROPERTIES = [
-    "store",
-]
+REF_PROPERTIES = {
+    "store": "/axapi/v3/export/store",
+}
 
 MODULE_NAME = "export"
 

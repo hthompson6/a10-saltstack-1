@@ -27,8 +27,8 @@ AVAILABLE_PROPERTIES = [
     "width",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "terminal"
 

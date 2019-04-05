@@ -32,14 +32,14 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "destination",
-    "disable_log_by_destination",
-    "record",
-    "resend_template",
-    "sample",
-    "source_address",
-]
+REF_PROPERTIES = {
+    "destination": "/axapi/v3/netflow/monitor/{name}/destination",
+    "disable_log_by_destination": "/axapi/v3/netflow/monitor/{name}/disable-log-by-destination",
+    "record": "/axapi/v3/netflow/monitor/{name}/record",
+    "resend_template": "/axapi/v3/netflow/monitor/{name}/resend-template",
+    "sample": "/axapi/v3/netflow/monitor/{name}/sample",
+    "source_address": "/axapi/v3/netflow/monitor/{name}/source-address",
+}
 
 MODULE_NAME = "monitor"
 

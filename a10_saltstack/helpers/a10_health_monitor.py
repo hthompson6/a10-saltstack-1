@@ -38,9 +38,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "method",
-]
+REF_PROPERTIES = {
+    "method": "/axapi/v3/health/monitor/{name}/method",
+}
 
 MODULE_NAME = "monitor"
 

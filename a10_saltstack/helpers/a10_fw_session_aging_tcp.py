@@ -26,8 +26,8 @@ AVAILABLE_PROPERTIES = [
     "session_aging_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "tcp"
 

@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "isis_tag",
 ]
 
-REF_PROPERTIES = [
-    "redistribute",
-]
+REF_PROPERTIES = {
+    "redistribute": "/axapi/v3/router/isis/{tag}/address-family/ipv6/redistribute",
+}
 
 MODULE_NAME = "ipv6"
 

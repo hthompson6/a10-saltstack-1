@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "name",
-]
+REF_PROPERTIES = {
+    "name": "/axapi/v3/acos-events/template",
+}
 
 MODULE_NAME = "active-template"
 

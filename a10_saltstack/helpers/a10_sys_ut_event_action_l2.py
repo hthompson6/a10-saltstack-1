@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "event_number",
 ]
 
-REF_PROPERTIES = [
-    "mac_list",
-]
+REF_PROPERTIES = {
+    "mac_list": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/l2/mac/{src-dst}",
+}
 
 MODULE_NAME = "l2"
 

@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "action",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "fpga-decrypt"
 

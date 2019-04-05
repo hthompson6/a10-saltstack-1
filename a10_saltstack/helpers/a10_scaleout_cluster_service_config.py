@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "cluster_id",
 ]
 
-REF_PROPERTIES = [
-    "template_list",
-]
+REF_PROPERTIES = {
+    "template_list": "/axapi/v3/scaleout/cluster/{cluster-id}/service-config/template/{name}",
+}
 
 MODULE_NAME = "service-config"
 

@@ -21,8 +21,8 @@ AVAILABLE_PROPERTIES = [
     "port_index",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "mgmt-port"
 

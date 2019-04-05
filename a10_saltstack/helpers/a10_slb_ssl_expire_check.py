@@ -24,9 +24,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "exception",
-]
+REF_PROPERTIES = {
+    "exception": "/axapi/v3/slb/ssl-expire-check/exception",
+}
 
 MODULE_NAME = "ssl-expire-check"
 

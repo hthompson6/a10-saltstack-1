@@ -26,13 +26,13 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "common",
-    "event_list",
-    "run_test",
-    "state_list",
-    "template_list",
-]
+REF_PROPERTIES = {
+    "common": "/axapi/v3/sys-ut/common",
+    "event_list": "/axapi/v3/sys-ut/event/{event-number}",
+    "run_test": "/axapi/v3/sys-ut/run-test",
+    "state_list": "/axapi/v3/sys-ut/state/{name}",
+    "template_list": "/axapi/v3/sys-ut/template/{name}",
+}
 
 MODULE_NAME = "sys-ut"
 

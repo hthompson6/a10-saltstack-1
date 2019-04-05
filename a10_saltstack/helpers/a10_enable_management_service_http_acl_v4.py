@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "ve_cfg",
 ]
 
-REF_PROPERTIES = [
-    "acl_id",
-]
+REF_PROPERTIES = {
+    "acl_id": "/axapi/v3/access-list/standard",
+}
 
 MODULE_NAME = "acl-v4"
 

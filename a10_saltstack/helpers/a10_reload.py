@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "device",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "reload"
 

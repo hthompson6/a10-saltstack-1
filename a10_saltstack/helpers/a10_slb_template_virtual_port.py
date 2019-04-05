@@ -45,8 +45,8 @@ AVAILABLE_PROPERTIES = [
     "when_rr_enable",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "virtual-port"
 

@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "id",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "set-product-id"
 

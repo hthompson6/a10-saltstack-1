@@ -25,10 +25,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "tcp",
-    "udp",
-]
+REF_PROPERTIES = {
+    "tcp": "/axapi/v3/fw/session-aging/{name}/tcp",
+    "udp": "/axapi/v3/fw/session-aging/{name}/udp",
+}
 
 MODULE_NAME = "session-aging"
 

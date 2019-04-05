@@ -36,8 +36,8 @@ AVAILABLE_PROPERTIES = [
     "lif_ifnum",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "isis"
 

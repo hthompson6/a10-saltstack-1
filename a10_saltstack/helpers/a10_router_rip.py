@@ -35,11 +35,11 @@ AVAILABLE_PROPERTIES = [
     "version",
 ]
 
-REF_PROPERTIES = [
-    "distribute_list",
-    "offset_list",
-    "redistribute",
-]
+REF_PROPERTIES = {
+    "distribute_list": "/axapi/v3/router/rip/distribute-list",
+    "offset_list": "/axapi/v3/router/rip/offset-list",
+    "redistribute": "/axapi/v3/router/rip/redistribute",
+}
 
 MODULE_NAME = "rip"
 

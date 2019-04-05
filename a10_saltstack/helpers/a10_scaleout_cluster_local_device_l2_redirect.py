@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "cluster_id",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "l2-redirect"
 

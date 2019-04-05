@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "virtual_server_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "port"
 

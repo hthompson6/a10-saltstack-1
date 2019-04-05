@@ -30,9 +30,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "authentication",
-]
+REF_PROPERTIES = {
+    "authentication": "/axapi/v3/visibility/reporting/notification-template/{name}/authentication",
+}
 
 MODULE_NAME = "notification-template"
 

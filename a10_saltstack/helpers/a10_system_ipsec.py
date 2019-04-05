@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "fpga_decrypt",
-]
+REF_PROPERTIES = {
+    "fpga_decrypt": "/axapi/v3/system/ipsec/fpga-decrypt",
+}
 
 MODULE_NAME = "ipsec"
 

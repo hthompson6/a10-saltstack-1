@@ -27,17 +27,17 @@ AVAILABLE_PROPERTIES = [
     "route",
 ]
 
-REF_PROPERTIES = [
-    "all",
-    "bfd",
-    "events",
-    "ifsm",
-    "lsa",
-    "nfsm",
-    "nsm",
-    "packet",
-    "route",
-]
+REF_PROPERTIES = {
+    "all": "/axapi/v3/debug/ipv6/ospf/all",
+    "bfd": "/axapi/v3/debug/ipv6/ospf/bfd",
+    "events": "/axapi/v3/debug/ipv6/ospf/events",
+    "ifsm": "/axapi/v3/debug/ipv6/ospf/ifsm",
+    "lsa": "/axapi/v3/debug/ipv6/ospf/lsa",
+    "nfsm": "/axapi/v3/debug/ipv6/ospf/nfsm",
+    "nsm": "/axapi/v3/debug/ipv6/ospf/nsm",
+    "packet": "/axapi/v3/debug/ipv6/ospf/packet",
+    "route": "/axapi/v3/debug/ipv6/ospf/route",
+}
 
 MODULE_NAME = "ospf"
 

@@ -29,10 +29,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "class_list",
-    "dns64",
-]
+REF_PROPERTIES = {
+    "class_list": "/axapi/v3/cgnv6/template/dns/{name}/class-list",
+    "dns64": "/axapi/v3/cgnv6/template/dns/{name}/dns64",
+}
 
 MODULE_NAME = "dns"
 

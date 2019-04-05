@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "template_name",
 ]
 
-REF_PROPERTIES = [
-    "mac_list",
-]
+REF_PROPERTIES = {
+    "mac_list": "/axapi/v3/sys-ut/template/{name}/l2/mac/{src-dst}",
+}
 
 MODULE_NAME = "l2"
 

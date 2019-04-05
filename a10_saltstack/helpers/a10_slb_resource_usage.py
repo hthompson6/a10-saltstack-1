@@ -37,8 +37,8 @@ AVAILABLE_PROPERTIES = [
     "virtual_server_count",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "resource-usage"
 

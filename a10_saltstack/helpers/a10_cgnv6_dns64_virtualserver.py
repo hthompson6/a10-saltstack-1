@@ -31,10 +31,10 @@ AVAILABLE_PROPERTIES = [
     "vrid",
 ]
 
-REF_PROPERTIES = [
-    "port_list",
-    "template_policy",
-]
+REF_PROPERTIES = {
+    "port_list": "/axapi/v3/cgnv6/dns64-virtualserver/{name}/port/{port-number}+{protocol}",
+    "template_policy": "/axapi/v3/cgnv6/template/policy",
+}
 
 MODULE_NAME = "dns64-virtualserver"
 

@@ -41,11 +41,11 @@ AVAILABLE_PROPERTIES = [
     "server_name",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-    "template_port",
-    "template_server_ssl",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "template_port": "/axapi/v3/slb/template/port",
+    "template_server_ssl": "/axapi/v3/slb/template/server-ssl",
+}
 
 MODULE_NAME = "port"
 

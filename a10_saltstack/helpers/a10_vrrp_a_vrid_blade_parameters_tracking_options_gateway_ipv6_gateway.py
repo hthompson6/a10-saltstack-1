@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "vrid_val",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ipv6-gateway"
 

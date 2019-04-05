@@ -30,9 +30,9 @@ AVAILABLE_PROPERTIES = [
     "service_ip_node_name",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+}
 
 MODULE_NAME = "port"
 

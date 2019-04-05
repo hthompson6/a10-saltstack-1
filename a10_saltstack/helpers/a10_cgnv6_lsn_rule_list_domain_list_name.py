@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "lsn_rule_list_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "domain-list-name"
 

@@ -26,8 +26,8 @@ AVAILABLE_PROPERTIES = [
     "notification_template_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "authentication"
 

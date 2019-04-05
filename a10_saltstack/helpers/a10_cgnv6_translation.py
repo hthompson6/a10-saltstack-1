@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "service_timeout_list",
-]
+REF_PROPERTIES = {
+    "service_timeout_list": "/axapi/v3/cgnv6/translation/service-timeout/{service-type}+{port}",
+}
 
 MODULE_NAME = "translation"
 

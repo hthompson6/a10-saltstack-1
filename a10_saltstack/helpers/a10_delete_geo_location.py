@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "filename",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "geo-location"
 

@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "big_buff_pool",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system-big-buff-pool"
 

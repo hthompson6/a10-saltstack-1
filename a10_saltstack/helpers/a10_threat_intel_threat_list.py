@@ -35,8 +35,8 @@ AVAILABLE_PROPERTIES = [
     "windows_exploits",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "threat-list"
 

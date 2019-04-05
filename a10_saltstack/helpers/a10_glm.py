@@ -29,10 +29,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "proxy_server",
-    "send",
-]
+REF_PROPERTIES = {
+    "proxy_server": "/axapi/v3/glm/proxy-server",
+    "send": "/axapi/v3/glm/send",
+}
 
 MODULE_NAME = "glm"
 

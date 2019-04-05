@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "instance_list",
-]
+REF_PROPERTIES = {
+    "instance_list": "/axapi/v3/aam/authentication/server/windows/instance/{name}",
+}
 
 MODULE_NAME = "windows"
 

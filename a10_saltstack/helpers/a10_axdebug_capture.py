@@ -27,8 +27,8 @@ AVAILABLE_PROPERTIES = [
     "save",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "capture"
 

@@ -44,16 +44,16 @@ AVAILABLE_PROPERTIES = [
     "vrid",
 ]
 
-REF_PROPERTIES = [
-    "acl_id",
-    "acl_name",
-    "ipv6_acl",
-    "migrate_vip",
-    "port_list",
-    "template_logging",
-    "template_policy",
-    "template_virtual_server",
-]
+REF_PROPERTIES = {
+    "acl_id": "/axapi/v3/access-list/standard",
+    "acl_name": "/axapi/v3/ip/access-list",
+    "ipv6_acl": "/axapi/v3/ipv6/access-list",
+    "migrate_vip": "/axapi/v3/slb/virtual-server/{name}/migrate-vip",
+    "port_list": "/axapi/v3/slb/virtual-server/{name}/port/{port-number}+{protocol}",
+    "template_logging": "/axapi/v3/ip/nat/template/logging",
+    "template_policy": "/axapi/v3/slb/template/policy",
+    "template_virtual_server": "/axapi/v3/slb/template/virtual-server",
+}
 
 MODULE_NAME = "virtual-server"
 

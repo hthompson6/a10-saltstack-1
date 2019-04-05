@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "binding_table_name",
 ]
 
-REF_PROPERTIES = [
-    "port_range_list",
-]
+REF_PROPERTIES = {
+    "port_range_list": "/axapi/v3/cgnv6/lw-4o6/binding-table/{name}/tunnel-address/{ipv6-tunnel-addr}/nat-address/{ipv4-nat-addr}/port-range/{port-start}+{port-end}",
+}
 
 MODULE_NAME = "nat-address"
 

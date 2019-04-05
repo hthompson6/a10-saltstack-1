@@ -26,8 +26,8 @@ AVAILABLE_PROPERTIES = [
     "trunk_ifnum",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "rip"
 

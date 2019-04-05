@@ -28,11 +28,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "bfd",
-    "ip",
-    "isis",
-]
+REF_PROPERTIES = {
+    "bfd": "/axapi/v3/interface/lif/{ifnum}/bfd",
+    "ip": "/axapi/v3/interface/lif/{ifnum}/ip",
+    "isis": "/axapi/v3/interface/lif/{ifnum}/isis",
+}
 
 MODULE_NAME = "lif"
 

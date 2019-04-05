@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "specified_partition",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "memory"
 

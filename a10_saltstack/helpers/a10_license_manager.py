@@ -29,12 +29,12 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "connect",
-    "host_list",
-    "overage",
-    "reminder_list",
-]
+REF_PROPERTIES = {
+    "connect": "/axapi/v3/license-manager/connect",
+    "host_list": "/axapi/v3/license-manager/host/{host-ipv4}+{host-ipv6}",
+    "overage": "/axapi/v3/license-manager/overage",
+    "reminder_list": "/axapi/v3/license-manager/reminder/{reminder-value}",
+}
 
 MODULE_NAME = "license-manager"
 

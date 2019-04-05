@@ -60,15 +60,15 @@ AVAILABLE_PROPERTIES = [
     "rule_set_name",
 ]
 
-REF_PROPERTIES = [
-    "dst_class_list",
-    "dst_threat_list",
-    "dst_zone",
-    "move_rule",
-    "src_class_list",
-    "src_threat_list",
-    "src_zone",
-]
+REF_PROPERTIES = {
+    "dst_class_list": "/axapi/v3/class-list",
+    "dst_threat_list": "/axapi/v3/threat-intel/threat-list",
+    "dst_zone": "/axapi/v3/zone",
+    "move_rule": "/axapi/v3/rule-set/{name}/rule/{name}/move-rule",
+    "src_class_list": "/axapi/v3/class-list",
+    "src_threat_list": "/axapi/v3/threat-intel/threat-list",
+    "src_zone": "/axapi/v3/zone",
+}
 
 MODULE_NAME = "rule"
 

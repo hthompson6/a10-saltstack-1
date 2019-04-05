@@ -31,8 +31,8 @@ AVAILABLE_PROPERTIES = [
     "time",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "reboot"
 

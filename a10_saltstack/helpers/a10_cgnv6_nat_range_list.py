@@ -27,8 +27,8 @@ AVAILABLE_PROPERTIES = [
     "v4_vrid",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "range-list"
 

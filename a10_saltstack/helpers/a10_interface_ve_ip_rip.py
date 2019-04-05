@@ -26,8 +26,8 @@ AVAILABLE_PROPERTIES = [
     "ve_ifnum",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "rip"
 

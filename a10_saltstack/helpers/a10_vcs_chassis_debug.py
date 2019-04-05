@@ -33,8 +33,8 @@ AVAILABLE_PROPERTIES = [
     "vmaster_msg",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "debug"
 

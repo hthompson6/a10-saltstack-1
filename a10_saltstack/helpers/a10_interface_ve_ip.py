@@ -37,12 +37,12 @@ AVAILABLE_PROPERTIES = [
     "ve_ifnum",
 ]
 
-REF_PROPERTIES = [
-    "ospf",
-    "rip",
-    "router",
-    "stateful_firewall",
-]
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/ve/{ifnum}/ip/ospf",
+    "rip": "/axapi/v3/interface/ve/{ifnum}/ip/rip",
+    "router": "/axapi/v3/interface/ve/{ifnum}/ip/router",
+    "stateful_firewall": "/axapi/v3/interface/ve/{ifnum}/ip/stateful-firewall",
+}
 
 MODULE_NAME = "ip"
 

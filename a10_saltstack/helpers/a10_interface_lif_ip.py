@@ -32,11 +32,11 @@ AVAILABLE_PROPERTIES = [
     "lif_ifnum",
 ]
 
-REF_PROPERTIES = [
-    "ospf",
-    "rip",
-    "router",
-]
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/lif/{ifnum}/ip/ospf",
+    "rip": "/axapi/v3/interface/lif/{ifnum}/ip/rip",
+    "router": "/axapi/v3/interface/lif/{ifnum}/ip/router",
+}
 
 MODULE_NAME = "ip"
 

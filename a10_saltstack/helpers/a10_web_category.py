@@ -33,10 +33,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "category_list_list",
-    "proxy_server",
-]
+REF_PROPERTIES = {
+    "category_list_list": "/axapi/v3/web-category/category-list/{name}",
+    "proxy_server": "/axapi/v3/web-category/proxy-server",
+}
 
 MODULE_NAME = "web-category"
 

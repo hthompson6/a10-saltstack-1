@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "service_group_name",
 ]
 
-REF_PROPERTIES = [
-    "name",
-]
+REF_PROPERTIES = {
+    "name": "/axapi/v3/aam/authentication/server/ldap",
+}
 
 MODULE_NAME = "member"
 

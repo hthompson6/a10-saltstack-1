@@ -68,14 +68,14 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-    "member_list",
-    "reset",
-    "template_policy",
-    "template_port",
-    "template_server",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "member_list": "/axapi/v3/slb/service-group/{name}/member/{name}+{port}",
+    "reset": "/axapi/v3/slb/service-group/{name}/reset",
+    "template_policy": "/axapi/v3/slb/template/policy",
+    "template_port": "/axapi/v3/slb/template/port",
+    "template_server": "/axapi/v3/slb/template/server",
+}
 
 MODULE_NAME = "service-group"
 

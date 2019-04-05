@@ -21,10 +21,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "list_name",
-    "pool",
-]
+REF_PROPERTIES = {
+    "list_name": "/axapi/v3/ipv6/access-list",
+    "pool": "/axapi/v3/ipv6/nat/pool-group",
+}
 
 MODULE_NAME = "list"
 

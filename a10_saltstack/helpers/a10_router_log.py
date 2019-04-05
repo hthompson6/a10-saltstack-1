@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "file",
-]
+REF_PROPERTIES = {
+    "file": "/axapi/v3/router/log/file",
+}
 
 MODULE_NAME = "log"
 

@@ -28,9 +28,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "secure",
-]
+REF_PROPERTIES = {
+    "secure": "/axapi/v3/web-service/secure",
+}
 
 MODULE_NAME = "web-service"
 

@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "kerberos_spn_list",
-]
+REF_PROPERTIES = {
+    "kerberos_spn_list": "/axapi/v3/aam/authentication/account/kerberos-spn/{name}",
+}
 
 MODULE_NAME = "account"
 

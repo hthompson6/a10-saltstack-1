@@ -24,9 +24,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "nexec",
-]
+REF_PROPERTIES = {
+    "nexec": "/axapi/v3/accounting/exec",
+}
 
 MODULE_NAME = "accounting"
 

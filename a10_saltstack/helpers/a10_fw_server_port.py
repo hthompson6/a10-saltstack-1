@@ -27,9 +27,9 @@ AVAILABLE_PROPERTIES = [
     "server_name",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+}
 
 MODULE_NAME = "port"
 

@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "image_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "auth-portal-image"
 

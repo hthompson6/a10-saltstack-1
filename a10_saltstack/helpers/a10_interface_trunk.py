@@ -40,16 +40,16 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "bfd",
-    "ddos",
-    "ip",
-    "ipv6",
-    "isis",
-    "lw_4o6",
-    "map",
-    "nptv6",
-]
+REF_PROPERTIES = {
+    "bfd": "/axapi/v3/interface/trunk/{ifnum}/bfd",
+    "ddos": "/axapi/v3/interface/trunk/{ifnum}/ddos",
+    "ip": "/axapi/v3/interface/trunk/{ifnum}/ip",
+    "ipv6": "/axapi/v3/interface/trunk/{ifnum}/ipv6",
+    "isis": "/axapi/v3/interface/trunk/{ifnum}/isis",
+    "lw_4o6": "/axapi/v3/interface/trunk/{ifnum}/lw-4o6",
+    "map": "/axapi/v3/interface/trunk/{ifnum}/map",
+    "nptv6": "/axapi/v3/interface/trunk/{ifnum}/nptv6",
+}
 
 MODULE_NAME = "trunk"
 

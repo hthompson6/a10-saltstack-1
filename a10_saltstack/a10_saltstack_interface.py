@@ -15,6 +15,7 @@
 
 from a10_saltstack.client.kwbl import KW_OUT, translate_blacklist as translateBlacklist
 from a10_saltstack.client import errors as a10_ex
+from a10_saltstack.forest.forestgen import ForestGen
 from a10_saltstack.helpers import helper as a10_helper
 
 
@@ -67,7 +68,7 @@ def _build_json(title, avail_props, **kwargs):
 
 def parse_obj(a10_obj, op_type, client, **kwargs):
     forest_gen = ForestGen()
-    forest_gen.parse_tree(**kwargs)
+    forest_gen.parse_tree(kwargs)
 
     for tree in parser.tree_list:
         url = a10_helper.get_url(tree['a10_obj'], op_type, **kwargs)

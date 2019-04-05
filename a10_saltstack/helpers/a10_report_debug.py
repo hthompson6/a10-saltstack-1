@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "sflow",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "debug"
 

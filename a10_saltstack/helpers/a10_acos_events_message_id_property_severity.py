@@ -21,8 +21,8 @@ AVAILABLE_PROPERTIES = [
     "message_id_log_msg",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "severity"
 

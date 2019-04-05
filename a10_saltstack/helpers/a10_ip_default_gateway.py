@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "gateway_ip",
-]
+REF_PROPERTIES = {
+    "gateway_ip": "/axapi/v3/ip/address",
+}
 
 MODULE_NAME = "default-gateway"
 

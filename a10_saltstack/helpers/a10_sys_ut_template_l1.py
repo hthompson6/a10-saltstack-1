@@ -26,8 +26,8 @@ AVAILABLE_PROPERTIES = [
     "template_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "l1"
 

@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "ve_list",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "polling"
 

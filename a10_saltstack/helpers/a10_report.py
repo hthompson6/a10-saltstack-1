@@ -19,9 +19,9 @@ AVAILABLE_PROPERTIES = [
     "debug",
 ]
 
-REF_PROPERTIES = [
-    "debug",
-]
+REF_PROPERTIES = {
+    "debug": "/axapi/v3/report/debug",
+}
 
 MODULE_NAME = "report"
 

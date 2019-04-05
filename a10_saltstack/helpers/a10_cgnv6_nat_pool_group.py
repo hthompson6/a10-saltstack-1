@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "vrid",
 ]
 
-REF_PROPERTIES = [
-    "member_list",
-]
+REF_PROPERTIES = {
+    "member_list": "/axapi/v3/cgnv6/nat/pool-group/{pool-group-name}/member/{pool-name}",
+}
 
 MODULE_NAME = "pool-group"
 

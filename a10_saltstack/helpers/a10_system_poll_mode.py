@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "virtio",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system-poll-mode"
 

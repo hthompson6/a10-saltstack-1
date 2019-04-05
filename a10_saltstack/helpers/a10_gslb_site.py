@@ -35,12 +35,12 @@ AVAILABLE_PROPERTIES = [
     "weight",
 ]
 
-REF_PROPERTIES = [
-    "active_rdt",
-    "easy_rdt",
-    "ip_server_list",
-    "slb_dev_list",
-]
+REF_PROPERTIES = {
+    "active_rdt": "/axapi/v3/gslb/site/{site-name}/active-rdt",
+    "easy_rdt": "/axapi/v3/gslb/site/{site-name}/easy-rdt",
+    "ip_server_list": "/axapi/v3/gslb/site/{site-name}/ip-server/{ip-server-name}",
+    "slb_dev_list": "/axapi/v3/gslb/site/{site-name}/slb-dev/{device-name}",
+}
 
 MODULE_NAME = "site"
 

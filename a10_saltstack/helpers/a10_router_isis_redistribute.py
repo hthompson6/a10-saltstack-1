@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "isis_tag",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "redistribute"
 

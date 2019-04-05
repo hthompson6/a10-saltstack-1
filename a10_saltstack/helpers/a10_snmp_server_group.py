@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "v3",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "group"
 

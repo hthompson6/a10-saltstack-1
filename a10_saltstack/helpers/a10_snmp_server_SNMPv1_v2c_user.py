@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "oid_list",
-]
+REF_PROPERTIES = {
+    "oid_list": "/axapi/v3/snmp-server/SNMPv1-v2c/user/{user}/oid/{oid-val}",
+}
 
 MODULE_NAME = "user"
 

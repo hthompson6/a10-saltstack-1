@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "xml_schema",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "xml-schema"
 

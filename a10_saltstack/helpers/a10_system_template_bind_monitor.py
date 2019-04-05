@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "template_monitor",
-]
+REF_PROPERTIES = {
+    "template_monitor": "/axapi/v3/slb/template/monitor",
+}
 
 MODULE_NAME = "monitor"
 

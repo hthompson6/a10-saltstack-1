@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "suppress_protocols",
-]
+REF_PROPERTIES = {
+    "suppress_protocols": "/axapi/v3/ip/reroute/suppress-protocols",
+}
 
 MODULE_NAME = "reroute"
 

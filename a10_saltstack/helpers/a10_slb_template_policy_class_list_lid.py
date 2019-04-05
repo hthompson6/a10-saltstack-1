@@ -45,9 +45,9 @@ AVAILABLE_PROPERTIES = [
     "policy_name",
 ]
 
-REF_PROPERTIES = [
-    "direct_service_group",
-]
+REF_PROPERTIES = {
+    "direct_service_group": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "lid"
 

@@ -23,12 +23,12 @@ AVAILABLE_PROPERTIES = [
     "user",
 ]
 
-REF_PROPERTIES = [
-    "ip",
-    "ipsrc",
-    "tool",
-    "user",
-]
+REF_PROPERTIES = {
+    "ip": "/axapi/v3/system/ipmi/ip",
+    "ipsrc": "/axapi/v3/system/ipmi/ipsrc",
+    "tool": "/axapi/v3/system/ipmi/tool",
+    "user": "/axapi/v3/system/ipmi/user",
+}
 
 MODULE_NAME = "ipmi"
 

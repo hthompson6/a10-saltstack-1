@@ -21,8 +21,8 @@ AVAILABLE_PROPERTIES = [
     "pool_group_pool_group_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "member"
 

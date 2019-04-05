@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "cluster_id",
 ]
 
-REF_PROPERTIES = [
-    "device_id_list",
-]
+REF_PROPERTIES = {
+    "device_id_list": "/axapi/v3/scaleout/cluster/{cluster-id}/cluster-devices/device-id/{device-id}",
+}
 
 MODULE_NAME = "cluster-devices"
 

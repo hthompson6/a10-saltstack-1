@@ -36,9 +36,9 @@ AVAILABLE_PROPERTIES = [
     "verify_host",
 ]
 
-REF_PROPERTIES = [
-    "logging",
-]
+REF_PROPERTIES = {
+    "logging": "/axapi/v3/slb/template/logging",
+}
 
 MODULE_NAME = "cache"
 

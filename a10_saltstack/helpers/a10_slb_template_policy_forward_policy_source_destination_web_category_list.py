@@ -26,9 +26,9 @@ AVAILABLE_PROPERTIES = [
     "policy_name",
 ]
 
-REF_PROPERTIES = [
-    "web_category_list",
-]
+REF_PROPERTIES = {
+    "web_category_list": "/axapi/v3/web-category/category-list",
+}
 
 MODULE_NAME = "web-category-list"
 

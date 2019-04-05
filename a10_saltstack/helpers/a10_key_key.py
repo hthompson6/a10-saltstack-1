@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "key_chain_flag",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "key"
 

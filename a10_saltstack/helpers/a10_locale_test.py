@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "locale",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "test"
 

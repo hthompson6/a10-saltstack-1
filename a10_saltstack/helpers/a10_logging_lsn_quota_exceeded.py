@@ -28,8 +28,8 @@ AVAILABLE_PROPERTIES = [
     "with_radius_attribute",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "quota-exceeded"
 

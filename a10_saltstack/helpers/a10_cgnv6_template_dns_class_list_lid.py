@@ -30,8 +30,8 @@ AVAILABLE_PROPERTIES = [
     "dns_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "lid"
 

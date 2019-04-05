@@ -30,8 +30,8 @@ AVAILABLE_PROPERTIES = [
     "instance_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "request-uri"
 

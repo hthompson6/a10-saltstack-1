@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "send",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "rip"
 

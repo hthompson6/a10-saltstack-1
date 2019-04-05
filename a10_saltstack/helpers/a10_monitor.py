@@ -36,8 +36,8 @@ AVAILABLE_PROPERTIES = [
     "warn_temp",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "monitor"
 

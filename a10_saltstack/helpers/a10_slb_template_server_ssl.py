@@ -47,9 +47,9 @@ AVAILABLE_PROPERTIES = [
     "version",
 ]
 
-REF_PROPERTIES = [
-    "cipher_template",
-]
+REF_PROPERTIES = {
+    "cipher_template": "/axapi/v3/slb/template/cipher",
+}
 
 MODULE_NAME = "server-ssl"
 

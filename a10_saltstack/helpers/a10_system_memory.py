@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "sampling_enable",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "memory"
 

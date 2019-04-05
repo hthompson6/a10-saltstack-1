@@ -32,9 +32,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "hsm",
-]
+REF_PROPERTIES = {
+    "hsm": "/axapi/v3/hsm/template",
+}
 
 MODULE_NAME = "template"
 

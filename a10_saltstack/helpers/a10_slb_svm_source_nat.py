@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "pool",
-]
+REF_PROPERTIES = {
+    "pool": "/axapi/v3/ip/nat/pool",
+}
 
 MODULE_NAME = "svm-source-nat"
 

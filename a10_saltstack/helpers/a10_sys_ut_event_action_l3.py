@@ -27,9 +27,9 @@ AVAILABLE_PROPERTIES = [
     "event_number",
 ]
 
-REF_PROPERTIES = [
-    "ip_list",
-]
+REF_PROPERTIES = {
+    "ip_list": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/l3/ip/{src-dst}",
+}
 
 MODULE_NAME = "l3"
 

@@ -26,15 +26,15 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "dns",
-    "ftp",
-    "icmp",
-    "pptp",
-    "rtsp",
-    "sip",
-    "tftp",
-]
+REF_PROPERTIES = {
+    "dns": "/axapi/v3/fw/alg/dns",
+    "ftp": "/axapi/v3/fw/alg/ftp",
+    "icmp": "/axapi/v3/fw/alg/icmp",
+    "pptp": "/axapi/v3/fw/alg/pptp",
+    "rtsp": "/axapi/v3/fw/alg/rtsp",
+    "sip": "/axapi/v3/fw/alg/sip",
+    "tftp": "/axapi/v3/fw/alg/tftp",
+}
 
 MODULE_NAME = "alg"
 

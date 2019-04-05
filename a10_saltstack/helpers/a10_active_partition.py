@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "shared",
 ]
 
-REF_PROPERTIES = [
-    "curr_part_name",
-]
+REF_PROPERTIES = {
+    "curr_part_name": "/axapi/v3/partition",
+}
 
 MODULE_NAME = "active-partition"
 

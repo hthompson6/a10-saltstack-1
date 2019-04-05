@@ -30,8 +30,8 @@ AVAILABLE_PROPERTIES = [
     "user",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "user"
 

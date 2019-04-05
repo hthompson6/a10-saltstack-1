@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "partition_name",
 ]
 
-REF_PROPERTIES = [
-    "partition_name",
-]
+REF_PROPERTIES = {
+    "partition_name": "/axapi/v3/partition",
+}
 
 MODULE_NAME = "partition"
 

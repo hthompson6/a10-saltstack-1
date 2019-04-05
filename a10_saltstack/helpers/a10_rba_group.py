@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "partition_list",
-]
+REF_PROPERTIES = {
+    "partition_list": "/axapi/v3/rba/group/{name}/partition/{partition-name}",
+}
 
 MODULE_NAME = "group"
 

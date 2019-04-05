@@ -35,11 +35,11 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "area_list",
-    "default_information",
-    "redistribute",
-]
+REF_PROPERTIES = {
+    "area_list": "/axapi/v3/router/ipv6/ospf/{process-id}/area/{area-ipv4}+{area-num}",
+    "default_information": "/axapi/v3/router/ipv6/ospf/{process-id}/default-information",
+    "redistribute": "/axapi/v3/router/ipv6/ospf/{process-id}/redistribute",
+}
 
 MODULE_NAME = "ospf"
 

@@ -40,18 +40,18 @@ AVAILABLE_PROPERTIES = [
     "zone_name",
 ]
 
-REF_PROPERTIES = [
-    "dns_a_record",
-    "dns_cname_record_list",
-    "dns_mx_record_list",
-    "dns_naptr_record_list",
-    "dns_ns_record_list",
-    "dns_ptr_record_list",
-    "dns_record_list",
-    "dns_srv_record_list",
-    "dns_txt_record_list",
-    "geo_location_list",
-]
+REF_PROPERTIES = {
+    "dns_a_record": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-a-record",
+    "dns_cname_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-cname-record/{alias-name}",
+    "dns_mx_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-mx-record/{mx-name}",
+    "dns_naptr_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-naptr-record/{naptr-target}+{service-proto}+{flag}",
+    "dns_ns_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-ns-record/{ns-name}",
+    "dns_ptr_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-ptr-record/{ptr-name}",
+    "dns_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-record/{type}",
+    "dns_srv_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-srv-record/{srv-name}+{port}",
+    "dns_txt_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-txt-record/{record-name}",
+    "geo_location_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/geo-location/{geo-name}",
+}
 
 MODULE_NAME = "service"
 

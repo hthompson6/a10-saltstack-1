@@ -25,10 +25,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "enable_list",
-    "limit",
-]
+REF_PROPERTIES = {
+    "enable_list": "/axapi/v3/gslb/protocol/enable/{type}",
+    "limit": "/axapi/v3/gslb/protocol/limit",
+}
 
 MODULE_NAME = "protocol"
 

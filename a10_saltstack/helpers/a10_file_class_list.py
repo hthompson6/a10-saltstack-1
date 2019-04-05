@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "user_tag",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "class-list"
 

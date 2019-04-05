@@ -32,8 +32,8 @@ AVAILABLE_PROPERTIES = [
     "bgp_as_number",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "redistribute"
 

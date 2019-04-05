@@ -47,8 +47,8 @@ AVAILABLE_PROPERTIES = [
     "vip_up",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "slb"
 

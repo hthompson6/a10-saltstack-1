@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "ve_mac_scheme_val",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ve-mac-scheme"
 

@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "management_address",
-]
+REF_PROPERTIES = {
+    "management_address": "/axapi/v3/network/lldp/management-address",
+}
 
 MODULE_NAME = "lldp"
 

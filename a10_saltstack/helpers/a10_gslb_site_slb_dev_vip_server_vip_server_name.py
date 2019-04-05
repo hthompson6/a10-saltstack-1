@@ -23,9 +23,9 @@ AVAILABLE_PROPERTIES = [
     "site_name",
 ]
 
-REF_PROPERTIES = [
-    "vip_name",
-]
+REF_PROPERTIES = {
+    "vip_name": "/axapi/v3/gslb/service-ip",
+}
 
 MODULE_NAME = "vip-server-name"
 

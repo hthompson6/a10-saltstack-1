@@ -57,17 +57,17 @@ AVAILABLE_PROPERTIES = [
     "weighted_site_total_hits",
 ]
 
-REF_PROPERTIES = [
-    "active_rdt",
-    "auto_map",
-    "capacity",
-    "connection_load",
-    "dns",
-    "edns",
-    "geo_location_list",
-    "geo_location_match",
-    "ip_list",
-]
+REF_PROPERTIES = {
+    "active_rdt": "/axapi/v3/gslb/policy/{name}/active-rdt",
+    "auto_map": "/axapi/v3/gslb/policy/{name}/auto-map",
+    "capacity": "/axapi/v3/gslb/policy/{name}/capacity",
+    "connection_load": "/axapi/v3/gslb/policy/{name}/connection-load",
+    "dns": "/axapi/v3/gslb/policy/{name}/dns",
+    "edns": "/axapi/v3/gslb/policy/{name}/edns",
+    "geo_location_list": "/axapi/v3/gslb/policy/{name}/geo-location/{name}",
+    "geo_location_match": "/axapi/v3/gslb/policy/{name}/geo-location-match",
+    "ip_list": "/axapi/v3/gslb/ip-list",
+}
 
 MODULE_NAME = "policy"
 

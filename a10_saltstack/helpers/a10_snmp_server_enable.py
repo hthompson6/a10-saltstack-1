@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "traps",
-]
+REF_PROPERTIES = {
+    "traps": "/axapi/v3/snmp-server/enable/traps",
+}
 
 MODULE_NAME = "enable"
 

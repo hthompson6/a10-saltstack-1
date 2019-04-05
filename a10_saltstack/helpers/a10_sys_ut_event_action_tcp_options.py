@@ -26,8 +26,8 @@ AVAILABLE_PROPERTIES = [
     "event_number",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "options"
 

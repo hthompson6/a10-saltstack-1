@@ -23,10 +23,10 @@ AVAILABLE_PROPERTIES = [
     "vrid_val",
 ]
 
-REF_PROPERTIES = [
-    "fail_over_policy_template",
-    "tracking_options",
-]
+REF_PROPERTIES = {
+    "fail_over_policy_template": "/axapi/v3/vrrp-a/fail-over-policy-template",
+    "tracking_options": "/axapi/v3/vrrp-a/vrid/{vrid-val}/blade-parameters/tracking-options",
+}
 
 MODULE_NAME = "blade-parameters"
 

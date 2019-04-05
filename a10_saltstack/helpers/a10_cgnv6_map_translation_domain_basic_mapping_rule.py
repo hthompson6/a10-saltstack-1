@@ -25,9 +25,9 @@ AVAILABLE_PROPERTIES = [
     "domain_name",
 ]
 
-REF_PROPERTIES = [
-    "prefix_rule_list",
-]
+REF_PROPERTIES = {
+    "prefix_rule_list": "/axapi/v3/cgnv6/map/translation/domain/{name}/basic-mapping-rule/prefix-rule/{name}",
+}
 
 MODULE_NAME = "basic-mapping-rule"
 

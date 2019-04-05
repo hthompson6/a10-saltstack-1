@@ -19,9 +19,9 @@ AVAILABLE_PROPERTIES = [
     "template_list",
 ]
 
-REF_PROPERTIES = [
-    "template_list",
-]
+REF_PROPERTIES = {
+    "template_list": "/axapi/v3/system/resource-accounting/template/{name}",
+}
 
 MODULE_NAME = "resource-accounting"
 

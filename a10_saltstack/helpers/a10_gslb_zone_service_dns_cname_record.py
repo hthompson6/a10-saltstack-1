@@ -27,8 +27,8 @@ AVAILABLE_PROPERTIES = [
     "zone_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "dns-cname-record"
 

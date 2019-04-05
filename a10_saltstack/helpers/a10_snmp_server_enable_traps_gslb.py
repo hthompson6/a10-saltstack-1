@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "zone",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "gslb"
 

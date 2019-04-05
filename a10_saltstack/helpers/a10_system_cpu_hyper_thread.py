@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "enable",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "cpu-hyper-thread"
 

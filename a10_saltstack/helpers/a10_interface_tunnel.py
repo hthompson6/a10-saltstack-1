@@ -28,10 +28,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "ip",
-    "ipv6",
-]
+REF_PROPERTIES = {
+    "ip": "/axapi/v3/interface/tunnel/{ifnum}/ip",
+    "ipv6": "/axapi/v3/interface/tunnel/{ifnum}/ipv6",
+}
 
 MODULE_NAME = "tunnel"
 

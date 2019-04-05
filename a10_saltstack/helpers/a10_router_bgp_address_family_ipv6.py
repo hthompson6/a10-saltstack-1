@@ -30,11 +30,11 @@ AVAILABLE_PROPERTIES = [
     "bgp_as_number",
 ]
 
-REF_PROPERTIES = [
-    "neighbor",
-    "network",
-    "redistribute",
-]
+REF_PROPERTIES = {
+    "neighbor": "/axapi/v3/router/bgp/{as-number}/address-family/ipv6/neighbor",
+    "network": "/axapi/v3/router/bgp/{as-number}/address-family/ipv6/network",
+    "redistribute": "/axapi/v3/router/bgp/{as-number}/address-family/ipv6/redistribute",
+}
 
 MODULE_NAME = "ipv6"
 

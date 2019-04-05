@@ -21,8 +21,8 @@ AVAILABLE_PROPERTIES = [
     "source_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "cm-update-file-name-ref"
 

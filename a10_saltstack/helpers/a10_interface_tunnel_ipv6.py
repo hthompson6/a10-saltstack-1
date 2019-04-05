@@ -24,10 +24,10 @@ AVAILABLE_PROPERTIES = [
     "tunnel_ifnum",
 ]
 
-REF_PROPERTIES = [
-    "ospf",
-    "router",
-]
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/tunnel/{ifnum}/ipv6/ospf",
+    "router": "/axapi/v3/interface/tunnel/{ifnum}/ipv6/router",
+}
 
 MODULE_NAME = "ipv6"
 

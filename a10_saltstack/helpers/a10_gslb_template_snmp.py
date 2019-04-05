@@ -37,8 +37,8 @@ AVAILABLE_PROPERTIES = [
     "version",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "snmp"
 

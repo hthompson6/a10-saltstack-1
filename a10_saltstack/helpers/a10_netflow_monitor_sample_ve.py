@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "monitor_name",
 ]
 
-REF_PROPERTIES = [
-    "ve_num",
-]
+REF_PROPERTIES = {
+    "ve_num": "/axapi/v3/interface/ve",
+}
 
 MODULE_NAME = "ve"
 

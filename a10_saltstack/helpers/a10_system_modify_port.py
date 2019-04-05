@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "port_number",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "modify-port"
 

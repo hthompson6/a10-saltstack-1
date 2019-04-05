@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "password",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "enable-password"
 

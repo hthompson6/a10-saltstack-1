@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "static",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ipsrc"
 

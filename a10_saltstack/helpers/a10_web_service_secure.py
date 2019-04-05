@@ -24,12 +24,12 @@ AVAILABLE_PROPERTIES = [
     "wipe",
 ]
 
-REF_PROPERTIES = [
-    "certificate",
-    "generate",
-    "private_key",
-    "regenerate",
-]
+REF_PROPERTIES = {
+    "certificate": "/axapi/v3/web-service/secure/certificate",
+    "generate": "/axapi/v3/web-service/secure/generate",
+    "private_key": "/axapi/v3/web-service/secure/private-key",
+    "regenerate": "/axapi/v3/web-service/secure/regenerate",
+}
 
 MODULE_NAME = "secure"
 

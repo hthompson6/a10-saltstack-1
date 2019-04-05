@@ -25,8 +25,8 @@ AVAILABLE_PROPERTIES = [
     "vxlan_dest_port",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "options"
 

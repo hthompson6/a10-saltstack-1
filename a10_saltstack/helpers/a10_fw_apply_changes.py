@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "forced",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "apply-changes"
 

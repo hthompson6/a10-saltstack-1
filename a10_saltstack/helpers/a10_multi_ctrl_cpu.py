@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "num_ctrl_cpus",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "multi-ctrl-cpu"
 

@@ -24,11 +24,11 @@ AVAILABLE_PROPERTIES = [
     "vlan",
 ]
 
-REF_PROPERTIES = [
-    "interface",
-    "local_zone_cfg",
-    "vlan",
-]
+REF_PROPERTIES = {
+    "interface": "/axapi/v3/zone/{name}/interface",
+    "local_zone_cfg": "/axapi/v3/zone/{name}/local-zone-cfg",
+    "vlan": "/axapi/v3/zone/{name}/vlan",
+}
 
 MODULE_NAME = "zone"
 

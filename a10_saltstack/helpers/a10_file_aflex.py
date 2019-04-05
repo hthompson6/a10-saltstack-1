@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "skip_backup",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "aflex"
 

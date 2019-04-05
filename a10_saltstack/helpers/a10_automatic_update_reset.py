@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "feature_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "reset"
 

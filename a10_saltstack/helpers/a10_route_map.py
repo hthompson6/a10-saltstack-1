@@ -25,10 +25,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "match",
-    "set",
-]
+REF_PROPERTIES = {
+    "match": "/axapi/v3/route-map/{tag}+{action}+{sequence}/match",
+    "set": "/axapi/v3/route-map/{tag}+{action}+{sequence}/set",
+}
 
 MODULE_NAME = "route-map"
 

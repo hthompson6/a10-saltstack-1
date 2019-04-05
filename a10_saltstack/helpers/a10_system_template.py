@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "template_policy",
-]
+REF_PROPERTIES = {
+    "template_policy": "/axapi/v3/slb/template/policy",
+}
 
 MODULE_NAME = "template"
 

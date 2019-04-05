@@ -22,9 +22,9 @@ AVAILABLE_PROPERTIES = [
     "vtep_id",
 ]
 
-REF_PROPERTIES = [
-    "vni_list",
-]
+REF_PROPERTIES = {
+    "vni_list": "/axapi/v3/overlay-tunnel/vtep/{id}/source-ip-address/vni/{segment}",
+}
 
 MODULE_NAME = "source-ip-address"
 

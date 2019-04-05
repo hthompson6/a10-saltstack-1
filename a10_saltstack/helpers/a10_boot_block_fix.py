@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "hd",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "boot-block-fix"
 

@@ -27,13 +27,13 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "default",
-    "domain_ip",
-    "domain_list_name_list",
-    "domain_name_list",
-    "ip_list",
-]
+REF_PROPERTIES = {
+    "default": "/axapi/v3/cgnv6/lsn-rule-list/{name}/default",
+    "domain_ip": "/axapi/v3/cgnv6/lsn-rule-list/{name}/domain-ip",
+    "domain_list_name_list": "/axapi/v3/cgnv6/lsn-rule-list/{name}/domain-list-name/{name-domain-list}",
+    "domain_name_list": "/axapi/v3/cgnv6/lsn-rule-list/{name}/domain-name/{name-domain}",
+    "ip_list": "/axapi/v3/cgnv6/lsn-rule-list/{name}/ip/{ipv4-addr}",
+}
 
 MODULE_NAME = "lsn-rule-list"
 

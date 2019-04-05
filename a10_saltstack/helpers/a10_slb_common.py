@@ -79,9 +79,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "conn_rate_limit",
-]
+REF_PROPERTIES = {
+    "conn_rate_limit": "/axapi/v3/slb/common/conn-rate-limit",
+}
 
 MODULE_NAME = "common"
 

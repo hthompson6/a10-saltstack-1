@@ -28,9 +28,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "service_group",
-]
+REF_PROPERTIES = {
+    "service_group": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "logging"
 

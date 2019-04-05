@@ -43,15 +43,15 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "account",
-    "accounting_server",
-    "accounting_service_group",
-    "logon",
-    "relay",
-    "server",
-    "service_group",
-]
+REF_PROPERTIES = {
+    "account": "/axapi/v3/aam/authentication/account/kerberos-spn",
+    "accounting_server": "/axapi/v3/aam/authentication/server/radius/instance",
+    "accounting_service_group": "/axapi/v3/aam/authentication/service-group",
+    "logon": "/axapi/v3/aam/authentication/logon/form-based",
+    "relay": "/axapi/v3/aam/authentication/relay/http-basic/instance",
+    "server": "/axapi/v3/aam/authentication/server/ldap/instance",
+    "service_group": "/axapi/v3/aam/authentication/service-group",
+}
 
 MODULE_NAME = "template"
 

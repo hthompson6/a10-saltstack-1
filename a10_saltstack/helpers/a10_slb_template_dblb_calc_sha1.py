@@ -20,8 +20,8 @@ AVAILABLE_PROPERTIES = [
     "dblb_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "calc-sha1"
 

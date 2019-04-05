@@ -32,9 +32,9 @@ AVAILABLE_PROPERTIES = [
     "zone_name",
 ]
 
-REF_PROPERTIES = [
-    "svrname",
-]
+REF_PROPERTIES = {
+    "svrname": "/axapi/v3/gslb/service-ip",
+}
 
 MODULE_NAME = "dns-a-record-srv"
 

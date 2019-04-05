@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "host",
-]
+REF_PROPERTIES = {
+    "host": "/axapi/v3/radius-server/host",
+}
 
 MODULE_NAME = "radius-server"
 

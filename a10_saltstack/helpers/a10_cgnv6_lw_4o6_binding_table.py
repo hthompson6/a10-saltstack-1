@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "user_tag",
 ]
 
-REF_PROPERTIES = [
-    "tunnel_address_list",
-]
+REF_PROPERTIES = {
+    "tunnel_address_list": "/axapi/v3/cgnv6/lw-4o6/binding-table/{name}/tunnel-address/{ipv6-tunnel-addr}",
+}
 
 MODULE_NAME = "binding-table"
 

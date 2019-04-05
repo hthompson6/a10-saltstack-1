@@ -22,8 +22,8 @@ AVAILABLE_PROPERTIES = [
     "lw_filename",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "cgnv6"
 

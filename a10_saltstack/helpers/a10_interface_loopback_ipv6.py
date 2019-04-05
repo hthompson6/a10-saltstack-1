@@ -25,11 +25,11 @@ AVAILABLE_PROPERTIES = [
     "loopback_ifnum",
 ]
 
-REF_PROPERTIES = [
-    "ospf",
-    "rip",
-    "router",
-]
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/loopback/{ifnum}/ipv6/ospf",
+    "rip": "/axapi/v3/interface/loopback/{ifnum}/ipv6/rip",
+    "router": "/axapi/v3/interface/loopback/{ifnum}/ipv6/router",
+}
 
 MODULE_NAME = "ipv6"
 

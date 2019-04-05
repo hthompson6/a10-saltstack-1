@@ -28,10 +28,10 @@ AVAILABLE_PROPERTIES = [
     "policy_name",
 ]
 
-REF_PROPERTIES = [
-    "destination",
-    "match_authorize_policy",
-]
+REF_PROPERTIES = {
+    "destination": "/axapi/v3/slb/template/policy/{name}/forward-policy/source/{name}/destination",
+    "match_authorize_policy": "/axapi/v3/aam/authorization/policy",
+}
 
 MODULE_NAME = "source"
 

@@ -22,10 +22,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "name",
-    "session_aging",
-]
+REF_PROPERTIES = {
+    "name": "/axapi/v3/rule-set",
+    "session_aging": "/axapi/v3/fw/session-aging",
+}
 
 MODULE_NAME = "active-rule-set"
 

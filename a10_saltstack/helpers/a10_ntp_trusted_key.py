@@ -20,9 +20,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "key",
-]
+REF_PROPERTIES = {
+    "key": "/axapi/v3/ntp/auth-key",
+}
 
 MODULE_NAME = "trusted-key"
 

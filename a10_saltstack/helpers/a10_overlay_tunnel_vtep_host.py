@@ -24,8 +24,8 @@ AVAILABLE_PROPERTIES = [
     "vtep_id",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "host"
 

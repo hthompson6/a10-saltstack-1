@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "prefix",
-]
+REF_PROPERTIES = {
+    "prefix": "/axapi/v3/router/ipv6/rip/distribute-list/prefix",
+}
 
 MODULE_NAME = "distribute-list"
 

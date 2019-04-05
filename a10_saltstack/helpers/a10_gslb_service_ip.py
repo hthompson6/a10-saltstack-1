@@ -31,10 +31,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-    "port_list",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "port_list": "/axapi/v3/gslb/service-ip/{node-name}/port/{port-num}+{port-proto}",
+}
 
 MODULE_NAME = "service-ip"
 

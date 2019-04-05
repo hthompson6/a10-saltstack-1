@@ -24,11 +24,11 @@ AVAILABLE_PROPERTIES = [
     "loopback_ifnum",
 ]
 
-REF_PROPERTIES = [
-    "ospf",
-    "rip",
-    "router",
-]
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/loopback/{ifnum}/ip/ospf",
+    "rip": "/axapi/v3/interface/loopback/{ifnum}/ip/rip",
+    "router": "/axapi/v3/interface/loopback/{ifnum}/ip/router",
+}
 
 MODULE_NAME = "ip"
 

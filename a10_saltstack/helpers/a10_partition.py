@@ -25,10 +25,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "shared_vlan",
-    "template",
-]
+REF_PROPERTIES = {
+    "shared_vlan": "/axapi/v3/partition/{partition-name}/shared-vlan",
+    "template": "/axapi/v3/partition/{partition-name}/template",
+}
 
 MODULE_NAME = "partition"
 

@@ -33,10 +33,10 @@ AVAILABLE_PROPERTIES = [
     "v6_vrid",
 ]
 
-REF_PROPERTIES = [
-    "v4_vrid",
-    "v6_vrid",
-]
+REF_PROPERTIES = {
+    "v4_vrid": "/axapi/v3/vrrp-a/vrid",
+    "v6_vrid": "/axapi/v3/vrrp-a/vrid",
+}
 
 MODULE_NAME = "range-list"
 

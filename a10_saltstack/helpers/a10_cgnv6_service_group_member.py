@@ -24,10 +24,10 @@ AVAILABLE_PROPERTIES = [
     "service_group_name",
 ]
 
-REF_PROPERTIES = [
-    "name",
-    "port",
-]
+REF_PROPERTIES = {
+    "name": "/axapi/v3/cgnv6/server",
+    "port": "/axapi/v3/cgnv6/server/port",
+}
 
 MODULE_NAME = "member"
 

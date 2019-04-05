@@ -36,10 +36,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "class_list",
-    "forward_policy",
-]
+REF_PROPERTIES = {
+    "class_list": "/axapi/v3/slb/template/policy/{name}/class-list",
+    "forward_policy": "/axapi/v3/slb/template/policy/{name}/forward-policy",
+}
 
 MODULE_NAME = "policy"
 

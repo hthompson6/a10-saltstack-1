@@ -27,8 +27,8 @@ AVAILABLE_PROPERTIES = [
     "message_selector_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "rule"
 

@@ -31,11 +31,11 @@ AVAILABLE_PROPERTIES = [
     "state_name",
 ]
 
-REF_PROPERTIES = [
-    "ethernet",
-    "ve",
-    "virtual_server",
-]
+REF_PROPERTIES = {
+    "ethernet": "/axapi/v3/interface/ethernet",
+    "ve": "/axapi/v3/interface/ve",
+    "virtual_server": "/axapi/v3/slb/virtual-server",
+}
 
 MODULE_NAME = "ip"
 

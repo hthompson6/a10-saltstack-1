@@ -23,8 +23,8 @@ AVAILABLE_PROPERTIES = [
     "site_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "vip-server-v6"
 

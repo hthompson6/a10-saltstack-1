@@ -30,14 +30,14 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "app",
-    "application",
-    "rule_list",
-    "rules_by_zone",
-    "tag",
-    "track_app_rule_list",
-]
+REF_PROPERTIES = {
+    "app": "/axapi/v3/rule-set/{name}/app",
+    "application": "/axapi/v3/rule-set/{name}/application",
+    "rule_list": "/axapi/v3/rule-set/{name}/rule/{name}",
+    "rules_by_zone": "/axapi/v3/rule-set/{name}/rules-by-zone",
+    "tag": "/axapi/v3/rule-set/{name}/tag",
+    "track_app_rule_list": "/axapi/v3/rule-set/{name}/track-app-rule-list",
+}
 
 MODULE_NAME = "rule-set"
 

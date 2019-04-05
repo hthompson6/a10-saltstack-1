@@ -25,10 +25,10 @@ AVAILABLE_PROPERTIES = [
     "uuid",
 ]
 
-REF_PROPERTIES = [
-    "health_check",
-    "member_list",
-]
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "member_list": "/axapi/v3/fw/service-group/{name}/member/{name}+{port}",
+}
 
 MODULE_NAME = "service-group"
 

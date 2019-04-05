@@ -19,8 +19,8 @@ AVAILABLE_PROPERTIES = [
     "max_cores",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "io-cpu"
 

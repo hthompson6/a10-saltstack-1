@@ -73,9 +73,9 @@ AVAILABLE_PROPERTIES = [
     "policy_name",
 ]
 
-REF_PROPERTIES = [
-    "template",
-]
+REF_PROPERTIES = {
+    "template": "/axapi/v3/slb/template/logging",
+}
 
 MODULE_NAME = "dns"
 

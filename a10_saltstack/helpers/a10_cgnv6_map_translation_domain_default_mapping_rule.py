@@ -21,8 +21,8 @@ AVAILABLE_PROPERTIES = [
     "domain_name",
 ]
 
-REF_PROPERTIES = [
-]
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "default-mapping-rule"
 

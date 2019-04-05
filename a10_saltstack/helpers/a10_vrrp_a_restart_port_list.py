@@ -21,9 +21,9 @@ AVAILABLE_PROPERTIES = [
     "vrid_list",
 ]
 
-REF_PROPERTIES = [
-    "vrid_list",
-]
+REF_PROPERTIES = {
+    "vrid_list": "/axapi/v3/vrrp-a/restart-port-list/vrid/{vrid-val}",
+}
 
 MODULE_NAME = "restart-port-list"
 
