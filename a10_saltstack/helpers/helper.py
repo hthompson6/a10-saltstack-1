@@ -35,7 +35,7 @@ def get_props(a10_obj):
 
 def get_ref_props(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.REF_PROPERTIES
 

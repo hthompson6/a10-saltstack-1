@@ -31,8 +31,9 @@ class ForestGen(object):
     def __init__(self):
         self.obj_list = []
 
-    def parse_tree(self, tree_obj):
-        self.dfs_cut(self.dfs_transform(tree_obj), 0)
+    def parse_tree(self, a10_obj, tree_obj):
+        a10_obj = 'a10_{}'.format(a10_obj)
+        self.dfs_cut(self.dfs_transform(tree_obj), 0, a10_obj)
         self.trim_excess()
         return self.obj_list
 
@@ -41,12 +42,18 @@ class ForestGen(object):
         Hacky solution to remove excess dictionaries
         that don't have parent objects
         '''
-        for x in range(1, len(self.obj_list)-1):
-            vals = list(self.obj_list[x].values())
+        cnt = 0
+        while cnt < len(self.obj_list):
+            vals = list(self.obj_list[cnt].keys())
+            if 'parent-index' in vals and 'parent-key' in vals:
+                vals.remove('parent-index')
+                vals.remove('parent-key')
             if len(vals) == 1 and type(vals[0]) != dict:
-                del self.obj_list[x]
+                del self.obj_list[cnt]
+                cnt -= 1
+            cnt += 1
 
-    def dfs_cut(self, obj, parent_index, fdqn=nul):
+    def dfs_cut(self, obj, parent_index, fdqn=None):
         '''
         This iterates over the tree and extracts
         refrence objects out of it
@@ -69,11 +76,13 @@ class ForestGen(object):
         for k,v in obj.items():
             if k in ref_props:
                 del_list.append(k)
-                mod_fdqn = _extract_modname(ref_props[k])
+                v.update({'parent-key': k})
+                mod_fdqn = self._extract_modname(ref_props[k])
                 v.update({'$ref': mod_fdqn})
                 self.dfs_cut(v, inx, mod_fdqn)
             elif type(v) == dict:
-                self.dfs_cut(v, inx)
+                v.update({'parent-key': k})
+                self.dfs_cut(v, inx, obj.get('$ref'))
 
         for i in del_list:
             del self.obj_list[inx][i]
