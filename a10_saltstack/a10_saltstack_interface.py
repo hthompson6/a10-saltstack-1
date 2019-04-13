@@ -107,7 +107,7 @@ def _objlist_to_tree(obj_list):
                 tempNode = ObjNode(k, **v)
                 tempNode.addParent(node_list[parent_index])
                 node_list.append(tempNode)
-    import pdb; pdb.set_trace()
+
     return root
 
 
