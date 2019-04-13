@@ -102,10 +102,12 @@ def _objlist_to_tree(obj_list):
 
         for k,v in obj.items():
             if type(v) is dict:
+                parent_index = v['parent-index']
+                v = _strip_parent(v)
                 tempNode = ObjNode(k, **v)
-                tempNode.addParent(node_list[v['parent-index']])
+                tempNode.addParent(node_list[parent_index])
                 node_list.append(tempNode)
-
+    import pdb; pdb.set_trace()
     return root
 
 
@@ -121,12 +123,12 @@ def parse_obj(a10_obj, op_type, client, **kwargs):
         obj_type = a10_helper.get_obj_type(tree['a10_obj'])
 
         # We want to make a client call here and save it's output.
-        # This is wher we handle idempotency.
+        # This is where we handle idempotency.
         # Get the object first. See if it has different values.
         # If it does have different values. Then update it.
         # We need to only check on where the get and current intersect
         # Look into using a set for this.
-
+        #
         # We will use (in) to do this. O(1) function with dicts
 
         post_result = {}
