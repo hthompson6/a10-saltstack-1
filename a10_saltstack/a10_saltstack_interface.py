@@ -16,6 +16,7 @@
 from a10_saltstack.client.kwbl import KW_OUT, translate_blacklist as translateBlacklist
 from a10_saltstack.client import errors as a10_ex
 from a10_saltstack.forest.forestgen import ForestGen
+from a10_saltstack.forest.nodes import RootNode, ObjNode, InterNode
 from a10_saltstack.helpers import helper as a10_helper
 
 
@@ -66,9 +67,53 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
+def _strip_parent(obj):
+    del obj['parent-index']
+    del obj['parent-key']
+
+    return obj
+
+
+def _add_root(obj_list):
+    root_dict = obj_list[0]
+    ref = root_dict['$ref']
+    id = root_dict['a10_name']
+
+    del root_dict['$ref']
+    del root_dict['a10_name']
+    del root_dict['parent-index']
+
+    return RootNode(id, ref, **root_dict)
+
+
+def _objlist_to_tree(obj_list):
+    node_list = []
+
+    root = _add_root(obj_list)
+    node_list.append(root)
+
+    del obj_list[0]
+
+    for obj in obj_list:
+        if obj.get('parent-key') and obj.get('$ref'):
+            inNode = InterNode(obj['parent-key'], obj['$ref'])
+            inNode.addParent(node_list[obj['parent-index']])
+            node_list.append(inNode)
+
+        for k,v in obj.items():
+            if type(v) is dict:
+                tempNode = ObjNode(k, **v)
+                tempNode.addParent(node_list[v['parent-index']])
+                node_list.append(tempNode)
+
+    return root
+
+
 def parse_obj(a10_obj, op_type, client, **kwargs):
     forest_gen = ForestGen()
-    forest_gen.parse_tree(kwargs)
+    tree_list = forest_gen.parse_tree(a10_obj, kwargs)
+
+    root = _objlist_to_tree(tree_list)
 
     for tree in parser.tree_list:
         url = a10_helper.get_url(tree['a10_obj'], op_type, **kwargs)
@@ -96,7 +141,7 @@ def parse_obj(a10_obj, op_type, client, **kwargs):
         try:
             need_update = false
             resp = client.get()
-            for k,v in tree:
+            for k,v in tree.items():
                if k in resp:
                     if v != resp[k]:
                         need_update = true

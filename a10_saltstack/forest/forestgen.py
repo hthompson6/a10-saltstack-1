@@ -18,7 +18,7 @@ import importlib
 import re
 
 from a10_saltstack.helpers import helper as a10_helper
-
+from a10_saltstack.forest.nodes import InterNode, ObjNode, RootNode
 
 class ForestGen(object):
 
@@ -35,6 +35,7 @@ class ForestGen(object):
         a10_obj = 'a10_{}'.format(a10_obj)
         self.dfs_cut(self.dfs_transform(tree_obj), 0, a10_obj)
         self.trim_excess()
+        self.obj_list[0].update({'$ref': a10_obj})
         return self.obj_list
 
     def trim_excess(self):
