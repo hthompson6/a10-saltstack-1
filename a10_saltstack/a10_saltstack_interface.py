@@ -18,6 +18,7 @@ from collections import OrderedDict
 from a10_saltstack.client.kwbl import KW_OUT, translate_blacklist as translateBlacklist
 from a10_saltstack.client import errors as a10_ex
 from a10_saltstack.forest.forest_gen import ForestGen
+from a10_saltstack.forest.nodes import InterNode
 from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
@@ -69,6 +70,24 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
+def _build_obj_dict(forest_node, ref):
+    child_keys = a10_helper.get_child_keys(ref)
+    parent_keys = a10_helper.get_parent_keys(ref)
+
+    for ck in child_keys:
+        if ck not in forest_node.val_dict:
+            forest_node.val_dict[ck] = forest_node.id
+
+    pk = 0
+    tempNode = forest_node.parent
+    while pk < len(parent_keys) - 1:
+        if type(tempNode) != InterNode:
+            forest_node.val_dict[parent_keys[pk]] = tempNode.id
+            pk -= 1
+        tempNode = tempNode.parent
+
+    return forest_node.val_dict
+
 def parse_obj(a10_obj_type, op_type, client, **kwargs):
     root = obj_tree.parse_tree('{}_{}'.format(op_type, a10_obj_type), kwargs)
     forest_list = [root]
@@ -80,6 +99,15 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
 
 
     #import pdb; pdb.set_trace()
+
+    obj_dict_list = []
+    for tree in forest_list:
+        if type(tree) == InterNode:
+            for child in tree.children:
+                if type(child) != InterNode:
+                    obj_dict_list.append(_build_obj_dict(child, tree.ref))
+        else:
+            obj_dict_list.append(_build_obj_dict(tree, tree.ref))
 
     for tree in forest_list: 
         url = a10_helper.get_url(tree['a10_obj'], op_type, **kwargs)

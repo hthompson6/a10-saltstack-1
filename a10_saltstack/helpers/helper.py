@@ -37,6 +37,20 @@ def get_props(a10_obj):
     return obj_module.AVAILABLE_PROPERTIES
 
 
+def get_parent_keys(a10_obj):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.PARENT_KEYS
+
+
+def get_child_keys(a10_obj):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.CHILD_KEYS
+
+
 def get_ref_props(a10_obj):
     obj_module = importlib.import_module(
         'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
