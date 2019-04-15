@@ -28,32 +28,30 @@ class ForestGen(object):
         url = re.sub(r'_{[a-zA-Z_]+}|{[a-zA-Z_]+}', '', url) 
         return "a10_{url}".format(url=url)
 
-    def __init__(self):
-        self.obj_list = []
-
     def parse_tree(self, a10_obj, tree_obj):
         a10_obj = 'a10_{}'.format(a10_obj)
 
         root = RootNode(tree_obj['a10_name'], a10_obj)
+        altered_tree = self.dfs_transform(tree_obj)
 
-        self.dfs_cut(self.dfs_transform(tree_obj), root)
-        self.trim_excess()
-        root.addValDict(**self.obj_list[0])
+        root_vals = {}
+        for k,v in altered_tree.items():
+            if k == "a10_name":
+                root.id = v
+            elif k == "a10_obj":
+                root.ref = a10_obj
+            elif type(v) != dict and k != "name":
+                root_vals[k] = v
+
+        root.addValDict(**root_vals)
+
+        root_children = self.dfs_cut(altered_tree, root)
+
+        if root_children:
+            for child in root_children:
+                root.addChild(child)
 
         return root 
-
-    def trim_excess(self):
-        '''
-        Hacky solution to remove excess dictionaries
-        that don't have parent objects
-        '''
-        cnt = 0
-        while cnt < len(self.obj_list):
-            vals = list(self.obj_list[cnt].keys())
-            if len(vals) == 1 and type(vals[0]) != dict:
-                del self.obj_list[cnt]
-                cnt -= 1
-            cnt += 1
 
     def dfs_cut(self, obj, refNode=None):
         '''

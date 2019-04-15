@@ -40,7 +40,7 @@ class RootNode(ObjNode):
         self.children = []
         self.val_dict = {}
 
-    def addValDict(**kwargs):
+    def addValDict(self, **kwargs):
         self.val_dict = kwargs
 
 
