@@ -16,14 +16,18 @@ import a10_saltstack
 import importlib
 
 
-def get_url(a10_obj, oper, **kwargs):
+def new_url(a10_obj, **kwargs):
     obj_module = importlib.import_module(
         'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
 
-    if oper != 'create':
-        return obj_module.existing_url(**kwargs)
-    else:
-        return obj_module.new_url(**kwargs)
+    return obj_module.new_url(**kwargs)
+
+
+def existing_url(a10_obj, **kwargs):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.existing_url(**kwargs)
 
 
 def get_props(a10_obj):

@@ -86,15 +86,6 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
         avail_props = a10_helper.get_props(tree['a10_obj'], **kwargs)
         obj_type = a10_helper.get_obj_type(tree['a10_obj'])
 
-        # We want to make a client call here and save it's output.
-        # This is where we handle idempotency.
-        # Get the object first. See if it has different values.
-        # If it does have different values. Then update it.
-        # We need to only check on where the get and current intersect
-        # Look into using a set for this.
-        #
-        # We will use (in) to do this. O(1) function with dicts
-
         post_result = {}
         payload = _build_json(obj_type, avail_props, **kwargs)
         if payload[obj_type].get('a10-name'):
@@ -121,4 +112,5 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
         client.post()
 
 obj_dicty = {'netmask': '255.255.255.0', 'name': 'VS2', 'a10_name': 'vs2', 'ip_address': '192.168.43.6', 'port_list': [OrderedDict([(22, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([(80, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([('service_group', [OrderedDict([('sg1', [OrderedDict([('member_list', [OrderedDict([('mem1', [OrderedDict([('host', '10.7.11.1')])])]), OrderedDict([('mem2', [OrderedDict([('host', '10.7.11.2')])])])])]), OrderedDict([('lb_type', 'round_robin')])])])])])], 'a10_obj': 'slb_virtual_server'}
+
 parse_obj('virtual_server', 'slb', None, **obj_dicty)
