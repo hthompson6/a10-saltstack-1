@@ -13,7 +13,6 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = [
     "sampling_enable",
@@ -24,7 +23,12 @@ REF_PROPERTIES = {
 
 MODULE_NAME = "memory"
 
-def new_url(**kwargs):
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
+
+def new_url():
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/system/memory"
@@ -33,7 +37,7 @@ def new_url(**kwargs):
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url():
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/system/memory"

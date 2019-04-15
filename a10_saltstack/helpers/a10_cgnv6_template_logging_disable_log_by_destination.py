@@ -13,7 +13,6 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = [
     "icmp",
@@ -29,7 +28,12 @@ REF_PROPERTIES = {
 
 MODULE_NAME = "disable-log-by-destination"
 
-def new_url(**kwargs):
+PARENT_KEYS = ["logging_name",]
+
+CHILD_KEYS = []
+
+
+def new_url():
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/template/logging/{logging_name}/disable-log-by-destination"
@@ -39,7 +43,7 @@ def new_url(**kwargs):
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url():
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/template/logging/{logging_name}/disable-log-by-destination"

@@ -13,7 +13,6 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = [
     "sampling_enable",
@@ -29,7 +28,12 @@ REF_PROPERTIES = {
 
 MODULE_NAME = "vip-server-name"
 
-def new_url(**kwargs):
+PARENT_KEYS = ["slb_dev_device_name","site_name",]
+
+CHILD_KEYS = ["vip-name",]
+
+
+def new_url():
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/site/{site_name}/slb-dev/{slb_dev_device_name}/vip-server/vip-server-name/{vip-name}"
@@ -41,7 +45,7 @@ def new_url(**kwargs):
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url():
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/site/{site_name}/slb-dev/{slb_dev_device_name}/vip-server/vip-server-name/{vip-name}"

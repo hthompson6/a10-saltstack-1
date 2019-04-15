@@ -13,7 +13,6 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = [
     "action",
@@ -34,7 +33,12 @@ REF_PROPERTIES = {
 
 MODULE_NAME = "geo-location"
 
-def new_url(**kwargs):
+PARENT_KEYS = ["service-name","service_port","zone_name",]
+
+CHILD_KEYS = ["geo-name",]
+
+
+def new_url():
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/geo-location/{geo-name}"
@@ -47,7 +51,7 @@ def new_url(**kwargs):
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url():
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{zone_name}/service/{service_port}+{service-name}/geo-location/{geo-name}"

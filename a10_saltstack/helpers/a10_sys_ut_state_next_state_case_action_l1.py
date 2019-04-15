@@ -13,7 +13,6 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
 AVAILABLE_PROPERTIES = [
     "auto",
@@ -33,7 +32,12 @@ REF_PROPERTIES = {
 
 MODULE_NAME = "l1"
 
-def new_url(**kwargs):
+PARENT_KEYS = ["action_direction","case_number","name","state_name",]
+
+CHILD_KEYS = []
+
+
+def new_url():
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_number}/action/{action_direction}/l1"
@@ -46,7 +50,7 @@ def new_url(**kwargs):
     return url_base.format(**f_dict)
 
 
-def existing_url(**kwargs):
+def existing_url():
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/sys-ut/state/{state_name}/next-state/{name}/case/{case_number}/action/{action_direction}/l1"
