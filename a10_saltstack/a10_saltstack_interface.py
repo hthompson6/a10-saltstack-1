@@ -13,10 +13,12 @@
 # limitations under the License.
 
 
+from collections import OrderedDict
+
 from a10_saltstack.client.kwbl import KW_OUT, translate_blacklist as translateBlacklist
 from a10_saltstack.client import errors as a10_ex
-from a10_saltstack.forest.forestgen import ForestGen
-from a10_saltstack.forest.nodes import RootNode, ObjNode, InterNode
+from a10_saltstack.forest.forest_gen import ForestGen
+from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
 
@@ -67,60 +69,19 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
-def _strip_parent(obj):
-    del obj['parent-index']
-    del obj['parent-key']
+def parse_obj(a10_obj_type, op_type, client, **kwargs):
+    root = obj_tree.parse_tree('{}_{}'.format(op_type, a10_obj_type), kwargs)
+    forest_list = [root]
 
-    return obj
-
-
-def _add_root(obj_list):
-    root_dict = obj_list[0]
-    ref = root_dict['$ref']
-    id = root_dict['a10_name']
-
-    del root_dict['$ref']
-    del root_dict['a10_name']
-    del root_dict['parent-index']
-
-    return RootNode(id, ref, **root_dict)
+    forest = ForestGen()
+    forest.dfs_cut(root)
+    if forest.node_list:
+        forest_list.extend(forest.node_list)
 
 
-def _objlist_to_tree(obj_list):
-    node_list = []
+    #import pdb; pdb.set_trace()
 
-    root = _add_root(obj_list)
-    node_list.append(root)
-
-    del obj_list[0]
-
-    import pdb; pdb.set_trace()
-    for obj in obj_list:
-        if obj.get('parent-key') and obj.get('$ref'):
-            inNode = InterNode(obj['parent-key'], obj['$ref'])
-            inNode.addParent(node_list[obj['parent-index']])
-            node_list.append(inNode)
-
-        for k,v in obj.items():
-            if type(v) is dict:
-                parent_index = v['parent-index']
-                v = _strip_parent(v)
-                tempNode = ObjNode(k, **v)
-                tempNode.addParent(node_list[parent_index])
-                node_list.append(tempNode)
-
-    return root
-
-
-def parse_obj(a10_obj, op_type, client, **kwargs):
-    forest_gen = ForestGen()
-    tree_list = forest_gen.parse_tree(a10_obj, kwargs)
-
-    print("===============OUTPUT================")
-    print(tree_list)
-    root = _objlist_to_tree(tree_list)
-
-    for tree in parser.tree_list:
+    for tree in forest_list: 
         url = a10_helper.get_url(tree['a10_obj'], op_type, **kwargs)
         avail_props = a10_helper.get_props(tree['a10_obj'], **kwargs)
         obj_type = a10_helper.get_obj_type(tree['a10_obj'])
@@ -158,3 +119,6 @@ def parse_obj(a10_obj, op_type, client, **kwargs):
             pass
 
         client.post()
+
+obj_dicty = {'netmask': '255.255.255.0', 'name': 'VS2', 'a10_name': 'vs2', 'ip_address': '192.168.43.6', 'port_list': [OrderedDict([(22, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([(80, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([('service_group', [OrderedDict([('sg1', [OrderedDict([('member_list', [OrderedDict([('mem1', [OrderedDict([('host', '10.7.11.1')])])]), OrderedDict([('mem2', [OrderedDict([('host', '10.7.11.2')])])])])]), OrderedDict([('lb_type', 'round_robin')])])])])])], 'a10_obj': 'slb_virtual_server'}
+parse_obj('virtual_server', 'slb', None, **obj_dicty)
