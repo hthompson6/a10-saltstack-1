@@ -33,10 +33,14 @@ class ForestGen(object):
 
     def parse_tree(self, a10_obj, tree_obj):
         a10_obj = 'a10_{}'.format(a10_obj)
-        self.dfs_cut(self.dfs_transform(tree_obj), 0, a10_obj)
+
+        root = RootNode(tree_obj['a10_name'], a10_obj)
+
+        self.dfs_cut(self.dfs_transform(tree_obj), root)
         self.trim_excess()
-        self.obj_list[0].update({'$ref': a10_obj})
-        return self.obj_list
+        root.addValDict(**self.obj_list[0])
+
+        return root 
 
     def trim_excess(self):
         '''
@@ -46,48 +50,47 @@ class ForestGen(object):
         cnt = 0
         while cnt < len(self.obj_list):
             vals = list(self.obj_list[cnt].keys())
-            if 'parent-index' in vals and 'parent-key' in vals:
-                vals.remove('parent-index')
-                vals.remove('parent-key')
             if len(vals) == 1 and type(vals[0]) != dict:
                 del self.obj_list[cnt]
                 cnt -= 1
             cnt += 1
 
-    def dfs_cut(self, obj, parent_index, fdqn=None):
+    def dfs_cut(self, obj, refNode=None):
         '''
         This iterates over the tree and extracts
         refrence objects out of it
         '''
-        del_list = []
         vals = list(obj.values())
 
         if len(vals) == 1 and type(vals[0]) != dict:
             return
 
-        obj.update({'parent-index': parent_index})
-        self.obj_list.append(obj)
-        inx = len(self.obj_list)-1
-
-        if fdqn:
-            ref_props = a10_helper.get_ref_props(fdqn)
+        if refNode:
+            ref_props = a10_helper.get_ref_props(refNode.ref)
         else:
             ref_props = {}
 
+        node_list = []
         for k,v in obj.items():
             if k in ref_props:
-                del_list.append(k)
-                v.update({'parent-key': k})
-                mod_fdqn = self._extract_modname(ref_props[k])
-                v.update({'$ref': mod_fdqn})
-                self.dfs_cut(v, inx, mod_fdqn)
-            elif type(v) == dict:
-                v.update({'parent-key': k})
-                self.dfs_cut(v, inx, obj.get('$ref'))
+                mod_fqdn = self._extract_modname(ref_props[k])
+                inNode = InterNode(k, mod_fqdn)
+                child_obj_list = self.dfs_cut(v, inNode)
+                if child_obj_list:
+                    for child in child_obj_list:
+                        inNode.addChild(child)
+                node_list.append(inNode)
 
-        for i in del_list:
-            del self.obj_list[inx][i]
- 
+            elif type(v) == dict:
+                tempNode = ObjNode(k, **v)
+                child_obj_list = self.dfs_cut(v, refNode)
+                if child_obj_list:
+                    for child in child_obj_list:
+                        tempNode.addChild(child)
+                node_list.append(tempNode)
+
+        return node_list
+
     def dfs_transform(self, obj):
         '''
         This is used to turn the OrderedDicts
@@ -105,3 +108,8 @@ class ForestGen(object):
                new_dict.update(self.dfs_transform(v)) 
                obj[k] = new_dict
         return obj
+
+tree_obj = {'netmask': '255.255.255.0', 'port_list': [OrderedDict([(22, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([(80, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([('service_group', [OrderedDict([('sg1', [OrderedDict([('member_list', [OrderedDict([('mem1', [OrderedDict([('host', '10.7.11.1')])])]), OrderedDict([('mem2', [OrderedDict([('host', '10.7.11.2')])])])])]), OrderedDict([('lb_type', 'round_robin')])])])])])], 'a10_name': 'vs2', 'ip_address': '192.168.43.6', 'a10_obj': 'slb_virtual_server', 'name': 'VS2'}
+
+frst = ForestGen()
+frst.parse_tree('slb_virtual_server', tree_obj)

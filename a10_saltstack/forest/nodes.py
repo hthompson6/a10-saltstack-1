@@ -24,20 +24,23 @@ class ObjNode(object):
 
     def addParent(self, parent):
         self.parent = parent
-        self.parent.addChild(self)
 
     def addChild(self, child):
+        child.addParent(self)
         self.children.append(child)
 
 
 class RootNode(ObjNode):
 
-    def __init__(self, id, ref, **kwargs):
+    def __init__(self, id, ref):
         self.ref = ref
         self.id = id
 
         self.parent = None
         self.children = []
+        self.val_dict = {}
+
+    def addValDict(**kwargs):
         self.val_dict = kwargs
 
 

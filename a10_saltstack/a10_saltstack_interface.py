@@ -94,6 +94,7 @@ def _objlist_to_tree(obj_list):
 
     del obj_list[0]
 
+    import pdb; pdb.set_trace()
     for obj in obj_list:
         if obj.get('parent-key') and obj.get('$ref'):
             inNode = InterNode(obj['parent-key'], obj['$ref'])
@@ -115,6 +116,8 @@ def parse_obj(a10_obj, op_type, client, **kwargs):
     forest_gen = ForestGen()
     tree_list = forest_gen.parse_tree(a10_obj, kwargs)
 
+    print("===============OUTPUT================")
+    print(tree_list)
     root = _objlist_to_tree(tree_list)
 
     for tree in parser.tree_list:
