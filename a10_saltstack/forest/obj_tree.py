@@ -59,8 +59,11 @@ def dfs_cut(obj, refNode=None):
     This iterates over the tree and extracts
     refrence objects out of it
     '''
-    vals = list(obj.values())
 
+    if type(obj) != dict:
+        return
+
+    vals = list(obj.values())
     if len(vals) == 1 and type(vals[0]) != dict:
         return
 

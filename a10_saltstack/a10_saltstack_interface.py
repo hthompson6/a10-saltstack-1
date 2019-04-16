@@ -23,6 +23,11 @@ from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
 
+# DELETE THIS
+from a10_saltstack.client import axapi_http as ax_http
+from a10_saltstack.client import session as ax_sess
+from a10_saltstack.client import client as ax_cli
+
 def _build_envelope(title, data):
     return {
         title: data
@@ -79,10 +84,10 @@ def _build_obj_dict(forest_node, ref):
 
     pk = 0
     tempNode = forest_node.parent
-    while pk < len(parent_keys) - 1:
+    while pk < len(parent_keys) and tempNode != None:
         if type(tempNode) != InterNode:
             forest_node.val_dict[parent_keys[pk]] = tempNode.id
-            pk -= 1
+            pk += 1
         tempNode = tempNode.parent
 
     forest_node.val_dict['ref'] = ref 
@@ -117,20 +122,39 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
         existing_url = a10_helper.existing_url(ref, **a10_obj_val)
         new_url = a10_helper.new_url(ref, **a10_obj_val)
 
-        post_result = {}
-        payload = _build_json(obj_type, avail_props, **a10_obj_val)
+        parent_keys = a10_helper.get_parent_keys(ref)
 
+        del_list = []
+        a10_obj_fin = {}
+        for k,v in a10_obj_val.items():
+            if k not in parent_keys:
+                a10_obj_fin[k.replace('-', '_')] = v
+
+        post_result = {}
+        payload = _build_json(obj_type, avail_props, **a10_obj_fin)
+
+        posted = False
         try:
             need_update = False
             resp = client.get(existing_url)
-            for k,v in a10_obj_val.items():
+            for k,v in a10_obj_fin.items():
                if k in resp:
                     if v != resp[k]:
                         need_update = True
                         break
             if need_update:
-                return client.post(existing_url, payload)
+                client.post(existing_url, payload)
+                posted = True
         except a10_ex.NotFound:
             pass
 
-        return client.post(new_url, payload)
+        if not posted:
+            client.post(new_url, payload)
+
+#trees_obj = {'port_list': [OrderedDict([(22, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([(80, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([('service_group', [OrderedDict([('sg1', [OrderedDict([('member_list', [OrderedDict([('mem1', [OrderedDict([('host', '10.7.11.1')]), OrderedDict([('port', 80)])])]), OrderedDict([('mem2', [OrderedDict([('host', '10.7.11.2')]), OrderedDict([('port', 22)])])])])]), OrderedDict([('lb_type', 'round_robin')])])])])])], 'a10_obj': 'virtual_server', 'a10_name': 'vs2', 'ip_address': '192.168.43.6', 'name': 'VS2', 'netmask': '255.255.255.0'}
+
+#http_cli = ax_http.HttpClient('10.48.5.13', 80, 'http')
+#ax_session = ax_sess.Session(http_cli, 'admin', 'a10')
+#client = ax_cli.A10Client(ax_session)
+
+#parse_obj('virtual_server', 'slb', client, **trees_obj)
