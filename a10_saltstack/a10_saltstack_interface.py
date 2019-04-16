@@ -28,9 +28,8 @@ def _build_envelope(title, data):
         title: data
     }
 
-
 def _to_axapi(key):
-    return translateBlacklist(key, KW_OUT).replace("_", "-")
+    return translateBlacklist(str(key), KW_OUT).replace("_", "-")
 
 
 def _build_dict_from_param(param):
@@ -86,19 +85,18 @@ def _build_obj_dict(forest_node, ref):
             pk -= 1
         tempNode = tempNode.parent
 
+    forest_node.val_dict['ref'] = ref 
     return forest_node.val_dict
 
 def parse_obj(a10_obj_type, op_type, client, **kwargs):
-    root = obj_tree.parse_tree('{}_{}'.format(op_type, a10_obj_type), kwargs)
+    a10_obj = '{}_{}'.format(op_type, a10_obj_type)
+    root = obj_tree.parse_tree(a10_obj, kwargs)
     forest_list = [root]
 
     forest = ForestGen()
     forest.dfs_cut(root)
     if forest.node_list:
         forest_list.extend(forest.node_list)
-
-
-    #import pdb; pdb.set_trace()
 
     obj_dict_list = []
     for tree in forest_list:
@@ -109,16 +107,15 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
         else:
             obj_dict_list.append(_build_obj_dict(tree, tree.ref))
 
-    for tree in forest_list: 
-        url = a10_helper.get_url(tree['a10_obj'], op_type, **kwargs)
-        avail_props = a10_helper.get_props(tree['a10_obj'], **kwargs)
-        obj_type = a10_helper.get_obj_type(tree['a10_obj'])
+    for a10_obj_val in obj_dict_list:
+        ref = a10_obj_val['ref']
+        del a10_obj_val['ref']
+
+        avail_props = a10_helper.get_props(ref)
+        obj_type = a10_helper.get_obj_type(ref)
 
         post_result = {}
         payload = _build_json(obj_type, avail_props, **kwargs)
-        if payload[obj_type].get('a10-name'):
-            payload[obj_type]["name"] = payload[obj_type]["a10-name"]
-            del payload[obj_type]["a10-name"]
 
         post_result['post_resp'] = client.post(url, payload)
         post_result['result'] = True

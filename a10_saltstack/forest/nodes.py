@@ -20,7 +20,10 @@ class ObjNode(object):
 
         self.parent = None
         self.children = []
-        self.val_dict = kwargs
+        self.val_dict = {}
+        for k,v in kwargs.items():
+            if type(v) != dict and type(v) != list:
+                self.val_dict[k] = v
 
     def addParent(self, parent):
         self.parent = parent
@@ -41,17 +44,15 @@ class RootNode(ObjNode):
         self.val_dict = {}
 
     def addValDict(self, **kwargs):
-        self.val_dict = kwargs
+        for k,v in kwargs.items():
+            if type(v) != dict and type(v) != list:
+                self.val_dict[k] = v 
 
 
 class InterNode(ObjNode):
 
-    def __init__(self, key, ref):
+    def __init__(self, ref):
         self.parent = None
         self.children = []
-        self.ref = ref
 
-        if key[-5:] == '-list':
-            self.key = key[:-5]
-        else:
-            self.key = key
+        self.ref = ref

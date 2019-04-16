@@ -73,7 +73,7 @@ def dfs_cut(obj, refNode=None):
     for k,v in obj.items():
         if k in ref_props:
             mod_fqdn = extract_modname(ref_props[k])
-            inNode = InterNode(k, mod_fqdn)
+            inNode = InterNode(mod_fqdn)
             child_obj_list = dfs_cut(v, inNode)
             if child_obj_list:
                 for child in child_obj_list:

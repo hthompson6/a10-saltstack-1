@@ -18,21 +18,21 @@ import importlib
 
 def new_url(a10_obj, **kwargs):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.new_url(**kwargs)
 
 
 def existing_url(a10_obj, **kwargs):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.existing_url(**kwargs)
 
 
 def get_props(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
  
     return obj_module.AVAILABLE_PROPERTIES
 
@@ -60,6 +60,6 @@ def get_ref_props(a10_obj):
 
 def get_obj_type(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.MODULE_NAME
