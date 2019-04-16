@@ -114,28 +114,23 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
         avail_props = a10_helper.get_props(ref)
         obj_type = a10_helper.get_obj_type(ref)
 
-        post_result = {}
-        payload = _build_json(obj_type, avail_props, **kwargs)
+        existing_url = a10_helper.existing_url(ref, **a10_obj_val)
+        new_url = a10_helper.new_url(ref, **a10_obj_val)
 
-        post_result['post_resp'] = client.post(url, payload)
-        post_result['result'] = True
+        post_result = {}
+        payload = _build_json(obj_type, avail_props, **a10_obj_val)
 
         try:
-            need_update = false
-            resp = client.get()
-            for k,v in tree.items():
+            need_update = False
+            resp = client.get(existing_url)
+            for k,v in a10_obj_val.items():
                if k in resp:
                     if v != resp[k]:
-                        need_update = true
+                        need_update = True
                         break
             if need_update:
-                client.put()
-                return
-        except ae.DNE:
+                return client.post(existing_url, payload)
+        except a10_ex.NotFound:
             pass
 
-        client.post()
-
-obj_dicty = {'netmask': '255.255.255.0', 'name': 'VS2', 'a10_name': 'vs2', 'ip_address': '192.168.43.6', 'port_list': [OrderedDict([(22, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([(80, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([('service_group', [OrderedDict([('sg1', [OrderedDict([('member_list', [OrderedDict([('mem1', [OrderedDict([('host', '10.7.11.1')])])]), OrderedDict([('mem2', [OrderedDict([('host', '10.7.11.2')])])])])]), OrderedDict([('lb_type', 'round_robin')])])])])])], 'a10_obj': 'slb_virtual_server'}
-
-parse_obj('virtual_server', 'slb', None, **obj_dicty)
+        return client.post(new_url, payload)
