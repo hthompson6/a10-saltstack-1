@@ -14,23 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "asymmetric_flow_support",
-    "error",
-    "fragment_after_encap",
-    "ike_gateway_list",
-    "ike_sa_timeout",
-    "ike_stats_global",
-    "ipsec_error_dump",
-    "ipsec_list",
-    "jumbo_fragment",
-    "nat_traversal_flow_affinity",
-    "revocation_list",
-    "sampling_enable",
-    "stateful_mode",
-    "tcp_mss_adjust_disable",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["asymmetric_flow_support","error","fragment_after_encap","ike_gateway_list","ike_sa_timeout","ike_stats_global","ipsec_error_dump","ipsec_list","jumbo_fragment","nat_traversal_flow_affinity","revocation_list","sampling_enable","stateful_mode","tcp_mss_adjust_disable","uuid",]
 
 REF_PROPERTIES = {
     "error": "/axapi/v3/vpn/error",
@@ -47,7 +31,7 @@ PARENT_KEYS = []
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/vpn"
@@ -56,7 +40,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/vpn"

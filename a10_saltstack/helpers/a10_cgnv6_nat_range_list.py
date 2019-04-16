@@ -14,17 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "global_netmaskv4",
-    "global_start_ipv4_addr",
-    "local_netmaskv4",
-    "local_start_ipv4_addr",
-    "a10_name",
-    "partition",
-    "uuid",
-    "v4_count",
-    "v4_vrid",
-]
+AVAILABLE_PROPERTIES = ["global_netmaskv4","global_start_ipv4_addr","local_netmaskv4","local_start_ipv4_addr","name","partition","uuid","v4_count","v4_vrid",]
 
 REF_PROPERTIES = {
 }
@@ -36,7 +26,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name","partition",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/nat/range-list/{name}+{partition}"
@@ -47,12 +37,12 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/nat/range-list/{name}+{partition}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
     f_dict["partition"] = kwargs["partition"]
 
     return url_base.format(**f_dict)

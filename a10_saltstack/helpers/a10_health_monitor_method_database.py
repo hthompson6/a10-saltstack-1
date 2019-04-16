@@ -14,24 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "database",
-    "database_name",
-    "db_column",
-    "db_column_integer",
-    "db_encrypted",
-    "db_name",
-    "db_password",
-    "db_password_str",
-    "db_receive",
-    "db_receive_integer",
-    "db_row",
-    "db_row_integer",
-    "db_send",
-    "db_username",
-    "uuid",
-    "monitor_name",
-]
+AVAILABLE_PROPERTIES = ["database","database_name","db_column","db_column_integer","db_encrypted","db_name","db_password","db_password_str","db_receive","db_receive_integer","db_row","db_row_integer","db_send","db_username","uuid","monitor_name",]
 
 REF_PROPERTIES = {
 }
@@ -43,7 +26,7 @@ PARENT_KEYS = ["monitor_name",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/health/monitor/{monitor_name}/method/database"
@@ -53,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/health/monitor/{monitor_name}/method/database"

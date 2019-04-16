@@ -14,24 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "action_value",
-    "conn_limit",
-    "conn_per",
-    "conn_rate_limit",
-    "dns64",
-    "interval",
-    "lidnum",
-    "lockout",
-    "log",
-    "over_limit_action",
-    "request_limit",
-    "request_per",
-    "request_rate_limit",
-    "user_tag",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["action_value","conn_limit","conn_per","conn_rate_limit","dns64","interval","lidnum","lockout","log","over_limit_action","request_limit","request_per","request_rate_limit","user_tag","uuid","policy_name",]
 
 REF_PROPERTIES = {
 }
@@ -43,7 +26,7 @@ PARENT_KEYS = ["policy_name",]
 CHILD_KEYS = ["lidnum",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/template/policy/{policy_name}/class-list/lid/{lidnum}"
@@ -54,7 +37,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/template/policy/{policy_name}/class-list/lid/{lidnum}"

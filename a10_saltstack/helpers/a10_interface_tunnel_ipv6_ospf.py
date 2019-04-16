@@ -14,21 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "bfd",
-    "cost_cfg",
-    "dead_interval_cfg",
-    "disable",
-    "hello_interval_cfg",
-    "mtu_ignore_cfg",
-    "neighbor_cfg",
-    "network_list",
-    "priority_cfg",
-    "retransmit_interval_cfg",
-    "transmit_delay_cfg",
-    "uuid",
-    "tunnel_ifnum",
-]
+AVAILABLE_PROPERTIES = ["bfd","cost_cfg","dead_interval_cfg","disable","hello_interval_cfg","mtu_ignore_cfg","neighbor_cfg","network_list","priority_cfg","retransmit_interval_cfg","transmit_delay_cfg","uuid","tunnel_ifnum",]
 
 REF_PROPERTIES = {
 }
@@ -40,7 +26,7 @@ PARENT_KEYS = ["tunnel_ifnum",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/tunnel/{tunnel_ifnum}/ipv6/ospf"
@@ -50,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/tunnel/{tunnel_ifnum}/ipv6/ospf"

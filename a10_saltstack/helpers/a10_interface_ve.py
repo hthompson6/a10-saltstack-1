@@ -14,28 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "access_list",
-    "action",
-    "bfd",
-    "ddos",
-    "icmp_rate_limit",
-    "icmpv6_rate_limit",
-    "ifnum",
-    "ip",
-    "ipv6",
-    "isis",
-    "l3_vlan_fwd_disable",
-    "lw_4o6",
-    "map",
-    "mtu",
-    "a10_name",
-    "nptv6",
-    "sampling_enable",
-    "trap_source",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["access_list","action","bfd","ddos","icmp_rate_limit","icmpv6_rate_limit","ifnum","ip","ipv6","isis","l3_vlan_fwd_disable","lw_4o6","map","mtu","name","nptv6","sampling_enable","trap_source","user_tag","uuid",]
 
 REF_PROPERTIES = {
     "bfd": "/axapi/v3/interface/ve/{ifnum}/bfd",
@@ -56,7 +35,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["ifnum",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/ve/{ifnum}"
@@ -66,7 +45,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/ve/{ifnum}"

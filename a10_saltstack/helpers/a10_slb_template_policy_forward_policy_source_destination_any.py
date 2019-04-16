@@ -14,13 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "action",
-    "sampling_enable",
-    "uuid",
-    "name",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["action","sampling_enable","uuid","name","policy_name",]
 
 REF_PROPERTIES = {
 }
@@ -32,7 +26,7 @@ PARENT_KEYS = ["name","policy_name",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/template/policy/{policy_name}/forward-policy/source/{name}/destination/any"
@@ -43,7 +37,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/policy/{policy_name}/forward-policy/source/{name}/destination/any"

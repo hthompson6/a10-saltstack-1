@@ -14,31 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "action",
-    "alternate_port",
-    "auth_cfg",
-    "conn_limit",
-    "conn_resume",
-    "extended_stats",
-    "follow_port_protocol",
-    "health_check",
-    "health_check_disable",
-    "health_check_follow_port",
-    "no_logging",
-    "no_ssl",
-    "port_number",
-    "protocol",
-    "range",
-    "sampling_enable",
-    "stats_data_action",
-    "template_port",
-    "template_server_ssl",
-    "user_tag",
-    "uuid",
-    "weight",
-    "server_name",
-]
+AVAILABLE_PROPERTIES = ["action","alternate_port","auth_cfg","conn_limit","conn_resume","extended_stats","follow_port_protocol","health_check","health_check_disable","health_check_follow_port","no_logging","no_ssl","port_number","protocol","range","sampling_enable","stats_data_action","template_port","template_server_ssl","user_tag","uuid","weight","server_name",]
 
 REF_PROPERTIES = {
     "health_check": "/axapi/v3/health/monitor",
@@ -53,7 +29,7 @@ PARENT_KEYS = ["server_name",]
 CHILD_KEYS = ["port-number","protocol",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/server/{server_name}/port/{port-number}+{protocol}"
@@ -65,7 +41,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/server/{server_name}/port/{port-number}+{protocol}"

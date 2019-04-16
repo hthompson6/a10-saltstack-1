@@ -14,20 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "aggregate_address_list",
-    "auto_summary",
-    "bgp",
-    "distance",
-    "maximum_paths_value",
-    "neighbor",
-    "network",
-    "originate",
-    "redistribute",
-    "synchronization",
-    "uuid",
-    "bgp_as_number",
-]
+AVAILABLE_PROPERTIES = ["aggregate_address_list","auto_summary","bgp","distance","maximum_paths_value","neighbor","network","originate","redistribute","synchronization","uuid","bgp_as_number",]
 
 REF_PROPERTIES = {
     "neighbor": "/axapi/v3/router/bgp/{as-number}/address-family/ipv6/neighbor",
@@ -42,7 +29,7 @@ PARENT_KEYS = ["bgp_as_number",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/address-family/ipv6"
@@ -52,7 +39,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/address-family/ipv6"

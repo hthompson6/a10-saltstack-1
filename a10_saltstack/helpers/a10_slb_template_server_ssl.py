@@ -14,37 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "alert_type",
-    "ca_certs",
-    "cert",
-    "cipher_template",
-    "cipher_without_prio_list",
-    "close_notify",
-    "crl_certs",
-    "dgversion",
-    "dh_type",
-    "ec_list",
-    "enable_tls_alert_logging",
-    "encrypted",
-    "forward_proxy_enable",
-    "handshake_logging_enable",
-    "key",
-    "a10_name",
-    "ocsp_stapling",
-    "passphrase",
-    "renegotiation_disable",
-    "server_certificate_error",
-    "session_cache_size",
-    "session_cache_timeout",
-    "session_ticket_enable",
-    "ssli_logging",
-    "sslilogging",
-    "use_client_sni",
-    "user_tag",
-    "uuid",
-    "version",
-]
+AVAILABLE_PROPERTIES = ["alert_type","ca_certs","cert","cipher_template","cipher_without_prio_list","close_notify","crl_certs","dgversion","dh_type","ec_list","enable_tls_alert_logging","encrypted","forward_proxy_enable","handshake_logging_enable","key","name","ocsp_stapling","passphrase","renegotiation_disable","server_certificate_error","session_cache_size","session_cache_timeout","session_ticket_enable","ssli_logging","sslilogging","use_client_sni","user_tag","uuid","version",]
 
 REF_PROPERTIES = {
     "cipher_template": "/axapi/v3/slb/template/cipher",
@@ -57,7 +27,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/template/server-ssl/{name}"
@@ -67,11 +37,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/server-ssl/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

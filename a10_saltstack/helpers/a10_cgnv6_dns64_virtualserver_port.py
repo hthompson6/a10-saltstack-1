@@ -14,21 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "action",
-    "auto",
-    "pool",
-    "port_number",
-    "precedence",
-    "protocol",
-    "sampling_enable",
-    "service_group",
-    "template_dns",
-    "template_policy",
-    "user_tag",
-    "uuid",
-    "dns64_virtualserver_name",
-]
+AVAILABLE_PROPERTIES = ["action","auto","pool","port_number","precedence","protocol","sampling_enable","service_group","template_dns","template_policy","user_tag","uuid","dns64_virtualserver_name",]
 
 REF_PROPERTIES = {
     "pool": "/axapi/v3/ip/nat/pool",
@@ -44,7 +30,7 @@ PARENT_KEYS = ["dns64_virtualserver_name",]
 CHILD_KEYS = ["port-number","protocol",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/dns64-virtualserver/{dns64_virtualserver_name}/port/{port-number}+{protocol}"
@@ -56,7 +42,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/dns64-virtualserver/{dns64_virtualserver_name}/port/{port-number}+{protocol}"

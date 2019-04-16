@@ -14,19 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "disable_failsafe",
-    "fpga_buff_recovery_threshold",
-    "hw_error_monitor",
-    "hw_error_recovery_timeout",
-    "kill",
-    "log",
-    "session_mem_recovery_threshold",
-    "sw_error_monitor_enable",
-    "sw_error_recovery_timeout",
-    "total_memory_size_check",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["disable_failsafe","fpga_buff_recovery_threshold","hw_error_monitor","hw_error_recovery_timeout","kill","log","session_mem_recovery_threshold","sw_error_monitor_enable","sw_error_recovery_timeout","total_memory_size_check","uuid",]
 
 REF_PROPERTIES = {
     "disable_failsafe": "/axapi/v3/fail-safe/disable-failsafe",
@@ -39,7 +27,7 @@ PARENT_KEYS = []
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/fail-safe"
@@ -48,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/fail-safe"

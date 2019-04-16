@@ -14,29 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "dslite",
-    "nat44",
-    "nat64",
-    "netflow_v5",
-    "netflow_v5_ext",
-    "port_batch_dslite",
-    "port_batch_nat44",
-    "port_batch_nat64",
-    "port_batch_v2_dslite",
-    "port_batch_v2_nat44",
-    "port_batch_v2_nat64",
-    "port_mapping_dslite",
-    "port_mapping_nat44",
-    "port_mapping_nat64",
-    "sesn_event_dslite",
-    "sesn_event_fw4",
-    "sesn_event_fw6",
-    "sesn_event_nat44",
-    "sesn_event_nat64",
-    "uuid",
-    "monitor_name",
-]
+AVAILABLE_PROPERTIES = ["dslite","nat44","nat64","netflow_v5","netflow_v5_ext","port_batch_dslite","port_batch_nat44","port_batch_nat64","port_batch_v2_dslite","port_batch_v2_nat44","port_batch_v2_nat64","port_mapping_dslite","port_mapping_nat44","port_mapping_nat64","sesn_event_dslite","sesn_event_fw4","sesn_event_fw6","sesn_event_nat44","sesn_event_nat64","uuid","monitor_name",]
 
 REF_PROPERTIES = {
 }
@@ -48,7 +26,7 @@ PARENT_KEYS = ["monitor_name",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/netflow/monitor/{monitor_name}/record"
@@ -58,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/netflow/monitor/{monitor_name}/record"

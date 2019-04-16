@@ -14,33 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "http",
-    "http_encrypted",
-    "http_expect",
-    "http_host",
-    "http_kerberos_auth",
-    "http_kerberos_kdc",
-    "http_kerberos_realm",
-    "http_maintenance_code",
-    "http_password",
-    "http_password_string",
-    "http_port",
-    "http_postdata",
-    "http_postfile",
-    "http_response_code",
-    "http_text",
-    "http_url",
-    "http_username",
-    "post_path",
-    "post_type",
-    "response_code_regex",
-    "text_regex",
-    "url_path",
-    "url_type",
-    "uuid",
-    "monitor_name",
-]
+AVAILABLE_PROPERTIES = ["http","http_encrypted","http_expect","http_host","http_kerberos_auth","http_kerberos_kdc","http_kerberos_realm","http_maintenance_code","http_password","http_password_string","http_port","http_postdata","http_postfile","http_response_code","http_text","http_url","http_username","post_path","post_type","response_code_regex","text_regex","url_path","url_type","uuid","monitor_name",]
 
 REF_PROPERTIES = {
 }
@@ -52,7 +26,7 @@ PARENT_KEYS = ["monitor_name",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/health/monitor/{monitor_name}/method/http"
@@ -62,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/health/monitor/{monitor_name}/method/http"

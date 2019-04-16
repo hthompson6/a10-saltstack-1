@@ -14,26 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "auto_map_learn",
-    "auto_map_primary",
-    "auto_map_smart",
-    "config_anywhere",
-    "config_merge",
-    "config_save",
-    "data_interface",
-    "dns_discover",
-    "enable",
-    "learn",
-    "mgmt_interface",
-    "a10_name",
-    "primary_list",
-    "priority",
-    "standalone",
-    "suffix",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["auto_map_learn","auto_map_primary","auto_map_smart","config_anywhere","config_merge","config_save","data_interface","dns_discover","enable","learn","mgmt_interface","name","primary_list","priority","standalone","suffix","user_tag","uuid",]
 
 REF_PROPERTIES = {
 }
@@ -45,7 +26,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/group/{name}"
@@ -55,11 +36,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/group/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

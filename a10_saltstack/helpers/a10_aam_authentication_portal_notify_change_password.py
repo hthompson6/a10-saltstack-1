@@ -14,23 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "background",
-    "cfm_pwd_cfg",
-    "change_text",
-    "change_url",
-    "confirm_password_var",
-    "continue_text",
-    "continue_url",
-    "new_password_var",
-    "new_pwd_cfg",
-    "old_password_var",
-    "old_pwd_cfg",
-    "username_cfg",
-    "username_var",
-    "uuid",
-    "portal_name",
-]
+AVAILABLE_PROPERTIES = ["background","cfm_pwd_cfg","change_text","change_url","confirm_password_var","continue_text","continue_url","new_password_var","new_pwd_cfg","old_password_var","old_pwd_cfg","username_cfg","username_var","uuid","portal_name",]
 
 REF_PROPERTIES = {
 }
@@ -42,7 +26,7 @@ PARENT_KEYS = ["portal_name",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/aam/authentication/portal/{portal_name}/notify-change-password"
@@ -52,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/portal/{portal_name}/notify-change-password"

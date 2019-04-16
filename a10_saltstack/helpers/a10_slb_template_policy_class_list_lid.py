@@ -14,35 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "action_value",
-    "bw_per",
-    "bw_rate_limit",
-    "conn_limit",
-    "conn_per",
-    "conn_rate_limit",
-    "direct_action",
-    "direct_action_interval",
-    "direct_action_value",
-    "direct_fail",
-    "direct_logging_drp_rst",
-    "direct_pbslb_interval",
-    "direct_pbslb_logging",
-    "direct_service_group",
-    "dns64",
-    "interval",
-    "lidnum",
-    "lockout",
-    "log",
-    "over_limit_action",
-    "request_limit",
-    "request_per",
-    "request_rate_limit",
-    "response_code_rate_limit",
-    "user_tag",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["action_value","bw_per","bw_rate_limit","conn_limit","conn_per","conn_rate_limit","direct_action","direct_action_interval","direct_action_value","direct_fail","direct_logging_drp_rst","direct_pbslb_interval","direct_pbslb_logging","direct_service_group","dns64","interval","lidnum","lockout","log","over_limit_action","request_limit","request_per","request_rate_limit","response_code_rate_limit","user_tag","uuid","policy_name",]
 
 REF_PROPERTIES = {
     "direct_service_group": "/axapi/v3/slb/service-group",
@@ -55,7 +27,7 @@ PARENT_KEYS = ["policy_name",]
 CHILD_KEYS = ["lidnum",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/template/policy/{policy_name}/class-list/lid/{lidnum}"
@@ -66,7 +38,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/policy/{policy_name}/class-list/lid/{lidnum}"

@@ -14,15 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "address_list",
-    "ipv6_enable",
-    "ospf",
-    "rip",
-    "router",
-    "uuid",
-    "loopback_ifnum",
-]
+AVAILABLE_PROPERTIES = ["address_list","ipv6_enable","ospf","rip","router","uuid","loopback_ifnum",]
 
 REF_PROPERTIES = {
     "ospf": "/axapi/v3/interface/loopback/{ifnum}/ipv6/ospf",
@@ -37,7 +29,7 @@ PARENT_KEYS = ["loopback_ifnum",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/loopback/{loopback_ifnum}/ipv6"
@@ -47,7 +39,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/loopback/{loopback_ifnum}/ipv6"

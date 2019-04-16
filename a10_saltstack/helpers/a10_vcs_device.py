@@ -14,19 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "affinity_vrrp_a_vrid",
-    "device",
-    "enable",
-    "ethernet_cfg",
-    "management",
-    "priority",
-    "trunk_cfg",
-    "unicast_port",
-    "user_tag",
-    "uuid",
-    "ve_cfg",
-]
+AVAILABLE_PROPERTIES = ["affinity_vrrp_a_vrid","device","enable","ethernet_cfg","management","priority","trunk_cfg","unicast_port","user_tag","uuid","ve_cfg",]
 
 REF_PROPERTIES = {
 }
@@ -38,7 +26,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["device",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/vcs/device/{device}"
@@ -48,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/vcs/device/{device}"

@@ -14,20 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "auth_protocol",
-    "health_check",
-    "health_check_disable",
-    "health_check_string",
-    "host",
-    "kerberos_password_change_port",
-    "a10_name",
-    "realm",
-    "sampling_enable",
-    "support_apacheds_kdc",
-    "timeout",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["auth_protocol","health_check","health_check_disable","health_check_string","host","kerberos_password_change_port","name","realm","sampling_enable","support_apacheds_kdc","timeout","uuid",]
 
 REF_PROPERTIES = {
     "health_check_string": "/axapi/v3/health/monitor",
@@ -40,7 +27,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/aam/authentication/server/windows/instance/{name}"
@@ -50,11 +37,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/server/windows/instance/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

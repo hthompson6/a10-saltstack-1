@@ -14,14 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "interface",
-    "local_zone_cfg",
-    "a10_name",
-    "user_tag",
-    "uuid",
-    "vlan",
-]
+AVAILABLE_PROPERTIES = ["interface","local_zone_cfg","name","user_tag","uuid","vlan",]
 
 REF_PROPERTIES = {
     "interface": "/axapi/v3/zone/{name}/interface",
@@ -36,7 +29,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/zone/{name}"
@@ -46,11 +39,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/zone/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

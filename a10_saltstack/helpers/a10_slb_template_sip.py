@@ -14,38 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "acl_id",
-    "acl_name_value",
-    "alg_dest_nat",
-    "alg_source_nat",
-    "call_id_persist_disable",
-    "client_keep_alive",
-    "client_request_header",
-    "client_response_header",
-    "dialog_aware",
-    "drop_when_client_fail",
-    "drop_when_server_fail",
-    "exclude_translation",
-    "failed_client_selection",
-    "failed_client_selection_message",
-    "failed_server_selection",
-    "failed_server_selection_message",
-    "insert_client_ip",
-    "interval",
-    "keep_server_ip_if_match_acl",
-    "a10_name",
-    "pstn_gw",
-    "server_keep_alive",
-    "server_request_header",
-    "server_response_header",
-    "server_selection_per_request",
-    "service_group",
-    "smp_call_id_rtp_session",
-    "timeout",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["acl_id","acl_name_value","alg_dest_nat","alg_source_nat","call_id_persist_disable","client_keep_alive","client_request_header","client_response_header","dialog_aware","drop_when_client_fail","drop_when_server_fail","exclude_translation","failed_client_selection","failed_client_selection_message","failed_server_selection","failed_server_selection_message","insert_client_ip","interval","keep_server_ip_if_match_acl","name","pstn_gw","server_keep_alive","server_request_header","server_response_header","server_selection_per_request","service_group","smp_call_id_rtp_session","timeout","user_tag","uuid",]
 
 REF_PROPERTIES = {
     "acl_id": "/axapi/v3/access-list/standard",
@@ -60,7 +29,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/slb/template/sip/{name}"
@@ -70,11 +39,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/sip/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

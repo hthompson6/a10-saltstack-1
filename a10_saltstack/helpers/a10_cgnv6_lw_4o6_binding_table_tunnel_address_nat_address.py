@@ -14,13 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "ipv4_nat_addr",
-    "port_range_list",
-    "user_tag",
-    "tunnel_address_ipv6_tunnel_addr",
-    "binding_table_name",
-]
+AVAILABLE_PROPERTIES = ["ipv4_nat_addr","port_range_list","user_tag","tunnel_address_ipv6_tunnel_addr","binding_table_name",]
 
 REF_PROPERTIES = {
     "port_range_list": "/axapi/v3/cgnv6/lw-4o6/binding-table/{name}/tunnel-address/{ipv6-tunnel-addr}/nat-address/{ipv4-nat-addr}/port-range/{port-start}+{port-end}",
@@ -33,7 +27,7 @@ PARENT_KEYS = ["tunnel_address_ipv6_tunnel_addr","binding_table_name",]
 CHILD_KEYS = ["ipv4-nat-addr",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/lw-4o6/binding-table/{binding_table_name}/tunnel-address/{tunnel_address_ipv6_tunnel_addr}/nat-address/{ipv4-nat-addr}"
@@ -45,7 +39,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lw-4o6/binding-table/{binding_table_name}/tunnel-address/{tunnel_address_ipv6_tunnel_addr}/nat-address/{ipv4-nat-addr}"

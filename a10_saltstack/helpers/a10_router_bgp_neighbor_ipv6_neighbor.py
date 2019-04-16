@@ -14,66 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "acos_application_only",
-    "activate",
-    "advertisement_interval",
-    "allowas_in",
-    "allowas_in_count",
-    "as_origination_interval",
-    "bfd",
-    "bfd_encrypted",
-    "bfd_value",
-    "collide_established",
-    "connect",
-    "default_originate",
-    "description",
-    "disallow_infinite_holdtime",
-    "distribute_lists",
-    "dont_capability_negotiate",
-    "dynamic",
-    "ebgp_multihop",
-    "ebgp_multihop_hop_count",
-    "enforce_multihop",
-    "ethernet",
-    "inbound",
-    "key_id",
-    "key_type",
-    "lif",
-    "loopback",
-    "maximum_prefix",
-    "maximum_prefix_thres",
-    "multihop",
-    "nbr_remote_as",
-    "neighbor_filter_lists",
-    "neighbor_ipv6",
-    "neighbor_prefix_lists",
-    "neighbor_route_map_lists",
-    "next_hop_self",
-    "override_capability",
-    "pass_encrypted",
-    "pass_value",
-    "passive",
-    "peer_group_name",
-    "prefix_list_direction",
-    "remove_private_as",
-    "route_map",
-    "route_refresh",
-    "send_community_val",
-    "shutdown",
-    "strict_capability_match",
-    "timers_holdtime",
-    "timers_keepalive",
-    "trunk",
-    "tunnel",
-    "unsuppress_map",
-    "update_source_ip",
-    "update_source_ipv6",
-    "uuid",
-    "ve",
-    "weight",
-    "bgp_as_number",
-]
+AVAILABLE_PROPERTIES = ["acos_application_only","activate","advertisement_interval","allowas_in","allowas_in_count","as_origination_interval","bfd","bfd_encrypted","bfd_value","collide_established","connect","default_originate","description","disallow_infinite_holdtime","distribute_lists","dont_capability_negotiate","dynamic","ebgp_multihop","ebgp_multihop_hop_count","enforce_multihop","ethernet","inbound","key_id","key_type","lif","loopback","maximum_prefix","maximum_prefix_thres","multihop","nbr_remote_as","neighbor_filter_lists","neighbor_ipv6","neighbor_prefix_lists","neighbor_route_map_lists","next_hop_self","override_capability","pass_encrypted","pass_value","passive","peer_group_name","prefix_list_direction","remove_private_as","route_map","route_refresh","send_community_val","shutdown","strict_capability_match","timers_holdtime","timers_keepalive","trunk","tunnel","unsuppress_map","update_source_ip","update_source_ipv6","uuid","ve","weight","bgp_as_number",]
 
 REF_PROPERTIES = {
 }
@@ -85,7 +26,7 @@ PARENT_KEYS = ["bgp_as_number",]
 CHILD_KEYS = ["neighbor-ipv6",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/neighbor/ipv6-neighbor/{neighbor-ipv6}"
@@ -96,7 +37,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/neighbor/ipv6-neighbor/{neighbor-ipv6}"

@@ -14,11 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "ipv4_addr",
-    "ipv6_addr",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["ipv4_addr","ipv6_addr","uuid",]
 
 REF_PROPERTIES = {
 }
@@ -30,7 +26,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["ipv4-addr","ipv6-addr",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/cgnv6/lsn/health-check-gateway/{ipv4-addr}+{ipv6-addr}"
@@ -41,7 +37,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn/health-check-gateway/{ipv4-addr}+{ipv6-addr}"

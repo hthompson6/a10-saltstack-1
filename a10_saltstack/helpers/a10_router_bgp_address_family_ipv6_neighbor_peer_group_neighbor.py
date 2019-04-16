@@ -14,29 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "activate",
-    "allowas_in",
-    "allowas_in_count",
-    "default_originate",
-    "distribute_lists",
-    "inbound",
-    "maximum_prefix",
-    "maximum_prefix_thres",
-    "neighbor_filter_lists",
-    "neighbor_prefix_lists",
-    "neighbor_route_map_lists",
-    "next_hop_self",
-    "peer_group",
-    "prefix_list_direction",
-    "remove_private_as",
-    "route_map",
-    "send_community_val",
-    "unsuppress_map",
-    "uuid",
-    "weight",
-    "bgp_as_number",
-]
+AVAILABLE_PROPERTIES = ["activate","allowas_in","allowas_in_count","default_originate","distribute_lists","inbound","maximum_prefix","maximum_prefix_thres","neighbor_filter_lists","neighbor_prefix_lists","neighbor_route_map_lists","next_hop_self","peer_group","prefix_list_direction","remove_private_as","route_map","send_community_val","unsuppress_map","uuid","weight","bgp_as_number",]
 
 REF_PROPERTIES = {
 }
@@ -48,7 +26,7 @@ PARENT_KEYS = ["bgp_as_number",]
 CHILD_KEYS = ["peer-group",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/address-family/ipv6/neighbor/peer-group-neighbor/{peer-group}"
@@ -59,7 +37,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/bgp/{bgp_as_number}/address-family/ipv6/neighbor/peer-group-neighbor/{peer-group}"

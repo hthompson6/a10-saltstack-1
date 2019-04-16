@@ -14,21 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "config_seq",
-    "dead_interval",
-    "failure_retry_count_value",
-    "floating_ip_cfg",
-    "floating_ipv6_cfg",
-    "force_wait_interval",
-    "forever",
-    "multicast_ip",
-    "multicast_ipv6",
-    "multicast_port",
-    "ssl_enable",
-    "time_interval",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["config_seq","dead_interval","failure_retry_count_value","floating_ip_cfg","floating_ipv6_cfg","force_wait_interval","forever","multicast_ip","multicast_ipv6","multicast_port","ssl_enable","time_interval","uuid",]
 
 REF_PROPERTIES = {
 }
@@ -40,7 +26,7 @@ PARENT_KEYS = []
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/vcs/vcs-para"
@@ -49,7 +35,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/vcs/vcs-para"

@@ -14,24 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "as_path",
-    "community",
-    "extcommunity",
-    "group",
-    "interface",
-    "ip",
-    "ipv6",
-    "local_preference",
-    "metric",
-    "origin",
-    "route_type",
-    "tag",
-    "uuid",
-    "sequence",
-    "action",
-    "route_map_tag",
-]
+AVAILABLE_PROPERTIES = ["as_path","community","extcommunity","group","interface","ip","ipv6","local_preference","metric","origin","route_type","tag","uuid","sequence","action","route_map_tag",]
 
 REF_PROPERTIES = {
 }
@@ -43,7 +26,7 @@ PARENT_KEYS = ["sequence","action","route_map_tag",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/route-map/{route_map_tag}+{action}+{sequence}/match"
@@ -55,7 +38,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/route-map/{route_map_tag}+{action}+{sequence}/match"

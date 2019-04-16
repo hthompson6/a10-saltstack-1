@@ -14,22 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "aggregate_address_cfg",
-    "cisco_metric_behavior",
-    "default_information",
-    "default_metric",
-    "distribute_list",
-    "offset_list",
-    "passive_interface_list",
-    "recv_buffer_size",
-    "redistribute",
-    "ripng_neighbor",
-    "route_cfg",
-    "route_map",
-    "timers",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["aggregate_address_cfg","cisco_metric_behavior","default_information","default_metric","distribute_list","offset_list","passive_interface_list","recv_buffer_size","redistribute","ripng_neighbor","route_cfg","route_map","timers","uuid",]
 
 REF_PROPERTIES = {
     "distribute_list": "/axapi/v3/router/ipv6/rip/distribute-list",
@@ -45,7 +30,7 @@ PARENT_KEYS = []
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/router/ipv6/rip"
@@ -54,7 +39,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/router/ipv6/rip"

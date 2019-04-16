@@ -14,24 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "adfs_ws_federation",
-    "artifact_resolution_service",
-    "assertion_consuming_service",
-    "certificate",
-    "entity_id",
-    "metadata_export_service",
-    "a10_name",
-    "require_assertion_signed",
-    "saml_request_signed",
-    "sampling_enable",
-    "service_url",
-    "signature_algorithm",
-    "single_logout_service",
-    "soap_tls_certificate_validate",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["adfs_ws_federation","artifact_resolution_service","assertion_consuming_service","certificate","entity_id","metadata_export_service","name","require_assertion_signed","saml_request_signed","sampling_enable","service_url","signature_algorithm","single_logout_service","soap_tls_certificate_validate","user_tag","uuid",]
 
 REF_PROPERTIES = {
 }
@@ -43,7 +26,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/aam/authentication/saml/service-provider/{name}"
@@ -53,11 +36,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/saml/service-provider/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

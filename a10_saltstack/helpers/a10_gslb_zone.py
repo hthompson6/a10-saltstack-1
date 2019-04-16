@@ -14,21 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "disable",
-    "dns_mx_record_list",
-    "dns_ns_record_list",
-    "dns_soa_record",
-    "a10_name",
-    "policy",
-    "sampling_enable",
-    "service_list",
-    "template",
-    "ttl",
-    "use_server_ttl",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["disable","dns_mx_record_list","dns_ns_record_list","dns_soa_record","name","policy","sampling_enable","service_list","template","ttl","use_server_ttl","user_tag","uuid",]
 
 REF_PROPERTIES = {
     "dns_mx_record_list": "/axapi/v3/gslb/zone/{name}/dns-mx-record/{mx-name}",
@@ -43,7 +29,7 @@ PARENT_KEYS = []
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/gslb/zone/{name}"
@@ -53,11 +39,11 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/gslb/zone/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

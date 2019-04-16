@@ -14,16 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "auth_password",
-    "auth_password_string",
-    "auth_username",
-    "encrypted",
-    "relative_login_uri",
-    "relative_logoff_uri",
-    "uuid",
-    "notification_template_name",
-]
+AVAILABLE_PROPERTIES = ["auth_password","auth_password_string","auth_username","encrypted","relative_login_uri","relative_logoff_uri","uuid","notification_template_name",]
 
 REF_PROPERTIES = {
 }
@@ -35,7 +26,7 @@ PARENT_KEYS = ["notification_template_name",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/visibility/reporting/notification-template/{notification_template_name}/authentication"
@@ -45,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/visibility/reporting/notification-template/{notification_template_name}/authentication"

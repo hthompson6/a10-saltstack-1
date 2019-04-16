@@ -14,12 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "bind_type",
-    "domain_name",
-    "uuid",
-    "trunk_ifnum",
-]
+AVAILABLE_PROPERTIES = ["bind_type","domain_name","uuid","trunk_ifnum",]
 
 REF_PROPERTIES = {
 }
@@ -31,7 +26,7 @@ PARENT_KEYS = ["trunk_ifnum",]
 CHILD_KEYS = ["domain-name","bind-type",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/trunk/{trunk_ifnum}/nptv6/domain/{domain-name}+{bind-type}"
@@ -43,7 +38,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/trunk/{trunk_ifnum}/nptv6/domain/{domain-name}+{bind-type}"

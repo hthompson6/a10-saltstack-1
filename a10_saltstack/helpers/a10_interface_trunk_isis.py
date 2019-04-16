@@ -14,26 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "authentication",
-    "bfd_cfg",
-    "circuit_type",
-    "csnp_interval_list",
-    "hello_interval_list",
-    "hello_interval_minimal_list",
-    "hello_multiplier_list",
-    "lsp_interval",
-    "mesh_group",
-    "metric_list",
-    "network",
-    "padding",
-    "password_list",
-    "priority_list",
-    "retransmit_interval",
-    "uuid",
-    "wide_metric_list",
-    "trunk_ifnum",
-]
+AVAILABLE_PROPERTIES = ["authentication","bfd_cfg","circuit_type","csnp_interval_list","hello_interval_list","hello_interval_minimal_list","hello_multiplier_list","lsp_interval","mesh_group","metric_list","network","padding","password_list","priority_list","retransmit_interval","uuid","wide_metric_list","trunk_ifnum",]
 
 REF_PROPERTIES = {
 }
@@ -45,7 +26,7 @@ PARENT_KEYS = ["trunk_ifnum",]
 CHILD_KEYS = []
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/interface/trunk/{trunk_ifnum}/isis"
@@ -55,7 +36,7 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/interface/trunk/{trunk_ifnum}/isis"

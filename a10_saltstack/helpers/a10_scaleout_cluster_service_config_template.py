@@ -14,14 +14,7 @@
 
 
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [
-    "bucket_count",
-    "device_group",
-    "a10_name",
-    "user_tag",
-    "uuid",
-    "cluster_id",
-]
+AVAILABLE_PROPERTIES = ["bucket_count","device_group","name","user_tag","uuid","cluster_id",]
 
 REF_PROPERTIES = {
 }
@@ -33,7 +26,7 @@ PARENT_KEYS = ["cluster_id",]
 CHILD_KEYS = ["name",]
 
 
-def new_url():
+def new_url(**kwargs):
     """Return the URL for creating a resource"""
     # To create the URL, we need to take the format string and return it with no params
     url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/service-config/template/{name}"
@@ -44,12 +37,12 @@ def new_url():
     return url_base.format(**f_dict)
 
 
-def existing_url():
+def existing_url(**kwargs):
     """Return the URL for an existing resource"""
     # Build the format dictionary
     url_base = "/axapi/v3/scaleout/cluster/{cluster_id}/service-config/template/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
     f_dict["cluster_id"] = kwargs["cluster_id"]
 
     return url_base.format(**f_dict)
