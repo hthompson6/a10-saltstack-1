@@ -23,15 +23,11 @@ from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
 
-# DELETE THIS
-from a10_saltstack.client import axapi_http as ax_http
-from a10_saltstack.client import session as ax_sess
-from a10_saltstack.client import client as ax_cli
-
 def _build_envelope(title, data):
     return {
         title: data
     }
+
 
 def _to_axapi(key):
     return translateBlacklist(str(key), KW_OUT).replace("_", "-")
@@ -112,6 +108,8 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
         else:
             obj_dict_list.append(_build_obj_dict(tree, tree.ref))
 
+    cnt = 0
+    post_result = {}
     for a10_obj_val in obj_dict_list:
         ref = a10_obj_val['ref']
         del a10_obj_val['ref']
@@ -130,7 +128,6 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
             if k not in parent_keys:
                 a10_obj_fin[k.replace('-', '_')] = v
 
-        post_result = {}
         payload = _build_json(obj_type, avail_props, **a10_obj_fin)
 
         posted = False
@@ -143,18 +140,15 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
                         need_update = True
                         break
             if need_update:
-                client.post(existing_url, payload)
+                ref = '{}_{}'.format(ref, cnt)
+                post_result[ref] = client.post(existing_url, payload)
                 posted = True
         except a10_ex.NotFound:
             pass
 
         if not posted:
-            client.post(new_url, payload)
+            ref = '{}_{}'.format(ref, cnt)
+            post_result[ref] = client.post(new_url, payload)
+        cnt += 1
 
-#trees_obj = {'port_list': [OrderedDict([(22, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([(80, [OrderedDict([('protocol', 'tcp')])])]), OrderedDict([('service_group', [OrderedDict([('sg1', [OrderedDict([('member_list', [OrderedDict([('mem1', [OrderedDict([('host', '10.7.11.1')]), OrderedDict([('port', 80)])])]), OrderedDict([('mem2', [OrderedDict([('host', '10.7.11.2')]), OrderedDict([('port', 22)])])])])]), OrderedDict([('lb_type', 'round_robin')])])])])])], 'a10_obj': 'virtual_server', 'a10_name': 'vs2', 'ip_address': '192.168.43.6', 'name': 'VS2', 'netmask': '255.255.255.0'}
-
-#http_cli = ax_http.HttpClient('10.48.5.13', 80, 'http')
-#ax_session = ax_sess.Session(http_cli, 'admin', 'a10')
-#client = ax_cli.A10Client(ax_session)
-
-#parse_obj('virtual_server', 'slb', client, **trees_obj)
+    return post_result
