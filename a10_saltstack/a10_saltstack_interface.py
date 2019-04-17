@@ -22,6 +22,11 @@ from a10_saltstack.forest.nodes import InterNode
 from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
+# DELETE THIS
+from a10_saltstack.client import axapi_http as ax_http
+from a10_saltstack.client import session as ax_sess
+from a10_saltstack.client import client as ax_cli
+
 
 def _build_envelope(title, data):
     return {
@@ -130,23 +135,22 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
 
         payload = _build_json(obj_type, avail_props, **a10_obj_fin)
 
-        posted = False
+        create = False
         try:
             need_update = False
             resp = client.get(existing_url)
             for k,v in a10_obj_fin.items():
-               if k in resp:
-                    if v != resp[k]:
+               if k.replace('_', '-') in resp[obj_type]:
+                    if v != resp[obj_type][k.replace('_', '-')]:
                         need_update = True
                         break
             if need_update:
                 ref = '{}_{}'.format(ref, cnt)
                 post_result[ref] = client.post(existing_url, payload)
-                posted = True
         except a10_ex.NotFound:
-            pass
+            create = True
 
-        if not posted:
+        if create:
             ref = '{}_{}'.format(ref, cnt)
             post_result[ref] = client.post(new_url, payload)
         cnt += 1
