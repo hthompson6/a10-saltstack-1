@@ -94,6 +94,7 @@ def _build_obj_dict(forest_node, ref):
     forest_node.val_dict['ref'] = ref 
     return forest_node.val_dict
 
+
 def parse_obj(a10_obj_type, op_type, client, **kwargs):
     a10_obj = '{}_{}'.format(op_type, a10_obj_type)
     root = obj_tree.parse_tree(a10_obj, kwargs)
@@ -113,8 +114,24 @@ def parse_obj(a10_obj_type, op_type, client, **kwargs):
         else:
             obj_dict_list.append(_build_obj_dict(tree, tree.ref))
 
-    cnt = 0
+
     post_result = {}
+    cnt = 0
+
+    # As objects with the most dependencies are at the top,
+    # we will need to delete the objects starting at the bottom
+    # of the object tree. 
+    for i in range(len(obj_dict_list)-1, 0, -1):
+        if obj_dict_list[i].get('absent'):
+            ref = obj_dict_list[i]['ref']
+            del obj_dict_list[i]['ref']
+            existing_url = a10_helper.existing_url(ref, **obj_dict_list[i])
+  
+            ref = '{}_{}'.format(ref, cnt)
+            post_result[ref] = client.delete(existing_url)
+            del obj_dict_list[i]
+            cnt += 1
+
     for a10_obj_val in obj_dict_list:
         ref = a10_obj_val['ref']
         del a10_obj_val['ref']
