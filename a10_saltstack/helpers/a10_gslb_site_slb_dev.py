@@ -13,28 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_preference",
-    "auto_detect",
-    "auto_map",
-    "client_ip",
-    "device_name",
-    "gateway_ip_addr",
-    "health_check_action",
-    "ip_address",
-    "max_client",
-    "proto_aging_fast",
-    "proto_aging_time",
-    "proto_compatible",
-    "rdt_value",
-    "user_tag",
-    "uuid",
-    "vip_server",
-    "site_name",
-]
+AVAILABLE_PROPERTIES = ["admin_preference","auto_detect","auto_map","client_ip","device_name","gateway_ip_addr","health_check_action","ip_address","max_client","proto_aging_fast","proto_aging_time","proto_compatible","rdt_value","user_tag","uuid","vip_server","site_name",]
+
+REF_PROPERTIES = {
+    "vip_server": "/axapi/v3/gslb/site/{site-name}/slb-dev/{device-name}/vip-server",
+}
 
 MODULE_NAME = "slb-dev"
+
+PARENT_KEYS = ["site_name",]
+
+CHILD_KEYS = ["device-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

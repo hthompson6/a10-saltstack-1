@@ -13,16 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip",
-    "ipsrc",
-    "reset",
-    "tool",
-    "user",
-]
+AVAILABLE_PROPERTIES = ["ip","ipsrc","reset","tool","user",]
+
+REF_PROPERTIES = {
+    "ip": "/axapi/v3/system/ipmi/ip",
+    "ipsrc": "/axapi/v3/system/ipmi/ipsrc",
+    "tool": "/axapi/v3/system/ipmi/tool",
+    "user": "/axapi/v3/system/ipmi/user",
+}
 
 MODULE_NAME = "ipmi"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

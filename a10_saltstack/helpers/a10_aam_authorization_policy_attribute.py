@@ -13,29 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "A10_AX_AUTH_URI",
-    "a10_dynamic_defined",
-    "attr_int",
-    "attr_int_val",
-    "attr_ip",
-    "attr_ipv4",
-    "attr_num",
-    "attr_str",
-    "attr_str_val",
-    "attr_type",
-    "attribute_name",
-    "custom_attr_str",
-    "custom_attr_type",
-    "integer_type",
-    "ip_type",
-    "string_type",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["A10_AX_AUTH_URI","a10_dynamic_defined","attr_int","attr_int_val","attr_ip","attr_ipv4","attr_num","attr_str","attr_str_val","attr_type","attribute_name","custom_attr_str","custom_attr_type","integer_type","ip_type","string_type","uuid","policy_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "attribute"
+
+PARENT_KEYS = ["policy_name",]
+
+CHILD_KEYS = ["attr-num",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

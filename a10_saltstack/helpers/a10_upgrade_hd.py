@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "Device",
-    "file_url",
-    "image",
-    "local",
-    "reboot_after_upgrade",
-    "source_ip_address",
-    "staggered_upgrade_mode",
-    "use_mgmt_port",
-]
+AVAILABLE_PROPERTIES = ["Device","file_url","image","local","reboot_after_upgrade","source_ip_address","staggered_upgrade_mode","use_mgmt_port",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "hd"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

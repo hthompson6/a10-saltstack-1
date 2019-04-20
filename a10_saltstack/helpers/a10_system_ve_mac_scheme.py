@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "uuid",
-    "ve_mac_scheme_val",
-]
+AVAILABLE_PROPERTIES = ["uuid","ve_mac_scheme_val",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ve-mac-scheme"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "rule_cfg",
-    "sampling_enable",
-    "uuid",
-    "lsn_rule_list_name",
-]
+AVAILABLE_PROPERTIES = ["rule_cfg","sampling_enable","uuid","lsn_rule_list_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "default"
+
+PARENT_KEYS = ["lsn_rule_list_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

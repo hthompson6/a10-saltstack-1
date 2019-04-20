@@ -13,15 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable",
-    "interval",
-    "priority_partition_list",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["disable","interval","priority_partition_list","uuid",]
+
+REF_PROPERTIES = {
+    "interval": "/axapi/v3/techreport/interval",
+    "priority_partition_list": "/axapi/v3/techreport/priority-partition/{part-name}",
+}
 
 MODULE_NAME = "techreport"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,12 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "reboot_flag",
-]
+AVAILABLE_PROPERTIES = ["reboot_flag",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system-reset"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,25 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "availability_zone",
-    "host",
-    "log_rate",
-    "metrics_export_interval",
-    "password_encrypted",
-    "port",
-    "provider",
-    "region",
-    "secret_value",
-    "thunder_mgmt_ip",
-    "use_mgmt_port",
-    "user_name",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["action","availability_zone","host","log_rate","metrics_export_interval","password_encrypted","port","provider","region","secret_value","thunder_mgmt_ip","use_mgmt_port","user_name","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "profile"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

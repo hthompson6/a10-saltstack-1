@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port_end",
-    "port_start",
-    "timeout",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["port_end","port_start","timeout","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "tcp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["port-start","port-end",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

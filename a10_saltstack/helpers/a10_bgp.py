@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "extended_asn_cap",
-    "nexthop_trigger",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["extended_asn_cap","nexthop_trigger","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "bgp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

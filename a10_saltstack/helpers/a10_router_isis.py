@@ -13,37 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_family",
-    "adjacency_check",
-    "area_password_cfg",
-    "authentication",
-    "bfd",
-    "default_information",
-    "distance_list",
-    "domain_password_cfg",
-    "ha_standby_extra_cost",
-    "ignore_lsp_errors",
-    "is_type",
-    "log_adjacency_changes_cfg",
-    "lsp_gen_interval_list",
-    "lsp_refresh_interval",
-    "max_lsp_lifetime",
-    "metric_style_list",
-    "net_list",
-    "passive_interface_list",
-    "protocol_list",
-    "redistribute",
-    "set_overload_bit_cfg",
-    "spf_interval_exp_list",
-    "summary_address_list",
-    "tag",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["address_family","adjacency_check","area_password_cfg","authentication","bfd","default_information","distance_list","domain_password_cfg","ha_standby_extra_cost","ignore_lsp_errors","is_type","log_adjacency_changes_cfg","lsp_gen_interval_list","lsp_refresh_interval","max_lsp_lifetime","metric_style_list","net_list","passive_interface_list","protocol_list","redistribute","set_overload_bit_cfg","spf_interval_exp_list","summary_address_list","tag","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "address_family": "/axapi/v3/router/isis/{tag}/address-family",
+    "redistribute": "/axapi/v3/router/isis/{tag}/redistribute",
+}
 
 MODULE_NAME = "isis"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["tag",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

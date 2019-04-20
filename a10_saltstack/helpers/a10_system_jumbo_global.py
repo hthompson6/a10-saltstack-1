@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable_jumbo",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["enable_jumbo","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system-jumbo-global"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

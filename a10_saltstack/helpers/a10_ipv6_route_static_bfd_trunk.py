@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "nexthop_ipv6_ll",
-    "trunk_num",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["nexthop_ipv6_ll","trunk_num","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "trunk"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["trunk-num","nexthop-ipv6-ll",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,21 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethertype",
-    "mac_list",
-    "protocol",
-    "uuid",
-    "value",
-    "vlan",
-    "action_direction",
-    "case_number",
-    "name",
-    "state_name",
-]
+AVAILABLE_PROPERTIES = ["ethertype","mac_list","protocol","uuid","value","vlan","action_direction","case_number","name","state_name",]
+
+REF_PROPERTIES = {
+    "mac_list": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}/l2/mac/{src-dst}",
+}
 
 MODULE_NAME = "l2"
+
+PARENT_KEYS = ["action_direction","case_number","name","state_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

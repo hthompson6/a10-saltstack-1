@@ -13,15 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "log_msg",
-    "property",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["log_msg","property","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "property": "/axapi/v3/acos-events/message-id/{log-msg}/property",
+}
 
 MODULE_NAME = "message-id"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["log-msg",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

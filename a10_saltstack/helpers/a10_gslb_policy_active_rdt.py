@@ -13,26 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "controller",
-    "difference",
-    "enable",
-    "fail_break",
-    "ignore_id",
-    "keep_tracking",
-    "limit",
-    "proto_rdt_enable",
-    "samples",
-    "single_shot",
-    "skip",
-    "timeout",
-    "tolerance",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["controller","difference","enable","fail_break","ignore_id","keep_tracking","limit","proto_rdt_enable","samples","single_shot","skip","timeout","tolerance","uuid","policy_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "active-rdt"
+
+PARENT_KEYS = ["policy_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

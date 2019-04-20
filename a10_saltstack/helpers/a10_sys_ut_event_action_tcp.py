@@ -13,25 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ack_seq_number",
-    "checksum",
-    "dest_port",
-    "dest_port_value",
-    "flags",
-    "nat_pool",
-    "options",
-    "seq_number",
-    "src_port",
-    "urgent",
-    "uuid",
-    "window",
-    "action_direction",
-    "event_number",
-]
+AVAILABLE_PROPERTIES = ["ack_seq_number","checksum","dest_port","dest_port_value","flags","nat_pool","options","seq_number","src_port","urgent","uuid","window","action_direction","event_number",]
+
+REF_PROPERTIES = {
+    "flags": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/tcp/flags",
+    "options": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/tcp/options",
+}
 
 MODULE_NAME = "tcp"
+
+PARENT_KEYS = ["action_direction","event_number",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

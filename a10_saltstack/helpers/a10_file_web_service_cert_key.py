@@ -13,12 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "file_handle",
-]
+AVAILABLE_PROPERTIES = ["file_handle",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "web-service-cert-key"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

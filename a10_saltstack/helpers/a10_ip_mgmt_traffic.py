@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "source_interface",
-    "traffic_type",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["source_interface","traffic_type","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "mgmt-traffic"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["traffic-type",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

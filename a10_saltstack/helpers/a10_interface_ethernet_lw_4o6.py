@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "inside",
-    "outside",
-    "uuid",
-    "ethernet_ifnum",
-]
+AVAILABLE_PROPERTIES = ["inside","outside","uuid","ethernet_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "lw-4o6"
+
+PARENT_KEYS = ["ethernet_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,26 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
-    "action",
-    "authentication_template",
-    "authorize_policy",
-    "domain_name",
-    "host",
-    "index",
-    "match_encoded_uri",
-    "port",
-    "sampling_enable",
-    "uri",
-    "user_agent",
-    "user_tag",
-    "uuid",
-    "aaa_policy_name",
-]
+AVAILABLE_PROPERTIES = ["access_list","action","authentication_template","authorize_policy","domain_name","host","index","match_encoded_uri","port","sampling_enable","uri","user_agent","user_tag","uuid","aaa_policy_name",]
+
+REF_PROPERTIES = {
+    "authentication_template": "/axapi/v3/aam/authentication/template",
+    "authorize_policy": "/axapi/v3/aam/authorization/policy",
+}
 
 MODULE_NAME = "aaa-rule"
+
+PARENT_KEYS = ["aaa_policy_name",]
+
+CHILD_KEYS = ["index",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

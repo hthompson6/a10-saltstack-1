@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv6_prefix",
-    "partition",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["ipv6_prefix","partition","uuid","vrid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "partition-prefix"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["partition",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

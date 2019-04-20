@@ -13,24 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list_cfg",
-    "address_list",
-    "inside",
-    "ipv6_enable",
-    "ospf",
-    "outside",
-    "rip",
-    "router",
-    "router_adver",
-    "stateful_firewall",
-    "ttl_ignore",
-    "uuid",
-    "ethernet_ifnum",
-]
+AVAILABLE_PROPERTIES = ["access_list_cfg","address_list","inside","ipv6_enable","ospf","outside","rip","router","router_adver","stateful_firewall","ttl_ignore","uuid","ethernet_ifnum",]
+
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/ethernet/{ifnum}/ipv6/ospf",
+    "rip": "/axapi/v3/interface/ethernet/{ifnum}/ipv6/rip",
+    "router": "/axapi/v3/interface/ethernet/{ifnum}/ipv6/router",
+    "stateful_firewall": "/axapi/v3/interface/ethernet/{ifnum}/ipv6/stateful-firewall",
+}
 
 MODULE_NAME = "ipv6"
+
+PARENT_KEYS = ["ethernet_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

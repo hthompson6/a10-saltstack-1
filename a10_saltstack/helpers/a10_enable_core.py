@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "core_level",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["core_level","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "enable-core"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

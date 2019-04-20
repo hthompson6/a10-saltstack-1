@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "gateway_mac",
-    "ip_dscp_preserve",
-    "nvgre_disable_flow_id",
-    "nvgre_key_mode_lower24",
-    "tcp_mss_adjust_disable",
-    "uuid",
-    "vxlan_dest_port",
-]
+AVAILABLE_PROPERTIES = ["gateway_mac","ip_dscp_preserve","nvgre_disable_flow_id","nvgre_key_mode_lower24","tcp_mss_adjust_disable","uuid","vxlan_dest_port",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "options"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

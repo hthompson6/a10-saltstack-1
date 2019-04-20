@@ -13,29 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "isisAdjacencyChange",
-    "isisAreaMismatch",
-    "isisAttemptToExceedMaxSequence",
-    "isisAuthenticationFailure",
-    "isisAuthenticationTypeFailure",
-    "isisCorruptedLSPDetected",
-    "isisDatabaseOverload",
-    "isisIDLenMismatch",
-    "isisLSPTooLargeToPropagate",
-    "isisManualAddressDrops",
-    "isisMaxAreaAddressesMismatch",
-    "isisOriginatingLSPBufferSizeMismatch",
-    "isisOwnLSPPurge",
-    "isisProtocolsSupportedMismatch",
-    "isisRejectedAdjacency",
-    "isisSequenceNumberSkip",
-    "isisVersionSkew",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["isisAdjacencyChange","isisAreaMismatch","isisAttemptToExceedMaxSequence","isisAuthenticationFailure","isisAuthenticationTypeFailure","isisCorruptedLSPDetected","isisDatabaseOverload","isisIDLenMismatch","isisLSPTooLargeToPropagate","isisManualAddressDrops","isisMaxAreaAddressesMismatch","isisOriginatingLSPBufferSizeMismatch","isisOwnLSPPurge","isisProtocolsSupportedMismatch","isisRejectedAdjacency","isisSequenceNumberSkip","isisVersionSkew","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "isis"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

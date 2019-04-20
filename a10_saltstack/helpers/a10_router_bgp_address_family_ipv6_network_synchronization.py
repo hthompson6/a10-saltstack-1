@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "network_synchronization",
-    "uuid",
-    "bgp_as_number",
-]
+AVAILABLE_PROPERTIES = ["network_synchronization","uuid","bgp_as_number",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "synchronization"
+
+PARENT_KEYS = ["bgp_as_number",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

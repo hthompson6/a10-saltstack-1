@@ -13,22 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bandwidth_base",
-    "bandwidth_unrestricted",
-    "connect",
-    "host_list",
-    "instance_name",
-    "interval",
-    "overage",
-    "reminder_list",
-    "sn",
-    "use_mgmt_port",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["bandwidth_base","bandwidth_unrestricted","connect","host_list","instance_name","interval","overage","reminder_list","sn","use_mgmt_port","uuid",]
+
+REF_PROPERTIES = {
+    "connect": "/axapi/v3/license-manager/connect",
+    "host_list": "/axapi/v3/license-manager/host/{host-ipv4}+{host-ipv6}",
+    "overage": "/axapi/v3/license-manager/overage",
+    "reminder_list": "/axapi/v3/license-manager/reminder/{reminder-value}",
+}
 
 MODULE_NAME = "license-manager"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

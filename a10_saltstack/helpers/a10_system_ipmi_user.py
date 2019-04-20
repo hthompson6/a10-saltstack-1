@@ -13,23 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "add",
-    "administrator",
-    "callback",
-    "disable",
-    "newname",
-    "newpass",
-    "operator",
-    "password",
-    "privilege",
-    "setname",
-    "setpass",
-    "user",
-]
+AVAILABLE_PROPERTIES = ["add","administrator","callback","disable","newname","newpass","operator","password","privilege","setname","setpass","user",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "user"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

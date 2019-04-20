@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "exec_banner_cfg",
-    "login_banner_cfg",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["exec_banner_cfg","login_banner_cfg","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "banner"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

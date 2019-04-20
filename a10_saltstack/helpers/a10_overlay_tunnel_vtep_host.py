@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "destination_vtep",
-    "ip_addr",
-    "overlay_mac_addr",
-    "uuid",
-    "vni",
-    "vtep_id",
-]
+AVAILABLE_PROPERTIES = ["destination_vtep","ip_addr","overlay_mac_addr","uuid","vni","vtep_id",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "host"
+
+PARENT_KEYS = ["vtep_id",]
+
+CHILD_KEYS = ["ip-addr","overlay-mac-addr","vni","destination-vtep",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

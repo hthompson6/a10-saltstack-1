@@ -13,16 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "group_list",
-    "role_list",
-    "user_list",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["action","group_list","role_list","user_list","uuid",]
+
+REF_PROPERTIES = {
+    "group_list": "/axapi/v3/rba/group/{name}",
+    "role_list": "/axapi/v3/rba/role/{name}",
+    "user_list": "/axapi/v3/rba/user/{name}",
+}
 
 MODULE_NAME = "rba"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

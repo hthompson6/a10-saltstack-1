@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "certificate_type",
-    "dst_file",
-    "file",
-    "file_handle",
-    "pfx_password",
-    "size",
-]
+AVAILABLE_PROPERTIES = ["action","certificate_type","dst_file","file","file_handle","pfx_password","size",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ssl-cert"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

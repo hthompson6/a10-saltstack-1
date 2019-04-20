@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv4_addr",
-    "rule_cfg",
-    "sampling_enable",
-    "user_tag",
-    "uuid",
-    "lsn_rule_list_name",
-]
+AVAILABLE_PROPERTIES = ["ipv4_addr","rule_cfg","sampling_enable","user_tag","uuid","lsn_rule_list_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ip"
+
+PARENT_KEYS = ["lsn_rule_list_name",]
+
+CHILD_KEYS = ["ipv4-addr",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

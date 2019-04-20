@@ -13,12 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "template_list",
-]
+AVAILABLE_PROPERTIES = ["template_list",]
+
+REF_PROPERTIES = {
+    "template_list": "/axapi/v3/system/resource-accounting/template/{name}",
+}
 
 MODULE_NAME = "resource-accounting"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

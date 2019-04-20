@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mss",
-    "nop",
-    "sack_type",
-    "time_stamp_enable",
-    "uuid",
-    "wscale",
-    "template_name",
-]
+AVAILABLE_PROPERTIES = ["mss","nop","sack_type","time_stamp_enable","uuid","wscale","template_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "options"
+
+PARENT_KEYS = ["template_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

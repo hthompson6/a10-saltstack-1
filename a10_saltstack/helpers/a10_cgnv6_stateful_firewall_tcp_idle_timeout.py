@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "idle_timeout_val_port_range",
-    "port",
-    "port_end",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["idle_timeout_val_port_range","port","port_end","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "idle-timeout"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["port","port-end",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

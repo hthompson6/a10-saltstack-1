@@ -13,14 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_cfg",
-    "prefix",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["acl_cfg","prefix","uuid",]
+
+REF_PROPERTIES = {
+    "prefix": "/axapi/v3/router/rip/distribute-list/prefix",
+}
 
 MODULE_NAME = "distribute-list"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

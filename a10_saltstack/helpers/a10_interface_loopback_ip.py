@@ -13,17 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_list",
-    "ospf",
-    "rip",
-    "router",
-    "uuid",
-    "loopback_ifnum",
-]
+AVAILABLE_PROPERTIES = ["address_list","ospf","rip","router","uuid","loopback_ifnum",]
+
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/loopback/{ifnum}/ip/ospf",
+    "rip": "/axapi/v3/interface/loopback/{ifnum}/ip/rip",
+    "router": "/axapi/v3/interface/loopback/{ifnum}/ip/router",
+}
 
 MODULE_NAME = "ip"
+
+PARENT_KEYS = ["loopback_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "client_ip_l3_dest",
-    "client_ip_l7_header",
-    "header_name",
-    "lid_list",
-    "a10_name",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["client_ip_l3_dest","client_ip_l7_header","header_name","lid_list","name","uuid","policy_name",]
+
+REF_PROPERTIES = {
+    "lid_list": "/axapi/v3/cgnv6/template/policy/{name}/class-list/lid/{lidnum}",
+}
 
 MODULE_NAME = "class-list"
+
+PARENT_KEYS = ["policy_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

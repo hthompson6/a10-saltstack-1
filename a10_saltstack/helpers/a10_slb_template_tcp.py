@@ -13,30 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "alive_if_active",
-    "del_session_on_server_down",
-    "disable",
-    "down",
-    "force_delete_timeout",
-    "force_delete_timeout_100ms",
-    "half_close_idle_timeout",
-    "half_open_idle_timeout",
-    "idle_timeout",
-    "initial_window_size",
-    "insert_client_ip",
-    "lan_fast_ack",
-    "logging",
-    "a10_name",
-    "qos",
-    "reset_fwd",
-    "reset_rev",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["alive_if_active","del_session_on_server_down","disable","down","force_delete_timeout","force_delete_timeout_100ms","half_close_idle_timeout","half_open_idle_timeout","idle_timeout","initial_window_size","insert_client_ip","lan_fast_ack","logging","name","qos","reset_fwd","reset_rev","user_tag","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "tcp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -53,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/tcp/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

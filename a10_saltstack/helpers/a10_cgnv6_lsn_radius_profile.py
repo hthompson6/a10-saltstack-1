@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "lid_profile_index",
-    "radius",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["lid_profile_index","radius","user_tag","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "lsn-radius-profile"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["lid-profile-index",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "account_lock",
-    "auth_method",
-    "duration",
-    "a10_name",
-    "retry",
-    "sampling_enable",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["account_lock","auth_method","duration","name","retry","sampling_enable","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "instance"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -41,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/logon/http-authenticate/instance/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

@@ -13,12 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "player_record",
-]
+AVAILABLE_PROPERTIES = ["player_record",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "player-id-list"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

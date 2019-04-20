@@ -13,13 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "pool",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["pool","uuid",]
+
+REF_PROPERTIES = {
+    "pool": "/axapi/v3/ip/nat/pool",
+}
 
 MODULE_NAME = "svm-source-nat"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

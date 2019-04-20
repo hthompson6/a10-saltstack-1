@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "key_chain_flag",
-    "key_chain_name",
-    "key_list",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["key_chain_flag","key_chain_name","key_list","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "key_list": "/axapi/v3/key/{key-chain-flag}+{key-chain-name}/key/{key-number}",
+}
 
 MODULE_NAME = "key"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["key-chain-flag","key-chain-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

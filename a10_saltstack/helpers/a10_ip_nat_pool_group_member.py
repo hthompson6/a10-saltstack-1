@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "pool_name",
-    "uuid",
-    "pool_group_pool_group_name",
-]
+AVAILABLE_PROPERTIES = ["pool_name","uuid","pool_group_pool_group_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "member"
+
+PARENT_KEYS = ["pool_group_pool_group_name",]
+
+CHILD_KEYS = ["pool-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

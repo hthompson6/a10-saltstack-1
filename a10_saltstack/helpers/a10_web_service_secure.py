@@ -13,17 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "certificate",
-    "generate",
-    "private_key",
-    "regenerate",
-    "restart",
-    "wipe",
-]
+AVAILABLE_PROPERTIES = ["certificate","generate","private_key","regenerate","restart","wipe",]
+
+REF_PROPERTIES = {
+    "certificate": "/axapi/v3/web-service/secure/certificate",
+    "generate": "/axapi/v3/web-service/secure/generate",
+    "private_key": "/axapi/v3/web-service/secure/private-key",
+    "regenerate": "/axapi/v3/web-service/secure/regenerate",
+}
 
 MODULE_NAME = "secure"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,18 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auto_detect",
-    "enable_list",
-    "limit",
-    "ping_site",
-    "status_interval",
-    "use_mgmt_port",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["auto_detect","enable_list","limit","ping_site","status_interval","use_mgmt_port","uuid",]
+
+REF_PROPERTIES = {
+    "enable_list": "/axapi/v3/gslb/protocol/enable/{type}",
+    "limit": "/axapi/v3/gslb/protocol/limit",
+}
 
 MODULE_NAME = "protocol"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

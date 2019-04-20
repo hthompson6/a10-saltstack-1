@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_portal",
-    "period",
-    "remote_file",
-    "use_mgmt_port",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["auth_portal","period","remote_file","use_mgmt_port","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "auth-portal"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["auth-portal",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,15 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "a10_name",
-    "override_nat_aging",
-    "session_aging",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["name","override_nat_aging","session_aging","uuid",]
+
+REF_PROPERTIES = {
+    "name": "/axapi/v3/rule-set",
+    "session_aging": "/axapi/v3/fw/session-aging",
+}
 
 MODULE_NAME = "active-rule-set"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

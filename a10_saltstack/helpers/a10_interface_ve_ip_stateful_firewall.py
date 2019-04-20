@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
-    "acl_id",
-    "class_list",
-    "inside",
-    "outside",
-    "uuid",
-    "ve_ifnum",
-]
+AVAILABLE_PROPERTIES = ["access_list","acl_id","class_list","inside","outside","uuid","ve_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "stateful-firewall"
+
+PARENT_KEYS = ["ve_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

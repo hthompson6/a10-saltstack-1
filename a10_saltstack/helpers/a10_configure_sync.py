@@ -13,21 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address",
-    "all_partitions",
-    "auto_authentication",
-    "partition_name",
-    "private_key",
-    "pwd",
-    "pwd_enc",
-    "shared",
-    "ntype",
-    "usr",
-]
+AVAILABLE_PROPERTIES = ["address","all_partitions","auto_authentication","partition_name","private_key","pwd","pwd_enc","shared","ntype","usr",]
+
+REF_PROPERTIES = {
+    "partition_name": "/axapi/v3/partition",
+}
 
 MODULE_NAME = "sync"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

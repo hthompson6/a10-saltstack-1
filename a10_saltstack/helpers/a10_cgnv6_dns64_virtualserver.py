@@ -13,24 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable_disable_action",
-    "ethernet",
-    "ip_address",
-    "ipv6_address",
-    "a10_name",
-    "netmask",
-    "policy",
-    "port_list",
-    "template_policy",
-    "use_if_ip",
-    "user_tag",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["enable_disable_action","ethernet","ip_address","ipv6_address","name","netmask","policy","port_list","template_policy","use_if_ip","user_tag","uuid","vrid",]
+
+REF_PROPERTIES = {
+    "port_list": "/axapi/v3/cgnv6/dns64-virtualserver/{name}/port/{port-number}+{protocol}",
+    "template_policy": "/axapi/v3/cgnv6/template/policy",
+}
 
 MODULE_NAME = "dns64-virtualserver"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -47,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/dns64-virtualserver/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

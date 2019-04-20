@@ -13,19 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "adjacency_check",
-    "default_information",
-    "distance",
-    "multi_topology_cfg",
-    "redistribute",
-    "summary_prefix_list",
-    "uuid",
-    "isis_tag",
-]
+AVAILABLE_PROPERTIES = ["adjacency_check","default_information","distance","multi_topology_cfg","redistribute","summary_prefix_list","uuid","isis_tag",]
+
+REF_PROPERTIES = {
+    "redistribute": "/axapi/v3/router/isis/{tag}/address-family/ipv6/redistribute",
+}
 
 MODULE_NAME = "ipv6"
+
+PARENT_KEYS = ["isis_tag",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

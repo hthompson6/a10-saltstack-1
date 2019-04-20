@@ -13,17 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "calc_sha1",
-    "class_list",
-    "a10_name",
-    "server_version",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["calc_sha1","class_list","name","server_version","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "calc_sha1": "/axapi/v3/slb/template/dblb/{name}/calc-sha1",
+}
 
 MODULE_NAME = "dblb"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -40,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/dblb/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

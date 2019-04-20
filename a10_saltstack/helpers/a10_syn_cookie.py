@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable",
-    "off_threshold",
-    "on_threshold",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["enable","off_threshold","on_threshold","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "syn-cookie"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

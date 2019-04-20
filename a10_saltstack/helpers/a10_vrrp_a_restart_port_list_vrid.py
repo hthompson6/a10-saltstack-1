@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet_cfg",
-    "user_tag",
-    "uuid",
-    "vrid_val",
-]
+AVAILABLE_PROPERTIES = ["ethernet_cfg","user_tag","uuid","vrid_val",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "vrid"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["vrid-val",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

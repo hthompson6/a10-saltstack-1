@@ -13,13 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "template_monitor",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["template_monitor","uuid",]
+
+REF_PROPERTIES = {
+    "template_monitor": "/axapi/v3/slb/template/monitor",
+}
 
 MODULE_NAME = "monitor"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["template-monitor",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "min",
-    "mss_clamp_type",
-    "mss_subtract",
-    "mss_value",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["min","mss_clamp_type","mss_subtract","mss_value","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "mss-clamp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

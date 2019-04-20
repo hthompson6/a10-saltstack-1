@@ -13,12 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "saml_idp_name",
-]
+AVAILABLE_PROPERTIES = ["saml_idp_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "auth-saml-idp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

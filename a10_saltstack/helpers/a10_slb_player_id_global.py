@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "abs_max_expiration",
-    "enable_64bit_player_id",
-    "enforcement_timer",
-    "force_passive",
-    "min_expiration",
-    "pkt_activity_expiration",
-    "sampling_enable",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["abs_max_expiration","enable_64bit_player_id","enforcement_timer","force_passive","min_expiration","pkt_activity_expiration","sampling_enable","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "player-id-global"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

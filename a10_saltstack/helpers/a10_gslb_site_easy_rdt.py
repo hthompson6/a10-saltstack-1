@@ -13,21 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aging_time",
-    "bind_geoloc",
-    "ignore_count",
-    "limit",
-    "mask",
-    "overlap",
-    "range_factor",
-    "smooth_factor",
-    "uuid",
-    "site_name",
-]
+AVAILABLE_PROPERTIES = ["aging_time","bind_geoloc","ignore_count","limit","mask","overlap","range_factor","smooth_factor","uuid","site_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "easy-rdt"
+
+PARENT_KEYS = ["site_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,23 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aggregate_address_list",
-    "auto_summary",
-    "bgp",
-    "distance",
-    "maximum_paths_value",
-    "neighbor",
-    "network",
-    "originate",
-    "redistribute",
-    "synchronization",
-    "uuid",
-    "bgp_as_number",
-]
+AVAILABLE_PROPERTIES = ["aggregate_address_list","auto_summary","bgp","distance","maximum_paths_value","neighbor","network","originate","redistribute","synchronization","uuid","bgp_as_number",]
+
+REF_PROPERTIES = {
+    "neighbor": "/axapi/v3/router/bgp/{as-number}/address-family/ipv6/neighbor",
+    "network": "/axapi/v3/router/bgp/{as-number}/address-family/ipv6/network",
+    "redistribute": "/axapi/v3/router/bgp/{as-number}/address-family/ipv6/redistribute",
+}
 
 MODULE_NAME = "ipv6"
+
+PARENT_KEYS = ["bgp_as_number",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

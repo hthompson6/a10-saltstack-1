@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_dest_addr",
-    "ip_mask",
-    "ip_nexthop_ipv4",
-    "ip_nexthop_lif",
-    "ip_nexthop_partition",
-    "ip_nexthop_tunnel",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["ip_dest_addr","ip_mask","ip_nexthop_ipv4","ip_nexthop_lif","ip_nexthop_partition","ip_nexthop_tunnel","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "rib"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["ip-dest-addr","ip-mask",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "host_servername",
-    "key",
-    "prefer",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["action","host_servername","key","prefer","uuid",]
+
+REF_PROPERTIES = {
+    "key": "/axapi/v3/ntp/trusted-key",
+}
 
 MODULE_NAME = "hostname"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["host-servername",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

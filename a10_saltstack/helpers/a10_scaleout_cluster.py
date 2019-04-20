@@ -13,18 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cluster_devices",
-    "cluster_id",
-    "device_groups",
-    "follow_vcs",
-    "local_device",
-    "service_config",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["cluster_devices","cluster_id","device_groups","follow_vcs","local_device","service_config","uuid",]
+
+REF_PROPERTIES = {
+    "cluster_devices": "/axapi/v3/scaleout/cluster/{cluster-id}/cluster-devices",
+    "device_groups": "/axapi/v3/scaleout/cluster/{cluster-id}/device-groups",
+    "local_device": "/axapi/v3/scaleout/cluster/{cluster-id}/local-device",
+    "service_config": "/axapi/v3/scaleout/cluster/{cluster-id}/service-config",
+}
 
 MODULE_NAME = "cluster"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["cluster-id",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

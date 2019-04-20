@@ -13,20 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "health_check",
-    "health_check_disable",
-    "lb_method",
-    "member_list",
-    "a10_name",
-    "protocol",
-    "sampling_enable",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["health_check","health_check_disable","lb_method","member_list","name","protocol","sampling_enable","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+    "member_list": "/axapi/v3/aam/authentication/service-group/{name}/member/{name}+{port}",
+}
 
 MODULE_NAME = "service-group"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -43,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/service-group/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

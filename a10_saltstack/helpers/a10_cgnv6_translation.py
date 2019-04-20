@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "icmp_timeout",
-    "service_timeout_list",
-    "tcp_timeout",
-    "udp_timeout",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["icmp_timeout","service_timeout_list","tcp_timeout","udp_timeout","uuid",]
+
+REF_PROPERTIES = {
+    "service_timeout_list": "/axapi/v3/cgnv6/translation/service-timeout/{service-type}+{port}",
+}
 
 MODULE_NAME = "translation"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

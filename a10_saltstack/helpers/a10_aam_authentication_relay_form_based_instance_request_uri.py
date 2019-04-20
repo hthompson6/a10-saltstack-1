@@ -13,23 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_uri",
-    "cookie",
-    "domain_variable",
-    "match_type",
-    "max_packet_collect_size",
-    "other_variables",
-    "password_variable",
-    "uri",
-    "user_tag",
-    "user_variable",
-    "uuid",
-    "instance_name",
-]
+AVAILABLE_PROPERTIES = ["action_uri","cookie","domain_variable","match_type","max_packet_collect_size","other_variables","password_variable","uri","user_tag","user_variable","uuid","instance_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "request-uri"
+
+PARENT_KEYS = ["instance_name",]
+
+CHILD_KEYS = ["match-type","uri",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

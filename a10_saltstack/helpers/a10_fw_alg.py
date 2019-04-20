@@ -13,19 +13,25 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dns",
-    "ftp",
-    "icmp",
-    "pptp",
-    "rtsp",
-    "sip",
-    "tftp",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["dns","ftp","icmp","pptp","rtsp","sip","tftp","uuid",]
+
+REF_PROPERTIES = {
+    "dns": "/axapi/v3/fw/alg/dns",
+    "ftp": "/axapi/v3/fw/alg/ftp",
+    "icmp": "/axapi/v3/fw/alg/icmp",
+    "pptp": "/axapi/v3/fw/alg/pptp",
+    "rtsp": "/axapi/v3/fw/alg/rtsp",
+    "sip": "/axapi/v3/fw/alg/sip",
+    "tftp": "/axapi/v3/fw/alg/tftp",
+}
 
 MODULE_NAME = "alg"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

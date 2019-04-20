@@ -13,15 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_id",
-    "msl",
-    "pool",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["acl_id","msl","pool","uuid",]
+
+REF_PROPERTIES = {
+    "acl_id": "/axapi/v3/access-list/standard",
+    "pool": "/axapi/v3/ip/nat/pool",
+}
 
 MODULE_NAME = "acl-id-list"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["acl-id",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

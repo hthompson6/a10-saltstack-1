@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "email",
-    "logging",
-    "user_tag",
-    "uuid",
-    "vnp_events",
-]
+AVAILABLE_PROPERTIES = ["email","logging","user_tag","uuid","vnp_events",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "partition"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["vnp-events",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

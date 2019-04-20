@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "nat_address",
-    "partition",
-    "src_address",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["nat_address","partition","src_address","uuid","vrid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "static"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["src-address","partition",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

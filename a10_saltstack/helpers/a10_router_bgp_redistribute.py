@@ -13,24 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "connected_cfg",
-    "floating_ip_cfg",
-    "ip_nat_cfg",
-    "ip_nat_list_cfg",
-    "isis_cfg",
-    "lw4o6_cfg",
-    "nat_map_cfg",
-    "ospf_cfg",
-    "rip_cfg",
-    "static_cfg",
-    "uuid",
-    "vip",
-    "bgp_as_number",
-]
+AVAILABLE_PROPERTIES = ["connected_cfg","floating_ip_cfg","ip_nat_cfg","ip_nat_list_cfg","isis_cfg","lw4o6_cfg","nat_map_cfg","ospf_cfg","rip_cfg","static_cfg","uuid","vip","bgp_as_number",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "redistribute"
+
+PARENT_KEYS = ["bgp_as_number",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "logindisabled",
-    "a10_name",
-    "starttls",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["logindisabled","name","starttls","user_tag","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "imap-pop3"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -39,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/imap-pop3/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

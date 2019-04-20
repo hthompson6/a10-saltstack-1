@@ -13,22 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "end_address",
-    "ethernet",
-    "gateway",
-    "ip_rr",
-    "netmask",
-    "pool_name",
-    "scaleout_device_id",
-    "start_address",
-    "use_if_ip",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["end_address","ethernet","gateway","ip_rr","netmask","pool_name","scaleout_device_id","start_address","use_if_ip","uuid","vrid",]
+
+REF_PROPERTIES = {
+    "vrid": "/axapi/v3/vrrp-a/vrid",
+}
 
 MODULE_NAME = "pool"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["pool-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

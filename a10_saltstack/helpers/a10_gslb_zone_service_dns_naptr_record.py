@@ -13,23 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "flag",
-    "naptr_target",
-    "order",
-    "preference",
-    "regexp",
-    "sampling_enable",
-    "service_proto",
-    "ttl",
-    "uuid",
-    "service_name",
-    "service_port",
-    "zone_name",
-]
+AVAILABLE_PROPERTIES = ["flag","naptr_target","order","preference","regexp","sampling_enable","service_proto","ttl","uuid","service_name","service_port","zone_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "dns-naptr-record"
+
+PARENT_KEYS = ["service-name","service_port","zone_name",]
+
+CHILD_KEYS = ["naptr-target","service-proto","flag",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

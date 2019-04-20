@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet_vlan",
-    "redirect_eth",
-    "redirect_trunk",
-    "trunk_vlan",
-    "uuid",
-    "cluster_id",
-]
+AVAILABLE_PROPERTIES = ["ethernet_vlan","redirect_eth","redirect_trunk","trunk_vlan","uuid","cluster_id",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "l2-redirect"
+
+PARENT_KEYS = ["cluster_id",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

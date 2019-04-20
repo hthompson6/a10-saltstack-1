@@ -13,25 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_ip",
-    "as_backup",
-    "as_replace",
-    "disable",
-    "dns_a_record_ip",
-    "no_resp",
-    "sampling_enable",
-    "static",
-    "ttl",
-    "uuid",
-    "weight",
-    "service_name",
-    "service_port",
-    "zone_name",
-]
+AVAILABLE_PROPERTIES = ["admin_ip","as_backup","as_replace","disable","dns_a_record_ip","no_resp","sampling_enable","static","ttl","uuid","weight","service_name","service_port","zone_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "dns-a-record-ipv4"
+
+PARENT_KEYS = ["service-name","service_port","zone_name",]
+
+CHILD_KEYS = ["dns-a-record-ip",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

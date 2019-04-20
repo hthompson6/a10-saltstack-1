@@ -13,50 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "arp",
-    "comp_hex",
-    "dst",
-    "exit",
-    "hex",
-    "icmp",
-    "icmpv6",
-    "integer",
-    "integer_comp",
-    "integer_max",
-    "integer_min",
-    "ip",
-    "ipv4_address",
-    "ipv4_netmask",
-    "ipv6",
-    "ipv6_adddress",
-    "l3_proto",
-    "length",
-    "mac",
-    "mac_addr",
-    "max_hex",
-    "min_hex",
-    "neighbor",
-    "number",
-    "offset",
-    "oper_range",
-    "port",
-    "port_num",
-    "port_num_max",
-    "port_num_min",
-    "prot_num",
-    "proto",
-    "range",
-    "src",
-    "tcp",
-    "udp",
-    "WORD",
-    "WORD1",
-    "WORD2",
-]
+AVAILABLE_PROPERTIES = ["arp","comp_hex","dst","exit","hex","icmp","icmpv6","integer","integer_comp","integer_max","integer_min","ip","ipv4_address","ipv4_netmask","ipv6","ipv6_adddress","l3_proto","length","mac","mac_addr","max_hex","min_hex","neighbor","number","offset","oper_range","port","port_num","port_num_max","port_num_min","prot_num","proto","range","src","tcp","udp","WORD","WORD1","WORD2",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "filter-config"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

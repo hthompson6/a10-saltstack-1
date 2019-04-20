@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "exceed_action",
-    "limit",
-    "limit_period",
-    "lock_out",
-    "log",
-    "protocol",
-    "shared",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["exceed_action","limit","limit_period","lock_out","log","protocol","shared","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "src-ip"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["protocol",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

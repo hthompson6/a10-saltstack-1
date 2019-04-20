@@ -13,20 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "area_ipv4",
-    "area_num",
-    "default_cost",
-    "no_summary",
-    "range_list",
-    "stub",
-    "uuid",
-    "virtual_link_list",
-    "ospf_process_id",
-]
+AVAILABLE_PROPERTIES = ["area_ipv4","area_num","default_cost","no_summary","range_list","stub","uuid","virtual_link_list","ospf_process_id",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "area"
+
+PARENT_KEYS = ["ospf_process_id",]
+
+CHILD_KEYS = ["area-ipv4","area-num",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

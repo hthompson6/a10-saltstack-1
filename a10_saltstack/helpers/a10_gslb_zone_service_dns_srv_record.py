@@ -13,21 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port",
-    "priority",
-    "sampling_enable",
-    "srv_name",
-    "ttl",
-    "uuid",
-    "weight",
-    "service_name",
-    "service_port",
-    "zone_name",
-]
+AVAILABLE_PROPERTIES = ["port","priority","sampling_enable","srv_name","ttl","uuid","weight","service_name","service_port","zone_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "dns-srv-record"
+
+PARENT_KEYS = ["service-name","service_port","zone_name",]
+
+CHILD_KEYS = ["srv-name","port",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

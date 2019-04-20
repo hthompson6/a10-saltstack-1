@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "status",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["status","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "tcp-rst-close-immediate"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

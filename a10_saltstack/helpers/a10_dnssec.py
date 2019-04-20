@@ -13,18 +13,23 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dnskey",
-    "ds",
-    "key_rollover",
-    "sign_zone_now",
-    "standalone",
-    "template_list",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["dnskey","ds","key_rollover","sign_zone_now","standalone","template_list","uuid",]
+
+REF_PROPERTIES = {
+    "dnskey": "/axapi/v3/dnssec/dnskey",
+    "ds": "/axapi/v3/dnssec/ds",
+    "key_rollover": "/axapi/v3/dnssec/key-rollover",
+    "sign_zone_now": "/axapi/v3/dnssec/sign-zone-now",
+    "template_list": "/axapi/v3/dnssec/template/{dnssec-temp-name}",
+}
 
 MODULE_NAME = "dnssec"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

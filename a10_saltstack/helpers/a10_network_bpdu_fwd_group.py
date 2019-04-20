@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bpdu_fwd_group_number",
-    "ethernet_list",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["bpdu_fwd_group_number","ethernet_list","user_tag","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "bpdu-fwd-group"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["bpdu-fwd-group-number",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

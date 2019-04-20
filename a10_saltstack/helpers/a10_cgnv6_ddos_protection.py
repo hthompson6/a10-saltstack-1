@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "logging",
-    "max_hw_entries",
-    "packets_per_second",
-    "sampling_enable",
-    "toggle",
-    "uuid",
-    "zone",
-]
+AVAILABLE_PROPERTIES = ["logging","max_hw_entries","packets_per_second","sampling_enable","toggle","uuid","zone",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ddos-protection"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,23 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bw_limit_cfg",
-    "concurrent_session_limit_cfg",
-    "fwcps_limit_cfg",
-    "l4_session_limit_cfg",
-    "l4cps_limit_cfg",
-    "l7cps_limit_cfg",
-    "natcps_limit_cfg",
-    "ssl_throughput_limit_cfg",
-    "sslcps_limit_cfg",
-    "threshold",
-    "uuid",
-    "template_name",
-]
+AVAILABLE_PROPERTIES = ["bw_limit_cfg","concurrent_session_limit_cfg","fwcps_limit_cfg","l4_session_limit_cfg","l4cps_limit_cfg","l7cps_limit_cfg","natcps_limit_cfg","ssl_throughput_limit_cfg","sslcps_limit_cfg","threshold","uuid","template_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system-resources"
+
+PARENT_KEYS = ["template_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

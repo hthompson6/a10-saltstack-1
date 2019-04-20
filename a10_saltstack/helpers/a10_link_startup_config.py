@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all_partitions",
-    "default",
-    "file_name",
-    "primary",
-    "secondary",
-]
+AVAILABLE_PROPERTIES = ["all_partitions","default","file_name","primary","secondary",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "startup-config"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

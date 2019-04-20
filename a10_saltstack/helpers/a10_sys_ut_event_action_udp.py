@@ -13,20 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "checksum",
-    "dest_port",
-    "dest_port_value",
-    "length",
-    "nat_pool",
-    "src_port",
-    "uuid",
-    "action_direction",
-    "event_number",
-]
+AVAILABLE_PROPERTIES = ["checksum","dest_port","dest_port_value","length","nat_pool","src_port","uuid","action_direction","event_number",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "udp"
+
+PARENT_KEYS = ["action_direction","event_number",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

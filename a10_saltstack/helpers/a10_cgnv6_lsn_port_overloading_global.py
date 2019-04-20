@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "allow_different_user",
-    "unique",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["allow_different_user","unique","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "global"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

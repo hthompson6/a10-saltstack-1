@@ -13,29 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "control_cpu_high",
-    "data_cpu_high",
-    "fan",
-    "file_sys_read_only",
-    "high_disk_use",
-    "high_memory_use",
-    "high_temp",
-    "license_management",
-    "low_temp",
-    "packet_drop",
-    "power",
-    "pri_disk",
-    "restart",
-    "sec_disk",
-    "shutdown",
-    "start",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["all","control_cpu_high","data_cpu_high","fan","file_sys_read_only","high_disk_use","high_memory_use","high_temp","license_management","low_temp","packet_drop","power","pri_disk","restart","sec_disk","shutdown","start","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

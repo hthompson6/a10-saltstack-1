@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "count",
-    "shared",
-    "to_shared",
-    "uuid",
-    "v4_address",
-    "v6_address",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["count","shared","to_shared","uuid","v4_address","v6_address","vrid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "static-dest-mapping"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["v4-address","v6-address",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "uuid",
-    "vlan",
-]
+AVAILABLE_PROPERTIES = ["uuid","vlan",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ospf-inline"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["vlan",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

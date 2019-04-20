@@ -13,12 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "big_buff_pool",
-]
+AVAILABLE_PROPERTIES = ["big_buff_pool",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system-big-buff-pool"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

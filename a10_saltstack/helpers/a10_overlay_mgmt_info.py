@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "appstring",
-    "plugin_name",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["appstring","plugin_name","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "overlay-mgmt-info"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["plugin_name","appstring",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

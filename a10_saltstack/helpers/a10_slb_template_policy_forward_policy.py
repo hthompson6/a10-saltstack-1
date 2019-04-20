@@ -13,18 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_list",
-    "filtering",
-    "local_logging",
-    "no_client_conn_reuse",
-    "source_list",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["action_list","filtering","local_logging","no_client_conn_reuse","source_list","uuid","policy_name",]
+
+REF_PROPERTIES = {
+    "action_list": "/axapi/v3/slb/template/policy/{name}/forward-policy/action/{name}",
+    "source_list": "/axapi/v3/slb/template/policy/{name}/forward-policy/source/{name}",
+}
 
 MODULE_NAME = "forward-policy"
+
+PARENT_KEYS = ["policy_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

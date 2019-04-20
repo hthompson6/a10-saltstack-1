@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "restart_learning_on_anomaly",
-    "sensitivity",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["restart_learning_on_anomaly","sensitivity","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "anomaly-detection"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,17 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "anomaly_detection",
-    "granularity",
-    "monitor_list",
-    "monitored_entity",
-    "reporting",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["anomaly_detection","granularity","monitor_list","monitored_entity","reporting","uuid",]
+
+REF_PROPERTIES = {
+    "anomaly_detection": "/axapi/v3/visibility/anomaly-detection",
+    "monitor_list": "/axapi/v3/visibility/monitor/{primary-monitor}",
+    "monitored_entity": "/axapi/v3/visibility/monitored-entity",
+    "reporting": "/axapi/v3/visibility/reporting",
+}
 
 MODULE_NAME = "visibility"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

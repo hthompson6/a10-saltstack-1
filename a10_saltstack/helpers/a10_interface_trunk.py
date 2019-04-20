@@ -13,33 +13,26 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
-    "action",
-    "bfd",
-    "ddos",
-    "do_auto_recovery",
-    "icmp_rate_limit",
-    "icmpv6_rate_limit",
-    "ifnum",
-    "ip",
-    "ipv6",
-    "isis",
-    "l3_vlan_fwd_disable",
-    "lw_4o6",
-    "map",
-    "mtu",
-    "a10_name",
-    "nptv6",
-    "ports_threshold",
-    "timer",
-    "trap_source",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["access_list","action","bfd","ddos","do_auto_recovery","icmp_rate_limit","icmpv6_rate_limit","ifnum","ip","ipv6","isis","l3_vlan_fwd_disable","lw_4o6","map","mtu","name","nptv6","ports_threshold","timer","trap_source","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "bfd": "/axapi/v3/interface/trunk/{ifnum}/bfd",
+    "ddos": "/axapi/v3/interface/trunk/{ifnum}/ddos",
+    "ip": "/axapi/v3/interface/trunk/{ifnum}/ip",
+    "ipv6": "/axapi/v3/interface/trunk/{ifnum}/ipv6",
+    "isis": "/axapi/v3/interface/trunk/{ifnum}/isis",
+    "lw_4o6": "/axapi/v3/interface/trunk/{ifnum}/lw-4o6",
+    "map": "/axapi/v3/interface/trunk/{ifnum}/map",
+    "nptv6": "/axapi/v3/interface/trunk/{ifnum}/nptv6",
+}
 
 MODULE_NAME = "trunk"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["ifnum",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

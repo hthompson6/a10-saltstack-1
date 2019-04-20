@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sampling_enable",
-    "uuid",
-    "vblade_id",
-]
+AVAILABLE_PROPERTIES = ["sampling_enable","uuid","vblade_id",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "stat"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["vblade-id",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

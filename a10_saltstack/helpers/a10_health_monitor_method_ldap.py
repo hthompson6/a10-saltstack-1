@@ -13,25 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "AcceptNotFound",
-    "AcceptResRef",
-    "BaseDN",
-    "ldap",
-    "ldap_binddn",
-    "ldap_encrypted",
-    "ldap_password",
-    "ldap_password_string",
-    "ldap_port",
-    "ldap_query",
-    "ldap_run_search",
-    "ldap_security",
-    "uuid",
-    "monitor_name",
-]
+AVAILABLE_PROPERTIES = ["AcceptNotFound","AcceptResRef","BaseDN","ldap","ldap_binddn","ldap_encrypted","ldap_password","ldap_password_string","ldap_port","ldap_query","ldap_run_search","ldap_security","uuid","monitor_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ldap"
+
+PARENT_KEYS = ["monitor_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

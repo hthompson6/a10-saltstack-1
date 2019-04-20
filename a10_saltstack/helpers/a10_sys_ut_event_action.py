@@ -13,23 +13,25 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "delay",
-    "direction",
-    "drop",
-    "ignore_validation",
-    "l1",
-    "l2",
-    "l3",
-    "tcp",
-    "template",
-    "udp",
-    "uuid",
-    "event_number",
-]
+AVAILABLE_PROPERTIES = ["delay","direction","drop","ignore_validation","l1","l2","l3","tcp","template","udp","uuid","event_number",]
+
+REF_PROPERTIES = {
+    "ignore_validation": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/ignore-validation",
+    "l1": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/l1",
+    "l2": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/l2",
+    "l3": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/l3",
+    "tcp": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/tcp",
+    "template": "/axapi/v3/sys-ut/template",
+    "udp": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/udp",
+}
 
 MODULE_NAME = "action"
+
+PARENT_KEYS = ["event_number",]
+
+CHILD_KEYS = ["direction",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

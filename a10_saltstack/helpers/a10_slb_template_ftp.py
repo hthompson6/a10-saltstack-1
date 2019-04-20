@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "active_mode_port",
-    "active_mode_port_val",
-    "any",
-    "a10_name",
-    "to",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["active_mode_port","active_mode_port_val","any","name","to","user_tag","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ftp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -41,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/ftp/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

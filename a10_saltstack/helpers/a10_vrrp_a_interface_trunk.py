@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "both",
-    "no_heartbeat",
-    "router_interface",
-    "server_interface",
-    "trunk_val",
-    "user_tag",
-    "uuid",
-    "vlan",
-]
+AVAILABLE_PROPERTIES = ["both","no_heartbeat","router_interface","server_interface","trunk_val","user_tag","uuid","vlan",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "trunk"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["trunk-val",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

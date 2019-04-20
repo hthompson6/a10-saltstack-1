@@ -13,18 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "match",
-    "sequence",
-    "set",
-    "tag",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["action","match","sequence","set","tag","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "match": "/axapi/v3/route-map/{tag}+{action}+{sequence}/match",
+    "set": "/axapi/v3/route-map/{tag}+{action}+{sequence}/set",
+}
 
 MODULE_NAME = "route-map"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["tag","action","sequence",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

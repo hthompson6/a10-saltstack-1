@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "l1",
-    "l2",
-    "l3",
-    "l4",
-    "uuid",
-    "action_direction",
-    "event_number",
-]
+AVAILABLE_PROPERTIES = ["all","l1","l2","l3","l4","uuid","action_direction","event_number",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ignore-validation"
+
+PARENT_KEYS = ["action_direction","event_number",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

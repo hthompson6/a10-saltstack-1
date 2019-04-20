@@ -13,26 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted",
-    "header_name_client_ip",
-    "header_name_msisdn",
-    "include_tunnel_ip",
-    "method",
-    "a10_name",
-    "radius_sg",
-    "request_insert_client_ip",
-    "request_insert_msisdn",
-    "retry",
-    "retry_svr_num",
-    "secret_string",
-    "timeout",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["encrypted","header_name_client_ip","header_name_msisdn","include_tunnel_ip","method","name","radius_sg","request_insert_client_ip","request_insert_msisdn","retry","retry_svr_num","secret_string","timeout","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "radius_sg": "/axapi/v3/cgnv6/service-group",
+}
 
 MODULE_NAME = "http-alg"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -49,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/template/http-alg/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

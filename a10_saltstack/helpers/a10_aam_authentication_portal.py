@@ -13,19 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "change_password",
-    "logo_cfg",
-    "logon",
-    "logon_fail",
-    "a10_name",
-    "notify_change_password",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["change_password","logo_cfg","logon","logon_fail","name","notify_change_password","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "change_password": "/axapi/v3/aam/authentication/portal/{name}/change-password",
+    "logon": "/axapi/v3/aam/authentication/portal/{name}/logon",
+    "logon_fail": "/axapi/v3/aam/authentication/portal/{name}/logon-fail",
+    "notify_change_password": "/axapi/v3/aam/authentication/portal/{name}/notify-change-password",
+}
 
 MODULE_NAME = "portal"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -42,6 +45,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/portal/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

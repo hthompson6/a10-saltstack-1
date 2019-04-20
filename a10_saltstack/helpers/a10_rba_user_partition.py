@@ -13,17 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "partition_name",
-    "role_list",
-    "rule_list",
-    "user_tag",
-    "uuid",
-    "user_name",
-]
+AVAILABLE_PROPERTIES = ["partition_name","role_list","rule_list","user_tag","uuid","user_name",]
+
+REF_PROPERTIES = {
+    "partition_name": "/axapi/v3/partition",
+}
 
 MODULE_NAME = "partition"
+
+PARENT_KEYS = ["user_name",]
+
+CHILD_KEYS = ["partition-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

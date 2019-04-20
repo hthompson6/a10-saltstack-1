@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted",
-    "oid_list",
-    "passwd",
-    "remote",
-    "user",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["encrypted","oid_list","passwd","remote","user","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "oid_list": "/axapi/v3/snmp-server/SNMPv1-v2c/user/{user}/oid/{oid-val}",
+}
 
 MODULE_NAME = "user"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["user",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

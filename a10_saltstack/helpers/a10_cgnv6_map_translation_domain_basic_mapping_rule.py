@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ea_length",
-    "port_start",
-    "prefix_rule_list",
-    "rule_ipv4_address_port_settings",
-    "share_ratio",
-    "uuid",
-    "domain_name",
-]
+AVAILABLE_PROPERTIES = ["ea_length","port_start","prefix_rule_list","rule_ipv4_address_port_settings","share_ratio","uuid","domain_name",]
+
+REF_PROPERTIES = {
+    "prefix_rule_list": "/axapi/v3/cgnv6/map/translation/domain/{name}/basic-mapping-rule/prefix-rule/{name}",
+}
 
 MODULE_NAME = "basic-mapping-rule"
+
+PARENT_KEYS = ["domain_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

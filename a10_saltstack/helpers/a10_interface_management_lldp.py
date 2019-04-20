@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "enable_cfg",
-    "notification_cfg",
-    "tx_dot1_cfg",
-    "tx_tlvs_cfg",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["enable_cfg","notification_cfg","tx_dot1_cfg","tx_tlvs_cfg","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "lldp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

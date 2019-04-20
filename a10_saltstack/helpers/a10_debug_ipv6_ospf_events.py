@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "abr",
-    "asbr",
-    "os",
-    "router",
-    "uuid",
-    "vlink",
-]
+AVAILABLE_PROPERTIES = ["abr","asbr","os","router","uuid","vlink",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "events"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

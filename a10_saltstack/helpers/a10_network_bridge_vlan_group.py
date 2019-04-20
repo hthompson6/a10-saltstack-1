@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bridge_vlan_group_number",
-    "forward_traffic",
-    "a10_name",
-    "user_tag",
-    "uuid",
-    "ve",
-    "vlan_list",
-]
+AVAILABLE_PROPERTIES = ["bridge_vlan_group_number","forward_traffic","name","user_tag","uuid","ve","vlan_list",]
+
+REF_PROPERTIES = {
+    "ve": "/axapi/v3/network/vlan",
+}
 
 MODULE_NAME = "bridge-vlan-group"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["bridge-vlan-group-number",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

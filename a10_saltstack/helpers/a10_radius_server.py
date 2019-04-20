@@ -13,14 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "default_privilege_read_write",
-    "host",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["default_privilege_read_write","host","uuid",]
+
+REF_PROPERTIES = {
+    "host": "/axapi/v3/radius-server/host",
+}
 
 MODULE_NAME = "radius-server"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

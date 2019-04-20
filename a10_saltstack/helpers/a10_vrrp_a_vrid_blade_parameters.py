@@ -13,16 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "fail_over_policy_template",
-    "priority",
-    "tracking_options",
-    "uuid",
-    "vrid_val",
-]
+AVAILABLE_PROPERTIES = ["fail_over_policy_template","priority","tracking_options","uuid","vrid_val",]
+
+REF_PROPERTIES = {
+    "fail_over_policy_template": "/axapi/v3/vrrp-a/fail-over-policy-template",
+    "tracking_options": "/axapi/v3/vrrp-a/vrid/{vrid-val}/blade-parameters/tracking-options",
+}
 
 MODULE_NAME = "blade-parameters"
+
+PARENT_KEYS = ["vrid_val",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

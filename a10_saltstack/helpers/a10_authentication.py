@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "console",
-    "enable_cfg",
-    "login_cfg",
-    "mode_cfg",
-    "multiple_auth_reject",
-    "type_cfg",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["console","enable_cfg","login_cfg","mode_cfg","multiple_auth_reject","type_cfg","uuid",]
+
+REF_PROPERTIES = {
+    "console": "/axapi/v3/authentication/console",
+}
 
 MODULE_NAME = "authentication"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

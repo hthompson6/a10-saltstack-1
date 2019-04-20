@@ -13,20 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bytes",
-    "days",
-    "gb",
-    "hours",
-    "kb",
-    "mb",
-    "minutes",
-    "seconds",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["bytes","days","gb","hours","kb","mb","minutes","seconds","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "overage"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

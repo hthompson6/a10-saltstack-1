@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "class_list_convert",
-    "class_list_type",
-    "period",
-    "remote_file",
-    "use_mgmt_port",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["class_list_convert","class_list_type","period","remote_file","use_mgmt_port","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "class-list-convert"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["class-list-convert",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

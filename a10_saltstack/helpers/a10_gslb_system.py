@@ -13,26 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "age_interval",
-    "geo_location_iana",
-    "gslb_group",
-    "gslb_load_file_list",
-    "gslb_service_ip",
-    "gslb_site",
-    "hostname",
-    "ip_ttl",
-    "module",
-    "slb_device",
-    "slb_server",
-    "slb_virtual_server",
-    "ttl",
-    "uuid",
-    "wait",
-]
+AVAILABLE_PROPERTIES = ["age_interval","geo_location_iana","gslb_group","gslb_load_file_list","gslb_service_ip","gslb_site","hostname","ip_ttl","module","slb_device","slb_server","slb_virtual_server","ttl","uuid","wait",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

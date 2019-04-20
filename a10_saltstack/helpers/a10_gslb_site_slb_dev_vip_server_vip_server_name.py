@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sampling_enable",
-    "uuid",
-    "vip_name",
-    "slb_dev_device_name",
-    "site_name",
-]
+AVAILABLE_PROPERTIES = ["sampling_enable","uuid","vip_name","slb_dev_device_name","site_name",]
+
+REF_PROPERTIES = {
+    "vip_name": "/axapi/v3/gslb/service-ip",
+}
 
 MODULE_NAME = "vip-server-name"
+
+PARENT_KEYS = ["slb_dev_device_name","site_name",]
+
+CHILD_KEYS = ["vip-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

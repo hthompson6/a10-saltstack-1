@@ -13,31 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bad_downloads_action",
-    "bad_uploads_action",
-    "downloads_bad_log",
-    "downloads_external_inspect",
-    "downloads_external_suspect_log",
-    "downloads_good_log",
-    "downloads_suspect_log",
-    "good_downloads_action",
-    "good_uploads_action",
-    "inspect",
-    "a10_name",
-    "suspect_downloads_action",
-    "suspect_uploads_action",
-    "uploads_bad_log",
-    "uploads_external_inspect",
-    "uploads_external_suspect_log",
-    "uploads_good_log",
-    "uploads_suspect_log",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["bad_downloads_action","bad_uploads_action","downloads_bad_log","downloads_external_inspect","downloads_external_suspect_log","downloads_good_log","downloads_suspect_log","good_downloads_action","good_uploads_action","inspect","name","suspect_downloads_action","suspect_uploads_action","uploads_bad_log","uploads_external_inspect","uploads_external_suspect_log","uploads_good_log","uploads_suspect_log","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "downloads_external_inspect": "/axapi/v3/slb/template/respmod-icap",
+    "uploads_external_inspect": "/axapi/v3/slb/template/reqmod-icap",
+}
 
 MODULE_NAME = "template"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -54,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/file-inspection/template/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "disable",
-    "enable",
-    "enable_disable_action",
-    "nat_address",
-    "src_address",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["disable","enable","enable_disable_action","nat_address","src_address","uuid","vrid",]
+
+REF_PROPERTIES = {
+    "vrid": "/axapi/v3/vrrp-a/vrid",
+}
 
 MODULE_NAME = "static"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["src-address","nat-address",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

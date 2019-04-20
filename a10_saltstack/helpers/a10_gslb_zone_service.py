@@ -13,33 +13,28 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "disable",
-    "dns_a_record",
-    "dns_cname_record_list",
-    "dns_mx_record_list",
-    "dns_naptr_record_list",
-    "dns_ns_record_list",
-    "dns_ptr_record_list",
-    "dns_record_list",
-    "dns_srv_record_list",
-    "dns_txt_record_list",
-    "forward_type",
-    "geo_location_list",
-    "health_check_gateway",
-    "health_check_port",
-    "policy",
-    "sampling_enable",
-    "service_name",
-    "service_port",
-    "user_tag",
-    "uuid",
-    "zone_name",
-]
+AVAILABLE_PROPERTIES = ["action","disable","dns_a_record","dns_cname_record_list","dns_mx_record_list","dns_naptr_record_list","dns_ns_record_list","dns_ptr_record_list","dns_record_list","dns_srv_record_list","dns_txt_record_list","forward_type","geo_location_list","health_check_gateway","health_check_port","policy","sampling_enable","service_name","service_port","user_tag","uuid","zone_name",]
+
+REF_PROPERTIES = {
+    "dns_a_record": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-a-record",
+    "dns_cname_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-cname-record/{alias-name}",
+    "dns_mx_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-mx-record/{mx-name}",
+    "dns_naptr_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-naptr-record/{naptr-target}+{service-proto}+{flag}",
+    "dns_ns_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-ns-record/{ns-name}",
+    "dns_ptr_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-ptr-record/{ptr-name}",
+    "dns_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-record/{type}",
+    "dns_srv_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-srv-record/{srv-name}+{port}",
+    "dns_txt_record_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/dns-txt-record/{record-name}",
+    "geo_location_list": "/axapi/v3/gslb/zone/{name}/service/{service-port}+{service-name}/geo-location/{geo-name}",
+}
 
 MODULE_NAME = "service"
+
+PARENT_KEYS = ["zone_name",]
+
+CHILD_KEYS = ["service-port","service-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

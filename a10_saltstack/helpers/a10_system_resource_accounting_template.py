@@ -13,17 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "app_resources",
-    "a10_name",
-    "network_resources",
-    "system_resources",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["app_resources","name","network_resources","system_resources","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "app_resources": "/axapi/v3/system/resource-accounting/template/{name}/app-resources",
+    "network_resources": "/axapi/v3/system/resource-accounting/template/{name}/network-resources",
+    "system_resources": "/axapi/v3/system/resource-accounting/template/{name}/system-resources",
+}
 
 MODULE_NAME = "template"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -40,6 +44,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/system/resource-accounting/template/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

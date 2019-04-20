@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cpu_usage",
-    "disable",
-    "packets_per_second",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["cpu_usage","disable","packets_per_second","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "cpu-load-sharing"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

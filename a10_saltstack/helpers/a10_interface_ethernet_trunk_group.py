@@ -13,21 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_key",
-    "mode",
-    "port_priority",
-    "timeout",
-    "trunk_number",
-    "ntype",
-    "udld_timeout_cfg",
-    "user_tag",
-    "uuid",
-    "ethernet_ifnum",
-]
+AVAILABLE_PROPERTIES = ["admin_key","mode","port_priority","timeout","trunk_number","ntype","udld_timeout_cfg","user_tag","uuid","ethernet_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "trunk-group"
+
+PARENT_KEYS = ["ethernet_ifnum",]
+
+CHILD_KEYS = ["trunk-number",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

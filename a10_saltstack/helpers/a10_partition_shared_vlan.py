@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "allowable_ip_range",
-    "allowable_ipv6_range",
-    "mgmt_floating_ip_address",
-    "uuid",
-    "vlan",
-    "vrid",
-    "partition_name",
-]
+AVAILABLE_PROPERTIES = ["allowable_ip_range","allowable_ipv6_range","mgmt_floating_ip_address","uuid","vlan","vrid","partition_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "shared-vlan"
+
+PARENT_KEYS = ["partition_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

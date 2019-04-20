@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "sha1_value",
-    "dblb_name",
-]
+AVAILABLE_PROPERTIES = ["sha1_value","dblb_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "calc-sha1"
+
+PARENT_KEYS = ["dblb_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

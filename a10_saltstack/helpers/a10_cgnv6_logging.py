@@ -13,15 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "nat_quota_exceeded",
-    "nat_resource_exhausted",
-    "sampling_enable",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["nat_quota_exceeded","nat_resource_exhausted","sampling_enable","uuid",]
+
+REF_PROPERTIES = {
+    "nat_quota_exceeded": "/axapi/v3/cgnv6/logging/nat-quota-exceeded",
+    "nat_resource_exhausted": "/axapi/v3/cgnv6/logging/nat-resource-exhausted",
+}
 
 MODULE_NAME = "logging"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

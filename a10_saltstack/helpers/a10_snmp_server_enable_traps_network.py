@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "trunk_port_threshold",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["trunk_port_threshold","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "network"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

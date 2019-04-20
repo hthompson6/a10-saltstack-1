@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mac_address",
-    "pci_address",
-    "port_index",
-]
+AVAILABLE_PROPERTIES = ["mac_address","pci_address","port_index",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "mgmt-port"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "member_list",
-    "pool_group_name",
-    "user_tag",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["member_list","pool_group_name","user_tag","uuid","vrid",]
+
+REF_PROPERTIES = {
+    "member_list": "/axapi/v3/cgnv6/one-to-one/pool-group/{pool-group-name}/member/{pool-name}",
+}
 
 MODULE_NAME = "pool-group"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["pool-group-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

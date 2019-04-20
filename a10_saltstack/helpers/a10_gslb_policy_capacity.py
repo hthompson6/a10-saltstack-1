@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "capacity_enable",
-    "capacity_fail_break",
-    "threshold",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["capacity_enable","capacity_fail_break","threshold","uuid","policy_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "capacity"
+
+PARENT_KEYS = ["policy_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

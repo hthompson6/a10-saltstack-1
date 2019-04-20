@@ -13,12 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "timezone_index_cfg",
-]
+AVAILABLE_PROPERTIES = ["timezone_index_cfg",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "timezone"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

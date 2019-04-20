@@ -13,20 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "attribute_list",
-    "attribute_rule",
-    "extended_filter",
-    "forward_policy_authorize_only",
-    "a10_name",
-    "server",
-    "service_group",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["attribute_list","attribute_rule","extended_filter","forward_policy_authorize_only","name","server","service_group","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "attribute_list": "/axapi/v3/aam/authorization/policy/{name}/attribute/{attr-num}",
+    "server": "/axapi/v3/aam/authentication/server/ldap/instance",
+    "service_group": "/axapi/v3/aam/authentication/service-group",
+}
 
 MODULE_NAME = "policy"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -43,6 +44,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authorization/policy/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

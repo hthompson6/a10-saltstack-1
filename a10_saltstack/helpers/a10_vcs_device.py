@@ -13,22 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "affinity_vrrp_a_vrid",
-    "device",
-    "enable",
-    "ethernet_cfg",
-    "management",
-    "priority",
-    "trunk_cfg",
-    "unicast_port",
-    "user_tag",
-    "uuid",
-    "ve_cfg",
-]
+AVAILABLE_PROPERTIES = ["affinity_vrrp_a_vrid","device","enable","ethernet_cfg","management","priority","trunk_cfg","unicast_port","user_tag","uuid","ve_cfg",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "device"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["device",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,26 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "category_list_list",
-    "cloud_query_disable",
-    "database_server",
-    "db_update_time",
-    "enable",
-    "port",
-    "proxy_server",
-    "remote_syslog_enable",
-    "rtu_update_disable",
-    "rtu_update_interval",
-    "server",
-    "server_timeout",
-    "ssl_port",
-    "use_mgmt_port",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["category_list_list","cloud_query_disable","database_server","db_update_time","enable","port","proxy_server","remote_syslog_enable","rtu_update_disable","rtu_update_interval","server","server_timeout","ssl_port","use_mgmt_port","uuid",]
+
+REF_PROPERTIES = {
+    "category_list_list": "/axapi/v3/web-category/category-list/{name}",
+    "proxy_server": "/axapi/v3/web-category/proxy-server",
+}
 
 MODULE_NAME = "web-category"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

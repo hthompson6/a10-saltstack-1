@@ -13,18 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "icmp_idle_timeout",
-    "ip_idle_timeout",
-    "a10_name",
-    "tcp",
-    "udp",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["icmp_idle_timeout","ip_idle_timeout","name","tcp","udp","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "tcp": "/axapi/v3/fw/session-aging/{name}/tcp",
+    "udp": "/axapi/v3/fw/session-aging/{name}/udp",
+}
 
 MODULE_NAME = "session-aging"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -41,6 +43,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/fw/session-aging/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

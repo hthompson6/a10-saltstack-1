@@ -13,24 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "auto",
-    "pool",
-    "port_number",
-    "precedence",
-    "protocol",
-    "sampling_enable",
-    "service_group",
-    "template_dns",
-    "template_policy",
-    "user_tag",
-    "uuid",
-    "dns64_virtualserver_name",
-]
+AVAILABLE_PROPERTIES = ["action","auto","pool","port_number","precedence","protocol","sampling_enable","service_group","template_dns","template_policy","user_tag","uuid","dns64_virtualserver_name",]
+
+REF_PROPERTIES = {
+    "pool": "/axapi/v3/ip/nat/pool",
+    "service_group": "/axapi/v3/cgnv6/service-group",
+    "template_dns": "/axapi/v3/cgnv6/template/dns",
+    "template_policy": "/axapi/v3/cgnv6/template/policy",
+}
 
 MODULE_NAME = "port"
+
+PARENT_KEYS = ["dns64_virtualserver_name",]
+
+CHILD_KEYS = ["port-number","protocol",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

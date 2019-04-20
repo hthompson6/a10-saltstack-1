@@ -13,15 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv6_tunnel_addr",
-    "nat_address_list",
-    "user_tag",
-    "binding_table_name",
-]
+AVAILABLE_PROPERTIES = ["ipv6_tunnel_addr","nat_address_list","user_tag","binding_table_name",]
+
+REF_PROPERTIES = {
+    "nat_address_list": "/axapi/v3/cgnv6/lw-4o6/binding-table/{name}/tunnel-address/{ipv6-tunnel-addr}/nat-address/{ipv4-nat-addr}",
+}
 
 MODULE_NAME = "tunnel-address"
+
+PARENT_KEYS = ["binding_table_name",]
+
+CHILD_KEYS = ["ipv6-tunnel-addr",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

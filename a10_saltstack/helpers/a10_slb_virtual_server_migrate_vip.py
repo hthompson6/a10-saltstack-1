@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cancel_migration",
-    "finish_migration",
-    "target_data_cpu",
-    "target_floating_ipv4",
-    "target_floating_ipv6",
-    "virtual_server_name",
-]
+AVAILABLE_PROPERTIES = ["cancel_migration","finish_migration","target_data_cpu","target_floating_ipv4","target_floating_ipv6","virtual_server_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "migrate-vip"
+
+PARENT_KEYS = ["virtual_server_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

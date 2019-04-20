@@ -13,14 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "template_list",
-    "uuid",
-    "cluster_id",
-]
+AVAILABLE_PROPERTIES = ["template_list","uuid","cluster_id",]
+
+REF_PROPERTIES = {
+    "template_list": "/axapi/v3/scaleout/cluster/{cluster-id}/service-config/template/{name}",
+}
 
 MODULE_NAME = "service-config"
+
+PARENT_KEYS = ["cluster_id",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

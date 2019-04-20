@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "max_packet_queue_time",
-    "reset_time_on_flow_record",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["max_packet_queue_time","reset_time_on_flow_record","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "common"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

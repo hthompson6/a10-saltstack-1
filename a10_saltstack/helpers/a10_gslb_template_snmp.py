@@ -13,30 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_key",
-    "auth_proto",
-    "community",
-    "context_engine_id",
-    "context_name",
-    "host",
-    "interface",
-    "interval",
-    "oid",
-    "port",
-    "priv_key",
-    "priv_proto",
-    "security_engine_id",
-    "security_level",
-    "snmp_name",
-    "user_tag",
-    "username",
-    "uuid",
-    "version",
-]
+AVAILABLE_PROPERTIES = ["auth_key","auth_proto","community","context_engine_id","context_name","host","interface","interval","oid","port","priv_key","priv_proto","security_engine_id","security_level","snmp_name","user_tag","username","uuid","version",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "snmp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["snmp-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

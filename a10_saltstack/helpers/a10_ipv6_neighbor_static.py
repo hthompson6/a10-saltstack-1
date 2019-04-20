@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet",
-    "ipv6_addr",
-    "mac",
-    "trunk",
-    "tunnel",
-    "uuid",
-    "vlan",
-]
+AVAILABLE_PROPERTIES = ["ethernet","ipv6_addr","mac","trunk","tunnel","uuid","vlan",]
+
+REF_PROPERTIES = {
+    "vlan": "/axapi/v3/network/vlan",
+}
 
 MODULE_NAME = "static"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["ipv6-addr","vlan",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

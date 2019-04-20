@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "crypto_core",
-    "crypto_mem",
-    "fpga_decrypt",
-    "packet_round_robin",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["crypto_core","crypto_mem","fpga_decrypt","packet_round_robin","uuid",]
+
+REF_PROPERTIES = {
+    "fpga_decrypt": "/axapi/v3/system/ipsec/fpga-decrypt",
+}
 
 MODULE_NAME = "ipsec"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

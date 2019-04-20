@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "key_number",
-    "key_string",
-    "user_tag",
-    "uuid",
-    "key_chain_name",
-    "key_chain_flag",
-]
+AVAILABLE_PROPERTIES = ["key_number","key_string","user_tag","uuid","key_chain_name","key_chain_flag",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "key"
+
+PARENT_KEYS = ["key-chain-name","key_chain_flag",]
+
+CHILD_KEYS = ["key-number",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

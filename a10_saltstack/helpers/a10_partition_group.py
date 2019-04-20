@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "member_list",
-    "partition_group_name",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["member_list","partition_group_name","user_tag","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "partition-group"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["partition-group-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

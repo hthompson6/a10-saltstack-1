@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "fixed_nat_port_mapping_file_change",
-    "max_ipport_threshold",
-    "max_port_threshold",
-    "per_ip_port_usage_threshold",
-    "total_port_usage_threshold",
-    "traffic_exceeded",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["all","fixed_nat_port_mapping_file_change","max_ipport_threshold","max_port_threshold","per_ip_port_usage_threshold","total_port_usage_threshold","traffic_exceeded","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "lsn"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

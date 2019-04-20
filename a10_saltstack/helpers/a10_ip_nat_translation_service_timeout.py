@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port",
-    "service_type",
-    "timeout_type",
-    "timeout_val",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["port","service_type","timeout_type","timeout_val","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "service-timeout"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["service-type","port",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

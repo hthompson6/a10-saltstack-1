@@ -13,20 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bgp",
-    "gateway",
-    "interface",
-    "a10_name",
-    "route",
-    "trunk_cfg",
-    "user_tag",
-    "uuid",
-    "vlan_cfg",
-]
+AVAILABLE_PROPERTIES = ["bgp","gateway","interface","name","route","trunk_cfg","user_tag","uuid","vlan_cfg",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "fail-over-policy-template"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -43,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vrrp-a/fail-over-policy-template/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

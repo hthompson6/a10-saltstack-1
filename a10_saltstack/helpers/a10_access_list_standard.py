@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "std",
-    "stdrules",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["std","stdrules","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "standard"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["std",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

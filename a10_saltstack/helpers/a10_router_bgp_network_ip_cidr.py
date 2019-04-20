@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "backdoor",
-    "comm_value",
-    "description",
-    "network_ipv4_cidr",
-    "route_map",
-    "uuid",
-    "bgp_as_number",
-]
+AVAILABLE_PROPERTIES = ["backdoor","comm_value","description","network_ipv4_cidr","route_map","uuid","bgp_as_number",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ip-cidr"
+
+PARENT_KEYS = ["bgp_as_number",]
+
+CHILD_KEYS = ["network-ipv4-cidr",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

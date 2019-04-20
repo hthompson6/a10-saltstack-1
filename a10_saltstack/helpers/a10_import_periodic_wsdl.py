@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "period",
-    "remote_file",
-    "use_mgmt_port",
-    "uuid",
-    "wsdl",
-]
+AVAILABLE_PROPERTIES = ["period","remote_file","use_mgmt_port","uuid","wsdl",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "wsdl"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["wsdl",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

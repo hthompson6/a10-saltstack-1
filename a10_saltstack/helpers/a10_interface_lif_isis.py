@@ -13,29 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication",
-    "bfd_cfg",
-    "circuit_type",
-    "csnp_interval_list",
-    "hello_interval_list",
-    "hello_interval_minimal_list",
-    "hello_multiplier_list",
-    "lsp_interval",
-    "mesh_group",
-    "metric_list",
-    "network",
-    "padding",
-    "password_list",
-    "priority_list",
-    "retransmit_interval",
-    "uuid",
-    "wide_metric_list",
-    "lif_ifnum",
-]
+AVAILABLE_PROPERTIES = ["authentication","bfd_cfg","circuit_type","csnp_interval_list","hello_interval_list","hello_interval_minimal_list","hello_multiplier_list","lsp_interval","mesh_group","metric_list","network","padding","password_list","priority_list","retransmit_interval","uuid","wide_metric_list","lif_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "isis"
+
+PARENT_KEYS = ["lif_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

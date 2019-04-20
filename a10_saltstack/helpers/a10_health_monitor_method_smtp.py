@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "mail_from",
-    "rcpt_to",
-    "smtp",
-    "smtp_domain",
-    "smtp_port",
-    "smtp_starttls",
-    "uuid",
-    "monitor_name",
-]
+AVAILABLE_PROPERTIES = ["mail_from","rcpt_to","smtp","smtp_domain","smtp_port","smtp_starttls","uuid","monitor_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "smtp"
+
+PARENT_KEYS = ["monitor_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

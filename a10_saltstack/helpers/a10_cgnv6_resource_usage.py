@@ -13,17 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "fixed_nat_inside_user_count",
-    "fixed_nat_ip_addr_count",
-    "lsn_nat_addr_count",
-    "radius_table_size",
-    "stateless_entries",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["fixed_nat_inside_user_count","fixed_nat_ip_addr_count","lsn_nat_addr_count","radius_table_size","stateless_entries","uuid",]
+
+REF_PROPERTIES = {
+    "stateless_entries": "/axapi/v3/cgnv6/resource-usage/stateless-entries",
+}
 
 MODULE_NAME = "resource-usage"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

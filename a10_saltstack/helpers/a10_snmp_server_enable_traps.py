@@ -13,25 +13,29 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "gslb",
-    "lldp",
-    "lsn",
-    "network",
-    "routing",
-    "slb",
-    "slb_change",
-    "snmp",
-    "ssl",
-    "system",
-    "uuid",
-    "vcs",
-    "vrrp_a",
-]
+AVAILABLE_PROPERTIES = ["all","gslb","lldp","lsn","network","routing","slb","slb_change","snmp","ssl","system","uuid","vcs","vrrp_a",]
+
+REF_PROPERTIES = {
+    "gslb": "/axapi/v3/snmp-server/enable/traps/gslb",
+    "lsn": "/axapi/v3/snmp-server/enable/traps/lsn",
+    "network": "/axapi/v3/snmp-server/enable/traps/network",
+    "routing": "/axapi/v3/snmp-server/enable/traps/routing",
+    "slb": "/axapi/v3/snmp-server/enable/traps/slb",
+    "slb_change": "/axapi/v3/snmp-server/enable/traps/slb-change",
+    "snmp": "/axapi/v3/snmp-server/enable/traps/snmp",
+    "ssl": "/axapi/v3/snmp-server/enable/traps/ssl",
+    "system": "/axapi/v3/snmp-server/enable/traps/system",
+    "vcs": "/axapi/v3/snmp-server/enable/traps/vcs",
+    "vrrp_a": "/axapi/v3/snmp-server/enable/traps/vrrp-a",
+}
 
 MODULE_NAME = "traps"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

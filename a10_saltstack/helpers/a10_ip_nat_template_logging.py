@@ -13,21 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "facility",
-    "include_destination",
-    "include_rip_rport",
-    "log",
-    "a10_name",
-    "service_group",
-    "severity",
-    "source_port",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["facility","include_destination","include_rip_rport","log","name","service_group","severity","source_port","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "service_group": "/axapi/v3/slb/service-group",
+}
 
 MODULE_NAME = "logging"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -44,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/ip/nat/template/logging/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

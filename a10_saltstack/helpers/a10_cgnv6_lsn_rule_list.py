@@ -13,20 +13,23 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "default",
-    "domain_ip",
-    "domain_list_name_list",
-    "domain_name_list",
-    "http_match_domain_name",
-    "ip_list",
-    "a10_name",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["default","domain_ip","domain_list_name_list","domain_name_list","http_match_domain_name","ip_list","name","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "default": "/axapi/v3/cgnv6/lsn-rule-list/{name}/default",
+    "domain_ip": "/axapi/v3/cgnv6/lsn-rule-list/{name}/domain-ip",
+    "domain_list_name_list": "/axapi/v3/cgnv6/lsn-rule-list/{name}/domain-list-name/{name-domain-list}",
+    "domain_name_list": "/axapi/v3/cgnv6/lsn-rule-list/{name}/domain-name/{name-domain}",
+    "ip_list": "/axapi/v3/cgnv6/lsn-rule-list/{name}/ip/{ipv4-addr}",
+}
 
 MODULE_NAME = "lsn-rule-list"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -43,6 +46,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/cgnv6/lsn-rule-list/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

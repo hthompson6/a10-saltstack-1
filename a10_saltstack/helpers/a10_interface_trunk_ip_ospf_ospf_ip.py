@@ -13,27 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication",
-    "authentication_key",
-    "cost",
-    "database_filter",
-    "dead_interval",
-    "hello_interval",
-    "ip_addr",
-    "message_digest_cfg",
-    "mtu_ignore",
-    "out",
-    "priority",
-    "retransmit_interval",
-    "transmit_delay",
-    "uuid",
-    "value",
-    "trunk_ifnum",
-]
+AVAILABLE_PROPERTIES = ["authentication","authentication_key","cost","database_filter","dead_interval","hello_interval","ip_addr","message_digest_cfg","mtu_ignore","out","priority","retransmit_interval","transmit_delay","uuid","value","trunk_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ospf-ip"
+
+PARENT_KEYS = ["trunk_ifnum",]
+
+CHILD_KEYS = ["ip-addr",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

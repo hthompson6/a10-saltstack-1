@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_address",
-    "priority_cost",
-    "uuid",
-    "vrid_val",
-]
+AVAILABLE_PROPERTIES = ["ip_address","priority_cost","uuid","vrid_val",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ipv4-gateway"
+
+PARENT_KEYS = ["vrid_val",]
+
+CHILD_KEYS = ["ip-address",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

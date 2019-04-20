@@ -13,20 +13,27 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "bfd",
-    "events",
-    "ifsm",
-    "lsa",
-    "nfsm",
-    "nsm",
-    "packet",
-    "route",
-]
+AVAILABLE_PROPERTIES = ["all","bfd","events","ifsm","lsa","nfsm","nsm","packet","route",]
+
+REF_PROPERTIES = {
+    "all": "/axapi/v3/debug/ipv6/ospf/all",
+    "bfd": "/axapi/v3/debug/ipv6/ospf/bfd",
+    "events": "/axapi/v3/debug/ipv6/ospf/events",
+    "ifsm": "/axapi/v3/debug/ipv6/ospf/ifsm",
+    "lsa": "/axapi/v3/debug/ipv6/ospf/lsa",
+    "nfsm": "/axapi/v3/debug/ipv6/ospf/nfsm",
+    "nsm": "/axapi/v3/debug/ipv6/ospf/nsm",
+    "packet": "/axapi/v3/debug/ipv6/ospf/packet",
+    "route": "/axapi/v3/debug/ipv6/ospf/route",
+}
 
 MODULE_NAME = "ospf"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,22 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "allocate_bandwidth",
-    "appliance_name",
-    "enable_requests",
-    "enterprise",
-    "interval",
-    "port",
-    "proxy_server",
-    "send",
-    "token",
-    "use_mgmt_port",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["allocate_bandwidth","appliance_name","enable_requests","enterprise","interval","port","proxy_server","send","token","use_mgmt_port","uuid",]
+
+REF_PROPERTIES = {
+    "proxy_server": "/axapi/v3/glm/proxy-server",
+    "send": "/axapi/v3/glm/send",
+}
 
 MODULE_NAME = "glm"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

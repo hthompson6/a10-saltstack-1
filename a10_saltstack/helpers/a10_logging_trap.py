@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "trap_levelname",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["trap_levelname","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "trap"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

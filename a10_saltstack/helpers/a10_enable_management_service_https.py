@@ -13,19 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "acl_v4_list",
-    "acl_v6_list",
-    "all_data_intf",
-    "eth_cfg",
-    "management",
-    "tunnel_cfg",
-    "uuid",
-    "ve_cfg",
-]
+AVAILABLE_PROPERTIES = ["acl_v4_list","acl_v6_list","all_data_intf","eth_cfg","management","tunnel_cfg","uuid","ve_cfg",]
+
+REF_PROPERTIES = {
+    "acl_v4_list": "/axapi/v3/enable-management/service/https/acl-v4/{acl-id}",
+    "acl_v6_list": "/axapi/v3/enable-management/service/https/acl-v6/{acl-name}",
+}
 
 MODULE_NAME = "https"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

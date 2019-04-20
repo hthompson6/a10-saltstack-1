@@ -13,27 +13,23 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "allowed_http_methods",
-    "bypass_ip_cfg",
-    "fail_close",
-    "include_protocol_in_uri",
-    "logging",
-    "min_payload_size",
-    "a10_name",
-    "preview",
-    "server_ssl",
-    "service_group",
-    "service_url",
-    "source_ip",
-    "tcp_proxy",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["action","allowed_http_methods","bypass_ip_cfg","fail_close","include_protocol_in_uri","logging","min_payload_size","name","preview","server_ssl","service_group","service_url","source_ip","tcp_proxy","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "logging": "/axapi/v3/slb/template/logging",
+    "server_ssl": "/axapi/v3/slb/template/server-ssl",
+    "service_group": "/axapi/v3/slb/service-group",
+    "source_ip": "/axapi/v3/slb/template/persist/source-ip",
+    "tcp_proxy": "/axapi/v3/slb/template/tcp-proxy",
+}
 
 MODULE_NAME = "reqmod-icap"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -50,6 +46,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/reqmod-icap/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

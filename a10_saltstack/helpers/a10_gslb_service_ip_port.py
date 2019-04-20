@@ -13,23 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "follow_port_protocol",
-    "health_check",
-    "health_check_disable",
-    "health_check_follow_port",
-    "health_check_protocol_disable",
-    "port_num",
-    "port_proto",
-    "sampling_enable",
-    "user_tag",
-    "uuid",
-    "service_ip_node_name",
-]
+AVAILABLE_PROPERTIES = ["action","follow_port_protocol","health_check","health_check_disable","health_check_follow_port","health_check_protocol_disable","port_num","port_proto","sampling_enable","user_tag","uuid","service_ip_node_name",]
+
+REF_PROPERTIES = {
+    "health_check": "/axapi/v3/health/monitor",
+}
 
 MODULE_NAME = "port"
+
+PARENT_KEYS = ["service_ip_node_name",]
+
+CHILD_KEYS = ["port-num","port-proto",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

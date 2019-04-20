@@ -13,27 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_value",
-    "conn_limit",
-    "conn_per",
-    "conn_rate_limit",
-    "dns64",
-    "interval",
-    "lidnum",
-    "lockout",
-    "log",
-    "over_limit_action",
-    "request_limit",
-    "request_per",
-    "request_rate_limit",
-    "user_tag",
-    "uuid",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["action_value","conn_limit","conn_per","conn_rate_limit","dns64","interval","lidnum","lockout","log","over_limit_action","request_limit","request_per","request_rate_limit","user_tag","uuid","policy_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "lid"
+
+PARENT_KEYS = ["policy_name",]
+
+CHILD_KEYS = ["lidnum",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

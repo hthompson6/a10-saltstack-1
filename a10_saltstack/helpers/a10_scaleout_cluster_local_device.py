@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "id",
-    "l2_redirect",
-    "priority",
-    "uuid",
-    "cluster_id",
-]
+AVAILABLE_PROPERTIES = ["id","l2_redirect","priority","uuid","cluster_id",]
+
+REF_PROPERTIES = {
+    "l2_redirect": "/axapi/v3/scaleout/cluster/{cluster-id}/local-device/l2-redirect",
+}
 
 MODULE_NAME = "local-device"
+
+PARENT_KEYS = ["cluster_id",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

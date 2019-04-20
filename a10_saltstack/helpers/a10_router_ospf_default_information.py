@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "always",
-    "metric",
-    "metric_type",
-    "originate",
-    "route_map",
-    "uuid",
-    "ospf_process_id",
-]
+AVAILABLE_PROPERTIES = ["always","metric","metric_type","originate","route_map","uuid","ospf_process_id",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "default-information"
+
+PARENT_KEYS = ["ospf_process_id",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

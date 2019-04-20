@@ -13,27 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "as_path",
-    "community",
-    "extcommunity",
-    "group",
-    "interface",
-    "ip",
-    "ipv6",
-    "local_preference",
-    "metric",
-    "origin",
-    "route_type",
-    "tag",
-    "uuid",
-    "sequence",
-    "action",
-    "route_map_tag",
-]
+AVAILABLE_PROPERTIES = ["as_path","community","extcommunity","group","interface","ip","ipv6","local_preference","metric","origin","route_type","tag","uuid","sequence","action","route_map_tag",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "match"
+
+PARENT_KEYS = ["sequence","action","route_map_tag",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

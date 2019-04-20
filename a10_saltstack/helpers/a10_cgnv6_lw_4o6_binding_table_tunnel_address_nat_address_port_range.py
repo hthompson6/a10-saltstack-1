@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port_end",
-    "port_start",
-    "tunnel_endpoint_address",
-    "nat_address_ipv4_nat_addr",
-    "tunnel_address_ipv6_tunnel_addr",
-    "binding_table_name",
-]
+AVAILABLE_PROPERTIES = ["port_end","port_start","tunnel_endpoint_address","nat_address_ipv4_nat_addr","tunnel_address_ipv6_tunnel_addr","binding_table_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "port-range"
+
+PARENT_KEYS = ["nat_address_ipv4_nat_addr","tunnel_address_ipv6_tunnel_addr","binding_table_name",]
+
+CHILD_KEYS = ["port-start","port-end",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

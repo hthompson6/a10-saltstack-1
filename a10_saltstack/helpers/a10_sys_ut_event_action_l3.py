@@ -13,20 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "checksum",
-    "ip_list",
-    "protocol",
-    "ttl",
-    "ntype",
-    "uuid",
-    "value",
-    "action_direction",
-    "event_number",
-]
+AVAILABLE_PROPERTIES = ["checksum","ip_list","protocol","ttl","ntype","uuid","value","action_direction","event_number",]
+
+REF_PROPERTIES = {
+    "ip_list": "/axapi/v3/sys-ut/event/{event-number}/action/{direction}/l3/ip/{src-dst}",
+}
 
 MODULE_NAME = "l3"
+
+PARENT_KEYS = ["action_direction","event_number",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

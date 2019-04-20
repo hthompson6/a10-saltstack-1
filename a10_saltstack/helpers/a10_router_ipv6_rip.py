@@ -13,25 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aggregate_address_cfg",
-    "cisco_metric_behavior",
-    "default_information",
-    "default_metric",
-    "distribute_list",
-    "offset_list",
-    "passive_interface_list",
-    "recv_buffer_size",
-    "redistribute",
-    "ripng_neighbor",
-    "route_cfg",
-    "route_map",
-    "timers",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["aggregate_address_cfg","cisco_metric_behavior","default_information","default_metric","distribute_list","offset_list","passive_interface_list","recv_buffer_size","redistribute","ripng_neighbor","route_cfg","route_map","timers","uuid",]
+
+REF_PROPERTIES = {
+    "distribute_list": "/axapi/v3/router/ipv6/rip/distribute-list",
+    "offset_list": "/axapi/v3/router/ipv6/rip/offset-list",
+    "redistribute": "/axapi/v3/router/ipv6/rip/redistribute",
+    "route_map": "/axapi/v3/router/ipv6/rip/route-map",
+}
 
 MODULE_NAME = "rip"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "pre_trunk",
-    "pre_vlan",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["pre_trunk","pre_vlan","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "trunk"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["pre-trunk",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

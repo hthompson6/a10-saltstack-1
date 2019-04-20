@@ -13,23 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "authentication",
-    "host_name",
-    "ipv4_address",
-    "ipv6_address",
-    "a10_name",
-    "port",
-    "protocol",
-    "relative_uri",
-    "use_mgmt_port",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["action","authentication","host_name","ipv4_address","ipv6_address","name","port","protocol","relative_uri","use_mgmt_port","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "authentication": "/axapi/v3/visibility/reporting/notification-template/{name}/authentication",
+}
 
 MODULE_NAME = "notification-template"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -46,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/visibility/reporting/notification-template/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

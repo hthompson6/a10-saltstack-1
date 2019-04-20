@@ -13,27 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "accounting_interim_update",
-    "accounting_on",
-    "accounting_start",
-    "accounting_stop",
-    "attribute",
-    "attribute_name",
-    "custom_attribute_name",
-    "disable_reply",
-    "encrypted",
-    "listen_port",
-    "remote",
-    "sampling_enable",
-    "secret",
-    "secret_string",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["accounting_interim_update","accounting_on","accounting_start","accounting_stop","attribute","attribute_name","custom_attribute_name","disable_reply","encrypted","listen_port","remote","sampling_enable","secret","secret_string","uuid","vrid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "server"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

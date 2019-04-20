@@ -13,19 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "member_priority",
-    "member_state",
-    "a10_name",
-    "port",
-    "sampling_enable",
-    "user_tag",
-    "uuid",
-    "service_group_name",
-]
+AVAILABLE_PROPERTIES = ["member_priority","member_state","name","port","sampling_enable","user_tag","uuid","service_group_name",]
+
+REF_PROPERTIES = {
+    "name": "/axapi/v3/aam/authentication/server/ldap",
+}
 
 MODULE_NAME = "member"
+
+PARENT_KEYS = ["service_group_name",]
+
+CHILD_KEYS = ["name","port",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -44,7 +44,7 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/aam/authentication/service-group/{service_group_name}/member/{name}+{port}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
     f_dict["port"] = kwargs["port"]
     f_dict["service_group_name"] = kwargs["service_group_name"]
 

@@ -13,14 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "file",
-    "log_buffer",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["file","log_buffer","uuid",]
+
+REF_PROPERTIES = {
+    "file": "/axapi/v3/router/log/file",
+}
 
 MODULE_NAME = "log"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

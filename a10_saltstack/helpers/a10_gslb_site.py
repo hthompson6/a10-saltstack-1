@@ -13,28 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "active_rdt",
-    "auto_map",
-    "bw_cost",
-    "controller",
-    "disable",
-    "easy_rdt",
-    "ip_server_list",
-    "limit",
-    "multiple_geo_locations",
-    "sampling_enable",
-    "site_name",
-    "slb_dev_list",
-    "template",
-    "threshold",
-    "user_tag",
-    "uuid",
-    "weight",
-]
+AVAILABLE_PROPERTIES = ["active_rdt","auto_map","bw_cost","controller","disable","easy_rdt","ip_server_list","limit","multiple_geo_locations","sampling_enable","site_name","slb_dev_list","template","threshold","user_tag","uuid","weight",]
+
+REF_PROPERTIES = {
+    "active_rdt": "/axapi/v3/gslb/site/{site-name}/active-rdt",
+    "easy_rdt": "/axapi/v3/gslb/site/{site-name}/easy-rdt",
+    "ip_server_list": "/axapi/v3/gslb/site/{site-name}/ip-server/{ip-server-name}",
+    "slb_dev_list": "/axapi/v3/gslb/site/{site-name}/slb-dev/{device-name}",
+}
 
 MODULE_NAME = "site"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["site-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

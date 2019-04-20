@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "rule_ipv6_prefix",
-    "uuid",
-    "domain_name",
-]
+AVAILABLE_PROPERTIES = ["rule_ipv6_prefix","uuid","domain_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "default-mapping-rule"
+
+PARENT_KEYS = ["domain_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

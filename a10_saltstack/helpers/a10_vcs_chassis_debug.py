@@ -13,26 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "daemon",
-    "daemon_msg",
-    "election",
-    "election_pdu",
-    "encoder",
-    "handler",
-    "info",
-    "lib",
-    "net",
-    "ssl",
-    "util",
-    "vblade",
-    "vblade_msg",
-    "vmaster",
-    "vmaster_msg",
-]
+AVAILABLE_PROPERTIES = ["daemon","daemon_msg","election","election_pdu","encoder","handler","info","lib","net","ssl","util","vblade","vblade_msg","vmaster","vmaster_msg",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "debug"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "debug_system_enum",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["debug_system_enum","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "system"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

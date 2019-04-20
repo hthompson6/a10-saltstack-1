@@ -13,16 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "active_timeout",
-    "sampling_enable",
-    "template",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["action","active_timeout","sampling_enable","template","uuid",]
+
+REF_PROPERTIES = {
+    "template": "/axapi/v3/netflow/collector/template",
+}
 
 MODULE_NAME = "collector"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,42 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cert",
-    "disable_sslv2hello",
-    "https",
-    "https_encrypted",
-    "https_expect",
-    "https_host",
-    "https_kerberos_auth",
-    "https_kerberos_kdc",
-    "https_kerberos_realm",
-    "https_key_encrypted",
-    "https_maintenance_code",
-    "https_password",
-    "https_password_string",
-    "https_postdata",
-    "https_postfile",
-    "https_response_code",
-    "https_text",
-    "https_url",
-    "https_username",
-    "key",
-    "key_pass_phrase",
-    "key_phrase",
-    "post_path",
-    "post_type",
-    "response_code_regex",
-    "text_regex",
-    "url_path",
-    "url_type",
-    "uuid",
-    "web_port",
-    "monitor_name",
-]
+AVAILABLE_PROPERTIES = ["cert","disable_sslv2hello","https","https_encrypted","https_expect","https_host","https_kerberos_auth","https_kerberos_kdc","https_kerberos_realm","https_key_encrypted","https_maintenance_code","https_password","https_password_string","https_postdata","https_postfile","https_response_code","https_text","https_url","https_username","key","key_pass_phrase","key_phrase","post_path","post_type","response_code_regex","text_regex","url_path","url_type","uuid","web_port","monitor_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "https"
+
+PARENT_KEYS = ["monitor_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

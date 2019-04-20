@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "connected",
-    "ebgp",
-    "ibgp",
-    "isis",
-    "ospf",
-    "rip",
-    "static",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["connected","ebgp","ibgp","isis","ospf","rip","static","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "suppress-protocols"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

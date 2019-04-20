@@ -13,14 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "a10_name",
-    "sampling_enable",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["name","sampling_enable","uuid",]
+
+REF_PROPERTIES = {
+    "name": "/axapi/v3/fw/template/logging",
+}
 
 MODULE_NAME = "logging"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

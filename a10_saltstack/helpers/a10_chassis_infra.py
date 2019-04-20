@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "debug_disable",
-    "debug_enable",
-    "debug_status",
-    "detailed",
-    "sys_sync",
-    "system_sync_verify",
-]
+AVAILABLE_PROPERTIES = ["debug_disable","debug_enable","debug_status","detailed","sys_sync","system_sync_verify",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "chassis-infra"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

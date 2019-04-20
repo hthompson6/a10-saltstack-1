@@ -13,22 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ethernet",
-    "ipv4_address",
-    "ipv6_address",
-    "nat_pool",
-    "src_dst",
-    "trunk",
-    "uuid",
-    "ve",
-    "virtual_server",
-    "action_direction",
-    "event_number",
-]
+AVAILABLE_PROPERTIES = ["ethernet","ipv4_address","ipv6_address","nat_pool","src_dst","trunk","uuid","ve","virtual_server","action_direction","event_number",]
+
+REF_PROPERTIES = {
+    "ethernet": "/axapi/v3/interface/ethernet",
+    "ve": "/axapi/v3/interface/ve",
+    "virtual_server": "/axapi/v3/slb/virtual-server",
+}
 
 MODULE_NAME = "ip"
+
+PARENT_KEYS = ["action_direction","event_number",]
+
+CHILD_KEYS = ["src-dst",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "oid_val",
-    "remote",
-    "user_tag",
-    "uuid",
-    "read_user",
-]
+AVAILABLE_PROPERTIES = ["oid_val","remote","user_tag","uuid","read_user",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "oid"
+
+PARENT_KEYS = ["read_user",]
+
+CHILD_KEYS = ["oid-val",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

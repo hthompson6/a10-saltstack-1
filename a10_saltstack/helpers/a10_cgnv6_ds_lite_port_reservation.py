@@ -13,20 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "inside",
-    "inside_addr",
-    "inside_end_port",
-    "inside_start_port",
-    "nat",
-    "nat_end_port",
-    "nat_start_port",
-    "tunnel_dest_address",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["inside","inside_addr","inside_end_port","inside_start_port","nat","nat_end_port","nat_start_port","tunnel_dest_address","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "port-reservation"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["inside","tunnel-dest-address","inside-addr","inside-start-port","inside-end-port","nat","nat-start-port","nat-end-port",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

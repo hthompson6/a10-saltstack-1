@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication",
-    "receive_cfg",
-    "receive_packet",
-    "send_cfg",
-    "send_packet",
-    "split_horizon_cfg",
-    "uuid",
-    "lif_ifnum",
-]
+AVAILABLE_PROPERTIES = ["authentication","receive_cfg","receive_packet","send_cfg","send_packet","split_horizon_cfg","uuid","lif_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "rip"
+
+PARENT_KEYS = ["lif_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

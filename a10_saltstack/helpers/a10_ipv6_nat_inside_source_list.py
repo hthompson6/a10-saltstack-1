@@ -13,14 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "list_name",
-    "pool",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["list_name","pool","uuid",]
+
+REF_PROPERTIES = {
+    "list_name": "/axapi/v3/ipv6/access-list",
+    "pool": "/axapi/v3/ipv6/nat/pool-group",
+}
 
 MODULE_NAME = "list"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["list-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

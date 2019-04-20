@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "groupname",
-    "read",
-    "uuid",
-    "v3",
-]
+AVAILABLE_PROPERTIES = ["groupname","read","uuid","v3",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "group"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["groupname",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

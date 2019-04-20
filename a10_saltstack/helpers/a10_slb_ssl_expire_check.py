@@ -13,17 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "before",
-    "exception",
-    "expire_address1",
-    "interval_days",
-    "ssl_expire_email_address",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["before","exception","expire_address1","interval_days","ssl_expire_email_address","uuid",]
+
+REF_PROPERTIES = {
+    "exception": "/axapi/v3/slb/ssl-expire-check/exception",
+}
 
 MODULE_NAME = "ssl-expire-check"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

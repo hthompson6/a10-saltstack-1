@@ -13,15 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_address",
-    "uuid",
-    "vni_list",
-    "vtep_id",
-]
+AVAILABLE_PROPERTIES = ["ip_address","uuid","vni_list","vtep_id",]
+
+REF_PROPERTIES = {
+    "vni_list": "/axapi/v3/overlay-tunnel/vtep/{id}/source-ip-address/vni/{segment}",
+}
 
 MODULE_NAME = "source-ip-address"
+
+PARENT_KEYS = ["vtep_id",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

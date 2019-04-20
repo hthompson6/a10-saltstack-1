@@ -13,25 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_list",
-    "allow_promiscuous_vip",
-    "cache_spoofing_port",
-    "dhcp",
-    "generate_membership_query",
-    "inside",
-    "max_resp_time",
-    "ospf",
-    "outside",
-    "query_interval",
-    "rip",
-    "router",
-    "uuid",
-    "lif_ifnum",
-]
+AVAILABLE_PROPERTIES = ["address_list","allow_promiscuous_vip","cache_spoofing_port","dhcp","generate_membership_query","inside","max_resp_time","ospf","outside","query_interval","rip","router","uuid","lif_ifnum",]
+
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/lif/{ifnum}/ip/ospf",
+    "rip": "/axapi/v3/interface/lif/{ifnum}/ip/rip",
+    "router": "/axapi/v3/interface/lif/{ifnum}/ip/router",
+}
 
 MODULE_NAME = "ip"
+
+PARENT_KEYS = ["lif_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,19 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "priority",
-    "sampling_enable",
-    "ntype",
-    "uuid",
-    "web_category_list",
-    "name",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["action","priority","sampling_enable","ntype","uuid","web_category_list","name","policy_name",]
+
+REF_PROPERTIES = {
+    "web_category_list": "/axapi/v3/web-category/category-list",
+}
 
 MODULE_NAME = "web-category-list"
+
+PARENT_KEYS = ["name","policy_name",]
+
+CHILD_KEYS = ["web-category-list",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

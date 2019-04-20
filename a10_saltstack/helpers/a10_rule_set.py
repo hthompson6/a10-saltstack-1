@@ -13,23 +13,24 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "app",
-    "application",
-    "a10_name",
-    "remark",
-    "rule_list",
-    "rules_by_zone",
-    "sampling_enable",
-    "session_statistic",
-    "tag",
-    "track_app_rule_list",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["app","application","name","remark","rule_list","rules_by_zone","sampling_enable","session_statistic","tag","track_app_rule_list","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "app": "/axapi/v3/rule-set/{name}/app",
+    "application": "/axapi/v3/rule-set/{name}/application",
+    "rule_list": "/axapi/v3/rule-set/{name}/rule/{name}",
+    "rules_by_zone": "/axapi/v3/rule-set/{name}/rules-by-zone",
+    "tag": "/axapi/v3/rule-set/{name}/tag",
+    "track_app_rule_list": "/axapi/v3/rule-set/{name}/track-app-rule-list",
+}
 
 MODULE_NAME = "rule-set"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -46,6 +47,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/rule-set/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

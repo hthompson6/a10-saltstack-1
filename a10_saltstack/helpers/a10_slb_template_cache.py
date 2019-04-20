@@ -13,29 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "accept_reload_req",
-    "age",
-    "default_policy_nocache",
-    "disable_insert_age",
-    "disable_insert_via",
-    "local_uri_policy",
-    "logging",
-    "max_cache_size",
-    "max_content_size",
-    "min_content_size",
-    "a10_name",
-    "remove_cookies",
-    "replacement_policy",
-    "sampling_enable",
-    "uri_policy",
-    "user_tag",
-    "uuid",
-    "verify_host",
-]
+AVAILABLE_PROPERTIES = ["accept_reload_req","age","default_policy_nocache","disable_insert_age","disable_insert_via","local_uri_policy","logging","max_cache_size","max_content_size","min_content_size","name","remove_cookies","replacement_policy","sampling_enable","uri_policy","user_tag","uuid","verify_host",]
+
+REF_PROPERTIES = {
+    "logging": "/axapi/v3/slb/template/logging",
+}
 
 MODULE_NAME = "cache"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -52,6 +42,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/cache/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

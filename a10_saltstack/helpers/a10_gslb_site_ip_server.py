@@ -13,15 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ip_server_name",
-    "sampling_enable",
-    "uuid",
-    "site_name",
-]
+AVAILABLE_PROPERTIES = ["ip_server_name","sampling_enable","uuid","site_name",]
+
+REF_PROPERTIES = {
+    "ip_server_name": "/axapi/v3/gslb/service-ip",
+}
 
 MODULE_NAME = "ip-server"
+
+PARENT_KEYS = ["site_name",]
+
+CHILD_KEYS = ["ip-server-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,51 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "aflex",
-    "auth_portal",
-    "auth_portal_image",
-    "axdebug",
-    "bw_list",
-    "ca_cert",
-    "class_list",
-    "csr",
-    "debug_monitor",
-    "dnssec_dnskey",
-    "dnssec_ds",
-    "externalfilename",
-    "fixed_nat",
-    "fixed_nat_archive",
-    "geo_location",
-    "local_uri_file",
-    "lw_4o6",
-    "lw_4o6_binding_table_validation_log",
-    "merged_pcap",
-    "per_cpu",
-    "policy",
-    "profile",
-    "remote_file",
-    "running_config",
-    "saml_idp_name",
-    "ssl_cert",
-    "ssl_cert_key",
-    "ssl_crl",
-    "ssl_key",
-    "startup_config",
-    "status_check",
-    "store",
-    "store_name",
-    "syslog",
-    "tgz",
-    "thales_kmdata",
-    "thales_secworld",
-    "use_mgmt_port",
-    "wsdl",
-    "xml_schema",
-]
+AVAILABLE_PROPERTIES = ["aflex","auth_portal","auth_portal_image","axdebug","bw_list","ca_cert","class_list","csr","debug_monitor","dnssec_dnskey","dnssec_ds","externalfilename","fixed_nat","fixed_nat_archive","geo_location","local_uri_file","lw_4o6","lw_4o6_binding_table_validation_log","merged_pcap","per_cpu","policy","profile","remote_file","running_config","saml_idp_name","ssl_cert","ssl_cert_key","ssl_crl","ssl_key","startup_config","status_check","store","store_name","syslog","tgz","thales_kmdata","thales_secworld","use_mgmt_port","wsdl","xml_schema",]
+
+REF_PROPERTIES = {
+    "store": "/axapi/v3/export/store",
+}
 
 MODULE_NAME = "export"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

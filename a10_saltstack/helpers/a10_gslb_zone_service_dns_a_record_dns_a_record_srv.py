@@ -13,25 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "admin_ip",
-    "as_backup",
-    "as_replace",
-    "disable",
-    "no_resp",
-    "sampling_enable",
-    "static",
-    "svrname",
-    "ttl",
-    "uuid",
-    "weight",
-    "service_name",
-    "service_port",
-    "zone_name",
-]
+AVAILABLE_PROPERTIES = ["admin_ip","as_backup","as_replace","disable","no_resp","sampling_enable","static","svrname","ttl","uuid","weight","service_name","service_port","zone_name",]
+
+REF_PROPERTIES = {
+    "svrname": "/axapi/v3/gslb/service-ip",
+}
 
 MODULE_NAME = "dns-a-record-srv"
+
+PARENT_KEYS = ["service-name","service_port","zone_name",]
+
+CHILD_KEYS = ["svrname",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

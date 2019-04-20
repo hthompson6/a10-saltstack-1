@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ftp_enable",
-    "trans_eprt_to_port",
-    "trans_epsv_to_pasv",
-    "trans_lprt_to_port",
-    "trans_lpsv_to_pasv",
-    "uuid",
-    "xlat_no_trans_pasv",
-]
+AVAILABLE_PROPERTIES = ["ftp_enable","trans_eprt_to_port","trans_epsv_to_pasv","trans_lprt_to_port","trans_lpsv_to_pasv","uuid","xlat_no_trans_pasv",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ftp"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

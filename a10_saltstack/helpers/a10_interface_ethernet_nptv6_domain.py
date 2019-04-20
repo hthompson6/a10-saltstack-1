@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bind_type",
-    "domain_name",
-    "uuid",
-    "ethernet_ifnum",
-]
+AVAILABLE_PROPERTIES = ["bind_type","domain_name","uuid","ethernet_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "domain"
+
+PARENT_KEYS = ["ethernet_ifnum",]
+
+CHILD_KEYS = ["domain-name","bind-type",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

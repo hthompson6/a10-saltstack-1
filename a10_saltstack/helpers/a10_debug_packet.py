@@ -13,30 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "arp",
-    "count",
-    "detail",
-    "ethernet",
-    "icmp",
-    "icmpv6",
-    "interface",
-    "ip",
-    "ipv4ad",
-    "ipv6",
-    "ipv6ad",
-    "l3_protocol",
-    "l4_protocol",
-    "neighbor",
-    "port_range",
-    "tcp",
-    "udp",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["all","arp","count","detail","ethernet","icmp","icmpv6","interface","ip","ipv4ad","ipv6","ipv6ad","l3_protocol","l4_protocol","neighbor","port_range","tcp","udp","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "packet"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

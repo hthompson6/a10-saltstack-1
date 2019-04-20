@@ -13,24 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "apply_config",
-    "capture",
-    "count",
-    "delete_file_list",
-    "exit",
-    "filter_config",
-    "incoming_list",
-    "length",
-    "maxfile",
-    "outgoing_list",
-    "save_config",
-    "sess_filter_dis",
-    "timeout",
-]
+AVAILABLE_PROPERTIES = ["apply_config","capture","count","delete_file_list","exit","filter_config","incoming_list","length","maxfile","outgoing_list","save_config","sess_filter_dis","timeout",]
+
+REF_PROPERTIES = {
+    "capture": "/axapi/v3/axdebug/capture",
+    "filter_config": "/axapi/v3/axdebug/filter-config",
+}
 
 MODULE_NAME = "axdebug"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

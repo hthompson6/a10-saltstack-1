@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "delete",
-    "file_url",
-    "nimport",
-    "list",
-    "use_mgmt_port",
-    "admin_user",
-]
+AVAILABLE_PROPERTIES = ["delete","file_url","nimport","list","use_mgmt_port","admin_user",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ssh-pubkey"
+
+PARENT_KEYS = ["admin_user",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "threshold_cfg",
-    "update_interval",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["threshold_cfg","update_interval","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "environment"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

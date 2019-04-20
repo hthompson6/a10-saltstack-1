@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "kerberos_cfg",
-    "uuid",
-    "monitor_name",
-]
+AVAILABLE_PROPERTIES = ["kerberos_cfg","uuid","monitor_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "kerberos-kdc"
+
+PARENT_KEYS = ["monitor_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

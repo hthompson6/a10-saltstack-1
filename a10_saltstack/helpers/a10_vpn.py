@@ -13,26 +13,23 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "asymmetric_flow_support",
-    "error",
-    "fragment_after_encap",
-    "ike_gateway_list",
-    "ike_sa_timeout",
-    "ike_stats_global",
-    "ipsec_error_dump",
-    "ipsec_list",
-    "jumbo_fragment",
-    "nat_traversal_flow_affinity",
-    "revocation_list",
-    "sampling_enable",
-    "stateful_mode",
-    "tcp_mss_adjust_disable",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["asymmetric_flow_support","error","fragment_after_encap","ike_gateway_list","ike_sa_timeout","ike_stats_global","ipsec_error_dump","ipsec_list","jumbo_fragment","nat_traversal_flow_affinity","revocation_list","sampling_enable","stateful_mode","tcp_mss_adjust_disable","uuid",]
+
+REF_PROPERTIES = {
+    "error": "/axapi/v3/vpn/error",
+    "ike_gateway_list": "/axapi/v3/vpn/ike-gateway/{name}",
+    "ike_stats_global": "/axapi/v3/vpn/ike-stats-global",
+    "ipsec_list": "/axapi/v3/vpn/ipsec/{name}",
+    "revocation_list": "/axapi/v3/vpn/revocation/{name}",
+}
 
 MODULE_NAME = "vpn"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

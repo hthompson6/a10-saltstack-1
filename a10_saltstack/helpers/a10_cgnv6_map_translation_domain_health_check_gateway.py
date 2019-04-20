@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_list",
-    "ipv6_address_list",
-    "uuid",
-    "withdraw_route",
-    "domain_name",
-]
+AVAILABLE_PROPERTIES = ["address_list","ipv6_address_list","uuid","withdraw_route","domain_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "health-check-gateway"
+
+PARENT_KEYS = ["domain_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

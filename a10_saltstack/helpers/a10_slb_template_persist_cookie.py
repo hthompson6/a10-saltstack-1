@@ -13,31 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "cookie_name",
-    "domain",
-    "dont_honor_conn_rules",
-    "encrypt_level",
-    "encrypted",
-    "expire",
-    "httponly",
-    "insert_always",
-    "match_type",
-    "a10_name",
-    "pass_phrase",
-    "pass_thru",
-    "path",
-    "scan_all_members",
-    "secure",
-    "server",
-    "server_service_group",
-    "service_group",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["cookie_name","domain","dont_honor_conn_rules","encrypt_level","encrypted","expire","httponly","insert_always","match_type","name","pass_phrase","pass_thru","path","scan_all_members","secure","server","server_service_group","service_group","user_tag","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "cookie"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -54,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/slb/template/persist/cookie/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

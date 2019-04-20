@@ -13,28 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "abr_type_option",
-    "area_list",
-    "auto_cost_reference_bandwidth",
-    "bfd_all_interfaces",
-    "default_information",
-    "default_metric",
-    "distribute_internal_list",
-    "ha_standby_extra_cost",
-    "log_adjacency_changes",
-    "max_concurrent_dd",
-    "passive_interface",
-    "process_id",
-    "redistribute",
-    "router_id",
-    "timers",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["abr_type_option","area_list","auto_cost_reference_bandwidth","bfd_all_interfaces","default_information","default_metric","distribute_internal_list","ha_standby_extra_cost","log_adjacency_changes","max_concurrent_dd","passive_interface","process_id","redistribute","router_id","timers","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "area_list": "/axapi/v3/router/ipv6/ospf/{process-id}/area/{area-ipv4}+{area-num}",
+    "default_information": "/axapi/v3/router/ipv6/ospf/{process-id}/default-information",
+    "redistribute": "/axapi/v3/router/ipv6/ospf/{process-id}/redistribute",
+}
 
 MODULE_NAME = "ospf"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["process-id",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

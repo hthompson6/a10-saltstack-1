@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "encrypted",
-    "host",
-    "password",
-    "port",
-    "secret_string",
-    "username",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["encrypted","host","password","port","secret_string","username","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "proxy-server"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

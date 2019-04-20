@@ -13,17 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "commands",
-    "debug",
-    "nexec",
-    "stop_only",
-    "tacplus",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["commands","debug","nexec","stop_only","tacplus","uuid",]
+
+REF_PROPERTIES = {
+    "nexec": "/axapi/v3/accounting/exec",
+}
 
 MODULE_NAME = "accounting"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

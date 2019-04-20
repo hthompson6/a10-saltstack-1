@@ -1,3 +1,0 @@
-base:
-  '*':
-    - <name of statefile> 

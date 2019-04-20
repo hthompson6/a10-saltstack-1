@@ -13,17 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "gateway",
-    "lif",
-    "partition",
-    "segment",
-    "uuid",
-    "vtep_id",
-]
+AVAILABLE_PROPERTIES = ["gateway","lif","partition","segment","uuid","vtep_id",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "vni"
+
+PARENT_KEYS = ["vtep_id",]
+
+CHILD_KEYS = ["segment",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

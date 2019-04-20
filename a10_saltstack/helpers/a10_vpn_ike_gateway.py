@@ -13,35 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "auth_method",
-    "dh_group",
-    "dpd",
-    "enc_cfg",
-    "ike_version",
-    "key",
-    "key_passphrase",
-    "key_passphrase_encrypted",
-    "lifetime",
-    "local_address",
-    "local_cert",
-    "local_id",
-    "mode",
-    "a10_name",
-    "nat_traversal",
-    "preshare_key_encrypted",
-    "preshare_key_value",
-    "remote_address",
-    "remote_ca_cert",
-    "remote_id",
-    "sampling_enable",
-    "user_tag",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["auth_method","dh_group","dpd","enc_cfg","ike_version","key","key_passphrase","key_passphrase_encrypted","lifetime","local_address","local_cert","local_id","mode","name","nat_traversal","preshare_key_encrypted","preshare_key_value","remote_address","remote_ca_cert","remote_id","sampling_enable","user_tag","uuid","vrid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ike-gateway"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
@@ -58,6 +41,6 @@ def existing_url(**kwargs):
     # Build the format dictionary
     url_base = "/axapi/v3/vpn/ike-gateway/{name}"
     f_dict = {}
-    f_dict["name"] = kwargs["a10-name"]
+    f_dict["name"] = kwargs["name"]
 
     return url_base.format(**f_dict)

@@ -13,28 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "authentication_cfg",
-    "authentication_key",
-    "bfd_cfg",
-    "cost",
-    "database_filter_cfg",
-    "dead_interval",
-    "disable",
-    "hello_interval",
-    "message_digest_cfg",
-    "mtu",
-    "mtu_ignore",
-    "network",
-    "priority",
-    "retransmit_interval",
-    "transmit_delay",
-    "uuid",
-    "trunk_ifnum",
-]
+AVAILABLE_PROPERTIES = ["authentication_cfg","authentication_key","bfd_cfg","cost","database_filter_cfg","dead_interval","disable","hello_interval","message_digest_cfg","mtu","mtu_ignore","network","priority","retransmit_interval","transmit_delay","uuid","trunk_ifnum",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "ospf-global"
+
+PARENT_KEYS = ["trunk_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

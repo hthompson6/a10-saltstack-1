@@ -13,22 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
-    "action",
-    "broadcast_rate_limit",
-    "duplexity",
-    "flow_control",
-    "ip",
-    "ipv6",
-    "lldp",
-    "secondary_ip",
-    "speed",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["access_list","action","broadcast_rate_limit","duplexity","flow_control","ip","ipv6","lldp","secondary_ip","speed","uuid",]
+
+REF_PROPERTIES = {
+    "lldp": "/axapi/v3/interface/management/lldp",
+}
 
 MODULE_NAME = "management"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

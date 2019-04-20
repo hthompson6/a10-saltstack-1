@@ -13,27 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "dest_rule_list",
-    "dynamic_pool_size",
-    "inside_ip_list",
-    "method",
-    "nat_end_address",
-    "nat_ip_list",
-    "nat_netmask",
-    "nat_start_address",
-    "offset",
-    "partition",
-    "ports_per_user",
-    "respond_to_user_mac",
-    "session_quota",
-    "usable_nat_ports",
-    "uuid",
-    "vrid",
-]
+AVAILABLE_PROPERTIES = ["dest_rule_list","dynamic_pool_size","inside_ip_list","method","nat_end_address","nat_ip_list","nat_netmask","nat_start_address","offset","partition","ports_per_user","respond_to_user_mac","session_quota","usable_nat_ports","uuid","vrid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "iplist"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["inside-ip-list","partition",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

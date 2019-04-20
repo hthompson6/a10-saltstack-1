@@ -13,19 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "bgp",
-    "gateway",
-    "interface",
-    "route",
-    "trunk_cfg",
-    "uuid",
-    "vlan_cfg",
-    "vrid_val",
-]
+AVAILABLE_PROPERTIES = ["bgp","gateway","interface","route","trunk_cfg","uuid","vlan_cfg","vrid_val",]
+
+REF_PROPERTIES = {
+    "gateway": "/axapi/v3/vrrp-a/vrid/{vrid-val}/blade-parameters/tracking-options/gateway",
+}
 
 MODULE_NAME = "tracking-options"
+
+PARENT_KEYS = ["vrid_val",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

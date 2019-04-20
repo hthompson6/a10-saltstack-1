@@ -13,18 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "destination_ip_address_list",
-    "encap",
-    "host_list",
-    "id",
-    "source_ip_address",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["destination_ip_address_list","encap","host_list","id","source_ip_address","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "destination_ip_address_list": "/axapi/v3/overlay-tunnel/vtep/{id}/destination-ip-address/{ip-address}",
+    "host_list": "/axapi/v3/overlay-tunnel/vtep/{id}/host/{ip-addr}+{overlay-mac-addr}+{vni}+{destination-vtep}",
+    "source_ip_address": "/axapi/v3/overlay-tunnel/vtep/{id}/source-ip-address",
+}
 
 MODULE_NAME = "vtep"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["id",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

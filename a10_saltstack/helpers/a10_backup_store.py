@@ -13,13 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "creat_cfg",
-    "delete_cfg",
-]
+AVAILABLE_PROPERTIES = ["creat_cfg","delete_cfg",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "store"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

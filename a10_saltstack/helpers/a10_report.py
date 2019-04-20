@@ -13,12 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "debug",
-]
+AVAILABLE_PROPERTIES = ["debug",]
+
+REF_PROPERTIES = {
+    "debug": "/axapi/v3/report/debug",
+}
 
 MODULE_NAME = "report"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

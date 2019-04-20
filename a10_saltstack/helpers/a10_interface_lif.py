@@ -13,21 +13,21 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "access_list",
-    "action",
-    "bfd",
-    "ifnum",
-    "ip",
-    "isis",
-    "mtu",
-    "sampling_enable",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["access_list","action","bfd","ifnum","ip","isis","mtu","sampling_enable","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "bfd": "/axapi/v3/interface/lif/{ifnum}/bfd",
+    "ip": "/axapi/v3/interface/lif/{ifnum}/ip",
+    "isis": "/axapi/v3/interface/lif/{ifnum}/isis",
+}
 
 MODULE_NAME = "lif"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["ifnum",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

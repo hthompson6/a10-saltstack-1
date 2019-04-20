@@ -13,20 +13,25 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "check_now",
-    "checknow",
-    "config_list",
-    "info",
-    "proxy_server",
-    "reset",
-    "revert",
-    "use_mgmt_port",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["check_now","checknow","config_list","info","proxy_server","reset","revert","use_mgmt_port","uuid",]
+
+REF_PROPERTIES = {
+    "check_now": "/axapi/v3/automatic-update/check-now",
+    "checknow": "/axapi/v3/automatic-update/checknow",
+    "config_list": "/axapi/v3/automatic-update/config/{feature-name}",
+    "info": "/axapi/v3/automatic-update/info",
+    "proxy_server": "/axapi/v3/automatic-update/proxy-server",
+    "reset": "/axapi/v3/automatic-update/reset",
+    "revert": "/axapi/v3/automatic-update/revert",
+}
 
 MODULE_NAME = "automatic-update"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

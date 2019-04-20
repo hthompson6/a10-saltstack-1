@@ -13,18 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "gslb",
-    "slb",
-    "slb_change",
-    "snmp",
-    "uuid",
-    "vrrp_a",
-]
+AVAILABLE_PROPERTIES = ["all","gslb","slb","slb_change","snmp","uuid","vrrp_a",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "traps"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

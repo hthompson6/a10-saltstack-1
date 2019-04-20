@@ -13,25 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "algorithm",
-    "combinations_limit",
-    "dnskey_ttl_k",
-    "dnskey_ttl_v",
-    "dnssec_temp_name",
-    "dnssec_template_ksk",
-    "dnssec_template_zsk",
-    "enable_nsec3",
-    "hsm",
-    "return_nsec_on_failure",
-    "signature_validity_period_k",
-    "signature_validity_period_v",
-    "user_tag",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["algorithm","combinations_limit","dnskey_ttl_k","dnskey_ttl_v","dnssec_temp_name","dnssec_template_ksk","dnssec_template_zsk","enable_nsec3","hsm","return_nsec_on_failure","signature_validity_period_k","signature_validity_period_v","user_tag","uuid",]
+
+REF_PROPERTIES = {
+    "hsm": "/axapi/v3/hsm/template",
+}
 
 MODULE_NAME = "template"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["dnssec-temp-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

@@ -13,16 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ca",
-    "cert_name",
-    "crl",
-    "csr",
-    "private_key",
-]
+AVAILABLE_PROPERTIES = ["ca","cert_name","crl","csr","private_key",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "delete"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

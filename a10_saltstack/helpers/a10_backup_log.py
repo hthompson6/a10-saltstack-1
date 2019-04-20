@@ -13,23 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "all",
-    "date",
-    "day",
-    "expedite",
-    "month",
-    "password",
-    "period",
-    "remote_file",
-    "stats_data",
-    "store_name",
-    "use_mgmt_port",
-    "week",
-]
+AVAILABLE_PROPERTIES = ["all","date","day","expedite","month","password","period","remote_file","stats_data","store_name","use_mgmt_port","week",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "log"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

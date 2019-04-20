@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "daily",
-    "day_time",
-    "feature_name",
-    "schedule",
-    "uuid",
-    "week_day",
-    "week_time",
-    "weekly",
-]
+AVAILABLE_PROPERTIES = ["daily","day_time","feature_name","schedule","uuid","week_day","week_time","weekly",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "config"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["feature-name",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

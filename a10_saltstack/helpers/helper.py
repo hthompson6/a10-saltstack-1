@@ -1,4 +1,4 @@
-# Copyright 2019 A10 Networks
+#p Copyright 2019 A10 Networks
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,31 +15,51 @@
 import a10_saltstack
 import importlib
 
-oper_enum = ['create', 'update', 'delete']
 
-
-def get_url(a10_obj, oper, **kwargs):
-    if oper not in oper_enum:
-        return None
-
+def new_url(a10_obj, **kwargs):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
 
-    if oper != 'create':
-        return obj_module.existing_url(**kwargs)
-    else:
-        return obj_module.new_url(**kwargs)
+    return obj_module.new_url(**kwargs)
 
 
-def get_props(a10_obj, **kwargs):
+def existing_url(a10_obj, **kwargs):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.existing_url(**kwargs)
+
+
+def get_props(a10_obj):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
  
     return obj_module.AVAILABLE_PROPERTIES
 
 
+def get_parent_keys(a10_obj):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.PARENT_KEYS
+
+
+def get_child_keys(a10_obj):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.CHILD_KEYS
+
+
+def get_ref_props(a10_obj):
+    obj_module = importlib.import_module(
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+
+    return obj_module.REF_PROPERTIES
+
+
 def get_obj_type(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.a10_{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.MODULE_NAME

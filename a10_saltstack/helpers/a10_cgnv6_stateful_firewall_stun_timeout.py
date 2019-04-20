@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "port",
-    "port_end",
-    "stun_timeout_val_port_range",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["port","port_end","stun_timeout_val_port_range","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "stun-timeout"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = ["port","port-end",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

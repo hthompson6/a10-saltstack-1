@@ -13,19 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action",
-    "dest_class_list",
-    "priority",
-    "sampling_enable",
-    "ntype",
-    "uuid",
-    "name",
-    "policy_name",
-]
+AVAILABLE_PROPERTIES = ["action","dest_class_list","priority","sampling_enable","ntype","uuid","name","policy_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "class-list"
+
+PARENT_KEYS = ["name","policy_name",]
+
+CHILD_KEYS = ["dest-class-list",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

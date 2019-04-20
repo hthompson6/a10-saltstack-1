@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "respond_to_user_mac",
-    "sampling_enable",
-    "stateful_firewall_value",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["respond_to_user_mac","sampling_enable","stateful_firewall_value","uuid",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "global"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

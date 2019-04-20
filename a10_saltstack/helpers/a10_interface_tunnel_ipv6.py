@@ -13,17 +13,20 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_cfg",
-    "ipv6_enable",
-    "ospf",
-    "router",
-    "uuid",
-    "tunnel_ifnum",
-]
+AVAILABLE_PROPERTIES = ["address_cfg","ipv6_enable","ospf","router","uuid","tunnel_ifnum",]
+
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/tunnel/{ifnum}/ipv6/ospf",
+    "router": "/axapi/v3/interface/tunnel/{ifnum}/ipv6/router",
+}
 
 MODULE_NAME = "ipv6"
+
+PARENT_KEYS = ["tunnel_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

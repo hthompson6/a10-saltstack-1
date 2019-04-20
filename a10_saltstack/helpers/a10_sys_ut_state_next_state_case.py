@@ -13,18 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "action_list",
-    "case_number",
-    "repeat",
-    "user_tag",
-    "uuid",
-    "name",
-    "state_name",
-]
+AVAILABLE_PROPERTIES = ["action_list","case_number","repeat","user_tag","uuid","name","state_name",]
+
+REF_PROPERTIES = {
+    "action_list": "/axapi/v3/sys-ut/state/{name}/next-state/{name}/case/{case-number}/action/{direction}",
+}
 
 MODULE_NAME = "case"
+
+PARENT_KEYS = ["name","state_name",]
+
+CHILD_KEYS = ["case-number",]
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

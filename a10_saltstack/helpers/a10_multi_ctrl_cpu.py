@@ -13,12 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "num_ctrl_cpus",
-]
+AVAILABLE_PROPERTIES = ["num_ctrl_cpus",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "multi-ctrl-cpu"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

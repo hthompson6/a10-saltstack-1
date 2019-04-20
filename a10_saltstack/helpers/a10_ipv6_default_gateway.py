@@ -13,13 +13,19 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "ipv6_default_gateway",
-    "uuid",
-]
+AVAILABLE_PROPERTIES = ["ipv6_default_gateway","uuid",]
+
+REF_PROPERTIES = {
+    "ipv6_default_gateway": "/axapi/v3/ipv6/address",
+}
 
 MODULE_NAME = "default-gateway"
+
+PARENT_KEYS = []
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

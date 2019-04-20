@@ -13,14 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "local_type",
-    "uuid",
-    "zone_name",
-]
+AVAILABLE_PROPERTIES = ["local_type","uuid","zone_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "local-zone-cfg"
+
+PARENT_KEYS = ["zone_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

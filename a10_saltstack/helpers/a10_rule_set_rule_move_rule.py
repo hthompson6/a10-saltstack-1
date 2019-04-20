@@ -13,15 +13,18 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "location",
-    "target_rule",
-    "name",
-    "rule_set_name",
-]
+AVAILABLE_PROPERTIES = ["location","target_rule","name","rule_set_name",]
+
+REF_PROPERTIES = {
+}
 
 MODULE_NAME = "move-rule"
+
+PARENT_KEYS = ["name","rule_set_name",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""

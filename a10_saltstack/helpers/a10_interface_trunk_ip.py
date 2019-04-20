@@ -13,30 +13,22 @@
 # limitations under the License.
 
 
-
 # Hacky way of having access to object properties for evaluation
-AVAILABLE_PROPERTIES = [    "address_list",
-    "allow_promiscuous_vip",
-    "cache_spoofing_port",
-    "client",
-    "dhcp",
-    "generate_membership_query",
-    "helper_address_list",
-    "max_resp_time",
-    "nat",
-    "ospf",
-    "query_interval",
-    "rip",
-    "router",
-    "server",
-    "slb_partition_redirect",
-    "stateful_firewall",
-    "ttl_ignore",
-    "uuid",
-    "trunk_ifnum",
-]
+AVAILABLE_PROPERTIES = ["address_list","allow_promiscuous_vip","cache_spoofing_port","client","dhcp","generate_membership_query","helper_address_list","max_resp_time","nat","ospf","query_interval","rip","router","server","slb_partition_redirect","stateful_firewall","ttl_ignore","uuid","trunk_ifnum",]
+
+REF_PROPERTIES = {
+    "ospf": "/axapi/v3/interface/trunk/{ifnum}/ip/ospf",
+    "rip": "/axapi/v3/interface/trunk/{ifnum}/ip/rip",
+    "router": "/axapi/v3/interface/trunk/{ifnum}/ip/router",
+    "stateful_firewall": "/axapi/v3/interface/trunk/{ifnum}/ip/stateful-firewall",
+}
 
 MODULE_NAME = "ip"
+
+PARENT_KEYS = ["trunk_ifnum",]
+
+CHILD_KEYS = []
+
 
 def new_url(**kwargs):
     """Return the URL for creating a resource"""
