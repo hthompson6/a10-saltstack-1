@@ -22,11 +22,6 @@ from a10_saltstack.forest.nodes import InterNode
 from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
-# DELETE THIS
-from a10_saltstack.client import axapi_http as ax_http
-from a10_saltstack.client import session as ax_sess
-from a10_saltstack.client import client as ax_cli
-
 
 def _build_envelope(title, data):
     return {
@@ -95,9 +90,24 @@ def _build_obj_dict(forest_node, ref):
     return forest_node.val_dict
 
 
-def parse_obj(a10_obj_type, op_type, client, **kwargs):
+def parse_obj(a10_obj_type, op_type, client, *args):
+    '''
+    Passes configuration onto processing functions. Preforms
+    CRUD calls per object.
+
+    Args:
+        a10_obj_type (string): Root ACOS object being operated on
+        op_type (string): config api to access
+        client (object): AXAPI REST client 
+        *args: list of values and child objects of root object 
+    '''
     a10_obj = '{}_{}'.format(op_type, a10_obj_type)
-    root = obj_tree.parse_tree(a10_obj, kwargs)
+
+    tree_dict = {}
+    for k in args:
+        tree_dict.update(k)
+
+    root = obj_tree.parse_tree(a10_obj, tree_dict)
     forest_list = [root]
 
     forest = ForestGen()

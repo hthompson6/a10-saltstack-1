@@ -31,7 +31,8 @@ def extract_modname(url):
 def parse_tree(a10_obj, tree_obj):
     a10_obj = 'a10_{}'.format(a10_obj)
 
-    root = RootNode(tree_obj['a10_name'], a10_obj)
+    
+    root = RootNode(None, a10_obj)
     altered_tree = dfs_transform(tree_obj)
 
     root_vals = {}
@@ -110,4 +111,5 @@ def dfs_transform(obj):
         if type(v) == OrderedDict:
            new_dict.update(dfs_transform(v)) 
            obj[k] = new_dict
+
     return obj
