@@ -48,11 +48,11 @@ def _dfs_cut(config, refNode=None):
         the highest nodes and right side has the lowest nodes.
     '''
 
-    if type(config) != dict:
+    if not isinstance(config, dict):
         return
 
     vals = list(config.values())
-    if len(vals) == 1 and type(vals[0]) != dict:
+    if len(vals) == 1 and not isinstance(vals[0], dict):
         return
 
     if refNode:
@@ -71,7 +71,7 @@ def _dfs_cut(config, refNode=None):
                     inNode.addChild(child)
             node_list.append(inNode)
 
-        elif type(v) == dict:
+        elif isinstance(v, dict):
             tempNode = ObjNode(k, **v)
             child_obj_list = _dfs_cut(v, refNode)
             if child_obj_list:
@@ -96,11 +96,11 @@ def _dfs_transform(config):
     config = dict(config)
     for k,v in config.items():
         new_dict = {}
-        if type(v) == list:
+        if isinstance(v, list):
            for i in v:
                new_dict.update(_dfs_transform(i))
            config[k] = new_dict
-        if type(v) == OrderedDict:
+        elif isinstance(v, OrderedDict):
            new_dict.update(_dfs_transform(v)) 
            config[k] = new_dict
 
@@ -132,7 +132,7 @@ def parse_tree(a10_obj, config):
             root.id = v
         elif k == "a10_obj":
             root.ref = a10_obj
-        elif type(v) != dict and k != "name":
+        elif not isinstance(v, dict) and k != "name":
             root_vals[k] = v
 
     root.addValDict(**root_vals)

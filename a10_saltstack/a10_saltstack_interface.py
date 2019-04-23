@@ -121,7 +121,7 @@ def _build_obj_dict(tree_node, ref):
     pk = 0
     tempNode = tree_node.parent
     while pk < len(parent_keys) and tempNode != None:
-        if type(tempNode) != InterNode:
+        if not isinstance(tempNode, InterNode):
             tree_node.val_dict[parent_keys[pk]] = tempNode.id
             pk += 1
         tempNode = tempNode.parent
@@ -160,9 +160,9 @@ def parse_config(a10_obj_type, api, client, *args):
 
     obj_dict_list = []
     for tree in forest_list:
-        if type(tree) == InterNode:
+        if isinstance(tree, InterNode):
             for child in tree.children:
-                if type(child) != InterNode:
+                if not isinstance(child, InterNode):
                     obj_dict_list.append(_build_obj_dict(child, tree.ref))
         else:
             obj_dict_list.append(_build_obj_dict(tree, tree.ref))

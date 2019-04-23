@@ -30,6 +30,6 @@ class ForestGen(object):
         '''
         if tree_node.children:
             for child in tree_node.children:
-                if type(child) == InterNode:
+                if isinstance(child, InterNode):
                     self.node_list.append(child)
                 self.dfs_cut(child)
