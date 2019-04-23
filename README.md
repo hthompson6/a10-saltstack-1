@@ -9,17 +9,19 @@ a10-salstack is a set of Saltstack modules and example playbooks for interacting
 ## Installation
 a10-saltstack is distributed as a Python package. It can be installed from the Github repository. It is assumed that saltstack is already installed and configured.
 
+## Requirements
+The salt modules have mvoed from a10-saltstack to a fork of the salt repo. That fork can be found here: https://github.com/a10networks/salt/tree/a10_salt
+
 ### Github Installation
 ```console
-$ git clone https://github.com/a10networks/a10-saltstack
+$ git clone https://github.com/a10networks/salt
+$ cd salt
+$ git checkout a10_salt
 $ mkdir /srv/salt
-$ ln -s ~/a10-saltstack/a10_saltstack/_states /srv/salt/_states
-$ ln -s ~/a10-saltstack/a10_saltstack/_proxy /srv/salt/_proxy
-$ ln -s ~/a10-saltstack/a10_saltstack/_modules /srv/salt/_modules
+$ ln -s ~/salt/salt/states /srv/salt/_states
+$ ln -s ~/salt/salt/proxy /srv/salt/_proxy
+$ ln -s ~/salt/salt/modules /srv/salt/_modules
 ```
-
-## Example State Files
-Please see (https://github.com/a10networks/a10-saltstack/tree/master/examples/states) for example states.
 
 ## Example/Dev Setup Guide (Ubuntu)
 
@@ -30,34 +32,48 @@ Please see (https://github.com/a10networks/a10-saltstack/tree/master/examples/st
 1. Install the necessary packages:  
 `sudo apt-get install salt-api; sudo apt-get install salt-cloud; sudo apt-get install salt-master; sudo apt-get install salt-ssh; sudo apt-get install salt-syndic`
 
-2. Clone this repository:  
-`git clone git@github.com:a10networks/a10-saltstack.git`
+2. Clone the a10 salt repository:  
+`git clone https://github.com/a10networks/salt`
 
-3. Pip install the repo:
-`cd a10-saltstack; sudo pip install -e .`
-
-4. On the master, create the salt directory:  
+3. On the master, create the salt directory:  
 `sudo mkdir /srv/salt` 
 
-5. Link the pillar dir to the srv directory:  
-`sudo ln -s ~/a10-saltstack/a10_saltstack/pillar /srv/pillar`
+4. Create pillar directory and step into it:  
+`mkdir /srv/pillar; cd /srv/pillar`
 
-6. Link the _proxy dir to the salt directory:  
-`sudo ln -s ~/a10-saltstack/a10_saltstack/_proxy /srv/salt/_proxy`
+5. Create `a10.sls` and `top.sls` files:  
+`touch a10.sls top.sls`
 
-7. Link the _modules dir to the salt directory:  
-`sudo ln -s ~/a10-saltstack/a10_saltstack/_modules /srv/salt/_modules` 
+6. Add the following to `a10.sls` with information filled in:
+```proxy:
+  proxytype: a10
+  host: <ip or dns name of host>
+  username: <username>
+  port: <port number>
+  protocol: <https, https, tcp, etc.>
+  password: <supersecret>
+```
 
-8. Link the _states dir to the salt directory:  
-`sudo ln -s ~/a10-saltstack/a10_saltstack/_states /srv/salt/_states`
+7. Add the following to `top.sls`:
+```
+base:
+  'a10':
+    - a10
+```
 
-9. Link the state file dir to the salt directory:  
-`sudo ln -s ~/a10-saltstack/examples/states /srv/salt/states`
+5. Link the proxy dir to the srv directory:  
+`sudo ln -s ~/salt/salt/proxy /srv/salt/_proxy`
 
-10. Ensure that the master is running:  
+6. Link the modules dir to the srv directory:  
+`sudo ln -s ~/salt/salt/modules /srv/salt/_modules` 
+
+7. Link the states dir to the srv directory:  
+`sudo ln -s ~/salt/salt/states /srv/salt/_states`
+
+8. Ensure that the master is running:  
 `sudo service salt-master restart`
 
-11. (Executed after proxy minion is configured an running to accept key):  
+10. (Executed after proxy minion is configured an running to accept key):  
 `sudo salt-key -y -a a10`
 
 ### Proxy Minion Server Configuration
@@ -80,7 +96,7 @@ Please see (https://github.com/a10networks/a10-saltstack/tree/master/examples/st
 
 
 ## Bug Reporting and Feature Requests
-Please submit bug reports and feature requests via GitHub issues. When reporting bugs, please include the playbook that demonstrates the bug and the Saltstack output. Stack traces are always nice, but state files work well. Please ensure any sensitive information is redacted as Issues and Pull Requests are publicly viewable.
+Please submit bug reports and feature requests via GitHub issues. When reporting bugs, please include the statefile that demonstrates the bug and the Saltstack output. Stack traces are always nice, but state files work well. Please ensure any sensitive information is redacted as Issues and Pull Requests are publicly viewable.
 
 ## Contact
 If you have a question that cannot be submitted via Github Issues, please email openstack-dl@a10networks.com with "a10-saltstack" in the subject line. 
