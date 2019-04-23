@@ -93,7 +93,7 @@ def _build_json(title, avail_props, **kwargs):
     return _build_envelope(title, rv)
 
 
-def _build_obj_dict(forest_node, ref):
+def _build_obj_dict(tree_node, ref):
     '''
     Resolves url parameters using id of the current node
     and its parents.
@@ -105,7 +105,7 @@ def _build_obj_dict(forest_node, ref):
     from lowest to highest in the tree. So, iteration occurs from left to right over the array.
 
     Args:
-        forest_node (object): tree node
+        tree_node (object): an arbitrary node of the tree 
         ref (string): refrence module
 
     Returns (dict):
@@ -115,42 +115,42 @@ def _build_obj_dict(forest_node, ref):
     parent_keys = a10_helper.get_parent_keys(ref)
 
     for ck in child_keys:
-        if ck not in forest_node.val_dict:
-            forest_node.val_dict[ck] = forest_node.id
+        if ck not in tree_node.val_dict:
+            tree_node.val_dict[ck] = tree_node.id
 
     pk = 0
-    tempNode = forest_node.parent
+    tempNode = tree_node.parent
     while pk < len(parent_keys) and tempNode != None:
-        if type(tempNode) != InterNode:
-            forest_node.val_dict[parent_keys[pk]] = tempNode.id
+        if not isinstance(tempNode, InterNode):
+            tree_node.val_dict[parent_keys[pk]] = tempNode.id
             pk += 1
         tempNode = tempNode.parent
 
-    forest_node.val_dict['ref'] = ref 
-    return forest_node.val_dict
+    tree_node.val_dict['ref'] = ref 
+    return tree_node.val_dict
 
 
-def parse_obj(a10_obj_type, op_type, client, *args):
+def parse_config(a10_obj_type, config_api, client, *args):
     '''
     Passes configuration onto processing functions. Preforms
     CRUD calls per object.
 
     Args:
         a10_obj_type (string): root ACOS object being operated on
-        op_type (string): config api to access
+        config_api (string): config api to access
         client (object): AXAPI REST client 
         *args: list of values and child objects of root object 
 
     Returns (dict):
         post/delete results 
     '''
-    a10_obj = '{}_{}'.format(op_type, a10_obj_type)
+    a10_obj = '{}_{}'.format(config_api, a10_obj_type)
 
-    tree_dict = {}
+    config = {}
     for k in args:
-        tree_dict.update(k)
+        config.update(k)
 
-    root = obj_tree.parse_tree(a10_obj, tree_dict)
+    root = obj_tree.parse_tree(a10_obj, config)
     forest_list = [root]
 
     forest = ForestGen()
@@ -160,9 +160,9 @@ def parse_obj(a10_obj_type, op_type, client, *args):
 
     obj_dict_list = []
     for tree in forest_list:
-        if type(tree) == InterNode:
+        if isinstance(tree, InterNode):
             for child in tree.children:
-                if type(child) != InterNode:
+                if not isinstance(child, InterNode):
                     obj_dict_list.append(_build_obj_dict(child, tree.ref))
         else:
             obj_dict_list.append(_build_obj_dict(tree, tree.ref))

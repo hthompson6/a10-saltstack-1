@@ -20,16 +20,16 @@ class ForestGen(object):
     def __init__(self):
         self.node_list = []
 
-    def dfs_cut(self, obj):
+    def dfs_cut(self, tree_node):
         '''
         This iterates over the tree and creates
         a list of intermediate nodes.
 
         Args:
-            obj (object): tree node
+            tree_node (object): an arbitrary node of the tree 
         '''
-        if obj.children:
-            for child in obj.children:
-                if type(child) == InterNode:
+        if tree_node.children:
+            for child in tree_node.children:
+                if isinstance(child, InterNode):
                     self.node_list.append(child)
                 self.dfs_cut(child)
