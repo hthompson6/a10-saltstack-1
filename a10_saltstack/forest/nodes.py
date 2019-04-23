@@ -51,8 +51,12 @@ class RootNode(ObjNode):
 
 class InterNode(ObjNode):
 
-    def __init__(self, ref):
+    def __init__(self, ref, **kwargs):
         self.parent = None
         self.children = []
-
+        self.val_dict = {}
         self.ref = ref
+
+        for k,v in kwargs.items():
+            if type(v) != dict and type(v) != list:
+                self.val_dict[k] = v

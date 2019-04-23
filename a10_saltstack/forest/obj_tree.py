@@ -20,6 +20,8 @@ import re
 from a10_saltstack.helpers import helper as a10_helper
 from a10_saltstack.forest.nodes import InterNode, ObjNode, RootNode
 
+import logging
+LOG = logging.getLogger(__file__)
 
 def _extract_modname(url):
     '''
@@ -64,7 +66,7 @@ def _dfs_cut(config, refNode=None):
     for k,v in config.items():
         if k in ref_props:
             mod_fqdn = _extract_modname(ref_props[k])
-            inNode = InterNode(mod_fqdn)
+            inNode = InterNode(mod_fqdn, **v)
             child_obj_list = _dfs_cut(v, inNode)
             if child_obj_list:
                 for child in child_obj_list:

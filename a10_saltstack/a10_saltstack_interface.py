@@ -22,6 +22,8 @@ from a10_saltstack.forest.nodes import InterNode
 from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
+import logging
+LOG = logging.getLogger(__file__)
 
 def _build_envelope(title, data):
     return {
@@ -164,6 +166,8 @@ def parse_config(a10_obj_type, config_api, client, *args):
             for child in tree.children:
                 if not isinstance(child, InterNode):
                     obj_dict_list.append(_build_obj_dict(child, tree.ref))
+                else:
+                    obj_dict_list.append(_build_obj_dict(child, child.ref))
         else:
             obj_dict_list.append(_build_obj_dict(tree, tree.ref))
 
