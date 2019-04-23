@@ -34,6 +34,16 @@ def _to_axapi(key):
 
 
 def _build_dict_from_param(param):
+    '''
+    Converts the underscores of each dictionary key to dashes
+    using the _to_axapi helper function.
+
+    Args:
+        param (dict): dictionary to be sanitized 
+
+    Returns (dict):
+        Sanitized dictionary
+    '''
     rv = {}
 
     for k, v in param.items():
@@ -51,6 +61,19 @@ def _build_dict_from_param(param):
 
 
 def _build_json(title, avail_props, **kwargs):
+    '''
+    Builds a json object from the provided kwargs using
+    the provided property list.
+
+    Args:
+        title (string): generic name of the ACOS object
+        avail_props (list): propeties of the ACOS object
+        **kwargs: arbitrary values that make up the given ACOS object
+
+    Returns (dict):
+        JSON parsable dict that matches the format of the
+        expected payload for the given ACOS object.
+    '''
     rv = {}
 
     for x in avail_props:
@@ -71,6 +94,23 @@ def _build_json(title, avail_props, **kwargs):
 
 
 def _build_obj_dict(forest_node, ref):
+    '''
+    Resolves url parameters using id of the current node
+    and its parents.
+
+    /url/entry/{parent1_name}/more/{parent2_name}/path/{child_name}+{child_val}
+
+    As parent 1 is higher on the tree than parent 2, iteration needs to start from the
+    tail end of the url and up towards the beginning. However, the keys have been stored
+    from lowest to highest in the tree. So, iteration occurs from left to right over the array.
+
+    Args:
+        forest_node (object): tree node
+        ref (string): refrence module
+
+    Returns (dict):
+        Configuration values of a given ACOS object 
+    '''
     child_keys = a10_helper.get_child_keys(ref)
     parent_keys = a10_helper.get_parent_keys(ref)
 
@@ -96,10 +136,13 @@ def parse_obj(a10_obj_type, op_type, client, *args):
     CRUD calls per object.
 
     Args:
-        a10_obj_type (string): Root ACOS object being operated on
+        a10_obj_type (string): root ACOS object being operated on
         op_type (string): config api to access
         client (object): AXAPI REST client 
         *args: list of values and child objects of root object 
+
+    Returns (dict):
+        post/delete results 
     '''
     a10_obj = '{}_{}'.format(op_type, a10_obj_type)
 

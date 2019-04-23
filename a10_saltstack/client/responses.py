@@ -205,6 +205,19 @@ def raise_axapi_auth_error(response, method, api_url, headers):
 
 
 def raise_axapi_ex(response, method, api_url):
+    '''
+    Attempts to match the given response against known error codes.
+
+    Args:
+        response (dict): JSON response from AXAPI
+        method (string): POST/GET/DELETE/PUT
+        api_url (string): API endpoint
+
+    Raises:
+        ACOS exception
+
+    Returns (None):
+    '''
     if 'response' in response and 'err' in response['response']:
         code = response['response']['err']['code']
 
