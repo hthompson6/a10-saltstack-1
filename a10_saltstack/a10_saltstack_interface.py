@@ -118,7 +118,8 @@ def _build_obj_dict(tree_node, ref):
 
     for ck in child_keys:
         if ck not in tree_node.val_dict:
-            tree_node.val_dict[ck] = tree_node.id
+            if not isinstance(tree_node, InterNode):
+                tree_node.val_dict[ck] = tree_node.id
 
     pk = 0
     tempNode = tree_node.parent
@@ -167,7 +168,11 @@ def parse_config(a10_obj_type, config_api, client, *args):
                 if not isinstance(child, InterNode):
                     obj_dict_list.append(_build_obj_dict(child, tree.ref))
                 else:
-                    obj_dict_list.append(_build_obj_dict(child, child.ref))
+                    val_dict = _build_obj_dict(child, child.ref)
+                    # Need something more than just a ref
+                    if val_dict and len(val_dict) > 1:
+                        obj_dict_list.append(val_dict)
+                      
         else:
             obj_dict_list.append(_build_obj_dict(tree, tree.ref))
 
@@ -213,6 +218,8 @@ def parse_config(a10_obj_type, config_api, client, *args):
         try:
             need_update = False
             resp = client.get(existing_url)
+            if not resp:
+                raise a10_ex.NotFound 
             for k,v in a10_obj_fin.items():
                if k.replace('_', '-') in resp[obj_type]:
                     if v != resp[obj_type][k.replace('_', '-')]:
