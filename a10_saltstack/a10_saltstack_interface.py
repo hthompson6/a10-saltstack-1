@@ -130,21 +130,21 @@ def _build_obj_dict(tree_node, ref):
     return tree_node.val_dict
 
 
-def parse_config(a10_obj_type, api, client, *args):
+def parse_config(a10_obj_type, config_api, client, *args):
     '''
     Passes configuration onto processing functions. Preforms
     CRUD calls per object.
 
     Args:
         a10_obj_type (string): root ACOS object being operated on
-        api (string): config api to access
+        config_api (string): config api to access
         client (object): AXAPI REST client 
         *args: list of values and child objects of root object 
 
     Returns (dict):
         post/delete results 
     '''
-    a10_obj = '{}_{}'.format(api, a10_obj_type)
+    a10_obj = '{}_{}'.format(config_api, a10_obj_type)
 
     config = {}
     for k in args:
