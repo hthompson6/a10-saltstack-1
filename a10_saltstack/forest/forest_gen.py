@@ -22,8 +22,11 @@ class ForestGen(object):
 
     def dfs_cut(self, obj):
         '''
-        This iterates over the tree and extracts
-        refrence objects out of it
+        This iterates over the tree and creates
+        a list of intermediate nodes.
+
+        Args:
+            obj (object): tree node
         '''
         if obj.children:
             for child in obj.children:
