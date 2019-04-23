@@ -29,6 +29,18 @@ def extract_modname(url):
 
 
 def parse_tree(a10_obj, tree_obj):
+    '''
+    Converts the given configuration into a tree using
+    the dfs_cut and dfs_transform helper functions. Creates a
+    root node to which the rest of the configuration tree is attached.
+
+    Args:
+        a10_obj (string):
+        tree_obj (OrderedDict): 
+
+    Returns (object):
+        Root node of the tree 
+    '''
     a10_obj = 'a10_{}'.format(a10_obj)
 
     
@@ -57,8 +69,15 @@ def parse_tree(a10_obj, tree_obj):
 
 def dfs_cut(obj, refNode=None):
     '''
-    This iterates over the tree and extracts
-    refrence objects out of it
+    This iterates over the tree and converts the dictionaries
+    into nodes of a tree.
+
+    Args:
+        obj (dict): configuration data
+
+    Returns (list):
+        List comprised of each node in the tree. Left side has
+        the highest nodes and right side has the lowest nodes.
     '''
 
     if type(obj) != dict:
@@ -97,9 +116,14 @@ def dfs_cut(obj, refNode=None):
 
 def dfs_transform(obj):
     '''
-    This is used to turn the OrderedDicts
-    into normal dicts, and extract lists
-    into dicts
+    This is used to turn the OrderedDicts into normal dicts, and extract lists
+    into dicts.
+
+    Args:
+        obj (OrderedDict): configuration data
+
+    Returns (dict):
+        Configuration data
     '''
     obj = dict(obj)
     for k,v in obj.items():

@@ -58,6 +58,24 @@ class HttpClient(object):
 
     def request(self, method, api_url, params={}, headers=None,
                 file_name=None, file_content=None, axapi_args=None, **kwargs):
+        '''
+        Preforms HTTP/HTTPS requests against the AXAPI.
+
+        Args:
+            method (string): POST/GET/PUT/DELETE
+            api_url (string): API endpoint
+            **kwargs: arbitrary keyword arguments
+
+        Kwargs:
+            params (dict): payload
+            headers (dict): HTTP headers
+            file_name (string): name of the file for ftp
+            file_contents (object): file to be uploaded
+            axapi_args (dict): extra axapi arguments
+
+        Returns (dict):
+            JSON response from the AXAPI
+        '''
         LOG.debug("axapi_http: full url = %s", self.url_base + api_url)
         LOG.debug("axapi_http: %s url = %s", method, api_url)
 
