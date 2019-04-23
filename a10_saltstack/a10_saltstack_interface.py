@@ -40,6 +40,9 @@ def _build_dict_from_param(param):
 
     Args:
         param (dict): dictionary to be sanitized 
+
+    Returns (dict):
+        Sanitized dictionary
     '''
     rv = {}
 

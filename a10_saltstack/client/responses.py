@@ -212,6 +212,11 @@ def raise_axapi_ex(response, method, api_url):
         response (dict): JSON response from AXAPI
         method (string): POST/GET/DELETE/PUT
         api_url (string): API endpoint
+
+    Raises:
+        ACOS exception
+
+    Returns (None):
     '''
     if 'response' in response and 'err' in response['response']:
         code = response['response']['err']['code']
