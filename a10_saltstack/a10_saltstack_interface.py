@@ -14,6 +14,7 @@
 
 
 from collections import OrderedDict
+import logging
 
 from a10_saltstack.client.kwbl import KW_OUT, translate_blacklist as translateBlacklist
 from a10_saltstack.client import errors as a10_ex
@@ -22,8 +23,8 @@ from a10_saltstack.forest.nodes import InterNode
 from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper as a10_helper
 
-import logging
 LOG = logging.getLogger(__file__)
+
 
 def _build_envelope(title, data):
     return {

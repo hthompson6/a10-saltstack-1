@@ -15,13 +15,14 @@
 
 from collections import OrderedDict
 import importlib
+import logging
 import re
 
 from a10_saltstack.helpers import helper as a10_helper
 from a10_saltstack.forest.nodes import InterNode, ObjNode, RootNode
 
-import logging
 LOG = logging.getLogger(__file__)
+
 
 def _extract_modname(url):
     '''
@@ -30,6 +31,9 @@ def _extract_modname(url):
 
     Args:
         url (string): refrence object url
+
+    Returns (string):
+        Name of python module related to refrence object
     '''
     url = url.replace('/axapi/v3/', '').replace('/',
         '_').replace('-', '_').replace('+', '')
