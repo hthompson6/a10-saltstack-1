@@ -15,10 +15,13 @@
 
 from collections import OrderedDict
 import importlib
+import logging
 import re
 
 from a10_saltstack.helpers import helper as a10_helper
 from a10_saltstack.forest.nodes import InterNode, ObjNode, RootNode
+
+LOG = logging.getLogger(__file__)
 
 
 def _extract_modname(url):
@@ -28,6 +31,9 @@ def _extract_modname(url):
 
     Args:
         url (string): refrence object url
+
+    Returns (string):
+        Name of python module related to refrence object
     '''
     url = url.replace('/axapi/v3/', '').replace('/',
         '_').replace('-', '_').replace('+', '')
@@ -64,7 +70,18 @@ def _dfs_cut(config, refNode=None):
     for k,v in config.items():
         if k in ref_props:
             mod_fqdn = _extract_modname(ref_props[k])
-            inNode = InterNode(mod_fqdn)
+
+            # Only case in which the keyword is not a string
+            # is when the keyword is being used as an identifier.
+            # These id's do not need to be store within the InterNode
+            # at this point. 
+            inter_val_dict = {}
+            if isinstance(v, dict):
+                for kw, vl in v.items():
+                    if isinstance(kw, str):
+                        inter_val_dict[kw] = vl
+            inNode = InterNode(mod_fqdn, **inter_val_dict)
+
             child_obj_list = _dfs_cut(v, inNode)
             if child_obj_list:
                 for child in child_obj_list:
