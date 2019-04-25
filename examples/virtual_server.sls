@@ -1,0 +1,21 @@
+virtual_server_example:
+  a10.slb:
+    - virtual_server:
+      - vs2:
+        - ip_address: 192.168.43.6
+        - netmask: /24
+        - port_list:
+          - 22:
+            - protocol: tcp
+          - 80:
+            - protocol: tcp
+          - service_group:
+            - sg8:
+              - member_list:
+                - mem1:
+                  - host: 10.7.11.1
+                  - port: 80
+                - mem2:
+                  - host: 10.7.11.2
+                  - port: 22
+              - lb_type: round_robin
