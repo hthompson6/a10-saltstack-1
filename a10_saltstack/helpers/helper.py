@@ -18,48 +18,48 @@ import importlib
 
 def new_url(a10_obj, **kwargs):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.helper_modules.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.new_url(**kwargs)
 
 
 def existing_url(a10_obj, **kwargs):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.helper_modules.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.existing_url(**kwargs)
 
 
 def get_props(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.helper_modules.{}'.format(a10_obj.replace('-', '_')))
  
     return obj_module.AVAILABLE_PROPERTIES
 
 
 def get_parent_keys(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.helper_modules.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.PARENT_KEYS
 
 
 def get_child_keys(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.helper_modules.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.CHILD_KEYS
 
 
 def get_ref_props(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.helper_modules.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.REF_PROPERTIES
 
 
 def get_obj_type(a10_obj):
     obj_module = importlib.import_module(
-        'a10_saltstack.helpers.{}'.format(a10_obj.replace('-', '_')))
+        'a10_saltstack.helpers.helper_modules.{}'.format(a10_obj.replace('-', '_')))
 
     return obj_module.MODULE_NAME
