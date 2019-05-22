@@ -58,6 +58,9 @@ def _dfs_cut(config, refNode=None):
         return
 
     vals = list(config.values())
+    if not len(vals):
+        return
+
     if len(vals) == 1 and not isinstance(vals[0], dict):
         return
 
@@ -158,7 +161,10 @@ def parse_tree(a10_obj, config):
 
     root.addValDict(**root_vals)
 
-    root_children = _dfs_cut(altered_config, root)
+    if len(alterted_config) < 2:
+        root_children = []
+    else:
+        root_children = _dfs_cut(altered_config, root)
 
     if root_children:
         for child in root_children:
