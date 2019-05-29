@@ -20,37 +20,55 @@ class CustomAssertions(object):
         Assert that the attributes of the actual object
         equals the attributes of the expected. Not concerned with
         the object identities matching.
+
+        Classically, a general not equal assertion error would be raised.
+        Given the number of potential inequalites that could arise in
+        a failure, an extra layer of verbosity has been included.
         '''
+
+        reason = ''
 
         # Compare id's
         if expected.id != actual.id:
-            raise AssertionError('ObjNodes are not equal')
+            reason = ': ID Mismatch'
     
         if expected.parent != actual.parent:
-            raise AssertionError('ObjNodes are not equal')
+            reason += ': Parents Are Not Equal')
     
         if len(expected.children) != len(actual.children):
-            raise AssertionError('ObjNodes are not equal')
+            reason += ': Length Mismatch' 
     
+        children_equal = True
         # Compare children actual -> expected
         for i in range(0, len(actual.children)):
             if actual.children[i] != expected.children[i]:
-                raise AssertionError('ObjNodes are not equal')
-    
-        # Compare children expected -> actual
-        for i in range(0, len(expected.children)):
-            if expected.children[i] != actual.children[i]:
-                raise AssertionError('ObjNodes are not equal')
-    
+                reason += ': Children Mismatch'
+                children_equal = False
+                break
+
+        if not children_equal:
+            # Compare children expected -> actual
+            for i in range(0, len(expected.children)):
+                if expected.children[i] != actual.children[i]:
+                    reason += ': Children Mismatch' 
+                    break
+   
+        val_dict_equal = True 
         # Compare object values actual -> expected
         for k in actual.val_dict.keys():
             if actual.val_dict[k] !=  expected.val_dict.get(k):
-                raise AssertionError('ObjNodes are not equal')
-    
-        # Compare object values expected -> actual
-        for k in self.val_dict.keys():
-            if expected.val_dict[k] != actual.val_dict.get(k):
-                raise AssertionError('ObjNodes are not equal')
+                reason += ': Value Dictionary Mismatch'
+                val_dict_equal = False
+                break 
+
+        if not val_dict_equal:
+            # Compare object values expected -> actual
+            for k in self.val_dict.keys():
+                if expected.val_dict[k] != actual.val_dict.get(k):
+                    reason += ': Value Dictionary Mismatch'
+                    break
+
+        raise AssertionError('ObjNodes are not equal{}', reason)
 
 
     def assertObjEquals(self, expected, actual):
