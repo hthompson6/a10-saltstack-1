@@ -26,51 +26,8 @@ class ObjNode(object):
             if type(v) != dict and type(v) != list:
                 self.val_dict[k] = v
 
-
-    def __eq__(self, node):
-        '''
-        A custom comparator has been implemented in order to
-        aid in unit testing.
-        '''
-        if not isinstance(other, ObjNode):
-            return NotImplemented
-
-        equal = True
-
-        # Compare id's
-        if self.id != node.id:
-            return False
-
-        if self.parent != node.parent:
-            return False
-
-        if len(self.children) != len(node.children):
-            return False
-
-        # Compare children node -> self
-        for i in range(0, len(node.children)):
-            if node.children[i] != self.children[i]:
-                return False 
-
-        # Compare children self -> node
-        for i in range(0, len(self.children)):
-            if self.children[i] != node.children[i]:
-                return False
-
-        # Compare object values
-        for k,v in self.val_dict:
-            if self.val_dict[k] 
-
-        return True 
-
-
-    def __ne__(self, node):
-        pass
-
-
     def addParent(self, parent):
         self.parent = parent
-
 
     def addChild(self, child):
         child.addParent(self)

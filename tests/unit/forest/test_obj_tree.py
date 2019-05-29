@@ -19,10 +19,11 @@ from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper
 import a10_saltstack.forest.nodes
 from a10_saltstack.forest.nodes import ObjNode, InterNode
-from tests.unit.forest import fake_obj_dict as fobj
+from a10_salstack.tests.unit.forest.custom_assertions import CustomAssertions
+from a10_saltstack.tests.unit.forest import fake_obj_dict as fobj
 
 
-class TestCutTree(unittest.TestCase):
+class TestCutTree(unittest.TestCase, CustomAssertions):
 
     def setUp(self):
         obj_tree._extract_modname = Mock()
@@ -49,9 +50,8 @@ class TestCutTree(unittest.TestCase):
         a10_saltstack.forest.nodes.ObjNode = Mock(return_value=[test_obj]) 
 
         # Compare
-        import pdb; pdb.set_trace()
         cut_tree = obj_tree._dfs_cut(test_dict)
-        self.assertEquals([test_obj], cut_tree)
+        self.assertObjEquals([test_obj], cut_tree)
 
     def test_inter_node(self):
         test_dict = {'ref_id': {'fake_key': 'fake_val'}}
