@@ -15,18 +15,62 @@
 from mock import Mock
 import unittest
 
+import a10_saltstack.forest.nodes
 from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper
-import a10_saltstack.forest.nodes
+
 from a10_saltstack.forest.nodes import ObjNode, InterNode
-from a10_salstack.tests.unit.forest.custom_assertions import CustomAssertions
-from a10_saltstack.tests.unit.forest import fake_obj_dict as fobj
+from tests.unit.forest.custom_assertions import CustomAssertions
+from tests.unit.forest import fake_obj_dict as fobj
+
+
+def _patch_ne(instance):
+
+    class Patcher(type(instance)):
+        def __ne__(self, node):
+
+            # Compare id's
+            if self.id != node.id:
+                return True
+
+            # Compare parents (recursive __ne__)
+            if self.parent != node.parent:
+                return True
+
+            # Compare length of child lists
+            if len(self.children) != len(node.children):
+                return True
+
+            # Compare children node -> self (recursive __ne__)
+            for i in range(0, len(node.children)):
+                if node.children[i] != self.children[i]:
+                    return True
+
+            # Compare children self -> node (recursive __ne__)
+            for i in range(0, len(expected.children)):
+                if expected.children[i] != actual.children[i]:
+                    return True
+
+            # Compare object values node -> self
+            for k in node.val_dict.keys():
+                if node.val_dict[k] !=  self.val_dict.get(k):
+                    return True
+
+            # Compare object values self -> node
+            for k in self.val_dict.keys():
+                if self.val_dict[k] != node.val_dict.get(k):
+                    return True
+
+            return False
+
+    instance.__class__ = Patcher
 
 
 class TestCutTree(unittest.TestCase, CustomAssertions):
 
     def setUp(self):
         obj_tree._extract_modname = Mock()
+
 
     def test_empty(self):
         test_obj = {}
@@ -44,6 +88,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
                     'fake_key2': 'fake_val'}
         test_dict = {'obj_id': key_vals} 
         test_obj = ObjNode('obj_id', **key_vals)
+        _patch_ne(test_obj)
 
         # Mock out dependencies
         helper.get_ref_props = Mock(return_value={})

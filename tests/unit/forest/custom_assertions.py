@@ -23,33 +23,33 @@ class CustomAssertions(object):
         '''
 
         # Compare id's
-        if self.id != node.id:
+        if expected.id != actual.id:
             raise AssertionError('ObjNodes are not equal')
     
-        if self.parent != node.parent:
+        if expected.parent != actual.parent:
             raise AssertionError('ObjNodes are not equal')
     
-        if len(self.children) != len(node.children):
+        if len(expected.children) != len(actual.children):
             raise AssertionError('ObjNodes are not equal')
     
-        # Compare children node -> self
-        for i in range(0, len(node.children)):
-            if node.children[i] != self.children[i]:
+        # Compare children actual -> expected
+        for i in range(0, len(actual.children)):
+            if actual.children[i] != expected.children[i]:
                 raise AssertionError('ObjNodes are not equal')
     
-        # Compare children self -> node
-        for i in range(0, len(self.children)):
-            if self.children[i] != node.children[i]:
+        # Compare children expected -> actual
+        for i in range(0, len(expected.children)):
+            if expected.children[i] != actual.children[i]:
                 raise AssertionError('ObjNodes are not equal')
     
-        # Compare object values node -> self
-        for k,v in self.val_dict:
-            if self.node.val_dict.get(k) !=  self.val_dict[k]:
+        # Compare object values actual -> expected
+        for k in actual.val_dict.keys():
+            if actual.val_dict[k] !=  expected.val_dict.get(k):
                 raise AssertionError('ObjNodes are not equal')
     
-        # Compare object values self -> node
-        for k,v in self.val_dict:
-            if self.val_dict[k] != self.node.val_dict.get(k):
+        # Compare object values expected -> actual
+        for k in self.val_dict.keys():
+            if expected.val_dict[k] != actual.val_dict.get(k):
                 raise AssertionError('ObjNodes are not equal')
 
 
