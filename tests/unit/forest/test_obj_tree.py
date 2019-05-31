@@ -27,6 +27,7 @@ from tests.unit.forest import fake_obj_dict as fobj
 def _patch_ne(instance):
 
     class Patcher(type(instance)):
+
         def __ne__(self, node):
 
             # Compare id's
@@ -67,6 +68,11 @@ def _patch_ne(instance):
 
 
 class TestCutTree(unittest.TestCase, CustomAssertions):
+    '''
+    In order to properly test how these nodes are built,
+    these test cases must take the form of intergration tests as
+    the dependency on the node module is not mocked.
+    '''
 
     def setUp(self):
         obj_tree._extract_modname = Mock()
@@ -92,10 +98,13 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         # Mock out dependencies
         helper.get_ref_props = Mock(return_value={})
-        a10_saltstack.forest.nodes.ObjNode = Mock(return_value=[test_obj]) 
 
         # Compare
         cut_tree = obj_tree._dfs_cut(test_dict)
+
+        for node_obj in cut_tree:
+            _patch_ne(node_obj)
+
         self.assertObjEquals([test_obj], cut_tree)
 
     def test_inter_node(self):

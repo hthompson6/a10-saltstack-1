@@ -33,7 +33,7 @@ class CustomAssertions(object):
             reason = ': ID Mismatch'
     
         if expected.parent != actual.parent:
-            reason += ': Parents Are Not Equal')
+            reason += ': Parents Are Not Equal'
     
         if len(expected.children) != len(actual.children):
             reason += ': Length Mismatch' 
@@ -68,7 +68,8 @@ class CustomAssertions(object):
                     reason += ': Value Dictionary Mismatch'
                     break
 
-        raise AssertionError('ObjNodes are not equal{}', reason)
+        if reason:
+            raise AssertionError('Expected does not equal actual: {}'.format(reason))
 
 
     def assertObjEquals(self, expected, actual):

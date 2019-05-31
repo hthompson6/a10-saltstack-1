@@ -76,7 +76,7 @@ def _dfs_cut(config, refNode=None):
 
             # Only case in which the keyword is not a string
             # is when the keyword is being used as an identifier.
-            # These id's do not need to be store within the InterNode
+            # These id's do not need to be stored within the InterNode
             # at this point. 
             inter_val_dict = {}
             if isinstance(v, dict):
