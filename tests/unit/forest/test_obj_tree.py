@@ -26,14 +26,9 @@ from tests.unit.forest import fake_obj_dict as fobj
 
 def _patch_ne(instance):
 
-    class Patcher(type(instance)):
+    class BasePatcher(type(instance)):
 
         def __ne__(self, node):
-
-            # Compare id's
-            if self.id != node.id:
-                return True
-
             # Compare parents (recursive __ne__)
             if self.parent != node.parent:
                 return True
@@ -62,9 +57,32 @@ def _patch_ne(instance):
                 if self.val_dict[k] != node.val_dict.get(k):
                     return True
 
+    class ObjPatcher(BasePatcher):
+
+        def __ne__(self, node):
+            super(ObjPatcher, self).__ne__(self, node)
+            # Compare IDs
+            if self.id != node.id:
+                return True
+
             return False
 
-    instance.__class__ = Patcher
+    class InterPatcher(BasePatcher):
+            
+        def __ne__(self, node):
+            super(InterPatcher, self).__ne__(self, node)
+            # Compare refrences
+            if self.ref != node.ref:
+                return True
+
+            return False
+
+
+    if type(instance) == ObjNode:
+        instance.__class__ = ObjPatcher
+
+    if type(instance) == InterNode:
+        instance.__class__ = InterPatcher
 
 
 class TestCutTree(unittest.TestCase, CustomAssertions):
