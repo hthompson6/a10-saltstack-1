@@ -25,7 +25,6 @@ class CustomAssertions(object):
         Given the number of potential inequalites that could arise in
         a failure, an extra layer of verbosity has been included.
         '''
-
         reason = ''
 
         # Compare id's
@@ -34,24 +33,27 @@ class CustomAssertions(object):
     
         if expected.parent != actual.parent:
             reason += ': Parents Are Not Equal'
-    
-        if len(expected.children) != len(actual.children):
-            reason += ': Length Mismatch' 
-    
-        children_equal = True
-        # Compare children actual -> expected
-        for i in range(0, len(actual.children)):
-            if actual.children[i] != expected.children[i]:
-                reason += ': Children Mismatch'
-                children_equal = False
-                break
 
-        if not children_equal:
-            # Compare children expected -> actual
-            for i in range(0, len(expected.children)):
-                if expected.children[i] != actual.children[i]:
-                    reason += ': Children Mismatch' 
+        equal_length = True    
+        if len(expected.children) != len(actual.children):
+            reason += ': Length Mismatch'
+            equal_length = False
+
+        if equal_length:
+            children_equal = True
+            # Compare children actual -> expected
+            for i in range(0, len(actual.children)):
+                if actual.children[i] != expected.children[i]:
+                    reason += ': Children Mismatch'
+                    children_equal = False
                     break
+
+            if children_equal:
+                # Compare children expected -> actual
+                for i in range(0, len(expected.children)):
+                    if expected.children[i] != actual.children[i]:
+                        reason += ': Children Mismatch' 
+                        break
    
         val_dict_equal = True 
         # Compare object values actual -> expected
@@ -61,18 +63,19 @@ class CustomAssertions(object):
                 val_dict_equal = False
                 break 
 
-        if not val_dict_equal:
+        if val_dict_equal:
             # Compare object values expected -> actual
-            for k in self.val_dict.keys():
+            for k in expected.val_dict.keys():
                 if expected.val_dict[k] != actual.val_dict.get(k):
                     reason += ': Value Dictionary Mismatch'
                     break
 
         if reason:
-            raise AssertionError('Expected does not equal actual: {}'.format(reason))
+            raise AssertionError('Expected does not equal actual{}'.format(reason))
 
 
     def assertObjEquals(self, expected, actual):
+        import pdb; pdb.set_trace()
         if isinstance(expected, list):
             if not isinstance(actual, list):
                 raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))

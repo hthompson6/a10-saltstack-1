@@ -74,44 +74,34 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
     the dependency on the node module is not mocked.
     '''
 
-    def setUp(self):
-        obj_tree._extract_modname = Mock()
-
-
-    def test_empty(self):
+    def test_l0(self):
         test_obj = {}
         cut_tree = obj_tree._dfs_cut(test_obj)
         self.assertEqual(None, cut_tree)
 
-    def test_param(self):
+    def test_l1(self):
         test_obj = {'fake_key': 'fake_val'}
         cut_tree = obj_tree._dfs_cut(test_obj)
         self.assertEquals(None, cut_tree)
 
-    def test_obj_node(self):
-        # Build test objects
-        key_vals = {'fake_key': 'fake_val',
-                    'fake_key2': 'fake_val'}
+    def test_l2(self):
+        key_vals = {'fake_ref': {'fake_key': 'fake_val'}}
         test_dict = {'obj_id': key_vals} 
         test_obj = ObjNode('obj_id', **key_vals)
         _patch_ne(test_obj)
 
-        # Mock out dependencies
         helper.get_ref_props = Mock(return_value={})
+        obj_tree._extract_modname = Mock(return_value='fake_ref')
 
-        # Compare
         cut_tree = obj_tree._dfs_cut(test_dict)
 
+        # Can't be sure that this works and only one element
+        # in the list is returned. Best to patch everything,
+        # and let the assertion sort it out.
         for node_obj in cut_tree:
             _patch_ne(node_obj)
 
         self.assertObjEquals([test_obj], cut_tree)
-
-    def test_inter_node(self):
-        test_dict = {'ref_id': {'fake_key': 'fake_val'}}
-
-    def test_inter_obj(self):
-        pass
 
 
 class TestTransformTree(unittest.TestCase):
