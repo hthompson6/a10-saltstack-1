@@ -115,8 +115,12 @@ def _dfs_transform(config):
         new_dict = {}
         if isinstance(v, list):
            for i in v:
-               new_dict.update(_dfs_transform(i))
-           config[k] = new_dict
+               if isinstance(i, OrderedDict):
+                   new_dict.update(_dfs_transform(i))
+           if new_dict:
+               config[k] = new_dict
+           else:
+               config[k] = v
         elif isinstance(v, OrderedDict):
            new_dict.update(_dfs_transform(v)) 
            config[k] = new_dict
