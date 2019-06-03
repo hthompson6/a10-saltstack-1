@@ -141,6 +141,18 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         self.assertObjEquals([test_obj], cut_tree)
 
+    def test_create_obj_no_ref(self):
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'obj_id': key_vals}
+
+        test_obj = ObjNode('obj_id', **key_vals)
+        _patch_ne(test_obj)
+
+        helper.get_ref_props = Mock(return_value={})
+
+        cut_tree = obj_tree._dfs_cut(test_dict)
+
+        helper.get_ref_props.assert_not_called()
 
 class TestTransformTree(unittest.TestCase):
     pass
