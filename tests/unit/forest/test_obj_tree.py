@@ -137,7 +137,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         cut_tree = obj_tree._dfs_cut(test_obj)
         self.assertEquals(None, cut_tree)
 
-    def test_create_inter(self):
+    def test_inter(self):
         key_vals = {'fake_key': 'fake_val'}
         test_dict = {'fake_ref': key_vals}
 
@@ -158,7 +158,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         self.assertObjEquals([test_inter], cut_tree)
 
-    def test_create_obj(self):
+    def test_obj(self):
         key_vals = {'fake_key': 'fake_val'}
         test_dict = {'obj_id': key_vals}
 
@@ -177,7 +177,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         self.assertObjEquals([test_obj], cut_tree)
 
-    def test_create_obj_no_ref(self):
+    def test_obj_no_ref_call(self):
         key_vals = {'fake_key': 'fake_val'}
         test_dict = {'obj_id': key_vals}
 
@@ -190,7 +190,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         helper.get_ref_props.assert_not_called()
 
-    def test_create_l1_inter(self):
+    def test_inter_obj(self):
         key_vals = {'fake_key': 'fake_val'}
         test_dict = {'fake_ref': {'obj_id': key_vals}}
 
@@ -216,7 +216,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         self.assertObjEquals([test_inter], cut_tree)
 
-    def test_create_l1_obj(self):
+    def test_obj_inter(self):
         key_vals = {'fake_key': 'fake_val'}
         test_dict = {'obj_id': {'fake_ref': key_vals}}
 
@@ -242,6 +242,23 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         self.assertObjEquals([test_obj], cut_tree)
 
+    def test_obj_obj(self):
+        pass
+
+    def test_inter_inter(self):
+        pass
+
+    def test_inter_multi_obj(self):
+        pass
+
+    def test_obj_multi_inter(self):
+        pass
+
+    def test_inter_multi_obj_inter(self):
+        pass
+
+    def test_obj_multi_obj_inter(self):
+        pass
 
 class TestTransformTree(unittest.TestCase):
     pass
