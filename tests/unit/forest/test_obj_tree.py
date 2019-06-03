@@ -217,7 +217,30 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         self.assertObjEquals([test_inter], cut_tree)
 
     def test_create_l1_obj(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'obj_id': {'fake_ref': key_vals}}
+
+        test_obj = ObjNode('obj_id')
+        test_inter = InterNode('fake_ref', **key_vals)
+        _patch_ne(test_obj)
+        _patch_ne(test_inter)
+
+        test_inter.addParent(test_obj)
+        test_obj.addChild(test_inter)
+
+        helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
+        obj_tree._extract_modname = Mock(return_value='fake_ref')
+
+        # test_inter is passed here to take the place of the root node
+        cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
+
+        # Can't be sure that this works and only one element
+        # in the list is returned. Best to patch everything,
+        # and let the assertion sort it out.
+        for node_obj in cut_tree:
+            _patch_ne(node_obj)
+
+        self.assertObjEquals([test_obj], cut_tree)
 
 
 class TestTransformTree(unittest.TestCase):
