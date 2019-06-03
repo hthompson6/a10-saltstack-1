@@ -105,13 +105,14 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         key_vals = {'fake_key': 'fake_val'}
         test_dict = {'fake_ref': key_vals}
 
-        test_inter = InterNode('fake_ref')
+        test_inter = InterNode('fake_ref', **key_vals)
         _patch_ne(test_inter)
 
         helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = Mock(return_value={'fake_ref'})
+        obj_tree._extract_modname = Mock(return_value='fake_ref')
 
-        cut_tree = obj_tree._dfs_cut(test_dict)
+        # test_inter is passed here to take the place of the root node
+        cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
 
         # Can't be sure that this works and only one element
         # in the list is returned. Best to patch everything,

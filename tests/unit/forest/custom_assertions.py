@@ -29,11 +29,15 @@ class CustomAssertions(object):
         reason = ''
 
         if expected.parent != actual.parent:
-            reason += ': Parents Are Not Equal'
+            reason += ': Expected parent \'{}\' != ' \
+                'Actual parent \'{}\''.format(
+                expected.parent, actual.parent)
 
         equal_length = True    
         if len(expected.children) != len(actual.children):
-            reason += ': Length Mismatch'
+            reason += ': Expected child list length \'{}\'' \
+                ' != Actual child list length \'{}\''.format(
+                len(expected.children), len(actual.children))
             equal_length = False
 
         if equal_length:
@@ -73,7 +77,8 @@ class CustomAssertions(object):
         reason = ''
 
         if expected.id != actual.id:
-            reason = ': ID Mismatch'
+            reason = ': Expected id \'{}\' != ' \
+                     'Actual id \'{}\''.format(expected.id, actual.id)
         reason += self._checkGeneralEquality(expected, actual)
 
         if reason:
@@ -83,7 +88,8 @@ class CustomAssertions(object):
         reason = ''
 
         if expected.ref != actual.ref:
-            reason = ': Ref Mismatch'
+            reason = ': Expected ref \'{}\' != ' \
+                     'Actual ref \'{}\''.format(expected.ref, actual.ref)
         reason += self._checkGeneralEquality(expected, actual)
 
         if reason:
