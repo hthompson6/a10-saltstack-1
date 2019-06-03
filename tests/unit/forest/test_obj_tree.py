@@ -28,9 +28,45 @@ def _patch_ne(instance):
 
     class BasePatcher(type(instance)):
 
+        def _safe_ne_comp(self, node):
+            '''
+            Meant to only be used when comparing two parent nodes.
+            Does not include a comparison of children as this
+            leads to an infinite recursive loop.
+            '''
+            if type(self) != type(node):
+                return True
+
+            if isinstance(instance, InterNode):
+                if self.ref != node.ref:
+                    return True                
+            elif isinstance(instance, ObjNode):
+                if self.id != node.id:
+                    return True
+
+            if self.parent._safe_ne_comp(node.parent):
+                return True
+
+            if len(self.children) != len(node.children):
+                return True
+
+            # Compare object values node -> self
+            for k in node.val_dict.keys():
+                if node.val_dict[k] != self.val_dict.get(k):
+                    return True
+
+            # Compare object values self -> node
+            for k in self.val_dict.keys():
+                if self.val_dict[k] != node.val_dict.get(k):
+                    return True
+
+            return False
+
         def __ne__(self, node):
-            # Compare parents (recursive __ne__)
-            if self.parent != node.parent:
+            if type(self) != type(node):
+                return True
+
+            if self.parent._safe_ne_comp(node.parent):
                 return True
 
             # Compare length of child lists
@@ -61,17 +97,17 @@ def _patch_ne(instance):
 
         def __ne__(self, node):
             super(ObjPatcher, self).__ne__(node)
-            # Compare IDs
+
             if self.id != node.id:
                 return True
 
             return False
 
     class InterPatcher(BasePatcher):
-            
+
         def __ne__(self, node):
             super(InterPatcher, self).__ne__(node)
-            # Compare refrences
+
             if self.ref != node.ref:
                 return True
 
@@ -153,6 +189,36 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         cut_tree = obj_tree._dfs_cut(test_dict)
 
         helper.get_ref_props.assert_not_called()
+
+    def test_create_l1_inter(self):
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'fake_ref': {'obj_id': key_vals}}
+
+        test_obj = ObjNode('obj_id', **key_vals)
+        test_inter = InterNode('fake_ref')
+        _patch_ne(test_obj)
+        _patch_ne(test_inter)
+
+        test_obj.addParent(test_inter)
+        test_inter.addChild(test_obj)
+
+        helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
+        obj_tree._extract_modname = Mock(return_value='fake_ref')
+
+        # test_inter is passed here to take the place of the root node
+        cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
+
+        # Can't be sure that this works and only one element
+        # in the list is returned. Best to patch everything,
+        # and let the assertion sort it out.
+        for node_obj in cut_tree:
+            _patch_ne(node_obj)
+
+        self.assertObjEquals([test_inter], cut_tree)
+
+    def test_create_l1_obj(self):
+        pass
+
 
 class TestTransformTree(unittest.TestCase):
     pass
