@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from a10_saltstack.forest.nodes import ObjNode, InterNode
 
 class CustomAssertions(object):
 
-    def _checkObjEquality(self, expected, actual):
+    def _checkGeneralEquality(self, expected, actual):
         '''
         Assert that the attributes of the actual object
         equals the attributes of the expected. Not concerned with
@@ -27,10 +28,6 @@ class CustomAssertions(object):
         '''
         reason = ''
 
-        # Compare id's
-        if expected.id != actual.id:
-            reason = ': ID Mismatch'
-    
         if expected.parent != actual.parent:
             reason += ': Parents Are Not Equal'
 
@@ -70,20 +67,50 @@ class CustomAssertions(object):
                     reason += ': Value Dictionary Mismatch'
                     break
 
+        return reason
+
+    def _checkObjEquality(self, expected, actual):
+        reason = ''
+
+        if expected.id != actual.id:
+            reason = ': ID Mismatch'
+        reason += self._checkGeneralEquality(expected, actual)
+
         if reason:
             raise AssertionError('Expected does not equal actual{}'.format(reason))
 
+    def _checkInterEquality(self, expected, actual):
+        reason = ''
+
+        if expected.ref != actual.ref:
+            reason = ': Ref Mismatch'
+        reason += self._checkGeneralEquality(expected, actual)
+
+        if reason:
+            raise AssertionError('Expected does not equal actual{}'.format(reason))
+
+    def _callAssertionCheck(self, expected, actual):
+        # InterNode has to be checked first as it inherits from ObjNode
+        if isinstance(expected, InterNode):
+            if isinstance(actual, InterNode):
+                self._checkInterEquality(expected, actual)
+            else:
+                raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))
+        # If the expected is an ObjNode, but the actual is an InterNode
+        elif isinstance(actual, InterNode):
+             raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))
+        elif isinstance(expected, ObjNode) and isinstance(actual, ObjNode):
+            self._checkObjEquality(expected, actual)
+        else:
+            raise Exception('Provided arguments are not of correct type')
 
     def assertObjEquals(self, expected, actual):
-        import pdb; pdb.set_trace()
         if isinstance(expected, list):
             if not isinstance(actual, list):
                 raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))
-
             if len(expected) != len(actual):
                 raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))
-
             for i in range(0, len(expected)):
-                self._checkObjEquality(expected[i], actual[i])
+                self._callAssertionCheck(expected[i], actual[i])
         else:
-            self._checkObjEquality(expected, actual)
+            self._callAssertionCheck(expected[i], actual[i])
