@@ -155,11 +155,11 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         key_vals = {'fake_key': 'fake_val'}
         test_dict = {'fake_ref': key_vals}
 
-        test_inter = InterNode('fake_ref', **key_vals)
+        test_inter = InterNode('fake_path', **key_vals)
         _patch_ne(test_inter)
 
         helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = Mock(return_value='fake_ref')
+        obj_tree._extract_modname = lambda x: x
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -199,7 +199,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_dict = {'fake_ref': {'obj_id': key_vals}}
 
         test_obj = ObjNode('obj_id', **key_vals)
-        test_inter = InterNode('fake_ref')
+        test_inter = InterNode('fake_path')
         _patch_ne(test_obj)
         _patch_ne(test_inter)
 
@@ -207,7 +207,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_inter.addChild(test_obj)
 
         helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = Mock(return_value='fake_ref')
+        obj_tree._extract_modname = lambda x: x
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -220,7 +220,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_dict = {'obj_id': {'fake_ref': key_vals}}
 
         test_obj = ObjNode('obj_id')
-        test_inter = InterNode('fake_ref', **key_vals)
+        test_inter = InterNode('fake_path', **key_vals)
         _patch_ne(test_obj)
         _patch_ne(test_inter)
 
@@ -228,7 +228,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_obj.addChild(test_inter)
 
         helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = Mock(return_value='fake_ref')
+        obj_tree._extract_modname = lambda x: x
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -254,18 +254,58 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         self.assertObjEquals([test_obj], cut_tree)
 
     def test_inter_inter(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'obj_id': {'fake_ref': key_vals}}
+
+        test_obj = ObjNode('obj_id')
+        test_inter = InterNode('fake_path', **key_vals)
+        _patch_ne(test_obj)
+        _patch_ne(test_inter)
+
+        test_inter.addParent(test_obj)
+        test_obj.addChild(test_inter)
+
+        helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
+        obj_tree._extract_modname = lambda x: x
+
+        # test_inter is passed here to take the place of the root node
+        cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
+        _init_patch(cut_tree)
+
+        self.assertObjEquals([test_obj], cut_tree)
 
     def test_inter_multi_obj(self):
         pass
 
     def test_obj_multi_inter(self):
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'obj_id': {
+            'fake_ref_0': key_vals,
+            'fake_ref_1': key_vals,
+            'fake_ref_2': key_vals}}
+
+        test_obj = ObjNode('obj_id')
+        _patch_ne(test_obj)
+        for i in range(0, 3):
+            temp_inter = InterNode('fake_path_{}'.format(i), **key_vals)
+            _patch_ne(temp_inter)
+            temp_inter.addParent(test_obj)
+            test_obj.addChild(temp_inter)
+
+        helper.get_ref_props = Mock(return_value={
+            'fake_ref_0': 'fake_path_0',
+            'fake_ref_1': 'fake_path_1',
+            'fake_ref_2': 'fake_path_2'})
+
+        obj_tree._extract_modname = lambda x: x
+
+    def test_multi_obj_inter(self):
         pass
 
-    def test_inter_multi_obj_inter(self):
+    def test_multi_inter_obj(self):
         pass
 
-    def test_obj_multi_obj_inter(self):
+    def test_multi_mix_multi_mix(self):
         pass
 
 class TestTransformTree(unittest.TestCase):
