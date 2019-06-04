@@ -141,6 +141,9 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
     the dependency on the node module is not mocked.
     '''
 
+    def setUp(self):
+        obj_tree._extract_modname = lambda x: x
+
     def test_empty(self):
         test_obj = {}
         cut_tree = obj_tree._dfs_cut(test_obj)
@@ -159,7 +162,6 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         _patch_ne(test_inter)
 
         helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = lambda x: x
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -189,7 +191,6 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         _patch_ne(test_obj)
 
         helper.get_ref_props = Mock(return_value={})
-
         cut_tree = obj_tree._dfs_cut(test_dict)
 
         helper.get_ref_props.assert_not_called()
@@ -207,7 +208,6 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_inter.addChild(test_obj)
 
         helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = lambda x: x
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -228,7 +228,6 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_obj.addChild(test_inter)
 
         helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = lambda x: x
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -254,25 +253,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         self.assertObjEquals([test_obj], cut_tree)
 
     def test_inter_inter(self):
-        key_vals = {'fake_key': 'fake_val'}
-        test_dict = {'obj_id': {'fake_ref': key_vals}}
-
-        test_obj = ObjNode('obj_id')
-        test_inter = InterNode('fake_path', **key_vals)
-        _patch_ne(test_obj)
-        _patch_ne(test_inter)
-
-        test_inter.addParent(test_obj)
-        test_obj.addChild(test_inter)
-
-        helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
-        obj_tree._extract_modname = lambda x: x
-
-        # test_inter is passed here to take the place of the root node
-        cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
-        _init_patch(cut_tree)
-
-        self.assertObjEquals([test_obj], cut_tree)
+        pass
 
     def test_inter_multi_obj(self):
         pass
@@ -297,7 +278,11 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
             'fake_ref_1': 'fake_path_1',
             'fake_ref_2': 'fake_path_2'})
 
-        obj_tree._extract_modname = lambda x: x
+        import pdb; pdb.set_trace()
+        cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
+        _init_patch(cut_tree)
+
+        self.assertObjEquals([test_obj], cut_tree)
 
     def test_multi_obj_inter(self):
         pass

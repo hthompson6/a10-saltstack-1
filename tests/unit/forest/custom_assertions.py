@@ -40,23 +40,29 @@ class CustomAssertions(object):
                 len(expected.children), len(actual.children))
             equal_length = False
 
-        if equal_length:
-            children_equal = True
-            # Compare children actual -> expected
-            for i in range(0, len(actual.children)):
-                if actual.children[i] != expected.children[i]:
-                    reason += ': Children Mismatch'
-                    children_equal = False
-                    break
+        # Need to compare lists which are spawned off dictionary.
+        actual_dict = {}
+        expected_dict = {}
 
-            if children_equal:
-                # Compare children expected -> actual
-                for i in range(0, len(expected.children)):
-                    if expected.children[i] != actual.children[i]:
-                        reason += ': Children Mismatch' 
-                        break
-   
+        for child in actual.children:
+            if hasattr(child, 'id'):
+                actual_dict[child.id] = child
+            elif hasattr(child, 'ref'):
+                actual_dict[child.ref] = child
+
+        for child in expected.children:
+            if hasattr(child, 'id'):
+                expected_dict[child.id] = child
+            elif hasattr(child, 'ref'):
+                expected_dict[child.ref] = child
+
+
+        # One dict could be a proper subset of the other. 
+        # As such, the check must be done in both directions.
+
+        # Replace with length check
         val_dict_equal = True 
+
         # Compare object values actual -> expected
         for k in actual.val_dict.keys():
             if actual.val_dict[k] !=  expected.val_dict.get(k):
