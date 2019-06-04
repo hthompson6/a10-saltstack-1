@@ -120,6 +120,20 @@ def _patch_ne(instance):
         instance.__class__ = InterPatcher
 
 
+def _preform_patch(node):
+    for child in node.children:
+        _preform_patch(child)
+    _patch_ne(node)
+
+
+def _init_patch(tree):
+    # Can't be sure that this works and only one element
+    # in the list is returned. Best to patch everything,
+    # and let the assertion sort it out
+    for node in tree:
+        _preform_patch(node)
+
+
 class TestCutTree(unittest.TestCase, CustomAssertions):
     '''
     In order to properly test how these nodes are built,
@@ -149,12 +163,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
-
-        # Can't be sure that this works and only one element
-        # in the list is returned. Best to patch everything,
-        # and let the assertion sort it out.
-        for node_obj in cut_tree:
-            _patch_ne(node_obj)
+        _init_patch(cut_tree)
 
         self.assertObjEquals([test_inter], cut_tree)
 
@@ -168,12 +177,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         helper.get_ref_props = Mock(return_value={})
 
         cut_tree = obj_tree._dfs_cut(test_dict)
-
-        # Can't be sure that this works and only one element
-        # in the list is returned. Best to patch everything,
-        # and let the assertion sort it out.
-        for node_obj in cut_tree:
-            _patch_ne(node_obj)
+        _init_patch(cut_tree)
 
         self.assertObjEquals([test_obj], cut_tree)
 
@@ -207,12 +211,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
-
-        # Can't be sure that this works and only one element
-        # in the list is returned. Best to patch everything,
-        # and let the assertion sort it out.
-        for node_obj in cut_tree:
-            _patch_ne(node_obj)
+        _init_patch(cut_tree)
 
         self.assertObjEquals([test_inter], cut_tree)
 
@@ -233,17 +232,26 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
-
-        # Can't be sure that this works and only one element
-        # in the list is returned. Best to patch everything,
-        # and let the assertion sort it out.
-        for node_obj in cut_tree:
-            _patch_ne(node_obj)
+        _init_patch(cut_tree)
 
         self.assertObjEquals([test_obj], cut_tree)
 
     def test_obj_obj(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'obj_id': {'obj_id_2': key_vals}}
+
+        test_obj = ObjNode('obj_id')
+        test_obj_2 = ObjNode('obj_id_2', **key_vals)
+        _patch_ne(test_obj)
+        _patch_ne(test_obj_2)
+
+        test_obj_2.addParent(test_obj)
+        test_obj.addChild(test_obj_2)
+
+        cut_tree = obj_tree._dfs_cut(test_dict)
+        _init_patch(cut_tree) 
+
+        self.assertObjEquals([test_obj], cut_tree)
 
     def test_inter_inter(self):
         pass
