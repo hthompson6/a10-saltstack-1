@@ -14,6 +14,7 @@
 
 from a10_saltstack.forest.nodes import ObjNode, InterNode
 
+
 class CustomAssertions(object):
 
     def _checkGeneralEquality(self, expected, actual):
@@ -41,6 +42,7 @@ class CustomAssertions(object):
             equal_length = False
 
         # Need to compare lists which are spawned off dictionary.
+        # So convert them back to dictionary.
         actual_dict = {}
         expected_dict = {}
 
@@ -56,9 +58,21 @@ class CustomAssertions(object):
             elif hasattr(child, 'ref'):
                 expected_dict[child.ref] = child
 
+        for k in expected_dict.keys():
+            if expected_dict[k] !=  actual_dict.get(k):
+                reason += ': Child node with identifier {} of '
+                          'expected does not match actual'.format(k)
+                val_dict_equal = False
+                break
 
         # One dict could be a proper subset of the other. 
-        # As such, the check must be done in both directions.
+        # To ensure that this isn't the case, a lenght check is done.
+        if len(expected.val_dict) != len(actual.val_dict):
+            reason += ': Expected val_dict length \'{}\'' \
+                ' != Actual val_dict length \'{}\''.format(
+                len(expected.val_dict), len(actual.val_dict))
+            equal_length = False
+
 
         # Replace with length check
         val_dict_equal = True 
