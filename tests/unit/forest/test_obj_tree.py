@@ -278,7 +278,6 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
             'fake_ref_1': 'fake_path_1',
             'fake_ref_2': 'fake_path_2'})
 
-        import pdb; pdb.set_trace()
         cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
         _init_patch(cut_tree)
 

@@ -60,7 +60,7 @@ class CustomAssertions(object):
 
         for k in expected_dict.keys():
             if expected_dict[k] !=  actual_dict.get(k):
-                reason += ': Child node with identifier {} of '
+                reason += ': Child node with identifier \'{}\' of ' \
                           'expected does not match actual'.format(k)
                 val_dict_equal = False
                 break
