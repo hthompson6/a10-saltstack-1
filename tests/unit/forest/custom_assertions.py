@@ -18,10 +18,10 @@ from a10_saltstack.forest.nodes import ObjNode, InterNode
 class CustomAssertions(object):
 
     def _get_id(self, node):
-        if hasattr(child, 'id'):
-            expected_dict[child.id] = child
-        elif hasattr(child, 'ref'):
-            expected_dict[child.ref] = child 
+        if hasattr(node, 'id'):
+            return node.id 
+        elif hasattr(node, 'ref'):
+            return node.ref
 
     def _checkGeneralEquality(self, expected, actual):
         '''
@@ -53,16 +53,10 @@ class CustomAssertions(object):
         expected_dict = {}
 
         for child in actual.children:
-            if hasattr(child, 'id'):
-                actual_dict[child.id] = child
-            elif hasattr(child, 'ref'):
-                actual_dict[child.ref] = child
+            actual_dict[self._get_id(child)] = child
 
         for child in expected.children:
-            if hasattr(child, 'id'):
-                expected_dict[child.id] = child
-            elif hasattr(child, 'ref'):
-                expected_dict[child.ref] = child
+            expected_dict[self._get_id(child)] = child
 
         for k in expected_dict.keys():
             if expected_dict[k] !=  actual_dict.get(k):
@@ -131,7 +125,22 @@ class CustomAssertions(object):
                 raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))
             if len(expected) != len(actual):
                 raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))
-            for i in range(0, len(expected)):
-                self._callAssertionCheck(expected[i], actual[i])
+
+            # Need to compare lists which are spawned off dictionary.
+            # So convert them back to dictionary.
+            actual_dict = {}
+            expected_dict = {}
+
+            for node in actual:
+                actual_dict[self._get_id(node)] = node
+
+            for node in expected:
+                expected_dict[self._get_id(node)] = node
+
+            for k in expected_dict.keys():
+                if expected_dict.get(k) and actual_dict.get(k):
+                    self._callAssertionCheck(expected_dict[k], actual_dict[k])
+                else:
+                    raise AssertionError('Expected: {}, Actual: {}'.format(expected, actual))
         else:
             self._callAssertionCheck(expected[i], actual[i])

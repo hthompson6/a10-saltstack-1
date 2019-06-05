@@ -351,17 +351,86 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         helper.get_ref_props = Mock(return_value={
             'fake_ref': 'fake_path'})
 
-        import pdb; pdb.set_trace()
         cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref'))
         _init_patch(cut_tree)
 
         self.assertObjEquals(node_list, cut_tree)
 
     def test_multi_inter_obj(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        obj_dict = {'obj_id': key_vals}
+        test_dict = {'fake_ref_0': obj_dict,
+                     'fake_ref_1': obj_dict,
+                     'fake_ref_2': obj_dict}
+
+        node_list = []
+        for i in range(0, 3):
+            temp_inter = InterNode('fake_path_{}'.format(i))
+            temp_obj = ObjNode('obj_id', **key_vals)
+
+            _patch_ne(temp_obj)
+            _patch_ne(temp_inter)
+
+            temp_obj.addParent(temp_inter)
+            temp_inter.addChild(temp_obj)
+            node_list.append(temp_inter)
+
+        helper.get_ref_props = Mock(return_value={
+            'fake_ref_0': 'fake_path_0',
+            'fake_ref_1': 'fake_path_1',
+            'fake_ref_2': 'fake_path_2'})
+
+        cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
+        _init_patch(cut_tree)
+
+        self.assertObjEquals(node_list, cut_tree)
 
     def test_multi_mix_multi_mix(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'fake_ref_0': {'obj_id_1': key_vals,
+                                    'fake_ref_2': key_vals},
+                     'obj_id_0': {'fake_ref_3': key_vals,
+                                  'fake_ref_4': key_vals,
+                                  'obj_id_2': key_vals},
+                     'fake_ref_1': {'obj_id_3': key_vals}}
+
+        inter_0 = InterNode('fake_path_0')
+        inter_1 = InterNode('fake_path_1')
+        inter_2 = InterNode('fake_path_2', **key_vals)
+        inter_3 = InterNode('fake_path_3', **key_vals)
+        inter_4 = InterNode('fake_path_4', **key_vals)
+
+        obj_0 = ObjNode('obj_id_0')
+        obj_1 = ObjNode('obj_id_1', **key_vals)
+        obj_2 = ObjNode('obj_id_2', **key_vals)
+        obj_3 = ObjNode('obj_id_3', **key_vals)
+
+        inter_node_list = [inter_0, inter_1, inter_2, inter_3, inter_4]
+        _init_patch(inter_node_list)
+
+        obj_node_list = [obj_0, obj_1, obj_2, obj_3]
+        _init_patch(obj_node_list)
+
+        inter_0.addChild(obj_1)
+        inter_0.addChild(inter_2)
+        obj_0.addChild(inter_3)
+        obj_0.addChild(inter_4)
+        obj_0.addChild(obj_2)
+        inter_1.addChild(obj_3)
+
+        node_list = [inter_0, obj_0, inter_1]
+
+        helper.get_ref_props = Mock(return_value={
+            'fake_ref_0': 'fake_path_0',
+            'fake_ref_1': 'fake_path_1',
+            'fake_ref_2': 'fake_path_2',
+            'fake_ref_3': 'fake_path_3',
+            'fake_ref_4': 'fake_path_4'})
+
+        cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
+        _init_patch(cut_tree)
+
+        self.assertObjEquals(node_list, cut_tree)
 
 class TestTransformTree(unittest.TestCase):
     pass
