@@ -62,7 +62,6 @@ class CustomAssertions(object):
             if expected_dict[k] !=  actual_dict.get(k):
                 reason += ': Child node with identifier \'{}\' of ' \
                           'expected does not match actual'.format(k)
-                val_dict_equal = False
                 break
 
         # One dict could be a proper subset of the other. 
@@ -74,22 +73,12 @@ class CustomAssertions(object):
             equal_length = False
 
 
-        # Replace with length check
-        val_dict_equal = True 
-
-        # Compare object values actual -> expected
-        for k in actual.val_dict.keys():
-            if actual.val_dict[k] !=  expected.val_dict.get(k):
-                reason += ': Value Dictionary Mismatch'
-                val_dict_equal = False
-                break 
-
-        if val_dict_equal:
-            # Compare object values expected -> actual
-            for k in expected.val_dict.keys():
-                if expected.val_dict[k] != actual.val_dict.get(k):
-                    reason += ': Value Dictionary Mismatch'
-                    break
+        # Compare object values expected -> actual
+        for k in expected.val_dict.keys():
+            if expected.val_dict[k] != actual.val_dict.get(k):
+                reason += ': val_dict key \'{}\' in expected was not' \
+                          'found in the actual val_dict'.format(k)
+                break
 
         return reason
 

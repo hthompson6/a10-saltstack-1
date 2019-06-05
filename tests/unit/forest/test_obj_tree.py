@@ -73,24 +73,34 @@ def _patch_ne(instance):
             if len(self.children) != len(node.children):
                 return True
 
-            # Compare children node -> self (recursive __ne__)
-            for i in range(0, len(node.children)):
-                if node.children[i] != self.children[i]:
+            # Need to compare lists which are spawned off dictionary.
+            # So convert them back to dictionary.
+            child_dict = {}
+            node_child_dict = {}
+
+            for child in node.children:
+                if hasattr(child, 'id'):
+                    node_child_dict[child.id] = child
+                elif hasattr(child, 'ref'):
+                    node_child_dict[child.ref] = child
+
+            for child in self.children:
+                if hasattr(child, 'id'):
+                    child_dict[child.id] = child
+                elif hasattr(child, 'ref'):
+                    child_dict[child.ref] = child
+
+            for k in expected_dict.keys():
+                if expected_dict[k] !=  actual_dict.get(k):
                     return True
 
-            # Compare children self -> node (recursive __ne__)
-            for i in range(0, len(expected.children)):
-                if expected.children[i] != actual.children[i]:
-                    return True
+            # Compare length of val_dicts
+            if len(self.val_dict) != len(node.val_dict):
+                return True
 
-            # Compare object values node -> self
-            for k in node.val_dict.keys():
-                if node.val_dict[k] !=  self.val_dict.get(k):
-                    return True
-
-            # Compare object values self -> node
+            # Compare val_dicts
             for k in self.val_dict.keys():
-                if self.val_dict[k] != node.val_dict.get(k):
+                if self.val_dict[k] !=  node.val_dict.get(k):
                     return True
 
     class ObjPatcher(BasePatcher):
