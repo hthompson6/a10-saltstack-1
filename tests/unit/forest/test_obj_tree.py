@@ -137,9 +137,6 @@ def _preform_patch(node):
 
 
 def _init_patch(tree):
-    # Can't be sure that this works and only one element
-    # in the list is returned. Best to patch everything,
-    # and let the assertion sort it out
     for node in tree:
         _preform_patch(node)
 
@@ -263,10 +260,49 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         self.assertObjEquals([test_obj], cut_tree)
 
     def test_inter_inter(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'fake_ref_0': {
+            'fake_ref_1': key_vals}}
+
+        test_inter = InterNode('fake_path_0')
+        _patch_ne(test_inter)
+ 
+        test_inter_2 = InterNode('fake_path_1', **key_vals)
+        _patch_ne(test_inter_2)
+        test_inter_2.addParent(test_inter)
+        test_inter.addChild(test_inter_2)
+
+        helper.get_ref_props = Mock(return_value={
+            'fake_ref_0': 'fake_path_0',
+            'fake_ref_1': 'fake_path_1'})
+
+        cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
+        _init_patch(cut_tree)
+
+        self.assertObjEquals([test_inter], cut_tree)
 
     def test_inter_multi_obj(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        test_dict = {'fake_ref': {
+            'obj_id_0': key_vals,
+            'obj_id_1': key_vals,
+            'obj_id_2': key_vals}}
+
+        test_inter = InterNode('fake_path')
+        _patch_ne(test_inter)
+        for i in range(0, 3):
+            temp_obj = ObjNode('obj_id_{}'.format(i), **key_vals)
+            _patch_ne(temp_obj)
+            temp_obj.addParent(test_inter)
+            test_inter.addChild(temp_obj)
+
+        helper.get_ref_props = Mock(return_value={
+            'fake_ref': 'fake_path'})
+
+        cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
+        _init_patch(cut_tree)
+
+        self.assertObjEquals([test_inter], cut_tree)
 
     def test_obj_multi_inter(self):
         key_vals = {'fake_key': 'fake_val'}
@@ -294,7 +330,32 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         self.assertObjEquals([test_obj], cut_tree)
 
     def test_multi_obj_inter(self):
-        pass
+        key_vals = {'fake_key': 'fake_val'}
+        inter_dict = {'fake_ref': key_vals}
+        test_dict = {'obj_id_0': inter_dict,
+                     'obj_id_1': inter_dict,
+                     'obj_id_2': inter_dict}
+
+        node_list = []
+        for i in range(0, 3):
+            temp_obj = ObjNode('obj_id_{}'.format(i))
+            temp_inter = InterNode('fake_path', **key_vals)
+
+            _patch_ne(temp_obj)
+            _patch_ne(temp_inter)
+
+            temp_inter.addParent(temp_obj)
+            temp_obj.addChild(temp_inter)
+            node_list.append(temp_obj)
+
+        helper.get_ref_props = Mock(return_value={
+            'fake_ref': 'fake_path'})
+
+        import pdb; pdb.set_trace()
+        cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref'))
+        _init_patch(cut_tree)
+
+        self.assertObjEquals(node_list, cut_tree)
 
     def test_multi_inter_obj(self):
         pass

@@ -17,6 +17,12 @@ from a10_saltstack.forest.nodes import ObjNode, InterNode
 
 class CustomAssertions(object):
 
+    def _get_id(self, node):
+        if hasattr(child, 'id'):
+            expected_dict[child.id] = child
+        elif hasattr(child, 'ref'):
+            expected_dict[child.ref] = child 
+
     def _checkGeneralEquality(self, expected, actual):
         '''
         Assert that the attributes of the actual object
