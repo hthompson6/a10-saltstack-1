@@ -1,0 +1,6 @@
+mock
+nose
+nose-exclude
+testresources
+testscenarios
+flake8

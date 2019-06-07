@@ -15,12 +15,13 @@
 
 class ObjNode(object):
 
+
     def __init__(self, id, **kwargs):
         self.id = id
-
         self.parent = None
         self.children = []
         self.val_dict = {}
+
         for k,v in kwargs.items():
             if type(v) != dict and type(v) != list:
                 self.val_dict[k] = v
@@ -38,7 +39,6 @@ class RootNode(ObjNode):
     def __init__(self, id, ref):
         self.ref = ref
         self.id = id
-
         self.parent = None
         self.children = []
         self.val_dict = {}

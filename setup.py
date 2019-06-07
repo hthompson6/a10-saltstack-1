@@ -1,5 +1,5 @@
-
 from setuptools import setup
+
 setup(name='a10_saltstack',
       version='0.0.1',
       description='SaltStack support for A10 AXAPI',
