@@ -77,7 +77,7 @@ def _dfs_cut(config, refNode=None):
             # Only case in which the keyword is not a string
             # is when the keyword is being used as an identifier.
             # These id's do not need to be stored within the InterNode
-            # at this point. 
+            # at this point.
             inter_val_dict = {}
             if isinstance(v, dict):
                 for kw, vl in v.items():
@@ -146,7 +146,6 @@ def parse_tree(a10_obj, config):
     '''
     a10_obj = 'a10_{}'.format(a10_obj)
 
-
     root = RootNode(None, a10_obj)
     altered_config = _dfs_transform(config)
 
@@ -161,7 +160,7 @@ def parse_tree(a10_obj, config):
 
     root.addValDict(**root_vals)
 
-    if len(alterted_config) < 2:
+    if len(altered_config) < 2:
         root_children = []
     else:
         root_children = _dfs_cut(altered_config, root)
