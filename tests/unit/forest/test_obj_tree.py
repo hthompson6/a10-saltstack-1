@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from collections import OrderedDict
 from mock import Mock
 import unittest
 
@@ -432,8 +433,41 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         self.assertObjEquals(node_list, cut_tree)
 
+
 class TestTransformTree(unittest.TestCase):
-    pass
+
+    def test_base_case_kv(self):
+        test_arg = OrderedDict([('fake_key', 'fake_val')])
+        expected = {'fake_key': 'fake_val'}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual) 
+
+    def test_base_case_list(self):
+        test_arg = OrderedDict([('fake_key', [1, 2, 3])])
+        expected = {'fake_key': [1, 2, 3]}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual)
+
+    def test_base_case_dict(self):
+        test_arg = OrderedDict([('fake_key', {'fake_key': 'fake_val'})])
+        expected = {'fake_key': {'fake_key': 'fake_val'}}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual)
+
+    def test_obj_list_kv(self):
+        pass
+
+    def test_inter_list_kv(self):
+        pass
+
+    def test_obj_list_odict(self):
+        pass
+
+    def test_inter_list_odict(self):
+        pass
 
 
 class TestParseTree(unittest.TestCase):
