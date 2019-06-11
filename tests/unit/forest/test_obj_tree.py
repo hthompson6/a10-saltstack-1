@@ -499,14 +499,6 @@ class TestTransformTree(unittest.TestCase):
 
         self.assertEquals(expected, actual)
 
-    def test_l1_pos1_odict_list_to_dict(self):
-        test_val_0 = self._odict('fake_key', 'fake_val')
-        test_val_1 = self._odict('fake_key_0', 'fake_val')
-        test_val_2 = self._odict('fake_key_1', 'fake_val')
-        test_arg = self._odict('fake_ref', [test_val_0, [test_val_1, test_val_2]])
-        expected = {'fake_ref': [{'fake_key', 'fake_val'},
-            {'fake_key_0': 'fake_val', 'fake_key_1': 'fake_val'}]}
-        actual = obj_tree._dfs_transform(test_arg)
 
 class TestParseTree(unittest.TestCase):
     pass
