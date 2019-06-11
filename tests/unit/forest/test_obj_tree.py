@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from collections import OrderedDict
 from mock import Mock
 import unittest
 
@@ -432,9 +433,80 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         self.assertObjEquals(node_list, cut_tree)
 
-class TestTransformTree(unittest.TestCase):
-    pass
 
+class TestTransformTree(unittest.TestCase):
+
+    def _odict(self, *args):
+        '''
+        Writing out OrderedDict makes the code look messy.
+        This function has been added to address that.
+
+        Args:
+            args: vals added to the OrderedDict as kv pairs
+        Returns (OrderedDict):
+        '''
+        if type(args) == tuple:
+            return OrderedDict([args])
+        if type(args) == list:
+            return OrderedDict(args)
+        elif len(args) == 2:
+            return OrderedDict([(*args)])
+        else:
+            raise Exception
+
+    def test_l0_odict_to_dict(self):
+        test_arg = self._odict('fake_key', 'fake_val')
+        expected = {'fake_key': 'fake_val'}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual) 
+
+    def test_l1_list_nochange(self):
+        test_arg = self._odict('fake_key', [1, 2, 3])
+        expected = {'fake_key': [1, 2, 3]}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual)
+
+    def test_l1_dict_nochange(self):
+        test_arg = self._odict('fake_key', {'fake_key': 'fake_val'})
+        expected = {'fake_key': {'fake_key': 'fake_val'}}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual)
+
+    def test_l1_l0_odict_to_dict(self):
+        test_val = self._odict('fake_key', 'fake_val')
+        test_arg = self._odict('fake_key', test_val)
+        expected = {'fake_key': {'fake_key': 'fake_val'}}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual)
+
+    def test_l1_dict_list_nochange(self):
+        test_kv = {'fake_key': 'fake_val'}
+        test_arg = self._odict('fake_ref', [test_kv])
+        expected = {'fake_ref': [{'fake_key': 'fake_val'}]}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual)
+
+    def test_l1_odict_list_to_dict(self):
+        test_val = self._odict('fake_key', 'fake_val')
+        test_arg = self._odict('fake_ref', [test_val])
+        expected = {'fake_ref': {'fake_key': 'fake_val'}}
+        actual = obj_tree._dfs_transform(test_arg)
+
+        self.assertEquals(expected, actual)
+
+    def test_l1(self):
+        test_val_0 = self._odict('fake_key', 'fake_val')
+        test_val_1 = self._odict('fake_key_0', 'fake_val')
+        test_val_2 = self._odict('fake_key_1', 'fake_val')
+        test_arg = self._odict('fake_ref', [test_val_0, [test_val_1, test_val_2]])
+        expected = {'fake_ref': [{'fake_key', 'fake_val'},
+            {'fake_key_0': 'fake_val', 'fake_key_1': 'fake_val'}]}
+        actual = obj_tree._dfs_transform(test_arg)
 
 class TestParseTree(unittest.TestCase):
     pass
