@@ -499,7 +499,7 @@ class TestTransformTree(unittest.TestCase):
 
         self.assertEquals(expected, actual)
 
-    def test_l1(self):
+    def test_l1_pos1_odict_list_to_dict(self):
         test_val_0 = self._odict('fake_key', 'fake_val')
         test_val_1 = self._odict('fake_key_0', 'fake_val')
         test_val_2 = self._odict('fake_key_1', 'fake_val')
