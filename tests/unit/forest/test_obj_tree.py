@@ -455,6 +455,11 @@ class TestTransformTree(unittest.TestCase):
             raise Exception
 
     def test_l0_odict_to_dict(self):
+        '''
+        Test that the test_arg is converted into
+        a dict.
+        '''
+
         test_arg = self._odict('fake_key', 'fake_val')
         expected = {'fake_key': 'fake_val'}
         actual = obj_tree._dfs_transform(test_arg)
@@ -462,6 +467,10 @@ class TestTransformTree(unittest.TestCase):
         self.assertEquals(expected, actual) 
 
     def test_l1_list_nochange(self):
+        '''
+        Test that the outer OrderedDict is converted
+        into a dict while the inner list remains untouched.
+        '''
         test_arg = self._odict('fake_key', [1, 2, 3])
         expected = {'fake_key': [1, 2, 3]}
         actual = obj_tree._dfs_transform(test_arg)
@@ -469,6 +478,10 @@ class TestTransformTree(unittest.TestCase):
         self.assertEquals(expected, actual)
 
     def test_l1_dict_nochange(self):
+        '''
+        Test that the outer OrderedDict is converted into
+        a dict while the inner dict remains untouched.
+        '''
         test_arg = self._odict('fake_key', {'fake_key': 'fake_val'})
         expected = {'fake_key': {'fake_key': 'fake_val'}}
         actual = obj_tree._dfs_transform(test_arg)
@@ -476,6 +489,10 @@ class TestTransformTree(unittest.TestCase):
         self.assertEquals(expected, actual)
 
     def test_l1_l0_odict_to_dict(self):
+        '''
+        Test that both the inner and outer OrderedDicts are
+        converted into dicts.
+        '''
         test_val = self._odict('fake_key', 'fake_val')
         test_arg = self._odict('fake_key', test_val)
         expected = {'fake_key': {'fake_key': 'fake_val'}}
@@ -484,17 +501,28 @@ class TestTransformTree(unittest.TestCase):
         self.assertEquals(expected, actual)
 
     def test_l1_dict_list_nochange(self):
-        test_kv = {'fake_key': 'fake_val'}
-        test_arg = self._odict('fake_ref', [test_kv])
-        expected = {'fake_ref': [{'fake_key': 'fake_val'}]}
+        '''
+        Test that the inner list of dicts IS NOT expanded into
+        a single dict.
+        '''
+        test_val_0 = {'fake_key_0': 'fake_val'}
+        test_val_1 = {'fake_key_1': 'fake_val'}
+        test_arg = self._odict('fake_ref', [test_val_0, test_val_1])
+        expected = {'fake_ref': [{'fake_key_0': 'fake_val'},
+                   {'fake_key_1': 'fake_val'}]}
         actual = obj_tree._dfs_transform(test_arg)
 
         self.assertEquals(expected, actual)
 
     def test_l1_odict_list_to_dict(self):
-        test_val = self._odict('fake_key', 'fake_val')
-        test_arg = self._odict('fake_ref', [test_val])
-        expected = {'fake_ref': {'fake_key': 'fake_val'}}
+        '''
+        Test that the inner list of OrderedDicts IS expanded into
+        a single dict.
+        '''
+        test_val_0 = self._odict('fake_key_0', 'fake_val')
+        test_val_1 = self._odict('fake_key_1', 'fake_val')
+        test_arg = self._odict('fake_ref', [test_val_0, test_val_1])
+        expected = {'fake_ref': {'fake_key_0': 'fake_val', 'fake_key_1': 'fake_val'}}
         actual = obj_tree._dfs_transform(test_arg)
 
         self.assertEquals(expected, actual)
