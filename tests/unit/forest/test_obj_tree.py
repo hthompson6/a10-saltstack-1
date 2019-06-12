@@ -535,4 +535,18 @@ class TestTransformTree(unittest.TestCase):
 
 
 class TestParseTree(unittest.TestCase):
-    pass
+
+    def test_id_set(self):
+        pass
+
+    def test_ref_set(self):
+        pass
+
+    def test_addValDict_called(self):
+        pass
+
+    def test_addChild_called(self):
+        pass
+
+    def test_dfs_cut_called(self):
+        pass
