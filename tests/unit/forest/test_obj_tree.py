@@ -538,19 +538,23 @@ class TestParseTree(unittest.TestCase):
 
     def setUp(self):
         super(TestParseTree, self).setUp()
-        root_patcher = patch('a10_saltstack.forest.obj_tree.RootNode')
-        self.root_mock = root_patcher.start()
-        self.addCleanup(root_patcher.stop)
 
         self.fake_config = {'a10_name': 'ada',
             'a10_obj': 'coffee',
             'fake_key': 'fake_val'}
 
+        # Mockout the RootNode class
+        root_patcher = patch('a10_saltstack.forest.obj_tree.RootNode')
+        self.root_mock = root_patcher.start()
+        self.addCleanup(root_patcher.stop)
+
+        # Mockout the _dfs_transform method
         transform_patcher = patch('a10_saltstack.forest.obj_tree._dfs_transform',
            new=Mock(return_value=self.fake_config))
         transform_patcher.start()
         self.addCleanup(transform_patcher.stop)
 
+        # Mockout the _dfs_cut method
         cut_patcher = patch('a10_saltstack.forest.obj_tree._dfs_cut',
             new=Mock(return_value=[Mock()]))
         self.cut_mock = cut_patcher.start()
