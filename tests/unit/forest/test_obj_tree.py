@@ -20,9 +20,8 @@ import a10_saltstack.forest.nodes
 from a10_saltstack.forest import obj_tree
 from a10_saltstack.helpers import helper
 
-from a10_saltstack.forest.nodes import ObjNode, InterNode, RootNode
+from a10_saltstack.forest.nodes import ObjNode, InterNode
 from tests.unit.forest.custom_assertions import CustomAssertions
-from tests.unit.forest import fake_obj_dict as fobj
 
 
 def _patch_ne(instance):
