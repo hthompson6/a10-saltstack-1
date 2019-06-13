@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from collections import OrderedDict
-from mock import Mock, patch
+from mock import patch, Mock
 import unittest
 
 import a10_saltstack.forest.nodes
