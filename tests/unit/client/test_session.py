@@ -36,7 +36,7 @@ class TestSession(unittest.TestCase):
         self.assertEquals('1337', sess.session_id)
 
     @patch.object(Session, 'close', auto_spec=True)
-    def test_authenticate_accepted(self, mock_close):
+    def test_authenticate_rejected(self, mock_close):
         auth_resp = {'bad_resp': None}
         attrs = {'post.return_value': auth_resp}
         mock_http = Mock()
