@@ -11,3 +11,42 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+from mock import Mock()
+import unittest
+
+
+def TestAxapiHTTPClient(unittest.TestCase):
+
+    def test_axapi_args_provided(self):
+        pass
+
+    def test_file_name_unpopulated(self):
+        pass
+
+    def test_file_content_unpopulated(self):
+        pass
+
+    def test_socket_error(self):
+        pass
+
+    def test_connection_error(self):
+        pass
+
+    def test_data_request(self):
+        pass
+
+    def test_file_request(self):
+        pass
+
+    def test_json_resp_value_error_200(self):
+        pass
+
+    def test_json_resp_value_error(self):
+        pass
+
+    def test_raise_axapi_ex(self):
+        pass
+
+    def test_raise_axapi_auth(self):
+        pass
