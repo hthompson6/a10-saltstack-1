@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from mock import Mock()
+from mock import Mock, patch
 import unittest
+
+from a10_saltstack.client.axapi_http import HttpClient 
 
 
 def TestAxapiHTTPClient(unittest.TestCase):
@@ -21,8 +23,10 @@ def TestAxapiHTTPClient(unittest.TestCase):
     def test_axapi_args_provided(self):
         pass
 
+    @patch.object(HttpClient, '__init__')
     def test_file_name_unpopulated(self):
-        pass
+        with self.assertRaises(ValueError) as context:
+            HttpClient()
 
     def test_file_content_unpopulated(self):
         pass
