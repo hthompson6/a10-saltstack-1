@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from collections import OrderedDict
-from mock import Mock
+from mock import Mock, patch
 import unittest
 
 import a10_saltstack.forest.nodes
@@ -150,7 +150,14 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
     '''
 
     def setUp(self):
-        obj_tree._extract_modname = lambda x: x
+        modname_patcher = patch('a10_saltstack.forest.obj_tree._extract_modname',
+            side_effect=lambda x: x)
+        modname_patcher.start()
+        self.addCleanup(modname_patcher.stop)
+
+        helper_patcher = patch('a10_saltstack.helpers.helper.get_ref_props')
+        self.helper_mock = helper_patcher.start()
+        self.addCleanup(helper_patcher.stop)
 
     def test_empty(self):
         test_obj = {}
@@ -169,7 +176,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_inter = InterNode('fake_path', **key_vals)
         _patch_ne(test_inter)
 
-        helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
+        self.helper_mock.return_value = {'fake_ref': 'fake_path'}
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -184,7 +191,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_obj = ObjNode('obj_id', **key_vals)
         _patch_ne(test_obj)
 
-        helper.get_ref_props = Mock(return_value={})
+        self.helper_mock.return_value = {}
 
         cut_tree = obj_tree._dfs_cut(test_dict)
         _init_patch(cut_tree)
@@ -198,7 +205,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_obj = ObjNode('obj_id', **key_vals)
         _patch_ne(test_obj)
 
-        helper.get_ref_props = Mock(return_value={})
+        self.helper_mock.return_value = {}
         cut_tree = obj_tree._dfs_cut(test_dict)
 
         helper.get_ref_props.assert_not_called()
@@ -215,7 +222,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_obj.addParent(test_inter)
         test_inter.addChild(test_obj)
 
-        helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
+        self.helper_mock.return_value = {'fake_ref': 'fake_path'}
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -235,7 +242,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_inter.addParent(test_obj)
         test_obj.addChild(test_inter)
 
-        helper.get_ref_props = Mock(return_value={'fake_ref': 'fake_path'})
+        self.helper_mock.return_value = {'fake_ref': 'fake_path'}
 
         # test_inter is passed here to take the place of the root node
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
@@ -273,9 +280,9 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
         test_inter_2.addParent(test_inter)
         test_inter.addChild(test_inter_2)
 
-        helper.get_ref_props = Mock(return_value={
+        self.helper_mock.return_value = {
             'fake_ref_0': 'fake_path_0',
-            'fake_ref_1': 'fake_path_1'})
+            'fake_ref_1': 'fake_path_1'}
 
         cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
         _init_patch(cut_tree)
@@ -297,8 +304,8 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
             temp_obj.addParent(test_inter)
             test_inter.addChild(temp_obj)
 
-        helper.get_ref_props = Mock(return_value={
-            'fake_ref': 'fake_path'})
+        self.helper_mock.return_value = {
+            'fake_ref': 'fake_path'}
 
         cut_tree = obj_tree._dfs_cut(test_dict, test_inter)
         _init_patch(cut_tree)
@@ -320,10 +327,10 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
             temp_inter.addParent(test_obj)
             test_obj.addChild(temp_inter)
 
-        helper.get_ref_props = Mock(return_value={
+        self.helper_mock.return_value = {
             'fake_ref_0': 'fake_path_0',
             'fake_ref_1': 'fake_path_1',
-            'fake_ref_2': 'fake_path_2'})
+            'fake_ref_2': 'fake_path_2'}
 
         cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
         _init_patch(cut_tree)
@@ -349,8 +356,7 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
             temp_obj.addChild(temp_inter)
             node_list.append(temp_obj)
 
-        helper.get_ref_props = Mock(return_value={
-            'fake_ref': 'fake_path'})
+        self.helper_mock.return_value = {'fake_ref': 'fake_path'}
 
         cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref'))
         _init_patch(cut_tree)
@@ -376,10 +382,10 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
             temp_inter.addChild(temp_obj)
             node_list.append(temp_inter)
 
-        helper.get_ref_props = Mock(return_value={
+        self.helper_mock.return_value = {
             'fake_ref_0': 'fake_path_0',
             'fake_ref_1': 'fake_path_1',
-            'fake_ref_2': 'fake_path_2'})
+            'fake_ref_2': 'fake_path_2'}
 
         cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
         _init_patch(cut_tree)
@@ -421,12 +427,12 @@ class TestCutTree(unittest.TestCase, CustomAssertions):
 
         node_list = [inter_0, obj_0, inter_1]
 
-        helper.get_ref_props = Mock(return_value={
+        self.helper_mock.return_value = {
             'fake_ref_0': 'fake_path_0',
             'fake_ref_1': 'fake_path_1',
             'fake_ref_2': 'fake_path_2',
             'fake_ref_3': 'fake_path_3',
-            'fake_ref_4': 'fake_path_4'})
+            'fake_ref_4': 'fake_path_4'}
 
         cut_tree = obj_tree._dfs_cut(test_dict, InterNode('fake_ref_0'))
         _init_patch(cut_tree)
