@@ -18,18 +18,23 @@ import unittest
 from a10_saltstack.client.axapi_http import HttpClient 
 
 
-def TestAxapiHTTPClient(unittest.TestCase):
+class TestAxapiHTTPClient(unittest.TestCase):
+
+    def setUp(self):
+        req_patcher = patch('a10_saltstack.client.axapi_http.requests')
+        self.req_mock = req_patcher.start()
+        self.addCleanup(req_patcher.stop)
 
     def test_axapi_args_provided(self):
         pass
 
-    @patch.object(HttpClient, '__init__')
     def test_file_name_unpopulated(self):
         with self.assertRaises(ValueError) as context:
-            HttpClient()
+            HttpClient('1.1.1.1').request(Mock(), '/calm/down/morty', file_content=Mock())
 
     def test_file_content_unpopulated(self):
-        pass
+        with self.assertRaises(ValueError) as context:
+            HttpClient('1.1.1.1').request(Mock(), '/calm/down/morty', file_name=Mock())
 
     def test_socket_error(self):
         pass

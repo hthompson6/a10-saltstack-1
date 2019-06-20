@@ -1,6 +1,7 @@
+flake8
 mock
 nose
 nose-exclude
+requests
 testresources
 testscenarios
-flake8
