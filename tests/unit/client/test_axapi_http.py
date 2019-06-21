@@ -15,18 +15,32 @@
 from mock import Mock, patch
 import unittest
 
+import errno
 from a10_saltstack.client.axapi_http import HttpClient 
 
 
 class TestAxapiHTTPClient(unittest.TestCase):
 
-    def setUp(self):
-        req_patcher = patch('a10_saltstack.client.axapi_http.requests')
-        self.req_mock = req_patcher.start()
-        self.addCleanup(req_patcher.stop)
+    def _patch_wrap(self, path):
+        path_patcher = patch(path)
+        ret = path_patcher.start()
+        self.addCleanup(path_patcher.stop)
+        return ret
 
-    def test_axapi_args_provided(self):
-        pass
+    def setUp(self):
+        dep_list = ['errno.errorcode', ]
+        self.req_mock = self._patch_wrap('requests.request')
+        self.json_mock = self._patch_wrap('json.dumps')
+        self.resp_mock = self._patch_wrap('a10_saltstack.client.responses')
+        self._patch_wrap('errno.errorcode')
+
+    @patch.object(HttpClient, 'merge_dicts')
+    def test_axapi_args_provided(self, merge_mock):
+        test_axapi_args = {'fake_key': 'fake_val'}
+        test_params = {'fake-key': 'fake-val'}
+        HttpClient('1.1.1.1').request(Mock(), '/calm/down/morty', axapi_args=test_axapi_args,
+            params=test_params)
+        merge_mock.assert_called_with()
 
     def test_file_name_unpopulated(self):
         with self.assertRaises(ValueError) as context:
