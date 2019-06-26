@@ -82,7 +82,7 @@ class HttpClient(object):
         # Update params with axapi_args for currently unsupported configuration of objects
         if axapi_args is not None:
             formatted_axapi_args = dict([(k.replace('_', '-'), v) for k, v in
-                                        axapi_args.iteritems()])
+                                        axapi_args.items()])
             params = self.merge_dicts(params, formatted_axapi_args)
 
         if (file_name is None and file_content is not None) or \
