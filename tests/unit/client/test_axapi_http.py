@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import errno
 from mock import ANY, Mock, patch
 import requests
 import socket
@@ -30,11 +29,9 @@ class TestAxapiHTTPClient(unittest.TestCase):
         return ret
 
     def setUp(self):
-        dep_list = ['errno.errorcode', 'http.client']
         self.req_mock = self._patch_wrap('requests.request')
         self.json_mock = self._patch_wrap('json.dumps')
         self.resp_mock = self._patch_wrap('a10_saltstack.client.axapi_http.acos_responses')
-        self._patch_wrap('errno.errorcode')
         self.api_url = '/calm/down/morty'
         self.host = '1.1.1.1'
 
